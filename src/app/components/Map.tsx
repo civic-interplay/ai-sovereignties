@@ -6,7 +6,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
 
-// Colour per infrastructure kind (matches the `kind` key from /api/sites).
+// --- Layer lens: colour per infrastructure kind (the `kind` key from /api/sites) ---
 const KIND_COLORS: Record<string, string> = {
   data_centre: '#00ffcc',
   mine: '#ff6b35',
@@ -17,8 +17,6 @@ const KIND_COLORS: Record<string, string> = {
   geopolitical: '#ff4d6d',
   other: '#ffffff',
 };
-
-// Human-readable labels for the key, and the order they appear in it.
 const KIND_LABELS: Record<string, string> = {
   data_centre: 'Data centre',
   mine: 'Mine',
@@ -31,25 +29,52 @@ const KIND_LABELS: Record<string, string> = {
 };
 const KIND_ORDER = ['data_centre', 'mine', 'refinery', 'energy', 'water', 'policy', 'geopolitical', 'other'];
 
-// Flattened ['data_centre', '#..', 'mine', '#..', ..., fallback] for a Mapbox `match`.
-const KIND_MATCH = [
-  'data_centre', KIND_COLORS.data_centre,
-  'mine', KIND_COLORS.mine,
-  'refinery', KIND_COLORS.refinery,
-  'energy', KIND_COLORS.energy,
-  'water', KIND_COLORS.water,
-  'policy', KIND_COLORS.policy,
-  'geopolitical', KIND_COLORS.geopolitical,
-  KIND_COLORS.other, // fallback
-];
+// --- Ownership lens: colour per sovereignty key (the `sovereignty` key from /api/sites) ---
+const SOV_COLORS: Record<string, string> = {
+  australian: '#00e08a',
+  foreign: '#ff4d6d',
+  jv: '#ffd23f',
+  government: '#3fa9ff',
+  defence: '#b478ff',
+  other: '#9aa5a0',
+};
+const SOV_LABELS: Record<string, string> = {
+  australian: 'Australian-owned',
+  foreign: 'Foreign-owned',
+  jv: 'Joint venture',
+  government: 'Government-owned',
+  defence: 'AUKUS / defence',
+  other: 'Other / policy',
+};
+const SOV_ORDER = ['australian', 'foreign', 'jv', 'government', 'defence', 'other'];
+
+// Build a flattened ['key', '#colour', ..., fallback] list for a Mapbox `match`.
+function matchList(colors: Record<string, string>, order: string[]): (string)[] {
+  const out: string[] = [];
+  for (const k of order) out.push(k, colors[k]);
+  out.push(colors.other); // fallback
+  return out;
+}
+
+type Lens = 'kind' | 'sovereignty';
+
+// Colour expressions, one per lens. Switched at runtime via setPaintProperty.
+const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
+  kind: ['match', ['get', 'kind'], ...matchList(KIND_COLORS, KIND_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  sovereignty: ['match', ['get', 'sovereignty'], ...matchList(SOV_COLORS, SOV_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+};
 
 const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 export default function Map() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  // Infrastructure kinds actually present in the live data, for the key.
+  // Which lens is active, and a ref so the (once-registered) popup handler can read it.
+  const [lens, setLens] = useState<Lens>('kind');
+  const lensRef = useRef<Lens>(lens);
+  // Keys actually present in the live data, per lens, to drive the legend.
   const [kinds, setKinds] = useState<string[]>([]);
+  const [sovs, setSovs] = useState<string[]>([]);
 
   useEffect(() => {
     if (map.current || !mapContainer.current) return;
@@ -71,15 +96,15 @@ export default function Map() {
         // Leave the map empty on failure rather than crashing.
       }
 
-      // Drive the key from the kinds present in the data, in canonical order.
-      const present = new Set(
-        data.features.map((f) => (f.properties?.kind as string) ?? 'other'),
-      );
-      setKinds(KIND_ORDER.filter((k) => present.has(k)));
+      // Drive each legend from the keys present in the data, in canonical order.
+      const kindSet = new Set(data.features.map((f) => (f.properties?.kind as string) ?? 'other'));
+      const sovSet = new Set(data.features.map((f) => (f.properties?.sovereignty as string) ?? 'other'));
+      setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
+      setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
 
       m.addSource('sites', { type: 'geojson', data });
 
-      const kindColor = ['match', ['get', 'kind'], ...KIND_MATCH] as unknown as mapboxgl.ExpressionSpecification;
+      const color = COLOR_EXPR[lensRef.current];
       const capacity = ['coalesce', ['get', 'capacity'], 30] as unknown as mapboxgl.ExpressionSpecification;
 
       // Outer pulse ring
@@ -89,10 +114,10 @@ export default function Map() {
         source: 'sites',
         paint: {
           'circle-radius': ['interpolate', ['linear'], capacity, 30, 20, 400, 50] as unknown as mapboxgl.ExpressionSpecification,
-          'circle-color': kindColor,
+          'circle-color': color,
           'circle-opacity': 0.15,
           'circle-stroke-width': 1.5,
-          'circle-stroke-color': kindColor,
+          'circle-stroke-color': color,
           'circle-stroke-opacity': 0.6,
         },
       });
@@ -104,7 +129,7 @@ export default function Map() {
         source: 'sites',
         paint: {
           'circle-radius': ['interpolate', ['linear'], capacity, 30, 8, 400, 20] as unknown as mapboxgl.ExpressionSpecification,
-          'circle-color': kindColor,
+          'circle-color': color,
           'circle-opacity': 0.9,
           'circle-blur': 0.3,
         },
@@ -115,7 +140,10 @@ export default function Map() {
         const feature = e.features?.[0];
         if (!feature) return;
         const p = feature.properties as Record<string, string>;
-        const color = KIND_COLORS[p.kind] ?? KIND_COLORS.other;
+        // Accent the popup with the active lens colour.
+        const color = lensRef.current === 'sovereignty'
+          ? (SOV_COLORS[p.sovereignty] ?? SOV_COLORS.other)
+          : (KIND_COLORS[p.kind] ?? KIND_COLORS.other);
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
 
         const sovereignty = p.sovereigntyLabel || '';
@@ -152,6 +180,22 @@ export default function Map() {
     map.current = m;
   }, []);
 
+  // Recolour the nodes when the lens changes (layers exist only after load).
+  useEffect(() => {
+    lensRef.current = lens;
+    const m = map.current;
+    if (!m || !m.getLayer('sites-core')) return;
+    const color = COLOR_EXPR[lens];
+    m.setPaintProperty('sites-core', 'circle-color', color);
+    m.setPaintProperty('sites-pulse', 'circle-color', color);
+    m.setPaintProperty('sites-pulse', 'circle-stroke-color', color);
+  }, [lens]);
+
+  const items = lens === 'sovereignty' ? sovs : kinds;
+  const colors = lens === 'sovereignty' ? SOV_COLORS : KIND_COLORS;
+  const labels = lens === 'sovereignty' ? SOV_LABELS : KIND_LABELS;
+  const legendTitle = lens === 'sovereignty' ? 'Ownership' : 'Infrastructure';
+
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
@@ -169,15 +213,7 @@ export default function Map() {
         }}
       >
         {/* Current scope. The Australia view of a map meant to grow global and networked. */}
-        <div
-          style={{
-            background: '#0a0c0b',
-            border: '1px solid #1f2623',
-            padding: '10px 14px',
-            fontFamily: 'Courier New, monospace',
-            color: '#c8cfc4',
-          }}
-        >
+        <div style={panel}>
           <div style={{ fontSize: 15, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
             Australia
           </div>
@@ -186,18 +222,18 @@ export default function Map() {
           </div>
         </div>
 
-        {kinds.length > 0 && (
-          <div
-            style={{
-              background: '#0a0c0b',
-              border: '1px solid #1f2623',
-              padding: '10px 14px',
-              fontFamily: 'Courier New, monospace',
-              fontSize: 11,
-              color: '#c8cfc4',
-              minWidth: 140,
-            }}
-          >
+        {/* Lens toggle: colour the map by infrastructure layer, or by who owns it. */}
+        <div style={{ ...panel, padding: 4, display: 'flex', gap: 4 }}>
+          <button type="button" style={tab(lens === 'kind')} onClick={() => setLens('kind')}>
+            Layer
+          </button>
+          <button type="button" style={tab(lens === 'sovereignty')} onClick={() => setLens('sovereignty')}>
+            Ownership
+          </button>
+        </div>
+
+        {items.length > 0 && (
+          <div style={{ ...panel, minWidth: 140 }}>
             <div
               style={{
                 fontSize: 10,
@@ -207,9 +243,9 @@ export default function Map() {
                 marginBottom: 8,
               }}
             >
-              Infrastructure
+              {legendTitle}
             </div>
-            {kinds.map((k) => (
+            {items.map((k) => (
               <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1.9 }}>
                 <span
                   style={{
@@ -217,11 +253,11 @@ export default function Map() {
                     height: 9,
                     borderRadius: '50%',
                     flexShrink: 0,
-                    background: KIND_COLORS[k],
-                    boxShadow: `0 0 6px ${KIND_COLORS[k]}`,
+                    background: colors[k],
+                    boxShadow: `0 0 6px ${colors[k]}`,
                   }}
                 />
-                <span>{KIND_LABELS[k]}</span>
+                <span>{labels[k]}</span>
               </div>
             ))}
           </div>
@@ -229,6 +265,31 @@ export default function Map() {
       </div>
     </div>
   );
+}
+
+// Shared panel chrome for the overlay blocks.
+const panel: React.CSSProperties = {
+  background: '#0a0c0b',
+  border: '1px solid #1f2623',
+  padding: '10px 14px',
+  fontFamily: 'Courier New, monospace',
+  fontSize: 11,
+  color: '#c8cfc4',
+};
+
+// A single segmented-control button, highlighted when active.
+function tab(active: boolean): React.CSSProperties {
+  return {
+    background: active ? '#1f2623' : 'transparent',
+    border: 'none',
+    color: active ? '#c8cfc4' : '#6b7568',
+    fontFamily: 'Courier New, monospace',
+    fontSize: 10,
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    padding: '5px 10px',
+    cursor: 'pointer',
+  };
 }
 
 function row(key: string, value: string): string {
