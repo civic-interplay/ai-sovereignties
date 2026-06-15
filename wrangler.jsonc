@@ -10,6 +10,12 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "ai-sovereignties",
 	"main": ".open-next/worker.js",
+	"routes": [
+		{
+			"pattern": "sovereignties.civicinterplay.io",
+			"custom_domain": true
+		}
+	],
 	"compatibility_date": "2026-04-05",
 	"compatibility_flags": [
 		"nodejs_compat",
