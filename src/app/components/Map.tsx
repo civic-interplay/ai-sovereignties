@@ -6,6 +6,10 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
 
+// Civic Interplay chrome tokens (light-touch: dark field kept, CI furniture).
+const CI_FONT = 'var(--font-fira), system-ui, sans-serif';
+const CI_PURPLE = '#7D50BD';
+
 // --- Layer lens: colour per infrastructure kind (the `kind` key from /api/sites) ---
 const KIND_COLORS: Record<string, string> = {
   data_centre: '#00ffcc',
@@ -162,7 +166,7 @@ export default function Map() {
         new mapboxgl.Popup({ closeButton: false, className: 'sovereignty-popup' })
           .setLngLat(coords)
           .setHTML(
-            '<div style="background:#0a0c0b;border:1px solid ' + color + ';padding:10px 14px;font-family:Courier New,monospace;font-size:11px;color:#c8cfc4;min-width:200px;">' +
+            '<div style="background:#0a0c0b;border:1px solid ' + color + ';border-radius:12px;padding:10px 14px;font-family:var(--font-fira),system-ui,sans-serif;font-size:11px;color:#c8cfc4;min-width:200px;">' +
             '<div style="color:' + color + ';font-size:10px;letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;">' + (p.infraType || '') + '</div>' +
             '<div style="font-size:13px;margin-bottom:4px;">' + (p.name || '') + '</div>' +
             (sovereignty ? '<div style="color:#6b7568;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
@@ -270,20 +274,22 @@ export default function Map() {
 // Shared panel chrome for the overlay blocks.
 const panel: React.CSSProperties = {
   background: '#0a0c0b',
-  border: '1px solid #1f2623',
+  border: '1px solid #333',
+  borderRadius: 12,
   padding: '10px 14px',
-  fontFamily: 'Courier New, monospace',
+  fontFamily: CI_FONT,
   fontSize: 11,
   color: '#c8cfc4',
 };
 
-// A single segmented-control button, highlighted when active.
+// A single segmented-control button, highlighted in CI purple when active.
 function tab(active: boolean): React.CSSProperties {
   return {
-    background: active ? '#1f2623' : 'transparent',
+    background: active ? CI_PURPLE : 'transparent',
     border: 'none',
-    color: active ? '#c8cfc4' : '#6b7568',
-    fontFamily: 'Courier New, monospace',
+    borderRadius: 8,
+    color: active ? '#fff' : '#6b7568',
+    fontFamily: CI_FONT,
     fontSize: 10,
     letterSpacing: '0.12em',
     textTransform: 'uppercase',
