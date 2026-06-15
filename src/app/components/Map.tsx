@@ -156,50 +156,77 @@ export default function Map() {
     <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
 
-      {kinds.length > 0 && (
+      <div
+        style={{
+          position: 'absolute',
+          top: 16,
+          left: 16,
+          zIndex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          alignItems: 'flex-start',
+        }}
+      >
+        {/* Current scope. The Australia view of a map meant to grow global and networked. */}
         <div
           style={{
-            position: 'absolute',
-            top: 16,
-            left: 16,
-            zIndex: 1,
             background: '#0a0c0b',
             border: '1px solid #1f2623',
             padding: '10px 14px',
             fontFamily: 'Courier New, monospace',
-            fontSize: 11,
             color: '#c8cfc4',
-            minWidth: 140,
           }}
         >
+          <div style={{ fontSize: 15, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+            Australia
+          </div>
+          <div style={{ fontSize: 10, color: '#6b7568', marginTop: 4, maxWidth: 190, lineHeight: 1.5 }}>
+            One region of a networked map in progress. More coming.
+          </div>
+        </div>
+
+        {kinds.length > 0 && (
           <div
             style={{
-              fontSize: 10,
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              color: '#6b7568',
-              marginBottom: 8,
+              background: '#0a0c0b',
+              border: '1px solid #1f2623',
+              padding: '10px 14px',
+              fontFamily: 'Courier New, monospace',
+              fontSize: 11,
+              color: '#c8cfc4',
+              minWidth: 140,
             }}
           >
-            Infrastructure
-          </div>
-          {kinds.map((k) => (
-            <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1.9 }}>
-              <span
-                style={{
-                  width: 9,
-                  height: 9,
-                  borderRadius: '50%',
-                  flexShrink: 0,
-                  background: KIND_COLORS[k],
-                  boxShadow: `0 0 6px ${KIND_COLORS[k]}`,
-                }}
-              />
-              <span>{KIND_LABELS[k]}</span>
+            <div
+              style={{
+                fontSize: 10,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: '#6b7568',
+                marginBottom: 8,
+              }}
+            >
+              Infrastructure
             </div>
-          ))}
-        </div>
-      )}
+            {kinds.map((k) => (
+              <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1.9 }}>
+                <span
+                  style={{
+                    width: 9,
+                    height: 9,
+                    borderRadius: '50%',
+                    flexShrink: 0,
+                    background: KIND_COLORS[k],
+                    boxShadow: `0 0 6px ${KIND_COLORS[k]}`,
+                  }}
+                />
+                <span>{KIND_LABELS[k]}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
