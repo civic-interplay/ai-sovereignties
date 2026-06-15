@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -17,6 +17,19 @@ const KIND_COLORS: Record<string, string> = {
   geopolitical: '#ff4d6d',
   other: '#ffffff',
 };
+
+// Human-readable labels for the key, and the order they appear in it.
+const KIND_LABELS: Record<string, string> = {
+  data_centre: 'Data centre',
+  mine: 'Mine',
+  refinery: 'Refinery / processing',
+  energy: 'Energy / grid',
+  water: 'Water',
+  policy: 'Policy',
+  geopolitical: 'Geopolitical',
+  other: 'Other',
+};
+const KIND_ORDER = ['data_centre', 'mine', 'refinery', 'energy', 'water', 'policy', 'geopolitical', 'other'];
 
 // Flattened ['data_centre', '#..', 'mine', '#..', ..., fallback] for a Mapbox `match`.
 const KIND_MATCH = [
@@ -35,6 +48,8 @@ const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: 
 export default function Map() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
+  // Infrastructure kinds actually present in the live data, for the key.
+  const [kinds, setKinds] = useState<string[]>([]);
 
   useEffect(() => {
     if (map.current || !mapContainer.current) return;
@@ -55,6 +70,12 @@ export default function Map() {
       } catch {
         // Leave the map empty on failure rather than crashing.
       }
+
+      // Drive the key from the kinds present in the data, in canonical order.
+      const present = new Set(
+        data.features.map((f) => (f.properties?.kind as string) ?? 'other'),
+      );
+      setKinds(KIND_ORDER.filter((k) => present.has(k)));
 
       m.addSource('sites', { type: 'geojson', data });
 
@@ -131,7 +152,56 @@ export default function Map() {
     map.current = m;
   }, []);
 
-  return <div ref={mapContainer} style={{ width: '100vw', height: '100vh' }} />;
+  return (
+    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+      <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
+
+      {kinds.length > 0 && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 16,
+            left: 16,
+            zIndex: 1,
+            background: '#0a0c0b',
+            border: '1px solid #1f2623',
+            padding: '10px 14px',
+            fontFamily: 'Courier New, monospace',
+            fontSize: 11,
+            color: '#c8cfc4',
+            minWidth: 140,
+          }}
+        >
+          <div
+            style={{
+              fontSize: 10,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: '#6b7568',
+              marginBottom: 8,
+            }}
+          >
+            Infrastructure
+          </div>
+          {kinds.map((k) => (
+            <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1.9 }}>
+              <span
+                style={{
+                  width: 9,
+                  height: 9,
+                  borderRadius: '50%',
+                  flexShrink: 0,
+                  background: KIND_COLORS[k],
+                  boxShadow: `0 0 6px ${KIND_COLORS[k]}`,
+                }}
+              />
+              <span>{KIND_LABELS[k]}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 function row(key: string, value: string): string {
