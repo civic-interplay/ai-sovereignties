@@ -9,6 +9,12 @@ mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
 // Civic Interplay chrome tokens (light-touch: dark field kept, CI furniture).
 const CI_FONT = 'var(--font-fira), system-ui, sans-serif';
 const CI_PURPLE = '#7D50BD';
+// CI periwinkle reads better than purple for a small link on the dark field.
+const CI_PERIWINKLE = '#8E9BDD';
+
+// The public "publish to web" view of the Critical Infrastructure Tracker.
+const NOTION_DATA_URL =
+  'https://studio-esem.notion.site/8b537010f4cb4aa6b6df470f9d0d40c9?v=c9d0347781ec4900967cfff4d18a25a6';
 
 // --- Layer lens: colour per infrastructure kind (the `kind` key from /api/sites) ---
 const KIND_COLORS: Record<string, string> = {
@@ -224,6 +230,22 @@ export default function Map() {
           <div style={{ fontSize: 10, color: '#6b7568', marginTop: 4, maxWidth: 190, lineHeight: 1.5 }}>
             One region of a networked map in progress. More coming.
           </div>
+          <a
+            href={NOTION_DATA_URL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: 'inline-block',
+              marginTop: 8,
+              fontSize: 10,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: CI_PERIWINKLE,
+              textDecoration: 'none',
+            }}
+          >
+            Source data ↗
+          </a>
         </div>
 
         {/* Lens toggle: colour the map by infrastructure layer, or by who owns it. */}
