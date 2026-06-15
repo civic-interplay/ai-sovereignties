@@ -1,6 +1,37 @@
-# OpenNext Starter
+# AI Sovereignties
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A map of Australia's critical AI infrastructure (rare-earth mines, refineries,
+data centres, energy & policy signals), rendered with Mapbox.
+
+## Live data from Notion
+
+The map is **driven live by the Notion "Critical Infrastructure Tracker — Australia"
+database**. There is no hardcoded data:
+
+- `src/app/api/sites/route.ts` queries the Notion database and returns GeoJSON.
+  Any row with both a **Latitude** and a **Longitude** becomes a point on the map.
+- `src/app/components/Map.tsx` fetches `/api/sites` on load.
+
+Edit a row in Notion (or add a new one with coordinates) → refresh the map → it
+updates. The API caches for 60s, so allow up to a minute.
+
+### Setup
+
+1. Copy `.env.example` to `.env.local` and fill in the values.
+2. Create a Notion **internal integration** at
+   https://www.notion.so/my-integrations and copy its secret into `NOTION_TOKEN`.
+3. Open the tracker in Notion → `•••` → **Connections** → add your integration,
+   so it can read the database.
+4. New tracker rows need **Latitude** / **Longitude** filled in to appear on the
+   map. Rows without coordinates (e.g. national policy signals) are skipped.
+
+For Cloudflare (`npm run preview` / `npm run deploy`), set the secret on the
+Worker too:
+
+```bash
+npx wrangler secret put NOTION_TOKEN
+# For local `wrangler` preview, put NOTION_TOKEN in a .dev.vars file instead.
+```
 
 ## Getting Started
 

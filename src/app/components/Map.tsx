@@ -6,15 +6,31 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
 
-const SITES = {
-  type: 'FeatureCollection' as const,
-  features: [
-    { type: 'Feature' as const, properties: { name: 'AirTrunk Sydney', type: 'data_centre', sovereignty: 'foreign', capacity: 400 }, geometry: { type: 'Point' as const, coordinates: [150.9, -33.8] } },
-    { type: 'Feature' as const, properties: { name: 'NextDC S1', type: 'data_centre', sovereignty: 'australian', capacity: 30 }, geometry: { type: 'Point' as const, coordinates: [151.2, -33.87] } },
-    { type: 'Feature' as const, properties: { name: 'Lynas Rare Earths — Mt Weld', type: 'mine', sovereignty: 'australian', capacity: 100 }, geometry: { type: 'Point' as const, coordinates: [121.47, -28.73] } },
-    { type: 'Feature' as const, properties: { name: 'Arafura Resources — Nolans', type: 'mine', sovereignty: 'australian', capacity: 60 }, geometry: { type: 'Point' as const, coordinates: [133.67, -22.5] } },
-  ],
+// Colour per infrastructure kind (matches the `kind` key from /api/sites).
+const KIND_COLORS: Record<string, string> = {
+  data_centre: '#00ffcc',
+  mine: '#ff6b35',
+  refinery: '#b478ff',
+  energy: '#ffd23f',
+  water: '#3fa9ff',
+  policy: '#9aa5a0',
+  geopolitical: '#ff4d6d',
+  other: '#ffffff',
 };
+
+// Flattened ['data_centre', '#..', 'mine', '#..', ..., fallback] for a Mapbox `match`.
+const KIND_MATCH = [
+  'data_centre', KIND_COLORS.data_centre,
+  'mine', KIND_COLORS.mine,
+  'refinery', KIND_COLORS.refinery,
+  'energy', KIND_COLORS.energy,
+  'water', KIND_COLORS.water,
+  'policy', KIND_COLORS.policy,
+  'geopolitical', KIND_COLORS.geopolitical,
+  KIND_COLORS.other, // fallback
+];
+
+const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 export default function Map() {
   const mapContainer = useRef<HTMLDivElement>(null);
@@ -30,8 +46,20 @@ export default function Map() {
       zoom: 3.5,
     });
 
-    m.on('load', () => {
-      m.addSource('sites', { type: 'geojson', data: SITES });
+    m.on('load', async () => {
+      // Pull the live GeoJSON from the Notion-backed API route.
+      let data: GeoJSON.FeatureCollection = EMPTY;
+      try {
+        const res = await fetch('/api/sites');
+        if (res.ok) data = await res.json();
+      } catch {
+        // Leave the map empty on failure rather than crashing.
+      }
+
+      m.addSource('sites', { type: 'geojson', data });
+
+      const kindColor = ['match', ['get', 'kind'], ...KIND_MATCH] as unknown as mapboxgl.ExpressionSpecification;
+      const capacity = ['coalesce', ['get', 'capacity'], 30] as unknown as mapboxgl.ExpressionSpecification;
 
       // Outer pulse ring
       m.addLayer({
@@ -39,11 +67,11 @@ export default function Map() {
         type: 'circle',
         source: 'sites',
         paint: {
-          'circle-radius': ['interpolate', ['linear'], ['get', 'capacity'], 30, 20, 400, 50],
-          'circle-color': ['match', ['get', 'type'], 'data_centre', '#00ffcc', 'mine', '#ff6b35', '#ffffff'],
+          'circle-radius': ['interpolate', ['linear'], capacity, 30, 20, 400, 50] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-color': kindColor,
           'circle-opacity': 0.15,
           'circle-stroke-width': 1.5,
-          'circle-stroke-color': ['match', ['get', 'type'], 'data_centre', '#00ffcc', 'mine', '#ff6b35', '#ffffff'],
+          'circle-stroke-color': kindColor,
           'circle-stroke-opacity': 0.6,
         },
       });
@@ -54,8 +82,8 @@ export default function Map() {
         type: 'circle',
         source: 'sites',
         paint: {
-          'circle-radius': ['interpolate', ['linear'], ['get', 'capacity'], 30, 8, 400, 20],
-          'circle-color': ['match', ['get', 'type'], 'data_centre', '#00ffcc', 'mine', '#ff6b35', '#ffffff'],
+          'circle-radius': ['interpolate', ['linear'], capacity, 30, 8, 400, 20] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-color': kindColor,
           'circle-opacity': 0.9,
           'circle-blur': 0.3,
         },
@@ -65,18 +93,33 @@ export default function Map() {
       m.on('click', 'sites-core', (e) => {
         const feature = e.features?.[0];
         if (!feature) return;
-        const props = feature.properties!;
-        const color = props.type === 'data_centre' ? '#00ffcc' : '#ff6b35';
+        const p = feature.properties as Record<string, string>;
+        const color = KIND_COLORS[p.kind] ?? KIND_COLORS.other;
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
+
+        const sovereignty = p.sovereigntyLabel || '';
+        const rows = [
+          p.status && row('Status', p.status),
+          p.operator && row('Operator', p.operator),
+          p.capacity && row('Capacity', p.capacity + ' MW'),
+          p.waterRisk && row('Water risk', p.waterRisk),
+          p.state && row('Region', p.state),
+        ].filter(Boolean).join('');
+
+        const link = p.source
+          ? '<a href="' + p.source + '" target="_blank" rel="noreferrer" style="color:' + color + ';font-size:10px;text-decoration:none;">source ↗</a>'
+          : '';
 
         new mapboxgl.Popup({ closeButton: false, className: 'sovereignty-popup' })
           .setLngLat(coords)
           .setHTML(
-            '<div style="background:#0a0c0b;border:1px solid ' + color + ';padding:10px 14px;font-family:Courier New,monospace;font-size:11px;color:#c8cfc4;min-width:180px;">' +
-            '<div style="color:' + color + ';font-size:10px;letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;">' + props.type.replace('_', ' ') + '</div>' +
-            '<div style="font-size:13px;margin-bottom:4px;">' + props.name + '</div>' +
-            '<div style="color:#6b7568;font-size:10px;">' + (props.sovereignty === 'foreign' ? '🌐 Foreign-owned' : '🇦🇺 Australian-owned') + '</div>' +
-            '</div>'
+            '<div style="background:#0a0c0b;border:1px solid ' + color + ';padding:10px 14px;font-family:Courier New,monospace;font-size:11px;color:#c8cfc4;min-width:200px;">' +
+            '<div style="color:' + color + ';font-size:10px;letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;">' + (p.infraType || '') + '</div>' +
+            '<div style="font-size:13px;margin-bottom:4px;">' + (p.name || '') + '</div>' +
+            (sovereignty ? '<div style="color:#6b7568;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
+            rows +
+            (link ? '<div style="margin-top:6px;">' + link + '</div>' : '') +
+            '</div>',
           )
           .addTo(m);
       });
@@ -89,4 +132,13 @@ export default function Map() {
   }, []);
 
   return <div ref={mapContainer} style={{ width: '100vw', height: '100vh' }} />;
+}
+
+function row(key: string, value: string): string {
+  return (
+    '<div style="display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;">' +
+    '<span style="color:#6b7568;">' + key + '</span>' +
+    '<span style="color:#c8cfc4;text-align:right;">' + value + '</span>' +
+    '</div>'
+  );
 }
