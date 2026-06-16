@@ -74,6 +74,16 @@ function sovereigntyKey(value: string | null): string {
   return 'other';
 }
 
+// Collapse the "Water Risk" select into a short key the map styles on.
+// Unset and "Not applicable" both fold into 'na'.
+function waterRiskKey(value: string | null): string {
+  if (!value) return 'na';
+  if (value.includes('High')) return 'high';
+  if (value.includes('Medium')) return 'medium';
+  if (value.includes('Low')) return 'low';
+  return 'na';
+}
+
 async function queryNotion(token: string, databaseId: string) {
   const features: Array<Record<string, unknown>> = [];
   let cursor: string | undefined;
@@ -124,6 +134,7 @@ async function queryNotion(token: string, databaseId: string) {
           state: selectName(props['State / Region']),
           capacity: num(props['Capacity (MW)']),
           waterRisk: label(selectName(props['Water Risk'])),
+          waterRiskKey: waterRiskKey(selectName(props['Water Risk'])),
           investmentSignal: selectName(props['Investment Signal']),
           mineralFocus: multiNames(props['Mineral Focus']),
           notes: plain(props['Notes']),

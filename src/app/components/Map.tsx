@@ -58,6 +58,23 @@ const SOV_LABELS: Record<string, string> = {
 };
 const SOV_ORDER = ['australian', 'foreign', 'jv', 'government', 'defence', 'other'];
 
+// --- Water-risk lens: colour per water-risk key (the `waterRiskKey` from /api/sites) ---
+const WATER_COLORS: Record<string, string> = {
+  high: '#ff4d6d',
+  medium: '#ffd23f',
+  low: '#3fd17a',
+  na: '#6b7568',
+  other: '#9aa5a0',
+};
+const WATER_LABELS: Record<string, string> = {
+  high: 'High — potable stressed',
+  medium: 'Medium — some pressure',
+  low: 'Low — closed-loop',
+  na: 'Not applicable',
+  other: 'Unknown',
+};
+const WATER_ORDER = ['high', 'medium', 'low', 'na'];
+
 // Build a flattened ['key', '#colour', ..., fallback] list for a Mapbox `match`.
 function matchList(colors: Record<string, string>, order: string[]): (string)[] {
   const out: string[] = [];
@@ -66,12 +83,13 @@ function matchList(colors: Record<string, string>, order: string[]): (string)[] 
   return out;
 }
 
-type Lens = 'kind' | 'sovereignty';
+type Lens = 'kind' | 'sovereignty' | 'water';
 
 // Colour expressions, one per lens. Switched at runtime via setPaintProperty.
 const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
   kind: ['match', ['get', 'kind'], ...matchList(KIND_COLORS, KIND_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   sovereignty: ['match', ['get', 'sovereignty'], ...matchList(SOV_COLORS, SOV_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  water: ['match', ['get', 'waterRiskKey'], ...matchList(WATER_COLORS, WATER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
 };
 
 const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
@@ -85,6 +103,7 @@ export default function Map() {
   // Keys actually present in the live data, per lens, to drive the legend.
   const [kinds, setKinds] = useState<string[]>([]);
   const [sovs, setSovs] = useState<string[]>([]);
+  const [waters, setWaters] = useState<string[]>([]);
 
   useEffect(() => {
     if (map.current || !mapContainer.current) return;
@@ -109,8 +128,10 @@ export default function Map() {
       // Drive each legend from the keys present in the data, in canonical order.
       const kindSet = new Set(data.features.map((f) => (f.properties?.kind as string) ?? 'other'));
       const sovSet = new Set(data.features.map((f) => (f.properties?.sovereignty as string) ?? 'other'));
+      const waterSet = new Set(data.features.map((f) => (f.properties?.waterRiskKey as string) ?? 'na'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
       setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
+      setWaters(WATER_ORDER.filter((k) => waterSet.has(k)));
 
       m.addSource('sites', { type: 'geojson', data });
 
@@ -151,9 +172,12 @@ export default function Map() {
         if (!feature) return;
         const p = feature.properties as Record<string, string>;
         // Accent the popup with the active lens colour.
-        const color = lensRef.current === 'sovereignty'
+        const lensNow = lensRef.current;
+        const color = lensNow === 'sovereignty'
           ? (SOV_COLORS[p.sovereignty] ?? SOV_COLORS.other)
-          : (KIND_COLORS[p.kind] ?? KIND_COLORS.other);
+          : lensNow === 'water'
+            ? (WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other)
+            : (KIND_COLORS[p.kind] ?? KIND_COLORS.other);
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
 
         const sovereignty = p.sovereigntyLabel || '';
@@ -201,10 +225,13 @@ export default function Map() {
     m.setPaintProperty('sites-pulse', 'circle-stroke-color', color);
   }, [lens]);
 
-  const items = lens === 'sovereignty' ? sovs : kinds;
-  const colors = lens === 'sovereignty' ? SOV_COLORS : KIND_COLORS;
-  const labels = lens === 'sovereignty' ? SOV_LABELS : KIND_LABELS;
-  const legendTitle = lens === 'sovereignty' ? 'Ownership' : 'Infrastructure';
+  // Legend config per lens — add a new lens here and it flows to legend + popups.
+  const legend = {
+    kind: { items: kinds, colors: KIND_COLORS, labels: KIND_LABELS, title: 'Infrastructure' },
+    sovereignty: { items: sovs, colors: SOV_COLORS, labels: SOV_LABELS, title: 'Ownership' },
+    water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
+  }[lens];
+  const { items, colors, labels, title: legendTitle } = legend;
 
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
@@ -255,6 +282,9 @@ export default function Map() {
           </button>
           <button type="button" style={tab(lens === 'sovereignty')} onClick={() => setLens('sovereignty')}>
             Ownership
+          </button>
+          <button type="button" style={tab(lens === 'water')} onClick={() => setLens('water')}>
+            Water
           </button>
         </div>
 
