@@ -16,6 +16,7 @@ import { getSites, getExistingSourceUrls, createContestationItem, type Site } fr
 import { resolveSite } from './lib/resolve.ts';
 import { fetchGdelt } from './retrieve/gdelt.ts';
 import { fetchInbox } from './retrieve/inbox.ts';
+import { fetchPortals } from './retrieve/portals.ts';
 import type { Candidate } from './retrieve/types.ts';
 
 function arg(name: string): string | undefined {
@@ -29,7 +30,8 @@ function flag(name: string): boolean {
 async function getCandidates(source: string): Promise<Candidate[]> {
   if (source === 'inbox') return fetchInbox();
   if (source === 'gdelt') return fetchGdelt();
-  throw new Error(`Unknown source "${source}" (use gdelt or inbox)`);
+  if (source === 'portals') return fetchPortals();
+  throw new Error(`Unknown source "${source}" (use gdelt, inbox or portals)`);
 }
 
 async function main() {
