@@ -10,9 +10,11 @@
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
+    "pipeline": "tsx pipeline/run.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.106.0",
     "@opennextjs/cloudflare": "^1.17.1",
     "@types/mapbox-gl": "^3.4.1",
     "mapbox-gl": "^3.21.0",
@@ -29,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "^5.7.4",
     "wrangler": "^4.80.0"
   }

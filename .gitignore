@@ -50,3 +50,7 @@ next-env.d.ts
 
 
 !.dev.vars.example
+
+# contestation pipeline: ingested source material stays local
+/pipeline/inbox/*
+!/pipeline/inbox/README.md
