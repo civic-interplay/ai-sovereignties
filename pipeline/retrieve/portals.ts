@@ -61,7 +61,7 @@ export async function fetchPortals(
 
   let items: PortalItem[];
   try {
-    const data = await res.json();
+    const data = (await res.json()) as PortalItem[] | { items?: PortalItem[]; results?: PortalItem[] };
     items = Array.isArray(data) ? data : (data.items ?? data.results ?? []);
   } catch {
     return [];

@@ -75,6 +75,24 @@ const WATER_LABELS: Record<string, string> = {
 };
 const WATER_ORDER = ['high', 'medium', 'low', 'na'];
 
+// --- Register lens: colour per sovereignty register (the `register` key from /api/sites) ---
+// Green = sovereign capability owned here, red = onshore but rented. The thesis in colour.
+const REGISTER_COLORS: Record<string, string> = {
+  productive: '#00e08a',
+  operational: '#3fa9ff',
+  financial: '#ffd23f',
+  locational: '#ff4d6d',
+  none: '#6b7568',
+};
+const REGISTER_LABELS: Record<string, string> = {
+  productive: 'Productive (builds / owns)',
+  operational: 'Operational (gov-run)',
+  financial: 'Financial (public capital)',
+  locational: 'Locational (onshore, rented)',
+  none: 'Not coded',
+};
+const REGISTER_ORDER = ['productive', 'operational', 'financial', 'locational', 'none'];
+
 // Build a flattened ['key', '#colour', ..., fallback] list for a Mapbox `match`.
 function matchList(colors: Record<string, string>, order: string[]): (string)[] {
   const out: string[] = [];
@@ -83,13 +101,14 @@ function matchList(colors: Record<string, string>, order: string[]): (string)[] 
   return out;
 }
 
-type Lens = 'kind' | 'sovereignty' | 'water';
+type Lens = 'kind' | 'sovereignty' | 'water' | 'register';
 
 // Colour expressions, one per lens. Switched at runtime via setPaintProperty.
 const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
   kind: ['match', ['get', 'kind'], ...matchList(KIND_COLORS, KIND_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   sovereignty: ['match', ['get', 'sovereignty'], ...matchList(SOV_COLORS, SOV_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   water: ['match', ['get', 'waterRiskKey'], ...matchList(WATER_COLORS, WATER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  register: ['match', ['get', 'register'], ...matchList(REGISTER_COLORS, REGISTER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
 };
 
 const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
@@ -104,6 +123,7 @@ export default function Map() {
   const [kinds, setKinds] = useState<string[]>([]);
   const [sovs, setSovs] = useState<string[]>([]);
   const [waters, setWaters] = useState<string[]>([]);
+  const [regs, setRegs] = useState<string[]>([]);
 
   useEffect(() => {
     if (map.current || !mapContainer.current) return;
@@ -129,9 +149,11 @@ export default function Map() {
       const kindSet = new Set(data.features.map((f) => (f.properties?.kind as string) ?? 'other'));
       const sovSet = new Set(data.features.map((f) => (f.properties?.sovereignty as string) ?? 'other'));
       const waterSet = new Set(data.features.map((f) => (f.properties?.waterRiskKey as string) ?? 'na'));
+      const registerSet = new Set(data.features.map((f) => (f.properties?.register as string) ?? 'none'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
       setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
       setWaters(WATER_ORDER.filter((k) => waterSet.has(k)));
+      setRegs(REGISTER_ORDER.filter((k) => registerSet.has(k)));
 
       m.addSource('sites', { type: 'geojson', data });
 
@@ -177,7 +199,9 @@ export default function Map() {
           ? (SOV_COLORS[p.sovereignty] ?? SOV_COLORS.other)
           : lensNow === 'water'
             ? (WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other)
-            : (KIND_COLORS[p.kind] ?? KIND_COLORS.other);
+            : lensNow === 'register'
+              ? (REGISTER_COLORS[p.register] ?? REGISTER_COLORS.none)
+              : (KIND_COLORS[p.kind] ?? KIND_COLORS.other);
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
 
         const sovereignty = p.sovereigntyLabel || '';
@@ -185,6 +209,8 @@ export default function Map() {
           p.status && row('Status', p.status),
           p.operator && row('Operator', p.operator),
           p.capacity && row('Capacity', p.capacity + ' MW'),
+          p.registers && row('Register', p.registers),
+          p.tenants && row('Serves', p.tenants),
           p.waterRisk && row('Water risk', p.waterRisk),
           p.state && row('Region', p.state),
         ].filter(Boolean).join('');
@@ -230,6 +256,7 @@ export default function Map() {
     kind: { items: kinds, colors: KIND_COLORS, labels: KIND_LABELS, title: 'Infrastructure' },
     sovereignty: { items: sovs, colors: SOV_COLORS, labels: SOV_LABELS, title: 'Ownership' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
+    register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty register' },
   }[lens];
   const { items, colors, labels, title: legendTitle } = legend;
 
@@ -285,6 +312,9 @@ export default function Map() {
           </button>
           <button type="button" style={tab(lens === 'water')} onClick={() => setLens('water')}>
             Water
+          </button>
+          <button type="button" style={tab(lens === 'register')} onClick={() => setLens('register')}>
+            Register
           </button>
         </div>
 

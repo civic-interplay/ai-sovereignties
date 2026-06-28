@@ -84,6 +84,17 @@ function waterRiskKey(value: string | null): string {
   return 'na';
 }
 
+// Reduce the multi-value "Sovereignty register" to one key for colouring, by
+// precedence: the most sovereign register present wins (a site that reaches
+// Productive shows as Productive even if it is also Locational).
+function registerKey(regs: string[]): string {
+  if (regs.includes('Productive')) return 'productive';
+  if (regs.includes('Operational')) return 'operational';
+  if (regs.includes('Financial')) return 'financial';
+  if (regs.includes('Locational')) return 'locational';
+  return 'none';
+}
+
 async function queryNotion(token: string, databaseId: string) {
   const features: Array<Record<string, unknown>> = [];
   let cursor: string | undefined;
@@ -128,6 +139,9 @@ async function queryNotion(token: string, databaseId: string) {
           infraType: label(infraType),
           sovereignty: sovereigntyKey(selectName(props['Sovereignty / Governance'])),
           sovereigntyLabel: selectName(props['Sovereignty / Governance']),
+          register: registerKey(multiNames(props['Sovereignty register'])),
+          registers: multiNames(props['Sovereignty register']).join(', '),
+          tenants: multiNames(props['Tenant / model served']).join(', '),
           status: selectName(props['Status']),
           operator: plain(props['Operator']),
           ownershipCountry: plain(props['Ownership Country']),
