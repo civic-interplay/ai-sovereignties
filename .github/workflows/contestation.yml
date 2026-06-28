@@ -1,0 +1,28 @@
+name: Contestation pipeline
+
+# Roughly fortnightly: the 1st and 15th at 06:00 UTC (cron has no native
+# "every two weeks"). Plus a manual trigger.
+on:
+  schedule:
+    - cron: '0 6 1,15 * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Max items to process'
+        default: '40'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      # GDELT is the automated source. Items below the confidence threshold are
+      # written but flagged for human review before anything is used in print.
+      - run: npm run pipeline -- --source gdelt --limit ${{ github.event.inputs.limit || '40' }} --write
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

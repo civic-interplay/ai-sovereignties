@@ -65,3 +65,56 @@ The classifier emits the exact Notion option strings. Note Notion forbids
 commas in option names, so a few labels use " / " (e.g. "Land use / amenity /
 visual", "Jobs / investment / economic", "Process / consultation /
 transparency"). See `pipeline/config.ts`.
+
+## Capturing the whole debate, not just opposition
+
+The tracker records `Stance` (Opposing / Conditional / Supporting / Neutral), so
+it holds the case *for* a project as well as against it. Retrieval deliberately
+includes support and benefit terms (support, welcomes, jobs, investment)
+alongside objection terms, so the benefits framing isn't missed. The
+`Jobs / investment / economic` ground carries the main pro-argument; the
+Synoptics database also has a `Strategic or sovereign capability` ground for the
+strategic case. Read the tracker as a map of the whole debate, not a list of
+objections.
+
+## Synoptics (survey and overview sources)
+
+Some sources span many sites or the sector as a whole: multi-site news roundups,
+parliamentary inquiries, NGO or government reviews, moratorium calls. These
+don't fit the one-record-per-site grain, so they live in the **Synoptics —
+Australia** database, which relates to many sites at once and records a
+`Stance mix` rather than a single stance.
+
+Workflow: log the survey once as a synoptic, then hand-split any clearly
+site-attributable items into the Contestation Tracker, putting a `#anchor` on
+the source URL (e.g. `...#plumpton`) so dedup keeps them distinct. Do not run a
+survey article through the auto-pipeline; it would flatten it into one
+misleading record.
+
+## Non-public / licensed sources: the RMIT / Factiva review method
+
+Factiva (via the RMIT library) and similar licensed databases are gated, and
+their terms forbid automated scraping, so they are a manual, human-in-the-loop
+strand. Never point a crawler at them.
+
+1. **Access.** Sign in to the RMIT Library, open the Databases A–Z list, launch
+   Factiva (or ProQuest / Newsbank as appropriate). You are bound by RMIT's
+   licence terms for that database.
+2. **Search.** Build a query for the tracked sites and operators (e.g. a site
+   name OR operator) with a date range. Save it as an alert so you can re-run it
+   each fortnight.
+3. **Export.** Export the results as article text (RTF/HTML/plain text). Do not
+   bulk-download beyond what the licence permits; export the specific articles
+   you will code.
+4. **Stage.** For each article, create a file in `pipeline/inbox/` as JSON with
+   `source_url`, `date` and `text` (see `pipeline/inbox/README.md`). Use the
+   real publisher URL as `source_url` where one exists, not the Factiva link.
+5. **Classify.** Run `npm run pipeline -- --source inbox --write`. Files stay
+   local (gitignored); the licensed text never enters the repo or Notion. Only
+   the structured codes, a short frame summary and a single attributed quote do.
+6. **Review.** In Notion, filter the Contestation Tracker for
+   `Confidence < 0.6` or `Classified by = Agent`. Confirm the site match first
+   (the riskiest field), then the stance and grounds. Flip verified rows to
+   `Classified by = Human-verified`. Nothing is used in print before this.
+7. **Quoting.** Keep `Representative quote` to one short attributed line (fair
+   dealing for research/criticism). Cite the original publisher, not Factiva.

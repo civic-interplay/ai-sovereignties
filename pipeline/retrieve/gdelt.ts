@@ -6,10 +6,14 @@ import type { Candidate } from './types.ts';
 
 const ENDPOINT = 'https://api.gdeltproject.org/api/v2/doc/doc';
 
-// Infrastructure terms AND contestation terms, biased to Australian sources.
+// Infrastructure terms AND debate terms, biased to Australian sources. The
+// debate terms deliberately include BOTH opposition and support framing, so the
+// tracker captures the whole structure of the debate (the classifier records
+// stance) rather than only the objections. Opposition-only retrieval would skew
+// the picture and miss the benefits case (jobs, investment, strategic value).
 // GDELT's sourcecountry uses FIPS 10-4 codes; Australia is "AS" (not "australia").
 const DEFAULT_QUERY =
-  '("data centre" OR "data center" OR "rare earths" OR refinery OR "rare earth refinery") (opposition OR objection OR protest OR "community concern" OR submission OR "water use") sourcecountry:AS';
+  '("data centre" OR "data center" OR "rare earths" OR refinery OR "rare earth refinery") (opposition OR objection OR protest OR "community concern" OR submission OR "water use" OR support OR welcomes OR jobs OR investment OR backs) sourcecountry:AS';
 
 function toIsoDate(seendate: string | undefined): string | null {
   // GDELT format: 20260615T103000Z
