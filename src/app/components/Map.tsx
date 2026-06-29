@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
+// Public Mapbox token. If Next inlines NEXT_PUBLIC_MAPBOX_TOKEN at build time we
+// use it; otherwise the token is fetched at runtime from /api/config (build-time
+// inlining is unreliable on this Next + Turbopack + OpenNext stack). Publishable
+// (pk.) token, restricted by URL in the Mapbox account.
+if (process.env.NEXT_PUBLIC_MAPBOX_TOKEN) {
+  mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
+}
 
 // Civic Interplay chrome tokens (light-touch: dark field kept, CI furniture).
 const CI_FONT = 'var(--font-fira), system-ui, sans-serif';
@@ -128,8 +134,24 @@ export default function Map() {
   const [sovs, setSovs] = useState<string[]>([]);
   const [waters, setWaters] = useState<string[]>([]);
   const [regs, setRegs] = useState<string[]>([]);
+  // The Mapbox token may not be inlined at build time on this stack, so fetch it
+  // at runtime from /api/config before initialising the map.
+  const [tokenReady, setTokenReady] = useState<boolean>(!!mapboxgl.accessToken);
 
   useEffect(() => {
+    if (mapboxgl.accessToken) { setTokenReady(true); return; }
+    fetch('/api/config')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((c) => {
+        const token = (c as { mapboxToken?: string } | null)?.mapboxToken;
+        if (token) mapboxgl.accessToken = token;
+      })
+      .catch(() => {})
+      .finally(() => setTokenReady(true));
+  }, []);
+
+  useEffect(() => {
+    if (!tokenReady) return;
     if (map.current || !mapContainer.current) return;
 
     const m = new mapboxgl.Map({
@@ -242,7 +264,7 @@ export default function Map() {
     });
 
     map.current = m;
-  }, []);
+  }, [tokenReady]);
 
   // Recolour the nodes when the lens changes (layers exist only after load).
   useEffect(() => {
