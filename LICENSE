@@ -3,18 +3,28 @@
 This repository contains both research data/content and application code, under
 two licences.
 
-## Data and content — CC BY 4.0
+## Methodology, interpretation and written content — CC BY 4.0
 
-"A living atlas of AI sovereignties as historical geography" — the Critical
-Infrastructure Tracker data, the contestation records, and the written content
-of this project — is licensed under the Creative Commons Attribution 4.0
-International License (CC BY 4.0).
+The original contributions of "A living atlas of AI sovereignties as historical
+geography" — its methodology, its classification and coding schema (the
+sovereignty registers, the contestation coding), the selection and arrangement
+of the dataset, and the written analysis — are licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0).
 
-You are free to share and adapt the material for any purpose, including
+You are free to share and adapt that material for any purpose, including
 commercially, provided you give appropriate credit and indicate any changes.
 
 Attribution: Sarah Barns, Civic Interplay (https://civicinterplay.io), 2026.
 Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## Underlying data
+
+The factual records (sites, owners, approvals, and contestation events) are
+compiled from publicly available sources, cited per entry. Facts are not subject
+to copyright, and any third-party source material (quotations, articles, and
+planning or government documents) remains under its original terms. No
+proprietary claim is made over the underlying facts; the CC BY 4.0 licence above
+covers only the project's own interpretive and editorial layer.
 
 ## Software — MIT
 
