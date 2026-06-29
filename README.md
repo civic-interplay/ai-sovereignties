@@ -1,5 +1,7 @@
 # AI Sovereignties
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21026430.svg)](https://doi.org/10.5281/zenodo.21026430)
+
 A map of Australia's critical AI infrastructure (rare-earth mines, refineries,
 data centres, energy & policy signals), rendered with Mapbox.
 
