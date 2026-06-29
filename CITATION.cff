@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "A living atlas of AI sovereignties as historical geography"
+message: "If you use this dataset or tool, please cite it as below."
+type: dataset
+authors:
+  - family-names: "Barns"
+    given-names: "Sarah"
+    orcid: "https://orcid.org/0000-0002-0087-7166"
+    affiliation: "RMIT University"
+abstract: >-
+  A live, openly maintained map of the infrastructure behind AI in Australia
+  (data centres, rare-earth mines, refineries, and the energy and water they
+  draw), with ownership, approval pathways, and the public contestation forming
+  around each site. Part of the Civic Interplay project.
+url: "https://sovereignties.civicinterplay.io"
+repository-code: "https://github.com/civic-interplay/ai-sovereignties"
+license: CC-BY-4.0
+date-released: "2026-06-29"
+# doi: added on first Zenodo release
