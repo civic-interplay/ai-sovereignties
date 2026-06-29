@@ -22,9 +22,6 @@ const CI_PERIWINKLE = '#8E9BDD';
 const NOTION_DATA_URL =
   'https://studio-esem.notion.site/8b537010f4cb4aa6b6df470f9d0d40c9?v=c9d0347781ec4900967cfff4d18a25a6';
 
-// The published project explainer (methods + what each category is for).
-const EXPLAINER_URL =
-  'https://studio-esem.notion.site/AI-Sovereignties-project-explainer-38d18df0b77581ab8465dcb65a6628ad';
 
 // --- Layer lens: colour per infrastructure kind (the `kind` key from /api/sites) ---
 const KIND_COLORS: Record<string, string> = {
@@ -327,8 +324,8 @@ export default function Map() {
             Source data ↗
           </a>
           <a
-            href={EXPLAINER_URL}
-            target="_blank"
+            href="https://civicinterplay.io"
+            target="_top"
             rel="noreferrer"
             style={{
               display: 'inline-block',
@@ -341,7 +338,7 @@ export default function Map() {
               textDecoration: 'none',
             }}
           >
-            Explainer ↗
+            ← Civic Interplay
           </a>
         </div>
 
