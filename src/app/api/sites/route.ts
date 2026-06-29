@@ -141,6 +141,12 @@ async function queryNotion(token: string, databaseId: string) {
           sovereigntyLabel: selectName(props['Sovereignty / Governance']),
           register: registerKey(multiNames(props['Sovereignty register'])),
           registers: multiNames(props['Sovereignty register']).join(', '),
+          contested:
+            selectName(props['Community Concern']) === '🔴 Active Opposition' ||
+            selectName(props['Community Concern']) === '🟡 Emerging Concern',
+          fastTracked:
+            multiNames(props['Governance Flags']).includes('Ministerial fast-track') ||
+            multiNames(props['Governance Flags']).includes('NSW State Significant Development'),
           tenants: multiNames(props['Tenant / model served']).join(', '),
           status: selectName(props['Status']),
           operator: plain(props['Operator']),

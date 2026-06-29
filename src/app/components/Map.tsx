@@ -131,6 +131,9 @@ export default function Map() {
   const [sovs, setSovs] = useState<string[]>([]);
   const [waters, setWaters] = useState<string[]>([]);
   const [regs, setRegs] = useState<string[]>([]);
+  // Highlight overlays: contested + state-fast-tracked sites (toggles).
+  const [showContested, setShowContested] = useState(false);
+  const [showFastTracked, setShowFastTracked] = useState(false);
   // The Mapbox token may not be inlined at build time on this stack, so fetch it
   // at runtime from /api/config before initialising the map.
   const [tokenReady, setTokenReady] = useState<boolean>(!!mapboxgl.accessToken);
@@ -211,6 +214,38 @@ export default function Map() {
         },
       });
 
+      // Highlight overlay: contested sites (red ring). Toggled on demand.
+      m.addLayer({
+        id: 'sites-contested',
+        type: 'circle',
+        source: 'sites',
+        filter: ['==', ['get', 'contested'], true] as unknown as mapboxgl.FilterSpecification,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], capacity, 30, 16, 400, 44] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-opacity': 0,
+          'circle-stroke-width': 2.5,
+          'circle-stroke-color': '#ff4d6d',
+          'circle-stroke-opacity': 0.9,
+        },
+      });
+
+      // Highlight overlay: state-fast-tracked sites (amber ring). Toggled on demand.
+      m.addLayer({
+        id: 'sites-fasttracked',
+        type: 'circle',
+        source: 'sites',
+        filter: ['==', ['get', 'fastTracked'], true] as unknown as mapboxgl.FilterSpecification,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], capacity, 30, 23, 400, 53] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-opacity': 0,
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#ffd23f',
+          'circle-stroke-opacity': 0.85,
+        },
+      });
+
       // Popup on click
       m.on('click', 'sites-core', (e) => {
         const feature = e.features?.[0];
@@ -274,12 +309,24 @@ export default function Map() {
     m.setPaintProperty('sites-pulse', 'circle-stroke-color', color);
   }, [lens]);
 
+  // Toggle the highlight overlays when their buttons change.
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !m.getLayer('sites-contested')) return;
+    m.setLayoutProperty('sites-contested', 'visibility', showContested ? 'visible' : 'none');
+  }, [showContested]);
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !m.getLayer('sites-fasttracked')) return;
+    m.setLayoutProperty('sites-fasttracked', 'visibility', showFastTracked ? 'visible' : 'none');
+  }, [showFastTracked]);
+
   // Legend config per lens — add a new lens here and it flows to legend + popups.
   const legend = {
     kind: { items: kinds, colors: KIND_COLORS, labels: KIND_LABELS, title: 'Infrastructure' },
     sovereignty: { items: sovs, colors: SOV_COLORS, labels: SOV_LABELS, title: 'Ownership' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
-    register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty register' },
+    register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty type' },
   }[lens];
   const { items, colors, labels, title: legendTitle } = legend;
 
@@ -354,7 +401,17 @@ export default function Map() {
             Water
           </button>
           <button type="button" style={tab(lens === 'register')} onClick={() => setLens('register')}>
-            Register
+            Type
+          </button>
+        </div>
+
+        {/* Highlight overlays: surface the state-vs-local conflict. */}
+        <div style={{ ...panel, padding: 4, display: 'flex', gap: 4 }}>
+          <button type="button" style={tab(showContested)} onClick={() => setShowContested((v) => !v)}>
+            Contested
+          </button>
+          <button type="button" style={tab(showFastTracked)} onClick={() => setShowFastTracked((v) => !v)}>
+            State fast-tracked
           </button>
         </div>
 
