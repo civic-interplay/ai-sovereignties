@@ -1,78 +1,108 @@
 # AI Sovereignties
 
-A map of Australia's critical AI infrastructure (rare-earth mines, refineries,
-data centres, energy & policy signals), rendered with Mapbox.
+A live map and research toolkit charting the infrastructure behind AI in
+Australia (data centres, the mines, refineries, energy and water they draw, and
+the ownership running through them) and the public debate forming around it.
+
+- **Live map:** https://sovereignties.civicinterplay.io
+- **On the website:** https://civicinterplay.io/sovereignties
+- **Project explainer (methods + what each category is for):** https://studio-esem.notion.site/AI-Sovereignties-project-explainer-38d18df0b77581ab8465dcb65a6628ad
+
+Part of [Civic Interplay](https://civicinterplay.io). Everything here is a draft.
+
+## What's in this repo
+
+- **The map** (`src/`): a Next.js app (OpenNext on Cloudflare Workers) that
+  renders the Notion-backed Critical Infrastructure Tracker as an interactive
+  map, with lenses for infrastructure type, ownership, water risk, and
+  sovereignty register.
+- **The contestation pipeline** (`pipeline/`): a TypeScript pipeline that pulls
+  candidate contestation items (GDELT + a manual inbox), classifies them via
+  Anthropic tool-use into a Notion database, and resolves each to a site. See
+  [`docs/CONTESTATION-PIPELINE.md`](docs/CONTESTATION-PIPELINE.md).
+- **Docs** (`docs/`): [`ARCHITECTURE.md`](docs/ARCHITECTURE.md) (the system and a
+  "transportable vs dependency" sovereignty ledger) and the pipeline runbook.
 
 ## Live data from Notion
 
-The map is **driven live by the Notion "Critical Infrastructure Tracker — Australia"
-database**. There is no hardcoded data:
+The map is **driven live by the Notion "Critical Infrastructure Tracker —
+Australia" database**. There is no hardcoded data:
 
-- `src/app/api/sites/route.ts` queries the Notion database and returns GeoJSON.
-  Any row with both a **Latitude** and a **Longitude** becomes a point on the map.
+- `src/app/api/sites/route.ts` queries the database and returns GeoJSON. Any row
+  with both a **Latitude** and a **Longitude** becomes a point on the map.
 - `src/app/components/Map.tsx` fetches `/api/sites` on load.
 
-Edit a row in Notion (or add a new one with coordinates) → refresh the map → it
+Edit a row in Notion (or add one with coordinates), refresh the map, and it
 updates. The API caches for 60s, so allow up to a minute.
 
-### Setup
+## Configuration
 
-1. Copy `.env.example` to `.env.local` and fill in the values.
-2. Create a Notion **internal integration** at
-   https://www.notion.so/my-integrations and copy its secret into `NOTION_TOKEN`.
-3. Open the tracker in Notion → `•••` → **Connections** → add your integration,
-   so it can read the database.
-4. New tracker rows need **Latitude** / **Longitude** filled in to appear on the
-   map. Rows without coordinates (e.g. national policy signals) are skipped.
+Two values are required:
 
-For Cloudflare (`npm run preview` / `npm run deploy`), set the secret on the
-Worker too:
+| Variable | Where it runs | Purpose |
+|---|---|---|
+| `NOTION_TOKEN` | server-side (runtime) | Notion internal integration secret; reads the tracker |
+| `NEXT_PUBLIC_MAPBOX_TOKEN` | client (**build-time**) | Mapbox public token (`pk....`); renders the base map |
 
-```bash
-npx wrangler secret put NOTION_TOKEN
-# For local `wrangler` preview, put NOTION_TOKEN in a .dev.vars file instead.
-```
+> **Important:** `NEXT_PUBLIC_MAPBOX_TOKEN` is inlined into the client bundle at
+> **build time**. If a build runs without it, the map ships broken (a blank page
+> with "a client-side exception has occurred"). It must be present wherever the
+> build happens.
 
-## Getting Started
+### Local setup
 
-Read the documentation at https://opennext.js.org/cloudflare.
+1. Copy `.env.example` to `.env.local` and fill in both values.
+2. **Notion:** create an internal integration at
+   https://www.notion.so/my-integrations, copy its secret into `NOTION_TOKEN`,
+   then open the tracker in Notion, `•••` → **Connections**, and add the
+   integration so it can read the database.
+3. **Mapbox:** copy a public token from https://account.mapbox.com into
+   `NEXT_PUBLIC_MAPBOX_TOKEN`.
+4. New tracker rows need **Latitude** / **Longitude** to appear; rows without
+   coordinates (e.g. national policy signals) are skipped.
 
-## Develop
-
-Run the Next.js development server:
-
-```bash
-npm run dev
-# or similar package manager command
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Preview
-
-Preview the application locally on the Cloudflare runtime:
+### Develop
 
 ```bash
-npm run preview
-# or similar package manager command
+npm install
+npm run dev      # http://localhost:3000
 ```
 
 ## Deploy
 
-Deploy the application to Cloudflare:
+Production runs on Cloudflare Workers (OpenNext). The Cloudflare build holds
+`NOTION_TOKEN` and `NEXT_PUBLIC_MAPBOX_TOKEN`, so the reliable path is to **push
+to `main` and let Cloudflare build and deploy**.
+
+> **Do not run `npm run deploy` locally unless both tokens are in your build
+> environment.** A local build without `NEXT_PUBLIC_MAPBOX_TOKEN` will overwrite
+> the live Worker with a broken (tokenless) bundle. If that happens, recover with
+> `npx wrangler rollback`, then redeploy via the Cloudflare build.
+
+Where the values live for deploys:
 
 ```bash
-npm run deploy
-# or similar package manager command
+# Server-side Notion secret on the Worker (runtime):
+npx wrangler secret put NOTION_TOKEN          # or .dev.vars for local preview
+
+# Client Mapbox token must be a BUILD variable (Cloudflare build settings),
+# and in .env.local for any local build.
 ```
 
-## Learn More
+## The contestation pipeline
 
-To learn more about Next.js, take a look at the following resources:
+A companion to the map: it records public contestation around the tracked sites
+into Notion, capturing the structure of a position (who, on what grounds, how
+intensely, supporting or opposing) so it can be cross-tabbed against ownership
+and sovereignty. It runs fortnightly via `.github/workflows/contestation.yml`
+and needs `NOTION_TOKEN` and `ANTHROPIC_API_KEY` as repository secrets. Full
+detail and the maintenance runbook are in
+[`docs/CONTESTATION-PIPELINE.md`](docs/CONTESTATION-PIPELINE.md).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Status, contributions, licence
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This is research in progress and is offered as a draft. The underlying data is
+open and exportable, and corrections are welcome, please open an issue or reach
+out via [sarahbarns.com](https://sarahbarns.com).
+
+Licence: to be confirmed. Please ask before reuse in the meantime.
