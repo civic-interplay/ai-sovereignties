@@ -20,8 +20,33 @@ const firaSans = Fira_Sans({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://sovereignties.civicinterplay.io"),
 	title: "AI Sovereignties",
-	description: "A live map of Australia's AI infrastructure and who owns it.",
+	description:
+		"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
+	openGraph: {
+		title: "AI Sovereignties",
+		description:
+			"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
+		url: "https://sovereignties.civicinterplay.io",
+		siteName: "Civic Interplay",
+		type: "website",
+		images: [
+			{
+				url: "https://civicinterplay.io/images/og-sovereignties.png",
+				width: 1200,
+				height: 630,
+				alt: "AI Sovereignties: a live map of Australia's AI infrastructure",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "AI Sovereignties",
+		description:
+			"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
+		images: ["https://civicinterplay.io/images/og-sovereignties.png"],
+	},
 };
 
 export default function RootLayout({
