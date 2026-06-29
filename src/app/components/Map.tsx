@@ -324,7 +324,7 @@ export default function Map() {
             Source data ↗
           </a>
           <a
-            href="https://civicinterplay.io"
+            href="https://civicinterplay.io/ai-sovereignties/"
             target="_top"
             rel="noreferrer"
             style={{
