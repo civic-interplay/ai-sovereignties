@@ -3,6 +3,8 @@
 A map of Australia's critical AI infrastructure (rare-earth mines, refineries,
 data centres, energy & policy signals), rendered with Mapbox.
 
+Live at https://sovereignties.civicinterplay.io
+
 ## Live data from Notion
 
 The map is **driven live by the Notion "Critical Infrastructure Tracker — Australia"
