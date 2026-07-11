@@ -20,9 +20,32 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
+
       # GDELT is the automated source. Items below the confidence threshold are
       # written but flagged for human review before anything is used in print.
-      - run: npm run pipeline -- --source gdelt --limit ${{ github.event.inputs.limit || '40' }} --write
+      - name: GDELT scan (press coverage)
+        run: npm run pipeline -- --source gdelt --limit ${{ github.event.inputs.limit || '40' }} --write
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Planning-portal scan (VIC DFP register / WA DAP submissions etc.), read
+      # from PORTAL_FEED_URL. No-op and stays green when the secret is unset, so
+      # the cron never fails just because the feed is not wired yet.
+      - name: Planning-portal scan (exhibition / submission windows)
+        run: npm run pipeline -- --source portals --limit ${{ github.event.inputs.limit || '40' }} --write
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PORTAL_FEED_URL: ${{ secrets.PORTAL_FEED_URL }}
+
+      # QA self-review: writes nothing, reads the infra tracker and flags rows
+      # that need a human eye (unverified sourcing, low confidence, unconfirmed
+      # public-notice status, missing approval dates, stale rows, campus
+      # double-counts). Report lands in the Actions run summary. Runs last and
+      # never blocks the scans above.
+      - name: QA self-review (flags rows for human review)
+        if: always()
+        run: npm run review
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
