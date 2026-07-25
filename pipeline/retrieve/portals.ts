@@ -10,14 +10,23 @@
 //     submissions. A consolidated exhibition feed exists behind the hub but the
 //     public JSON endpoint / access needs confirming.
 //   - NSW Online DA Data API — documented JSON of DAs lodged since 2019
-//     (local-government scale), may require registration.
-//   - VIC / QLD / WA — separate systems again.
+//     (local-government scale), access is gated via a data broker.
+//   - VIC — the relevant permit/major-project data sits behind "The Data
+//     Exchange" API (public-sector access); the open City of Melbourne feed is
+//     the wrong scope. Realistically a normalised export.
 //
-// Rather than hardcode an endpoint that may 404, this adapter reads a feed URL
-// from PORTAL_FEED_URL and maps a small, documented JSON shape to candidates.
-// Point it at a confirmed portal feed, or at a feed you export/normalise
-// yourself. Until it is set, it returns nothing (so the cron stays green) and
-// submissions can come through the manual `inbox` source instead.
+// Rather than hardcode endpoints that may 404, this adapter reads one or more
+// feed URLs from the environment and maps a small, documented JSON shape to
+// candidates. Point it at confirmed portal feeds, or at feeds you export and
+// normalise yourself.
+//
+// Configuration (both optional; if neither is set the adapter returns nothing
+// so the cron stays green, and submissions come through the manual `inbox`):
+//   - PORTAL_FEED_URLS — comma-separated list, one entry per jurisdiction. Each
+//     entry may be a bare URL, or "LABEL=URL" (e.g. "NSW=https://…,VIC=https://…")
+//     to tag every item from that feed with its jurisdiction. A failed feed is
+//     warned about and skipped, so one state's outage can't lose the others.
+//   - PORTAL_FEED_URL — single-feed back-compat; treated as one unlabelled feed.
 //
 // Expected feed shape (array of objects); field names are configurable below:
 //   [{ "title": "...", "url": "https://...", "status": "On Exhibition",
@@ -45,28 +54,38 @@ interface PortalItem {
   description?: string;
 }
 
-export async function fetchPortals(
-  opts: { feedUrl?: string } = {},
-): Promise<Candidate[]> {
-  const feedUrl = opts.feedUrl ?? optionalEnv('PORTAL_FEED_URL');
-  if (!feedUrl) {
-    console.warn(
-      'portals: PORTAL_FEED_URL not set, skipping. Point it at a confirmed planning-portal feed, or use --source inbox for submissions.',
-    );
-    return [];
-  }
+interface Feed {
+  url: string;
+  label: string | null; // jurisdiction tag, e.g. "NSW"
+}
 
-  const res = await fetch(feedUrl);
-  if (!res.ok) throw new Error(`Portal feed failed (${res.status})`);
+// Parse the configured feeds, newest option first. An entry of the form
+// "LABEL=URL" is split only when the part before the first "=" reads like a
+// short label — so query strings ("...?status=Exhibition") stay intact.
+function resolveFeeds(opts: { feedUrl?: string; feedUrls?: string }): Feed[] {
+  const raw =
+    opts.feedUrls ??
+    opts.feedUrl ??
+    optionalEnv('PORTAL_FEED_URLS') ??
+    optionalEnv('PORTAL_FEED_URL');
+  if (!raw) return [];
 
-  let items: PortalItem[];
-  try {
-    const data = (await res.json()) as PortalItem[] | { items?: PortalItem[]; results?: PortalItem[] };
-    items = Array.isArray(data) ? data : (data.items ?? data.results ?? []);
-  } catch {
-    return [];
-  }
+  return raw
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((entry): Feed => {
+      const eq = entry.indexOf('=');
+      const maybeLabel = eq !== -1 ? entry.slice(0, eq).trim() : '';
+      if (eq !== -1 && /^[a-z0-9 _-]{1,12}$/i.test(maybeLabel)) {
+        return { label: maybeLabel, url: entry.slice(eq + 1).trim() };
+      }
+      return { label: null, url: entry };
+    })
+    .filter((f) => f.url);
+}
 
+function mapItems(items: PortalItem[], domain: string): Candidate[] {
   return items
     .map((it) => {
       const title = it.title ?? it.name ?? '';
@@ -82,9 +101,58 @@ export async function fetchPortals(
       sourceUrl: it.url,
       title: it.title,
       date: it.date,
-      domain: 'planningportal',
+      // Carries the jurisdiction so downstream can tell NSW from VIC items.
+      domain,
       // The submission/exhibition record is the event; the summary is what the
       // classifier reads. For full submission text, stage the PDF via inbox.
       text: `${it.title}. ${it.summary}`.trim(),
     }));
+}
+
+// Fetch and map one feed. Never throws: a network error or non-200 is warned
+// about and turned into an empty result, so one bad feed can't fail the run or
+// suppress the others.
+async function fetchOneFeed(feed: Feed): Promise<Candidate[]> {
+  const who = feed.label ?? feed.url;
+
+  let res: Response;
+  try {
+    res = await fetch(feed.url);
+  } catch (err) {
+    console.warn(`portals: fetch failed for ${who} (${String(err)}); skipping this feed.`);
+    return [];
+  }
+  if (!res.ok) {
+    console.warn(`portals: feed ${who} returned ${res.status}; skipping.`);
+    return [];
+  }
+
+  let items: PortalItem[];
+  try {
+    const data = (await res.json()) as PortalItem[] | { items?: PortalItem[]; results?: PortalItem[] };
+    items = Array.isArray(data) ? data : (data.items ?? data.results ?? []);
+  } catch {
+    console.warn(`portals: feed ${who} did not return JSON; skipping.`);
+    return [];
+  }
+
+  const domain = feed.label ? `planningportal:${feed.label.toLowerCase()}` : 'planningportal';
+  return mapItems(items, domain);
+}
+
+export async function fetchPortals(
+  opts: { feedUrl?: string; feedUrls?: string } = {},
+): Promise<Candidate[]> {
+  const feeds = resolveFeeds(opts);
+  if (feeds.length === 0) {
+    console.warn(
+      'portals: no PORTAL_FEED_URLS / PORTAL_FEED_URL set, skipping. Point it at confirmed planning-portal feeds (comma-separated, optionally "NSW=https://…,VIC=https://…"), or use --source inbox for submissions.',
+    );
+    return [];
+  }
+
+  // Feeds are independent; fetch them concurrently and concatenate. fetchOneFeed
+  // never rejects, so Promise.all is safe here.
+  const perFeed = await Promise.all(feeds.map(fetchOneFeed));
+  return perFeed.flat();
 }

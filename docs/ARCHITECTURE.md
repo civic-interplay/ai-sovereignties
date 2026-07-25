@@ -11,7 +11,7 @@ flowchart TB
   subgraph SRC[Sources]
     G["GDELT<br/>open global news index<br/>[automated] (transportable)"]
     RSS["RSS on named sites<br/>[automated] (transportable) — planned"]
-    PORT["Planning portals & inquiry submissions<br/>[semi-auto] (transportable) — planned"]
+    PORT["Planning portals & inquiry submissions<br/>[semi-auto] (transportable) — in cron, awaiting feed URL"]
     FAC["Factiva via RMIT<br/>[manual export] (dependency: licensed)"]
     COU["Council minutes & town halls<br/>[manual deep-dive] (transportable but unstructured)"]
   end
@@ -56,7 +56,7 @@ flowchart TB
 | Controlled vocabulary + classification contract | automated | **Transportable** | Yours; defined in `pipeline/config.ts`. |
 | Site resolver | automated | **Transportable** | Deterministic matching, no vendor. |
 | GDELT | automated | **Transportable** | Free, open global news index (see below). |
-| Planning portals / inquiry submissions | semi-auto (planned) | **Transportable** | Public records. |
+| Planning portals / inquiry submissions | semi-auto | **Transportable** | Public records. Runs in the fortnightly cron; no-ops until `PORTAL_FEED_URL` points at a confirmed feed. |
 | Notion data | n/a | **Transportable** | Exportable to CSV / Markdown / JSON any time. |
 | Notion (the platform + API) | n/a | Dependency | Proprietary store; your data isn't locked, the tooling is. |
 | Anthropic API | automated | Dependency | Provides the classification intelligence. |

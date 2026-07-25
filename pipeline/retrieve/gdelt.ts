@@ -33,17 +33,36 @@ export async function fetchGdelt(
     sort: 'datedesc',
   });
 
-  // GDELT throttles to ~1 request / 5s. Over-limit it answers either with HTTP
-  // 429 or a 200 whose body is a plain-text notice. Back off and retry on both.
+  // GDELT is flaky in three distinct ways, and a scheduled run only gets one
+  // shot a fortnight, so retry through all of them:
+  //   1. Throttling (~1 req / 5s): HTTP 429, or a 200 whose body is a
+  //      plain-text "limit requests" notice.
+  //   2. A thrown fetch error — connect timeout / dropped connection. This is
+  //      NOT an HTTP status; it escapes any status check, and is what silently
+  //      lost the 1 Jul 2026 scheduled run. Must be caught, not just inspected.
+  // Only give up (and surface a red run) after the last attempt.
+  const MAX_ATTEMPTS = 5;
   let body = '';
-  for (let attempt = 0; attempt < 5; attempt++) {
-    const res = await fetch(`${ENDPOINT}?${params}`);
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+    const last = attempt === MAX_ATTEMPTS - 1;
+
+    let res: Response;
+    try {
+      res = await fetch(`${ENDPOINT}?${params}`);
+    } catch (err) {
+      // Network-level failure: transient, so back off (exponential) and retry.
+      if (last) throw err;
+      await new Promise((r) => setTimeout(r, 1000 * 2 ** attempt));
+      continue;
+    }
+
     body = res.ok ? await res.text() : '';
     const throttled = res.status === 429 || body.includes('limit requests');
     if (!throttled) {
       if (!res.ok) throw new Error(`GDELT failed (${res.status})`);
       break;
     }
+    if (last) break; // still throttled; fall through to parse -> [] (green run)
     await new Promise((r) => setTimeout(r, 7000));
   }
 

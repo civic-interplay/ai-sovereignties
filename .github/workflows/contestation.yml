@@ -20,9 +20,19 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      # GDELT is the automated source. Items below the confidence threshold are
-      # written but flagged for human review before anything is used in print.
+      # GDELT is the wide-net news source. Items below the confidence threshold
+      # are written but flagged for human review before anything is used in print.
       - run: npm run pipeline -- --source gdelt --limit ${{ github.event.inputs.limit || '40' }} --write
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Planning portals: the richest source for *new* projects and submissions.
+      # Runs whether or not GDELT succeeded (independent source, own outages), and
+      # no-ops quietly until the PORTAL_FEED_URL secret points at a confirmed feed.
+      - if: ${{ !cancelled() }}
+        run: npm run pipeline -- --source portals --limit ${{ github.event.inputs.limit || '40' }} --write
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PORTAL_FEED_URLS: ${{ secrets.PORTAL_FEED_URLS }}
+          PORTAL_FEED_URL: ${{ secrets.PORTAL_FEED_URL }}
