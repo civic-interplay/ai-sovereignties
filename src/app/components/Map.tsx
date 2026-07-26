@@ -65,6 +65,50 @@ const SOV_LABELS: Record<string, string> = {
 };
 const SOV_ORDER = ['australian', 'foreign', 'jv', 'government', 'defence', 'other'];
 
+// --- Country lens: colour per owner-country key (the `ownershipCountryKey` from /api/sites) ---
+// The ultimate-owner country: where the capital behind the site actually sits.
+const COUNTRY_COLORS: Record<string, string> = {
+  au: '#00e08a',
+  us: '#3fa9ff',
+  cn: '#ff4d6d',
+  sg: '#ffd23f',
+  jp: '#b478ff',
+  other: '#9aa5a0',
+};
+const COUNTRY_LABELS: Record<string, string> = {
+  au: 'Australia',
+  us: 'United States',
+  cn: 'China',
+  sg: 'Singapore',
+  jp: 'Japan',
+  other: 'Other / unknown',
+};
+const COUNTRY_ORDER = ['au', 'us', 'cn', 'sg', 'jp', 'other'];
+
+// --- Capital lens: colour per owner-type key (the `ownerTypeKey` from /api/sites) ---
+// The *structure* of the capital, not just its flag: who this kind of owner is.
+const CAPITAL_COLORS: Record<string, string> = {
+  hyperscaler: '#00ffcc',
+  infra_fund: '#ff6b35',
+  pension: '#3fa9ff',
+  swf: '#ff4d6d',
+  listed: '#ffd23f',
+  state: '#b478ff',
+  private: '#8e9bdd',
+  other: '#9aa5a0',
+};
+const CAPITAL_LABELS: Record<string, string> = {
+  hyperscaler: 'Hyperscaler',
+  infra_fund: 'Private equity / infra fund',
+  pension: 'Pension / super',
+  swf: 'Sovereign wealth fund',
+  listed: 'Listed / REIT',
+  state: 'State-owned',
+  private: 'Private / founder',
+  other: 'Other / unknown',
+};
+const CAPITAL_ORDER = ['hyperscaler', 'infra_fund', 'pension', 'swf', 'listed', 'state', 'private', 'other'];
+
 // --- Water-risk lens: colour per water-risk key (the `waterRiskKey` from /api/sites) ---
 const WATER_COLORS: Record<string, string> = {
   high: '#ff4d6d',
@@ -108,12 +152,14 @@ function matchList(colors: Record<string, string>, order: string[]): (string)[] 
   return out;
 }
 
-type Lens = 'kind' | 'sovereignty' | 'water' | 'register';
+type Lens = 'kind' | 'sovereignty' | 'country' | 'capital' | 'water' | 'register';
 
 // Colour expressions, one per lens. Switched at runtime via setPaintProperty.
 const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
   kind: ['match', ['get', 'kind'], ...matchList(KIND_COLORS, KIND_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   sovereignty: ['match', ['get', 'sovereignty'], ...matchList(SOV_COLORS, SOV_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  country: ['match', ['get', 'ownershipCountryKey'], ...matchList(COUNTRY_COLORS, COUNTRY_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  capital: ['match', ['get', 'ownerTypeKey'], ...matchList(CAPITAL_COLORS, CAPITAL_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   water: ['match', ['get', 'waterRiskKey'], ...matchList(WATER_COLORS, WATER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   register: ['match', ['get', 'register'], ...matchList(REGISTER_COLORS, REGISTER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
 };
@@ -129,6 +175,8 @@ export default function Map() {
   // Keys actually present in the live data, per lens, to drive the legend.
   const [kinds, setKinds] = useState<string[]>([]);
   const [sovs, setSovs] = useState<string[]>([]);
+  const [countries, setCountries] = useState<string[]>([]);
+  const [capitals, setCapitals] = useState<string[]>([]);
   const [waters, setWaters] = useState<string[]>([]);
   const [regs, setRegs] = useState<string[]>([]);
   // Highlight overlays: contested + state-fast-tracked sites (toggles).
@@ -174,10 +222,14 @@ export default function Map() {
       // Drive each legend from the keys present in the data, in canonical order.
       const kindSet = new Set(data.features.map((f) => (f.properties?.kind as string) ?? 'other'));
       const sovSet = new Set(data.features.map((f) => (f.properties?.sovereignty as string) ?? 'other'));
+      const countrySet = new Set(data.features.map((f) => (f.properties?.ownershipCountryKey as string) ?? 'other'));
+      const capitalSet = new Set(data.features.map((f) => (f.properties?.ownerTypeKey as string) ?? 'other'));
       const waterSet = new Set(data.features.map((f) => (f.properties?.waterRiskKey as string) ?? 'na'));
       const registerSet = new Set(data.features.map((f) => (f.properties?.register as string) ?? 'none'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
       setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
+      setCountries(COUNTRY_ORDER.filter((k) => countrySet.has(k)));
+      setCapitals(CAPITAL_ORDER.filter((k) => capitalSet.has(k)));
       setWaters(WATER_ORDER.filter((k) => waterSet.has(k)));
       setRegs(REGISTER_ORDER.filter((k) => registerSet.has(k)));
 
@@ -253,19 +305,27 @@ export default function Map() {
         const p = feature.properties as Record<string, string>;
         // Accent the popup with the active lens colour.
         const lensNow = lensRef.current;
-        const color = lensNow === 'sovereignty'
-          ? (SOV_COLORS[p.sovereignty] ?? SOV_COLORS.other)
-          : lensNow === 'water'
-            ? (WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other)
-            : lensNow === 'register'
-              ? (REGISTER_COLORS[p.register] ?? REGISTER_COLORS.none)
-              : (KIND_COLORS[p.kind] ?? KIND_COLORS.other);
+        const colorByLens: Record<Lens, string> = {
+          kind: KIND_COLORS[p.kind] ?? KIND_COLORS.other,
+          sovereignty: SOV_COLORS[p.sovereignty] ?? SOV_COLORS.other,
+          country: COUNTRY_COLORS[p.ownershipCountryKey] ?? COUNTRY_COLORS.other,
+          capital: CAPITAL_COLORS[p.ownerTypeKey] ?? CAPITAL_COLORS.other,
+          water: WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other,
+          register: REGISTER_COLORS[p.register] ?? REGISTER_COLORS.none,
+        };
+        const color = colorByLens[lensNow];
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
 
         const sovereignty = p.sovereigntyLabel || '';
         const rows = [
           p.status && row('Status', p.status),
+          // Ownership chain, most-proximate to ultimate. Each row appears only
+          // when the field is populated in Notion.
           p.operator && row('Operator', p.operator),
+          p.parent && row('Parent', p.parent),
+          p.ultimateOwner && row('Ultimate owner', p.ultimateOwner),
+          p.ownerType && row('Owner type', p.ownerType),
+          p.ownershipCountry && row('Owner country', p.ownershipCountry),
           p.capacity && row('Capacity', p.capacity + ' MW'),
           p.registers && row('Register', p.registers),
           p.tenants && row('Serves', p.tenants),
@@ -325,6 +385,8 @@ export default function Map() {
   const legend = {
     kind: { items: kinds, colors: KIND_COLORS, labels: KIND_LABELS, title: 'Infrastructure' },
     sovereignty: { items: sovs, colors: SOV_COLORS, labels: SOV_LABELS, title: 'Ownership' },
+    country: { items: countries, colors: COUNTRY_COLORS, labels: COUNTRY_LABELS, title: 'Owner country' },
+    capital: { items: capitals, colors: CAPITAL_COLORS, labels: CAPITAL_LABELS, title: 'Capital type' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
     register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty type' },
   }[lens];
@@ -390,12 +452,18 @@ export default function Map() {
         </div>
 
         {/* Lens toggle: colour the map by infrastructure layer, or by who owns it. */}
-        <div style={{ ...panel, padding: 4, display: 'flex', gap: 4 }}>
+        <div style={{ ...panel, padding: 4, display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 232 }}>
           <button type="button" style={tab(lens === 'kind')} onClick={() => setLens('kind')}>
             Layer
           </button>
           <button type="button" style={tab(lens === 'sovereignty')} onClick={() => setLens('sovereignty')}>
             Ownership
+          </button>
+          <button type="button" style={tab(lens === 'country')} onClick={() => setLens('country')}>
+            Country
+          </button>
+          <button type="button" style={tab(lens === 'capital')} onClick={() => setLens('capital')}>
+            Capital
           </button>
           <button type="button" style={tab(lens === 'water')} onClick={() => setLens('water')}>
             Water

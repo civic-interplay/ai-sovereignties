@@ -95,6 +95,36 @@ function registerKey(regs: string[]): string {
   return 'none';
 }
 
+// Bucket the free-text "Ownership Country" into a short key the map styles on.
+// A curated set aligned to the AI-infrastructure ownership landscape; extend as
+// the tracker grows. Unset folds into 'other'.
+function ownershipCountryKey(country: string): string {
+  const c = country.toLowerCase();
+  if (!c) return 'other';
+  if (c.includes('australia')) return 'au';
+  if (c.includes('united states') || c.includes('u.s') || c === 'us' || c === 'usa' || c.includes('america')) return 'us';
+  if (c.includes('china') || c.includes('hong kong') || c === 'prc') return 'cn';
+  if (c.includes('singapore')) return 'sg';
+  if (c.includes('japan')) return 'jp';
+  return 'other';
+}
+
+// Bucket the "Owner Type" (structure of capital) into a short key. Match on
+// keywords so the Notion option labels can carry an emoji / longer text. Order
+// matters: more specific tests first (e.g. "private equity" before "private").
+function ownerTypeKey(value: string | null): string {
+  if (!value) return 'other';
+  const v = value.toLowerCase();
+  if (v.includes('hyperscaler') || v.includes('cloud')) return 'hyperscaler';
+  if (v.includes('sovereign')) return 'swf';
+  if (v.includes('pension') || v.includes('super')) return 'pension';
+  if (v.includes('private equity') || v.includes('infra') || v.includes('fund')) return 'infra_fund';
+  if (v.includes('reit') || v.includes('listed') || v.includes('public co')) return 'listed';
+  if (v.includes('state') || v.includes('government') || v.includes('gov')) return 'state';
+  if (v.includes('private') || v.includes('founder')) return 'private';
+  return 'other';
+}
+
 async function queryNotion(token: string, databaseId: string) {
   const features: Array<Record<string, unknown>> = [];
   let cursor: string | undefined;
@@ -149,8 +179,16 @@ async function queryNotion(token: string, databaseId: string) {
             multiNames(props['Governance Flags']).includes('NSW State Significant Development'),
           tenants: multiNames(props['Tenant / model served']).join(', '),
           status: selectName(props['Status']),
+          // Ownership chain: operator → parent → ultimate owner → country/type.
+          // Parent, Ultimate Owner and Owner Type are optional Notion fields; the
+          // map renders each row only when present, so it degrades gracefully.
           operator: plain(props['Operator']),
+          parent: plain(props['Parent']),
+          ultimateOwner: plain(props['Ultimate Owner']),
+          ownerType: label(selectName(props['Owner Type'])),
+          ownerTypeKey: ownerTypeKey(selectName(props['Owner Type'])),
           ownershipCountry: plain(props['Ownership Country']),
+          ownershipCountryKey: ownershipCountryKey(plain(props['Ownership Country'])),
           state: selectName(props['State / Region']),
           capacity: num(props['Capacity (MW)']),
           waterRisk: label(selectName(props['Water Risk'])),
