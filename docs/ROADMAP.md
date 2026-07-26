@@ -29,11 +29,13 @@ Different axes, deliberately — not one map doing everything.
    toggle; optional "sites in marginal seats" highlight.
 5. **Governance / contestation timeline** — *chronological*. A running record of
    policy and governance events (see Hume, below) that grows alongside the map.
-6. **Super-fund exposure** — ⏳ **PARTLY BUILT**: a "Super $" lens now colours
-   sites by sovereign/super exposure %, seeded with CDC (46.59%) — the only
-   documented direct stake so far. Remaining: populate more direct stakes, ingest
-   Portfolio Holdings Disclosure, and the "select your fund → contested sites"
-   reverse-interaction. *Reverse view, activist-facing.* Which Australian
+6. **Super-fund exposure** — ⏳ **LENS BUILT (3-channel)**: the "Super $" lens
+   colours sites by *how* Australian super/sovereign money touches them —
+   **operator** (CDC, green), **land** (Mamre via IFM, gold), **via-manager**
+   (Supernode via Rest/Quinbrook, Vantage via Aware, teal), or none (grey).
+   Remaining: load the rest of the seed list, ingest Portfolio Holdings
+   Disclosure, and the "select your fund → contested sites" reverse-interaction.
+   *Reverse view, activist-facing.* Which Australian
    super funds are invested in each data centre — directly, or via infra-fund
    managers. The interaction: "select your fund → see the contested sites your
    retirement savings touch." The sharpest civic-interplay irony: communities may
@@ -43,6 +45,19 @@ Different axes, deliberately — not one map doing everything.
    Fund 34.55% + CSC 12.04%). **Caveat to label:** direct stakes are exact;
    indirect exposure via pooled infra funds is approximate (fund backs the
    manager, not a per-site dollar figure) — must be flagged, not overclaimed.
+
+   **Seed list — documented Australian super/sovereign → DC exposures (research 2026-07-26):**
+   - Future Fund 34.55% + CSC 12.04% → **CDC** (operator, 46.59% precise). ✅ on map.
+   - ~20 industry funds (AustralianSuper, Hostplus, Cbus, UniSuper, HESTA…) → **IFM
+     Investors** → **Mamre Road land** (land channel; IFM ≈100% of the land). ✅.
+   - Rest Super ($1bn) → **Quinbrook** → **Supernode Brisbane** (via-manager). ✅.
+   - Aware Super (US$300m) → Skyline JV / Vantage APAC → **Vantage AU sites**
+     (Tullamarine etc., operator minority). ❌ NOT in tracker — gap to fill.
+   - ART → consortium w/ Mubadala (SWF); + bidding for a CDC stake (pending).
+   - Offshore context (not on AU map): AustralianSuper → Vantage EMEA (€1.5bn) +
+     DataBank US ($1.5bn); Aware → Switch US.
+   **Model implication:** three exposure channels — operator / land / via-manager —
+   so replace the single % with an `Exposure channel` + `Exposure level` pair.
 
 ## The timeline (home for stories like Hume)
 
@@ -152,10 +167,24 @@ has several: Productive > Operational > Financial > Locational.
 ## Small open items
 
 - ~~Commit pending map fixes~~ **DONE** (commit `b0248ac`).
+- ~~Super $ lens (3-channel) + Vantage + cluster~~ **DONE** (map at 47 sites).
 - Finish `Owner Type` for the ~15 rows still "Other" (the medium-confidence
   operators: Keppel, CDC, STACK, PGIM, AIMS, etc., plus the blanks).
 - Consistency check: "Australian-owned" ⟺ Country = Australia (JV exempt).
 - Surface the glossary on the map — an info tooltip by the Contested /
   State fast-tracked toggles.
+
+## Next session (priority order)
+
+1. **Load the rest of the super-exposure seed list** (item 6) — attach the
+   AustralianSuper/Aware/ART/IFM findings to sites; add IFM as a "conduit" note.
+2. **"Select your fund → contested sites"** reverse-interaction — the activist
+   payoff on top of the 3-channel lens.
+3. **Electoral boundaries overlay** — the one unbuilt visualisation (AEC file).
+4. **Portfolio Holdings Disclosure ingestion** — a pipeline step that greps the
+   big funds' PHD CSVs for operator names/tickers to surface exposures.
+5. Data hygiene: 3 remaining "Other" owner types (Lane Cove undisclosed only now);
+   add coordinates to any remaining off-map DC rows; finish landowners.
+6. Timeline view in Notion (2-min UI step); glossary tooltip on the map.
 - Finish ownership data entry (a handful still in "Other"; medium-confidence rows
   — South Morang/Dover, Truganina/Aljasser, Glendenning/AWS, Lane Cove/undisclosed).

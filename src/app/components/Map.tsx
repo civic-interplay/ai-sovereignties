@@ -154,19 +154,21 @@ const REGISTER_ORDER = ['productive', 'operational', 'financial', 'locational', 
 // --- Sovereign/super exposure lens: how much of a site is funded by Australian
 // sovereign-wealth / super-fund capital (the `superExposureKey` from /api/sites).
 // The activist question: is your retirement invested in the site you're fighting?
+// Coloured by the *channel* through which Australian super/sovereign money
+// touches the site — more telling than a single %, since exposure comes three ways.
 const SUPER_COLORS: Record<string, string> = {
-  high: '#00e08a',
-  mid: '#2ea86e',
-  low: '#5a7d68',
+  operator: '#00e08a',
+  land: '#ffcf5c',
+  via_manager: '#3fd1a0',
   none: '#3a3f3c',
 };
 const SUPER_LABELS: Record<string, string> = {
-  high: 'High — >40% super/sovereign',
-  mid: 'Some — 15–40%',
-  low: 'Low — <15%',
-  none: 'None / foreign (0%)',
+  operator: 'Super owns the operator',
+  land: 'Super owns the land',
+  via_manager: 'Super funds it (via a manager)',
+  none: 'No / undocumented',
 };
-const SUPER_ORDER = ['high', 'mid', 'low', 'none'];
+const SUPER_ORDER = ['operator', 'land', 'via_manager', 'none'];
 
 // Build a flattened ['key', '#colour', ..., fallback] list for a Mapbox `match`.
 function matchList(colors: Record<string, string>, order: string[]): string[] {
@@ -189,7 +191,7 @@ const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
   capital: ['match', ['get', 'ownerTypeKey'], ...matchList(CAPITAL_COLORS, CAPITAL_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   water: ['match', ['get', 'waterRiskKey'], ...matchList(WATER_COLORS, WATER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   register: ['match', ['get', 'register'], ...matchList(REGISTER_COLORS, REGISTER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
-  super: ['match', ['get', 'superExposureKey'], ...matchList(SUPER_COLORS, SUPER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  super: ['match', ['get', 'exposureChannelKey'], ...matchList(SUPER_COLORS, SUPER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
 };
 
 const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
@@ -257,7 +259,7 @@ export default function Map() {
       const capitalSet = new Set(data.features.map((f) => (f.properties?.ownerTypeKey as string) ?? 'other'));
       const waterSet = new Set(data.features.map((f) => (f.properties?.waterRiskKey as string) ?? 'na'));
       const registerSet = new Set(data.features.map((f) => (f.properties?.register as string) ?? 'none'));
-      const superSet = new Set(data.features.map((f) => (f.properties?.superExposureKey as string) ?? 'none'));
+      const superSet = new Set(data.features.map((f) => (f.properties?.exposureChannelKey as string) ?? 'none'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
       setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
       setCountries(COUNTRY_ORDER.filter((k) => countrySet.has(k)));
@@ -408,7 +410,7 @@ export default function Map() {
           capital: CAPITAL_COLORS[p.ownerTypeKey] ?? CAPITAL_COLORS.other,
           water: WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other,
           register: REGISTER_COLORS[p.register] ?? REGISTER_COLORS.none,
-          super: SUPER_COLORS[p.superExposureKey] ?? SUPER_COLORS.none,
+          super: SUPER_COLORS[p.exposureChannelKey] ?? SUPER_COLORS.none,
         };
         const color = colorByLens[lensNow];
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
@@ -423,8 +425,9 @@ export default function Map() {
           p.ultimateOwner && row('Ultimate owner', p.ultimateOwner),
           p.ownerType && row('Owner type', p.ownerType),
           p.ownershipCountry && row('Owner country', p.ownershipCountry),
-          (p.superExposure && Number(p.superExposure) > 0)
-            ? row('Super/sovereign', Math.round(Number(p.superExposure) * 100) + '%')
+          (p.exposureChannelKey && p.exposureChannelKey !== 'none')
+            ? row('Super exposure', (SUPER_LABELS[p.exposureChannelKey] ?? '') +
+                (Number(p.superExposure) > 0 ? ' · ' + Math.round(Number(p.superExposure) * 100) + '%' : ''))
             : '',
           p.capacity && row('Capacity', p.capacity + ' MW'),
           p.registers && row('Register', p.registers),

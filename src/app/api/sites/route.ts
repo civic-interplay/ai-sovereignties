@@ -141,6 +141,18 @@ function exposureKey(v: number | null): string {
   return 'high';
 }
 
+// How the Australian super/sovereign money touches the site — the three channels
+// the exposure lens colours by. Operator = owns the compute business; Land = owns
+// the ground; Via-manager = funds the developer through an infra manager.
+function exposureChannelKey(v: string | null): string {
+  if (!v) return 'none';
+  const s = v.toLowerCase();
+  if (s.includes('operator')) return 'operator';
+  if (s.includes('land')) return 'land';
+  if (s.includes('manager') || s.includes('via')) return 'via_manager';
+  return 'none';
+}
+
 async function queryNotion(token: string, databaseId: string) {
   const features: Array<Record<string, unknown>> = [];
   let cursor: string | undefined;
@@ -213,6 +225,8 @@ async function queryNotion(token: string, databaseId: string) {
           // Australian sovereign-wealth / super-fund exposure (0..1 fraction).
           superExposure: num(props['Sovereign/super exposure (%)']),
           superExposureKey: exposureKey(num(props['Sovereign/super exposure (%)'])),
+          exposureChannel: selectName(props['Super exposure channel']),
+          exposureChannelKey: exposureChannelKey(selectName(props['Super exposure channel'])),
           state: selectName(props['State / Region']),
           capacity: num(props['Capacity (MW)']),
           waterRisk: label(selectName(props['Water Risk'])),
