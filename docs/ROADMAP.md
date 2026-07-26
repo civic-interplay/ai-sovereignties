@@ -16,13 +16,15 @@ populated over time. Living document — edit freely.
 Different axes, deliberately — not one map doing everything.
 
 1. **Attribute node map** — *built*; ongoing data population.
-2. **Ownership-transfer lifecycle** — *per-site, over time*. A popup infographic:
-   Land assembly 🇦🇺 → Planning (SSD) → Acquisition → Operation 🇺🇸. The point is
-   the flag-flip (onshore land, offshore owner). Prototype: **AirTrunk / Mamre**
-   (IFM Investors land → AirTrunk via KNBDC shells → Blackstone + CPP).
-3. **Supply-chain map** — *across sites, in space*. Flow edges mine → refinery →
-   data centre → power/water; optionally offshore nodes to show sovereignty
-   leaving the country. Needs an edges/relations data model.
+2. **Ownership-transfer lifecycle** — ✅ **BUILT** (AirTrunk prototype). Per-site
+   popup stepper Land 🇦🇺 → Operator → Owner, gated to sites with a `Landowner`;
+   the flag-flip (onshore land, offshore owner) is the point. Grows as landowners
+   are added. Next: add more landowners; optional Planning/SSD stage + dates.
+3. **Supply-chain map** — ✅ **BUILT** (illustrative). A "Supply chain" toggle
+   draws red flow-lines from each AU rare-earth mine to an offshore "Separation &
+   magnets (China)" node, with domestic processors (Eneabba, ANSTO) ringed green
+   as the loop-closer. Edges are an in-code config; swap for Notion relations
+   later. Next: power/water dependency edges; more offshore nodes (fabs, HQs).
 4. **Electoral boundaries overlay** — AEC federal-division polygons as a subtle
    toggle; optional "sites in marginal seats" highlight.
 5. **Governance / contestation timeline** — *chronological*. A running record of

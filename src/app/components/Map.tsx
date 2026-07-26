@@ -192,6 +192,8 @@ export default function Map() {
   // Highlight overlays: contested + state-fast-tracked sites (toggles).
   const [showContested, setShowContested] = useState(false);
   const [showFastTracked, setShowFastTracked] = useState(false);
+  // Supply-chain mode: illustrative rare-earth flows to offshore separation.
+  const [showSupplyChain, setShowSupplyChain] = useState(false);
   // The Mapbox token may not be inlined at build time on this stack, so fetch it
   // at runtime from /api/config before initialising the map.
   const [tokenReady, setTokenReady] = useState<boolean>(!!mapboxgl.accessToken);
@@ -308,6 +310,69 @@ export default function Map() {
         },
       });
 
+      // --- Supply-chain mode (illustrative): AU rare-earth mines -> offshore separation ---
+      // Extraction happens onshore; separation and magnet-making happen offshore
+      // (China dominates globally). Red lines carry that dependency out; the
+      // domestic refineries/processing sites (green) are the "closing the loop".
+      const OFFSHORE: [number, number] = [108, 34]; // symbolic node in China
+      const mineFeatures = data.features.filter(
+        (f) => f.properties?.kind === 'mine' && f.geometry?.type === 'Point',
+      );
+      m.addSource('supply-lines', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: mineFeatures.map((f) => ({
+            type: 'Feature' as const,
+            properties: {},
+            geometry: {
+              type: 'LineString' as const,
+              coordinates: [(f.geometry as GeoJSON.Point).coordinates, OFFSHORE],
+            },
+          })),
+        },
+      });
+      m.addSource('supply-offshore', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: [{
+            type: 'Feature',
+            properties: { label: 'Separation & magnets (China)' },
+            geometry: { type: 'Point', coordinates: OFFSHORE },
+          }],
+        },
+      });
+      m.addLayer({
+        id: 'supply-lines', type: 'line', source: 'supply-lines',
+        layout: { visibility: 'none', 'line-cap': 'round' },
+        paint: { 'line-color': '#ff4d6d', 'line-width': 1.4, 'line-opacity': 0.55, 'line-dasharray': [2, 2] },
+      });
+      m.addLayer({
+        id: 'supply-domestic', type: 'circle', source: 'sites',
+        filter: ['==', ['get', 'kind'], 'refinery'] as unknown as mapboxgl.FilterSpecification,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': 15, 'circle-color': '#00e08a', 'circle-opacity': 0,
+          'circle-stroke-width': 2, 'circle-stroke-color': '#00e08a', 'circle-stroke-opacity': 0.9,
+        },
+      });
+      m.addLayer({
+        id: 'supply-offshore-core', type: 'circle', source: 'supply-offshore',
+        layout: { visibility: 'none' },
+        paint: { 'circle-radius': 11, 'circle-color': '#ff4d6d', 'circle-opacity': 0.85, 'circle-blur': 0.3 },
+      });
+      m.addLayer({
+        id: 'supply-offshore-label', type: 'symbol', source: 'supply-offshore',
+        layout: {
+          visibility: 'none',
+          'text-field': ['get', 'label'] as unknown as mapboxgl.ExpressionSpecification,
+          'text-size': 11, 'text-offset': [0, 1.6], 'text-anchor': 'top',
+          'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Regular'],
+        },
+        paint: { 'text-color': '#ff8a9c', 'text-halo-color': '#0a0c0b', 'text-halo-width': 1.2 },
+      });
+
       // Popup on click
       m.on('click', 'sites-core', (e) => {
         const feature = e.features?.[0];
@@ -391,6 +456,22 @@ export default function Map() {
     if (!m || !m.getLayer('sites-fasttracked')) return;
     m.setLayoutProperty('sites-fasttracked', 'visibility', showFastTracked ? 'visible' : 'none');
   }, [showFastTracked]);
+
+  // Supply-chain mode: show/hide the offshore-dependency layers and zoom out to
+  // frame Australia + the offshore node together.
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !m.getLayer('supply-lines')) return;
+    const vis = showSupplyChain ? 'visible' : 'none';
+    ['supply-lines', 'supply-domestic', 'supply-offshore-core', 'supply-offshore-label'].forEach(
+      (id) => m.getLayer(id) && m.setLayoutProperty(id, 'visibility', vis),
+    );
+    if (showSupplyChain) {
+      m.fitBounds([[105, -44], [155, 40]], { padding: 60, duration: 900 });
+    } else {
+      m.flyTo({ center: [134.0, -25.0], zoom: 3.5, duration: 900 });
+    }
+  }, [showSupplyChain]);
 
   // Legend config per lens — add a new lens here and it flows to legend + popups.
   const legend = {
@@ -492,6 +573,19 @@ export default function Map() {
           <button type="button" style={tab(showFastTracked)} onClick={() => setShowFastTracked((v) => !v)}>
             State fast-tracked
           </button>
+        </div>
+
+        {/* Supply-chain mode: illustrative rare-earth flows to offshore separation. */}
+        <div style={{ ...panel, padding: 4, display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 232 }}>
+          <button type="button" style={tab(showSupplyChain)} onClick={() => setShowSupplyChain((v) => !v)}>
+            Supply chain
+          </button>
+          {showSupplyChain && (
+            <div style={{ fontSize: 9, color: '#6b7568', lineHeight: 1.5, padding: '2px 6px' }}>
+              Illustrative: raw material extracted here, separated &amp; turned into magnets offshore
+              (China dominates). Green rings = domestic processing, closing the loop.
+            </div>
+          )}
         </div>
 
         {items.length > 0 && (
