@@ -29,6 +29,20 @@ Different axes, deliberately — not one map doing everything.
    toggle; optional "sites in marginal seats" highlight.
 5. **Governance / contestation timeline** — *chronological*. A running record of
    policy and governance events (see Hume, below) that grows alongside the map.
+6. **Super-fund exposure** — ⏳ **PARTLY BUILT**: a "Super $" lens now colours
+   sites by sovereign/super exposure %, seeded with CDC (46.59%) — the only
+   documented direct stake so far. Remaining: populate more direct stakes, ingest
+   Portfolio Holdings Disclosure, and the "select your fund → contested sites"
+   reverse-interaction. *Reverse view, activist-facing.* Which Australian
+   super funds are invested in each data centre — directly, or via infra-fund
+   managers. The interaction: "select your fund → see the contested sites your
+   retirement savings touch." The sharpest civic-interplay irony: communities may
+   be funding the data centre they're fighting. **Data source:** mandatory
+   Portfolio Holdings Disclosure (twice-yearly, per fund — messy CSVs, public;
+   the pipeline could ingest them). **Seed already in the tracker:** CDC (Future
+   Fund 34.55% + CSC 12.04%). **Caveat to label:** direct stakes are exact;
+   indirect exposure via pooled infra funds is approximate (fund backs the
+   manager, not a per-site dollar figure) — must be flagged, not overclaimed.
 
 ## The timeline (home for stories like Hume)
 

@@ -151,6 +151,23 @@ const REGISTER_LABELS: Record<string, string> = {
 };
 const REGISTER_ORDER = ['productive', 'operational', 'financial', 'locational', 'none'];
 
+// --- Sovereign/super exposure lens: how much of a site is funded by Australian
+// sovereign-wealth / super-fund capital (the `superExposureKey` from /api/sites).
+// The activist question: is your retirement invested in the site you're fighting?
+const SUPER_COLORS: Record<string, string> = {
+  high: '#00e08a',
+  mid: '#2ea86e',
+  low: '#5a7d68',
+  none: '#3a3f3c',
+};
+const SUPER_LABELS: Record<string, string> = {
+  high: 'High — >40% super/sovereign',
+  mid: 'Some — 15–40%',
+  low: 'Low — <15%',
+  none: 'None / foreign (0%)',
+};
+const SUPER_ORDER = ['high', 'mid', 'low', 'none'];
+
 // Build a flattened ['key', '#colour', ..., fallback] list for a Mapbox `match`.
 function matchList(colors: Record<string, string>, order: string[]): string[] {
   const out: string[] = [];
@@ -162,7 +179,7 @@ function matchList(colors: Record<string, string>, order: string[]): string[] {
   return out;
 }
 
-type Lens = 'kind' | 'sovereignty' | 'country' | 'capital' | 'water' | 'register';
+type Lens = 'kind' | 'sovereignty' | 'country' | 'capital' | 'water' | 'register' | 'super';
 
 // Colour expressions, one per lens. Switched at runtime via setPaintProperty.
 const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
@@ -172,6 +189,7 @@ const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
   capital: ['match', ['get', 'ownerTypeKey'], ...matchList(CAPITAL_COLORS, CAPITAL_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   water: ['match', ['get', 'waterRiskKey'], ...matchList(WATER_COLORS, WATER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   register: ['match', ['get', 'register'], ...matchList(REGISTER_COLORS, REGISTER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  super: ['match', ['get', 'superExposureKey'], ...matchList(SUPER_COLORS, SUPER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
 };
 
 const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
@@ -189,6 +207,7 @@ export default function Map() {
   const [capitals, setCapitals] = useState<string[]>([]);
   const [waters, setWaters] = useState<string[]>([]);
   const [regs, setRegs] = useState<string[]>([]);
+  const [supers, setSupers] = useState<string[]>([]);
   // Highlight overlays: contested + state-fast-tracked sites (toggles).
   const [showContested, setShowContested] = useState(false);
   const [showFastTracked, setShowFastTracked] = useState(false);
@@ -238,12 +257,14 @@ export default function Map() {
       const capitalSet = new Set(data.features.map((f) => (f.properties?.ownerTypeKey as string) ?? 'other'));
       const waterSet = new Set(data.features.map((f) => (f.properties?.waterRiskKey as string) ?? 'na'));
       const registerSet = new Set(data.features.map((f) => (f.properties?.register as string) ?? 'none'));
+      const superSet = new Set(data.features.map((f) => (f.properties?.superExposureKey as string) ?? 'none'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
       setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
       setCountries(COUNTRY_ORDER.filter((k) => countrySet.has(k)));
       setCapitals(CAPITAL_ORDER.filter((k) => capitalSet.has(k)));
       setWaters(WATER_ORDER.filter((k) => waterSet.has(k)));
       setRegs(REGISTER_ORDER.filter((k) => registerSet.has(k)));
+      setSupers(SUPER_ORDER.filter((k) => superSet.has(k)));
 
       m.addSource('sites', { type: 'geojson', data });
 
@@ -387,6 +408,7 @@ export default function Map() {
           capital: CAPITAL_COLORS[p.ownerTypeKey] ?? CAPITAL_COLORS.other,
           water: WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other,
           register: REGISTER_COLORS[p.register] ?? REGISTER_COLORS.none,
+          super: SUPER_COLORS[p.superExposureKey] ?? SUPER_COLORS.none,
         };
         const color = colorByLens[lensNow];
         const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
@@ -401,6 +423,9 @@ export default function Map() {
           p.ultimateOwner && row('Ultimate owner', p.ultimateOwner),
           p.ownerType && row('Owner type', p.ownerType),
           p.ownershipCountry && row('Owner country', p.ownershipCountry),
+          (p.superExposure && Number(p.superExposure) > 0)
+            ? row('Super/sovereign', Math.round(Number(p.superExposure) * 100) + '%')
+            : '',
           p.capacity && row('Capacity', p.capacity + ' MW'),
           p.registers && row('Register', p.registers),
           p.tenants && row('Serves', p.tenants),
@@ -481,6 +506,7 @@ export default function Map() {
     capital: { items: capitals, colors: CAPITAL_COLORS, labels: CAPITAL_LABELS, title: 'Capital type' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
     register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty type' },
+    super: { items: supers, colors: SUPER_COLORS, labels: SUPER_LABELS, title: 'Super/sovereign exposure' },
   }[lens];
   const { items, colors, labels, title: legendTitle } = legend;
 
@@ -562,6 +588,9 @@ export default function Map() {
           </button>
           <button type="button" style={tab(lens === 'register')} onClick={() => setLens('register')}>
             Type
+          </button>
+          <button type="button" style={tab(lens === 'super')} onClick={() => setLens('super')}>
+            Super $
           </button>
         </div>
 

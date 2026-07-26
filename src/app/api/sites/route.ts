@@ -131,6 +131,16 @@ function ownerTypeKey(value: string | null): string {
   return 'other';
 }
 
+// Bucket the Australian sovereign-wealth / super-fund exposure % (stored as a
+// 0..1 fraction) into a short key. The activist lens: how much of a site is
+// funded by Australians' own retirement/sovereign savings.
+function exposureKey(v: number | null): string {
+  if (v === null || v <= 0) return 'none';
+  if (v < 0.15) return 'low';
+  if (v < 0.4) return 'mid';
+  return 'high';
+}
+
 async function queryNotion(token: string, databaseId: string) {
   const features: Array<Record<string, unknown>> = [];
   let cursor: string | undefined;
@@ -200,6 +210,9 @@ async function queryNotion(token: string, databaseId: string) {
           landowner: plain(props['Landowner']),
           announcementDate: dateVal(props['Announcement date']),
           approvalDate: dateVal(props['Approval date']),
+          // Australian sovereign-wealth / super-fund exposure (0..1 fraction).
+          superExposure: num(props['Sovereign/super exposure (%)']),
+          superExposureKey: exposureKey(num(props['Sovereign/super exposure (%)'])),
           state: selectName(props['State / Region']),
           capacity: num(props['Capacity (MW)']),
           waterRisk: label(selectName(props['Water Risk'])),
