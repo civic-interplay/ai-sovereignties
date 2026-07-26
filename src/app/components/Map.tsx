@@ -73,6 +73,7 @@ const COUNTRY_COLORS: Record<string, string> = {
   cn: '#ff4d6d',
   sg: '#ffd23f',
   jp: '#b478ff',
+  ch: '#ff8c42',
   other: '#9aa5a0',
 };
 const COUNTRY_LABELS: Record<string, string> = {
@@ -81,9 +82,10 @@ const COUNTRY_LABELS: Record<string, string> = {
   cn: 'China',
   sg: 'Singapore',
   jp: 'Japan',
+  ch: 'Switzerland',
   other: 'Other / unknown',
 };
-const COUNTRY_ORDER = ['au', 'us', 'cn', 'sg', 'jp', 'other'];
+const COUNTRY_ORDER = ['au', 'us', 'cn', 'sg', 'jp', 'ch', 'other'];
 
 // --- Capital lens: colour per owner-type key (the `ownerTypeKey` from /api/sites) ---
 // The *structure* of the capital, not just its flag: who this kind of owner is.
@@ -145,10 +147,13 @@ const REGISTER_LABELS: Record<string, string> = {
 const REGISTER_ORDER = ['productive', 'operational', 'financial', 'locational', 'none'];
 
 // Build a flattened ['key', '#colour', ..., fallback] list for a Mapbox `match`.
-function matchList(colors: Record<string, string>, order: string[]): (string)[] {
+function matchList(colors: Record<string, string>, order: string[]): string[] {
   const out: string[] = [];
   for (const k of order) out.push(k, colors[k]);
-  out.push(colors.other); // fallback
+  // Fallback for any value not in `order`. The register lens uses 'none' as its
+  // catch-all rather than 'other', so fall through both to a hard default —
+  // Mapbox rejects an `undefined` here ("'undefined' value invalid. Use null instead").
+  out.push(colors.other ?? colors.none ?? '#9aa5a0');
   return out;
 }
 

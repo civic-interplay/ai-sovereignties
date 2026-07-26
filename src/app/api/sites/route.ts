@@ -102,10 +102,11 @@ function ownershipCountryKey(country: string): string {
   const c = country.toLowerCase();
   if (!c) return 'other';
   if (c.includes('australia')) return 'au';
-  if (c.includes('united states') || c.includes('u.s') || c === 'us' || c === 'usa' || c.includes('america')) return 'us';
+  if (c.includes('united states') || c.includes('usa') || c.includes('u.s') || c === 'us' || c.includes('america')) return 'us';
   if (c.includes('china') || c.includes('hong kong') || c === 'prc') return 'cn';
   if (c.includes('singapore')) return 'sg';
   if (c.includes('japan')) return 'jp';
+  if (c.includes('switzerland') || c === 'ch') return 'ch';
   return 'other';
 }
 

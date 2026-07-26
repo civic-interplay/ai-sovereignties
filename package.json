@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "T=$(grep -h '^NOTION_TOKEN=' \"$HOME/.config/contestation/.env\" 2>/dev/null | head -1 | cut -d= -f2-); [ -n \"$T\" ] && export NOTION_TOKEN=\"$T\"; next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
