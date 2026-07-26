@@ -339,15 +339,26 @@ export default function Map() {
       // rare-earth separation & magnets (China) — are all offshore. Lines carry each
       // dependency out; domestic processors (green rings) are the "closing the loop".
       const OFFSHORE_NODES = [
-        { dep: 'rare_earth', label: 'Separation & magnets (China)', lng: 108, lat: 34, color: '#ff4d6d' },
+        { dep: 'rare_earth', label: 'Rare-earth separation (China) — contested', lng: 108, lat: 34, color: '#ff4d6d' },
+        { dep: 'malaysia', label: 'Lynas separation (Malaysia · non-China)', lng: 103.3, lat: 3.8, color: '#ffd23f' },
         { dep: 'chips', label: 'AI chips (Taiwan · TSMC)', lng: 121, lat: 23.8, color: '#3fd1ff' },
         { dep: 'hardware', label: 'Servers & hardware (China)', lng: 114, lat: 22.5, color: '#ff9a3f' },
       ];
       const nodeOf = (dep: string) => OFFSHORE_NODES.find((n) => n.dep === dep)!;
+      // Rare-earth routing is per-mine, not a blanket "→ China". Lynas separates in
+      // Malaysia (non-China); Browns Range is the contested China link (FIRB forced
+      // the Chinese stake to divest); Arafura and others process onshore, so no
+      // offshore line. Larvotto is antimony, not rare earths — excluded here.
+      const reeRoute = (name: string): string | null => {
+        if (name.includes('Browns Range')) return 'rare_earth';
+        if (name.includes('Mt Weld')) return 'malaysia';
+        return null;
+      };
       const lineFeatures: GeoJSON.Feature[] = [];
       for (const f of data.features) {
         if (f.geometry?.type !== 'Point') continue;
         const from = (f.geometry as GeoJSON.Point).coordinates;
+        const name = (f.properties?.name as string) ?? '';
         const link = (dep: string) => {
           const n = nodeOf(dep);
           lineFeatures.push({
@@ -355,7 +366,7 @@ export default function Map() {
             geometry: { type: 'LineString', coordinates: [from, [n.lng, n.lat]] },
           });
         };
-        if (f.properties?.kind === 'mine') link('rare_earth');
+        if (f.properties?.kind === 'mine') { const r = reeRoute(name); if (r) link(r); }
         if (f.properties?.kind === 'data_centre') { link('chips'); link('hardware'); }
       }
       m.addSource('supply-lines', { type: 'geojson', data: { type: 'FeatureCollection', features: lineFeatures } });
@@ -370,7 +381,7 @@ export default function Map() {
           })),
         },
       });
-      const depColor = ['match', ['get', 'dep'], 'rare_earth', '#ff4d6d', 'chips', '#3fd1ff', 'hardware', '#ff9a3f', '#ff4d6d'] as unknown as mapboxgl.ExpressionSpecification;
+      const depColor = ['match', ['get', 'dep'], 'rare_earth', '#ff4d6d', 'malaysia', '#ffd23f', 'chips', '#3fd1ff', 'hardware', '#ff9a3f', '#ff4d6d'] as unknown as mapboxgl.ExpressionSpecification;
       m.addLayer({
         id: 'supply-lines', type: 'line', source: 'supply-lines',
         layout: { visibility: 'none', 'line-cap': 'round' },
@@ -500,7 +511,7 @@ export default function Map() {
       (id) => m.getLayer(id) && m.setLayoutProperty(id, 'visibility', vis),
     );
     if (showSupplyChain) {
-      m.fitBounds([[105, -44], [155, 40]], { padding: 60, duration: 900 });
+      m.fitBounds([[100, -44], [155, 40]], { padding: 60, duration: 900 });
     } else {
       m.flyTo({ center: [134.0, -25.0], zoom: 3.5, duration: 900 });
     }
@@ -619,8 +630,9 @@ export default function Map() {
           </button>
           {showSupplyChain && (
             <div style={{ fontSize: 9, color: '#6b7568', lineHeight: 1.5, padding: '2px 6px' }}>
-              Illustrative: Australia mines the inputs and hosts the buildings, but the chips (Taiwan),
-              hardware (China) and rare-earth separation (China) are all offshore. Green rings = domestic processing.
+              Illustrative: chips (Taiwan) and hardware (China) are offshore for every data centre. Rare earths
+              are more sovereign — Lynas separates in Malaysia (non-China), Browns Range is the contested China
+              link, Iluka Eneabba / ANSTO process onshore (green rings).
             </div>
           )}
         </div>
