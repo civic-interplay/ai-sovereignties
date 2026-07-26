@@ -134,22 +134,22 @@ const WATER_LABELS: Record<string, string> = {
 const WATER_ORDER = ['high', 'medium', 'low', 'na'];
 
 // --- Register lens: colour per sovereignty register (the `register` key from /api/sites) ---
-// Green = sovereign capability owned here, red = onshore but rented. The thesis in colour.
+// Green = capability owned/built here, red = rented to offshore tenants. The thesis in colour.
 const REGISTER_COLORS: Record<string, string> = {
   productive: '#00e08a',
   operational: '#3fa9ff',
   financial: '#ffd23f',
-  locational: '#ff4d6d',
+  rented: '#ff4d6d',
   none: '#6b7568',
 };
 const REGISTER_LABELS: Record<string, string> = {
-  productive: 'Productive (builds / owns)',
-  operational: 'Operational (gov-run)',
-  financial: 'Financial (public capital)',
-  locational: 'Locational (onshore, rented)',
+  productive: 'Productive (Aus-owned)',
+  operational: 'Operational (public-run)',
+  financial: 'Financial (≥30% public)',
+  rented: 'Rented (offshore tenants)',
   none: 'Not coded',
 };
-const REGISTER_ORDER = ['productive', 'operational', 'financial', 'locational', 'none'];
+const REGISTER_ORDER = ['productive', 'operational', 'financial', 'rented', 'none'];
 
 // --- Sovereign/super exposure lens: how much of a site is funded by Australian
 // sovereign-wealth / super-fund capital (the `superExposureKey` from /api/sites).
@@ -665,6 +665,23 @@ export default function Map() {
                 <span>{labels[k]}</span>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Sovereignty-type explainer: why the lens exists + what each register means. */}
+        {lens === 'register' && (
+          <div style={{ ...panel, maxWidth: 226, fontSize: 9.5, lineHeight: 1.6, color: '#9aa39b' }}>
+            <div style={{ color: '#c8cfc4', marginBottom: 5 }}>
+              Who stands to benefit, over time, from each site&rsquo;s investment model. Low onshore ownership
+              or productivity means the benefits flow offshore. A site can be several.
+            </div>
+            <div><span style={{ color: '#00e08a' }}>Productive</span> — owned &amp; built by Australian interests.</div>
+            <div><span style={{ color: '#3fa9ff' }}>Operational</span> — run by an Australian public body.</div>
+            <div><span style={{ color: '#ffd23f' }}>Financial</span> — ≥30% public capital (sovereign-wealth, government or super*).</div>
+            <div><span style={{ color: '#ff4d6d' }}>Rented</span> — capacity rented to offshore hyperscalers.</div>
+            <div style={{ color: '#6b7568', marginTop: 4 }}>
+              *super = pooled Australian retirement savings, counted as public here.
+            </div>
           </div>
         )}
       </div>

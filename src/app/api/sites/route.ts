@@ -96,7 +96,7 @@ function registerKey(regs: string[]): string {
   if (regs.includes('Productive')) return 'productive';
   if (regs.includes('Operational')) return 'operational';
   if (regs.includes('Financial')) return 'financial';
-  if (regs.includes('Locational')) return 'locational';
+  if (regs.includes('Rented') || regs.includes('Locational')) return 'rented';
   return 'none';
 }
 
