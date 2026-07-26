@@ -163,10 +163,10 @@ const SUPER_COLORS: Record<string, string> = {
   none: '#3a3f3c',
 };
 const SUPER_LABELS: Record<string, string> = {
-  operator: 'Super owns the operator',
-  land: 'Super owns the land',
-  via_manager: 'Super funds it (via a manager)',
-  none: 'No / undocumented',
+  operator: 'Direct stake (>30%)',
+  land: 'Land owner',
+  via_manager: 'Funded via third party',
+  none: 'No known link',
 };
 const SUPER_ORDER = ['operator', 'land', 'via_manager', 'none'];
 
@@ -333,43 +333,48 @@ export default function Map() {
         },
       });
 
-      // --- Supply-chain mode (illustrative): AU rare-earth mines -> offshore separation ---
-      // Extraction happens onshore; separation and magnet-making happen offshore
-      // (China dominates globally). Red lines carry that dependency out; the
-      // domestic refineries/processing sites (green) are the "closing the loop".
-      const OFFSHORE: [number, number] = [108, 34]; // symbolic node in China
-      const mineFeatures = data.features.filter(
-        (f) => f.properties?.kind === 'mine' && f.geometry?.type === 'Point',
-      );
-      m.addSource('supply-lines', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: mineFeatures.map((f) => ({
-            type: 'Feature' as const,
-            properties: {},
-            geometry: {
-              type: 'LineString' as const,
-              coordinates: [(f.geometry as GeoJSON.Point).coordinates, OFFSHORE],
-            },
-          })),
-        },
-      });
+      // --- Supply-chain mode (illustrative): where Australian AI compute's inputs sit ---
+      // Australia mines the raw inputs and hosts the buildings, but the three things
+      // that actually make compute — chips (Taiwan), servers/hardware (China), and
+      // rare-earth separation & magnets (China) — are all offshore. Lines carry each
+      // dependency out; domestic processors (green rings) are the "closing the loop".
+      const OFFSHORE_NODES = [
+        { dep: 'rare_earth', label: 'Separation & magnets (China)', lng: 108, lat: 34, color: '#ff4d6d' },
+        { dep: 'chips', label: 'AI chips (Taiwan · TSMC)', lng: 121, lat: 23.8, color: '#3fd1ff' },
+        { dep: 'hardware', label: 'Servers & hardware (China)', lng: 114, lat: 22.5, color: '#ff9a3f' },
+      ];
+      const nodeOf = (dep: string) => OFFSHORE_NODES.find((n) => n.dep === dep)!;
+      const lineFeatures: GeoJSON.Feature[] = [];
+      for (const f of data.features) {
+        if (f.geometry?.type !== 'Point') continue;
+        const from = (f.geometry as GeoJSON.Point).coordinates;
+        const link = (dep: string) => {
+          const n = nodeOf(dep);
+          lineFeatures.push({
+            type: 'Feature', properties: { dep },
+            geometry: { type: 'LineString', coordinates: [from, [n.lng, n.lat]] },
+          });
+        };
+        if (f.properties?.kind === 'mine') link('rare_earth');
+        if (f.properties?.kind === 'data_centre') { link('chips'); link('hardware'); }
+      }
+      m.addSource('supply-lines', { type: 'geojson', data: { type: 'FeatureCollection', features: lineFeatures } });
       m.addSource('supply-offshore', {
         type: 'geojson',
         data: {
           type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            properties: { label: 'Separation & magnets (China)' },
-            geometry: { type: 'Point', coordinates: OFFSHORE },
-          }],
+          features: OFFSHORE_NODES.map((n) => ({
+            type: 'Feature' as const,
+            properties: { label: n.label, color: n.color },
+            geometry: { type: 'Point' as const, coordinates: [n.lng, n.lat] },
+          })),
         },
       });
+      const depColor = ['match', ['get', 'dep'], 'rare_earth', '#ff4d6d', 'chips', '#3fd1ff', 'hardware', '#ff9a3f', '#ff4d6d'] as unknown as mapboxgl.ExpressionSpecification;
       m.addLayer({
         id: 'supply-lines', type: 'line', source: 'supply-lines',
         layout: { visibility: 'none', 'line-cap': 'round' },
-        paint: { 'line-color': '#ff4d6d', 'line-width': 1.4, 'line-opacity': 0.55, 'line-dasharray': [2, 2] },
+        paint: { 'line-color': depColor, 'line-width': 0.8, 'line-opacity': 0.35, 'line-dasharray': [2, 2] },
       });
       m.addLayer({
         id: 'supply-domestic', type: 'circle', source: 'sites',
@@ -383,17 +388,17 @@ export default function Map() {
       m.addLayer({
         id: 'supply-offshore-core', type: 'circle', source: 'supply-offshore',
         layout: { visibility: 'none' },
-        paint: { 'circle-radius': 11, 'circle-color': '#ff4d6d', 'circle-opacity': 0.85, 'circle-blur': 0.3 },
+        paint: { 'circle-radius': 10, 'circle-color': ['get', 'color'] as unknown as mapboxgl.ExpressionSpecification, 'circle-opacity': 0.85, 'circle-blur': 0.3 },
       });
       m.addLayer({
         id: 'supply-offshore-label', type: 'symbol', source: 'supply-offshore',
         layout: {
           visibility: 'none',
           'text-field': ['get', 'label'] as unknown as mapboxgl.ExpressionSpecification,
-          'text-size': 11, 'text-offset': [0, 1.6], 'text-anchor': 'top',
+          'text-size': 10, 'text-offset': [0, 1.4], 'text-anchor': 'top',
           'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Regular'],
         },
-        paint: { 'text-color': '#ff8a9c', 'text-halo-color': '#0a0c0b', 'text-halo-width': 1.2 },
+        paint: { 'text-color': '#e6ebe6', 'text-halo-color': '#0a0c0b', 'text-halo-width': 1.2 },
       });
 
       // Popup on click
@@ -509,7 +514,7 @@ export default function Map() {
     capital: { items: capitals, colors: CAPITAL_COLORS, labels: CAPITAL_LABELS, title: 'Capital type' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
     register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty type' },
-    super: { items: supers, colors: SUPER_COLORS, labels: SUPER_LABELS, title: 'Super/sovereign exposure' },
+    super: { items: supers, colors: SUPER_COLORS, labels: SUPER_LABELS, title: 'Super / sovereign link' },
   }[lens];
   const { items, colors, labels, title: legendTitle } = legend;
 
@@ -614,8 +619,8 @@ export default function Map() {
           </button>
           {showSupplyChain && (
             <div style={{ fontSize: 9, color: '#6b7568', lineHeight: 1.5, padding: '2px 6px' }}>
-              Illustrative: raw material extracted here, separated &amp; turned into magnets offshore
-              (China dominates). Green rings = domestic processing, closing the loop.
+              Illustrative: Australia mines the inputs and hosts the buildings, but the chips (Taiwan),
+              hardware (China) and rare-earth separation (China) are all offshore. Green rings = domestic processing.
             </div>
           )}
         </div>
