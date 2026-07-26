@@ -251,6 +251,10 @@ async function queryNotion(token: string, databaseId: string) {
           notes: plain(props['Notes']),
           source: urlVal(props['Source']),
           notionUrl: page.url ?? null,
+          // Public (published-web) URL for the row, so the map can link to the
+          // full entry — where the Source/report link and all the context live —
+          // rather than jumping straight to a raw external URL.
+          notionPublicUrl: page.id ? 'https://studio-esem.notion.site/' + page.id.replace(/-/g, '') : null,
         },
       });
     }

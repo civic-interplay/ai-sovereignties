@@ -478,8 +478,10 @@ export default function Map() {
           p.state && row('Region', p.state),
         ].filter(Boolean).join('');
 
-        const link = p.source
-          ? '<a href="' + p.source + '" target="_blank" rel="noreferrer" style="color:' + color + ';font-size:10px;text-decoration:none;">source ↗</a>'
+        // Link to the full Notion entry (its Source field carries the report link),
+        // rather than jumping straight to a raw external URL.
+        const link = p.notionPublicUrl
+          ? '<a href="' + p.notionPublicUrl + '" target="_blank" rel="noreferrer" style="color:' + color + ';font-size:10px;text-decoration:none;">details ↗</a>'
           : '';
 
         new mapboxgl.Popup({ closeButton: false, className: 'sovereignty-popup' })
