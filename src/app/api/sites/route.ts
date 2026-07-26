@@ -89,6 +89,19 @@ function waterRiskKey(value: string | null): string {
   return 'na';
 }
 
+// Collapse the "Energy Source" select into a short key the map styles on.
+// Energy is as material as water for a data centre — power draw, grid strain,
+// emissions — so it gets its own lens.
+function energyKey(value: string | null): string {
+  if (!value) return 'unknown';
+  if (value.includes('on-site')) return 'renewable_onsite';
+  if (value.includes('Renewable')) return 'renewable_contracted';
+  if (value.includes('coal') || value.includes('gas')) return 'grid_fossil';
+  if (value.includes('Grid')) return 'grid_mixed';
+  if (value.includes('Nuclear')) return 'nuclear';
+  return 'unknown';
+}
+
 // Reduce the multi-value "Sovereignty register" to one key for colouring, by
 // precedence: the most sovereign register present wins (a site that reaches
 // Productive shows as Productive even if it is also Locational).
@@ -231,6 +244,8 @@ async function queryNotion(token: string, databaseId: string) {
           capacity: num(props['Capacity (MW)']),
           waterRisk: label(selectName(props['Water Risk'])),
           waterRiskKey: waterRiskKey(selectName(props['Water Risk'])),
+          energySource: label(selectName(props['Energy Source'])),
+          energyKey: energyKey(selectName(props['Energy Source'])),
           investmentSignal: selectName(props['Investment Signal']),
           mineralFocus: multiNames(props['Mineral Focus']),
           notes: plain(props['Notes']),

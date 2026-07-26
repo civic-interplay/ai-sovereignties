@@ -133,6 +133,26 @@ const WATER_LABELS: Record<string, string> = {
 };
 const WATER_ORDER = ['high', 'medium', 'low', 'na'];
 
+// --- Energy lens: colour per energy source (the `energyKey` from /api/sites) ---
+// As material as water for a data centre — power draw, grid strain, emissions.
+const ENERGY_COLORS: Record<string, string> = {
+  renewable_onsite: '#00e08a',
+  renewable_contracted: '#3fd17a',
+  grid_mixed: '#ffd23f',
+  grid_fossil: '#ff6b35',
+  nuclear: '#b478ff',
+  unknown: '#6b7568',
+};
+const ENERGY_LABELS: Record<string, string> = {
+  renewable_onsite: 'Renewable — on-site',
+  renewable_contracted: 'Renewable — contracted',
+  grid_mixed: 'Grid — mixed',
+  grid_fossil: 'Grid — coal/gas heavy',
+  nuclear: 'Nuclear (proposed)',
+  unknown: 'Unknown',
+};
+const ENERGY_ORDER = ['renewable_onsite', 'renewable_contracted', 'grid_mixed', 'grid_fossil', 'nuclear', 'unknown'];
+
 // --- Register lens: colour per sovereignty register (the `register` key from /api/sites) ---
 // Green = capability owned/built here, red = rented to offshore tenants. The thesis in colour.
 const REGISTER_COLORS: Record<string, string> = {
@@ -181,7 +201,7 @@ function matchList(colors: Record<string, string>, order: string[]): string[] {
   return out;
 }
 
-type Lens = 'kind' | 'sovereignty' | 'country' | 'capital' | 'water' | 'register' | 'super';
+type Lens = 'kind' | 'sovereignty' | 'country' | 'capital' | 'water' | 'energy' | 'register' | 'super';
 
 // Colour expressions, one per lens. Switched at runtime via setPaintProperty.
 const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
@@ -190,6 +210,7 @@ const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
   country: ['match', ['get', 'ownershipCountryKey'], ...matchList(COUNTRY_COLORS, COUNTRY_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   capital: ['match', ['get', 'ownerTypeKey'], ...matchList(CAPITAL_COLORS, CAPITAL_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   water: ['match', ['get', 'waterRiskKey'], ...matchList(WATER_COLORS, WATER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
+  energy: ['match', ['get', 'energyKey'], ...matchList(ENERGY_COLORS, ENERGY_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   register: ['match', ['get', 'register'], ...matchList(REGISTER_COLORS, REGISTER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
   super: ['match', ['get', 'exposureChannelKey'], ...matchList(SUPER_COLORS, SUPER_ORDER)] as unknown as mapboxgl.ExpressionSpecification,
 };
@@ -208,6 +229,7 @@ export default function Map() {
   const [countries, setCountries] = useState<string[]>([]);
   const [capitals, setCapitals] = useState<string[]>([]);
   const [waters, setWaters] = useState<string[]>([]);
+  const [energies, setEnergies] = useState<string[]>([]);
   const [regs, setRegs] = useState<string[]>([]);
   const [supers, setSupers] = useState<string[]>([]);
   // Highlight overlays: contested + state-fast-tracked sites (toggles).
@@ -258,6 +280,7 @@ export default function Map() {
       const countrySet = new Set(data.features.map((f) => (f.properties?.ownershipCountryKey as string) ?? 'other'));
       const capitalSet = new Set(data.features.map((f) => (f.properties?.ownerTypeKey as string) ?? 'other'));
       const waterSet = new Set(data.features.map((f) => (f.properties?.waterRiskKey as string) ?? 'na'));
+      const energySet = new Set(data.features.map((f) => (f.properties?.energyKey as string) ?? 'unknown'));
       const registerSet = new Set(data.features.map((f) => (f.properties?.register as string) ?? 'none'));
       const superSet = new Set(data.features.map((f) => (f.properties?.exposureChannelKey as string) ?? 'none'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
@@ -265,6 +288,7 @@ export default function Map() {
       setCountries(COUNTRY_ORDER.filter((k) => countrySet.has(k)));
       setCapitals(CAPITAL_ORDER.filter((k) => capitalSet.has(k)));
       setWaters(WATER_ORDER.filter((k) => waterSet.has(k)));
+      setEnergies(ENERGY_ORDER.filter((k) => energySet.has(k)));
       setRegs(REGISTER_ORDER.filter((k) => registerSet.has(k)));
       setSupers(SUPER_ORDER.filter((k) => superSet.has(k)));
 
@@ -425,6 +449,7 @@ export default function Map() {
           country: COUNTRY_COLORS[p.ownershipCountryKey] ?? COUNTRY_COLORS.other,
           capital: CAPITAL_COLORS[p.ownerTypeKey] ?? CAPITAL_COLORS.other,
           water: WATER_COLORS[p.waterRiskKey] ?? WATER_COLORS.other,
+          energy: ENERGY_COLORS[p.energyKey] ?? ENERGY_COLORS.unknown,
           register: REGISTER_COLORS[p.register] ?? REGISTER_COLORS.none,
           super: SUPER_COLORS[p.exposureChannelKey] ?? SUPER_COLORS.none,
         };
@@ -449,6 +474,7 @@ export default function Map() {
           p.registers && row('Register', p.registers),
           p.tenants && row('Serves', p.tenants),
           p.waterRisk && row('Water risk', p.waterRisk),
+          p.energySource && row('Energy', p.energySource),
           p.state && row('Region', p.state),
         ].filter(Boolean).join('');
 
@@ -524,6 +550,7 @@ export default function Map() {
     country: { items: countries, colors: COUNTRY_COLORS, labels: COUNTRY_LABELS, title: 'Owner country' },
     capital: { items: capitals, colors: CAPITAL_COLORS, labels: CAPITAL_LABELS, title: 'Capital type' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
+    energy: { items: energies, colors: ENERGY_COLORS, labels: ENERGY_LABELS, title: 'Energy source' },
     register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty type' },
     super: { items: supers, colors: SUPER_COLORS, labels: SUPER_LABELS, title: 'Super / sovereign link' },
   }[lens];
@@ -605,6 +632,9 @@ export default function Map() {
           <button type="button" style={tab(lens === 'water')} onClick={() => setLens('water')}>
             Water
           </button>
+          <button type="button" style={tab(lens === 'energy')} onClick={() => setLens('energy')}>
+            Energy
+          </button>
           <button type="button" style={tab(lens === 'register')} onClick={() => setLens('register')}>
             Type
           </button>
@@ -622,6 +652,27 @@ export default function Map() {
             State fast-tracked
           </button>
         </div>
+
+        {/* Explainer for the two overlays — what "contested" and "fast-tracked" mean. */}
+        {(showContested || showFastTracked) && (
+          <div style={{ ...panel, maxWidth: 226, fontSize: 9.5, lineHeight: 1.6, color: '#9aa39b' }}>
+            {showContested && (
+              <div>
+                <span style={{ color: '#ff4d6d' }}>Contested</span> — active or emerging community opposition.
+                The level of contestation is tracked through the planning pathways: public-exhibition submissions
+                &amp; objections, council minutes and motions, merit appeals (Land &amp; Environment Court / VCAT),
+                parliamentary petitions, and media / FOI.
+              </div>
+            )}
+            {showFastTracked && (
+              <div style={{ marginTop: showContested ? 6 : 0 }}>
+                <span style={{ color: '#ffd23f' }}>State fast-tracked</span> — not subject to normal public
+                consultation: assessed as State Significant Development, or approved without public exhibition
+                (e.g. via the NSW Investment Delivery Authority or ministerial call-in).
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Supply-chain mode: illustrative rare-earth flows to offshore separation. */}
         <div style={{ ...panel, padding: 4, display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 232 }}>
