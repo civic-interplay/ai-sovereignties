@@ -87,6 +87,11 @@ const COUNTRY_LABELS: Record<string, string> = {
 };
 const COUNTRY_ORDER = ['au', 'us', 'cn', 'sg', 'jp', 'ch', 'other'];
 
+// Flags for the lifecycle infographic — the ownership-transfer "flag flip".
+const COUNTRY_FLAG: Record<string, string> = {
+  au: '🇦🇺', us: '🇺🇸', cn: '🇨🇳', sg: '🇸🇬', jp: '🇯🇵', ch: '🇨🇭', other: '🌐',
+};
+
 // --- Capital lens: colour per owner-type key (the `ownerTypeKey` from /api/sites) ---
 // The *structure* of the capital, not just its flag: who this kind of owner is.
 const CAPITAL_COLORS: Record<string, string> = {
@@ -350,6 +355,7 @@ export default function Map() {
             '<div style="font-size:13px;margin-bottom:4px;">' + (p.name || '') + '</div>' +
             (sovereignty ? '<div style="color:#6b7568;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
             rows +
+            lifecycleHtml(p) +
             (link ? '<div style="margin-top:6px;">' + link + '</div>' : '') +
             '</div>',
           )
@@ -555,6 +561,50 @@ function row(key: string, value: string): string {
     '<div style="display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;">' +
     '<span style="color:#6b7568;">' + key + '</span>' +
     '<span style="color:#c8cfc4;text-align:right;">' + value + '</span>' +
+    '</div>'
+  );
+}
+
+// Ownership-transfer lifecycle infographic (AirTrunk prototype). Shown only for
+// sites where the land→owner journey is mapped (a Landowner is set), so it reads
+// as the *transfer* story — Australian land, offshore owner — not clutter. The
+// point is the flag flip between the Land stage (🇦🇺) and the Owner stage.
+function lifecycleHtml(p: Record<string, string>): string {
+  if (!p.landowner) return '';
+  const ownerKey = p.ownershipCountryKey || 'other';
+  const ownerFlag = COUNTRY_FLAG[ownerKey] ?? '🌐';
+  const offshore = ownerKey !== 'au' && ownerKey !== 'other';
+  const owner = p.ultimateOwner || p.ownershipCountry || '—';
+
+  type Stage = { flag: string; label: string; val: string; hot?: boolean };
+  const stages: Stage[] = [{ flag: '🇦🇺', label: 'Land', val: p.landowner }];
+  if (p.operator) stages.push({ flag: '🏢', label: 'Operator', val: p.operator });
+  stages.push({ flag: ownerFlag, label: offshore ? 'Owner — offshore' : 'Owner', val: owner, hot: offshore });
+
+  const steps = stages
+    .map((s, i) =>
+      '<div style="display:flex;align-items:flex-start;gap:7px;">' +
+      '<span style="font-size:12px;line-height:1.25;">' + s.flag + '</span>' +
+      '<div style="flex:1;min-width:0;">' +
+      '<span style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#6b7568;">' + s.label + '</span>' +
+      '<div style="font-size:10px;color:' + (s.hot ? '#ff4d6d' : '#c8cfc4') + ';line-height:1.3;">' + s.val + '</div>' +
+      '</div></div>' +
+      (i < stages.length - 1 ? '<div style="height:9px;border-left:1px solid #333;margin-left:6px;"></div>' : ''),
+    )
+    .join('');
+
+  const dates = [
+    p.announcementDate && 'announced ' + p.announcementDate,
+    p.approvalDate && 'approved ' + p.approvalDate,
+  ].filter(Boolean).join('  ·  ');
+  const dateLine = dates
+    ? '<div style="font-size:9px;color:#6b7568;margin-top:6px;">' + dates + '</div>'
+    : '';
+
+  return (
+    '<div style="margin-top:8px;padding-top:8px;border-top:1px solid #333;">' +
+    '<div style="font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:#6b7568;margin-bottom:6px;">Ownership lifecycle</div>' +
+    steps + dateLine +
     '</div>'
   );
 }

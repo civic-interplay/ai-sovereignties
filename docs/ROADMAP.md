@@ -127,16 +127,17 @@ has several: Productive > Operational > Financial > Locational.
 
 ## Data-model to-dos (what unblocks each view)
 
-- **Notion fields:** `Parent` (text), `Ultimate Owner` (text), `Owner Type`
-  (single select) → unblocks the Capital lens + ownership-chain popup.
+- ~~**Notion fields:** `Parent`, `Ultimate Owner`, `Owner Type`~~ **DONE** —
+  columns created, 21 high-confidence rows backfilled; Capital lens + chain live.
 - **`Landowner` field** → unblocks the lifecycle transfer view.
 - **Edges/relations** (from-site, to-site, flow-type) → supply-chain map.
 - **AEC boundary file** → electoral overlay.
 
 ## Small open items
 
-- Commit pending map fixes (Type-lens fallback, dev-token script, US-matcher,
-  Switzerland `ch` bucket).
+- ~~Commit pending map fixes~~ **DONE** (commit `b0248ac`).
+- Finish `Owner Type` for the ~15 rows still "Other" (the medium-confidence
+  operators: Keppel, CDC, STACK, PGIM, AIMS, etc., plus the blanks).
 - Consistency check: "Australian-owned" ⟺ Country = Australia (JV exempt).
 - Surface the glossary on the map — an info tooltip by the Contested /
   State fast-tracked toggles.

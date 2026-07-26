@@ -44,6 +44,11 @@ function urlVal(p: NotionProp | undefined): string | null {
   return typeof v === 'string' && v ? v : null;
 }
 
+function dateVal(p: NotionProp | undefined): string | null {
+  const d = p?.date as { start?: string } | null | undefined;
+  return d?.start ?? null;
+}
+
 // Strip the leading emoji/symbol from a Notion option label, e.g.
 // "🖥️ Data Centre" -> "Data Centre".
 function label(value: string | null): string | null {
@@ -190,6 +195,11 @@ async function queryNotion(token: string, databaseId: string) {
           ownerTypeKey: ownerTypeKey(selectName(props['Owner Type'])),
           ownershipCountry: plain(props['Ownership Country']),
           ownershipCountryKey: ownershipCountryKey(plain(props['Ownership Country'])),
+          // Lifecycle / ownership-transfer view: who owns the land vs who ends up
+          // owning the asset, plus the key dates. Drives the popup infographic.
+          landowner: plain(props['Landowner']),
+          announcementDate: dateVal(props['Announcement date']),
+          approvalDate: dateVal(props['Approval date']),
           state: selectName(props['State / Region']),
           capacity: num(props['Capacity (MW)']),
           waterRisk: label(selectName(props['Water Risk'])),
