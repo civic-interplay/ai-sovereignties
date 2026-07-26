@@ -28,5 +28,11 @@ the Anthropic usage dashboard; they aren't visible in-session).
   documented seed list, added the Lane Cove West cluster + Supernode + Vantage,
   and coded the CDC sovereign case. Map grew 36 → 47 sites.
 
-**Compute figures:** _to backfill from the Anthropic usage dashboard._
-Tokens: — · Est. energy: — · Notes: long multi-hour session, Opus 4.8 1M-context.
+**Compute figures (via Claude Code `/cost`):** **US$76.31** · API time 2h 26m · wall ~1 day.
+Opus 4.8: 230.5k input / 597.9k output tokens, 88.9M cache read, 1.6M cache write, 18 web
+searches (Haiku negligible, $0.009). Code: +1,088 / −182 lines.
+Cost drivers (Claude Code's own read-out): 94% of usage at >150k context, 71% from a single
+8h+ continuous session — the spend came from *length and context*, not waste. Lesson for next
+time: `/compact` or `/clear` between phases (map / research / Notion / deploy / docs) would cut it.
+Energy: Anthropic doesn't publish per-session energy; a token→kWh figure would be a crude guess,
+so it's left unstated rather than faked — fittingly, the honesty rule the Energy lens itself follows.
