@@ -54,3 +54,6 @@ next-env.d.ts
 # contestation pipeline: ingested source material stays local
 /pipeline/inbox/*
 !/pipeline/inbox/README.md
+
+# personal / not for the repo
+/AAG BARNS 2026.pdf
