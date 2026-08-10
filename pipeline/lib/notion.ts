@@ -131,3 +131,67 @@ export async function createContestationItem(
   const data = (await res.json()) as { id: string };
   return data.id;
 }
+
+// --- Review readers -------------------------------------------------------
+// Used by the fortnightly QA self-review (pipeline/review.ts). Reads the infra
+// spine with the provenance fields added 2026-07: Public notice, Classified by,
+// Confidence, Campus group.
+
+function dateStart(p: NotionProp | undefined): string | null {
+  const d = p?.date as { start?: string } | null | undefined;
+  return d?.start ?? null;
+}
+
+function numberVal(p: NotionProp | undefined): number | null {
+  const n = p?.number;
+  return typeof n === 'number' ? n : null;
+}
+
+function multiNames(p: NotionProp | undefined): string[] {
+  const arr = p?.multi_select as Array<{ name?: string }> | undefined;
+  return Array.isArray(arr) ? arr.map((x) => x?.name ?? '').filter(Boolean) : [];
+}
+
+export interface InfraRow {
+  id: string;
+  url: string | null;
+  name: string;
+  state: string | null;
+  infraType: string | null;
+  status: string | null;
+  planningPathway: string | null;
+  publicNotice: string | null;
+  governanceFlags: string[];
+  classifiedBy: string | null;
+  confidence: number | null;
+  approvalDate: string | null;
+  dateLogged: string | null;
+  source: string | null;
+  notes: string;
+  campusGroup: string;
+  lga: string;
+}
+
+// Read the infra tracker with the provenance/planning fields the review needs.
+export async function getInfraRows(): Promise<InfraRow[]> {
+  const rows = await queryAll(INFRA_DATABASE_ID);
+  return rows.map((r) => ({
+    id: r.id,
+    url: r.url ?? null,
+    name: plain(r.properties['Company / Project']) || 'Untitled',
+    state: selectName(r.properties['State / Region']),
+    infraType: selectName(r.properties['Infrastructure Type']),
+    status: selectName(r.properties['Status']),
+    planningPathway: selectName(r.properties['Planning Pathway']),
+    publicNotice: selectName(r.properties['Public notice']),
+    governanceFlags: multiNames(r.properties['Governance Flags']),
+    classifiedBy: selectName(r.properties['Classified by']),
+    confidence: numberVal(r.properties['Confidence']),
+    approvalDate: dateStart(r.properties['Approval date']),
+    dateLogged: dateStart(r.properties['Date Logged']),
+    source: urlVal(r.properties['Source']),
+    notes: plain(r.properties['Notes']),
+    campusGroup: plain(r.properties['Campus group']),
+    lga: plain(r.properties['Local government area']),
+  }));
+}

@@ -11,7 +11,8 @@
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
-    "pipeline": "tsx pipeline/run.ts"
+    "pipeline": "tsx pipeline/run.ts",
+    "review": "tsx pipeline/review.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.106.0",
