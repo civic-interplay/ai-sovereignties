@@ -62,19 +62,23 @@ const results = out.filter(Boolean).flatMap((r) => r.results)
 const refuted = results.filter((r) => r.verdict === 'REFUTED')
 log(`${results.length} verdicts: ${results.filter((r) => r.verdict === 'CONFIRMED').length} confirmed, ${refuted.length} refuted`)
 
-phase('Re-verify')
-const rechecks = refuted.length
-  ? await parallel(
-      refuted.map((r) => () => {
-        const c = claims.find((c) => c.id === r.id)
-        return agent(
-          `A fact-checker REFUTED this claim:\nCLAIM: ${JSON.stringify(c)}\nREFUTATION: ${r.evidence} ${r.correction || ''}\n\nGive an independent second opinion from fresh sources: is the refutation itself correct? Do not reuse the refuter's reasoning — verify from scratch. Return one result with the same id: CONFIRMED means the ORIGINAL claim stands, REFUTED means the refutation stands (include the final corrected statement in 'correction').`,
-          { label: `recheck:${r.id}`, phase: 'Re-verify', schema: VERDICTS },
-        )
-      }),
-    )
-  : []
-const recheckResults = rechecks.filter(Boolean).flatMap((r) => r.results)
+// Re-verify pass disabled for this run (refutations are reviewed manually by
+// the operator to conserve tokens). Re-enable by restoring the recheck agents.
+const skipRecheck = args && args.skipRecheck
+const recheckResults = []
+if (!skipRecheck && refuted.length) {
+  phase('Re-verify')
+  const rechecks = await parallel(
+    refuted.map((r) => () => {
+      const c = claims.find((c) => c.id === r.id)
+      return agent(
+        `A fact-checker REFUTED this claim:\nCLAIM: ${JSON.stringify(c)}\nREFUTATION: ${r.evidence} ${r.correction || ''}\n\nGive an independent second opinion from fresh sources: is the refutation itself correct? Do not reuse the refuter's reasoning — verify from scratch. Return one result with the same id: CONFIRMED means the ORIGINAL claim stands, REFUTED means the refutation stands (include the final corrected statement in 'correction').`,
+        { label: `recheck:${r.id}`, phase: 'Re-verify', schema: VERDICTS },
+      )
+    }),
+  )
+  recheckResults.push(...rechecks.filter(Boolean).flatMap((r) => r.results))
+}
 
 return {
   summary: {
