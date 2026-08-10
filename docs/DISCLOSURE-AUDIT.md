@@ -24,11 +24,14 @@ supplementary evaporative) but still no annual volume.
 
 In several cases the public record doesn't even identify **who** the data
 centre is for: applications are fronted by engineering consultants (Beca at
-130 Cherry Lane, Aurecon at 171 Leakes Rd) or shelf companies (EMKC3 Pty Ltd
-at 85 Sharps Rd, Tullamarine — a site that AirTrunk's own press materials
-describe as its MEL2 campus). Two sites with publicly-marketed capacities
-(Digital Realty MEL12, STACK MEL02) have **no locatable planning record at
-all**.
+130 Cherry Lane, Aurecon at 171 Leakes Rd) or shelf companies. The clearest
+case is PA2403452 at 85 Sharps Rd, Tullamarine: lodged and approved under
+**EMKC3 Pty Ltd**, with the operator's identity entering the register only
+*after* approval — via an "Application to correct planning permit" naming
+**AirTrunk MEL2 Pty Ltd** (sighted on the register, Aug 2026). The public was
+told who the 354MW+ campus belonged to only once there was nothing left to
+contest. Two sites with publicly-marketed capacities (Digital Realty MEL12,
+STACK MEL02) have **no locatable planning record at all**.
 
 ## The skipped step, in the government's own UI
 

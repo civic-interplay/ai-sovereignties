@@ -1,22 +1,160 @@
-{"vic":[
-{"application":"NEXTDC M4 — Port Melbourne (Fishermans Bend)","permit_ref":"TPMR-2025-27 / PA2504019 (permit 16/1/2026, DFP)","energy_disclosed":"partial","energy_detail":"150-162MW and 1MW/rack figures appear only in NEXTDC marketing and govt promotion. Only the redacted DTP delegate report was released; permit and conditions withheld from the portal, no MW figure in the public record.","water_disclosed":"partial","water_detail":"Recycled-water/liquid cooling claims are NEXTDC marketing only. Southbank News and CoM (Deputy Lord Mayor Campbell) confirmed no water/cooling specifications in the published planning record; permit conditions unpublished.","source_url":"https://www.southbanklocalnews.com.au/questions-linger-over-fishermans-bend-data-centre-approval/"},
-{"application":"AWS — Cobblebank (Melton)","permit_ref":"PA2403016 (DFP ministerial permit)","energy_disclosed":"no","energy_detail":"Permit PDF searched: no MW, energy or load figure anywhere; conditions cover stormwater, noise, fire. Register entry names no operator. AWS publishes no capacity figure either.","water_disclosed":"no","water_detail":"All 29 'water' references in the permit are stormwater/waste-water conditions. No cooling method, no operational water demand.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/30631852-0f35-ef11-8e4e-000d3a6ab40c"},
-{"application":"Data Centre — 130 Cherry Lane, Laverton North","permit_ref":"PA2402783 (DFP; applicant Beca Pty Ltd)","energy_disclosed":"no","energy_detail":"Register entry minimal: applicant (engineering consultant Beca), address, DFP pathway. No MW, operator not named. Later referenced in AusNet's PA2504040 grid-connection application, which also states no MW.","water_disclosed":"no","water_detail":"No water or cooling information in the register entry; no assessment documents indexed publicly.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/d76df3fb-a8da-ee11-904c-000d3acb63b6"},
-{"application":"Data Centre — 148-158 O'Briens Road, Corio (Geelong)","permit_ref":"Ministerial/DFP permit reported issued 24 Oct 2025 (reported as NEXTDC GE1)","energy_disclosed":"partial","energy_detail":"4.4MW figure appears only in NEXTDC marketing/trade press (approval reportedly granted in ~28 days). Geelong Independent: none of the environmental/social assessments supporting the approval are publicly available; City of Greater Geelong objects to being sidelined.","water_disclosed":"no","water_detail":"No water demand or cooling information in any public planning document; supporting assessments not published.","source_url":"https://www.datacenterdynamics.com/en/news/nextdc-breaks-ground-on-44mw-edge-data-center-in-geelong-australia/"},
-{"application":"Data Centre — 80 Kinloch Court (Hume)","permit_ref":"PA2403014 (DFP; decision 4/10/2024; Goodman site)","energy_disclosed":"no","energy_detail":"Redacted delegate report (public, 5.8MB) searched: two buildings, substation, 250kL+330kL diesel storage — no MW/IT-load figure anywhere.","water_disclosed":"yes","water_detail":"Delegate report discloses cooling design: free cooling with supplementary Direct Evaporative Cooling above ambient thresholds, hot/cold-aisle config, measures 'reducing overall water consumption'. No annual volume stated.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/2b5ec06b-0b35-ef11-8e4e-002248969b00"},
-{"application":"Data Centre — 140-204 Western Avenue, Westmeadows","permit_ref":"PA2302140 (+142/43), gazetted 21 Dec 2023; applicant MAB/Maizwest","energy_disclosed":"no","energy_detail":"Public record is the Gazette notice and DTP consultation page, which exhibited only a traffic report (Nov 2022). No MW or energy data in any exhibited document.","water_disclosed":"no","water_detail":"No water or cooling information exhibited; consultation documents were traffic reports only.","source_url":"https://www.gazette.vic.gov.au/gazette/Gazettes2023/GG2023S697.pdf"},
-{"application":"Data Centre — South Morang (McDonalds Rd / Plenty Rd, PA2402997)","permit_ref":"PA2402997 (DFP; permit 12/9/2024; applicant PVAC Development)","energy_disclosed":"no","energy_detail":"Register discloses applicant, addresses, cl.53.22 description and decision dates only. A Victorian Parliament petition seeks a moratorium citing absence of public transparency on infrastructure impacts.","water_disclosed":"no","water_detail":"No water demand or cooling method in the public record; register description covers vegetation removal and inundation overlay only.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/1b31ed89-8d2e-ef11-840a-000d3acb3ea1"},
-{"application":"Data Centre — 171 Leakes Road, Truganina (PA2403416)","permit_ref":"PA2403416 (DFP; applicant Aurecon)","energy_disclosed":"no","energy_detail":"Redacted DTP officer report searched: no MW/load figure; power addressed only as 'a proposed substation to supply the buildings'. Operator unnamed (Aurecon fronting).","water_disclosed":"partial","water_detail":"Officer report lists generic ESD dot points: 'measures to minimise consumption, low flow fittings', 100%-renewables pledge; SMP 'addresses cooling systems'. No demand figure, no cooling method specified.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/c8329f5d-6db7-ef11-b8e9-002248967430"},
-{"application":"Perri Projects — West Footscray Data Centre (63 Sunshine Road)","permit_ref":"PA2403320 (DFP; permit 4 Apr 2025)","energy_disclosed":"no","energy_detail":"Permit PDF searched: no MW or energy consumption figure. $800m cost and scale appear only in developer press.","water_disclosed":"no","water_detail":"Only condition touching water/energy is a generic ESD report condition ('minimum 50% score for water, energy, stormwater, IEQ'). No demand figures or cooling method.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/fcb0d877-0b98-ef11-8a68-002248938a9c"},
-{"application":"CDC — Laverton North Campus","permit_ref":"DFP application lodged Oct 2024 (ref not indexed); related AusNet connection permit PA2504040","energy_disclosed":"partial","energy_detail":"150MW initial / 400+MW figures appear in CDC media releases and Invest Victoria promotion, not the planning record. PlanningAlerts text is generic 'utility installation (data centre)'; even AusNet's terminal-station connection permit states no MW.","water_disclosed":"partial","water_detail":"CDC corporate materials describe closed-loop low-water cooling; nothing about cooling or water demand in the locatable planning record.","source_url":"https://www.planningalerts.org.au/applications/3206534"},
-{"application":"NEXTDC M2 — Tullamarine","permit_ref":"PA2403452 (85 Sharps Rd; DFP; permit 28/3/2025; applicant EMKC3 Pty Ltd)","energy_disclosed":"partial","energy_detail":"Register description generic, no MW. 60MW campus / 72MW expansion figures are NEXTDC/contractor marketing. NOTE: applicant is EMKC3, and 85-95 Sharps Rd is also reported as AirTrunk MEL2 — the public record does not identify the operator.","water_disclosed":"no","water_detail":"No water demand or cooling information in the register entry or indexed documents.","source_url":"https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/1ea17bd8-75be-ef11-b8e8-002248938a9c"},
-{"application":"Digital Realty MEL12 — Deer Park","permit_ref":"unknown (Brimbank council-era permit; not locatable online)","energy_disclosed":"unknown","energy_detail":"No planning approval record locatable. The 5.7MW figure exists only in media/company disclosure.","water_disclosed":"unknown","water_detail":"No planning record locatable; no public water/cooling data.","source_url":"https://www.itnews.com.au/news/digital-realty-reveals-89m-data-centre-expansion-417080"},
-{"application":"AirTrunk MEL2 — Melbourne North-west","permit_ref":"No permit under AirTrunk's name located; site (85-95 Sharps Rd, Tullamarine) matches PA2403452 issued to EMKC3 Pty Ltd","energy_disclosed":"partial","energy_detail":"354+MW and A$5bn figures come solely from AirTrunk's Dec 2025 corporate announcement and Invest Victoria support; the only matching planning record (PA2403452) contains no MW and does not name AirTrunk.","water_disclosed":"partial","water_detail":"Water-efficiency commitments exist only as sustainability-linked-loan targets in AirTrunk corporate material; nothing in the locatable planning record.","source_url":"https://airtrunk.com/airtrunk-expands-australian-platform-with-a-second-hyperscale-data-centre-campus-in-melbourne/"},
-{"application":"STACK Infrastructure MEL02 — Truganina","permit_ref":"unknown (200 Palmers Rd; no council or ministerial record locatable)","energy_disclosed":"unknown","energy_detail":"252MW campus / 300+MW gross and 132kV substation figures appear only in STACK marketing; no planning approval record found on the ministerial register, PlanningAlerts or Wyndham council indexes.","water_disclosed":"unknown","water_detail":"No planning record locatable; no public water/cooling data beyond marketing.","source_url":"https://www.stackinfra.com/locations/asia-pacific/melbourne/mel02/"}
-],
-"nsw_contrast":[
-{"application":"AirTrunk Mamre Road (Kemps Creek)","ssd":"SSD-92743706","energy_disclosed":"yes","energy_detail":"Publicly exhibited EIS (77 documents) states 1GW+ power capacity, six buildings, 936 cooling units, 852 diesel generators, 14,430kL diesel storage.","water_disclosed":"yes","water_detail":"EIS discloses estimated operational water use ~22.4 ML/year, publicly debated (ACS, Greenpeace submissions).","source_url":"https://www.planningportal.nsw.gov.au/major-projects/projects/mamre-road-data-centre-campus"},
-{"application":"Goodman — Project Mars (12 Mars Road, Lane Cove West)","ssd":"SSD-82052708","energy_disclosed":"yes","energy_detail":"Exhibited EIS states ~90MW overall power consumption, PUE target 1.35, itemises 49 backup diesel generators by rating.","water_disclosed":"yes","water_detail":"EIS states estimated annual operational water use of 510,009 m3 (drinking water for cooling) — contestable by residents and council during exhibition.","source_url":"https://www.planningportal.nsw.gov.au/major-projects/projects/project-mars-data-centre"},
-{"application":"CDC — Marsden Park Hyperscale (Western Sydney)","ssd":"SSD (approved)","energy_disclosed":"yes","energy_detail":"Exhibited/approved SSD documents state 504MW ICT capacity (scalable toward 1GW) with a 720MVA onsite substation.","water_disclosed":"yes","water_detail":"Assessment record discloses air-based chilled-water closed-loop cooling, ~0.1L per kWh stated water efficiency.","source_url":"https://www.planningportal.nsw.gov.au/major-projects/projects/marsden-park-data-centre"}
-],
-"headline":"Of 14 Victorian approvals audited, 0 disclosed expected grid load (MW) in the public planning record and none published a water-demand figure — only 1 (80 Kinloch Ct) even described its cooling method — whereas all 3 NSW SSD comparators publish both MW and water figures in exhibited EIS documents."}
+{
+ "vic": [
+  {
+   "application": "NEXTDC M4 — Port Melbourne (Fishermans Bend)",
+   "permit_ref": "TPMR-2025-27 / PA2504019 (permit 16/1/2026, DFP)",
+   "energy_disclosed": "partial",
+   "energy_detail": "150-162MW and 1MW/rack figures appear only in NEXTDC marketing and govt promotion. Only the redacted DTP delegate report was released; permit and conditions withheld from the portal, no MW figure in the public record.",
+   "water_disclosed": "partial",
+   "water_detail": "Recycled-water/liquid cooling claims are NEXTDC marketing only. Southbank News and CoM (Deputy Lord Mayor Campbell) confirmed no water/cooling specifications in the published planning record; permit conditions unpublished.",
+   "source_url": "https://www.southbanklocalnews.com.au/questions-linger-over-fishermans-bend-data-centre-approval/"
+  },
+  {
+   "application": "AWS — Cobblebank (Melton)",
+   "permit_ref": "PA2403016 (DFP ministerial permit)",
+   "energy_disclosed": "no",
+   "energy_detail": "Permit PDF searched: no MW, energy or load figure anywhere; conditions cover stormwater, noise, fire. Register entry names no operator. AWS publishes no capacity figure either.",
+   "water_disclosed": "no",
+   "water_detail": "All 29 'water' references in the permit are stormwater/waste-water conditions. No cooling method, no operational water demand.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/30631852-0f35-ef11-8e4e-000d3a6ab40c"
+  },
+  {
+   "application": "Data Centre — 130 Cherry Lane, Laverton North",
+   "permit_ref": "PA2402783 (DFP; applicant Beca Pty Ltd)",
+   "energy_disclosed": "no",
+   "energy_detail": "Register entry minimal: applicant (engineering consultant Beca), address, DFP pathway. No MW, operator not named. Later referenced in AusNet's PA2504040 grid-connection application, which also states no MW.",
+   "water_disclosed": "no",
+   "water_detail": "No water or cooling information in the register entry; no assessment documents indexed publicly.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/d76df3fb-a8da-ee11-904c-000d3acb63b6"
+  },
+  {
+   "application": "Data Centre — 148-158 O'Briens Road, Corio (Geelong)",
+   "permit_ref": "Ministerial/DFP permit reported issued 24 Oct 2025 (reported as NEXTDC GE1)",
+   "energy_disclosed": "partial",
+   "energy_detail": "4.4MW figure appears only in NEXTDC marketing/trade press (approval reportedly granted in ~28 days). Geelong Independent: none of the environmental/social assessments supporting the approval are publicly available; City of Greater Geelong objects to being sidelined.",
+   "water_disclosed": "no",
+   "water_detail": "No water demand or cooling information in any public planning document; supporting assessments not published.",
+   "source_url": "https://www.datacenterdynamics.com/en/news/nextdc-breaks-ground-on-44mw-edge-data-center-in-geelong-australia/"
+  },
+  {
+   "application": "Data Centre — 80 Kinloch Court (Hume)",
+   "permit_ref": "PA2403014 (DFP; decision 4/10/2024; Goodman site)",
+   "energy_disclosed": "no",
+   "energy_detail": "Redacted delegate report (public, 5.8MB) searched: two buildings, substation, 250kL+330kL diesel storage — no MW/IT-load figure anywhere.",
+   "water_disclosed": "yes",
+   "water_detail": "Delegate report discloses cooling design: free cooling with supplementary Direct Evaporative Cooling above ambient thresholds, hot/cold-aisle config, measures 'reducing overall water consumption'. No annual volume stated.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/2b5ec06b-0b35-ef11-8e4e-002248969b00"
+  },
+  {
+   "application": "Data Centre — 140-204 Western Avenue, Westmeadows",
+   "permit_ref": "PA2302140 (+142/43), gazetted 21 Dec 2023; applicant MAB/Maizwest",
+   "energy_disclosed": "no",
+   "energy_detail": "Public record is the Gazette notice and DTP consultation page, which exhibited only a traffic report (Nov 2022). No MW or energy data in any exhibited document.",
+   "water_disclosed": "no",
+   "water_detail": "No water or cooling information exhibited; consultation documents were traffic reports only.",
+   "source_url": "https://www.gazette.vic.gov.au/gazette/Gazettes2023/GG2023S697.pdf"
+  },
+  {
+   "application": "Data Centre — South Morang (McDonalds Rd / Plenty Rd, PA2402997)",
+   "permit_ref": "PA2402997 (DFP; permit 12/9/2024; applicant PVAC Development)",
+   "energy_disclosed": "no",
+   "energy_detail": "Register discloses applicant, addresses, cl.53.22 description and decision dates only. A Victorian Parliament petition seeks a moratorium citing absence of public transparency on infrastructure impacts.",
+   "water_disclosed": "no",
+   "water_detail": "No water demand or cooling method in the public record; register description covers vegetation removal and inundation overlay only.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/1b31ed89-8d2e-ef11-840a-000d3acb3ea1"
+  },
+  {
+   "application": "Data Centre — 171 Leakes Road, Truganina (PA2403416)",
+   "permit_ref": "PA2403416 (DFP; applicant Aurecon)",
+   "energy_disclosed": "no",
+   "energy_detail": "Redacted DTP officer report searched: no MW/load figure; power addressed only as 'a proposed substation to supply the buildings'. Operator unnamed (Aurecon fronting).",
+   "water_disclosed": "partial",
+   "water_detail": "Officer report lists generic ESD dot points: 'measures to minimise consumption, low flow fittings', 100%-renewables pledge; SMP 'addresses cooling systems'. No demand figure, no cooling method specified.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/c8329f5d-6db7-ef11-b8e9-002248967430"
+  },
+  {
+   "application": "Perri Projects — West Footscray Data Centre (63 Sunshine Road)",
+   "permit_ref": "PA2403320 (DFP; permit 4 Apr 2025)",
+   "energy_disclosed": "no",
+   "energy_detail": "Permit PDF searched: no MW or energy consumption figure. $800m cost and scale appear only in developer press.",
+   "water_disclosed": "no",
+   "water_detail": "Only condition touching water/energy is a generic ESD report condition ('minimum 50% score for water, energy, stormwater, IEQ'). No demand figures or cooling method.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/fcb0d877-0b98-ef11-8a68-002248938a9c"
+  },
+  {
+   "application": "CDC — Laverton North Campus",
+   "permit_ref": "DFP application lodged Oct 2024 (ref not indexed); related AusNet connection permit PA2504040",
+   "energy_disclosed": "partial",
+   "energy_detail": "150MW initial / 400+MW figures appear in CDC media releases and Invest Victoria promotion, not the planning record. PlanningAlerts text is generic 'utility installation (data centre)'; even AusNet's terminal-station connection permit states no MW.",
+   "water_disclosed": "partial",
+   "water_detail": "CDC corporate materials describe closed-loop low-water cooling; nothing about cooling or water demand in the locatable planning record.",
+   "source_url": "https://www.planningalerts.org.au/applications/3206534"
+  },
+  {
+   "application": "NEXTDC M2 — Tullamarine",
+   "permit_ref": "M2 expansion permit ref unconfirmed (5 Sharps Rd); PA2403452 previously mis-attributed",
+   "energy_disclosed": "partial",
+   "energy_detail": "CORRECTED 2026-08-10: PA2403452 (85 Sharps Rd, applicant EMKC3 Pty Ltd) is AirTrunk MEL2, per a subsequent 'Application to correct planning permit' naming AirTrunk MEL2 Pty Ltd. NEXTDC M2 (5 Sharps Rd) expansion figures (60/72MW) remain marketing-only; no M2-specific permit record located with an energy figure.",
+   "water_disclosed": "no",
+   "water_detail": "No water demand or cooling information in the register entry or indexed documents.",
+   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/1ea17bd8-75be-ef11-b8e8-002248938a9c"
+  },
+  {
+   "application": "Digital Realty MEL12 — Deer Park",
+   "permit_ref": "unknown (Brimbank council-era permit; not locatable online)",
+   "energy_disclosed": "unknown",
+   "energy_detail": "No planning approval record locatable. The 5.7MW figure exists only in media/company disclosure.",
+   "water_disclosed": "unknown",
+   "water_detail": "No planning record locatable; no public water/cooling data.",
+   "source_url": "https://www.itnews.com.au/news/digital-realty-reveals-89m-data-centre-expansion-417080"
+  },
+  {
+   "application": "AirTrunk MEL2 — Melbourne North-west",
+   "permit_ref": "PA2403452 (85 Sharps Rd, Tullamarine; lodged by EMKC3 Pty Ltd; operator confirmed via later Application to correct planning permit naming AirTrunk MEL2 Pty Ltd)",
+   "energy_disclosed": "partial",
+   "energy_detail": "354+MW / A$5bn figures come solely from AirTrunk's corporate announcement and Invest Victoria support; the planning record (PA2403452) contains no MW and named only shelf company EMKC3 Pty Ltd until an 'Application to correct planning permit' (sighted Aug 2026) named AirTrunk MEL2 Pty Ltd — after approval.",
+   "water_disclosed": "partial",
+   "water_detail": "Water-efficiency commitments exist only as sustainability-linked-loan targets in AirTrunk corporate material; nothing in the locatable planning record.",
+   "source_url": "https://airtrunk.com/airtrunk-expands-australian-platform-with-a-second-hyperscale-data-centre-campus-in-melbourne/"
+  },
+  {
+   "application": "STACK Infrastructure MEL02 — Truganina",
+   "permit_ref": "unknown (200 Palmers Rd; no council or ministerial record locatable)",
+   "energy_disclosed": "unknown",
+   "energy_detail": "252MW campus / 300+MW gross and 132kV substation figures appear only in STACK marketing; no planning approval record found on the ministerial register, PlanningAlerts or Wyndham council indexes.",
+   "water_disclosed": "unknown",
+   "water_detail": "No planning record locatable; no public water/cooling data beyond marketing.",
+   "source_url": "https://www.stackinfra.com/locations/asia-pacific/melbourne/mel02/"
+  }
+ ],
+ "nsw_contrast": [
+  {
+   "application": "AirTrunk Mamre Road (Kemps Creek)",
+   "ssd": "SSD-92743706",
+   "energy_disclosed": "yes",
+   "energy_detail": "Publicly exhibited EIS (77 documents) states 1GW+ power capacity, six buildings, 936 cooling units, 852 diesel generators, 14,430kL diesel storage.",
+   "water_disclosed": "yes",
+   "water_detail": "EIS discloses estimated operational water use ~22.4 ML/year, publicly debated (ACS, Greenpeace submissions).",
+   "source_url": "https://www.planningportal.nsw.gov.au/major-projects/projects/mamre-road-data-centre-campus"
+  },
+  {
+   "application": "Goodman — Project Mars (12 Mars Road, Lane Cove West)",
+   "ssd": "SSD-82052708",
+   "energy_disclosed": "yes",
+   "energy_detail": "Exhibited EIS states ~90MW overall power consumption, PUE target 1.35, itemises 49 backup diesel generators by rating.",
+   "water_disclosed": "yes",
+   "water_detail": "EIS states estimated annual operational water use of 510,009 m3 (drinking water for cooling) — contestable by residents and council during exhibition.",
+   "source_url": "https://www.planningportal.nsw.gov.au/major-projects/projects/project-mars-data-centre"
+  },
+  {
+   "application": "CDC — Marsden Park Hyperscale (Western Sydney)",
+   "ssd": "SSD (approved)",
+   "energy_disclosed": "yes",
+   "energy_detail": "Exhibited/approved SSD documents state 504MW ICT capacity (scalable toward 1GW) with a 720MVA onsite substation.",
+   "water_disclosed": "yes",
+   "water_detail": "Assessment record discloses air-based chilled-water closed-loop cooling, ~0.1L per kWh stated water efficiency.",
+   "source_url": "https://www.planningportal.nsw.gov.au/major-projects/projects/marsden-park-data-centre"
+  }
+ ],
+ "headline": "Of 14 Victorian approvals audited, 0 disclosed expected grid load (MW) in the public planning record and none published a water-demand figure — only 1 (80 Kinloch Ct) even described its cooling method — whereas all 3 NSW SSD comparators publish both MW and water figures in exhibited EIS documents."
+}
