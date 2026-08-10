@@ -19,15 +19,6 @@
    "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/30631852-0f35-ef11-8e4e-000d3a6ab40c"
   },
   {
-   "application": "Data Centre — 130 Cherry Lane, Laverton North",
-   "permit_ref": "PA2402783 (DFP; applicant Beca Pty Ltd)",
-   "energy_disclosed": "no",
-   "energy_detail": "Register entry minimal: applicant (engineering consultant Beca), address, DFP pathway. No MW, operator not named. Later referenced in AusNet's PA2504040 grid-connection application, which also states no MW.",
-   "water_disclosed": "no",
-   "water_detail": "No water or cooling information in the register entry; no assessment documents indexed publicly.",
-   "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/d76df3fb-a8da-ee11-904c-000d3acb63b6"
-  },
-  {
    "application": "Data Centre — 148-158 O'Briens Road, Corio (Geelong)",
    "permit_ref": "Ministerial/DFP permit reported issued 24 Oct 2025 (reported as NEXTDC GE1)",
    "energy_disclosed": "partial",
@@ -156,5 +147,5 @@
    "source_url": "https://www.planningportal.nsw.gov.au/major-projects/projects/marsden-park-data-centre"
   }
  ],
- "headline": "Of 14 Victorian approvals audited, 0 disclosed expected grid load (MW) in the public planning record and none published a water-demand figure — only 1 (80 Kinloch Ct) even described its cooling method — whereas all 3 NSW SSD comparators publish both MW and water figures in exhibited EIS documents."
+ "headline": "Of 13 Victorian approvals audited, 0 disclosed expected grid load (MW) in the public planning record and none published a water-demand figure — only 1 (80 Kinloch Ct) even described its cooling method — whereas all 3 NSW SSD comparators publish both MW and water figures in exhibited EIS documents. (A 14th row, 130 Cherry Lane PA2402783, was removed on verification: it is AusNet's Altona BESS, not a data centre — and notably its MW WAS disclosed.)"
 }

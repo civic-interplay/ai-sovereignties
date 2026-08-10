@@ -6,7 +6,7 @@ or even visible, when these projects are approved?*
 
 ## The finding, in plain words
 
-**Fourteen approved or lodged Victorian data-centre applications were audited.
+**Thirteen approved or lodged Victorian data-centre applications were audited.
 Not one discloses the project's expected electricity demand in the public
 planning record. None publishes a water-demand figure. Only one describes its
 cooling method.**
@@ -23,8 +23,7 @@ Court, whose delegate report describes the cooling design (free cooling with
 supplementary evaporative) but still no annual volume.
 
 In several cases the public record doesn't even identify **who** the data
-centre is for: applications are fronted by engineering consultants (Beca at
-130 Cherry Lane, Aurecon at 171 Leakes Rd) or shelf companies. The clearest
+centre is for: applications are fronted by engineering consultants (e.g. Aurecon at 171 Leakes Rd) or shelf companies. The clearest
 case is PA2403452 at 85 Sharps Rd, Tullamarine: lodged and approved under
 **EMKC3 Pty Ltd**, with the operator's identity entering the register only
 *after* approval — via an "Application to correct planning permit" naming
@@ -84,3 +83,8 @@ the audited rows.
 the four permit/delegate-report PDFs that were text-searched. Full per-site
 evidence (with URLs) is appended to each site's Notes in the Notion tracker,
 flagged `DA disclosure audit 2026-08-10`.
+
+
+## Verification
+
+An adversarial verification pass (2026-08-10, partial: 16/22 claims) confirmed 14 claims against primary documents and refuted two, both corrected above — including removing 130 Cherry Lane from the audit set (PA2402783 is AusNet's Altona BESS, whose MW *was* disclosed — energy infrastructure discloses; data centres don't). See `disclosure-audit/verification-2026-08-10-partial.md`.
