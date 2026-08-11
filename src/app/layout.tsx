@@ -59,7 +59,11 @@ export default function RootLayout({
 			<head>
 				<link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} ${firaSans.variable} antialiased`}>{children}</body>
+			{/* suppressHydrationWarning: browser extensions (e.g. ColorZilla's
+			    cz-shortcut-listen) add attributes to <body> before React hydrates.
+			    This only covers this element's own attributes, not its children, so
+			    real hydration mismatches inside the app still surface. */}
+			<body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${firaSans.variable} antialiased`}>{children}</body>
 		</html>
 	);
 }
