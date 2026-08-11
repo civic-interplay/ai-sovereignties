@@ -23,16 +23,69 @@ const NOTION_DATA_URL =
   'https://studio-esem.notion.site/8b537010f4cb4aa6b6df470f9d0d40c9?v=c9d0347781ec4900967cfff4d18a25a6';
 
 
+// ---------------------------------------------------------------------------
+// COLOUR SYSTEM
+//
+// Three separate jobs, never mixed — mixing them is what made yellow mean seven
+// different things at once:
+//
+//   1. CATEGORICAL (identity: which kind of thing) — the seven slots below.
+//      Layer / Ownership / Country / Capital.
+//   2. ORDINAL (magnitude: how much, in one direction) — one hue, stepped by
+//      lightness so the order is visible in the colour. Water (high→low risk)
+//      and Super (direct→no link). Both previously wore identity hues, which is
+//      why yellow kept landing on "the middle value".
+//   3. DIVERGING (polarity: two poles that both matter) — two hues with a dim
+//      middle. Energy (renewable ↔ coal/gas) and Register (owned here ↔ rented
+//      offshore). These are NOT one-directional: collapsing them to a single
+//      ramp forces one pole to recede, which buried `productive` — the thesis's
+//      positive claim — at the dim end.
+//
+// Status (contested / fast-tracked) is RESERVED: it never takes a hue from any
+// of the three, because it overlays whichever lens is active and would otherwise
+// collide with the fills. Neutral ink; ring COUNT distinguishes the two
+// (contested one ring, fast-tracked two), since both are often on together.
+//
+// Validated with the dataviz validator against this map's own surface
+// (#0a0c0b), all-pairs (a dot map is an all-pairs form — any two sites can sit
+// side by side). Categorical: CVD ΔE 6.4, normal-vision ΔE 17.0 (≥15 gate).
+// Ordinal ramps: monotone L, adjacent ΔL ≥ 0.06, dim end ≥ 2:1 on surface.
+// Slot ORDER is free to reassign for semantic fit — the all-pairs pairlist does
+// not depend on order — but the SET must not change without re-validating.
+// ---------------------------------------------------------------------------
+
+// Categorical slots. Slots 4 and 5 are the Civic Interplay brand hues.
+const C_OLIVE = '#929b0f';
+const C_GREEN = '#067957';
+const C_TEAL = '#38a1ba';
+const C_PERI = '#4550b6'; // CI periwinkle hue
+const C_PURPLE = '#a06cd6'; // CI purple hue
+const C_ROSE = '#db687c';
+const C_UMBER = '#8d5108';
+// Off-scale / no-data. Deliberately outside both sets so it never reads as a
+// category or as a rung on a scale.
+const C_NEUTRAL = '#6b7568';
+
+// Status ink — reserved, never a category. Ring geometry (radius + width)
+// carries which status; the legend names it. Never hue.
+const STATUS_INK = '#ffffff';
+const STATUS_INK_SOFT = '#9aa39b';
+// Emphasis for a "hot" figure inside a popup (e.g. a stressed water reading).
+// Popup text only — never painted on the map, so it cannot collide with a lens
+// fill. Kept as a named token so it is not mistaken for a spare category hue.
+const STAT_HOT = '#ff8095';
+
 // --- Layer lens: colour per infrastructure kind (the `kind` key from /api/sites) ---
+// Categorical — slots chosen for semantic fit (water reads blue, mine earth).
 const KIND_COLORS: Record<string, string> = {
-  data_centre: '#00ffcc',
-  mine: '#ff6b35',
-  refinery: '#b478ff',
-  energy: '#ffd23f',
-  water: '#3fa9ff',
-  policy: '#9aa5a0',
-  geopolitical: '#ff4d6d',
-  other: '#ffffff',
+  data_centre: C_TEAL,
+  mine: C_UMBER,
+  refinery: C_ROSE,
+  energy: C_OLIVE,
+  water: C_PERI,
+  policy: C_PURPLE,
+  geopolitical: C_GREEN,
+  other: C_NEUTRAL,
 };
 const KIND_LABELS: Record<string, string> = {
   data_centre: 'Data centre',
@@ -47,13 +100,14 @@ const KIND_LABELS: Record<string, string> = {
 const KIND_ORDER = ['data_centre', 'mine', 'refinery', 'energy', 'water', 'policy', 'geopolitical', 'other'];
 
 // --- Ownership lens: colour per sovereignty key (the `sovereignty` key from /api/sites) ---
+// Categorical.
 const SOV_COLORS: Record<string, string> = {
-  australian: '#00e08a',
-  foreign: '#ff4d6d',
-  jv: '#ffd23f',
-  government: '#3fa9ff',
-  defence: '#b478ff',
-  other: '#9aa5a0',
+  australian: C_GREEN,
+  foreign: C_ROSE,
+  jv: C_OLIVE,
+  government: C_PERI,
+  defence: C_PURPLE,
+  other: C_NEUTRAL,
 };
 const SOV_LABELS: Record<string, string> = {
   australian: 'Australian-owned',
@@ -67,14 +121,15 @@ const SOV_ORDER = ['australian', 'foreign', 'jv', 'government', 'defence', 'othe
 
 // --- Country lens: colour per owner-country key (the `ownershipCountryKey` from /api/sites) ---
 // The ultimate-owner country: where the capital behind the site actually sits.
+// Categorical.
 const COUNTRY_COLORS: Record<string, string> = {
-  au: '#00e08a',
-  us: '#3fa9ff',
-  cn: '#ff4d6d',
-  sg: '#ffd23f',
-  jp: '#b478ff',
-  ch: '#ff8c42',
-  other: '#9aa5a0',
+  au: C_GREEN,
+  us: C_PERI,
+  cn: C_ROSE,
+  sg: C_TEAL,
+  jp: C_PURPLE,
+  ch: C_UMBER,
+  other: C_NEUTRAL,
 };
 const COUNTRY_LABELS: Record<string, string> = {
   au: 'Australia',
@@ -94,15 +149,17 @@ const COUNTRY_FLAG: Record<string, string> = {
 
 // --- Capital lens: colour per owner-type key (the `ownerTypeKey` from /api/sites) ---
 // The *structure* of the capital, not just its flag: who this kind of owner is.
+// Categorical — exactly seven real buckets plus the no-data neutral, so this
+// lens fits the slot set without folding anything into "Other".
 const CAPITAL_COLORS: Record<string, string> = {
-  hyperscaler: '#00ffcc',
-  infra_fund: '#ff6b35',
-  pension: '#3fa9ff',
-  swf: '#ff4d6d',
-  listed: '#ffd23f',
-  state: '#b478ff',
-  private: '#8e9bdd',
-  other: '#9aa5a0',
+  hyperscaler: C_TEAL,
+  infra_fund: C_UMBER,
+  pension: C_PERI,
+  swf: C_ROSE,
+  listed: C_OLIVE,
+  state: C_PURPLE,
+  private: C_GREEN,
+  other: C_NEUTRAL,
 };
 const CAPITAL_LABELS: Record<string, string> = {
   hyperscaler: 'Hyperscaler',
@@ -117,12 +174,15 @@ const CAPITAL_LABELS: Record<string, string> = {
 const CAPITAL_ORDER = ['hyperscaler', 'infra_fund', 'pension', 'swf', 'listed', 'state', 'private', 'other'];
 
 // --- Water-risk lens: colour per water-risk key (the `waterRiskKey` from /api/sites) ---
+// ORDINAL — one hue (blue), stepped by lightness. On this near-black field
+// brightness reads as salience, so the brightest step is the stressed end.
+// `na`/`other` sit off the scale in neutral: they are not a low rung.
 const WATER_COLORS: Record<string, string> = {
-  high: '#ff4d6d',
-  medium: '#ffd23f',
-  low: '#3fd17a',
-  na: '#6b7568',
-  other: '#9aa5a0',
+  high: '#71c9fb',
+  medium: '#208dc1',
+  low: '#005477',
+  na: C_NEUTRAL,
+  other: C_NEUTRAL,
 };
 const WATER_LABELS: Record<string, string> = {
   high: 'High — potable stressed',
@@ -135,13 +195,20 @@ const WATER_ORDER = ['high', 'medium', 'low', 'na'];
 
 // --- Energy lens: colour per energy source (the `energyKey` from /api/sites) ---
 // As material as water for a data centre — power draw, grid strain, emissions.
+// DIVERGING — renewable and fossil are opposite poles, not two points on one
+// ramp, so they get different hues: yellow for renewable, burnt orange-brown for
+// coal/gas, with grid-mixed as the dim middle. A single-hue ramp made this lens
+// too subtle, and on a near-black field it would have forced one pole to recede.
+// Both poles stay bright so either is easy to pick out; the middle is what
+// recedes. `nuclear` is a category rather than a point on the scale, so it sits
+// off-scale on a categorical slot; `unknown` is neutral.
 const ENERGY_COLORS: Record<string, string> = {
-  renewable_onsite: '#00e08a',
-  renewable_contracted: '#3fd17a',
-  grid_mixed: '#ffd23f',
-  grid_fossil: '#ff6b35',
-  nuclear: '#b478ff',
-  unknown: '#6b7568',
+  renewable_onsite: '#e5cc1c',
+  renewable_contracted: '#b08e00',
+  grid_mixed: '#6a5339',
+  grid_fossil: '#ce6234',
+  nuclear: C_PURPLE,
+  unknown: C_NEUTRAL,
 };
 const ENERGY_LABELS: Record<string, string> = {
   renewable_onsite: 'Renewable — on-site',
@@ -155,12 +222,18 @@ const ENERGY_ORDER = ['renewable_onsite', 'renewable_contracted', 'grid_mixed', 
 
 // --- Register lens: colour per sovereignty register (the `register` key from /api/sites) ---
 // Green = capability owned/built here, red = rented to offshore tenants. The thesis in colour.
+// DIVERGING — green = capability owned and built here, rose = capacity rented to
+// offshore tenants. The thesis in colour, with both poles bright because both
+// matter: productive is the argument's positive claim, not a low rung on a
+// scale, so it must not recede. `financial` and `operational` are the middle
+// ground, each leaning toward its own pole. Poles separate at ΔE 31.2 and every
+// step clears 4:1 on the field.
 const REGISTER_COLORS: Record<string, string> = {
-  productive: '#00e08a',
-  operational: '#3fa9ff',
-  financial: '#ffd23f',
-  rented: '#ff4d6d',
-  none: '#6b7568',
+  productive: '#4ac06c',
+  operational: '#11957c',
+  financial: '#ac5859',
+  rented: '#ec6480',
+  none: C_NEUTRAL,
 };
 const REGISTER_LABELS: Record<string, string> = {
   productive: 'Productive (Aus-owned)',
@@ -170,16 +243,28 @@ const REGISTER_LABELS: Record<string, string> = {
   none: 'Not coded',
 };
 const REGISTER_ORDER = ['productive', 'operational', 'financial', 'rented', 'none'];
+// Longer gloss for the explainer panel, so the swatch carries the colour and the
+// sentence stays in readable ink.
+const REGISTER_EXPLAIN: Record<string, string> = {
+  productive: 'Productive — owned & built by Australian interests.',
+  operational: 'Operational — run by an Australian public body.',
+  financial: 'Financial — ≥30% public capital (sovereign-wealth, government or super*).',
+  rented: 'Rented — capacity rented to offshore hyperscalers.',
+  none: 'Not coded.',
+};
 
 // --- Sovereign/super exposure lens: how much of a site is funded by Australian
 // sovereign-wealth / super-fund capital (the `superExposureKey` from /api/sites).
 // The activist question: is your retirement invested in the site you're fighting?
 // Coloured by the *channel* through which Australian super/sovereign money
 // touches the site — more telling than a single %, since exposure comes three ways.
+// ORDINAL — one hue (teal), stepped by directness of exposure. Brightest is the
+// most direct link (a >30% stake); `none` stays near-surface so the sites your
+// super does touch are what the eye lands on.
 const SUPER_COLORS: Record<string, string> = {
-  operator: '#00e08a',
-  land: '#ffcf5c',
-  via_manager: '#3fd1a0',
+  operator: '#56d4d4',
+  land: '#169696',
+  via_manager: '#055959',
   none: '#3a3f3c',
 };
 const SUPER_LABELS: Record<string, string> = {
@@ -197,7 +282,7 @@ function matchList(colors: Record<string, string>, order: string[]): string[] {
   // Fallback for any value not in `order`. The register lens uses 'none' as its
   // catch-all rather than 'other', so fall through both to a hard default —
   // Mapbox rejects an `undefined` here ("'undefined' value invalid. Use null instead").
-  out.push(colors.other ?? colors.none ?? '#9aa5a0');
+  out.push(colors.other ?? colors.none ?? C_NEUTRAL);
   return out;
 }
 
@@ -325,7 +410,10 @@ export default function Map() {
         },
       });
 
-      // Highlight overlay: contested sites (red ring). Toggled on demand.
+      // Highlight overlay: contested sites. Reserved status ink, never a lens
+      // hue — this ring overlays whichever lens is active, so a hue here would
+      // collide with the fills (it used to be the same red as several
+      // categories). Distinguished from fast-tracked by radius and weight.
       m.addLayer({
         id: 'sites-contested',
         type: 'circle',
@@ -336,26 +424,37 @@ export default function Map() {
           'circle-radius': ['interpolate', ['linear'], capacity, 30, 16, 400, 44] as unknown as mapboxgl.ExpressionSpecification,
           'circle-opacity': 0,
           'circle-stroke-width': 2.5,
-          'circle-stroke-color': '#ff4d6d',
-          'circle-stroke-opacity': 0.9,
+          'circle-stroke-color': STATUS_INK,
+          'circle-stroke-opacity': 0.95,
         },
       });
 
-      // Highlight overlay: state-fast-tracked sites (amber ring). Toggled on demand.
-      m.addLayer({
-        id: 'sites-fasttracked',
-        type: 'circle',
-        source: 'sites',
-        filter: ['==', ['get', 'fastTracked'], true] as unknown as mapboxgl.FilterSpecification,
-        layout: { visibility: 'none' },
-        paint: {
-          'circle-radius': ['interpolate', ['linear'], capacity, 30, 23, 400, 53] as unknown as mapboxgl.ExpressionSpecification,
-          'circle-opacity': 0,
-          'circle-stroke-width': 2,
-          'circle-stroke-color': '#ffd23f',
-          'circle-stroke-opacity': 0.85,
-        },
-      });
+      // Highlight overlay: state-fast-tracked sites. Also reserved status ink.
+      // Drawn as a DOUBLE ring (two concentric circles) against contested's
+      // single one: with both statuses neutral so neither collides with the lens
+      // fills, ring *count* is what tells them apart — and the two overlays are
+      // often on together, which is the point of the map. Both rings sit outside
+      // contested's radius so a site carrying both reads as one bright inner
+      // ring plus two softer outer ones.
+      for (const [id, r0, r1] of [
+        ['sites-fasttracked', 23, 53],
+        ['sites-fasttracked-outer', 28, 60],
+      ] as const) {
+        m.addLayer({
+          id,
+          type: 'circle',
+          source: 'sites',
+          filter: ['==', ['get', 'fastTracked'], true] as unknown as mapboxgl.FilterSpecification,
+          layout: { visibility: 'none' },
+          paint: {
+            'circle-radius': ['interpolate', ['linear'], capacity, 30, r0, 400, r1] as unknown as mapboxgl.ExpressionSpecification,
+            'circle-opacity': 0,
+            'circle-stroke-width': 1.5,
+            'circle-stroke-color': STATUS_INK_SOFT,
+            'circle-stroke-opacity': 0.9,
+          },
+        });
+      }
 
       // --- Supply-chain mode (illustrative): where Australian AI compute's inputs sit ---
       // Australia mines the raw inputs and hosts the buildings, but the three things
@@ -363,10 +462,10 @@ export default function Map() {
       // rare-earth separation & magnets (China) — are all offshore. Lines carry each
       // dependency out; domestic processors (green rings) are the "closing the loop".
       const OFFSHORE_NODES = [
-        { dep: 'rare_earth', label: 'Rare-earth separation (China) — contested', lng: 108, lat: 34, color: '#ff4d6d' },
-        { dep: 'malaysia', label: 'Lynas separation (Malaysia · non-China)', lng: 103.3, lat: 3.8, color: '#ffd23f' },
-        { dep: 'chips', label: 'AI chips (Taiwan · TSMC)', lng: 121, lat: 23.8, color: '#3fd1ff' },
-        { dep: 'hardware', label: 'Servers & hardware (China)', lng: 114, lat: 22.5, color: '#ff9a3f' },
+        { dep: 'rare_earth', label: 'Rare-earth separation (China) — contested', lng: 108, lat: 34, color: C_ROSE },
+        { dep: 'malaysia', label: 'Lynas separation (Malaysia · non-China)', lng: 103.3, lat: 3.8, color: C_OLIVE },
+        { dep: 'chips', label: 'AI chips (Taiwan · TSMC)', lng: 121, lat: 23.8, color: C_TEAL },
+        { dep: 'hardware', label: 'Servers & hardware (China)', lng: 114, lat: 22.5, color: C_UMBER },
       ];
       const nodeOf = (dep: string) => OFFSHORE_NODES.find((n) => n.dep === dep)!;
       // Rare-earth routing is per-mine, not a blanket "→ China". Lynas separates in
@@ -405,7 +504,7 @@ export default function Map() {
           })),
         },
       });
-      const depColor = ['match', ['get', 'dep'], 'rare_earth', '#ff4d6d', 'malaysia', '#ffd23f', 'chips', '#3fd1ff', 'hardware', '#ff9a3f', '#ff4d6d'] as unknown as mapboxgl.ExpressionSpecification;
+      const depColor = ['match', ['get', 'dep'], 'rare_earth', C_ROSE, 'malaysia', C_OLIVE, 'chips', C_TEAL, 'hardware', C_UMBER, C_ROSE] as unknown as mapboxgl.ExpressionSpecification;
       m.addLayer({
         id: 'supply-lines', type: 'line', source: 'supply-lines',
         layout: { visibility: 'none', 'line-cap': 'round' },
@@ -416,8 +515,8 @@ export default function Map() {
         filter: ['==', ['get', 'kind'], 'refinery'] as unknown as mapboxgl.FilterSpecification,
         layout: { visibility: 'none' },
         paint: {
-          'circle-radius': 15, 'circle-color': '#00e08a', 'circle-opacity': 0,
-          'circle-stroke-width': 2, 'circle-stroke-color': '#00e08a', 'circle-stroke-opacity': 0.9,
+          'circle-radius': 15, 'circle-color': C_GREEN, 'circle-opacity': 0,
+          'circle-stroke-width': 2, 'circle-stroke-color': C_GREEN, 'circle-stroke-opacity': 0.9,
         },
       });
       m.addLayer({
@@ -526,7 +625,10 @@ export default function Map() {
   useEffect(() => {
     const m = map.current;
     if (!m || !m.getLayer('sites-fasttracked')) return;
-    m.setLayoutProperty('sites-fasttracked', 'visibility', showFastTracked ? 'visible' : 'none');
+    // Both rings of the double-ring overlay toggle together.
+    for (const id of ['sites-fasttracked', 'sites-fasttracked-outer']) {
+      if (m.getLayer(id)) m.setLayoutProperty(id, 'visibility', showFastTracked ? 'visible' : 'none');
+    }
   }, [showFastTracked]);
 
   // Supply-chain mode: show/hide the offshore-dependency layers and zoom out to
@@ -660,7 +762,8 @@ export default function Map() {
           <div style={{ ...panel, maxWidth: 226, fontSize: 9.5, lineHeight: 1.6, color: '#9aa39b' }}>
             {showContested && (
               <div>
-                <span style={{ color: '#ff4d6d' }}>Contested</span> — active or emerging community opposition.
+                <RingGlyph rings={1} color={STATUS_INK} />
+                <span style={{ color: STATUS_INK }}>Contested</span> — active or emerging community opposition.
                 The level of contestation is tracked through the planning pathways: public-exhibition submissions
                 &amp; objections, council minutes and motions, merit appeals (Land &amp; Environment Court / VCAT),
                 parliamentary petitions, and media / FOI.
@@ -668,7 +771,8 @@ export default function Map() {
             )}
             {showFastTracked && (
               <div style={{ marginTop: showContested ? 6 : 0 }}>
-                <span style={{ color: '#ffd23f' }}>State fast-tracked</span> — not subject to normal public
+                <RingGlyph rings={2} color={STATUS_INK_SOFT} />
+                <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — not subject to normal public
                 consultation: assessed as State Significant Development, or approved without public exhibition
                 (e.g. via the NSW Investment Delivery Authority or ministerial call-in).
               </div>
@@ -728,10 +832,23 @@ export default function Map() {
               Who stands to benefit, over time, from each site&rsquo;s investment model. Low onshore ownership
               or productivity means the benefits flow offshore. A site can be several.
             </div>
-            <div><span style={{ color: '#00e08a' }}>Productive</span> — owned &amp; built by Australian interests.</div>
-            <div><span style={{ color: '#3fa9ff' }}>Operational</span> — run by an Australian public body.</div>
-            <div><span style={{ color: '#ffd23f' }}>Financial</span> — ≥30% public capital (sovereign-wealth, government or super*).</div>
-            <div><span style={{ color: '#ff4d6d' }}>Rented</span> — capacity rented to offshore hyperscalers.</div>
+            {/* The register ramp steps are sized for marks on a dark field (>=2:1),
+                which is below the 4.5:1 a coloured *word* needs. So the colour
+                rides a swatch and the text stays in readable ink. */}
+            {REGISTER_ORDER.filter((k) => k !== 'none').map((k) => (
+              <div key={k} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                <span
+                  aria-hidden
+                  style={{
+                    flex: '0 0 auto', width: 7, height: 7, borderRadius: '50%',
+                    background: REGISTER_COLORS[k], transform: 'translateY(1px)',
+                  }}
+                />
+                <span style={{ color: '#c8cfc4' }}>
+                  {REGISTER_EXPLAIN[k]}
+                </span>
+              </div>
+            ))}
             <div style={{ color: '#6b7568', marginTop: 4 }}>
               *super = pooled Australian retirement savings, counted as public here.
             </div>
@@ -754,6 +871,27 @@ const panel: React.CSSProperties = {
 };
 
 // A single segmented-control button, highlighted in CI purple when active.
+// Legend glyph mirroring how a status reads on the map: contested is one ring,
+// fast-tracked is two. Both statuses are neutral ink so they never impersonate a
+// lens colour, which makes ring count the thing that distinguishes them — so the
+// legend has to show the count, not just name the status.
+function RingGlyph({ rings, color }: { rings: 1 | 2; color: string }) {
+  const size = rings === 2 ? 13 : 9;
+  return (
+    <span
+      aria-hidden
+      style={{
+        display: 'inline-block', width: size, height: size, marginRight: 5,
+        borderRadius: '50%', border: `1.5px solid ${color}`,
+        boxShadow: rings === 2 ? `inset 0 0 0 1.5px transparent, 0 0 0 0 ${color}` : undefined,
+        outline: rings === 2 ? `1.5px solid ${color}` : undefined,
+        outlineOffset: rings === 2 ? 1.5 : undefined,
+        verticalAlign: 'middle', transform: 'translateY(-1px)',
+      }}
+    />
+  );
+}
+
 function tab(active: boolean): React.CSSProperties {
   return {
     background: active ? CI_PURPLE : 'transparent',
@@ -800,7 +938,7 @@ function lifecycleHtml(p: Record<string, string>): string {
       '<span style="font-size:12px;line-height:1.25;">' + s.flag + '</span>' +
       '<div style="flex:1;min-width:0;">' +
       '<span style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#6b7568;">' + s.label + '</span>' +
-      '<div style="font-size:10px;color:' + (s.hot ? '#ff4d6d' : '#c8cfc4') + ';line-height:1.3;">' + s.val + '</div>' +
+      '<div style="font-size:10px;color:' + (s.hot ? STAT_HOT : '#c8cfc4') + ';line-height:1.3;">' + s.val + '</div>' +
       '</div></div>' +
       (i < stages.length - 1 ? '<div style="height:9px;border-left:1px solid #333;margin-left:6px;"></div>' : ''),
     )
