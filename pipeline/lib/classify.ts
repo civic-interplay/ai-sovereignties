@@ -17,8 +17,8 @@ import { requireEnv, optionalEnv } from './env.ts';
 import type { Site } from './notion.ts';
 
 // Sonnet by default for framing nuance; override with CLASSIFIER_MODEL.
-// Haiku (claude-haiku-4-5-20251001) is the cheaper option for big batches.
-const MODEL = optionalEnv('CLASSIFIER_MODEL') ?? 'claude-sonnet-4-6';
+// Haiku (claude-haiku-4-5) is the cheaper option for big batches.
+const MODEL = optionalEnv('CLASSIFIER_MODEL') ?? 'claude-sonnet-5';
 
 export interface RawClassification {
   site_name: string | null;
@@ -88,7 +88,11 @@ export async function classify(text: string, sites: Site[]): Promise<RawClassifi
   const client = new Anthropic({ apiKey: requireEnv('ANTHROPIC_API_KEY') });
   const res = await client.messages.create({
     model: MODEL,
-    max_tokens: 1024,
+    max_tokens: 2048,
+    // Sonnet 5 runs adaptive thinking when this is omitted, and max_tokens caps
+    // thinking plus the tool call together. We want the whole budget on the
+    // structured output, so keep thinking off as it effectively was on 4.6.
+    thinking: { type: 'disabled' },
     system: systemPrompt(sites),
     tools: [TOOL],
     tool_choice: { type: 'tool', name: 'record_contestation' },
