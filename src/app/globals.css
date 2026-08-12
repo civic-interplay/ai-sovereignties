@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	/* The map is a full-bleed dark field in every theme, so the page plane matches
+	   it. Previously this was #ffffff in light mode, which showed as a white strip
+	   below the map whenever the column pushed the document taller than 100vh. */
+	--background: #0a0c0b;
+	--foreground: #ededed;
 }
 
 @theme inline {
@@ -12,11 +15,13 @@
 	--font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+
+
+html,
+body {
+	/* The viewport belongs to the map; the side column scrolls within itself. */
+	height: 100%;
+	overflow: hidden;
 }
 
 body {
