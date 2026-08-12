@@ -18,6 +18,44 @@ const CI_PURPLE = '#7D50BD';
 // CI periwinkle reads better than purple for a small link on the dark field.
 const CI_PERIWINKLE = '#8E9BDD';
 
+// --- Named map views, deep-linkable via ?view= -----------------------------
+// So a specific city view can be sent to someone (a council, a journalist) as a
+// URL that opens on that view rather than "zoom in and look at the west".
+// Zoom levels frame the metro footprint, not the CBD — the sites cluster in
+// outer industrial land (Truganina, Melton, Kemps Creek), so a tight CBD view
+// would miss most of them.
+type CityView = { label: string; center: [number, number]; zoom: number };
+const CITY_VIEWS: Record<string, CityView> = {
+  au: { label: 'Australia', center: [134.0, -25.0], zoom: 3.5 },
+  melbourne: { label: 'Melbourne', center: [144.87, -37.81], zoom: 8.9 },
+  sydney: { label: 'Sydney', center: [150.98, -33.83], zoom: 8.9 },
+  brisbane: { label: 'Brisbane', center: [153.02, -27.47], zoom: 9.0 },
+  perth: { label: 'Perth', center: [115.92, -31.95], zoom: 9.0 },
+  adelaide: { label: 'Adelaide', center: [138.60, -34.93], zoom: 9.2 },
+  canberra: { label: 'Canberra', center: [149.13, -35.28], zoom: 9.6 },
+};
+const DEFAULT_VIEW = 'au';
+
+// Every layer drawn from the `sites` source, with the filter that defines what
+// it draws. The stage filter is ANDed onto these rather than replacing them, so
+// an overlay never survives a filter that hid the site underneath it.
+const SITE_LAYER_FILTERS: Record<string, unknown[] | null> = {
+  'sites-pulse': null,
+  'sites-core': null,
+  'sites-contested': ['==', ['get', 'contested'], true],
+  'sites-fasttracked': ['==', ['get', 'fastTracked'], true],
+  'sites-fasttracked-outer': ['==', ['get', 'fastTracked'], true],
+  'sites-named-platform': ['==', ['get', 'namedPlatform'], true],
+};
+
+// Read the requested view from the URL. Unknown values fall back to the national
+// view rather than erroring, so a mistyped link still lands somewhere sensible.
+function viewFromUrl(): string {
+  if (typeof window === 'undefined') return DEFAULT_VIEW;
+  const v = new URLSearchParams(window.location.search).get('view');
+  return v && CITY_VIEWS[v] ? v : DEFAULT_VIEW;
+}
+
 // The public "publish to web" view of the Critical Infrastructure Tracker.
 const NOTION_DATA_URL =
   'https://studio-esem.notion.site/8b537010f4cb4aa6b6df470f9d0d40c9?v=c9d0347781ec4900967cfff4d18a25a6';
@@ -41,10 +79,11 @@ const NOTION_DATA_URL =
 //      ramp forces one pole to recede, which buried `productive` — the thesis's
 //      positive claim — at the dim end.
 //
-// Status (contested / fast-tracked) is RESERVED: it never takes a hue from any
-// of the three, because it overlays whichever lens is active and would otherwise
-// collide with the fills. Neutral ink; ring COUNT distinguishes the two
-// (contested one ring, fast-tracked two), since both are often on together.
+// OVERLAYS (contested / fast-tracked / named hyperscaler) are RESERVED: they
+// never take a hue from any of the three sets, because they sit on top of
+// whichever lens is active and would otherwise collide with its fills. Told
+// apart by geometry rather than colour, since they are often on together:
+// contested one ring, fast-tracked two rings, named hyperscaler a centre pip.
 //
 // Validated with the dataviz validator against this map's own surface
 // (#0a0c0b), all-pairs (a dot map is an all-pairs form — any two sites can sit
@@ -70,6 +109,12 @@ const C_NEUTRAL = '#6b7568';
 // carries which status; the legend names it. Never hue.
 const STATUS_INK = '#ffffff';
 const STATUS_INK_SOFT = '#9aa39b';
+// The named-hyperscaler pip. A lighter step of the CI purple: the brand purple
+// itself sat at 1.03:1 against the green Australian-owned fill, so the hairline
+// was doing all the work. This step lifts the worst case to 1.44:1 and the
+// median to 2.30:1 while still reading as purple. The dark hairline stays, and
+// is heavier, because on the low-contrast fills it is still the separator.
+const OVERLAY_PIP = '#c4a6f0';
 // Emphasis for a "hot" figure inside a popup (e.g. a stressed water reading).
 // Popup text only — never painted on the map, so it cannot collide with a lens
 // fill. Kept as a named token so it is not mistaken for a spare category hue.
@@ -174,13 +219,23 @@ const CAPITAL_LABELS: Record<string, string> = {
 const CAPITAL_ORDER = ['hyperscaler', 'infra_fund', 'pension', 'swf', 'listed', 'state', 'private', 'other'];
 
 // --- Water-risk lens: colour per water-risk key (the `waterRiskKey` from /api/sites) ---
-// ORDINAL — one hue (blue), stepped by lightness. On this near-black field
-// brightness reads as salience, so the brightest step is the stressed end.
-// `na`/`other` sit off the scale in neutral: they are not a low rung.
+// STATUS, not a neutral ramp. Water stress is severity, and severity has a
+// learned vocabulary: red means in trouble. A single-hue blue ramp was
+// internally consistent and said nothing — a bright blue "high" reads as more
+// water, not as a problem. Red is available precisely because the contested
+// overlay no longer uses it (status rings are neutral now), so the alarm
+// meaning is free again.
+//
+// Only 8 of 91 sites read `high`, which is the sparse-alarm shape red is good
+// at. Bright blue is the ideal state — closed-loop, drawing nothing potable.
+// Steps are the documented status scale (critical / warning) plus that blue;
+// they sit outside the categorical lightness band on purpose, so a status
+// colour can never be mistaken for a lens category.
+// Validated all-pairs on this surface: CVD ΔE 24.4, normal-vision ΔE 28.4.
 const WATER_COLORS: Record<string, string> = {
-  high: '#71c9fb',
-  medium: '#208dc1',
-  low: '#005477',
+  high: '#d03b3b',
+  medium: '#fab219',
+  low: '#4db8ff',
   na: C_NEUTRAL,
   other: C_NEUTRAL,
 };
@@ -188,7 +243,11 @@ const WATER_LABELS: Record<string, string> = {
   high: 'High — potable stressed',
   medium: 'Medium — some pressure',
   low: 'Low — closed-loop',
-  na: 'Not applicable',
+  // 42 of the 44 sites carrying this value are data centres, which always draw
+  // water — so this is "we haven't looked yet", not "doesn't apply". Labelling
+  // it "Not applicable" overstated the coverage: it read as an assessed
+  // negative when it is an absence of assessment.
+  na: 'Not yet assessed',
   other: 'Unknown',
 };
 const WATER_ORDER = ['high', 'medium', 'low', 'na'];
@@ -222,6 +281,13 @@ const ENERGY_ORDER = ['renewable_onsite', 'renewable_contracted', 'grid_mixed', 
 
 // --- Register lens: colour per sovereignty register (the `register` key from /api/sites) ---
 // Green = capability owned/built here, red = rented to offshore tenants. The thesis in colour.
+// NOT CURRENTLY SHOWN. The Type lens is hidden: `operational` has no sites,
+// `financial` has two, and `rented` — the one category carrying signal — is not
+// coded consistently against the tenant field, so the lens taught readers more
+// about the gaps than about the argument. The evidenced version of that claim is
+// now the Named hyperscaler overlay. Kept here, with the Notion field untouched,
+// so the lens can come back when coverage justifies it.
+//
 // DIVERGING — green = capability owned and built here, rose = capacity rented to
 // offshore tenants. The thesis in colour, with both poles bright because both
 // matter: productive is the argument's positive claim, not a low rung on a
@@ -243,15 +309,40 @@ const REGISTER_LABELS: Record<string, string> = {
   none: 'Not coded',
 };
 const REGISTER_ORDER = ['productive', 'operational', 'financial', 'rented', 'none'];
-// Longer gloss for the explainer panel, so the swatch carries the colour and the
-// sentence stays in readable ink.
-const REGISTER_EXPLAIN: Record<string, string> = {
-  productive: 'Productive — owned & built by Australian interests.',
-  operational: 'Operational — run by an Australian public body.',
-  financial: 'Financial — ≥30% public capital (sovereign-wealth, government or super*).',
-  rented: 'Rented — capacity rented to offshore hyperscalers.',
-  none: 'Not coded.',
+
+// --- Pipeline stage: where a site sits in its build lifecycle (`status`) ---
+// A FILTER, not a lens. Stage is orthogonal to every lens — you want to ask
+// "which foreign-owned sites are under construction", which means stage narrows
+// the set while the active lens still does the colouring. As a lens it would
+// have competed for the one channel the lenses already use.
+//
+// The ramp below now only tints the filter chips, so the control reads in the
+// same order as the pipeline: dim (earliest) to bright (operating).
+// Keys mirror the tracker's own `status` wording; `unknown` is the 15 sites with
+// no status recorded, held off the ramp in neutral so an absence never reads as
+// an early stage.
+const STAGE_COLORS: Record<string, string> = {
+  Exploration: '#015e28',
+  Feasibility: '#177739',
+  'Application lodged': '#398e51',
+  'Approved / permitted': '#55a769',
+  'Under Construction': '#70c082',
+  Producing: '#8bda9c',
+  unknown: C_NEUTRAL,
 };
+const STAGE_LABELS: Record<string, string> = {
+  Exploration: 'Exploration',
+  Feasibility: 'Feasibility',
+  'Application lodged': 'Application lodged',
+  'Approved / permitted': 'Approved / permitted',
+  'Under Construction': 'Under construction',
+  Producing: 'Operating',
+  unknown: 'Stage not recorded',
+};
+const STAGE_ORDER = [
+  'Exploration', 'Feasibility', 'Application lodged',
+  'Approved / permitted', 'Under Construction', 'Producing', 'unknown',
+];
 
 // --- Sovereign/super exposure lens: how much of a site is funded by Australian
 // sovereign-wealth / super-fund capital (the `superExposureKey` from /api/sites).
@@ -317,11 +408,22 @@ export default function Map() {
   const [energies, setEnergies] = useState<string[]>([]);
   const [regs, setRegs] = useState<string[]>([]);
   const [supers, setSupers] = useState<string[]>([]);
+  const [stages, setStages] = useState<string[]>([]);
+  // Stages currently included. Empty set means no filter (show everything),
+  // which is also the initial state — the map should open unfiltered.
+  const [stageFilter, setStageFilter] = useState<Set<string>>(new Set());
+  // Collapsed by default: seven chips is a lot of column for a control that is
+  // only reached for occasionally.
+  const [stageOpen, setStageOpen] = useState(false);
   // Highlight overlays: contested + state-fast-tracked sites (toggles).
   const [showContested, setShowContested] = useState(false);
   const [showFastTracked, setShowFastTracked] = useState(false);
   // Supply-chain mode: illustrative rare-earth flows to offshore separation.
   const [showSupplyChain, setShowSupplyChain] = useState(false);
+  // Sites where a platform company is actually named as a tenant.
+  const [showNamedPlatform, setShowNamedPlatform] = useState(false);
+  // Which named view is active, mirrored into ?view= so it can be shared.
+  const [view, setView] = useState<string>(DEFAULT_VIEW);
   // The Mapbox token may not be inlined at build time on this stack, so fetch it
   // at runtime from /api/config before initialising the map.
   const [tokenReady, setTokenReady] = useState<boolean>(!!mapboxgl.accessToken);
@@ -342,12 +444,21 @@ export default function Map() {
     if (!tokenReady) return;
     if (map.current || !mapContainer.current) return;
 
+    // Honour ?view= on first paint, so a shared link opens on its city rather
+    // than flying there after the national view has already rendered.
+    const initial = CITY_VIEWS[viewFromUrl()];
+
     const m = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/dark-v11',
-      center: [134.0, -25.0],
-      zoom: 3.5,
+      center: initial.center,
+      zoom: initial.zoom,
     });
+
+    // Zoom in/out and a compass. The map previously had no zoom affordance at
+    // all — scroll/pinch only, which is undiscoverable on a shared link and
+    // unusable when presenting from a trackpad.
+    m.addControl(new mapboxgl.NavigationControl({ visualizePitch: false }), 'top-right');
 
     m.on('load', async () => {
       // Pull the live GeoJSON from the Notion-backed API route.
@@ -359,6 +470,28 @@ export default function Map() {
         // Leave the map empty on failure rather than crashing.
       }
 
+      // Derive `namedPlatform`: does the tracker name an AI model or company as a
+      // user of this site? The `tenants` field lists things like "OpenAI (GPT)"
+      // and "Anthropic (Claude)" — who runs on the compute, not who leases floor
+      // space, which is why "user" is the accurate word rather than "tenant".
+      // "Multiple / colocation" and "Unknown" name nobody, and a government user
+      // is not a hyperscaler, so neither counts. Derived here rather than read
+      // from `register`, whose values do not track the tenant field consistently.
+      for (const feat of data.features ?? []) {
+        const raw = String((feat.properties as Record<string, unknown>)?.tenants ?? '');
+        const named = raw
+          .split(',')
+          .map((t) => t.trim())
+          .filter((t) => t && !/^(multiple\s*\/?\s*colocation|unknown|australian government)$/i.test(t));
+        (feat.properties as Record<string, unknown>).namedPlatform = named.length > 0;
+
+        // Stage key: the tracker's `status`, or an explicit `unknown` so sites
+        // with no recorded stage are visible as an absence rather than silently
+        // taking the match fallback.
+        const st = String((feat.properties as Record<string, unknown>)?.status ?? '').trim();
+        (feat.properties as Record<string, unknown>).stageKey = st in STAGE_COLORS ? st : 'unknown';
+      }
+
       // Drive each legend from the keys present in the data, in canonical order.
       const kindSet = new Set(data.features.map((f) => (f.properties?.kind as string) ?? 'other'));
       const sovSet = new Set(data.features.map((f) => (f.properties?.sovereignty as string) ?? 'other'));
@@ -368,6 +501,7 @@ export default function Map() {
       const energySet = new Set(data.features.map((f) => (f.properties?.energyKey as string) ?? 'unknown'));
       const registerSet = new Set(data.features.map((f) => (f.properties?.register as string) ?? 'none'));
       const superSet = new Set(data.features.map((f) => (f.properties?.exposureChannelKey as string) ?? 'none'));
+      const stageSet = new Set(data.features.map((f) => (f.properties?.stageKey as string) ?? 'unknown'));
       setKinds(KIND_ORDER.filter((k) => kindSet.has(k)));
       setSovs(SOV_ORDER.filter((k) => sovSet.has(k)));
       setCountries(COUNTRY_ORDER.filter((k) => countrySet.has(k)));
@@ -376,6 +510,7 @@ export default function Map() {
       setEnergies(ENERGY_ORDER.filter((k) => energySet.has(k)));
       setRegs(REGISTER_ORDER.filter((k) => registerSet.has(k)));
       setSupers(SUPER_ORDER.filter((k) => superSet.has(k)));
+      setStages(STAGE_ORDER.filter((k) => stageSet.has(k)));
 
       m.addSource('sites', { type: 'geojson', data });
 
@@ -455,6 +590,30 @@ export default function Map() {
           },
         });
       }
+
+      // Highlight overlay: a platform company is actually named as a tenant.
+      // Filtered on the derived `namedPlatform` flag rather than on `register`,
+      // because the register value did not follow the tenant data consistently —
+      // this marks only what the tracker can evidence.
+      //
+      // Drawn as a filled centre pip rather than another ring: contested and
+      // fast-tracked already use one and two rings, and a third would be
+      // unreadable. A pip is a different channel, so all three can be on at once.
+      m.addLayer({
+        id: 'sites-named-platform',
+        type: 'circle',
+        source: 'sites',
+        filter: ['==', ['get', 'namedPlatform'], true] as unknown as mapboxgl.FilterSpecification,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], capacity, 30, 3, 400, 6.5] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-color': OVERLAY_PIP,
+          'circle-opacity': 0.95,
+          'circle-stroke-width': 1.75,
+          'circle-stroke-color': '#0a0c0b',
+          'circle-stroke-opacity': 0.8,
+        },
+      });
 
       // --- Supply-chain mode (illustrative): where Australian AI compute's inputs sit ---
       // Australia mines the raw inputs and hosts the buildings, but the three things
@@ -631,6 +790,54 @@ export default function Map() {
     }
   }, [showFastTracked]);
 
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !m.getLayer('sites-named-platform')) return;
+    m.setLayoutProperty('sites-named-platform', 'visibility', showNamedPlatform ? 'visible' : 'none');
+  }, [showNamedPlatform]);
+
+  // Re-apply the stage filter to every site layer whenever the selection changes.
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !m.getLayer('sites-core')) return;
+    const keys = [...stageFilter];
+    for (const [id, base] of Object.entries(SITE_LAYER_FILTERS)) {
+      if (!m.getLayer(id)) continue;
+      const stageExpr = keys.length
+        ? ['in', ['get', 'stageKey'], ['literal', keys]]
+        : null;
+      const combined = stageExpr && base ? ['all', base, stageExpr] : (stageExpr ?? base);
+      m.setFilter(id, (combined ?? null) as unknown as mapboxgl.FilterSpecification);
+    }
+  }, [stageFilter]);
+
+  // Adopt the view named in the URL on mount, and keep the two in step when the
+  // reader uses the browser's back/forward buttons.
+  useEffect(() => {
+    setView(viewFromUrl());
+    const onPop = () => {
+      const key = viewFromUrl();
+      setView(key);
+      map.current?.flyTo({ ...CITY_VIEWS[key], duration: 900 });
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // Fly to a named view and write it into the URL, so the address bar is always
+  // a shareable link to whatever is on screen. pushState (not replaceState) so
+  // Back returns to the previous view — useful when presenting.
+  function goToView(key: string) {
+    const v = CITY_VIEWS[key];
+    if (!v) return;
+    setView(key);
+    map.current?.flyTo({ center: v.center, zoom: v.zoom, duration: 900 });
+    const url = new URL(window.location.href);
+    if (key === DEFAULT_VIEW) url.searchParams.delete('view');
+    else url.searchParams.set('view', key);
+    window.history.pushState({ view: key }, '', url);
+  }
+
   // Supply-chain mode: show/hide the offshore-dependency layers and zoom out to
   // frame Australia + the offshore node together.
   useEffect(() => {
@@ -674,15 +881,26 @@ export default function Map() {
           flexDirection: 'column',
           gap: 12,
           alignItems: 'flex-start',
+          // The column grew past the viewport once it carried a masthead, city
+          // jumps, eight lenses, three overlays and a legend — so it scrolls
+          // within the screen rather than running off the bottom. Wheel events
+          // over the column never reach the map canvas, so this does not fight
+          // scroll-zoom.
+          maxHeight: 'calc(100vh - 32px)',
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          paddingRight: 6,
+          scrollbarWidth: 'thin',
+          scrollbarColor: '#3f4744 transparent',
         }}
       >
-        {/* Current scope. The Australia view of a map meant to grow global and networked. */}
+        {/* Masthead. Names what the map covers and links out to the source data. */}
         <div style={panel}>
           <div style={{ fontSize: 15, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-            Australia
+            Australian Data Centres
           </div>
-          <div style={{ fontSize: 10, color: '#6b7568', marginTop: 4, maxWidth: 190, lineHeight: 1.5 }}>
-            One region of a networked map in progress. More coming.
+          <div style={{ fontSize: 10, color: INK_MUTED, marginTop: 4, maxWidth: 200, lineHeight: 1.5 }}>
+            Monitoring data centre investments as a super cycle urban transition.
           </div>
           <a
             href={NOTION_DATA_URL}
@@ -715,8 +933,35 @@ export default function Map() {
               textDecoration: 'none',
             }}
           >
-            ← Civic Interplay
+            Learn more ↗
           </a>
+        </div>
+
+        {/* Jump to a city. Each button writes ?view= into the address bar, so the
+            URL on screen is always a link that reopens exactly this view — the
+            thing you need when sending a council their own patch. */}
+        <div style={{ ...panel, padding: 4, maxWidth: 232 }}>
+          <div
+            style={{
+              fontSize: 8, letterSpacing: '0.15em', textTransform: 'uppercase',
+              color: INK_MUTED, padding: '2px 6px 4px',
+            }}
+          >
+            Jump to
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+            {Object.entries(CITY_VIEWS).map(([key, v]) => (
+              <button
+                key={key}
+                type="button"
+                style={tab(view === key)}
+                onClick={() => goToView(key)}
+                aria-pressed={view === key}
+              >
+                {v.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Lens toggle: colour the map by infrastructure layer, or by who owns it. */}
@@ -739,26 +984,28 @@ export default function Map() {
           <button type="button" style={tab(lens === 'energy')} onClick={() => setLens('energy')}>
             Energy
           </button>
-          <button type="button" style={tab(lens === 'register')} onClick={() => setLens('register')}>
-            Type
-          </button>
           <button type="button" style={tab(lens === 'super')} onClick={() => setLens('super')}>
             Super $
           </button>
         </div>
 
-        {/* Highlight overlays: surface the state-vs-local conflict. */}
-        <div style={{ ...panel, padding: 4, display: 'flex', gap: 4 }}>
+        {/* Highlight overlays: surface the state-vs-local conflict. Wraps within
+            the same 232px column as the other panels — a third toggle overflowed
+            the row and pushed this panel wider than the rest of the chrome. */}
+        <div style={{ ...panel, padding: 4, display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 232 }}>
           <button type="button" style={tab(showContested)} onClick={() => setShowContested((v) => !v)}>
             Contested
           </button>
           <button type="button" style={tab(showFastTracked)} onClick={() => setShowFastTracked((v) => !v)}>
             State fast-tracked
           </button>
+          <button type="button" style={tab(showNamedPlatform)} onClick={() => setShowNamedPlatform((v) => !v)}>
+            Named hyperscaler
+          </button>
         </div>
 
         {/* Explainer for the two overlays — what "contested" and "fast-tracked" mean. */}
-        {(showContested || showFastTracked) && (
+        {(showContested || showFastTracked || showNamedPlatform) && (
           <div style={{ ...panel, maxWidth: 226, fontSize: 9.5, lineHeight: 1.6, color: '#9aa39b' }}>
             {showContested && (
               <div>
@@ -769,8 +1016,23 @@ export default function Map() {
                 parliamentary petitions, and media / FOI.
               </div>
             )}
-            {showFastTracked && (
+            {showNamedPlatform && (
               <div style={{ marginTop: showContested ? 6 : 0 }}>
+                <span
+                  aria-hidden
+                  style={{
+                    display: 'inline-block', width: 6, height: 6, marginRight: 5,
+                    borderRadius: '50%', background: OVERLAY_PIP,
+                    border: '1px solid rgba(10,12,11,0.55)', verticalAlign: 'middle',
+                    transform: 'translateY(-1px)',
+                  }}
+                />
+                <span style={{ color: OVERLAY_PIP }}>Named hyperscaler</span> — AI model or company is
+                named as a user.
+              </div>
+            )}
+            {showFastTracked && (
+              <div style={{ marginTop: (showContested || showNamedPlatform) ? 6 : 0 }}>
                 <RingGlyph rings={2} color={STATUS_INK_SOFT} />
                 <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — not subject to normal public
                 consultation: assessed as State Significant Development, or approved without public exhibition
@@ -786,11 +1048,74 @@ export default function Map() {
             Supply chain
           </button>
           {showSupplyChain && (
-            <div style={{ fontSize: 9, color: '#6b7568', lineHeight: 1.5, padding: '2px 6px' }}>
-              Illustrative: chips (Taiwan) and hardware (China) are offshore for every data centre. Rare earths
-              are more sovereign — Lynas separates in Malaysia (non-China), Browns Range is the contested China
-              link, Iluka Eneabba / ANSTO process onshore (green rings).
+            <div style={{ fontSize: 9, color: INK_MUTED, lineHeight: 1.5, padding: '2px 6px' }}>
+              Illustrative flows from each site to where its inputs are made or processed. Green rings mark
+              onshore processing.
             </div>
+          )}
+        </div>
+
+        {/* Pipeline stage filter. Narrows which sites are drawn; the active lens
+            still colours them, so stage can be read against ownership, water,
+            energy or any other lens rather than replacing one. */}
+        <div style={{ ...panel, padding: 4, display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 232 }}>
+          <button
+            type="button"
+            aria-expanded={stageOpen}
+            onClick={() => setStageOpen((v) => !v)}
+            style={{ ...tab(stageFilter.size > 0), display: 'flex', alignItems: 'center', gap: 6 }}
+          >
+            <span>Stage{stageFilter.size > 0 ? ` · ${stageFilter.size}` : ''}</span>
+            <span aria-hidden style={{ fontSize: 8, opacity: 0.8 }}>{stageOpen ? '▲' : '▼'}</span>
+          </button>
+          {stageOpen && (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, padding: '2px 2px 4px' }}>
+            {stages.map((k) => {
+              const on = stageFilter.has(k);
+              return (
+                <button
+                  key={k}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() =>
+                    setStageFilter((prev) => {
+                      const next = new Set(prev);
+                      if (next.has(k)) next.delete(k);
+                      else next.add(k);
+                      return next;
+                    })
+                  }
+                  style={{
+                    ...tab(on),
+                    display: 'flex', alignItems: 'center', gap: 5,
+                    letterSpacing: '0.06em',
+                  }}
+                >
+                  <span
+                    aria-hidden
+                    style={{
+                      width: 6, height: 6, borderRadius: '50%',
+                      background: STAGE_COLORS[k], flex: '0 0 auto',
+                    }}
+                  />
+                  {STAGE_LABELS[k]}
+                </button>
+              );
+            })}
+            {stageFilter.size > 0 && (
+              <button
+                type="button"
+                onClick={() => setStageFilter(new Set())}
+                style={{
+                  background: 'none', border: 'none', padding: '5px 8px', cursor: 'pointer',
+                  fontFamily: CI_FONT, fontSize: 9, letterSpacing: '0.1em',
+                  textTransform: 'uppercase', color: CI_PERIWINKLE,
+                }}
+              >
+                Clear
+              </button>
+            )}
+          </div>
           )}
         </div>
 
@@ -801,7 +1126,7 @@ export default function Map() {
                 fontSize: 10,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#6b7568',
+                color: INK_MUTED,
                 marginBottom: 8,
               }}
             >
@@ -825,44 +1150,23 @@ export default function Map() {
           </div>
         )}
 
-        {/* Sovereignty-type explainer: why the lens exists + what each register means. */}
-        {lens === 'register' && (
-          <div style={{ ...panel, maxWidth: 226, fontSize: 9.5, lineHeight: 1.6, color: '#9aa39b' }}>
-            <div style={{ color: '#c8cfc4', marginBottom: 5 }}>
-              Who stands to benefit, over time, from each site&rsquo;s investment model. Low onshore ownership
-              or productivity means the benefits flow offshore. A site can be several.
-            </div>
-            {/* The register ramp steps are sized for marks on a dark field (>=2:1),
-                which is below the 4.5:1 a coloured *word* needs. So the colour
-                rides a swatch and the text stays in readable ink. */}
-            {REGISTER_ORDER.filter((k) => k !== 'none').map((k) => (
-              <div key={k} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-                <span
-                  aria-hidden
-                  style={{
-                    flex: '0 0 auto', width: 7, height: 7, borderRadius: '50%',
-                    background: REGISTER_COLORS[k], transform: 'translateY(1px)',
-                  }}
-                />
-                <span style={{ color: '#c8cfc4' }}>
-                  {REGISTER_EXPLAIN[k]}
-                </span>
-              </div>
-            ))}
-            <div style={{ color: '#6b7568', marginTop: 4 }}>
-              *super = pooled Australian retirement savings, counted as public here.
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
 }
 
 // Shared panel chrome for the overlay blocks.
+// Muted ink for secondary copy inside the chrome. Lifted with the panel so it
+// keeps roughly the same relationship to the background.
+const INK_MUTED = '#8a938c';
+
 const panel: React.CSSProperties = {
-  background: '#0a0c0b',
-  border: '1px solid #333',
+  // A step lighter than the map field so the column reads as chrome sitting
+  // over the map rather than a hole cut in it. Held at #121618: the next step
+  // up drops the dimmest ordinal swatch (renewable on-site) below the 2:1
+  // floor it needs against its own background.
+  background: '#121618',
+  border: '1px solid #3f4744',
   borderRadius: 12,
   padding: '10px 14px',
   fontFamily: CI_FONT,
