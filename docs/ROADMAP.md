@@ -6,8 +6,13 @@ populated over time. Living document — edit freely.
 ## Where things stand (built)
 
 - **Map — attribute-lens node map.** One set of nodes from the Notion tracker,
-  recoloured by lens: Layer · Ownership · Country · Capital · Water · Type.
-  Ownership depth (Country + Capital lenses + ownership-chain popup) added.
+  recoloured by lens: Layer · Ownership · Country · Capital · Water · Energy ·
+  Super $. Ownership depth (Country + Capital lenses + ownership-chain popup)
+  added. Colour is split by job — categorical for identity, ordinal ramps for
+  one-directional scales, diverging pairs where both poles matter, and a reserved
+  channel for overlays (see the COLOUR SYSTEM block at the top of `Map.tsx`).
+  Also: zoom controls, `?view=` city deep links, and a Stage filter that narrows
+  the set while the active lens keeps colouring.
 - **Pipeline.** Fortnightly GDELT retrieval hardened (retry); planning-portals
   multi-feed wired but inert until a NSW ePlanning API key is obtained.
 
@@ -91,13 +96,19 @@ media-sourced contestation items.
   "Rethinking Water and Data Centre Growth in Melbourne", Concerned Waterways
   Alliance, PIA "Planning for Data Centres".
 
-## Glossary — what the map's two flags mean
+## Glossary — what the map's overlays mean
 
 These need explaining *on the map* (an info tooltip by the toggles), because they
 are jargon — and together they name the core tension: the state's **acceleration**
 pathway vs the community's **contestation** pathway.
 
-### "State fast-tracked" (amber ring)
+The overlays are drawn in neutral ink and told apart by geometry, not colour:
+contested one ring, fast-tracked two, named hyperscaler a centre pip. They sit on
+top of whichever lens is active, so a hue here would collide with the fills —
+which is exactly what went wrong when contested was red and fast-tracked amber
+while several lenses used those same hues for categories.
+
+### "State fast-tracked" (double neutral ring)
 
 A development lifted out of normal local-council assessment onto an accelerated
 **state** pathway, where a minister or state department is the decision-maker
@@ -115,7 +126,7 @@ instead of the council. In practice:
 *Data source:* `Governance Flags` = "Ministerial fast-track" or "NSW State
 Significant Development".
 
-### "Contested" / the contestation pathway (red ring)
+### "Contested" / the contestation pathway (single neutral ring)
 
 "Contested" marks sites with active or emerging community opposition. The
 **contestation pathway** is the set of channels through which a project is opposed
@@ -129,7 +140,17 @@ or scrutinised:
 *Data source:* `Community Concern` = "Active Opposition" or "Emerging Concern".
 The automated pipeline's job is to surface items travelling these pathways.
 
-### "Sovereignty type" — the register (Type lens)
+### "Sovereignty type" — the register (Type lens — currently hidden)
+
+> **Hidden as of 2026-08-13.** `operational` has no sites, `financial` has two,
+> `productive` five, and 55% of rows are uncoded — but the deciding problem is
+> that `rented`, the one category carrying signal, is not coded consistently
+> against the `tenants` field: 24 of its 34 sites name only "Multiple /
+> colocation", while 40 non-rented sites name tenants including explicit
+> hyperscalers. The evidenced version of the claim is now the **Named
+> hyperscaler** overlay, derived from `tenants` directly (12 sites). The Notion
+> field and the map constants are retained; restore the lens once the register
+> coding follows the tenant data. The framework below still stands.
 
 The Type lens colours each site by its **sovereignty register**: *how much Australia
 actually owns, versus merely hosts*. This is the project's own framework — the
@@ -175,6 +196,37 @@ has several: Productive > Operational > Financial > Locational.
   State fast-tracked toggles.
 
 ## Next session (priority order)
+
+0a. **Shape encoding on the categorical lenses — accessibility, ships blocking a
+   wider audience.** Layer / Ownership / Country / Capital currently carry
+   identity in colour alone. Measured against the map's own surface (`#0a0c0b`)
+   on the all-pairs pairlist — a dot map is an all-pairs form, since any two
+   sites can sit side by side — the seven-slot palette clears normal vision at
+   ΔE 17.0 but sits at **CVD ΔE 6.4**, inside the band that is legal *only*
+   alongside a second encoding channel. That channel is not built, so those four
+   lenses are hard for red-green colourblind readers. (Water, Energy, Super and
+   the three overlays are unaffected: ramps and geometry carry those.)
+
+   The fix: move the core node from a Mapbox `circle` layer to a `symbol` layer
+   with generated SDF icons, so `icon-color` stays data-driven and shape rides
+   alongside hue. Shape carries roughly 4–5 distinguishable values at map scale.
+   Worth considering at the same time: pointing shape at a *second lens* rather
+   than duplicating the colour lens, so colour and shape can answer two questions
+   at once (e.g. colour by ownership, shape by water risk).
+
+0b. **Scoped approvals timeline.** Scrub bar along the bottom of the index.
+   Blocked on framing, not on build: `approvalDate` covers **10 of 91** sites and
+   `announcementDate` **27**, union **29 (32%)** — and the union is *biased*, not
+   merely thin. 18 of the 29 dated sites are 2026, and of the 38 operating sites
+   only 3 carry a date. A plain time axis would therefore draw a curve showing
+   nothing before 2025 and an explosion in 2026, which is the history of when
+   tracking started, not the history of the industry.
+
+   Build it scoped, or not at all: label it as approvals and announcements
+   *recorded since tracking began*, show a persistent "29 of 91 dated" count, and
+   draw undated sites in neutral rather than hiding them. The 2026 wave is a real
+   story; it just cannot be presented as history. Revisit an unscoped version at
+   roughly 60–70% date coverage. Pairs naturally with the Stage filter.
 
 1. **Load the rest of the super-exposure seed list** (item 6) — attach the
    AustralianSuper/Aware/ART/IFM findings to sites; add IFM as a "conduit" note.
