@@ -21,31 +21,31 @@ const firaSans = Fira_Sans({
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://datacentres.civicinterplay.io"),
-	title: "AI Sovereignties",
+	title: "Australian Data Centres",
 	description:
-		"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
+		"Monitoring data centre investments as a super cycle urban transition.",
 	openGraph: {
-		title: "AI Sovereignties",
+		title: "Australian Data Centres",
 		description:
-			"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
+			"Monitoring data centre investments as a super cycle urban transition.",
 		url: "https://datacentres.civicinterplay.io",
 		siteName: "Civic Interplay",
 		type: "website",
 		images: [
 			{
-				url: "https://civicinterplay.io/images/og-sovereignties.png",
+				url: "/og.png",
 				width: 1200,
 				height: 630,
-				alt: "AI Sovereignties: a live map of Australia's AI infrastructure",
+				alt: "Australian Data Centres: monitoring data centre investments as a super cycle urban transition",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "AI Sovereignties",
+		title: "Australian Data Centres",
 		description:
-			"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
-		images: ["https://civicinterplay.io/images/og-sovereignties.png"],
+			"Monitoring data centre investments as a super cycle urban transition.",
+		images: ["/og.png"],
 	},
 };
 
