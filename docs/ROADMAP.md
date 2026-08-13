@@ -13,8 +13,71 @@ populated over time. Living document — edit freely.
   channel for overlays (see the COLOUR SYSTEM block at the top of `Map.tsx`).
   Also: zoom controls, `?view=` city deep links, and a Stage filter that narrows
   the set while the active lens keeps colouring.
+- **Chrome — collapsible section rail.** Jump to city · Investment model ·
+  Resource use · Planning priority · Development status · Infrastructure type ·
+  Global supply chain. One section open at a time, controls popping out beside
+  the rail; legends and overlay definitions live inside the owning pop-out. A
+  "Selected" panel lists what is currently on, since a collapsed rail cannot show
+  its own state. Under 700px the stack collapses behind one button and pop-outs
+  stack underneath — a phone has no room for a 206px rail plus a 248px pop-out.
+- **Overlays that co-exist.** Contested (red, one ring), state fast-tracked
+  (white, two rings), named hyperscaler (purple centre pip), and operating vs
+  in-pipeline drawn solid vs hollow. All four can be on at once with any lens,
+  because each owns a channel other than fill.
+- **Accessibility.** Every chrome text pair passes WCAG 2.1 AA. The map itself
+  does not yet — see 0a.
 - **Pipeline.** Fortnightly GDELT retrieval hardened (retry); planning-portals
   multi-feed wired but inert until a NSW ePlanning API key is obtained.
+
+## Operations
+
+- **Publish:** `npm run deploy` (OpenNext build + Cloudflare). No PR step; this
+  is a solo repo, and the commit messages carry the reasoning.
+- **Domains:** `datacentres.civicinterplay.io` is canonical;
+  `sovereignties.civicinterplay.io` is still routed to the same worker so links
+  already shared do not break. Both are declared in `wrangler.jsonc`, and
+  Wrangler provisions DNS and certs — nothing to do in the Cloudflare dashboard.
+- **After a deploy that changes the share card or page metadata:** Cloudflare
+  caches the HTML (`s-maxage`), so purge via dashboard → Caching → Configuration
+  → Purge Everything if you are about to share a link. Separately, LinkedIn,
+  Facebook and X cache OG data on their own servers — re-scrape in each
+  platform's post inspector or the old card persists.
+- **Share card:** generated into `public/og.png`, referenced relatively so it
+  follows `metadataBase`. No dependency on the Astro repo.
+
+## Data-integrity caveats (what the tracker will and will not support)
+
+Written down because each of these has already produced a claim the data could
+not carry. Check before repeating any of them in front of a council.
+
+- **`na` water risk means "not yet assessed", not "not applicable"** — 42 of the
+  44 rows carrying it are data centres, which always draw water. So "no
+  potable-stressed sites in Melbourne" is only true of the *assessed* ones, and
+  31 of Melbourne's 57 are unassessed.
+- **`register` is not coded consistently against `tenants`.** 24 of the 34
+  `rented` sites name only "Multiple / colocation", while 40 non-rented sites
+  name tenants including explicit hyperscalers (Microsoft MEL07, AWS Cobblebank).
+  The Type lens is hidden for this reason; the evidenced claim is the Named
+  hyperscaler overlay (12 sites), derived from `tenants` directly.
+- **Dates are thin *and* biased.** 32% coverage, 18 of 29 dated sites are 2026,
+  and only 3 of the 38 operating sites carry any date. Operating-vs-pipeline
+  (from `status`, 84% coverage) is the cut that holds; "before/after ChatGPT"
+  is not, since some operating sites came online in 2024–25.
+- **Three sites have `announcementDate` and `approvalDate` set identically** —
+  a data-entry artefact that makes the announcement→approval gap unusable as a
+  duration proxy. Worth fixing.
+
+## Small open items (from the 2026-08-13 session)
+
+- **Infrastructure type lens does almost no work at metro zoom** — 85 of 91 sites
+  are data centres, and the mines and refineries are all in WA/NT. Consider
+  restricting it to the national view, or dropping it.
+- **`BASEMAP_LIFT`** in `Map.tsx` is a single dial (currently 0.34) lightening the
+  basemap's roads and labels. The near-black field is deliberately untouched:
+  every dot colour and both ordinal ramps were validated against `#0a0c0b`, so
+  lightening the field would invalidate them.
+- **OG card is set in Helvetica, not Fira** — `sharp` renders SVG through the
+  system font stack. Embedding the font file would fix it.
 
 ## Visualisations needed (the "multiple")
 
