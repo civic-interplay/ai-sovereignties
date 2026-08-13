@@ -435,6 +435,9 @@ export default function Map() {
   const [stageOpen, setStageOpen] = useState(false);
   // One section open at a time; null means the rail is fully collapsed.
   const [openSection, setOpenSection] = useState<string | null>(null);
+  // Phone only: the control stack collapses so the map is what you see first.
+  // On desktop CSS keeps the stack visible regardless of this flag.
+  const [chromeOpen, setChromeOpen] = useState(false);
   // Props for one rail row: open state plus whether the section currently holds
   // the active lens or a live toggle, so a collapsed rail still shows where the
   // map's state lives.
@@ -1044,6 +1047,7 @@ export default function Map() {
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
 
       <div
+        className="ci-column"
         style={{
           position: 'absolute',
           top: 16,
@@ -1109,6 +1113,33 @@ export default function Map() {
           </a>
         </div>
 
+        <button
+          type="button"
+          className="ci-menu-btn"
+          aria-expanded={chromeOpen}
+          onClick={() => setChromeOpen((v) => !v)}
+          style={{
+            ...panel,
+            padding: '10px 12px',
+            width: '100%',
+            cursor: 'pointer',
+            alignItems: 'center',
+            gap: 8,
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: '#e6ebe6',
+            borderColor: chromeOpen ? CI_PURPLE : '#3f4744',
+          }}
+        >
+          <span aria-hidden style={{ fontSize: 13, lineHeight: 1 }}>{chromeOpen ? '\u2715' : '\u2261'}</span>
+          <span style={{ flex: 1, textAlign: 'left' }}>{chromeOpen ? 'Close' : 'Lenses & filters'}</span>
+        </button>
+
+        <div
+          className="ci-controls"
+          data-open={chromeOpen ? 'true' : 'false'}
+        >
         <Section title="Jump to city" {...sectionProps('city', view !== DEFAULT_VIEW)}>
           {Object.entries(CITY_VIEWS).map(([key, v]) => (
             <button
@@ -1267,6 +1298,8 @@ export default function Map() {
           )}
         </Section>
 
+        </div>
+
         {/* What is currently on. The rail collapses to stay short, which means
               the controls no longer show their own state — so this says it
               instead, with the same mark each thing wears on the map. It sits at
@@ -1313,7 +1346,16 @@ export default function Map() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5, color: INK_MUTED }}>
               <span aria-hidden style={{ width: 9, textAlign: 'center', flex: '0 0 auto' }}>▣</span>
               <span>
-                {[...stageFilter].map((k) => STAGE_LABELS[k] ?? k).join(', ')}
+                {(() => {
+                  // Name the coarse selection rather than spelling out its five
+                  // stages, which wrapped to three lines on a phone.
+                  const sel = [...stageFilter];
+                  const same = (set: readonly string[]) =>
+                    sel.length === set.length && set.every((k) => stageFilter.has(k));
+                  if (same(HERE_STAGES)) return 'Operating';
+                  if (same(COMING_STAGES)) return 'In pipeline';
+                  return sel.map((k) => STAGE_LABELS[k] ?? k).join(', ');
+                })()}
               </span>
             </div>
           )}
@@ -1446,16 +1488,15 @@ function Section({
   footer?: React.ReactNode;
 }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+    <div className="ci-section-row">
       <button
         type="button"
         aria-expanded={open}
         onClick={onToggle}
+        className="ci-rail-btn"
         style={{
           ...panel,
           padding: '8px 10px',
-          width: 206,
-          flex: '0 0 auto',
           textAlign: 'left',
           cursor: 'pointer',
           display: 'flex',
@@ -1480,7 +1521,10 @@ function Section({
         <span aria-hidden style={{ fontSize: 8, opacity: 0.7 }}>{open ? '\u2039' : '\u203a'}</span>
       </button>
       {open && (
-        <div style={{ ...panel, padding: 4, maxWidth: 248, display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+        <div
+          className="ci-popout"
+          style={{ ...panel, padding: 4, display: 'flex', flexWrap: 'wrap', gap: 5 }}
+        >
           {children}
           {footer}
         </div>

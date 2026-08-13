@@ -29,3 +29,70 @@ body {
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+/* --- Map chrome: responsive behaviour ------------------------------------
+   The chrome's look lives in inline styles on the component; breakpoints
+   cannot, so they live here. On a phone the control column was ~70% of the
+   viewport width and full height, leaving almost no map: the rail is a fixed
+   206px and its pop-outs open to the right, which there is no room for. On
+   narrow screens the rail goes full width, pop-outs stack underneath, and the
+   whole control stack collapses behind a button so the map is what you see
+   first. */
+
+.ci-column {
+	max-width: calc(100vw - 32px);
+}
+
+/* Layout lives here, not inline: an inline display would outrank the media
+   query below and the stack could never collapse. */
+.ci-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.ci-section-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.ci-rail-btn {
+	width: 206px;
+	flex: 0 0 auto;
+}
+
+.ci-popout {
+	max-width: 248px;
+}
+
+/* Desktop always shows the controls; the toggle is a phone affordance. */
+.ci-menu-btn {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	.ci-menu-btn {
+		display: flex;
+	}
+
+	.ci-controls[data-open='false'] {
+		display: none;
+	}
+
+	.ci-section-row {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.ci-rail-btn {
+		width: 100%;
+	}
+
+	.ci-popout {
+		max-width: none;
+		width: 100%;
+	}
+}
