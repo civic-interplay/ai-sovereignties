@@ -214,7 +214,30 @@ has several: Productive > Operational > Financial > Locational.
    than duplicating the colour lens, so colour and shape can answer two questions
    at once (e.g. colour by ownership, shape by water risk).
 
-0b. **Scoped approvals timeline.** Scrub bar along the bottom of the index.
+0b-i. **Add `Application lodged date` to the Notion tracker.** The one field that
+   unlocks approval *duration*, which is the interstate-competition story (the
+   claim in circulation is VIC ~3 months vs NSW ~18). Duration is lodgement →
+   determination; the tracker holds only `announcementDate` and `approvalDate`,
+   so it cannot currently be computed. The announcement→approval gap is a poor
+   proxy: only 8 sites carry both, 3 of those have the two dates set identically
+   (a data-entry artefact, worth fixing), and of the 5 real pairs 4 are Victoria
+   and 1 is NSW — no state average is possible from that.
+
+   Once populated, two things become available that nothing else in the tracker
+   does: duration crossed with the existing `fastTracked` flag ("fast-tracked
+   sites determine in X months, normal pathway in Y") — a directly evidenced
+   claim about the acceleration pathway rather than an assertion — and duration
+   by state once each has enough rows to average honestly. Neither needs a
+   scrubber; duration is a number per site, so it can ride the popup, drive a
+   lens, or sit in a small stat panel.
+
+   Until then, treat the 3mo/18mo figures as sourced context, not as something
+   the map computes. Worth confirming whether that quote is a published system
+   average or was drawn from individual cases — two rows here sit at 3.7 (a
+   Truganina application) and 18.4 months (CDC Marsden Park), which is close
+   enough to be the origin of it.
+
+0b-ii. **Scoped approvals timeline.** Scrub bar along the bottom of the index.
    Blocked on framing, not on build: `approvalDate` covers **10 of 91** sites and
    `announcementDate` **27**, union **29 (32%)** — and the union is *biased*, not
    merely thin. 18 of the 29 dated sites are 2026, and of the 38 operating sites
