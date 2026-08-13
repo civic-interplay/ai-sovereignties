@@ -105,10 +105,16 @@ const C_UMBER = '#8d5108';
 // category or as a rung on a scale.
 const C_NEUTRAL = '#6b7568';
 
-// Status ink — reserved, never a category. Ring geometry (radius + width)
-// carries which status; the legend names it. Never hue.
-const STATUS_INK = '#ffffff';
-const STATUS_INK_SOFT = '#9aa39b';
+// Overlay ink — reserved, never a lens category.
+// Contested is red because red means contested and nothing else on this map
+// should claim it. Chosen at ΔE 9.3 from the water-high red, 10.4 from the rose
+// categorical slot and 10.0 from energy-fossil, so it does not read as any of
+// them; 5.5:1 on the field. Fast-tracked is white.
+// Both keep their ring geometry (contested one ring, fast-tracked two) on top of
+// the colour difference — redundant encoding, so the pair survives colourblind
+// vision and a red-on-red fill alike.
+const STATUS_CONTESTED = '#ff3b30';
+const STATUS_INK_SOFT = '#ffffff';
 // The named-hyperscaler pip. A lighter step of the CI purple: the brand purple
 // itself sat at 1.03:1 against the green Australian-owned fill, so the hairline
 // was doing all the work. This step lifts the worst case to 1.44:1 and the
@@ -339,6 +345,18 @@ const STAGE_LABELS: Record<string, string> = {
   Producing: 'Operating',
   unknown: 'Stage not recorded',
 };
+// The headline cut: what is operating versus what is still in the planning and
+// build pipeline. Named after what `status` literally records — "here" and
+// "coming" read as before/after the AI boom, which the data does not support
+// (only 3 of the 38 operating sites carry any date at all). Both lists derive
+// from the same field the Stage filter uses, so the coarse and fine controls
+// stay in step rather than being two sources of truth.
+const HERE_STAGES = ['Producing'];
+const COMING_STAGES = [
+  'Under Construction', 'Approved / permitted', 'Application lodged',
+  'Feasibility', 'Exploration',
+];
+
 const STAGE_ORDER = [
   'Exploration', 'Feasibility', 'Application lodged',
   'Approved / permitted', 'Under Construction', 'Producing', 'unknown',
@@ -415,6 +433,16 @@ export default function Map() {
   // Collapsed by default: seven chips is a lot of column for a control that is
   // only reached for occasionally.
   const [stageOpen, setStageOpen] = useState(false);
+  // One section open at a time; null means the rail is fully collapsed.
+  const [openSection, setOpenSection] = useState<string | null>(null);
+  // Props for one rail row: open state plus whether the section currently holds
+  // the active lens or a live toggle, so a collapsed rail still shows where the
+  // map's state lives.
+  const sectionProps = (id: string, active: boolean) => ({
+    open: openSection === id,
+    active,
+    onToggle: () => setOpenSection((cur) => (cur === id ? null : id)),
+  });
   // Highlight overlays: contested + state-fast-tracked sites (toggles).
   const [showContested, setShowContested] = useState(false);
   const [showFastTracked, setShowFastTracked] = useState(false);
@@ -460,7 +488,48 @@ export default function Map() {
     // unusable when presenting from a trackpad.
     m.addControl(new mapboxgl.NavigationControl({ visualizePitch: false }), 'top-right');
 
+    // Lift the basemap's geography without lifting its field. Roads, coastline
+    // and place labels in dark-v11 are heavily muted, which reads as murky when
+    // someone is trying to find their own suburb — but the near-black field is
+    // load-bearing: every dot colour and both ordinal ramps were validated
+    // against #0a0c0b, so brightening the background would invalidate them.
+    // This lightens line and label layers only. BASEMAP_LIFT is the one dial:
+    // 0 = untouched, 1 = white. Our own layers are skipped by id.
+    const BASEMAP_LIFT = 0.34;
+    const lighten = (hex: string, amount: number) => {
+      const m2 = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
+      if (!m2) return null;
+      const n = parseInt(m2[1], 16);
+      const mix = (c: number) => Math.round(c + (255 - c) * amount);
+      return `#${[(n >> 16) & 255, (n >> 8) & 255, n & 255]
+        .map((c) => mix(c).toString(16).padStart(2, '0'))
+        .join('')}`;
+    };
+    const liftBasemap = () => {
+      for (const layer of m.getStyle()?.layers ?? []) {
+        if (layer.id.startsWith('sites-') || layer.id.startsWith('supply-')) continue;
+        const props = layer.type === 'line' ? ['line-color']
+          : layer.type === 'symbol' ? ['text-color']
+          : [];
+        // Mapbox types these per-layer-type; we are walking layers generically,
+        // so the property name is only known at runtime.
+        const getPaint = m.getPaintProperty.bind(m) as (id: string, name: string) => unknown;
+        const setPaint = m.setPaintProperty.bind(m) as (id: string, name: string, value: unknown) => void;
+        for (const prop of props) {
+          try {
+            const cur = getPaint(layer.id, prop);
+            if (typeof cur !== 'string') continue;
+            const next = lighten(cur, BASEMAP_LIFT);
+            if (next) setPaint(layer.id, prop, next);
+          } catch {
+            // Layer does not carry this property — skip it rather than bail.
+          }
+        }
+      }
+    };
+
     m.on('load', async () => {
+      liftBasemap();
       // Pull the live GeoJSON from the Notion-backed API route.
       let data: GeoJSON.FeatureCollection = EMPTY;
       try {
@@ -532,7 +601,14 @@ export default function Map() {
         },
       });
 
-      // Inner glow node
+      // Inner node. Operating sites are solid; sites still in the planning and
+      // build pipeline are drawn hollow — a ring in the lens colour with an
+      // almost-empty middle. That way both are on screen at once and the
+      // difference is legible without spending the colour channel, which the
+      // active lens already owns. Sites with no recorded stage sit between the
+      // two, dimmed, so an absence never passes as either.
+      const isOperating = ['==', ['get', 'stageKey'], 'Producing'];
+      const isPipeline = ['in', ['get', 'stageKey'], ['literal', COMING_STAGES]];
       m.addLayer({
         id: 'sites-core',
         type: 'circle',
@@ -540,8 +616,12 @@ export default function Map() {
         paint: {
           'circle-radius': ['interpolate', ['linear'], capacity, 30, 8, 400, 20] as unknown as mapboxgl.ExpressionSpecification,
           'circle-color': color,
-          'circle-opacity': 0.9,
-          'circle-blur': 0.3,
+          'circle-opacity': ['case', isOperating, 0.9, isPipeline, 0.12, 0.4] as unknown as mapboxgl.ExpressionSpecification,
+          // A sharp edge reads as "outline"; the glow is what makes a dot look solid.
+          'circle-blur': ['case', isPipeline, 0, 0.3] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-stroke-width': ['case', isPipeline, 2, 0] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-stroke-color': color,
+          'circle-stroke-opacity': 0.95,
         },
       });
 
@@ -559,7 +639,7 @@ export default function Map() {
           'circle-radius': ['interpolate', ['linear'], capacity, 30, 16, 400, 44] as unknown as mapboxgl.ExpressionSpecification,
           'circle-opacity': 0,
           'circle-stroke-width': 2.5,
-          'circle-stroke-color': STATUS_INK,
+          'circle-stroke-color': STATUS_CONTESTED,
           'circle-stroke-opacity': 0.95,
         },
       });
@@ -867,6 +947,98 @@ export default function Map() {
   }[lens];
   const { items, colors, labels, title: legendTitle } = legend;
 
+  // Which rail section set the lens that is currently colouring the map.
+  const LENS_SECTION: Record<string, string> = {
+    kind: 'infra',
+    sovereignty: 'invest', country: 'invest', capital: 'invest', super: 'invest',
+    water: 'resource', energy: 'resource',
+  };
+  const legendOwner = LENS_SECTION[lens];
+  // Overlay definitions. These live in their section's pop-out, not the rail —
+  // a definition floating under a collapsed section reads as loose commentary,
+  // and it was rendering whenever the toggle was on regardless of the section.
+  const defBlock = (children: React.ReactNode) => (
+    <div style={{ width: '100%', borderTop: '1px solid #2a302e', marginTop: 4, paddingTop: 6,
+                  padding: '7px 6px 3px', fontSize: 11, lineHeight: 1.65, color: INK_MUTED }}>
+      {children}
+    </div>
+  );
+  const contestedDef = showContested ? defBlock(
+    <>
+      <RingGlyph rings={1} color={STATUS_CONTESTED} />
+      <span style={{ color: STATUS_CONTESTED }}>Contested</span> — active or emerging community opposition,
+      tracked through the planning pathways: public-exhibition submissions and objections, council
+      minutes and motions, merit appeals, parliamentary petitions, and media or FOI.
+    </>,
+  ) : null;
+  const fastTrackedDef = showFastTracked ? defBlock(
+    <>
+      <RingGlyph rings={2} color={STATUS_INK_SOFT} />
+      <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — not subject to normal public
+      consultation: assessed as State Significant Development, or approved without public exhibition.
+    </>,
+  ) : null;
+  const namedDef = showNamedPlatform ? defBlock(
+    <>
+      <span
+        aria-hidden
+        style={{
+          display: 'inline-block', width: 6, height: 6, marginRight: 5, borderRadius: '50%',
+          background: OVERLAY_PIP, border: '1px solid rgba(10,12,11,0.55)',
+          verticalAlign: 'middle', transform: 'translateY(-1px)',
+        }}
+      />
+      <span style={{ color: OVERLAY_PIP }}>Named hyperscaler</span> — AI model or company is named as a user.
+    </>,
+  ) : null;
+
+  const statusDef = defBlock(
+    <>
+      <span
+        aria-hidden
+        style={{
+          display: 'inline-block', width: 8, height: 8, marginRight: 5, borderRadius: '50%',
+          background: '#c8cfc4', verticalAlign: 'middle', transform: 'translateY(-1px)',
+        }}
+      />
+      <span style={{ color: '#c8cfc4' }}>Solid</span> — operating.{' '}
+      <span
+        aria-hidden
+        style={{
+          display: 'inline-block', width: 8, height: 8, marginLeft: 4, marginRight: 5,
+          borderRadius: '50%', border: '2px solid #c8cfc4', verticalAlign: 'middle',
+          transform: 'translateY(-1px)',
+        }}
+      />
+      <span style={{ color: '#c8cfc4' }}>Hollow</span> — in the planning or build pipeline. Both are
+      drawn at once; the buttons above narrow to one.
+    </>,
+  );
+
+  const legendNode = items.length ? (
+    <div style={{ width: '100%', borderTop: '1px solid #2a302e', marginTop: 4, paddingTop: 6 }}>
+      <div
+        style={{
+          fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase',
+          color: INK_MUTED, marginBottom: 6, padding: '0 6px',
+        }}
+      >
+        {legendTitle}
+      </div>
+      {items.map((k) => (
+        <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1.9, padding: '0 6px' }}>
+          <span
+            style={{
+              width: 9, height: 9, borderRadius: '50%', flexShrink: 0,
+              background: colors[k], boxShadow: `0 0 6px ${colors[k]}`,
+            }}
+          />
+          <span style={{ fontSize: 11.5 }}>{labels[k]}</span>
+        </div>
+      ))}
+    </div>
+  ) : null;
+
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
@@ -899,7 +1071,7 @@ export default function Map() {
           <div style={{ fontSize: 15, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
             Australian Data Centres
           </div>
-          <div style={{ fontSize: 10, color: INK_MUTED, marginTop: 4, maxWidth: 200, lineHeight: 1.5 }}>
+          <div style={{ fontSize: 11.5, color: INK_MUTED, marginTop: 5, maxWidth: 210, lineHeight: 1.55 }}>
             Monitoring data centre investments as a super cycle urban transition.
           </div>
           <a
@@ -937,38 +1109,24 @@ export default function Map() {
           </a>
         </div>
 
-        {/* Jump to a city. Each button writes ?view= into the address bar, so the
-            URL on screen is always a link that reopens exactly this view — the
-            thing you need when sending a council their own patch. */}
-        <div style={{ ...panel, padding: 4, maxWidth: 232 }}>
-          <div
-            style={{
-              fontSize: 8, letterSpacing: '0.15em', textTransform: 'uppercase',
-              color: INK_MUTED, padding: '2px 6px 4px',
-            }}
-          >
-            Jump to
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
-            {Object.entries(CITY_VIEWS).map(([key, v]) => (
-              <button
-                key={key}
-                type="button"
-                style={tab(view === key)}
-                onClick={() => goToView(key)}
-                aria-pressed={view === key}
-              >
-                {v.label}
-              </button>
-            ))}
-          </div>
-        </div>
+        <Section title="Jump to city" {...sectionProps('city', view !== DEFAULT_VIEW)}>
+          {Object.entries(CITY_VIEWS).map(([key, v]) => (
+            <button
+              key={key}
+              type="button"
+              style={tab(view === key)}
+              onClick={() => goToView(key)}
+              aria-pressed={view === key}
+            >
+              {v.label}
+            </button>
+          ))}
+        </Section>
 
-        {/* Lens toggle: colour the map by infrastructure layer, or by who owns it. */}
-        <div style={{ ...panel, padding: 4, display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 232 }}>
-          <button type="button" style={tab(lens === 'kind')} onClick={() => setLens('kind')}>
-            Layer
-          </button>
+        {/* Lenses recolour the map (one at a time); the overlay toggles sit on
+            top of whichever lens is active. Both live here because they answer
+            the same question — who owns and funds this. */}
+        <Section title="Investment model" {...sectionProps('invest', ['sovereignty', 'country', 'capital', 'super'].includes(lens) || showNamedPlatform)} footer={<>{legendOwner === 'invest' ? legendNode : null}{namedDef}</>}>
           <button type="button" style={tab(lens === 'sovereignty')} onClick={() => setLens('sovereignty')}>
             Ownership
           </button>
@@ -978,148 +1136,222 @@ export default function Map() {
           <button type="button" style={tab(lens === 'capital')} onClick={() => setLens('capital')}>
             Capital
           </button>
+          <button type="button" style={tab(lens === 'super')} onClick={() => setLens('super')}>
+            Super $
+          </button>
+          <button
+            type="button"
+            style={tab(showNamedPlatform)}
+            aria-pressed={showNamedPlatform}
+            onClick={() => setShowNamedPlatform((v) => !v)}
+          >
+            Named hyperscaler
+          </button>
+        </Section>
+
+        <Section title="Resource use" {...sectionProps('resource', ['water', 'energy'].includes(lens))} footer={legendOwner === 'resource' ? legendNode : null}>
           <button type="button" style={tab(lens === 'water')} onClick={() => setLens('water')}>
             Water
           </button>
           <button type="button" style={tab(lens === 'energy')} onClick={() => setLens('energy')}>
             Energy
           </button>
-          <button type="button" style={tab(lens === 'super')} onClick={() => setLens('super')}>
-            Super $
-          </button>
-        </div>
+        </Section>
 
-        {/* Highlight overlays: surface the state-vs-local conflict. Wraps within
-            the same 232px column as the other panels — a third toggle overflowed
-            the row and pushed this panel wider than the rest of the chrome. */}
-        <div style={{ ...panel, padding: 4, display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 232 }}>
-          <button type="button" style={tab(showContested)} onClick={() => setShowContested((v) => !v)}>
+        <Section title="Planning priority" {...sectionProps('planning', showContested || showFastTracked)} footer={<>{contestedDef}{fastTrackedDef}</>}>
+          <button
+            type="button"
+            style={tab(showContested)}
+            aria-pressed={showContested}
+            onClick={() => setShowContested((v) => !v)}
+          >
             Contested
           </button>
-          <button type="button" style={tab(showFastTracked)} onClick={() => setShowFastTracked((v) => !v)}>
+          <button
+            type="button"
+            style={tab(showFastTracked)}
+            aria-pressed={showFastTracked}
+            onClick={() => setShowFastTracked((v) => !v)}
+          >
             State fast-tracked
           </button>
-          <button type="button" style={tab(showNamedPlatform)} onClick={() => setShowNamedPlatform((v) => !v)}>
-            Named hyperscaler
-          </button>
-        </div>
+        </Section>
 
-        {/* Explainer for the two overlays — what "contested" and "fast-tracked" mean. */}
-        {(showContested || showFastTracked || showNamedPlatform) && (
-          <div style={{ ...panel, maxWidth: 226, fontSize: 9.5, lineHeight: 1.6, color: '#9aa39b' }}>
-            {showContested && (
-              <div>
-                <RingGlyph rings={1} color={STATUS_INK} />
-                <span style={{ color: STATUS_INK }}>Contested</span> — active or emerging community opposition.
-                The level of contestation is tracked through the planning pathways: public-exhibition submissions
-                &amp; objections, council minutes and motions, merit appeals (Land &amp; Environment Court / VCAT),
-                parliamentary petitions, and media / FOI.
-              </div>
-            )}
-            {showNamedPlatform && (
-              <div style={{ marginTop: showContested ? 6 : 0 }}>
-                <span
-                  aria-hidden
-                  style={{
-                    display: 'inline-block', width: 6, height: 6, marginRight: 5,
-                    borderRadius: '50%', background: OVERLAY_PIP,
-                    border: '1px solid rgba(10,12,11,0.55)', verticalAlign: 'middle',
-                    transform: 'translateY(-1px)',
-                  }}
-                />
-                <span style={{ color: OVERLAY_PIP }}>Named hyperscaler</span> — AI model or company is
-                named as a user.
-              </div>
-            )}
-            {showFastTracked && (
-              <div style={{ marginTop: (showContested || showNamedPlatform) ? 6 : 0 }}>
-                <RingGlyph rings={2} color={STATUS_INK_SOFT} />
-                <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — not subject to normal public
-                consultation: assessed as State Significant Development, or approved without public exhibition
-                (e.g. via the NSW Investment Delivery Authority or ministerial call-in).
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Supply-chain mode: illustrative rare-earth flows to offshore separation. */}
-        <div style={{ ...panel, padding: 4, display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 232 }}>
-          <button type="button" style={tab(showSupplyChain)} onClick={() => setShowSupplyChain((v) => !v)}>
-            Supply chain
-          </button>
-          {showSupplyChain && (
-            <div style={{ fontSize: 9, color: INK_MUTED, lineHeight: 1.5, padding: '2px 6px' }}>
-              Illustrative flows from each site to where its inputs are made or processed. Green rings mark
-              onshore processing.
-            </div>
-          )}
-        </div>
-
-        {/* Pipeline stage filter. Narrows which sites are drawn; the active lens
-            still colours them, so stage can be read against ownership, water,
-            energy or any other lens rather than replacing one. */}
-        <div style={{ ...panel, padding: 4, display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 232 }}>
+        {/* The coarse cut. Mutually exclusive by construction: selecting one
+            replaces the filter, so "Not recorded" can never be held alongside
+            Operating or In pipeline. */}
+        <Section title="Development status" {...sectionProps('status', stageFilter.size > 0)} footer={statusDef}>
+          {([
+            ['Operating', HERE_STAGES],
+            ['In pipeline', COMING_STAGES],
+            ['Not recorded', ['unknown']],
+          ] as const).map(([label, keys]) => {
+            const present = keys.filter((k) => stages.includes(k));
+            if (!present.length) return null;
+            const on = present.length === stageFilter.size
+              && present.every((k) => stageFilter.has(k));
+            return (
+              <button
+                key={label}
+                type="button"
+                aria-pressed={on}
+                onClick={() => setStageFilter(on ? new Set() : new Set(present))}
+                style={{ ...tab(on), letterSpacing: '0.06em' }}
+              >
+                {label}
+              </button>
+            );
+          })}
           <button
             type="button"
             aria-expanded={stageOpen}
             onClick={() => setStageOpen((v) => !v)}
-            style={{ ...tab(stageFilter.size > 0), display: 'flex', alignItems: 'center', gap: 6 }}
+            style={{ ...tab(false), color: CI_PERIWINKLE, letterSpacing: '0.06em' }}
           >
-            <span>Stage{stageFilter.size > 0 ? ` · ${stageFilter.size}` : ''}</span>
-            <span aria-hidden style={{ fontSize: 8, opacity: 0.8 }}>{stageOpen ? '▲' : '▼'}</span>
+            {stageOpen ? 'Less' : 'By stage'}
           </button>
           {stageOpen && (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, padding: '2px 2px 4px' }}>
-            {stages.map((k) => {
-              const on = stageFilter.has(k);
-              return (
-                <button
-                  key={k}
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() =>
-                    setStageFilter((prev) => {
-                      const next = new Set(prev);
-                      if (next.has(k)) next.delete(k);
-                      else next.add(k);
-                      return next;
-                    })
-                  }
-                  style={{
-                    ...tab(on),
-                    display: 'flex', alignItems: 'center', gap: 5,
-                    letterSpacing: '0.06em',
-                  }}
-                >
-                  <span
-                    aria-hidden
-                    style={{
-                      width: 6, height: 6, borderRadius: '50%',
-                      background: STAGE_COLORS[k], flex: '0 0 auto',
-                    }}
-                  />
-                  {STAGE_LABELS[k]}
-                </button>
-              );
-            })}
-            {stageFilter.size > 0 && (
-              <button
-                type="button"
-                onClick={() => setStageFilter(new Set())}
-                style={{
-                  background: 'none', border: 'none', padding: '5px 8px', cursor: 'pointer',
-                  fontFamily: CI_FONT, fontSize: 9, letterSpacing: '0.1em',
-                  textTransform: 'uppercase', color: CI_PERIWINKLE,
-                }}
-              >
-                Clear
-              </button>
-            )}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, width: '100%', paddingTop: 2 }}>
+              {stages.map((k) => {
+                const on = stageFilter.has(k);
+                return (
+                  <button
+                    key={k}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() =>
+                      setStageFilter((prev) => {
+                        const next = new Set(prev);
+                        if (next.has(k)) next.delete(k);
+                        else next.add(k);
+                        return next;
+                      })
+                    }
+                    style={{ ...tab(on), display: 'flex', alignItems: 'center', gap: 5, letterSpacing: '0.06em' }}
+                  >
+                    <span
+                      aria-hidden
+                      style={{ width: 6, height: 6, borderRadius: '50%', background: STAGE_COLORS[k], flex: '0 0 auto' }}
+                    />
+                    {STAGE_LABELS[k]}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </Section>
+
+        {/* Layer asks "what kind of thing is this" — sited next to the supply
+            chain, where the mines and refineries it distinguishes are the ones
+            that matter. */}
+        <Section title="Infrastructure type" {...sectionProps('infra', lens === 'kind')} footer={legendOwner === 'infra' ? legendNode : null}>
+          <button type="button" style={tab(lens === 'kind')} onClick={() => setLens('kind')}>
+            Layer
+          </button>
+        </Section>
+
+        <Section title="Global supply chain" {...sectionProps('supply', showSupplyChain)}>
+          <button
+            type="button"
+            style={tab(showSupplyChain)}
+            aria-pressed={showSupplyChain}
+            onClick={() => setShowSupplyChain((v) => !v)}
+          >
+            Supply chain
+          </button>
+          {showSupplyChain && (
+            <div style={{ fontSize: 11, color: INK_MUTED, lineHeight: 1.6, padding: '5px 6px 3px', width: '100%' }}>
+              Illustrative flows from each site to where its inputs are made or processed. Green rings mark
+              onshore processing.
+            </div>
+          )}
+        </Section>
+
+        {/* What is currently on. The rail collapses to stay short, which means
+              the controls no longer show their own state — so this says it
+              instead, with the same mark each thing wears on the map. It sits at
+              the foot of the column rather than pinned bottom-left, where Mapbox's
+              own logo and compass sat on top of it and a tall list ran off screen. */}
+        <div
+          style={{
+            ...panel,
+            padding: '8px 12px',
+            maxWidth: 232,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 5,
+          }}
+        >
+          <div
+            style={{
+              fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase',
+              color: INK_MUTED, marginBottom: 1,
+            }}
+          >
+            Selected
           </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
+            <span
+              aria-hidden
+              style={{
+                width: 9, height: 9, borderRadius: '50%', flex: '0 0 auto',
+                background: items.length ? colors[items[0]] : C_NEUTRAL,
+              }}
+            />
+            <span>Colour: {legendTitle}</span>
+          </div>
+
+          {view !== DEFAULT_VIEW && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5, color: INK_MUTED }}>
+              <span aria-hidden style={{ width: 9, textAlign: 'center', flex: '0 0 auto' }}>◎</span>
+              <span>{CITY_VIEWS[view].label}</span>
+            </div>
+          )}
+
+          {stageFilter.size > 0 && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5, color: INK_MUTED }}>
+              <span aria-hidden style={{ width: 9, textAlign: 'center', flex: '0 0 auto' }}>▣</span>
+              <span>
+                {[...stageFilter].map((k) => STAGE_LABELS[k] ?? k).join(', ')}
+              </span>
+            </div>
+          )}
+
+          {showContested && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
+              <RingGlyph rings={1} color={STATUS_CONTESTED} />
+              <span>Contested</span>
+            </div>
+          )}
+          {showFastTracked && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
+              <RingGlyph rings={2} color={STATUS_INK_SOFT} />
+              <span>State fast-tracked</span>
+            </div>
+          )}
+          {showNamedPlatform && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
+              <span
+                aria-hidden
+                style={{
+                  width: 9, height: 9, borderRadius: '50%', flex: '0 0 auto',
+                  background: OVERLAY_PIP, border: '1px solid rgba(10,12,11,0.55)',
+                }}
+              />
+              <span>Named hyperscaler</span>
+            </div>
+          )}
+          {showSupplyChain && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5, color: INK_MUTED }}>
+              <span aria-hidden style={{ width: 9, textAlign: 'center', flex: '0 0 auto' }}>↗</span>
+              <span>Supply chain</span>
+            </div>
           )}
         </div>
 
-        {items.length > 0 && (
+        {/* legend now lives inside the owning section's pop-out (see legendNode) */}
+        {false && (
           <div style={{ ...panel, minWidth: 140 }}>
             <div
               style={{
@@ -1151,6 +1383,7 @@ export default function Map() {
         )}
 
       </div>
+
     </div>
   );
 }
@@ -1196,17 +1429,80 @@ function RingGlyph({ rings, color }: { rings: 1 | 2; color: string }) {
   );
 }
 
+// A row in the control column: the section name on the rail, and — when open —
+// its controls popped out to the right, anchored to that row. Collapsed by
+// default so the column stays short; the rail carries an active dot so you can
+// see which section holds the current lens or a live toggle without opening it.
+function Section({
+  title, open, active, onToggle, children, footer,
+}: {
+  title: string;
+  open: boolean;
+  active: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+  // The legend for whichever lens this section owns. It belongs beside the
+  // control that set it — stranded at the bottom of the column the eye skips it.
+  footer?: React.ReactNode;
+}) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={onToggle}
+        style={{
+          ...panel,
+          padding: '8px 10px',
+          width: 206,
+          flex: '0 0 auto',
+          textAlign: 'left',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 7,
+          fontSize: 12,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: open ? '#e6ebe6' : INK_MUTED,
+          borderColor: open ? CI_PURPLE : '#3f4744',
+        }}
+      >
+        <span
+          aria-hidden
+          style={{
+            width: 5, height: 5, borderRadius: '50%', flex: '0 0 auto',
+            background: active ? CI_PURPLE : 'transparent',
+            border: active ? 'none' : '1px solid #3f4744',
+          }}
+        />
+        <span style={{ flex: 1 }}>{title}</span>
+        <span aria-hidden style={{ fontSize: 8, opacity: 0.7 }}>{open ? '\u2039' : '\u203a'}</span>
+      </button>
+      {open && (
+        <div style={{ ...panel, padding: 4, maxWidth: 248, display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+          {children}
+          {footer}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function tab(active: boolean): React.CSSProperties {
   return {
     background: active ? CI_PURPLE : 'transparent',
     border: 'none',
     borderRadius: 8,
-    color: active ? '#fff' : '#6b7568',
+    // #6b7568 measured 3.79:1 on the panel — below the 4.5:1 AA floor for normal
+    // text, and it was the most common text in the chrome. #9aa39b is 7.01:1 and
+    // still reads as unselected next to the white-on-purple active state.
+    color: active ? '#fff' : '#9aa39b',
     fontFamily: CI_FONT,
-    fontSize: 10,
-    letterSpacing: '0.12em',
+    fontSize: 12,
+    letterSpacing: '0.08em',
     textTransform: 'uppercase',
-    padding: '5px 10px',
+    padding: '8px 12px',
     cursor: 'pointer',
   };
 }
