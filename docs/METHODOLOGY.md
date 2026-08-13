@@ -9,7 +9,7 @@ verification protocol is in [FACT-CHECKING-GUIDE.md](FACT-CHECKING-GUIDE.md).*
 A living atlas of the physical infrastructure behind AI in Australia — data
 centres, mines, refineries, energy and water dependencies — with each site's
 ownership chain, approval pathway, and the public contestation forming around
-it. The map at [sovereignties.civicinterplay.io](https://sovereignties.civicinterplay.io)
+it. The map at [datacentres.civicinterplay.io](https://datacentres.civicinterplay.io)
 renders a Notion-held tracker; every map point is a tracker row with
 coordinates, and every row carries its sources.
 

@@ -5,7 +5,7 @@
 A map of Australia's critical AI infrastructure (rare-earth mines, refineries,
 data centres, energy & policy signals), rendered with Mapbox.
 
-Live at https://sovereignties.civicinterplay.io
+Live at https://datacentres.civicinterplay.io
 
 ## Live data from Notion
 

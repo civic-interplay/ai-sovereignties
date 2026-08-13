@@ -20,7 +20,7 @@ const firaSans = Fira_Sans({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://sovereignties.civicinterplay.io"),
+	metadataBase: new URL("https://datacentres.civicinterplay.io"),
 	title: "AI Sovereignties",
 	description:
 		"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 		title: "AI Sovereignties",
 		description:
 			"A live map of the infrastructure behind AI in Australia, and the debate forming around it.",
-		url: "https://sovereignties.civicinterplay.io",
+		url: "https://datacentres.civicinterplay.io",
 		siteName: "Civic Interplay",
 		type: "website",
 		images: [

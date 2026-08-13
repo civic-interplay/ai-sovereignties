@@ -12,6 +12,14 @@
 	"main": ".open-next/worker.js",
 	"routes": [
 		{
+			// Canonical from 2026-08-13.
+			"pattern": "datacentres.civicinterplay.io",
+			"custom_domain": true
+		},
+		{
+			// Kept alive so links already shared (README, methodology doc, OG
+			// metadata, anything sent to a council) do not break. Safe to drop
+			// once those have been updated and the traffic has moved.
 			"pattern": "sovereignties.civicinterplay.io",
 			"custom_domain": true
 		}
