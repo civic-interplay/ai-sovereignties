@@ -165,6 +165,19 @@ export default async function SheetsIndex() {
       </Panel>
 
       <Footnote>
+        For scale:{' '}
+        <a
+          href="https://www.abc.net.au/news/2026-06-07/data-centre-boom-will-australia-benefit/106764460"
+          style={{ color: CI_PERIWINKLE }}
+        >
+          ABC reporting (June 2026) ↗
+        </a>{' '}
+        puts Australia at about 162 existing data centres, mostly clustered near urban NSW and Victoria, with at
+        least 90 more — perhaps double that — in the wings, many far larger than today&rsquo;s. This tracker
+        covers the build-out wave and its planning record, not the full historical inventory.
+      </Footnote>
+
+      <Footnote>
         Source: Critical Infrastructure Tracker (Notion), queried live at page load. Rows and coding are
         continuously revised; figures on this sheet may differ from earlier captures. Cite this project:{' '}
         <a href="https://doi.org/10.5281/zenodo.21026430" style={{ color: CI_PERIWINKLE }}>
