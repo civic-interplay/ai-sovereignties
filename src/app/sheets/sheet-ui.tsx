@@ -22,7 +22,10 @@ export function SheetShell({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        minHeight: '100vh',
+        // html/body are overflow:hidden for the map (see globals.css), so the
+        // sheet provides its own scroll context.
+        height: '100dvh',
+        overflowY: 'auto',
         background: FIELD,
         color: INK,
         fontFamily: 'var(--font-fira), system-ui, sans-serif',
