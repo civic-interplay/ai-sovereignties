@@ -87,11 +87,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   return (
     <SheetShell>
       <SheetNav current="sheets" />
-      <SheetTitle
-        kicker="Australian Data Centres · state sheet"
-        title={stateName}
-        sub={`${dc.length} data-centre sites tracked, ${subset.length} in the analysis subset. Statistics below are computed on the subset; the table lists every tracked site.`}
-      />
+      <SheetTitle kicker="Australian Data Centres · state sheet" title={stateName} />
 
       <Panel style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
         <Stat value={`${subset.length}`} label="Subset sites" note={`${dc.length - subset.length} legacy colo excluded`} />

@@ -30,11 +30,7 @@ export default function Glossary() {
   return (
     <SheetShell>
       <SheetNav current="glossary" />
-      <SheetTitle
-        kicker="Australian Data Centres · methods"
-        title="Glossary & coding rules"
-        sub="Every category below states how it is actually coded in the tracker — the operational rule, not the concept. Where a threshold exists, it is stated. The same rules drive the map colours and the data-sheet statistics."
-      />
+      <SheetTitle kicker="Australian Data Centres · methods" title="Glossary & coding rules" />
 
       <SectionHead>Scope & inclusion</SectionHead>
       <Panel>
