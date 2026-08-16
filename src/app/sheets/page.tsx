@@ -65,8 +65,19 @@ export default async function SheetsIndex() {
       <SheetNav current="sheets" />
       <SheetTitle
         kicker="Australian Data Centres · summary sheets"
-        title="The build-out in numbers"
-        sub="Live figures from the Critical Infrastructure Tracker."
+        title="Summary Data"
+        sub={
+          <>
+            Live figures from the{' '}
+            <a
+              href="https://studio-esem.notion.site/8b537010f4cb4aa6b6df470f9d0d40c9?v=c9d0347781ec4900967cfff4d18a25a6"
+              style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}
+            >
+              Critical Infrastructure Tracker ↗
+            </a>
+            .
+          </>
+        }
       />
       <Updated date={lastUpdated(dc)} style={{ margin: '-16px 0 20px' }} />
 

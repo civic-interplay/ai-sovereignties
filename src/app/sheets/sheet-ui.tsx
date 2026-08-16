@@ -67,7 +67,7 @@ export function SheetNav({ current }: { current: string }) {
   );
 }
 
-export function SheetTitle({ kicker, title, sub }: { kicker: string; title: string; sub?: string }) {
+export function SheetTitle({ kicker, title, sub }: { kicker: string; title: string; sub?: React.ReactNode }) {
   return (
     <header style={{ marginBottom: 28 }}>
       <div style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: DIM }}>{kicker}</div>
