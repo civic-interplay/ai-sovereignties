@@ -216,7 +216,17 @@ async function main() {
       const a = await assess(client, c.title, c.sourceUrl);
       if (!a.is_new_australian_dc_project || !a.project_name) continue;
       // Re-check the model's proposed name against known sites and this run.
-      if (resolveSite(`${a.project_name} ${a.operator} ${a.location}`, sites).site) continue;
+      const rechecked = resolveSite(`${a.project_name} ${a.operator} ${a.location}`, sites);
+      if (rechecked.site) continue;
+      // A non-decisive partial match is still a duplicate risk (lesson: the
+      // NEXTDC S5 headline scored low against "NEXTDC S5 — City of Ryde"
+      // because it lacked the S5/Ryde tokens). Surface candidates for review.
+      const nearMatches = rechecked.candidates
+        .filter((cand) => cand.score >= 0.2)
+        .map((cand) => `${cand.site.name} (${cand.score.toFixed(2)})`);
+      const dupWarning = nearMatches.length
+        ? ` POSSIBLE DUPLICATE of existing row(s): ${nearMatches.join('; ')} — check before promoting.`
+        : '';
       if (proposals.some((p) => resolveSite(a.project_name, [{ id: '', name: p.title.replace(/^\[PROPOSED\]\s*/, ''), operator: '', state: null, infraType: null }]).site)) continue;
       proposals.push({
         title: `[PROPOSED] ${a.project_name}${a.location && !a.project_name.includes(a.location) ? ` — ${a.location}` : ''}`,
@@ -227,7 +237,7 @@ async function main() {
           `Discovered by the pipeline from press coverage (headline only — verify against primary sources).`,
           a.summary,
           a.operator ? `Operator per headline: ${a.operator}.` : '',
-          `Source date: ${c.date ?? 'n/a'}.`,
+          `Source date: ${c.date ?? 'n/a'}.${dupWarning}`,
           'REVIEW: verify against the planning record, fill Infrastructure Type + coordinates, remove [PROPOSED].',
         ].filter(Boolean).join(' '),
       });

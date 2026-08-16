@@ -35,6 +35,7 @@ export interface NewsItem {
   confidence: number | null;
   classifiedBy: string | null;
   source: string | null;
+  siteId: string | null;
 }
 
 export async function fetchNews(): Promise<NewsItem[]> {
@@ -80,6 +81,8 @@ export async function fetchNews(): Promise<NewsItem[]> {
         confidence: (p['Confidence'] as { number?: number } | undefined)?.number ?? null,
         classifiedBy: sel(p['Classified by']),
         source: (p['Source'] as { url?: string } | undefined)?.url ?? null,
+        siteId:
+          ((p['Site'] as { relation?: Array<{ id?: string }> } | undefined)?.relation ?? [])[0]?.id ?? null,
       });
     }
     cursor = data.has_more ? data.next_cursor ?? undefined : undefined;

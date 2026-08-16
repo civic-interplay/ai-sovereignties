@@ -43,6 +43,7 @@ function label(value: string | null): string | null {
 }
 
 export interface TrackerRow {
+  id: string;
   name: string;
   infraType: string | null;
   isDataCentre: boolean;
@@ -134,6 +135,7 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
       const p = page.properties ?? {};
       const infraType = label(selectName(p['Infrastructure Type']));
       const base = {
+        id: page.id,
         name: plain(p['Company / Project']) || 'Untitled',
         infraType,
         isDataCentre: (infraType ?? '').includes('Data Centre'),

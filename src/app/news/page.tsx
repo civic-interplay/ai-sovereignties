@@ -2,6 +2,7 @@
 // statements the fortnightly pipeline collects around tracked sites, read
 // live from the Contestation Tracker.
 import { fetchNews } from '@/lib/news';
+import { fetchTrackerRows } from '@/lib/tracker';
 import {
   SheetShell,
   SheetNav,
@@ -27,8 +28,23 @@ function stanceColor(stance: string | null): string {
   return '#9aa5a0';
 }
 
+const STATE_SHORT: Record<string, string> = {
+  'New South Wales': 'NSW',
+  Victoria: 'VIC',
+  Queensland: 'QLD',
+  'Western Australia': 'WA',
+  'South Australia': 'SA',
+  Tasmania: 'TAS',
+  'Northern Territory': 'NT',
+  ACT: 'ACT',
+  'National / Federal': 'Federal',
+};
+
 export default async function News() {
-  const items = (await fetchNews()).filter((i) => i.title !== 'Untitled');
+  const [newsItems, trackerRows] = await Promise.all([fetchNews(), fetchTrackerRows()]);
+  // Jurisdiction comes from the linked tracker site, via the relation.
+  const stateBySite = new Map(trackerRows.map((r) => [r.id, r.state]));
+  const items = newsItems.filter((i) => i.title !== 'Untitled');
   const dated = items.filter((i) => i.date).slice(0, 80);
 
   return (
@@ -58,6 +74,21 @@ export default async function News() {
                   }}
                 >
                   {i.stance}
+                </span>
+              )}
+              {i.siteId && stateBySite.get(i.siteId) && (
+                <span
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    color: CI_PERIWINKLE,
+                    border: `1px solid ${CI_PERIWINKLE}`,
+                    borderRadius: 8,
+                    padding: '1px 8px',
+                  }}
+                >
+                  {STATE_SHORT[stateBySite.get(i.siteId) ?? ''] ?? stateBySite.get(i.siteId)}
                 </span>
               )}
               {i.sourceType && <span style={{ fontSize: 10.5, color: '#6b7568' }}>{i.sourceType}</span>}
@@ -92,8 +123,18 @@ export default async function News() {
       <Footnote>
         Items are collected by the fortnightly pipeline and coded by a language model for stance, actor and
         grounds; items marked <span style={{ color: '#8d5108' }}>pending review</span> have not yet been checked
-        by a human. Coding rules are in the{' '}
+        by a human. Jurisdiction tags come from the tracked site each item relates to. Coding rules are in the{' '}
         <a href="/glossary" style={{ color: CI_PERIWINKLE }}>glossary &amp; methods</a>.
+      </Footnote>
+      <Footnote>
+        <span style={{ color: '#c8cfc4' }}>Search terms, stated:</span> the press sweep queries the GDELT news
+        index (Australian sources) for <em>data centre / data center / rare earths / refinery</em> combined with
+        debate terms in both directions — <em>opposition, objection, protest, community concern, submission,
+        water use</em> and <em>support, welcomes, jobs, investment, backs</em> — so the feed captures the whole
+        structure of the debate, not only objections. A second sweep searches new-project language
+        (<em>announced, proposed, planned, lodged, approved, development application, to build, hyperscale</em>).
+        Forums, conference panels and broadcast appearances are not indexed by this sweep — they are added
+        manually.
       </Footnote>
     </SheetShell>
   );
