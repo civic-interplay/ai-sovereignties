@@ -97,6 +97,46 @@ export async function getExistingSourceUrls(): Promise<Set<string>> {
   return urls;
 }
 
+// Token sets from existing items' quotes and frame summaries, for syndication
+// dedup: one press release lands on many mastheads with many URLs, so URL
+// dedup alone let 16 copies of one wire story through on 2026-07-15. Compare
+// candidate headlines against these before classifying.
+export async function getExistingStoryTokens(): Promise<Array<Set<string>>> {
+  const rows = await queryAll(CONTESTATION_DATABASE_ID);
+  return rows.map((r) =>
+    storyTokens(
+      `${plain(r.properties['Representative quote'])} ${plain(r.properties['Frame summary'])} ${plain(r.properties['Item'])}`,
+    ),
+  );
+}
+
+const STORY_STOP = new Set([
+  'the', 'and', 'for', 'that', 'with', 'from', 'this', 'are', 'was', 'has',
+  'data', 'centre', 'centres', 'center', 'centers', 'australia', 'australian', 'new',
+]);
+export function storyTokens(s: string): Set<string> {
+  return new Set(
+    s
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter((t) => t.length > 3 && !STORY_STOP.has(t)),
+  );
+}
+
+// True when a candidate headline shares enough distinctive tokens with an
+// existing story to be the same wire item under a different URL.
+export function looksLikeExistingStory(headline: string, existing: Array<Set<string>>): boolean {
+  const h = storyTokens(headline);
+  if (h.size === 0) return false;
+  for (const e of existing) {
+    let hits = 0;
+    for (const t of h) if (e.has(t)) hits++;
+    if (hits >= Math.min(5, Math.max(3, Math.floor(h.size * 0.6)))) return true;
+  }
+  return false;
+}
+
 // Write one classified item into the Contestation Tracker.
 export async function createContestationItem(
   item: Classification,

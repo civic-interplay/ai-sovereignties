@@ -62,6 +62,7 @@ export function SheetNav({ current }: { current: string }) {
       {link('/glossary', 'Glossary & methods', current === 'glossary')}
       {link('/news', 'News feed', current === 'news')}
       {link('https://civicinterplay.io/data-centres-map/', 'About ↗')}
+      {link('https://studio-esem.notion.site/a504252cf109454598a7b02e5024b10d', 'Contact ↗')}
     </nav>
   );
 }

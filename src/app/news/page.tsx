@@ -45,7 +45,23 @@ export default async function News() {
   // Jurisdiction comes from the linked tracker site, via the relation.
   const stateBySite = new Map(trackerRows.map((r) => [r.id, r.state]));
   const items = newsItems.filter((i) => i.title !== 'Untitled');
-  const dated = items.filter((i) => i.date).slice(0, 80);
+  // Collapse syndicated copies: one wire story appears on many mastheads. Group
+  // same-day items sharing enough distinctive words; show the first with a count.
+  const tokens = (s: string) =>
+    new Set(s.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter((t) => t.length > 3));
+  const kept: Array<(typeof items)[number] & { syndicated: number; toks: Set<string> }> = [];
+  for (const i of items.filter((x) => x.date)) {
+    const t = tokens(`${i.quote} ${i.frameSummary}`);
+    const dup = kept.find((k) => {
+      if (k.date !== i.date) return false;
+      let hits = 0;
+      for (const w of t) if (k.toks.has(w)) hits++;
+      return hits >= 4;
+    });
+    if (dup) dup.syndicated += 1;
+    else kept.push({ ...i, syndicated: 1, toks: t });
+  }
+  const dated = kept.slice(0, 80);
 
   return (
     <SheetShell>
@@ -92,6 +108,9 @@ export default async function News() {
                 </span>
               )}
               {i.sourceType && <span style={{ fontSize: 10.5, color: '#6b7568' }}>{i.sourceType}</span>}
+              {i.syndicated > 1 && (
+                <span style={{ fontSize: 10.5, color: '#6b7568' }}>syndicated ×{i.syndicated}</span>
+              )}
               {(i.confidence ?? 1) < 0.6 && (
                 <span style={{ fontSize: 10, color: '#8d5108', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   pending review

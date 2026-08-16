@@ -46,8 +46,26 @@ async function main() {
   console.log(`Loaded ${sites.length} infra sites, ${seen.size} existing contestation items.`);
 
   const all = await getCandidates(source);
-  const fresh = all.filter((c) => !seen.has(c.sourceUrl)).slice(0, limit);
-  console.log(`${all.length} candidates from ${source}, ${fresh.length} new after dedup.\n`);
+  const newUrls = all.filter((c) => !seen.has(c.sourceUrl));
+
+  // Syndication dedup: one wire story lands on many mastheads with many URLs
+  // (16 copies of one item on 2026-07-15), so URL dedup is not enough. Drop
+  // candidates whose headline matches an already-tracked story, and keep only
+  // one candidate per headline within this run.
+  const { getExistingStoryTokens, looksLikeExistingStory, storyTokens } = await import('./lib/notion.ts');
+  const existingStories = await getExistingStoryTokens();
+  const seenHeadlines: Array<Set<string>> = [];
+  const fresh = newUrls
+    .filter((c) => {
+      if (looksLikeExistingStory(c.title, existingStories)) return false;
+      if (looksLikeExistingStory(c.title, seenHeadlines)) return false;
+      seenHeadlines.push(storyTokens(c.title));
+      return true;
+    })
+    .slice(0, limit);
+  console.log(
+    `${all.length} candidates from ${source}, ${newUrls.length} new URLs, ${fresh.length} after syndication dedup.\n`,
+  );
 
   if (dryRun) return dry(fresh, sites);
 
