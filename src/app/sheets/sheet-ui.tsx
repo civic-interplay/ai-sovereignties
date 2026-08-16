@@ -170,7 +170,7 @@ export function Updated({ date, style }: { date: string | null; style?: React.CS
   });
   return (
     <div style={{ fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7568', ...style }}>
-      Data last updated {d} · figures generated live at page load
+      Data last updated {d}
     </div>
   );
 }
