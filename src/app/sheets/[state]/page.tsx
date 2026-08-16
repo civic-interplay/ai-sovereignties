@@ -141,7 +141,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
             <Stat
               value={`A$${(total / 1e9).toFixed(1)}bn`}
               label="Announced investment"
-              note={`applicant/press figures, ${stated.length} of ${subset.length} sites — a floor`}
+              note={`applicant/press figures, ${stated.length} of ${subset.length} sites (low confidence)`}
             />
           ) : null;
         })()}

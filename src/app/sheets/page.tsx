@@ -100,7 +100,7 @@ export default async function SheetsIndex() {
             <Stat
               value={`A$${(total / 1e9).toFixed(1)}bn`}
               label="Announced investment"
-              note={`applicant/press figures, stated for ${stated.length} of ${subset.length} sites — a floor, not a total`}
+              note={`applicant/press figures, stated for ${stated.length} of ${subset.length} sites (low confidence)`}
             />
           ) : null;
         })()}
