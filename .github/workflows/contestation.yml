@@ -14,6 +14,9 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    # Needed for the compute-log commit step below.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -51,3 +54,17 @@ jobs:
         run: npm run review
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      # Compute transparency: the scans above append their token usage to
+      # docs/compute-log.jsonl (see docs/COMPUTE.md). Commit it so the public
+      # log — surfaced on /glossary — stays complete.
+      - name: Commit compute log
+        if: always()
+        run: |
+          if ! git diff --quiet docs/compute-log.jsonl 2>/dev/null; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add docs/compute-log.jsonl
+            git commit -m "Compute log: pipeline run $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main && git push
+          fi

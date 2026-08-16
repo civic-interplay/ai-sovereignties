@@ -20,6 +20,20 @@ import type { Site } from './notion.ts';
 // Haiku (claude-haiku-4-5) is the cheaper option for big batches.
 const MODEL = optionalEnv('CLASSIFIER_MODEL') ?? 'claude-sonnet-5';
 
+// Compute transparency: every API call's token usage is tallied here and
+// appended to docs/compute-log.jsonl by run.ts — the project discloses its own
+// compute the way it asks data centres to disclose theirs.
+export interface UsageTally {
+  model: string;
+  calls: number;
+  inputTokens: number;
+  outputTokens: number;
+}
+const tally: UsageTally = { model: MODEL, calls: 0, inputTokens: 0, outputTokens: 0 };
+export function usageTally(): UsageTally {
+  return { ...tally };
+}
+
 export interface RawClassification {
   site_name: string | null;
   source_type: string;
@@ -98,6 +112,9 @@ export async function classify(text: string, sites: Site[]): Promise<RawClassifi
     tool_choice: { type: 'tool', name: 'record_contestation' },
     messages: [{ role: 'user', content: text.slice(0, 50_000) }],
   });
+  tally.calls += 1;
+  tally.inputTokens += res.usage?.input_tokens ?? 0;
+  tally.outputTokens += res.usage?.output_tokens ?? 0;
   const block = res.content.find((b) => b.type === 'tool_use');
   if (!block || block.type !== 'tool_use') {
     throw new Error('Classifier did not return a tool call');

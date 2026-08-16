@@ -164,7 +164,11 @@ export default async function SheetsIndex() {
 
       <Footnote>
         Source: Critical Infrastructure Tracker (Notion), queried live at page load. Rows and coding are
-        continuously revised; figures on this sheet may differ from earlier captures.{' '}
+        continuously revised; figures on this sheet may differ from earlier captures. Cite this project:{' '}
+        <a href="https://doi.org/10.5281/zenodo.21026430" style={{ color: CI_PERIWINKLE }}>
+          doi.org/10.5281/zenodo.21026430
+        </a>
+        .{' '}
         <a
           href="https://studio-esem.notion.site/8b537010f4cb4aa6b6df470f9d0d40c9?v=c9d0347781ec4900967cfff4d18a25a6"
           style={{ color: CI_PERIWINKLE }}

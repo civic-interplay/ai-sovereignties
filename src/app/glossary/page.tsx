@@ -17,6 +17,37 @@ export const metadata = {
   description: 'Operational definitions: how every category, colour and number on the map and data sheets is coded.',
 };
 
+// Rendered per-request so the compute log below stays current.
+export const dynamic = 'force-dynamic';
+
+// The public compute log, committed to the repo by the pipeline workflow.
+// See docs/COMPUTE.md for the schema and the disclosure rationale.
+const COMPUTE_LOG_URL =
+  'https://raw.githubusercontent.com/civic-interplay/ai-sovereignties/main/docs/compute-log.jsonl';
+
+interface ComputeEntry {
+  date: string;
+  kind: string;
+  model: string;
+  calls: number;
+  input_tokens: number;
+  output_tokens: number;
+}
+
+async function fetchComputeLog(): Promise<ComputeEntry[]> {
+  try {
+    const res = await fetch(COMPUTE_LOG_URL, { next: { revalidate: 3600 } });
+    if (!res.ok) return [];
+    const text = await res.text();
+    return text
+      .split('\n')
+      .filter(Boolean)
+      .map((l) => JSON.parse(l) as ComputeEntry);
+  } catch {
+    return [];
+  }
+}
+
 function Term({ name, color, children }: { name: string; color?: string; children: React.ReactNode }) {
   return (
     <div style={{ margin: '10px 0', fontSize: 12.5, lineHeight: 1.7 }}>
@@ -26,7 +57,16 @@ function Term({ name, color, children }: { name: string; color?: string; childre
   );
 }
 
-export default function Glossary() {
+export default async function Glossary() {
+  const computeLog = await fetchComputeLog();
+  const byModel = new Map<string, { calls: number; input: number; output: number }>();
+  for (const e of computeLog) {
+    const m = byModel.get(e.model) ?? { calls: 0, input: 0, output: 0 };
+    m.calls += e.calls;
+    m.input += e.input_tokens;
+    m.output += e.output_tokens;
+    byModel.set(e.model, m);
+  }
   return (
     <SheetShell>
       <SheetNav current="glossary" />
@@ -193,8 +233,47 @@ export default function Glossary() {
         </Term>
       </Panel>
 
+      <SectionHead>The project&rsquo;s own compute</SectionHead>
+      <Panel>
+        <Footnote>
+          A tracker that asks data centres to disclose their resource draw should disclose its own. Model usage
+          behind this project is logged publicly in the repository (
+          <a
+            href="https://github.com/civic-interplay/ai-sovereignties/blob/main/docs/COMPUTE.md"
+            style={{ color: CI_PERIWINKLE }}
+          >
+            docs/COMPUTE.md
+          </a>
+          ): the fortnightly classifier pipeline logs its token counts automatically from the API&rsquo;s own
+          usage figures; interactive research and build sessions are added by hand from the billing console, so
+          the log is a floor, not a ceiling. Dollar and energy conversions are deliberately not published —
+          per-token energy figures for hosted inference are not credibly public, and a speculative multiplier
+          would manufacture the false precision this tracker exists to resist.
+        </Footnote>
+        {byModel.size === 0 ? (
+          <div style={{ fontSize: 12, color: '#9aa39b' }}>
+            Logged usage to date: none yet — logging begins with the first pipeline run after 2026-08-16.
+            Sessions before that date are unlogged.
+          </div>
+        ) : (
+          [...byModel.entries()].map(([model, m]) => (
+            <div key={model} style={{ fontSize: 12.5, lineHeight: 1.8 }}>
+              <span style={{ color: '#fff', fontWeight: 600 }}>{model}</span>{' '}
+              <span style={{ color: '#9aa39b' }}>
+                — {m.calls.toLocaleString()} calls · {m.input.toLocaleString()} input /{' '}
+                {m.output.toLocaleString()} output tokens
+              </span>
+            </div>
+          ))
+        )}
+      </Panel>
+
       <Footnote>
-        These rules are maintained alongside the tracker and revised in the open —{' '}
+        Cite this project:{' '}
+        <a href="https://doi.org/10.5281/zenodo.21026430" style={{ color: CI_PERIWINKLE }}>
+          doi.org/10.5281/zenodo.21026430
+        </a>
+        . These rules are maintained alongside the tracker and revised in the open —{' '}
         <a href="https://github.com/studioesem" style={{ color: CI_PERIWINKLE }}>
           changes are versioned
         </a>

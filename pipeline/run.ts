@@ -101,6 +101,25 @@ async function main() {
   }
 
   console.log(`\nDone. ${write ? `${written} written` : 'no writes (add --write)'}. ${flagged.length} flagged for review.`);
+
+  // Compute transparency: append this run's model usage to the public log
+  // (docs/compute-log.jsonl, committed by the workflow). See docs/COMPUTE.md.
+  const { usageTally } = await import('./lib/classify.ts');
+  const usage = usageTally();
+  if (usage.calls > 0) {
+    const entry = {
+      date: new Date().toISOString().slice(0, 10),
+      kind: 'pipeline',
+      source,
+      model: usage.model,
+      calls: usage.calls,
+      input_tokens: usage.inputTokens,
+      output_tokens: usage.outputTokens,
+    };
+    const { appendFileSync } = await import('node:fs');
+    appendFileSync(new URL('../docs/compute-log.jsonl', import.meta.url), JSON.stringify(entry) + '\n');
+    console.log(`Compute: ${usage.calls} calls to ${usage.model}, ${usage.inputTokens} in / ${usage.outputTokens} out tokens (logged).`);
+  }
 }
 
 function dry(fresh: Candidate[], sites: Site[]) {
