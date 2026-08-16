@@ -93,17 +93,10 @@ export default async function SheetsIndex() {
           label="Known planned capacity"
           note={`capacity public for ${knownMW.length} of ${subset.length} subset sites`}
         />
-        {(() => {
-          const stated = subset.filter((r) => r.announcedInvestment !== null && r.announcedInvestment > 0);
-          const total = stated.reduce((s, r) => s + (r.announcedInvestment ?? 0), 0);
-          return total > 0 ? (
-            <Stat
-              value={`A$${(total / 1e9).toFixed(1)}bn`}
-              label="Announced investment"
-              note={`applicant/press figures, stated for ${stated.length} of ${subset.length} sites (low confidence)`}
-            />
-          ) : null;
-        })()}
+        {/* Announced-investment stat withheld: press figures only cover 3 sites
+            and measure total spend incl. IT fit-out, not planning-record CIV.
+            Restore once the Planning CIV harvest lands (see memory:
+            investment-figures-two-tracks). Data stays in Notion. */}
         <Stat value={`${fastTracked}`} label="Fast-tracked / SSD" note="subset sites approved outside normal exhibition" />
         <Stat value={`${contested}`} label="Contested" note="active or emerging community opposition" />
       </Panel>

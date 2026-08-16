@@ -137,17 +137,6 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           label="Disclose capacity"
           note="sites with any public MW figure"
         />
-        {(() => {
-          const stated = subset.filter((r) => r.announcedInvestment !== null && r.announcedInvestment > 0);
-          const total = stated.reduce((s, r) => s + (r.announcedInvestment ?? 0), 0);
-          return total > 0 ? (
-            <Stat
-              value={`A$${(total / 1e9).toFixed(1)}bn`}
-              label="Announced investment"
-              note={`applicant/press figures, ${stated.length} of ${subset.length} sites (low confidence)`}
-            />
-          ) : null;
-        })()}
         <Stat value={`${fastTracked}`} label="Fast-tracked" note="SSD / ministerial fast-track" />
         <Stat value={`${contested}`} label="Contested" note="active or emerging opposition" />
         <Stat
