@@ -44,6 +44,17 @@ jobs:
           PORTAL_FEED_URLS: ${{ secrets.PORTAL_FEED_URLS }}
           PORTAL_FEED_URL: ${{ secrets.PORTAL_FEED_URL }}
 
+      # New-project discovery: proposes [PROPOSED] rows for human review — no
+      # Infrastructure Type and no coordinates, so they never reach the map or
+      # data sheets until reviewed. Strand A reads the NSW ePlanning OnlineDA
+      # API directly (keyless); strand B sweeps press announcements via GDELT.
+      - name: New-project discovery (proposes rows for review)
+        if: ${{ !cancelled() }}
+        run: npm run discover -- --limit 25 --write
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       # QA self-review: writes nothing, reads the infra tracker and flags rows
       # that need a human eye (unverified sourcing, low confidence, unconfirmed
       # public-notice status, missing approval dates, stale rows, campus

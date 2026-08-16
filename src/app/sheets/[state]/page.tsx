@@ -115,7 +115,15 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
       <Updated date={updated} style={{ margin: '-16px 0 20px' }} />
 
       <Panel style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
-        <Stat value={`${subset.length}`} label="Subset sites" note={`${dc.length - subset.length} legacy colo excluded`} />
+        <Stat
+          value={`${subset.length}`}
+          label="Subset sites"
+          note={
+            dc.length - subset.length > 0
+              ? `${dc.length - subset.length} legacy colocation sites excluded`
+              : 'all tracked sites qualify'
+          }
+        />
         <Stat
           value={`${Math.round(totalMW).toLocaleString()} MW`}
           label="Known capacity"

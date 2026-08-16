@@ -112,6 +112,15 @@ export default async function Glossary() {
           Realty, Equinix, Global Switch, Macquarie Data Centres, Goodman, Vantage, Keppel, Supernode/Quinbrook).
           The legacy small-colocation / enterprise / telco inventory with no public planning trail is excluded.
         </Term>
+        <Term name="Update cadence">
+          the map and data sheets read the tracker live — every edit appears on the next page load, and each
+          sheet shows the date of the latest edit in its data. An automated pipeline also runs fortnightly (the
+          1st and 15th): it sweeps national and local press for contestation events around tracked sites and
+          codes their structure with a language model, reads the NSW ePlanning API for new data-centre
+          development applications, and proposes newly announced projects as review-flagged rows. Agent-created
+          rows carry Agent provenance and enter the published figures only after human review; everything else
+          — new sites, register coding, verification — is human work.
+        </Term>
         <Term name="Null vs zero">
           a blank value always means &ldquo;not publicly recorded&rdquo;, never zero. Capacity is stored as null
           when unknown; sites without a public MW figure are excluded from capacity-weighted statistics, not
