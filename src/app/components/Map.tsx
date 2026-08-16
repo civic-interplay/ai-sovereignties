@@ -46,6 +46,7 @@ const SITE_LAYER_FILTERS: Record<string, unknown[] | null> = {
   'sites-fasttracked': ['==', ['get', 'fastTracked'], true],
   'sites-fasttracked-outer': ['==', ['get', 'fastTracked'], true],
   'sites-named-platform': ['==', ['get', 'namedPlatform'], true],
+  'sites-named-platform-halo': ['==', ['get', 'namedPlatform'], true],
 };
 
 // Read the requested view from the URL. Unknown values fall back to the national
@@ -115,12 +116,15 @@ const C_NEUTRAL = '#6b7568';
 // vision and a red-on-red fill alike.
 const STATUS_CONTESTED = '#ff3b30';
 const STATUS_INK_SOFT = '#ffffff';
-// The named-hyperscaler pip. A lighter step of the CI purple: the brand purple
-// itself sat at 1.03:1 against the green Australian-owned fill, so the hairline
-// was doing all the work. This step lifts the worst case to 1.44:1 and the
-// median to 2.30:1 while still reading as purple. The dark hairline stays, and
-// is heavier, because on the low-contrast fills it is still the separator.
-const OVERLAY_PIP = '#c4a6f0';
+// The named-hyperscaler pip. Was a lighter step of the CI purple (#c4a6f0),
+// which read as too subtle in the field: luminance-close to several fills, so
+// only the hairline separated it. Now a hot magenta — a hue no lens set uses,
+// so it pops by chroma rather than luminance. Distinct from contested red
+// (#ff3b30) by hue and by geometry (pip vs ring); the rose categorical slot is
+// the nearest neighbour for CVD, where the pip-vs-fill geometry carries the
+// difference. The dark hairline stays as the separator on bright fills, and a
+// soft same-hue halo behind the pip gives it a small glow at metro zoom.
+const OVERLAY_PIP = '#ff47e5';
 // Emphasis for a "hot" figure inside a popup (e.g. a stressed water reading).
 // Popup text only — never painted on the map, so it cannot collide with a lens
 // fill. Kept as a named token so it is not mistaken for a spare category hue.
@@ -682,6 +686,21 @@ export default function Map() {
       // Drawn as a filled centre pip rather than another ring: contested and
       // fast-tracked already use one and two rings, and a third would be
       // unreadable. A pip is a different channel, so all three can be on at once.
+      // Soft halo behind the pip — same hue, blurred — so the marked sites glow
+      // slightly at metro zoom without claiming another geometry channel.
+      m.addLayer({
+        id: 'sites-named-platform-halo',
+        type: 'circle',
+        source: 'sites',
+        filter: ['==', ['get', 'namedPlatform'], true] as unknown as mapboxgl.FilterSpecification,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], capacity, 30, 7, 400, 13] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-color': OVERLAY_PIP,
+          'circle-opacity': 0.3,
+          'circle-blur': 1,
+        },
+      });
       m.addLayer({
         id: 'sites-named-platform',
         type: 'circle',
@@ -877,6 +896,7 @@ export default function Map() {
     const m = map.current;
     if (!m || !m.getLayer('sites-named-platform')) return;
     m.setLayoutProperty('sites-named-platform', 'visibility', showNamedPlatform ? 'visible' : 'none');
+    m.setLayoutProperty('sites-named-platform-halo', 'visibility', showNamedPlatform ? 'visible' : 'none');
   }, [showNamedPlatform]);
 
   // Re-apply the stage filter to every site layer whenever the selection changes.
@@ -1095,7 +1115,22 @@ export default function Map() {
             Source data ↗
           </a>
           <a
-            href="https://civicinterplay.io/ai-sovereignties/"
+            href="/sheets"
+            style={{
+              display: 'inline-block',
+              marginTop: 8,
+              marginLeft: 14,
+              fontSize: 10,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: CI_PERIWINKLE,
+              textDecoration: 'none',
+            }}
+          >
+            Data sheets
+          </a>
+          <a
+            href="https://civicinterplay.io/data-centres-map/"
             target="_top"
             rel="noreferrer"
             style={{
@@ -1109,7 +1144,7 @@ export default function Map() {
               textDecoration: 'none',
             }}
           >
-            Learn more ↗
+            About ↗
           </a>
         </div>
 
