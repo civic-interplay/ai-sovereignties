@@ -35,6 +35,15 @@ interface ComputeEntry {
   output_tokens: number;
 }
 
+// Anthropic list prices, USD per million tokens (input / output / cache-read),
+// as published June 2026. Used only for the indicative conversion below —
+// stated assumption, not a billing record.
+const RATES: Record<string, { in: number; out: number; cacheRead: number }> = {
+  'claude-opus-4-8': { in: 5, out: 25, cacheRead: 0.5 },
+  'claude-fable-5': { in: 10, out: 50, cacheRead: 1 },
+  'claude-sonnet-5': { in: 3, out: 15, cacheRead: 0.3 },
+};
+
 async function fetchComputeLog(): Promise<ComputeEntry[]> {
   try {
     const res = await fetch(COMPUTE_LOG_URL, { next: { revalidate: 3600 } });
@@ -68,6 +77,19 @@ export default async function Glossary() {
     m.cacheRead += e.cache_read_tokens ?? 0;
     m.output += e.output_tokens;
     byModel.set(e.model, m);
+  }
+  // Indicative conversions from the stated assumptions above.
+  let listCostUSD = 0;
+  let unpriced = 0;
+  let totalCalls = 0;
+  for (const [model, m] of byModel) {
+    totalCalls += m.calls;
+    const r = RATES[model];
+    if (!r) {
+      unpriced += 1;
+      continue;
+    }
+    listCostUSD += (m.input / 1e6) * r.in + (m.output / 1e6) * r.out + (m.cacheRead / 1e6) * r.cacheRead;
   }
   return (
     <SheetShell>
@@ -250,8 +272,12 @@ export default async function Glossary() {
           planning-portal feeds for new contestation events. Model work is done with{' '}
           <span style={{ color: '#fff' }}>Anthropic Claude</span>: <code>claude-sonnet-5</code> codes the
           structure of each contestation source (who objects, on what grounds, how framed), and interactive
-          research, audit and build sessions run in Claude Code on Opus and Fable-class models — with every
-          claim destined for publication verified by a human against primary planning documents. Releases are
+          research, audit and build sessions run in Claude Code on Opus and Fable-class models. This is a
+          human-machine collaboration with a deliberate division of labour: the{' '}
+          <span style={{ color: '#fff' }}>human in the loop</span> designs the lenses and the four-register
+          scheme, interprets what the data means, fact-checks claims against primary planning documents,
+          decides what is published, and organises the interface and its legends; the models retrieve, code
+          structure at scale, and draft. Every claim destined for publication is human-verified. Releases are
           archived with a DOI on <span style={{ color: '#fff' }}>Zenodo</span>.
         </div>
         <div style={{ marginTop: 10 }}>
@@ -278,10 +304,11 @@ export default async function Glossary() {
           ): the fortnightly classifier pipeline logs its token counts automatically from the API&rsquo;s own
           usage figures, and interactive research and build sessions are logged from their session transcripts
           — also the API&rsquo;s own usage records. Sessions run on machines not represented here remain
-          uncounted, so the log is a floor, not a ceiling. Dollar and energy conversions are deliberately not
-          published —
-          per-token energy figures for hosted inference are not credibly public, and a speculative multiplier
-          would manufacture the false precision this tracker exists to resist.
+          uncounted, so the log is a floor, not a ceiling. The conversions below are indicative, with the
+          assumptions stated: cost is priced at Anthropic&rsquo;s published list rates (June 2026) as if every
+          token were billed at API prices — actual spend ran partly on subscription plans; energy has no
+          credible per-token public figure, so the range applies commonly cited per-query estimates
+          (~0.3&ndash;3&nbsp;Wh) while noting these agentic calls are far larger than typical queries.
         </Footnote>
         {byModel.size === 0 ? (
           <div style={{ fontSize: 12, color: '#9aa39b' }}>Compute log unavailable right now — see the repository.</div>
@@ -296,6 +323,19 @@ export default async function Glossary() {
               </span>
             </div>
           ))
+        )}
+        {listCostUSD > 0 && (
+          <div style={{ fontSize: 12.5, lineHeight: 1.8, marginTop: 8, borderTop: '1px solid #2a302e', paddingTop: 8 }}>
+            <span style={{ color: '#fff', fontWeight: 600 }}>What that converts to</span>{' '}
+            <span style={{ color: '#9aa39b' }}>
+              — ≈ US${Math.round(listCostUSD).toLocaleString()} at API list rates
+              {unpriced > 0 && ` (${unpriced} model${unpriced > 1 ? 's' : ''} unpriced, excluded)`}; energy
+              indicatively {Math.round(totalCalls * 0.3 / 1000 * 10) / 10}&ndash;
+              {Math.round(totalCalls * 3 / 1000)}&nbsp;kWh across {totalCalls.toLocaleString()} calls at
+              0.3&ndash;3&nbsp;Wh per call — plausibly higher given call size; of the order of days of one
+              household&rsquo;s electricity, stated to be checked, not cited.
+            </span>
+          </div>
         )}
       </Panel>
 

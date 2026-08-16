@@ -27,13 +27,22 @@ model usage behind the tracker is logged publicly here.
 The `/glossary` page reads this file from the repository at request time and
 shows the running totals.
 
-## What is deliberately not published
+## Conversions: indicative, with assumptions stated
 
-Cost in dollars and energy in joules. Per-token prices change and per-token
-energy figures for hosted inference are not credibly public — converting tokens
-through a speculative multiplier would manufacture exactly the false precision
-the tracker exists to resist. Tokens and call counts are the honest primitive;
-anyone can apply their own conversion and show their working.
+Tokens and call counts are the honest primitive. On top of them the glossary
+shows **indicative** conversions, each with its assumption stated so anyone can
+redo the arithmetic:
+
+- **Cost** — priced at Anthropic's published per-MTok list rates (June 2026:
+  Opus 4.8 $5/$25, Fable 5 $10/$50, Sonnet 5 $3/$15; cache reads ≈ 0.1× input),
+  as if every token were billed at API prices. Actual spend ran partly on
+  subscription plans, so this is a counterfactual list-price figure, not a
+  billing record.
+- **Energy** — no credible per-token figure for hosted inference is public, so
+  the shown range applies commonly cited per-query estimates (~0.3–3 Wh) to the
+  call count, with the caveat that these agentic calls are far larger than
+  typical queries and the true figure is plausibly higher. Order-of-magnitude
+  only: days of one household's electricity, not a data centre's.
 
 ## Models used
 
