@@ -60,7 +60,7 @@ export function SheetNav({ current }: { current: string }) {
       {link('/', '← Map')}
       {link('/sheets', 'Data sheets', current === 'sheets')}
       {link('/glossary', 'Glossary & methods', current === 'glossary')}
-      {link('/news', 'News tracker', current === 'news')}
+      {link('/news', 'News feed', current === 'news')}
       {link('https://civicinterplay.io/data-centres-map/', 'About ↗')}
     </nav>
   );

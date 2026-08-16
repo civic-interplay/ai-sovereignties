@@ -15,7 +15,7 @@ import {
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'News tracker — Australian Data Centres',
+  title: 'News Feed — Australian Data Centres',
   description: 'Press coverage, submissions and public statements around tracked data-centre sites, updated fortnightly.',
 };
 
@@ -35,8 +35,8 @@ export default async function News() {
     <SheetShell>
       <SheetNav current="news" />
       <SheetTitle
-        kicker="Australian Data Centres · news tracker"
-        title="The debate, as it lands"
+        kicker="Australian Data Centres"
+        title="News Feed"
         sub="Press coverage, planning submissions, council motions and public statements around tracked sites — collected fortnightly, coded by stance and grounds."
       />
 
