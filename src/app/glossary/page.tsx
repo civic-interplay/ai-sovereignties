@@ -31,6 +31,7 @@ interface ComputeEntry {
   model: string;
   calls: number;
   input_tokens: number;
+  cache_read_tokens?: number;
   output_tokens: number;
 }
 
@@ -59,11 +60,12 @@ function Term({ name, color, children }: { name: string; color?: string; childre
 
 export default async function Glossary() {
   const computeLog = await fetchComputeLog();
-  const byModel = new Map<string, { calls: number; input: number; output: number }>();
+  const byModel = new Map<string, { calls: number; input: number; cacheRead: number; output: number }>();
   for (const e of computeLog) {
-    const m = byModel.get(e.model) ?? { calls: 0, input: 0, output: 0 };
+    const m = byModel.get(e.model) ?? { calls: 0, input: 0, cacheRead: 0, output: 0 };
     m.calls += e.calls;
     m.input += e.input_tokens;
+    m.cacheRead += e.cache_read_tokens ?? 0;
     m.output += e.output_tokens;
     byModel.set(e.model, m);
   }
@@ -233,6 +235,33 @@ export default async function Glossary() {
         </Term>
       </Panel>
 
+      <SectionHead>How this is built — platforms & models</SectionHead>
+      <Panel>
+        <div style={{ fontSize: 12.5, lineHeight: 1.8, color: '#9aa39b', maxWidth: 760 }}>
+          The tracker itself is a <span style={{ color: '#fff' }}>Notion</span> database — the single source of
+          truth that every view queries live. The map and these sheets are a{' '}
+          <span style={{ color: '#fff' }}>Next.js</span> (React) application rendering the map through{' '}
+          <span style={{ color: '#fff' }}>Mapbox GL</span>, deployed via OpenNext to{' '}
+          <span style={{ color: '#fff' }}>Cloudflare Workers</span> at the edge. Code, methods and the compute
+          log are versioned in the open on <span style={{ color: '#fff' }}>GitHub</span>, where a fortnightly{' '}
+          <span style={{ color: '#fff' }}>GitHub Actions</span> pipeline sweeps press coverage (GDELT) and
+          planning-portal feeds for new contestation events. Model work is done with{' '}
+          <span style={{ color: '#fff' }}>Anthropic Claude</span>: <code>claude-sonnet-5</code> codes the
+          structure of each contestation source (who objects, on what grounds, how framed), and interactive
+          research, audit and build sessions run in Claude Code on Opus and Fable-class models — with every
+          claim destined for publication verified by a human against primary planning documents. Releases are
+          archived with a DOI on <span style={{ color: '#fff' }}>Zenodo</span>.
+        </div>
+        <div style={{ marginTop: 10 }}>
+          <a
+            href="https://civicinterplay.io/images/architecture.svg"
+            style={{ color: CI_PERIWINKLE, fontSize: 11.5, letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}
+          >
+            Information architecture diagram ↗
+          </a>
+        </div>
+      </Panel>
+
       <SectionHead>The project&rsquo;s own compute</SectionHead>
       <Panel>
         <Footnote>
@@ -245,16 +274,15 @@ export default async function Glossary() {
             docs/COMPUTE.md
           </a>
           ): the fortnightly classifier pipeline logs its token counts automatically from the API&rsquo;s own
-          usage figures; interactive research and build sessions are added by hand from the billing console, so
-          the log is a floor, not a ceiling. Dollar and energy conversions are deliberately not published —
+          usage figures, and interactive research and build sessions are logged from their session transcripts
+          — also the API&rsquo;s own usage records. Sessions run on machines not represented here remain
+          uncounted, so the log is a floor, not a ceiling. Dollar and energy conversions are deliberately not
+          published —
           per-token energy figures for hosted inference are not credibly public, and a speculative multiplier
           would manufacture the false precision this tracker exists to resist.
         </Footnote>
         {byModel.size === 0 ? (
-          <div style={{ fontSize: 12, color: '#9aa39b' }}>
-            Logged usage to date: none yet — logging begins with the first pipeline run after 2026-08-16.
-            Sessions before that date are unlogged.
-          </div>
+          <div style={{ fontSize: 12, color: '#9aa39b' }}>Compute log unavailable right now — see the repository.</div>
         ) : (
           [...byModel.entries()].map(([model, m]) => (
             <div key={model} style={{ fontSize: 12.5, lineHeight: 1.8 }}>
@@ -262,6 +290,7 @@ export default async function Glossary() {
               <span style={{ color: '#9aa39b' }}>
                 — {m.calls.toLocaleString()} calls · {m.input.toLocaleString()} input /{' '}
                 {m.output.toLocaleString()} output tokens
+                {m.cacheRead > 0 && ` (+ ${m.cacheRead.toLocaleString()} cached-context reads)`}
               </span>
             </div>
           ))

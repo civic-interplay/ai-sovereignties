@@ -65,7 +65,7 @@ export default async function SheetsIndex() {
       <SheetTitle
         kicker="Australian Data Centres · summary sheets"
         title="The build-out in numbers"
-        sub="Live figures from the Critical Infrastructure Tracker. Published statistics are computed on the analysis subset — the current build-out wave — under the stated rule below."
+        sub="Live figures from the Critical Infrastructure Tracker."
       />
 
       <Panel style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>

@@ -1,0 +1,8 @@
+{"date": "2026-07-25", "kind": "session", "model": "claude-opus-4-8", "calls": 164, "input_tokens": 433540, "cache_read_tokens": 14308738, "output_tokens": 228400}
+{"date": "2026-07-26", "kind": "session", "model": "claude-opus-4-8", "calls": 580, "input_tokens": 3995995, "cache_read_tokens": 242350454, "output_tokens": 1618419}
+{"date": "2026-07-27", "kind": "session", "model": "claude-opus-4-8", "calls": 86, "input_tokens": 322848, "cache_read_tokens": 14598841, "output_tokens": 175810}
+{"date": "2026-08-05", "kind": "session", "model": "claude-fable-5", "calls": 4, "input_tokens": 74380, "cache_read_tokens": 62040, "output_tokens": 2988}
+{"date": "2026-08-06", "kind": "session", "model": "claude-fable-5", "calls": 90, "input_tokens": 929489, "cache_read_tokens": 7671398, "output_tokens": 217971}
+{"date": "2026-08-10", "kind": "session", "model": "claude-fable-5", "calls": 164, "input_tokens": 1828216, "cache_read_tokens": 39763173, "output_tokens": 334166}
+{"date": "2026-08-15", "kind": "session", "model": "claude-fable-5", "calls": 2, "input_tokens": 38828, "cache_read_tokens": 31090, "output_tokens": 628}
+{"date": "2026-08-16", "kind": "session", "model": "claude-fable-5", "calls": 289, "input_tokens": 548879, "cache_read_tokens": 39756126, "output_tokens": 233939}

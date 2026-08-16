@@ -16,10 +16,13 @@ model usage behind the tracker is logged publicly here.
   Token counts come from the API's own `usage` block, tallied in
   `pipeline/lib/classify.ts` and appended by `pipeline/run.ts`; the workflow
   commits the log after each run.
-- **kind: session** — interactive research/build sessions (Claude Code). These
-  are **not automatically metered**; entries are added by hand from the
-  Anthropic console's usage page, and the log is therefore a floor, not a
-  ceiling. Sessions predating 2026-08-16 are unlogged.
+- **kind: session** — interactive research/build sessions (Claude Code).
+  Harvested from the sessions' own transcripts, which record the API's `usage`
+  block per call (aggregated per day and model; `cache_read_tokens` are
+  previously-processed context re-read from cache, kept separate because they
+  are not fresh computation on the same scale). Sessions run on machines whose
+  transcripts are not available here — e.g. web sessions — remain uncounted,
+  so the log is a floor, not a ceiling.
 
 The `/glossary` page reads this file from the repository at request time and
 shows the running totals.
