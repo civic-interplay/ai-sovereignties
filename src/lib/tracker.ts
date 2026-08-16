@@ -69,6 +69,7 @@ export interface TrackerRow {
   campusGroup: string;
   mineralFocus: string[];
   energySource: string | null;
+  announcedInvestment: number | null;
   source: string | null;
   notionPublicUrl: string;
   hasCoords: boolean;
@@ -161,6 +162,7 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
         campusGroup: plain(p['Campus group']),
         mineralFocus: multiNames(p['Mineral Focus']),
         energySource: label(selectName(p['Energy Source'])),
+        announcedInvestment: num(p['Announced investment (AUD)']),
         source: urlVal(p['Source']),
         notionPublicUrl: 'https://studio-esem.notion.site/' + page.id.replace(/-/g, ''),
         hasCoords: num(p['Latitude']) !== null && num(p['Longitude']) !== null,
