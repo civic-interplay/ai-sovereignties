@@ -226,8 +226,10 @@ export default async function Glossary() {
         </Term>
         <Term name="Classified by">
           who coded the row: Agent (automated pipeline), Human, or Human-verified (checked against primary
-          planning documents). The publication standard: every row feeding a published number must be
-          Human-verified with a source URL.
+          planning documents). The standard for citation in print is that every row feeding the cited figure is
+          Human-verified with a source URL. The live figures on these sheets do not yet meet that bar — they are
+          working numbers from a database under active verification, and each row&rsquo;s status is visible in
+          the tracker.
         </Term>
         <Term name="Source">
           the primary public document for the row&rsquo;s core claim — planning register entry, EIS, company
