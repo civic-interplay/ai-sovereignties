@@ -65,7 +65,10 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   const dc = rows.filter((r) => r.isDataCentre && r.state === stateName);
   if (dc.length === 0) notFound();
   const subset = dc.filter((r) => r.inSubset);
-  const other = rows.filter((r) => !r.isDataCentre && r.state === stateName);
+  // Review-queue rows ([PROPOSED]/[REJECTED]) are internal — never shown publicly.
+  const other = rows.filter(
+    (r) => !r.isDataCentre && r.state === stateName && !/^\[(PROPOSED|REJECTED)\]/.test(r.name),
+  );
 
   const knownMW = subset.filter((r) => r.capacity !== null && r.capacity > 0);
   const totalMW = knownMW.reduce((s, r) => s + (r.capacity ?? 0), 0);
