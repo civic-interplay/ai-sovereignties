@@ -105,12 +105,14 @@ export default async function Glossary() {
           company announcement, press with corroboration).
         </Term>
         <Term name="Analysis subset">
-          the rows published statistics are computed on. A data-centre row qualifies via any of: (a) a planning
-          application on the public record (PA / SSD number, EIS, recorded planning pathway or state approval
-          body); (b) a named hyperscaler (Amazon/AWS, Microsoft, Google, Meta, Oracle, Apple) as owner, parent,
-          tenant or operator; (c) a campus of a named wholesale developer (NEXTDC, CDC, AirTrunk, STACK, Digital
-          Realty, Equinix, Global Switch, Macquarie Data Centres, Goodman, Vantage, Keppel, Supernode/Quinbrook).
-          The legacy small-colocation / enterprise / telco inventory with no public planning trail is excluded.
+          the current build-out wave — the data-centre projects the summary figures describe. A site is included
+          when any of the following holds: (a) it has a planning application on the public record (PA / SSD
+          number, EIS, recorded planning pathway or state approval body); (b) a named hyperscaler (Amazon/AWS,
+          Microsoft, Google, Meta, Oracle, Apple) is its owner, parent, tenant or operator; (c) it is a campus of
+          a named wholesale developer (NEXTDC, CDC, AirTrunk, STACK, Digital Realty, Equinix, Global Switch,
+          Macquarie Data Centres, Goodman, Vantage, Keppel, Supernode/Quinbrook). Older small colocation and
+          enterprise server rooms with no public planning trail are listed but kept out of the summary figures,
+          so they don&rsquo;t dilute statistics about the new wave.
         </Term>
         <Term name="Update cadence">
           the map and data sheets read the tracker live — every edit appears on the next page load, and each
@@ -148,9 +150,8 @@ export default async function Glossary() {
           the site sits on Australian land under Australian planning law, with no other register held onshore.
         </Term>
         <Term name="Rented" color={ACCENT.red}>
-          display value for the compound: locational register held domestically while capacity is leased to
-          offshore hyperscalers — the productive and financial registers sit offshore. In cross-tabulations it is
-          the Locational-only case.
+          compute capacity rented to companies with headquarters located offshore (unknown local usage
+          benefits).
         </Term>
         <Term name="Not coded">
           the register coding pass has not reached this row. Excluded from published register statistics. The

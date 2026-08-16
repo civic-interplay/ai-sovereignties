@@ -185,7 +185,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
         ))}
         <Footnote>
           &ldquo;Not tracked&rdquo; means no public statement of the site&rsquo;s energy sourcing has been
-          found — an absence in the record, not evidence of clean or dirty supply.
+          found.
         </Footnote>
       </Panel>
 

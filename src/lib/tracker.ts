@@ -248,11 +248,6 @@ export const DATA_ACCESS: Record<string, DataAccessEntry[]> = {
       access: 'none',
       note: 'No public API. Approvals compiled manually from published lists and permit documents — not machine readable.',
     },
-    {
-      source: 'City of Melbourne data-centre list',
-      access: 'manual',
-      note: 'Supplied as a spreadsheet (xlsx), ingested 2026-08 — machine readable but not a live feed.',
-    },
   ],
 };
 export function countryBucket(country: string): string {
