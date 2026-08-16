@@ -67,10 +67,12 @@ export interface TrackerRow {
   approvalBody: string;
   campusGroup: string;
   mineralFocus: string[];
+  energySource: string | null;
   source: string | null;
   notionPublicUrl: string;
   hasCoords: boolean;
   notes: string;
+  lastEdited: string | null;
   inSubset: boolean;
   subsetReasons: string[];
 }
@@ -123,7 +125,7 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
     });
     if (!res.ok) throw new Error(`Notion query failed (${res.status}): ${await res.text()}`);
     const data = (await res.json()) as {
-      results: Array<{ id: string; properties: Record<string, NotionProp> }>;
+      results: Array<{ id: string; last_edited_time?: string; properties: Record<string, NotionProp> }>;
       has_more: boolean;
       next_cursor: string | null;
     };
@@ -156,10 +158,12 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
         approvalBody: plain(p['State approval body']),
         campusGroup: plain(p['Campus group']),
         mineralFocus: multiNames(p['Mineral Focus']),
+        energySource: label(selectName(p['Energy Source'])),
         source: urlVal(p['Source']),
         notionPublicUrl: 'https://studio-esem.notion.site/' + page.id.replace(/-/g, ''),
         hasCoords: num(p['Latitude']) !== null && num(p['Longitude']) !== null,
         notes: plain(p['Notes']),
+        lastEdited: page.last_edited_time ?? null,
       };
       const reasons = subsetReasons(base);
       rows.push({ ...base, inSubset: reasons.length > 0, subsetReasons: reasons });
@@ -189,7 +193,68 @@ export function slugForState(state: string | null): string | null {
   return hit ? hit[0] : null;
 }
 
-// Bucket an Ownership Country string the same way the map does.
+// Latest edit across all rows — the tracker's "last updated" stamp.
+export function lastUpdated(rows: TrackerRow[]): string | null {
+  let max: string | null = null;
+  for (const r of rows) if (r.lastEdited && (!max || r.lastEdited > max)) max = r.lastEdited;
+  return max;
+}
+
+// Bucket the Energy Source select the same way the map does, split into
+// on-grid / off-grid / not tracked for the state-sheet summary.
+export function energyBucket(v: string | null): string {
+  if (!v) return 'Not tracked';
+  if (v.includes('on-site')) return 'Off-grid — on-site renewable';
+  if (v.includes('Renewable')) return 'On-grid — renewable contracted';
+  if (v.includes('coal') || v.includes('gas')) return 'On-grid — coal/gas heavy';
+  if (v.includes('Grid')) return 'On-grid — mixed';
+  if (v.includes('Nuclear')) return 'Nuclear (proposed)';
+  return 'Not tracked';
+}
+export const ENERGY_BUCKET_ORDER = [
+  'Off-grid — on-site renewable',
+  'On-grid — renewable contracted',
+  'On-grid — mixed',
+  'On-grid — coal/gas heavy',
+  'Nuclear (proposed)',
+  'Not tracked',
+];
+
+// --- Machine readability of the planning record ---------------------------
+// What API / open-data infrastructure each state's planning record offers,
+// and how this tracker actually accessed it. Maintained by hand as sources
+// are worked; states not listed have not been assessed.
+export interface DataAccessEntry {
+  source: string;
+  access: 'api' | 'manual' | 'none';
+  note: string;
+}
+export const DATA_ACCESS: Record<string, DataAccessEntry[]> = {
+  'New South Wales': [
+    {
+      source: 'NSW Planning Portal (ePlanning / OnlineDA)',
+      access: 'api',
+      note: 'Public API, no key required — development applications retrievable programmatically. Accessed via API by this tracker.',
+    },
+    {
+      source: 'NSW Major Projects Portal (SSD / EIS documents)',
+      access: 'none',
+      note: 'No API. EIS documents and assessment records read manually from the web portal.',
+    },
+  ],
+  Victoria: [
+    {
+      source: 'DTP planning register / ministerial approvals',
+      access: 'none',
+      note: 'No public API. Approvals compiled manually from published lists and permit documents — not machine readable.',
+    },
+    {
+      source: 'City of Melbourne data-centre list',
+      access: 'manual',
+      note: 'Supplied as a spreadsheet (xlsx), ingested 2026-08 — machine readable but not a live feed.',
+    },
+  ],
+};
 export function countryBucket(country: string): string {
   const c = country.toLowerCase();
   if (!c) return 'Unknown';

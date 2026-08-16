@@ -158,6 +158,23 @@ export const th: React.CSSProperties = {
   borderBottom: PANEL_BORDER,
 };
 
+// "Last updated" stamp for sheet headers and footers. The sheets query the
+// tracker live, so the stamp is the latest edit in the source data.
+export function Updated({ date, style }: { date: string | null; style?: React.CSSProperties }) {
+  if (!date) return null;
+  const d = new Date(date).toLocaleDateString('en-AU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'Australia/Sydney',
+  });
+  return (
+    <div style={{ fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7568', ...style }}>
+      Data last updated {d} · figures generated live at page load
+    </div>
+  );
+}
+
 export function Footnote({ children }: { children: React.ReactNode }) {
   return <p style={{ color: DIM, fontSize: 11, lineHeight: 1.7, maxWidth: 720 }}>{children}</p>;
 }

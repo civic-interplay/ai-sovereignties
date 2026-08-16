@@ -272,8 +272,9 @@ export default async function Glossary() {
           planning-portal feeds for new contestation events. Model work is done with{' '}
           <span style={{ color: '#fff' }}>Anthropic Claude</span>: <code>claude-sonnet-5</code> codes the
           structure of each contestation source (who objects, on what grounds, how framed), and interactive
-          research, audit and build sessions run in Claude Code on Opus and Fable-class models. This is a
-          human-machine collaboration with a deliberate division of labour: the{' '}
+          research, audit and build sessions run in Claude Code on Opus and Fable-class models. This is a{' '}
+          <span style={{ color: '#fff' }}>civic AI collaboration</span> with a deliberate division of labour:
+          the{' '}
           <span style={{ color: '#fff' }}>human in the loop</span> designs the lenses and the four-register
           scheme, interprets what the data means, fact-checks claims against primary planning documents,
           decides what is published, and organises the interface and its legends; the models retrieve, code

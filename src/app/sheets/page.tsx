@@ -1,6 +1,6 @@
 // National summary sheet: the tracker's headline numbers, by state, with the
 // analysis-subset rule applied and stated. Data is fetched live from Notion.
-import { fetchTrackerRows, slugForState, countryBucket } from '@/lib/tracker';
+import { fetchTrackerRows, slugForState, countryBucket, lastUpdated } from '@/lib/tracker';
 import {
   SheetShell,
   SheetNav,
@@ -10,6 +10,7 @@ import {
   SectionHead,
   BarRow,
   Footnote,
+  Updated,
   ACCENT,
   CI_PERIWINKLE,
 } from './sheet-ui';
@@ -67,6 +68,7 @@ export default async function SheetsIndex() {
         title="The build-out in numbers"
         sub="Live figures from the Critical Infrastructure Tracker."
       />
+      <Updated date={lastUpdated(dc)} style={{ margin: '-16px 0 20px' }} />
 
       <Panel style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
         <Stat value={`${dc.length}`} label="Data centres tracked" />
@@ -176,6 +178,7 @@ export default async function SheetsIndex() {
           Browse the source data ↗
         </a>
       </Footnote>
+      <Updated date={lastUpdated(dc)} style={{ marginTop: 8 }} />
     </SheetShell>
   );
 }

@@ -5,6 +5,10 @@ import {
   fetchTrackerRows,
   STATE_SLUGS,
   countryBucket,
+  energyBucket,
+  ENERGY_BUCKET_ORDER,
+  lastUpdated,
+  DATA_ACCESS,
   type TrackerRow,
 } from '@/lib/tracker';
 import {
@@ -16,6 +20,7 @@ import {
   SectionHead,
   BarRow,
   Footnote,
+  Updated,
   ACCENT,
   CI_PERIWINKLE,
   td,
@@ -69,6 +74,25 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   const exempted = subset.filter((r) => r.publicNotice?.toLowerCase().includes('exempt')).length;
   const noticeUnknown = subset.length - exhibited - exempted;
   const mwDisclosed = subset.filter((r) => r.capacity !== null && r.capacity > 0).length;
+  const mwDisclosedPct = subset.length > 0 ? Math.round((mwDisclosed / subset.length) * 100) : 0;
+
+  const fastTracked = subset.filter(
+    (r) =>
+      r.governanceFlags.includes('Ministerial fast-track') ||
+      r.governanceFlags.includes('NSW State Significant Development'),
+  ).length;
+  const contested = subset.filter(
+    (r) => r.communityConcern?.includes('Active Opposition') || r.communityConcern?.includes('Emerging Concern'),
+  ).length;
+
+  const energyCounts = new Map<string, number>();
+  for (const r of subset) {
+    const b = energyBucket(r.energySource);
+    energyCounts.set(b, (energyCounts.get(b) ?? 0) + 1);
+  }
+
+  const updated = lastUpdated(dc);
+  const dataAccess = DATA_ACCESS[stateName] ?? [];
 
   const regCounts = new Map<string, number>();
   for (const r of subset) regCounts.set(registerBucket(r), (regCounts.get(registerBucket(r)) ?? 0) + 1);
@@ -88,6 +112,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
     <SheetShell>
       <SheetNav current="sheets" />
       <SheetTitle kicker="Australian Data Centres · state sheet" title={stateName} />
+      <Updated date={updated} style={{ margin: '-16px 0 20px' }} />
 
       <Panel style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
         <Stat value={`${subset.length}`} label="Subset sites" note={`${dc.length - subset.length} legacy colo excluded`} />
@@ -97,29 +122,17 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           note={`public for ${knownMW.length} of ${subset.length}`}
         />
         <Stat
-          value={`${mwDisclosed}/${subset.length}`}
+          value={`${mwDisclosed}/${subset.length} · ${mwDisclosedPct}%`}
           label="Disclose capacity"
           note="sites with any public MW figure"
         />
+        <Stat value={`${fastTracked}`} label="Fast-tracked" note="SSD / ministerial fast-track" />
+        <Stat value={`${contested}`} label="Contested" note="active or emerging opposition" />
         <Stat
           value={`${exempted}`}
           label="Notice-exempted"
           note={`${exhibited} exhibited · ${noticeUnknown} not recorded`}
         />
-      </Panel>
-
-      <SectionHead>Sovereignty registers (analysis subset)</SectionHead>
-      <Panel>
-        {['Productive', 'Operational', 'Financial', 'Rented', 'Not coded']
-          .filter((k) => (regCounts.get(k) ?? 0) > 0)
-          .map((k) => (
-            <BarRow key={k} label={k} count={regCounts.get(k) ?? 0} total={subset.length} color={REGISTER_COLORS[k]} />
-          ))}
-        <Footnote>
-          Register definitions and the precedence rule are in the{' '}
-          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>glossary</a>. &ldquo;Not coded&rdquo; rows are
-          pending the register coding pass and are excluded from any published register statistic.
-        </Footnote>
       </Panel>
 
       <SectionHead>Ultimate-owner country, by site count (analysis subset)</SectionHead>
@@ -140,6 +153,46 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
               }[country] ?? '#9aa5a0'
             } />
           ))}
+      </Panel>
+
+      <SectionHead>Energy sourcing — on-grid / off-grid / not tracked (analysis subset)</SectionHead>
+      <Panel>
+        {ENERGY_BUCKET_ORDER.filter((k) => (energyCounts.get(k) ?? 0) > 0).map((k) => (
+          <BarRow
+            key={k}
+            label={k}
+            count={energyCounts.get(k) ?? 0}
+            total={subset.length}
+            color={
+              {
+                'Off-grid — on-site renewable': ACCENT.green,
+                'On-grid — renewable contracted': '#3fd17a',
+                'On-grid — mixed': ACCENT.yellow,
+                'On-grid — coal/gas heavy': '#ff6b35',
+                'Nuclear (proposed)': '#b478ff',
+                'Not tracked': '#4a534e',
+              }[k] ?? '#9aa5a0'
+            }
+          />
+        ))}
+        <Footnote>
+          &ldquo;Not tracked&rdquo; means no public statement of the site&rsquo;s energy sourcing has been
+          found — an absence in the record, not evidence of clean or dirty supply.
+        </Footnote>
+      </Panel>
+
+      <SectionHead>Sovereignty registers (analysis subset)</SectionHead>
+      <Panel>
+        {['Productive', 'Operational', 'Financial', 'Rented', 'Not coded']
+          .filter((k) => (regCounts.get(k) ?? 0) > 0)
+          .map((k) => (
+            <BarRow key={k} label={k} count={regCounts.get(k) ?? 0} total={subset.length} color={REGISTER_COLORS[k]} />
+          ))}
+        <Footnote>
+          Register definitions and the precedence rule are in the{' '}
+          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>glossary</a>. &ldquo;Not coded&rdquo; rows are
+          pending the register coding pass and are excluded from any published register statistic.
+        </Footnote>
       </Panel>
 
       <SectionHead>All tracked sites</SectionHead>
@@ -195,6 +248,38 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
         &ldquo;—&rdquo; means not publicly recorded, never zero.
       </Footnote>
 
+      <SectionHead>Machine readability of the planning record</SectionHead>
+      <Panel>
+        <Footnote>
+          Whether this state&rsquo;s planning record can be monitored programmatically — the open-data
+          infrastructure behind these figures, and how this tracker actually accessed it.
+        </Footnote>
+        {dataAccess.length === 0 ? (
+          <div style={{ fontSize: 12, color: '#9aa39b' }}>Not yet assessed for this state.</div>
+        ) : (
+          dataAccess.map((d) => (
+            <div key={d.source} style={{ fontSize: 12.5, lineHeight: 1.7, margin: '8px 0' }}>
+              <span
+                aria-hidden
+                style={{
+                  display: 'inline-block',
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  marginRight: 8,
+                  background: d.access === 'api' ? ACCENT.green : d.access === 'manual' ? ACCENT.yellow : ACCENT.red,
+                }}
+              />
+              <span style={{ color: '#fff', fontWeight: 600 }}>{d.source}</span>{' '}
+              <span style={{ color: '#6b7568', textTransform: 'uppercase', fontSize: 10, letterSpacing: '0.08em' }}>
+                {d.access === 'api' ? 'API' : d.access === 'manual' ? 'Machine readable, no feed' : 'No API'}
+              </span>
+              <div style={{ color: '#9aa39b', marginLeft: 16 }}>{d.note}</div>
+            </div>
+          ))
+        )}
+      </Panel>
+
       {other.length > 0 && (
         <>
           <SectionHead>Related infrastructure in {stateName}</SectionHead>
@@ -210,6 +295,8 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           </Panel>
         </>
       )}
+
+      <Updated date={updated} style={{ marginTop: 28 }} />
     </SheetShell>
   );
 }
