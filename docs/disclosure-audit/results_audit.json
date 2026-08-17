@@ -20,18 +20,19 @@
   },
   {
    "application": "Data Centre — 148-158 O'Briens Road, Corio (Geelong)",
-   "permit_ref": "Ministerial/DFP permit reported issued 24 Oct 2025 (reported as NEXTDC GE1)",
+   "permit_ref": "PA2503895 (Next DC; ministerial register decision Permit 24/10/2025; Statutory Days: 28) — verified 2026-08-17 against the register officer report",
    "energy_disclosed": "partial",
-   "energy_detail": "4.4MW figure appears only in NEXTDC marketing/trade press (approval reportedly granted in ~28 days). Geelong Independent: none of the environmental/social assessments supporting the approval are publicly available; City of Greater Geelong objects to being sidelined.",
+   "energy_detail": "4.4MW figure appears only in NEXTDC marketing/trade press (approval reportedly granted in ~28 days). Geelong Independent: none of the environmental/social assessments supporting the approval are publicly available; City of Greater Geelong objects to being sidelined. [Verified 2026-08-17]: redacted officer report downloaded from register — zero MW mentions; acoustic EIA and SMP listed as supporting assessments but unpublished.",
    "water_disclosed": "no",
    "water_detail": "No water demand or cooling information in any public planning document; supporting assessments not published.",
-   "source_url": "https://www.datacenterdynamics.com/en/news/nextdc-breaks-ground-on-44mw-edge-data-center-in-geelong-australia/"
+   "source_url": "https://www.datacenterdynamics.com/en/news/nextdc-breaks-ground-on-44mw-edge-data-center-in-geelong-australia/",
+   "register_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/ac08c0c4-2a7f-f011-b4cc-00224811ea6c"
   },
   {
    "application": "Data Centre — 80 Kinloch Court (Hume)",
-   "permit_ref": "PA2403014 (DFP; decision 4/10/2024; Goodman site)",
+   "permit_ref": "PA2403014 (DFP; permit issued 17/9/2024 — 4/10/2024 was the decision date of a subsequent s71 permit-correction; amendment PA2403014-1 decided 20/8/2025; Goodman site)",
    "energy_disclosed": "no",
-   "energy_detail": "Redacted delegate report (public, 5.8MB) searched: two buildings, substation, 250kL+330kL diesel storage — no MW/IT-load figure anywhere.",
+   "energy_detail": "Redacted delegate report (public, 5.8MB) searched: two buildings, substation, 250kL+330kL diesel storage — no MW/IT-load figure anywhere. Substation is 8,000 sqm; DEC threshold 28.4°C ambient. [Corrected 2026-08-17, adversarial verification]: register delegate report MD5-identical to local copy; all content details re-verified; date corrected from 4/10/2024.",
    "water_disclosed": "yes",
    "water_detail": "Delegate report discloses cooling design: free cooling with supplementary Direct Evaporative Cooling above ambient thresholds, hot/cold-aisle config, measures 'reducing overall water consumption'. No annual volume stated.",
    "source_url": "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/2b5ec06b-0b35-ef11-8e4e-002248969b00"
@@ -39,11 +40,12 @@
   {
    "application": "Data Centre — 140-204 Western Avenue, Westmeadows",
    "permit_ref": "PA2302140 (+142/43), gazetted 21 Dec 2023; applicant MAB/Maizwest",
-   "energy_disclosed": "no",
-   "energy_detail": "Public record is the Gazette notice and DTP consultation page, which exhibited only a traffic report (Nov 2022). No MW or energy data in any exhibited document.",
-   "water_disclosed": "no",
-   "water_detail": "No water or cooling information exhibited; consultation documents were traffic reports only.",
-   "source_url": "https://www.gazette.vic.gov.au/gazette/Gazettes2023/GG2023S697.pdf"
+   "energy_disclosed": "unknown",
+   "energy_detail": "[Corrected 2026-08-17, adversarial verification]: the DTP consultation page exhibited ~26 documents (NOT only a traffic report), including Architectural Plans, a Sustainability Management Plan (Datacentre), a Waste Management Plan, an Environmental Summary Report and a Stormwater Management Strategy — all since REMOVED from the live planning.vic.gov.au site (403/404), surviving only in the Wayback Machine. Whether any exhibited document disclosed MW/energy is UNVERIFIED pending retrieval of the archived Sustainability Management Plan (Wayback outage 2026-08-17). Prior \"no energy data\" claim withdrawn until checked.",
+   "water_disclosed": "unknown",
+   "water_detail": "[Corrected 2026-08-17, adversarial verification]: as per energy — the exhibited Sustainability Management Plan and Stormwater Strategy were removed from the live site and remain unchecked in the archive. Prior \"no water or cooling information\" claim withdrawn until the archived documents are retrieved and searched.",
+   "source_url": "https://www.gazette.vic.gov.au/gazette/Gazettes2023/GG2023S697.pdf",
+   "archived_exhibition_url": "https://web.archive.org/web/20240718152516/https://www.planning.vic.gov.au/__data/assets/pdf_file/0027/670950/Community-Consultation-140-204-Western-Avenue-Westmeadows-Sustainability-Management-Plan-Datacentre.pdf"
   },
   {
    "application": "Data Centre — South Morang (McDonalds Rd / Plenty Rd, PA2402997)",
@@ -74,9 +76,9 @@
   },
   {
    "application": "CDC — Laverton North Campus",
-   "permit_ref": "DFP application lodged Oct 2024 (ref not indexed); related AusNet connection permit PA2504040",
+   "permit_ref": "Council application WYP14790/24 (PlanningAlerts 3206534, lodged 2 Oct 2024) — NOT a DFP/ministerial application. [Corrected 2026-08-17, adversarial verification]: PA2504040 removed from this row; that AusNet connection permit serves the anonymised \"PAC1 Leakes Road Data Centre\" at 114-146 Leakes Rd TRUGANINA (a different site, consistent with the 171 Leakes Rd/Aurecon permit PA2403416), not CDC Laverton North (20-38 Leakes Rd).",
    "energy_disclosed": "partial",
-   "energy_detail": "150MW initial / 400+MW figures appear in CDC media releases and Invest Victoria promotion, not the planning record. PlanningAlerts text is generic 'utility installation (data centre)'; even AusNet's terminal-station connection permit states no MW.",
+   "energy_detail": "150MW initial / 400+MW figures appear in CDC media releases and Invest Victoria promotion, not the planning record. PlanningAlerts text is generic \"utility installation (data centre)\" with no MW. [Corrected 2026-08-17, adversarial verification]: the earlier reference to AusNet permit PA2504040 as related was wrong — different site; claim corrected.",
    "water_disclosed": "partial",
    "water_detail": "CDC corporate materials describe closed-loop low-water cooling; nothing about cooling or water demand in the locatable planning record.",
    "source_url": "https://www.planningalerts.org.au/applications/3206534"
@@ -147,5 +149,5 @@
    "source_url": "https://www.planningportal.nsw.gov.au/major-projects/projects/marsden-park-data-centre"
   }
  ],
- "headline": "Of 13 Victorian approvals audited, 0 disclosed expected grid load (MW) in the public planning record and none published a water-demand figure — only 1 (80 Kinloch Ct) even described its cooling method — whereas all 3 NSW SSD comparators publish both MW and water figures in exhibited EIS documents. (A 14th row, 130 Cherry Lane PA2402783, was removed on verification: it is AusNet's Altona BESS, not a data centre — and notably its MW WAS disclosed.)"
+ "headline": "Of 13 Victorian approvals audited, 0 disclosed expected grid load (MW) in the public planning record and none published a water-demand figure — only 1 (80 Kinloch Ct) even described its cooling method — whereas all 3 NSW SSD comparators publish both MW and water figures in exhibited EIS documents. (A 14th row, 130 Cherry Lane PA2402783, was removed on verification: it is AusNet's Altona BESS, not a data centre — and notably its MW WAS disclosed.) [Caveat added 2026-08-17: the Westmeadows row is downgraded to UNKNOWN — its consultation page exhibited ~26 documents including a Sustainability Management Plan, all since removed from the live site and unchecked in the web archive; the disclosure tally excludes it until the archived documents are searched.]"
 }
