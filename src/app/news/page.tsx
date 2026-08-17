@@ -18,6 +18,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   title: 'News Feed — Australian Data Centres',
   description: 'Press coverage, submissions and public statements around tracked data-centre sites, updated fortnightly.',
+  alternates: { types: { 'application/rss+xml': '/news/feed.xml' } },
 };
 
 function stanceColor(stance: string | null): string {
@@ -154,6 +155,12 @@ export default async function News() {
         (<em>announced, proposed, planned, lodged, approved, development application, to build, hyperscale</em>).
         Forums, conference panels and broadcast appearances are not indexed by this sweep — they are added
         manually.
+      </Footnote>
+      <Footnote>
+        Subscribe to this feed in any news reader:{' '}
+        <a href="/news/feed.xml" style={{ color: CI_PERIWINKLE }}>
+          RSS / XML feed ↗
+        </a>
       </Footnote>
     </SheetShell>
   );
