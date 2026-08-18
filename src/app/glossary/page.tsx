@@ -202,8 +202,11 @@ export default async function Glossary() {
       <SectionHead>Planning & disclosure</SectionHead>
       <Panel>
         <Term name="Planning pathway">
-          the statutory route the approval took, as recorded on the state planning register (e.g. Victorian
-          ministerial fast-track, NSW State Significant Development, standard council DA).
+          the statutory route the approval took, as recorded on the state planning register: Local council ·
+          State assessed · Ministerial fast-track · Federal assessment · Not applicable. The vocabulary is
+          deliberately state-neutral, because each state names its own routes differently — "State assessed"
+          covers NSW State Significant Development, Western Australia&rsquo;s Part 17 Significant Development
+          Pathway and their equivalents, with the precise local instrument named in the row&rsquo;s notes.
         </Term>
         <Term name="Public notice">
           whether the application was publicly exhibited: Exhibited (open to submissions) or Exempted (approved
@@ -211,7 +214,7 @@ export default async function Glossary() {
         </Term>
         <Term name="State fast-tracked" color={ACCENT.yellow}>
           map overlay: the State, not the local council, is the consent authority — the pathway is State
-          significant development or ministerial fast-track / call-in. It does <em>not</em> mean the
+          assessed or ministerial fast-track / call-in. It does <em>not</em> mean the
           application escaped public exhibition: NSW State Significant Development is exhibited, and its
           documents are usually the fullest public record a project leaves. Whether an application was
           exhibited is a separate field — see Public notice.

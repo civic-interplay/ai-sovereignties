@@ -219,8 +219,14 @@ export function lastUpdated(rows: TrackerRow[]): string | null {
 // the figure from them would silently drop it to zero the moment they go.
 // Planning Pathway is the field of record, and it is also more complete:
 // six rows carry the pathway without ever having been given the flag.
+// "State assessed" is deliberately state-neutral. It covers NSW State
+// Significant Development, WA's Part 17 Significant Development Pathway, SA's
+// s130/s131 routes and their equivalents — the precise local instrument is
+// named in the row's notes. The vocabulary used to say "State significant
+// development", which is NSW statute, and applying it nationally put NSW
+// terminology on three Western Australian rows that have no such pathway.
 export const STATE_ASSESSED_PATHWAYS = new Set([
-  'State significant development',
+  'State assessed',
   'Ministerial fast-track',
 ]);
 

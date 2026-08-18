@@ -1,0 +1,127 @@
+[
+ {
+  "id": "3be18df0-b775-81aa-9f6e-f08956c93b4b",
+  "name": "Stockland / Fife Capital \u2014 90 Aldington Road Data Centre, Kemps Creek (SSD)",
+  "was": "State significant development"
+ },
+ {
+  "id": "3be18df0-b775-8147-a032-fcc658591920",
+  "name": "AirTrunk \u2014 Kurri Kurri Data Centre (SSD-128819490)",
+  "was": "State significant development"
+ },
+ {
+  "id": "3be18df0-b775-81b4-bf7a-d0c5119f57ce",
+  "name": "[REJECTED] duplicate \u2014 NEXTDC S5 (merged into existing row 2026-08-16)",
+  "was": "State significant development"
+ },
+ {
+  "id": "3a918df0-b775-81a3-b71d-cb90d0b75d1c",
+  "name": "AirTrunk \u2014 Mars Road / Apollo Place (87\u201391 Mars Road, Lane Cove West)",
+  "was": "State significant development"
+ },
+ {
+  "id": "3a918df0-b775-81e8-9811-d2ff929146e1",
+  "name": "Goodman \u2014 Project Mars (12 Mars Road, Lane Cove West)",
+  "was": "State significant development"
+ },
+ {
+  "id": "39a18df0-b775-8196-b83c-d9d92193bfc6",
+  "name": "GreenSquareDC WAi1 \u2014 Hazelmere (Perth) [withdrawn]",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-8100-b983-ccea31de5a7b",
+  "name": "Lane Cove Data Centre (Mars Road)",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-8120-8aa7-fd591aa6d788",
+  "name": "NEXTDC S4 \u2014 Fairfield",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-8134-a27a-ddea4af52531",
+  "name": "GreenSquare DC \u2014 SYD1 Stage 2",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-813d-91d2-ef0056f7938d",
+  "name": "Glendenning Road Data Centre",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-8142-9297-ebf49484e697",
+  "name": "Microsoft \u2014 Honeman Close Data Centre",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-8145-aa97-c8b788b76ae5",
+  "name": "NEXTDC S5 \u2014 269 Lane Cove Road, Macquarie Park (SSD)",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-814a-bbdf-f72a31ad123b",
+  "name": "Goodman \u2014 Project Atlas (Blacktown)",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-814e-a816-f058e463ebff",
+  "name": "Stack Infrastructure \u2014 78 Lockwood Road (Penrith)",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-8156-910b-d27fa40f233b",
+  "name": "Stockland \u2014 NSW data centres (Wetherill Park / Kemps Creek / Ryde)",
+  "was": "State significant development"
+ },
+ {
+  "id": "38e18df0-b775-81ef-8b2a-da8bbdf242a3",
+  "name": "AIMS \u2014 Bella Vista Data Centre Campus",
+  "was": "State significant development"
+ },
+ {
+  "id": "38d18df0-b775-8128-b14a-dea99cd0e77e",
+  "name": "AirTrunk Mamre Road (Kemps Creek)",
+  "was": "State significant development"
+ },
+ {
+  "id": "33918df0-b775-8113-960d-e922e9474d72",
+  "name": "AirTrunk Sydney (SYD01)",
+  "was": "State significant development"
+ },
+ {
+  "id": "33918df0-b775-812c-b2b9-cf6cbbf857c4",
+  "name": "Lynas Rare Earths \u2014 Mt Weld Mine",
+  "was": "State significant development"
+ },
+ {
+  "id": "33918df0-b775-813d-b5cc-cb163b3f15ef",
+  "name": "AWS \u2014 Asia Pacific Sydney Region",
+  "was": "State significant development"
+ },
+ {
+  "id": "33918df0-b775-8197-b2ed-f609e48a800a",
+  "name": "NextDC S1 \u2014 Sydney",
+  "was": "State significant development"
+ },
+ {
+  "id": "33918df0-b775-81a9-815e-c6221322f31c",
+  "name": "Westech Energy \u2014 Pilbara Data Centre",
+  "was": "State significant development"
+ },
+ {
+  "id": "32a18df0-b775-8144-a9dd-da7f8cbd28ed",
+  "name": "CDC \u2014 Marsden Park Hyperscale (Western Sydney)",
+  "was": "State significant development"
+ },
+ {
+  "id": "32a18df0-b775-81ff-a6f9-cb27a31447ae",
+  "name": "NEXTDC S7 \u2014 Eastern Creek AI Campus (OpenAI)",
+  "was": "State significant development"
+ },
+ {
+  "id": "30118df0-b775-81ae-a6d3-e17f1381f1dd",
+  "name": "Australian Strategic Minerals \u2014 Dubbo Project",
+  "was": "State significant development"
+ }
+]

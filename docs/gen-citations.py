@@ -208,7 +208,10 @@ def main():
 
     def add(url, **kw):
         u = norm(url)
-        if not u.startswith("http") or "." not in host(u):
+        # a real host, not an ellipsis or placeholder left in prose
+        if not u.startswith("http") or not re.fullmatch(
+                r"[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*"
+                r"\.[a-z]{2,}", host(u)):
             return
         rec = records.setdefault(u, {"url": u, "kw": set(), "n1": [], "cited_in": set()})
         for k, v in kw.items():
