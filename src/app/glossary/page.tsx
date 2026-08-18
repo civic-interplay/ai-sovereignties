@@ -218,6 +218,16 @@ export default async function Glossary() {
           and objections, council minutes and motions, merit appeals (Land &amp; Environment Court / VCAT),
           parliamentary petitions, or media / FOI.
         </Term>
+        <Term name="Governance flags" color={ACCENT.yellow}>
+          analyst findings about <em>how</em> an approval was handled, recorded per site and shown in the map
+          popup beneath the pathway, as tags on the state data sheets, and as a filter under Planning pathway
+          on the map. The vocabulary is: Ministerial fast-track · NSW State Significant Development · Bypassed
+          local council · Community consultation lacking · Transparency deficit · Social licence contested ·
+          First Nations engagement unclear · FIRB scrutiny · Sovereign compute claim · Open data commitment ·
+          Worker transition plan. They are not all criticisms — the last two record good practice. A flag is a
+          judgement about process, not a legal finding, and an absent flag means the row has not been assessed
+          on that dimension rather than that it passed.
+        </Term>
         <Term name="Announcement vs approval date">
           the two clocks of a project: when the company announced it, and when the planning system approved it.
           Where announcement precedes approval by years, the project was marketed before it was assessed.
@@ -226,6 +236,14 @@ export default async function Glossary() {
           planned or approved electrical load in megawatts, as stated in planning documents (EIS), company
           releases, or credible reporting — recorded at the campus level unless stages are separately approved.
           Null when no public figure exists.
+        </Term>
+        <Term name="Circle size on the map">
+          radius carries disclosed capacity, scaling from 30MW up to 1200MW, so the gigawatt campuses read as
+          larger than the rest rather than clamping to one maximum dot. Sites with <em>no</em> disclosed
+          capacity are drawn at a separate, deliberately smaller fixed size and are named in the map key —
+          they are not sized as though they were small. Most tracked sites fall into that group, which is the
+          disclosure finding rather than a gap in the research: for the audited Victorian approvals, no
+          megawatt figure exists in the public planning record at all.
         </Term>
       </Panel>
 
@@ -263,6 +281,13 @@ export default async function Glossary() {
           Human-verified with a source URL. The live figures on these sheets do not yet meet that bar — they are
           working numbers from a database under active verification, and each row&rsquo;s status is visible in
           the tracker.
+        </Term>
+        <Term name="Pending review">
+          shown on a news-feed item whose confidence is below 0.6: a language model classified it and no human
+          has checked it yet. Most often this is not doubt about the content but about attribution — an item
+          the pipeline could not tie to a specific tracked site has its confidence capped automatically, so
+          state-wide policy stories are flagged by default. Hover the badge on the news feed for the item&rsquo;s
+          own score.
         </Term>
         <Term name="Source">
           the primary public document for the row&rsquo;s core claim — planning register entry, EIS, company

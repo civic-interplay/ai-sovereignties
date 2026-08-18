@@ -125,6 +125,9 @@ const STATUS_INK_SOFT = '#ffffff';
 // difference. The dark hairline stays as the separator on bright fills, and a
 // soft same-hue halo behind the pip gives it a small glow at metro zoom.
 const OVERLAY_PIP = '#ff47e5';
+// Governance flags — analyst findings about how an approval was handled. Same
+// yellow the data sheets use for them, so the two views read as one vocabulary.
+const FLAG_INK = '#ffd23f';
 // Emphasis for a "hot" figure inside a popup (e.g. a stressed water reading).
 // Popup text only — never painted on the map, so it cannot collide with a lens
 // fill. Kept as a named token so it is not mistaken for a spare category hue.
@@ -439,6 +442,13 @@ export default function Map() {
   // Collapsed by default: seven chips is a lot of column for a control that is
   // only reached for occasionally.
   const [stageOpen, setStageOpen] = useState(false);
+  // Governance flags: analyst findings about how an approval was handled.
+  // Selecting one or more filters the map to sites carrying any of them.
+  const [flagFilter, setFlagFilter] = useState<Set<string>>(new Set());
+  const [flagsOpen, setFlagsOpen] = useState(false);
+  // Flags actually present in the live data, so the control never offers a
+  // filter that would empty the map.
+  const [flags, setFlags] = useState<string[]>([]);
   // One section open at a time; null means the rail is fully collapsed.
   const [openSection, setOpenSection] = useState<string | null>(null);
   // Phone only: the control stack collapses so the map is what you see first.
@@ -593,6 +603,14 @@ export default function Map() {
         known: data.features.filter((f) => typeof f.properties?.capacity === 'number').length,
         total: data.features.length,
       });
+      const flagSet = new Set<string>();
+      for (const f of data.features) {
+        for (const g of String(f.properties?.governanceFlags ?? '').split(',')) {
+          const t = g.trim();
+          if (t) flagSet.add(t);
+        }
+      }
+      setFlags([...flagSet].sort());
 
       m.addSource('sites', { type: 'geojson', data });
 
@@ -926,20 +944,28 @@ export default function Map() {
     m.setLayoutProperty('sites-named-platform-halo', 'visibility', showNamedPlatform ? 'visible' : 'none');
   }, [showNamedPlatform]);
 
-  // Re-apply the stage filter to every site layer whenever the selection changes.
+  // Re-apply the stage and governance-flag filters to every site layer whenever
+  // either selection changes. The two compose: stage AND (any selected flag).
   useEffect(() => {
     const m = map.current;
     if (!m || !m.getLayer('sites-core')) return;
     const keys = [...stageFilter];
+    const chosen = [...flagFilter];
     for (const [id, base] of Object.entries(SITE_LAYER_FILTERS)) {
       if (!m.getLayer(id)) continue;
       const stageExpr = keys.length
         ? ['in', ['get', 'stageKey'], ['literal', keys]]
         : null;
-      const combined = stageExpr && base ? ['all', base, stageExpr] : (stageExpr ?? base);
+      // `governanceFlags` is a comma-joined string, so match on substring —
+      // ['in', needle, haystack] is a substring test when the haystack is text.
+      const flagExpr = chosen.length
+        ? ['any', ...chosen.map((f) => ['in', f, ['coalesce', ['get', 'governanceFlags'], '']])]
+        : null;
+      const parts = [base, stageExpr, flagExpr].filter(Boolean);
+      const combined = parts.length > 1 ? ['all', ...parts] : (parts[0] ?? null);
       m.setFilter(id, (combined ?? null) as unknown as mapboxgl.FilterSpecification);
     }
-  }, [stageFilter]);
+  }, [stageFilter, flagFilter]);
 
   // Adopt the view named in the URL on mount, and keep the two in step when the
   // reader uses the browser's back/forward buttons.
@@ -1251,7 +1277,7 @@ export default function Map() {
           </button>
         </Section>
 
-        <Section title="Planning priority" {...sectionProps('planning', showContested || showFastTracked)} footer={<>{contestedDef}{fastTrackedDef}</>}>
+        <Section title="Planning pathway" {...sectionProps('planning', showContested || showFastTracked)} footer={<>{contestedDef}{fastTrackedDef}</>}>
           <button
             type="button"
             style={tab(showContested)}
@@ -1268,6 +1294,62 @@ export default function Map() {
           >
             State fast-tracked
           </button>
+          {/* Governance flags filter. Contested and fast-tracked above are
+              overlays (they mark sites without hiding any); this one filters,
+              because the question it answers is "which sites carry this
+              finding" rather than "where are they in the whole set". */}
+          {flags.length > 0 && (
+            <button
+              type="button"
+              aria-expanded={flagsOpen}
+              onClick={() => setFlagsOpen((v) => !v)}
+              style={{ ...tab(flagFilter.size > 0), color: flagFilter.size > 0 ? undefined : CI_PERIWINKLE, letterSpacing: '0.06em' }}
+            >
+              Governance flags{flagFilter.size > 0 ? ` (${flagFilter.size})` : ''} {flagsOpen ? '▴' : '▾'}
+            </button>
+          )}
+          {flagsOpen && flags.length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, width: '100%', paddingTop: 2 }}>
+              {flags.map((f) => {
+                const on = flagFilter.has(f);
+                return (
+                  <button
+                    key={f}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() =>
+                      setFlagFilter((prev) => {
+                        const next = new Set(prev);
+                        if (next.has(f)) next.delete(f);
+                        else next.add(f);
+                        return next;
+                      })
+                    }
+                    style={{ ...tab(on), fontSize: 10, letterSpacing: '0.04em' }}
+                  >
+                    <span
+                      aria-hidden
+                      style={{
+                        display: 'inline-block', width: 5, height: 5, borderRadius: '50%',
+                        background: FLAG_INK, marginRight: 5, verticalAlign: 'middle',
+                        opacity: on ? 1 : 0.5,
+                      }}
+                    />
+                    {f}
+                  </button>
+                );
+              })}
+              {flagFilter.size > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setFlagFilter(new Set())}
+                  style={{ ...tab(false), fontSize: 10, color: CI_PERIWINKLE, letterSpacing: '0.04em' }}
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+          )}
         </Section>
 
         {/* The coarse cut. Mutually exclusive by construction: selecting one
@@ -1443,6 +1525,21 @@ export default function Map() {
                   return sel.map((k) => STAGE_LABELS[k] ?? k).join(', ');
                 })()}
               </span>
+            </div>
+          )}
+
+          {flagFilter.size > 0 && (
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, fontSize: 11.5 }}>
+              <span
+                aria-hidden
+                style={{
+                  width: 9, textAlign: 'center', flex: '0 0 auto',
+                  color: FLAG_INK, fontSize: 9,
+                }}
+              >
+                ●
+              </span>
+              <span>Flagged: {[...flagFilter].join(', ')}</span>
             </div>
           )}
 
