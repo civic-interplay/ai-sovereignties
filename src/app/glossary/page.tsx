@@ -210,8 +210,11 @@ export default async function Glossary() {
           without public exhibition). Blank = not yet checked against the register.
         </Term>
         <Term name="State fast-tracked" color={ACCENT.yellow}>
-          map overlay: assessed as NSW State Significant Development, or approved via ministerial fast-track /
-          call-in — i.e. outside normal public consultation.
+          map overlay: the State, not the local council, is the consent authority — the pathway is State
+          significant development or ministerial fast-track / call-in. It does <em>not</em> mean the
+          application escaped public exhibition: NSW State Significant Development is exhibited, and its
+          documents are usually the fullest public record a project leaves. Whether an application was
+          exhibited is a separate field — see Public notice.
         </Term>
         <Term name="Contested" color={ACCENT.red}>
           map overlay: active or emerging community opposition, evidenced through public-exhibition submissions
@@ -221,12 +224,12 @@ export default async function Glossary() {
         <Term name="Governance flags" color={ACCENT.yellow}>
           analyst findings about <em>how</em> an approval was handled, recorded per site and shown in the map
           popup beneath the pathway, as tags on the state data sheets, and as a filter under Planning pathway
-          on the map. The vocabulary is: Ministerial fast-track · NSW State Significant Development · Bypassed
-          local council · Community consultation lacking · Transparency deficit · Social licence contested ·
-          First Nations engagement unclear · FIRB scrutiny · Sovereign compute claim · Open data commitment ·
-          Worker transition plan. They are not all criticisms — the last two record good practice. A flag is a
-          judgement about process, not a legal finding, and an absent flag means the row has not been assessed
-          on that dimension rather than that it passed.
+          on the map. The vocabulary is: Transparency deficit · Community consultation lacking · First Nations
+          engagement unclear · FIRB scrutiny. Each records a gap in how a decision was made, not a legal
+          finding, and an absent flag means the row has not been assessed on that dimension rather than that
+          it passed. Flags that merely restated the statutory route — ministerial fast-track, State
+          significant development, bypassed local council — were retired once Planning pathway carried that
+          information on its own.
         </Term>
         <Term name="Announcement vs approval date">
           the two clocks of a project: when the company announced it, and when the planning system approved it.

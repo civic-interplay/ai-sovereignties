@@ -9,6 +9,7 @@ import {
   ENERGY_BUCKET_ORDER,
   lastUpdated,
   DATA_ACCESS,
+  isStateAssessed,
   type TrackerRow,
 } from '@/lib/tracker';
 import {
@@ -80,11 +81,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   const mwDisclosed = subset.filter((r) => r.capacity !== null && r.capacity > 0).length;
   const mwDisclosedPct = subset.length > 0 ? Math.round((mwDisclosed / subset.length) * 100) : 0;
 
-  const fastTracked = subset.filter(
-    (r) =>
-      r.governanceFlags.includes('Ministerial fast-track') ||
-      r.governanceFlags.includes('NSW State Significant Development'),
-  ).length;
+  const fastTracked = subset.filter((r) => isStateAssessed(r.pathway)).length;
   const contested = subset.filter(
     (r) => r.communityConcern?.includes('Active Opposition') || r.communityConcern?.includes('Emerging Concern'),
   ).length;

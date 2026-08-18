@@ -1,0 +1,1167 @@
+PA2504032 – 1 Oroya
+Drive and 435 Mount
+Atkinson Road,
+Truganina
+
+
+
+
+                                Officer Assessment Report
+                          Development Approvals & Design
+
+
+
+
+               OFFICIAL
+Executive Summary
+
+ Key Information          Details
+
+ Application No:          PA2504032
+
+ Received:                28/10/2025
+
+ Statutory Days:          41
+
+ Applicant:               The Trust Company (Australia) Limited as trustee of GDCF Truganina Trust c/- Aurecon
+
+ Planning Scheme:         Melton
+
+ Land Address:            1 Oroya Drive and 435 Mount Atkinson Road, Truganina
+
+ Proposal:                Use and development of the site for a data centre and display of directional signage
+
+ Development Value:       $ 422,000,000 million
+
+ Why is the Minister      In accordance with the schedule to Clause 72.01 of the Planning Scheme, the Minister for Planning
+ responsible?             is the responsible authority for an application for use and development of land to which Clause
+                          53.22 – Significant Economic Development applies.
+
+ Why is a permit          Clause           Control                                  Trigger
+ required?
+
+ Zone:                    Clause           Urban Growth Zone – Schedule             To use the land for a data centre
+                          37.07-9          9
+
+                                                                                    Construct a building or construct or carry out
+                                           Urban Growth Zone – Schedule
+                          Clause                                                    works
+                                           9
+                          37.07-11
+
+
+                          Clause           Industrial Zone 1                        To use the land for the purposes of a data centre
+                          33.01-1
+
+
+                          Clause
+                                           Industrial Zone 1                        Construct a building or construct or carry out
+                          33.01-4
+                                                                                    works
+
+ Overlays:                Clause 44.11     Infrastructure Contributions             No permit required
+                                           Overlay – Schedule 3
+
+ Particular Provisions:   Clause           Signs                                    For the display of more than one directional sign
+                          52.05-12
+                          Clause 52.06     Car parking                              No permit required
+                          Clause 52.34
+                                           Bicycle facilities                       No permit required
+
+ Cultural Heritage:       A CHMP is not required as the site is not within an area of Aboriginal Cultural Heritage Sensitivity.
+
+ Total Site Area:         20.7             hectares
+
+ Height:                  34m              metres
+
+ Land Uses:                    Dwellings               Office                     Retail                            Other
+
+                                    -                      -                         -                          Data centre
+
+ Parking:                  Cars                    Motorcycles                                            Bicycles
+
+                          58 spaces                      N/A                                               16 spaces
+
+
+
+
+                                                                PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina     Page 1
+
+                                                         OFFICIAL
+Referral Authorities:   WorkSafe Victoria (s55 – determining) – no objection
+                        AusNet Transmission Group (s55 – determining) – no objection
+                        Melton City Council (informal) – no objection
+                        Fire Rescue Victoria (informal) – no response
+                        Melbourne Water (informal) – no objection
+                        Greater Western Water (informal) – no objection
+
+Public Notice:          Notice of the application under section 52 of the Act was not required, other than to Council,
+                        because:
+                            •    Pursuant to Clause 37.07-13, an application under any provision of this scheme which is
+                                 generally in accordance with the precinct structure plan applying to the land is exempt from
+                                 the notice requirements of section 52(1)(a), (b) and (d), the decision requirements of
+                                 section 64(1), (2) and (3) and the review rights of section 82(1) of the Act, unless the
+                                 schedule to this zone specifies otherwise.
+
+                            •    There are no specific requirements in Schedule 9 to the UGZ relevant to ‘industrial
+                                 employment’ land. The proposal is generally in accordance with the PSP as detailed further
+                                 in this report, and as such is exempt from the notice requirements.
+
+                            •    Display of more than one directional sign is not exempt under Clause 52.05. It was
+                                 considered, however, display of the proposed signs would not cause material detriment to
+                                 any person and therefore no notice was required.
+Delegates List:         Approval to determine under delegation received on 19 December 2025.
+
+
+
+
+                                                         PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 2
+
+                                                     OFFICIAL
+Proposal
+
+Application Documents
+1. The key documents in the application process were as follows:
+
+      Documents                                                    Description
+
+      Decision Plans                                               Architectural Plans prepared by Woods Bagot, dated 24/10/2025
+
+                                                                   Landscape Report and Plan prepared by Aurecon, dated
+                                                                   24/10/2024
+
+      Other Assessment Documents                                   Aboriginal and Historic Heritage Due Diligence Assessment
+                                                                   prepared by Aurecon, dated 24/10/2024
+
+                                                                   Contaminated Land Report prepared by Aurecon, dated
+                                                                   24/10/2024
+
+                                                                   Preliminary Hazard Analysis prepared by Aurecon, dated
+                                                                   4/5/2026
+
+                                                                   Ecology Impact Assessment report (Memorandum) prepared by
+                                                                   Aurecon, dated 24/10/2024
+
+                                                                   Green Travel Plan prepared by Aurecon, dated 24/10/2024
+
+                                                                   Environmental Noise Report prepared by Aurecon, dated
+                                                                   24/10/2024
+
+                                                                   Town Planning Report prepared by Aurecon, dated 24/10/2024
+
+                                                                   Quantity Surveyor Report, prepared by Linesight, dated
+                                                                   27/6/2025
+                                                                   Sustainability Management Plan prepared by Aurecon, dated
+                                                                   24/10/2024
+
+                                                                   Traffic Impact Assessment prepared by Aurecon, dated
+                                                                   24/10/2024
+
+                                                                   Stormwater Management Plan prepared by Aurecon, dated
+                                                                   2/4/2026
+
+                                                                   Urban Context and Architectural Design Report prepared by
+                                                                   Woods Bagot, dated 24/10/2025
+
+                                                                   Waste Management Plan prepared by Aurecon, dated
+                                                                   24/10/2024
+
+
+2. The subject of this report is the decision plans (as described above).
+
+
+
+
+                                                           PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 3
+
+                                                       OFFICIAL
+Proposal Summary
+
+
+
+
+Figure 1: Site plan (Source: Application)
+
+3. Specific details of the application include:
+
+         •    The use and development of the site for a data centre with ancillary offices, the display of directional signage
+              and car parking. Ancillary works to support the development include a guard house, water tanks and plant
+              enclosures.
+
+         •    The data centre will have a total gross floor area of 43,356 sqm and a maximum building height of 34m
+              (equivalent to 8 storeys). The building will be setback 28.1m from the frontage to Riding Boundary Road and
+              27.9m to the east boundary.
+
+         •    The building will feature a range of external materials including precast concrete panels in natural and brown
+              finishes, with textured finishes to the office elevations. Generator flue stacks, which form a dominant part of
+              the built form on the east and west elevations, will be finished in white steel sheet cladding. Rooftop plant will
+              be screened by light grey profiled steel cladding.
+
+         •    The data centre will operate 24 hours a day, 7 days a week with approximately 48 staff members and 12 off-
+              peak skeleton staff to maintain security and operations.
+
+         •    Each building will be accessible by internal two-way access roads and serviced by attendant car parks with a
+              total of 58 car parking spaces (for staff and visitors), bike spaces and loading facilities.
+
+         •    Landscaped setbacks will be provided along both site frontages incorporating low groundcovers through to
+              canopy tree plantings. Throughout the site the development will feature a mix of low-level landscaping,
+              shade-trees and large trees around the car parking areas and accessways.
+
+
+
+
+                                                              PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 4
+
+                                                           OFFICIAL
+         •   A 3m high palisade-style natural galvanised security fence around the perimeter of the site. Lighting will also
+             be featured around the site.
+
+         •   Two direction signs to guide traffic flow through the site are located at the entry points to the site.
+
+4. The indicative footprint of a future substation is shown in the southeast corner of the site, but does not form part of
+   the subject application. Backup power will be provided by diesel electrical generators located within the external plant
+   area.
+
+5. The data centre is also proposed to be connected to temporary drainage assets, which have been approved under
+   the preceding subdivision permit PA2022/7987/1, which also does not form part of the subject application.
+
+6. Stormwater for the proposal is proposed to be managed through swale drains along the proposed internal
+   accessways and carparking areas, which will be directed to a future retarding basin/wetland to be constructed
+   adjacent to the southeast corner of the data centre site.
+
+7. The applicant has provided the following concept images of the proposal:
+
+
+
+
+Figure 2: 3D image – Southwest perspective (Source: Application)
+
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 5
+
+                                                            OFFICIAL
+Figure 3: 3D Render image – Eastern façade (Source: Application)
+
+
+
+
+Figure 4: 3D Render image – Southeastern façade (Source: Application)
+
+
+
+
+Figure 5: 3D Render image – Northeast façade (Source: Application)
+
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 6
+
+                                                           OFFICIAL
+Figure 6: 3D Render image – Northwest façade (Source: Application)
+
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 7
+
+                                                           OFFICIAL
+Subject Site and Surrounds
+
+Site Description
+
+
+
+
+              Figure 7: Image showing data centre site (in grey) and drainage reserve (in pink) (Source: Application)
+
+8. The site is located on the southeast corner of Riding Boundary Road and Oroya Drive, in the Truganina urban growth
+   area.
+
+9. The existing site is vacant, generally flat and clear of any vegetation. No formal vehicle access is currently provided
+   to the site. Upon completion of the proposed development, access to the site will be via new internal accessways to
+   Oroya Drive, at the centre and south side of the western site frontage.
+
+10. The site has a rectangular shape and has frontages of approximately 529.4m to Riding Boundary Road and 380m to
+    Oroya Drive, with a total size of 20.7 hectares.
+
+11. The site is formally described as comprising the following land parcels:
+
+        •   Lot 3 on Plan of Subdivision 907826R Volume 12633 Folio 369 and Volume 12633 Folio 397
+
+12. The land is affected by a 3m wide sewerage easement (E-4), shown in Figure 1 below, which extends along the
+    western half of the southern boundary of the site.
+
+13. A Section 173 agreement applies to the site, although is not shown registered on title. The s173 agreement was
+    required to be entered into by conditions 80 and 81 of planning permit PA2022/7987/1 for a multi lot subdivision,
+    subdivision of land within a public acquisition overlay, creation of a road reserve and works within a heritage overlay
+    in accordance with the endorsed plans, issued by the council 19 June 2024. Following this subdivision approval, the
+    title for the subject site has been issued.
+
+14. The Section 173 agreement provides that prior to the commencement of the development of the site, either
+    temporary or ultimate drainage infrastructure must be completed, or an ‘alternative mechanism’ to the satisfaction of
+    the council and Melbourne Water.
+
+15. The application was amended 26 March 2026 to include the adjoining drainage reserve at 435 Mount Atkinson Road
+    (Reserve 2 PS907826R), as a condition of any permit issued will require the construction of the drainage on the
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 8
+
+                                                            OFFICIAL
+    reserve land prior to the commencement of construction of the data centre, in accordance with the Section 173
+    Agreement.
+
+Site Surrounds
+
+
+
+
+                Figure 8: Aerial image showing data centre site (outlined in red) and surrounds (Source: Application)
+
+16. The surrounding land is generally cleared agricultural land earmarked for urban development to be in accordance
+    with precinct structure plans (PSP) and employment areas, with development having already commenced on some
+    parcels.
+
+17. Development surrounding the site can be described as follows:
+
+     •    North: Riding Boundary Road runs directly along the northern boundary. North of the land is zoned Urban
+          Growth Zone – Schedule 9 (UGZ9) with an applied Industrial 1 Zone, consistent with the subject site. North
+          east of the site is also zoned UGZ9 with an applied General Residential Zone and is being developed for
+          housing.
+
+     •    South: To the south of the site is an electricity transmission easement which includes transmission lines and
+          towers. Further south is land designated as ‘Conservation area’ containing native vegetation that must
+          be retained under the PSP.
+
+     •    West: To the west of the site is Oroya Drive and industrial land comprising of large-format warehouse
+          buildings. Further west are established rural residential dwellings, separated by Troups Road South.
+
+East: East of the site is the future Mt Atkinson Road, currently a dirt track, which will become a four-lane arterial road. An
+existing dry stone wall protected by Heritage Overlay HO203 lies along this route. Further east are vacant lots and
+developed industrial sites, including the DHL Supply Chain Warehouse and New Aim Pry Ltd Distribution Centre at the
+intersection of Riding Boundary Road and Melbourne Drive.
+
+
+
+
+                                                                PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 9
+
+                                                             OFFICIAL
+Planning Provisions
+
+Municipal Planning Strategy
+18. The MPS and PPF encourage appropriate land use and development which enhances the built environment, supports
+    economic growth, meets the community expectations on retail and commercial provision, delivers diversity in housing
+    supply to meet existing and future needs, and integrates transport and infrastructure planning.
+
+19. The following objectives and strategies of the Municipal Strategic Statement of the scheme are relevant to the
+    proposal:
+
+      Clause       Description
+
+      02.03-1      Settlement
+
+      02.03-3      Environmental Risks and Amenity
+
+      02-03-7      Economic Development
+
+
+Planning Policy Framework
+20. The following objectives and strategies of the Planning Policy Framework of the scheme are relevant to the proposal:
+
+      Clause 11         Settlement
+      11.01-1R          Settlement – Metropolitan Melbourne
+      11.03-2S          Growth Areas
+      Clause 13         Environmental Risks and Amenity
+      13.01-3S          Urban Heat
+      13.02-1S          Bushfire Planning
+      13.02-1L          Bushfire Planning
+      13.05-1S          Noise Management
+      13.07-1S          Land Use Compatibility
+      Clause 15         Built Environment and Heritage
+      15.01-1S          Urban Design
+      15.01-1L-01       Industrial Urban Design
+      15.01-1L-04       Signs
+      15.01-2S          Building Design
+      15.01-2L-03       Landscaping and Green Space
+      Clause 17         Economic Development
+      17.01-1S          Diversified Economy – Metropolitan Melbourne
+      17.01-2S &
+                        Innovation and research
+      17.01-1L
+      Clause 18         Transport
+      18.01-1S          Land use and transport integration
+      18.03-3S          Sustainable Personal Transport
+      Clause 19         Infrastructure
+      19.03-1S          Development and Infrastructure Contributions Plans
+      19.03-3S &
+                        Integrated Water Management
+      19.03-3L
+
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 10
+
+                                                             OFFICIAL
+21. The assessment section of this report provides a detailed assessment of the relevant planning policies
+
+Statutory Planning Controls
+Applicable Zones
+22. The subject site is located within the Mount Atkinson and Tarneit Plains Precinct Structure Plan (PSP) and identified
+    as ‘industrial employment’ land under the PSP.
+
+
+
+
+   Figure 9: Image showing data centre site (marked with red X) in the Mount Atkinson and Tarneit Plains Precinct Structure Plan
+
+23. The PSP also shows open space drainage generally to the south-east of the site, extending in a linear corridor to
+    Riding Boundary Road.
+
+24. A planning permit is required to use land for a data centre and to construct a building or construct or carry out works
+    in accordance with Clause 37.07-9 and 37.07-11 of the UGZ9 and Clause 33.01-1 and Clause 33.01-4 of the INZ1,
+    respectively.
+
+25. The purpose of the UGZ is:
+
+     •   To implement the Municipal Planning Strategy and the Planning Policy Framework.
+
+     •   To manage the transition of non-urban land into urban land in accordance with a precinct structure plan.
+
+     •   To provide for a range of uses and the development of land generally in accordance with a precinct structure
+         plan.
+
+     •   To contain urban use and development to areas identified for urban development in a precinct structure plan.
+
+     •   To provide for the continued non-urban use of the land until urban development in accordance with a precinct
+         structure plan occurs.
+
+     •   To ensure that, before a precinct structure plan is applied, the use and development of land does not prejudice
+         the future urban use and development of the land.
+
+
+
+                                                                PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 11
+
+                                                            OFFICIAL
+26. The proposal is consistent with the specific provisions of Schedule 9 to the UGZ as follows:
+
+     •   The site is not located in quarry blast, high pressure gas transmission pipeline and railway noise attenuation
+         buffers, which are further east of Mt Atkinson Road (noting the subject site is on the west side).
+
+     •   The site is also not within an area where an Urban Design Framework is required to be prepared prior to the
+         issue of a permit.
+
+     •   The site is more than 50m away from a conservation area and therefore a construction environmental
+         management plan is not required.
+
+     •   A condition is required on the permit for a salvage inquiry form to DEECA.
+
+27. The purpose of the INZ1 is:
+
+     •   To implement the Municipal Planning Strategy and the Planning Policy Framework.
+
+     •   To provide for manufacturing industry, the storage and distribution of goods and associated facilities in a
+         manner which does not affect the safety and amenity of local communities.
+
+28. The assessment section includes a discussion of how the proposal responds to these requirements.
+
+29. A mandatory requirement for data centres is “Any gas holder, or sewerage or refuse treatment or disposal works,
+    must be at least 30 metres from land (not a road) which is in an Activity Centre Zone, Capital City Zone, Commercial
+    1 Zone, Docklands Zone, residential zone or Rural Living Zone, land used for a hospital, an education centre or a
+    corrective institution or land in a Public Acquisition Overlay to be acquired for a hospital, an education centre or a
+    corrective institution.”
+
+30. The site will be located more than 30m from the closest residential land, which is further to the northeast, and
+    therefore will meet this requirement.
+
+Applicable Overlay
+31. The subject site is affected by the Infrastructure Contributions Overlay – Schedule 3 (ICO3).
+
+32. The purpose of the ICO is:
+
+     •   To implement the Municipal Planning Strategy and the Planning Policy Framework.
+
+     •   To identify the area where an infrastructure contributions plan applies for the purpose of imposing contributions
+         for the provision of infrastructure.
+
+     •   To identify the infrastructure contribution imposed for the development of land.
+
+33. A permit granted must:
+
+     •   Be consistent with the provisions of the relevant infrastructure contributions plan.
+
+     •   Include any conditions required to give effect to any levies set out in the relevant schedule to this overlay.
+
+34. Council advised infrastructure levies were paid during the previous subdivision process and are not required to be
+    paid for the proposed development.
+
+Particular Provisions
+Provisions that Require, Enable or Exempt a permit
+35. Clause 52.05 sets out the requirements for signage. Industrial land in the UGZ9/IN1Z is a Category 2 area under
+    Clause 52.05-12. A permit is required for the display of more than one directional sign per premises.
+
+
+
+
+                                                             PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 12
+
+                                                         OFFICIAL
+36. Clause 52.06 sets out the requirements of car parking provision and design. Clause 52.06-5 (Table 1 - Car parking
+    requirement) does not include the land use ‘data centre’ and as such, pursuant to Clause 52.06-6, car parking
+    spaces must be provided to the satisfaction of the responsible authority.
+
+37. 52.29 (Land adjacent to the Principal Road Network) does not apply to the proposal, given it does not include access
+    to the principal road network – i.e. Riding Boundary Road or Mount Atkinson Road. The application was, however,
+    referred to DTP Transport during the preapplication process and no concerns were raised or permit conditions
+    recommended.
+
+38. Clause 52.34 sets out the requirements for bicycle facilities. The clause does not include any requirements for ‘data
+    centre.’
+
+General Requirements and Performance Standards
+39. Clause 53.10 applies to uses with adverse amenity potential. The proposal includes the storage of diesel in
+    quantities of approximately 1,152 tonnes, which is less than the threshold limit set out in the Table to Clause 53.10-2
+    (2000 tonnes). Accordingly, there is no referral required under Clause 53.10-1 to the Environment Protection
+    Authority.
+
+40. Clause 53.18 applies to the buildings and works of this application. The clause includes standards and objectives
+    relating to stormwater management.
+
+41. Clause 53.22 Significant Economic Development seeks to:
+
+     •   To prioritise and facilitate the planning, assessment and delivery of projects that will make a significant
+         contribution to Victoria’s economy and provide substantial public benefit, including jobs for Victorians.
+
+     •   To provide for the efficient and effective use of land and facilitate use and development with high quality urban
+         design, architecture and landscape architecture.
+
+42. The proposal is submitted under Category 1, having met the relevant conditions and eligibility criteria of this Clause.
+
+Other Strategic Considerations
+Plan for Victoria
+43. Plan for Victoria provides a long-term strategic framework to guide sustainable growth, economic development, and
+    infrastructure delivery across the state. The proposed industrial facility at 1 Oroya Drive, Truganina aligns with the
+    objectives of Plan for Victoria by supporting industry, job creation, and the development of state-significant
+    employment precincts. The plan emphasises the importance of clustering industries and delivering infrastructure that
+    underpins Victoria’s economic competitiveness and resilience.
+
+44. Plan for Victoria outlines the key strategic directions with regard to the provision of housing and commercial activity
+    within Victoria. Pillar 2 of the Plan is ’Accessible jobs and services’, of which a key direction is the delivery of more jobs
+    near homes by planning for, protecting and readying commercial and industrial land for development in locations well-
+    serviced with jobs, shops, public transport and community facilities and services
+
+45. Pillar 3 of the Plan is ‘Great places, suburbs and towns’ which includes a direction for more canopy trees in urban
+    areas, which is featured in Action 12 of the plan ‘Protect and enhance our canopy trees’. This action includes
+    consideration of canopy tree planting in industrial developments.
+
+46. Action 5 of the Plan is ‘Match car and bicycle parking requirements and bike facilities with demand’, which aims to
+    reduce the number of carparking spaces required for development in locations well serviced by public transport.
+
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 13
+
+                                                           OFFICIAL
+Mount Atkinson and Tarneit Plains Precinct Structure Plan
+47. The subject site is located within the Mount Atkinson and Tarneit Plains PSP, which is bound by the Western
+    Freeway to the north, Hopkins Road to the east, Middle Road to the south and Outer Metropolitan Ring (OMR)
+    reservation to the west. The PSP sets out a vision for the future urban structure as a vital employment hub within the
+    West Growth Corridor.
+
+48. The subject site has been categorised as ‘industrial employment’ land and the PSP specifies requirements and
+    guidelines that apply to the area to support employment growth in the area, as well as attractive interfaces to enable
+    positive addresses to the street.
+
+
+
+
+                                                           PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 14
+
+                                                        OFFICIAL
+Referrals and Notice
+
+Referrals
+49. The application was referred to the following groups:
+
+        Provision / Clause      Organisation                 Response and date received
+
+        Section 55 Referral –   WorkSafe Victoria            No objection – subject to conditions on 3/12/2025
+        Determining
+
+        Section 55 Referral –   AusNet Transmission Group    No objection 4/12/2025
+        Determining
+        Section 52              Melton City Council          No objection 22/12/2025 – refer to discussion below.
+
+        Informal                Fire Rescue Victoria         No response
+
+        Informal                Melbourne Water              No objection – subject to condition on 22/12/2025
+
+        Informal                Greater Western Water        No objection – subject to conditions on 1/12/2025
+
+
+
+Site drainage – Melbourne Water and Council
+
+50. As noted earlier in the report, a Section 173 agreement provides that drainage infrastructure must be completed prior
+    to the commencement of development on the site, to the satisfaction of the council and Melbourne Water. The
+    applicant had asserted the drainage works were complete, however, both Melbourne Water and Council advised
+    they had not approved the drainage infrastructure in their referral responses.
+
+51. Melbourne Water advised they had agreed to, though not approved, a temporary drainage basin and sediment basin
+    with free draining gravity outfall being constructed within the reserve adjacent to the site. This was to be in
+    accordance with a Stormwater Management Strategy (SWMS) prepared by Spiire, dated September 2025. The
+    agreement was between Melbourne Water and the subdivision developer.
+
+52. Melbourne Water recommended a condition be placed on the permit requiring the drainage infrastructure in
+    accordance with the Spiire SWMS to be completed prior to the commencement of works.
+
+53. Council advised it also supported, but had not approved, the temporary drainage infrastructure.
+
+54. The applicant raised concerns with the approach, arguing it understood the drainage works had been completed.
+
+55. Meetings were held with the applicant, Melbourne Water and council on 10 and 24 February 2026. It became
+    apparent in the discussion that:
+
+    •     While there had been preliminary discussions between the subdivision developer, Melbourne Water and council,
+          no formal plans had been submitted or approved.
+
+    •     Despite not being approved, the construction of the drainage had commenced, but its status was unclear. In a
+          subsequent email to DTP dated 2 March 2026, Council advised the drainage works had occurred without
+          approved documentation or plans and therefore are unauthorised and incomplete and have not satisfied the
+          obligations under the Section 173 Agreement.
+
+56. Council further advised in the 2 March 2026 email that to satisfy the obligations of the Section 173 Agreement, the
+    subdivision developer will need to complete the following:
+
+    •     The Functional Design for the ultimate wetland is to be approved by Melbourne Water.
+
+    •     The Spiire interim Stormwater Management Plan must formally be approved by Council (with requested
+          changes) and the memo must be in accordance with the approved Functional Design.
+
+
+
+
+                                                            PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 15
+
+                                                        OFFICIAL
+     •    Engineering Plans in accordance with the approved strategy/memo must be submitted to both Council and
+          Melbourne Water and must be approved.
+
+     •    Works must be completed as per the approved plans and as constructed surveyed plans must be submitted.
+
+57. As discussed later in the Assessment section of this report, the temporary drainage and sediment basin will be
+    constructed in the same location as the future ultimate wetland.
+
+58. Council also recommended any permit include the following condition:
+
+    Prior to commencement of building and hardstand works, a temporary drainage solution approved under
+    PA2022/7987 must be fully constructed to the satisfaction of Melton City Council and Melbourne Water.
+
+59. Council agreed to follow up the matter with the subdivision developer and advised DTP in an email on 6 March 2026
+    the parties had met and minor revisions to the SWMS would be required.
+
+60. Given progress is being made toward approval and construction of the subdivision drainage, it is considered the
+    proposal can proceed subject to a condition as recommended by Melbourne Water and council that the drainage be
+    approved and completed to their satisfaction prior to the occupation of the proposed development.
+
+61. The Spiire SWMS for the proposed data centre will need to be updated to address the delivery of the temporary
+    subdivision drainage infrastructure, as recommended by council.
+
+62. The application was amended under s50 to include the adjacent drainage land (the reserve), to ensure the condition
+    relates to the land which forms the subject site and the required drainage obligations, on any permit issued.
+
+Municipal Council Comments
+
+63. In addition to the drainage concerns, council provided the following comments in the table below:
+
+Melton City Council comment                                                                            Recommendation
+
+Response to Key Corner (Mt Atkinson and Riding Boundary Road): In accordance with the                  Changes to the materials on the
+Mt Atkinson & Tarneit Plains PSP (Requirement 33), the proposed development is located at              northeast corner of the main data
+a key corner (Mt Atkinson and Riding Boundary Road) where its built form must incorporate              hall part of the building will be
+features of interest. Currently, the development proposes the loading dock at this corner              required as a condition of permit, as
+resulting in no significant activation, blank walls that do not appropriately respond to the site’s    discussed in the Assessment
+strategic location, nor promote features of interest. This does not align with the relevant PSP        section of this report.
+requirements and Clause 15.01-1L-02 Industrial Urban Design of the Melton Planning
+Scheme, which discourages blank interfaces on buildings that address the public realm and
+require feature treatments at the corner.
+Built Form and Facade Articulation: The proposed built form response does not align with               Built form is assessed in the
+Clause 15.01-1L-02 Industrial Urban Design – Building Design Strategies of the Melton                  Assessment section of this report.
+Planning Scheme and Requirement 33 of the PSP, which require built form articulation and
+visual interest. Additionally, as per the Melton City Council’s Industrial Design Guidelines,
+requirement B31 requires incorporating feature cladding, facade delineation and greater
+colour variation to reduce the proposal’s visual bulkiness, particularly at street corners.
+
+DTP Urban Design
+
+64. DTP Urban Design reviewed the proposal during the preapplication process, who commended the design for its
+    thoughtful response to the context. They highlighted the successful articulation of building massing, effective
+    integration of mixed uses, and the inclusion of high-quality landscaping.
+
+65. In addition, the following comments were provided:
+
+DTP Urban Design comment                                                                               Response/Recommendation
+
+
+
+
+                                                                     PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 16
+
+                                                                 OFFICIAL
+We acknowledge that the proposal is around 8 storeys tall. Provide precedent and                     Precedents were provided and are
+benchmarking of best practice design for a data centre of this scale.                                included in the discussion in the
+                                                                                                     Assessment section in this report.
+Provide a visual impact assessment including images and renders from the surrounding area            A visual impact assessment was
+to assist with review of massing.                                                                    provided.
+We are supportive of the overall design intent of the project. However, we query whether the         Materiality is discussed later in the
+massing could be further broken up through greater variation in materials. This could be             Assessment section this report.
+achieved by increasing tonal or colour contrast between materials CE01, CE02 and CE03
+across the office and loading building, the service core, and the data hall. We acknowledge
+that tones may appear differently in documentation compared to real life and defer to the
+team's discretion on final selections.
+Architectural plans for the guard house have not been provided. Please include further detail        Guard house elevations are shown
+for review.                                                                                          on the decision plans.
+We commend the team on a well-considered landscape masterplan that thoughtfully                      Noted.
+balances security requirements with a landscape-led approach. The integration of WSUD
+elements across the site establishes a strong connection to the proposed Melbourne
+wetlands to the south and the broader ecological network. The entrance public space to the
+office is particularly well-resolved, creating a prominent feature along a key street frontage.
+
+DTP Transport
+
+66. As noted earlier, while they are not a referral authority under Section 55 of the Planning and Environment Act 1987
+    (the Act), the application was referred for comment to DTP Transport during the preapplication process. Transport
+    advised it had no objection to the proposal and requested the plans clearly show the Public Acquisition Overlay
+    boundary. The overlay does not affect the site and no works are proposed in it and therefore it is considered this is
+    not required to be shown.
+
+
+
+
+              Figure 10: Plan showing Public Acquisition Overlay (PAO3) abutting the north boundary of the subject site.
+
+Notice
+
+67. As noted earlier, with the exception of the directional signage, the proposal is exempt from the notice requirements of
+    section 52(1)(a), (b) and (d), the decision requirements of section 64(1), (2) and (3) and the review rights of section
+    82(1) of the Act.
+
+
+
+
+                                                                   PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 17
+
+                                                               OFFICIAL
+68. Notice was given to Council under Section 52, but was not given to any other persons as it was determined the signs
+    would not result in material detriment to any person.
+
+
+
+
+                                                          PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 18
+
+                                                      OFFICIAL
+Assessment
+
+Strategic Direction and Land Use
+69. The proposal is considered to provide an appropriate response to the above-mentioned planning policies as outlined
+    below:
+
+      •   The proposal supports the ongoing growth of the Mount Atkinson and Tarneit Plains Precinct by providing local
+          employment opportunities close to where people live (Clause 11.03-2S, 17.01-1S). It will facilitate growth in the
+          technology sector and will also be important infrastructure required for business, education, research and
+          innovation (Clause 17.01-2S and 17.01-1L).
+
+      •   The site will have access to sustainable modes of transport, with future bus routes along both Riding Boundary
+          Road and Mt Atkinson Road planned under the PSP. Shared paths are also planned along both roads, and
+          Oroya Drive will also provide bicycle access (Clause 18.01-1S). Bicycle facilities have been included for the
+          proposal (Clause 18.01-3S).
+
+      •   The proposal is also considered a satisfactory built form and landscaping outcome and responds to
+          sustainability objectives, as further discussed later in this report.
+
+70. The proposed land use is also considered a satisfactory response to the decision guidelines of the Industrial 1 Zone,
+    as follows:
+
+  •       The application was referred to Worksafe as it requires consent under the Dangerous Goods Act 1985.
+  •       Noise emissions are addressed in the following assessment.
+  •       The traffic generated by the proposal will have a satisfactory level of access to the metropolitan road network.
+71. The purpose of the zoning has been also considered, and it is noted that site is located within an industrial precinct,
+    which provides for uses ‘associated’ with manufacturing and storage, of which the proposal is considered to be given
+    it is infrastructure that supports digital technology, which is used by industry.
+
+72. The data centre will aid in the creation of more than 48 permanent operational employment positions and a
+    substantial number of construction jobs as well as providing valuable connective infrastructure to support regional
+    industry and commerce.
+
+Noise
+
+73. The Environmental Noise Assessment assessed noise impacts from the proposal on the nearest existing and future
+    sensitive receptors, located between approximately 215m and 1km of the site, as shown in the image below.
+
+
+
+
+                      Figure 11: Plan showing nearest sensitive receivers (teal circles) (Source: Application)
+
+
+
+                                                                PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 19
+
+                                                            OFFICIAL
+74. The report identified noise potential from plant including chillers, outdoor air processing units, generators, as well as
+    an electrical substation to be delivered by Ausnet. Not all information was available for the proposed equipment and
+    accordingly the report recommended ongoing review of equipment selections to be undertaken as the design
+    progresses, to review the need for any adjustments in accordance with the Noise Protocol methodologies. Based on
+    the information available, the report predicted the substation is unlikely to be audible from the sensitive receptors and
+    that the proposed rooftop barrier would comply with noise limits for the other noise-generating equipment. Conditions
+    of permit will require the recommendations of the acoustic report be carried out (Clause 13.05-1S).
+
+75. The report also found that testing for the generators would comply with daytime limits. Accordingly a condition of
+    permit will require generator testing be limited to daytime hours only.
+
+Land use compatibility
+
+76. It is considered the proposal has demonstrated compatibility with land uses in the area, as it is located in a planned,
+    emerging industrial area (Clause 13.07-1S). A data centre is not a use listed under Clause 53.10. It will involve
+    storage of 1,152,000 litres (1,152 tonnes) of diesel fuel onsite for the generators, but this is below 2,000 tonnes and
+    therefore a buffer to sensitive uses is not required under Clause 53.10.
+
+77. Referral to Worksafe was required under Clause 66.02-7 (Industry, utility installation or warehouse) as the materials
+    kept/used onsite will exceed the thresholds including for batteries and diesel under the Dangerous Goods (Storage
+    and Handling) Regulations 2022. As noted earlier, Worksafe have not objected to the proposal and a condition will
+    be placed on the permit requiring the preparation of an Emergency Management Plan, which will be provided to Fire
+    Rescue Victoria.
+
+78. The Contaminated Land Report also found there was a low risk of site contamination from its former agricultural land
+    use and that a Preliminary Risk Screening Assessment would not be required.
+
+Buildings and Works
+79. In considering the design and built form of the proposed development, the most relevant clauses of the Melton Planning
+    Scheme are Clause 15.01-1S (Urban Design), 15.01-1L-01 (Industrial Urban Design) and 15.01-2S (Building Design).
+    These policies and controls seek to ensure new development achieves high standards of architectural quality and
+    amenity, and responds to its context.
+
+80. The following assessment considers the building design response in terms of setbacks, height, massing and
+    architectural detail. It is considered the proposal will be a satisfactory response for the industrial nature of the site and
+    area, subject to a change in materiality to the northeast corner of the ‘data hall’ part of the building. The design of the
+    development is contemporary and functional, with a focus on durability and security.
+
+Setbacks
+
+81. The proposed development provides generous setbacks to all boundaries of the data centre site, with a substantial
+    front setback to Riding Boundary Road. The office component of the building will be located on the north elevation,
+    which is a lower part of the building. The main taller built form will be setback 52.2m from the Riding Boundary Road
+    frontage.
+
+82. The drainage reserve will front Mt Atkinson Road and therefore the proposal will be significantly setback from this
+    interface.
+
+83. The proposed data centre will also be setback from the west and south boundaries, with carparking areas, accessways
+    and smaller scale ancillary buildings, including the guard house and water tanks within the setback.
+
+84. All setbacks substantially exceed the minimum requirement of 5m, and will include landscaping as shown in the
+    concept landscape plan, including substantial tree planting. It is considered the setbacks and landscaping will provide
+    an attractive interface with Riding Boundary Road, as well as Mt Atkinson Road beyond the drainage reserve.
+
+
+
+
+                                                              PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 20
+
+                                                          OFFICIAL
+       Figure 12 – Landscape plan showing planting areas in green in setbacks and throughout the site (Source: Application)
+
+85. It is acknowledged a substation is planned in the southeast corner of the site. It is not part of this application and
+    therefore cannot be considered. It will, however, also be set behind the drainage reserve and landscaping is also
+    proposed in its eastern setback.
+
+Building height and massing
+
+86. The proposed data centre has three main sections – the data hall building, flues and office component, as shown in
+    the image below.
+
+
+
+
+                               Figure 13 – Sketch of data centre components (Source: Application)
+
+
+
+
+                                                               PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 21
+
+                                                           OFFICIAL
+87. As shown in the image above, there is variance in the heights and massing at different parts of the building, particularly
+    viewed from Riding Boundary Road.
+
+88. The proposed main ‘data hall’ building will have a height of 34m. While this is significant and taller than buildings that
+    are generally located in industrial areas, it is not considered a poor outcome, particularly given the site does not have
+    sensitive interfaces, such as with a residential area, where adverse amenity impacts would require consideration.
+    There are also no significant viewlines identified in the planning scheme that the proposed buildings would impact.
+    Buildings of scale are also the dominant, albeit lower, built form in growth area industrial areas, as shown in the images
+    below. The proposal, while different, will still form part of and not be inconsistent with the emerging large-format
+    industrial character of the area.
+
+
+
+
+      Figures 14 and 15 (left to right): Views from the site toward Riding Boundary Road and Oroya Drive (Source: Application)
+
+89. It is further noted the overhead transmission lines to the south of the site will also provide a vertical built form in the
+    landscape.
+
+
+
+
+                       Figure 16 – Transmission lines south of the site within easement (Source: Application)
+
+90. There are no height controls for industrial developments within the UGZ9 or IN1Z. A policy guideline for building height
+    in Clause 15.01-1L-02 is to consider, as relevant, whether there should be a maximum height of 9m, or 7m for office
+    components. It is noted the provision applies to both existing and growth area industrial zones. It is considered the
+
+
+
+
+                                                                PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 22
+
+                                                            OFFICIAL
+    guideline has limited relevance to the context of the site, given there is no existing character and the emerging character
+    discussed earlier.
+
+91. The 3 storey office component will be sited on the north side of the building and will provide some articulation to this
+    elevation, with a recessed upper level (Level 2), as shown in the image below.
+
+
+
+
+                 Figure 17 - Concept render of building, viewed from Riding Boundary Road (Source: Application)
+
+92. The massing of the building will be substantial and is required for its function. Floor to ceiling heights of 7m are required
+    to accommodate the operation and servicing of internal infrastructure and equipment. Two rows of diesel backup
+    generators are required and are located on the east and west sides of the building. Flue stacks for the generators are
+    the same height as the data centre, which is required to release emissions at an elevated height. Air chillers will be
+    located on the rooftop, behind a 6m high screen. The chillers will reduce water usage for cooling.
+
+93. Examples of other data centres of similar height and scale to the proposal in NSW have been included in the applicant’s
+    planning report.
+
+94. The data centre will also have no windows by necessity. The office component, however, will have windows facing
+    Riding Boundary Road.
+
+Design detail
+
+95. The flue stacks, which will form the main view of the data centre from Mt Atkinson Road, will feature a sculpted angular
+    design which will create visual interest.
+
+
+
+
+                                                              PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 23
+
+                                                          OFFICIAL
+    Figures 18 and 19 (left to right): Concept renders of proposed flue stacks, viewed side-on and from Mt Atkinson Road (Source:
+                                                               Application)
+
+96. The north elevation of the data hall, however, will not be obscured by the flue stacks and will be only partly obscured
+    by the office component of the building. This part of the façade, as shown on the left side of Figure 17 earlier, will
+    consist of a sheer wall approximately 25m high and consist solely of vertical precast concrete panels.
+
+97. Given the site fronts Riding Boundary Road, close to the intersection with Mt Atkinson Road, the site is a key location,
+    as defined in requirement 33 of the PSP. This use of solely precast concrete panels is considered an unsatisfactory
+    response to this requirement, which provides that built form in these locations ‘incorporate features of interest,’
+    including articulation of building facades, feature colours and materials
+
+98. It is also considered this part of the façade is an unsatisfactory response to Clause 15.01-1L-02, which includes a
+    strategy to avoid blank interfaces on buildings that address the public realm.
+
+99. A condition will therefore be required on the permit that the northeast corner of the data hall part of the building be
+    broken up through a greater variation in materials, as recommended by DTP Urban Design. It is considered this would
+    avoid the visual bulk currently proposed and provide more visual interest.
+
+100. It is acknowledged the south elevation will also feature similar high, sheer walls of precast concrete panelling. This is
+     however a less sensitive interface, given it faces internally and not the public realm. It will also be setback further from
+     Mount Atkinson Road. Therefore it is considered no further changes to materiality are required.
+
+Landscaping
+101. The proposed landscaping responds to 15.01-1L-01 by providing landscaping in the front setback to Riding Boundary
+     Road, on both sides of the internal accessway, with a total depth of 20.3m. This exceeds the minimum policy
+     requirement of 5m.
+
+102. The landscaping along the east boundary also responds to the policy, by providing minimum landscaping strips of 3.7
+     – 17.3m width. The minimum policy requirement for this boundary is 2m, as it shares a boundary with a waterway.
+
+103. A condition of permit will require detailed landscape plans, showing at least 5% canopy coverage. Subject to this
+     requirement it is considered the landscape planting will be a satisfactory response to Clauses 13.01-3S (Urban heat)
+     and 15.01-1L-03 (Landscaping and green space).
+
+104. 2.7m high security fencing will be located on the north boundary and partially on all other boundaries and internally
+     around the proposed data centre and ancillary buildings, internal accessways and carparking areas. The fencing will
+     be of an open style, allowing for views into the site. It is considered the fencing is appropriate for the security needs of
+     the facility, which requires a clear zone around the fence of 2.7m, and is a satisfactory response to Clause 15.01-1L-
+     01, noting it avoids razor or barbed wire and landscaping will be visible through the fence.
+
+Car Parking, Bicycles Storage and Other Services
+
+Car Parking
+
+105. As noted earlier, car parking spaces must be provided to the satisfaction of the responsible authority. 48 staff members
+     are proposed with 58 car parking spaces provided.
+
+106. The anticipated car parking demand is therefore comfortably met by the proposal, as such the proposal provides a
+     satisfactory number of car parking spaces.
+
+Design Standards for Car Parking
+
+107. The proposal includes a Transport Impact Assessment Report (TIAR) which outlines that all relevant design standards
+     for car parking as outlined in Clause 52.06-9 have been met, including:
+
+     •    Internal accessway widths and sight distances.
+
+
+
+                                                                PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 24
+
+                                                             OFFICIAL
+     •   Carparking spaces and aisle dimensions.
+
+     •   Queuing area at the data centre boom gate entrance.
+
+108. The proposed number (one) and location of accessible spaces has been assessed as compliant with AS 2890.1.
+
+Access, Traffic Movements and Circulation
+
+109. Main vehicle site access will be via a 21.6m wide vehicle crossing to Oroya Drive, with a split two-way accessway
+     leading to a central roundabout. It is acknowledged the vehicle crossing is wide, but is required to facilitate turning
+     manoeuvres into and out of the site to Oroya Drive, as shown in swept path diagrams in the TIAR.
+
+110. From the roundabout an accessway will continue to the data centre gates and carparking area. Another accessway
+     will lead south to a proposed plant enclosure and the future substation, continuing along the south boundary to a
+     secondary access to Oroya Drive.
+
+111. Vehicle traffic is expected to be 150 movements per day, including employees and visitors, as well as deliveries during
+     normal business hours. This volume can be accommodated by the internal and surrounding road network.
+
+112. A pedestrian connection will also be provided to Riding Boundary Road, providing direct access to site.
+
+113. It is considered the proposed access arrangements are a satisfactory response to Clause 52.06-9.
+
+Bicycles Facilities
+
+114. Clause 52.34-1 of the planning scheme does not require bicycle parking for data centres (or any uses under the utility
+     installation land use group) and therefore there is no bicycle parking requirement.
+
+115. Notwithstanding the above, the proposal provides 16 bicycle spaces and end of trip facilities.
+
+Loading / Unloading and Waste
+
+116. Off-street loading is provided via a dedicated internal area within the north part of the building, designed to
+     accommodate semi trailer vehicles. Swept path analysis confirms that heavy vehicles can enter, circulate, and exit the
+     site in a forward direction. The proposed loading arrangements are considered satisfactory.
+
+117. The waste management plan includes a recommendation for a 34sqm waste storage room, which a condition of permit
+     will require to be shown on the plans. Waste is proposed to be collected by a private contractor on a weekly basis.
+
+Environmental Risks
+
+Bushfire Risk
+
+118. The subject site is located within a Bushfire Prone Area. Minimum construction standards to prevent bushfire risk within
+     Bushfire Prone Areas only apply to sensitive developments for example schools, childcare facilities, aged care facilities
+     and places of assembly. The proposal is not required to consider bushfire risk as the use and development is not
+     sensitive.
+
+Sustainability
+
+Environmentally Sustainable Design (ESD)
+
+119. The applicant has submitted a Sustainability Management Plan which commits to achieving a silver rating under the
+     LEED v4.1 certification process. Initiatives to achieve the silver rating will be developed during later stages of the
+     design process.
+
+120. There is no local policy requirement for a SMP under the Melton Planning Scheme and accordingly the proposed SMP
+     is considered satisfactory. Conditions of permit will require the SMP to be implemented.
+
+
+
+                                                             PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 25
+
+                                                         OFFICIAL
+121. Key ESD initiatives outlined in the SMP include:
+
+    •   Energy efficiency and management, with the objective to reduce energy usage and greenhouse gas emissions
+        and monitor performance to identify inefficiencies and identify opportunities for future improvements.
+    •   Water efficiency and management, with specification of high efficiency fixtures and fittings, re-use of rainwater on-
+        site, reduction of irrigation requirements, and an effective water metering strategy to identify any losses early and
+        opportunities for future improvements.
+    •   The investigation of more sustainable material choices including those with lower embodied carbon,
+        Environmental Product Declarations, and transparent material sourcing evidence.
+    •   Landscaping prioritising native vegetation and provision of quality green spaces, for improved amenity and
+        aesthetics, including reduction of urban heating.
+    •   Provision of EV-ready infrastructure to 20% of car parking.
+    •   Connections to existing and planned future public transport and active transport infrastructure, and provision of
+        facilities to enable active transport.
+    •   Indoor environmental quality improvements including controls to prevent the entry of pollutants into the building,
+        and quality ventilation to indoor polluting areas.
+    •   On-site collection and separation of recyclables including batteries and e-waste.
+
+Stormwater Management
+
+122. Clause 53.18 (Stormwater management in urban development) applies to this application. The purpose of this
+     clause is to ensure that stormwater generated by urban development is managed to mitigate environmental, property,
+     and public safety impacts, and to provide benefits such as cooling, local habitat, and amenity.
+
+123. As discussed earlier, the Stormwater Management Strategy (SWMS) will need to be updated to address the matter of
+     the incomplete subdivision drainage. The SWMS prepared in support of the subject application largely relied on a
+     SWMS prepared for the subdivision works by Spiire in June 2023.
+
+124. A more recent SWMS was prepared by Spiire in September 2025, for the interim drainage works, which has yet to be
+     formally approved. Melbourne Water advised in their referral comments it had accepted the September 2025 SWMS,
+     although clarified later it had not been formally approved. Council advised in an email dated 6 March 2026 the SWMS
+     will require some minor revisions.
+
+125. Therefore the SWMS for the proposal will need to be updated to be in accordance with the updated SWMS, prior to
+     endorsement. This will be reflected in conditions on permit.
+
+126. The SWMS for the subject proposal outlines a strategy to meet the stormwater management and water quality
+     requirements of Clause 53.18 by directing drainage offsite to be stored in a temporary retarding basin. The basin would
+     also address water quality by providing a secondary function as an interim sediment pond. The ultimate stormwater
+     quality asset will be wetlands, when constructed. Given council and Melbourne Water have confirmed this arrangement
+     is acceptable, it is considered there is sufficient certainty to proceed to issue a permit subject to the conditions
+     discussed.
+
+Other Matters
+
+Clause 52.05 Signs
+
+127. Two direction signs are proposed to guide traffic flow through the site, including one located at the main entry / exit
+     point to the site and the other at the internal entrance near the gates. The signs will have a display area of 0.3sqm, will
+     measure 2m above ground, with a total height of 2.5m and will not be illuminated. The signs are of an appropriate
+     scale and design for their purpose.
+
+
+
+
+                                                              PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 26
+
+                                                          OFFICIAL
+Clause 53.22 Significant Economic Development
+
+128. The proposal is considered consistent with the purpose of Clause 53.22 as it is a large utility installation development
+     in a significant employment precinct and will contribute to Victoria’s economy. Subject to the conditions recommended
+     in this report, it is considered the proposal will result in high quality built form and a functional operation and layout.
+
+
+
+
+                                                              PA2504032 – 1 Oroya Drive and 435 Mount Atkinson Road, Truganina   Page 27
+
+                                                          OFFICIAL
+

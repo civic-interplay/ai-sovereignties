@@ -1,0 +1,1833 @@
+            127 Todd Road, Port
+            Melbourne
+            Planning permit no. PA2504019
+
+
+
+
+                                                                                        Officer Assessment Report
+                                                                                  Development Approvals & Design
+
+
+© The State of Victoria Department of Transport and Planning 2023
+
+Disclaimer
+This publication may be of assistance to you but the State of Victoria
+and its employees do not guarantee that the publication is without flaw
+of any kind or is wholly appropriate for your particular purposes and
+therefore disclaims all liability for any error, loss or other consequence
+which may arise from you relying on any information in this publication.
+
+                                                                       OFFICIAL
+Contents
+Executive Summary ______________________________________________________________________________ 3
+
+Proposal ________________________________________________________________________________________ 5
+
+Application Process ______________________________________________________________________________ 5
+
+Proposal Summary _______________________________________________________________________________ 6
+
+Subject Site and Surrounds _______________________________________________________________________ 10
+Site Description __________________________________________________________________________________ 10
+Site Surrounds __________________________________________________________________________________ 11
+
+Referrals and Notice _____________________________________________________________________________ 14
+Referrals _______________________________________________________________________________________ 14
+Notice _________________________________________________________________________________________ 14
+
+Assessment ____________________________________________________________________________________ 21
+Statutory Controls – City of Melbourne Planning Scheme _________________________________________________ 21
+Strategic Planning Context _________________________________________________________________________ 21
+Use ___________________________________________________________________________________________ 24
+Buildings and Works ______________________________________________________________________________ 25
+  Design and Development Overlay Schedule 74 – Fishermans Bend Employment Precinct ____________________ 26
+  Building Height and Massing _____________________________________________________________________ 27
+  Setbacks ____________________________________________________________________________________ 27
+  Architectural Expression, Materiality, and Climate Response ____________________________________________ 28
+  Streetscape, Activation and Public Realm ___________________________________________________________ 28
+Noise __________________________________________________________________________________________ 28
+Landscaping ____________________________________________________________________________________ 29
+  Native Vegetation______________________________________________________________________________ 30
+Car and Bicycle Parking, Loading, and Other Services ___________________________________________________ 31
+  Car Parking __________________________________________________________________________________ 31
+  Access, Traffic Movement and Circulation __________________________________________________________ 32
+  Bicycle Facilities_______________________________________________________________________________ 32
+  Loading / Unloading ____________________________________________________________________________ 32
+  Waste _______________________________________________________________________________________ 33
+Environment ____________________________________________________________________________________ 33
+  Environmentally Sustainable Design (ESD) _________________________________________________________ 33
+  Stormwater Management _______________________________________________________________________ 34
+Dangerous Goods Storage _________________________________________________________________________ 34
+Amenity Impacts _________________________________________________________________________________ 35
+
+
+
+
+                                                                                                       Report   Page 1
+                                                                               Planning permit no. PA2504019
+                                                 OFFICIAL
+  Overshadowing _______________________________________________________________________________ 35
+  Noise _______________________________________________________________________________________ 35
+  Light Spill ____________________________________________________________________________________ 36
+  Wind Impacts _________________________________________________________________________________ 36
+Other Matters ___________________________________________________________________________________ 36
+  Signage _____________________________________________________________________________________ 36
+  Cultural Heritage ______________________________________________________________________________ 36
+
+Recommendation _______________________________________________________________________________ 37
+  Prepared by: _________________________________________________________________________________ 38
+  Approved by: _________________________________________________________________________________ 38
+
+
+
+
+                                                                                                 Report   Page 2
+                                                                         Planning permit no. PA2504019
+                                              OFFICIAL
+Executive Summary
+
+Key Information                                 Details
+
+DFP Application No:                             PPA-1368
+
+Application No:                                 PA2504019
+
+Received by DFP                                 15 August 2025
+
+Date lodged in POL                              31 October 2025
+
+Statutory Days:                                 75 days on 14 January 2025
+
+Applicant:                                      NEXTDC Limited C/O Urbis Pty Ltd
+
+Planning Scheme:                                Melbourne
+
+Land Address:                                   127 Todd Road, Port Melbourne
+
+Proposal:                                       Use and development of a data centre.
+                                                Creation and alteration of access to a road in a Transport Zone 2 (Todd Road).
+
+Development Value:                              $918,000,000
+
+Why is the Minister responsible?                In accordance with the schedule to Clause 72.01 of the Planning Scheme, the
+                                                Minister for Planning is the Responsible Authority for this application because of the
+                                                use or development of land for which Clause 53.22 applies.
+
+DFP eligibility criteria in accordance with     Category: Category 1
+53.22
+                                                Sector: Digital technologies (data centre)
+                                                Land use: Data centre – nested under ‘Utility Installation’ Clause 73.03
+                                                Location: Melbourne City Council
+                                                Alignment with DFP threshold/criteria: Yes - $918 million development cost ($20
+                                                million threshold within metropolitan Melbourne)
+                                                OVGA: No.
+                                                Invest Victoria: Yes
+                                                Quantity Surveyor report: Yes
+Provision                                          Permit Trigger
+
+Zone         Clause 33.01 – Industrial 1 Zone      Clause 33.01-1 - Use of the land for Utility Installation (Data Centre).
+             (IN1Z)                                Clause 33.01-4 - To construct a building or construct or carry out works.
+
+
+Overlay      Clause 43.02 Design and               43.02-2 - Construct a building or construct or carry out works
+             Development Overlay – Schedule 74
+
+Particular   Clause 52.06 (Car Parking)            Car parking spaces must be provided to the satisfaction of the responsible
+and                                                authority.
+General
+Provisions
+             Clause 52.17 (Native Vegetation)      Clause 52.17 -1 - to remove, destroy or lop native vegetation, including dead
+                                                   native vegetation
+
+
+             Clause 52.29 (Land Adjacent to the    Clause 52.29-2 – Create or alter access to a road in a Transport Zone 2 (Todd
+             Principle Road Network).              Road).
+
+
+
+
+                                                                                                                         Report   Page 3
+                                                                                                 Planning permit no. PA2504019
+                                                            OFFICIAL
+             Clause 52.34 Bicycle Facilities       N/A
+
+             Clause 53.22 (Significant Economic    No permit required – this clause applies to the application as it qualifies for the
+             Development)                          provision under Category 1 (see summary table for further details on eligibility)
+Cultural Heritage:                             The site is located in an area of cultural heritage sensitivity
+
+Total Site Area:                               58,178 sqm
+
+Gross Floor Area:                              94,987 sqm
+
+Height:                                        40.5 to upper roof and 47.5 to top of roof plant
+
+Parking:                                       Cars                   Motorcycles                                    Bicycles
+
+                                               158                           8                                           36
+
+Referral Authorities:                          WorkSafe (Section 55)
+                                               Head, Transport Victoria (Section 55)
+                                               Melbourne City Council (Informal)
+                                               Fire Rescue Victoria (Informal)
+                                               Parks Victoria – the Committee of Management for Westgate Park (Informal)
+                                               Citipower (Informal)
+                                               Melbourne Water (Informal)
+                                               South East Water (Informal)
+                                               DEECA (Informal)
+                                               EPA (Informal)
+                                               Westgate Biodiversity (Informal)
+
+Public Notice:                                 N/A - Exempt
+
+Delegates List:                                Approval to determine under delegation received on 19 December 2025
+
+
+
+
+                                                                                                                          Report   Page 4
+                                                                                                  Planning permit no. PA2504019
+                                                          OFFICIAL
+Proposal
+
+Application Process
+Background
+
+1. The key milestones in the application process were as follows:
+
+     Development Facilitation Program: Pre-
+     application
+
+     Enquiry lodgement                         14 August 2025
+
+     Informal advice                           13 October2025
+
+     Invest Victoria                           17 October 2025
+
+
+
+     Application process
+
+     Application lodgement                       31 October 2025
+
+     Further information requested               N/A
+
+     Further information received                N/A
+
+     Decision Plans                              Architectural Plans prepared by Architectus, Rev CNC-1, dated 30/09/2025
+
+     Other Assessment Documents                        •     Clause 53.22 Letter of Eligibility
+                                                       •     Economic Benefits Assessment, prepared by Urbis and dated
+                                                             September 2025
+                                                       •     Aboriginal Cultural Heritage Letter of Advice, prepared by Urbis and
+                                                             dated 5 August 2025
+                                                       •     Architectural Plans, prepared by Architectus and dated 30 September
+                                                             2025
+                                                       •     Concept Design Report, prepared by Architectus and dated 30
+                                                             September 2025
+                                                       •     3D Model prepared by Architectus
+                                                       •     Landscape Concept Report, prepared by LatStudios and dated 9
+                                                             October 2025
+                                                       •     Arboricultural Impact Assessment, prepared by Glenn Waters and
+                                                             dated 20 October 2025
+                                                       •     Flora and Fauna Assessment prepared by Biosis and dated 21 August
+                                                             2025
+                                                       •     Environmental Wind Assessment, prepared by Aurecon and dated 29
+                                                             September 2025
+                                                       •     Preliminary Hazard and Risk Assessment, prepared by Aurecon and
+                                                             dated 10 October 2025
+                                                       •     Sustainability Management Plan, prepared by Aurecon and dated 14
+                                                             October 2025
+                                                       •     Traffic Engineering Assessment prepared by Traffix Group and dated
+                                                             20 October 2025
+                                                       •     Green Travel Plan, prepared by Traffix Group and dated 3 October
+                                                             2025
+                                                       •     Waste Management Plan, prepared by Encycle Consulting and dated
+                                                             17 October 2025
+                                                       •     Environmental Noise Assessment prepared by Aurecon and dated 30
+                                                             September 2025
+                                                       •     Water Sensitive Urban Design Report prepared by Innovis and dated
+                                                             21 October 2025
+                                                       •     Stormwater Management Plan prepared by Innovis and dated 21
+
+
+
+
+                                                                                                                     Report   Page 5
+                                                                                             Planning permit no. PA2504019
+                                                           OFFICIAL
+                                                                October
+                                                          •     Cost Estimate Report prepared by WT Partnership and dated 22
+                                                                September 2025
+                                                          •     Contamination Site Investigation prepared by Aurecon and dated 23
+                                                                January 2023
+
+
+
+2. The subject of this report is the decision plans (as described above).
+
+Proposal Summary
+3. The proposal can be summarised as follows:
+
+
+
+     Proposal:                    Use and development of the land for a data centre
+
+     Total Site Area:             58,178 sqm
+
+     Gross Floor Area:            94,987 sqm
+
+     Height:                      40.5m to upper roof and 47.5m to top of roof plant
+
+                                  North (Wharf Road): approx. 15.0 metres
+                                  South (Westgate Park): approx. 3.0 metres (security fence setback)
+     Setbacks:
+                                  East (future street): approx. 10.0 metres
+                                  West (Todd Road): approx. 8.0 metres
+
+     Land Uses:                   Data Centre with ancillary office, technology centre, substations, water tanks, and guard kiosk
+
+     Car Parking:                 158 spaces
+
+     Bicycle Parking:             36 spaces
+
+     Motorcycle Parking:          8 spaces
+
+     Loading and Waste
+                                  Internal loading dock and waste room accessed via Todd Road crossovers
+     arrangements:
+
+
+
+4. Specific details of the application include:
+
+            •    Construction of a five-storey data centre building with two levels of roof plant inclusive of the following
+                 components:
+
+                        i.Data halls (across Levels 1–4), ancillary office space, a Technology Centre of Excellence
+                         (including auditorium, meeting rooms, and breakout spaces), plant and equipment rooms, and
+                         support facilities.
+                     ii. Maximum building height of 40.5 metres to the upper roof level and 47.5 metres to the top of roof
+                         plant; building arranged in three north–south oriented pods with articulated setbacks to Todd
+                         Road, Wharf Road, and Westgate Park.
+
+                     iii. External finishes include precast concrete panels, grey and black aluminium fins, tinted and
+                          fritted glazing, galvanised steel mesh screens, and weatherproof louvres, with a colour palette
+                          reflecting NEXTDC branding and the industrial character of Fishermans Bend.
+
+            •    Removal of 106 trees (including 97 native species) and scattered native understorey vegetation as part of
+                 site preparation works.
+
+
+
+
+                                                                                                                        Report   Page 6
+                                                                                                Planning permit no. PA2504019
+                                                              OFFICIAL
+           •   Two new vehicle crossovers of 8.0 m and 10.0m width to Todd Road to accommodate access for heavy
+               and light vehicles, with internal circulation and security fencing around the perimeter.
+
+           •   Provision of 158 car parking spaces and dedicated loading areas, including a formal loading dock for two
+               20-metre semi-trailers and additional service bays. Landscaping along all site boundaries, including a
+               substantial buffer to Westgate Park, with indigenous planting, deep soil zones, and a civic plaza at the
+               Todd Road/Wharf Road intersection.
+
+               Continuous 24/7 operation with up to 180 staff and visitors onsite.
+
+
+
+5. The applicant has provided the following concept image/s of the proposal:
+
+
+
+
+Figure 1 – Main Entrance to Technology Centre of Excellence
+
+
+
+
+                                                                                                               Report   Page 7
+                                                                                       Planning permit no. PA2504019
+                                                       OFFICIAL
+                                   Report   Page 8
+           Planning permit no. PA2504019
+OFFICIAL
+Figure 2 – Aerial View of Development - Render
+
+
+
+
+Figure 3 – Overall site plan.
+
+
+
+
+                                                                                    Report   Page 9
+                                                            Planning permit no. PA2504019
+                                                 OFFICIAL
+Subject Site and Surrounds
+
+Site Description
+6. The subject site is located at 127 Todd Road, Port Melbourne, within the Fishermans Bend Employment Precinct,
+   approximately 4 kilometres southwest of the Melbourne CBD. It is identified for significant employment-generating
+   uses and large-format development under the Port Phillip Planning Scheme and the Fishermans Bend Framework.
+
+7. The site is formally described as CP172440L and is held in fee simple by NEXTDC Holdings No. 3 Pty Ltd.
+
+8. The site comprises a large, irregularly shaped parcel of 58,178 m² (5.82 hectares), with substantial frontages to Todd
+   Road (approx. 250m), Wharf Road (approx. 425m), and Westgate Park (approx. 396m).
+
+9. The site is generally flat, with no significant changes in level across the landholding, consistent with its former
+   industrial use.
+
+10. The site is currently vacant, with the previous building (the historic Westgate Park Print Plant) demolished in 2024.
+    The site is predominantly occupied by the former building’s concrete slab and scattered vegetation. There are 125
+    individual trees on site, as detailed in the Arboricultural Impact Assessment submitted by the applicant.
+
+11. Vehicle access is provided via a crossover to Todd Road at the southeastern corner. The site is bounded by security
+    chain mesh fencing, generally set back 3 metres from the boundary.
+
+12. The site forms part of the visual and ecological interface with Westgate Park and is highly visible from surrounding
+    road corridors and parkland.
+
+13. The existing train line and proposed tram line along Wharf Road prevent vehicle crossovers to this boundary, limiting
+    vehicular access to Todd Road. The site’s southern boundary interfaces directly with Westgate Park, including
+    maintenance access paths and a maintenance shed.
+
+14. The site is well serviced by existing utility infrastructure associated with its former industrial use, including power,
+    water, sewer and telecommunications connections.
+
+
+
+
+                                                                                                                      Report   Page 10
+                                                                                              Planning permit no. PA2504019
+                                                          OFFICIAL
+                                                      Figure 4 – Title.
+
+
+Site Surrounds
+15. Development surrounding the site includes:
+
+    •   To the north of the site is the intersection of Todd Road and Wharf Road, comprising a multi-lane roundabout.
+        North of Todd Road are large lots occupied by multi-storey offices and warehouses, including 130–188 Todd
+        Road, which is used for advanced manufacturing and aerospace engineering.
+
+    •   To the east, the site abuts the landscaped verge of Todd Road. Across Todd Road is 130–188 Todd Road, a
+        substantial lot with several large warehouses. Further east, the area remains industrial in character, with large-
+        scale commercial and industrial facilities within the Fishermans Bend Employment Precinct.
+
+    •   To the south of the site is Westgate Park, a regionally significant public open space of approximately 40
+        hectares, comprising wetlands, sealed and unsealed pathways, and diverse flora and fauna. The site directly
+        abuts a walkway through the northern portion of Westgate Park, which is primarily used for park maintenance.
+
+    •   To the west, the site abuts a landscaped strip within the Wharf Road reserve, which also contains unused rail
+        line. Wharf Road is a north–south arterial road comprising a single trafficable lane in each direction and does
+        not provide on-street parking. Land further west is characterised by large-scale industrial and commercial uses,
+        including the Boeing Aerostructures Australia and Leonardo facilities, both of which are significant employers
+        within the precinct.
+
+
+
+
+                                                                                                                  Report   Page 11
+                                                                                          Planning permit no. PA2504019
+                                                       OFFICIAL
+Figure 5 - Subject site in blue, VicPlan, 06/01/2026.
+
+
+
+
+Figure 6 - Zoning map.
+
+
+
+
+                                                                                           Report   Page 12
+                                                                   Planning permit no. PA2504019
+                                                        OFFICIAL
+Figure 7 – Design and Development Overlay Schedule 74.
+
+
+
+
+                                                                                            Report   Page 13
+                                                                    Planning permit no. PA2504019
+                                                         OFFICIAL
+Referrals and Notice
+
+Referrals
+16. The application was referred to the following agencies:
+
+     Provision /       Organisation                           Response and date received
+     Clause
+
+     Section 55        WorkSafe Victoria                      09/12//2025
+     Referral –                                               Pursuant to Section 56(1) of the Planning and Environment
+     Determining                                              Act 1987, WorkSafe Victoria does not object to the grant of
+                                                              a planning permit subject to conditions being placed on
+                                                              any permit issued.
+                                                              Conditions request a fire safety study and a emergency
+                                                              management plan being prepared prior to the Building
+                                                              Permit approval (except for construction of those
+                                                              preliminary works that are outside the scope of the hazard
+                                                              studies).
+
+     Section 55        Head, Transport for Victoria           12/12/2025
+     Referral –                                               Pursuant to Section 56(1) of the Planning and Environment
+     Determining                                              Act 1987, Head, Transport Victoria does not object to the
+                                                              grant of a planning permit subject to conditions being
+                                                              placed on any permit issued.
+                                                              Conditions      require    amended      plans    prior    to
+                                                              commencement, including revised crossovers, swept
+                                                              paths, sight triangles and signage; post-operation transport
+                                                              assessment; and delivery of mitigation measures.
+
+
+Notice
+17. Clause 33.01-2 states: An application is exempt from the notice requirements of section 52(1)(a), (b) and (d),
+    the decision requirements of section 64(1), (2) and (3) and the review rights of section 82(1) of the Act. This
+    exemption does not apply to an application for a building or works within 30 metres of land (not a road) which is in a
+    residential zone or land used for a hospital or an education centre or land in a Public Acquisition Overlay to be
+    acquired for a hospital or an education centre.
+
+18. Section 52(1)(c): the planning scheme does not require notice be provided to any other agency.
+
+19. Further to this, the application does not require referral to the EPA as there are no sensitive uses within the relevant
+    threshold distances under Clause 53.10 of the Melbourne Planning Scheme. Notwithstanding, the EPA was given
+    informal notice and at the time of writing, a Development Licence Exemption pathway is being pursued.
+
+20. Informal notice of the application was given to the following organisations:
+
+Organisation              Referral Comments                                   DTP Response
+
+Melbourne City            12/12/2025 – No formal position. See detailed       All substantive matters raised by CoM have
+Council                   table below detailing the referral response, the    been addressed through permit conditions or
+                          applicant’s comments and the DTP Response.          justified in the assessment, ensuring a
+                                                                              balanced outcome that meets both operational
+                                                                              needs and public realm objectives.
+Fire Rescue Victoria      19/08/2024 - No objection, subject to               The FRV conditions are recommended to
+                          conditions. DTP officers accept the below           ensure fire safety and emergency management
+                          conditions: FSS required prior to construction      are robustly addressed, reflecting best practice
+                          (except for preliminary works), compliance with     for high-risk utility installations and aligning with
+                          FRV guidelines, and verification against            WorkSafe requirements.
+                          relevant Australian and international standards.
+
+
+
+
+                                                                                                                        Report   Page 14
+                                                                                                Planning permit no. PA2504019
+                                                           OFFICIAL
+Parks Victoria     19/09/2025 - No objection; interface matters          Parks Victoria’s interface and environmental
+(Westgate Park     raised (tree protection, hydrology, minor             concerns are addressed through landscaping,
+Committee of       overshadowing, support for biodiversity links).       stormwater management, and construction
+Management)                                                              environmental management plan conditions,
+                                                                         ensuring the park’s amenity and ecological
+                                                                         values are protected.
+Citipower          No response received.                                 In the absence of a response, standard permit
+                                                                         conditions regarding utility connections and
+                                                                         infrastructure protection are included in any
+                                                                         approval, ensuring any future requirements
+                                                                         from Citipower can be accommodated without
+                                                                         delay to the project.
+Melbourne Water    11/11/2025 - No objection, subject to conditions      Conditions have been included in the permit.
+                   (MWA-1393165): FFLs ≥ 3.0 m AHD (≥ 600 mm
+                   freeboard above 2.4 m AHD 1% AEP);
+                   electrical installations ≥ 3.0 m AHD; permeable
+                   fencing below 2.4 m AHD; MW consent for
+                   new/modified connections; evidence of CoM
+                   approval if connecting to local system. (Letter
+                   dated 09/12/2025; received 17/11/2025)
+South East Water   No response received.                                 Standard notes/conditions ensure SEW
+                                                                         requirements can be satisfied at detailed
+                                                                         design; no planning impediment arises in the
+                                                                         absence of comment.
+Department of      25/11/2025 - No objection, no conditions              No further action required; DEECA’s position is
+Energy,            requested.                                            noted and the permit reflects their lack of
+Environment and                                                          objection.
+Climate Action
+                   The Flora and Fauna Assessment prepared by
+                   Biosis dated 21 August 2025 identifies the
+                   vegetation on site is either planted, not native or
+                   scattered individual native species that do not
+                   constitute a patch. Accordingly, there is no
+                   referral requirement to DEECA as the native
+                   vegetation removal is below the thresholds
+                   stated in Clause 66.02-2.
+
+                   The subject land adjoins Crown land (Westgate
+                   Park), currently managed by Parks Victoria.
+                   DEECA defer to the Parks Victoria as the
+                   relevant adjoining land manager (or City of
+                   Melbourne as future land manager) for
+                   comments on matters relating to interface
+                   treatments and drainage considerations.
+
+                    DEECA has considered this application and
+                   does not object to the grant of a permit.
+EPA                12/12/2025 - No objection; permit notes               EPA’s advice is addressed through permit
+                   recommended regarding General                         notes and conditions requiring compliance with
+                   Environmental Duty and licensing.                     the Environment Protection Act 2017 and
+                                                                         ongoing risk mitigation, ensuring environmental
+                                                                         obligations are met.
+Westgate           No response received.                                 The landscaping plan has been developed in
+
+
+
+                                                                                                                Report   Page 15
+                                                                                        Planning permit no. PA2504019
+                                                     OFFICIAL
+Biodiversity                                                                consultation with Westgate Biodiversity and
+                                                                            ongoing engagement is encouraged; permit
+                                                                            conditions ensure the interface supports
+                                                                            biodiversity and ecological outcomes.
+Fishermans Bend      12/12/2025 - No objection, extensive comments          All substantive matters raised by the Taskforce
+Taskforce            received.                                              have been addressed through permit conditions
+                                                                            or justified in the assessment, ensuring an
+                                                                            appropriate planning policy and context
+                                                                            response..
+
+
+
+21. A further assessment of the City of Melbourne’s referral comments is assessed below:
+
+
+ Subject             City of Melbourne              Applicant Comments                      DTP Comments
+                     Comments
+ Traffic             Request for sight lines at     Noted. Resolved by way of               Condition 3: Amended plans
+ Engineering         both crossovers to ensure      condition.                              must show sight line diagrams
+ (Shared Path        drivers can see cyclists                                               at both crossovers.
+ Sightlines)         approaching from both
+                                                                                            This ensures cyclist safety and
+                     directions, at least 50m
+                                                                                            directly addresses CoM’s
+                     away.
+                                                                                            request.
+ Waste               WMP unsatisfactory;            Noted. Resolved by way of               Condition 13: Requires an
+ Management          requests for volume            condition.                              amended WMP addressing all
+ Plan                estimates, summary                                                     CoM requests. This ensures
+                     tables, collection                                                     the waste system is practical,
+                     frequency, clear access,                                               safe, and meets operational
+                     and swept path diagrams.                                               requirements.
+ Open Space          Seek activated interfaces,     Planting palette and permeable          Conditions 3 & 10: Require
+ Planning            clear delineation between      fencing supported. Delineation          visually permeable fencing,
+ (Westgate Park      private and public realm,      and fencing resolved by                 clear delineation, and
+ Interface)          permeable fencing, and         condition. Public open                  landscaping consistent with
+                     maintenance of                 space/cycle link not possible due       Westgate Park. This balances
+                     stormwater flows to            to security and operational             security with public realm
+                     wetlands.                      requirements. Stormwater                integration and is supported by
+                                                    discharge to park supported.            Parks Victoria.
+ ESD and Green       Requests 5 Star Green          No change; alternative                  Condition 16: Requires a
+ Infrastructure      Star, NABERS, third pipe,      performance measures (BESS)             Sustainability Management
+                     rainwater tanks, and           are typical for data centres. Roof      Plan and post-occupancy
+                     alignment with                 space is fully utilised for plant, so   report. The SMP demonstrates
+                     Fishermans Bend                no PV. Water reduction and              high ESD standards and water
+                     Sustainability Goals.          stormwater targets met via BESS         efficiency, consistent with best
+                                                    calculator and WSUD.                    practice for data centres.
+                                                    The data centre is critical
+                                                    infrastructure enabling advanced        No specific condition; justified
+                     Concerns about low job
+                                                    manufacturing and digital               in assessment. The data centre
+                     density, lack of activation,
+ City Strategy                                      industries. Job density is              is enabling infrastructure for the
+                     exceeding FAR, and
+ (Job Density,                                      appropriate for the use;                precinct, and the minor FAR
+                     limited public benefit.
+ Activation, FAR,                                   economic and catalytic benefits         exceedance is justified by the
+                     Suggests gifting SW
+ Urban Structure)                                   are significant. SW corner is           facility’s catalytic role and
+                     corner as public open
+                                                    landscaped and used for                 appropriate footprint within the
+                     space.
+                                                    rainwater tanks; public open            site.
+                                                    space not feasible.
+
+
+
+                                                                                                                     Report   Page 16
+                                                                                             Planning permit no. PA2504019
+                                                        OFFICIAL
+Urban Design         Recommends improved          Active uses and transparency            Conditions 3 & 10: Require
+(Public Interface,   activation, transparency,    prioritised on Wharf Road; Todd         glazing to meeting room and
+Massing,             and reduced bulk,            Road is the least sensitive             bike store, and visually
+Transparency)        especially along Todd        interface and appropriate for           permeable fencing. These
+                     Road and Wharf Road.         services. Significant setbacks          conditions ensure the building
+                                                  and landscaping provided.               interfaces are as active and
+                                                                                          transparent as feasible for a
+                                                                                          secure facility.
+Bicycle Parking      Requests higher bicycle      36 spaces provided, with end-of-        Condition 3: Requires bicycle
+                     parking rates in line with   trip facilities. Clause 52.34 does      parking and end-of-trip facilities
+                     Fishermans Bend targets.     not specify a statutory rate for        as shown on plans. Provision is
+                                                  data centres; provision is              considered adequate for the
+                                                  sufficient and assessed by traffic      use and site context.
+                                                  engineers.
+WSUD and             Requests integrated water    WSUD and SWMP are                       Condition 18: Requires a
+Drainage             management plan, MUSIC       integrated; stormwater will be          stormwater management plan
+                     modelling, and assurance     discharged to Westgate Park,            and compliance with WSUD
+                     that stormwater discharge    supported by Parks Victoria and         and SWMP. This ensures
+                     benefits Westgate Park.      CoM.                                    stormwater is managed
+                                                                                          sustainably and benefits the
+                                                                                          adjacent wetland.
+Urban Forestry       Seeks Arboricultural         Noted; included as permit               Condition 7: Requires
+                     Impact Assessment and        condition.                              AIA/TPP, tree protection, and
+                     Tree Protection Plan, with                                           compensation for any loss,
+                     detailed requirements for                                            consistent with CoM’s Tree
+                     tree protection, removal,                                            Policy and best practice.
+                     and compensation.
+Civil Design         Requests undergrounding      Undergrounding of cables is             Conditions 12 & 18: Require
+                     of overhead cables,          onerous due to high voltage             undergrounding of cables,
+                     drainage upgrades, and       lines; alternative wording              drainage system upgrades, and
+                     compliance with CoM          proposed for drainage. Other            compliance with CoM
+                     standards for access,        items noted or resolved by              infrastructure standards. These
+                     footpaths, and street        condition.                              conditions ensure public
+                     works.                                                               infrastructure is upgraded as
+                                                                                          needed, while allowing
+                                                                                          flexibility where technical
+                                                                                          constraints exist.
+
+22. A further assessment of the Fishermans Bend Taskforce referral comments is assessed below:
+
+
+Subject                     Fishermans Bend              Applicant Comments                 DTP Comments
+                            Taskforce Comments
+Precinct Vision & Role      Vision seeks an              The proposal positions M4          While job density is lower
+(enabling infrastructure    internationally renowned     as critical digital                than a typical advanced
+vs. jobs on site)           centre of innovation with    infrastructure that underpins      manufacturing floorplate, the
+                            visible collaboration;       advanced manufacturing and         centre’s enabling function
+                            recommends using             research activity in the NEIC;     (data, cloud, AI compute) is
+                            government land              economic benefits and              integral to the NEIC vision
+                            holdings to catalyse         enabling capacity are set out      and supports the broader
+                            change and prioritise        in the Planning Report; office     employment uplift envisioned
+                            activity nodes; cautions     and Technology Centre of           by the framework; visible
+                            that low on-site job         Excellence functions provide       activation is directed to the
+                            density may                  visible activation at Wharf        civic spine (Wharf Road),
+
+
+
+                                                                                                                   Report   Page 17
+                                                                                           Planning permit no. PA2504019
+                                                        OFFICIAL
+                          underperform against           Road/Todd Road.                    consistent with the
+                          precinct aspirations.                                             Taskforce’s place intent. No
+                                                                                            additional condition is
+                                                                                            required; it is considered that
+                                                                                            the draft permit already
+                                                                                            balances activation with
+                                                                                            security constraints.
+Connectivity & Civic      Seeks human-centred            The architectural response         The amended plans, via
+Boulevards                spine along                    prioritises activation at Wharf    permit condition, require
+(Turner/Salmon/Sabre      Turner/Salmon and finer-       Road with pop-out glazed           glazing to ground-level
+spine; permeability)      grain supporting streets;      office elements, articulation      meeting/bike rooms and
+                          encourages permeability        and generous landscaped            permeability at the interface,
+                          and visible innovation         setbacks; Todd Road                strengthening passive
+                          along the civic corridors;     accommodates services due          surveillance where feasible;
+                          suggests a connection          to freight function; internal      security and emergency
+                          towards Sabre Drive.           service road is required for       access limit through-site
+                                                         emergency access.                  public connections, but
+                                                                                            activation is focused at the
+                                                                                            civic edge in line with the
+                                                                                            framework. This is
+                                                                                            acceptable given the land
+                                                                                            uses essential security
+                                                                                            protocols and the function of
+                                                                                            Todd Road as the principal
+                                                                                            freight corridor.
+Green Network &           Wants softened edges to        Landscape concept provides         Conditions 10 & 18:
+Westgate Park Interface   Westgate Park,                 indigenous planting and            Landscaping must
+                          biodiversity corridors, and    buffer to the park;                incorporate visually
+                          improved connectivity;         stormwater strategy directs        permeable fencing and
+                          cautions about                 treated flows towards              clearly defined boundaries,
+                          flood/hydrology; supports      wetlands, aiding ecological        and stormwater
+                          revegetation along             function; building mass is         management must be
+                          southern edge.                 angled and set back to             implemented in accordance
+                                                         minimise visual bulk and           with WSUD and the
+                                                         overshadowing of park              approved SWMP, ensuring
+                                                         maintenance areas.                 that existing hydrological
+                                                                                            flows to Westgate Park are
+                                                                                            maintained and, where
+                                                                                            possible, enhanced. This
+                                                                                            approach supports the
+                                                                                            Green Network objectives
+                                                                                            and delivers a measurable
+                                                                                            ecological benefit through
+                                                                                            the protection of wetland
+                                                                                            hydrology, while
+                                                                                            appropriately respecting
+                                                                                            operational and security
+                                                                                            requirements.
+Open Space                Recommends a publicly          The SW corner                      A publicly accessible
+Contribution / New Park   accessible connection or       accommodates critical water        entrance through the site
+Entrance (Sabre Drive)    new entrance to                infrastructure and secure          cannot be supported due to
+                          Westgate Park via Sabre        perimeter; public open space       security requirements for the
+                          Drive and, where               within the secure line is not      data centre; However,
+                          feasible, a public open        feasible; activation is instead    landscaping and wayfinding
+                          space contribution on the      delivered at the Wharf             treatments along the civic
+                          site’s SW corner to            Road/Todd Road corner via          edge, together with
+                          catalyse precinct              the Technology Centre of           permeable fencing and
+
+
+
+
+                                                                                                                   Report   Page 18
+                                                                                           Planning permit no. PA2504019
+                                                        OFFICIAL
+                           benefits.                     Excellence and civic-edge         clearly defined boundaries,
+                                                         landscape.                        deliver a positive public
+                                                                                           realm outcome while
+                                                                                           deferring the provision of a
+                                                                                           new park entry to a future
+                                                                                           external alignment. This
+                                                                                           approach is considered
+                                                                                           acceptable having regard to
+                                                                                           the operational constraints of
+                                                                                           the land use and the park’s
+                                                                                           existing maintenance access
+                                                                                           configuration. (Condition 10)
+Activation & Public        Encourages visible            Wharf Road frontage               Requires targeted glazing
+Interface (innovation on   innovation and                includes glazed office            and visually permeable
+display; transparency)     transparent ground-level      extrusions and                    fencing; together with
+                           interfaces along civic        horizontal/vertical               articulation and landscaped
+                           boulevards; discourages       articulation; security fencing    setbacks, these measures
+                           off-the-shelf security        is set back and designed to       deliver reasonable activation
+                           fencing.                      be visually permeable;            for a secure utility
+                                                         services concentrated on          installation. This is
+                                                         Todd Road to avoid                acceptable because it
+                                                         compromising civic edges.         improves passive
+                                                                                           surveillance and civic
+                                                                                           address while maintaining
+                                                                                           security requirements.
+Built Form / Floor Area    Notes FAR guidance in         The scheme adopts large           The minor Floor Area Ratio
+Ratio Discretion           DDO74 and cautions that       setbacks (angled siting; max      exceedance is justified by
+(DDO74 1.5:1 guidance)     excess bulk may affect        separation to park up to 141      the enabling role of the
+                           park interface/visual         m) and facade modulation to       facility and is appropriately
+                           amenity; requests careful     reduce perceived bulk;            mitigated through generous
+                           massing and setbacks to       shadow diagrams show              setbacks, built form
+                           avoid overshadowing.          minor equinox shadow over         modulation, and effective
+                                                         maintenance areas rather          shadow control. Having
+                                                         than high-amenity park            regard to the industrial
+                                                         spaces.                           context and the interface
+                                                                                           with park maintenance
+                                                                                           areas, the residual amenity
+                                                                                           impact is low. No additional
+                                                                                           permit condition is required
+                                                                                           beyond compliance with the
+                                                                                           endorsed plans and
+                                                                                           Condition 3 (layout not
+                                                                                           altered without consent).
+Sustainable Transport /    Seeks high mode share         Provides 36 bicycle spaces        Requires bicycle parking and
+Bicycle Parking            (active/public) by 2050;      with end-of-trip facilities       EOT facilities as shown,
+                           recommends bicycle            located proximate to office       supporting realistic use
+                           provision aligned to civic    and Technology Centre; site       patterns for a secure data
+                           targets and access to         circulation separates freight     centre (lower daily trips;
+                           end-of-trip facilities.       and active modes for safety.      freight focus) while still
+                                                                                           aligning with precinct
+                                                                                           aspirations at the civic edge.
+                                                                                           This is acceptable as a
+                                                                                           proportional response that
+                                                                                           avoids conflicts with heavy
+                                                                                           vehicle operations.
+WSUD, Stormwater &         Emphasises integrated         The SWMP/WSUD integrate           Condition 18 requires SWMP
+Flood Resilience           water management and          treatment and discharge to        implementation; additionally,
+
+
+
+                                                                                                                  Report   Page 19
+                                                                                          Planning permit no. PA2504019
+                                                        OFFICIAL
+                       safeguarding wetland      Westgate Park; no                  Melbourne Water’s flood
+                       hydrology; supports       stormwater harvesting for          resilience conditions (FFL ≥
+                       green corridors and       process cooling due to             3.0 m AHD; electrical
+                       climate resilience        technical constraints; floor       installations ≥ 3.0 m AHD;
+                       measures.                 levels designed to respond         permeable fencing below
+                                                 to local flood context.            flood levels; consent for
+                                                                                    connections) will be
+                                                                                    inserted—ensuring wetland
+                                                                                    support and flood safety for
+                                                                                    critical infrastructure. This is
+                                                                                    acceptable and consistent
+                                                                                    with State Floodplain
+                                                                                    Management Policy.
+Security Fencing &     Discourages visually      Perimeter fencing is visually      Condition 10 requires
+Public Realm Quality   harsh security            permeable and set back             permeable fencing and clear
+                       treatments; prefers       within landscaped zones;           delineation; together with
+                       permeable, integrated     high-level planting near           landscape palette and
+                       design responses with     fence is limited for security      setbacks, this yields good
+                       materiality aligned to    reasons, but low-lying             passive surveillance and a
+                       precinct character.       indigenous planting softens        softened edge appropriate to
+                                                 edges and maintains                a secure utility installation.
+                                                 sightlines.                        This is acceptable as a
+                                                                                    pragmatic balance between
+                                                                                    operational risk and public
+                                                                                    realm delivery.
+Emergency Access /     Seeks human-centred       The internal service road is       Retention of the service road
+Service Road           frontage and questions    required for emergency             is supported in response to
+                       necessity of internal     response and access to             fire safety and operational
+                       service road where it     critical plant, consistent with    requirements and is
+                       diminishes activation     NCC and operational                appropriately offset by
+                       potential.                standards; activation is           targeted activation along
+                                                 provided at the civic edge         Wharf Road. This outcome is
+                                                 rather than along secure           acceptable given that life-
+                                                 service interfaces.                safety and emergency
+                                                                                    access considerations are
+                                                                                    paramount for a high-risk
+                                                                                    facility, and public realm
+                                                                                    activation has been
+                                                                                    concentrated where a
+                                                                                    meaningful public interface
+                                                                                    can be achieved.
+
+
+
+
+                                                                                                           Report   Page 20
+                                                                                   Planning permit no. PA2504019
+                                                OFFICIAL
+Assessment
+
+Statutory Controls – City of Melbourne Planning Scheme
+ Provision                                                  Permit Trigger
+
+ Zone                   Clause 33.01 – Industrial 1 Zone    Clause 33.01-1 - Use of the land for Utility Installation (Data Centre).
+                        (IN1Z)                              Clause 33.01-4 - To construct a building or construct or carry out
+                                                            works.
+
+
+ Overlay                Clause 43.02 Design and             43.02-2 - Construct a building or construct or carry out works
+                        Development Overlay – Schedule
+                        74
+
+ Particular       and   Clause 52.06 (Car Parking)          Car parking spaces must be provided to the satisfaction of the
+ General Provisions                                         responsible authority.
+                        Clause 52.17 (Native Vegetation)    Clause 52.17 -1 - to remove, destroy or lop native vegetation, including
+                                                            dead native vegetation
+
+
+                        Clause 52.29 (Land Adjacent to      Clause 52.29-2 – Create or alter access to a road in a Transport Zone
+                        the Principle Road Network).        2 (Todd Road).
+
+
+                        Clause 52.34 Bicycle Facilities     N/A
+
+                        Clause    53.22    (Significant     No permit required – this clause applies to the application as it qualifies
+                        Economic Development)               for the provision under Category 1 (see summary table for further
+                                                            details on eligibility)
+
+
+Strategic Planning Context
+Strategic Direction and Land Use
+Plan for Victoria
+23. Plan for Victoria provides a long-term, integrated strategy for the sustainable growth of Victoria, focusing on
+    liveability, economic development, and the delivery of essential infrastructure. The plan identifies the importance of
+    supporting employment and innovation precincts, particularly those that drive technological advancement and digital
+    transformation. The proposed data centre at 127 Todd Road, Port Melbourne, is directly aligned with these
+    objectives, as it will deliver critical digital infrastructure, support the growth of advanced manufacturing and
+    technology sectors, and contribute to Victoria’s competitiveness in the global economy.
+
+24. The site’s location within the Fishermans Bend Employment Precinct is consistent with Plan for Victoria’s vision for
+    state-significant employment clusters. These clusters are intended to attract investment, foster innovation, and create
+    high-value jobs. The plan also highlights the need for resilient, future-proofed infrastructure to support economic
+    growth and population expansion. The data centre will play a key role in meeting the increasing demand for digital
+    services, supporting job creation, and strengthening Victoria’s position as a leader in technology, research, and
+    innovation.
+
+Fishermans Bend Vision and Framework
+25. The Fishermans Bend Vision (2016) and Fishermans Bend Framework (2018) set out a comprehensive plan for
+    transforming Fishermans Bend into a world-class centre for advanced manufacturing, engineering, research, and
+    innovation. The Framework designates the Employment Precinct as a National Employment and Innovation Cluster
+    (NEIC), targeting the creation of 40,000 jobs by 2050 and supporting globally competitive research and technology
+    sectors. The Framework also emphasises the importance of delivering “catalyst” infrastructure projects such as data
+    centres to underpin the precinct’s transformation and attract further investment.
+
+
+
+
+                                                                                                                         Report   Page 21
+                                                                                                 Planning permit no. PA2504019
+                                                           OFFICIAL
+26. The subject site is strategically located within the Employment Precinct, adjacent to the Port of Melbourne and other
+    major infrastructure and transport infrastructure including the Westgate Bridge, Citylink, and has good proximity to
+    the CBD. The Framework encourages the delivery of critical infrastructure, such as the proposed data centre, to
+    support the precinct’s evolution into a hub for advanced industries, research, and education.
+
+27. The proposal also supports the Framework’s objectives for sustainable transport, with proximity to existing and
+    planned public transport, cycling, and pedestrian networks. The site’s interface with Westgate Park and the broader
+    green network is addressed through integrated landscaping and ecological connections, in line with the Framework’s
+    “Green Network” and “Civic Boulevards” strategies.
+
+28. The Fishermans Bend Framework further identifies the need for flexible, large-scale industrial sites to accommodate
+    advanced manufacturing and technology uses, and encourages the co-location of research, education, and industry
+    partners. The data centre will serve as a catalyst for collaboration between industry, research institutions, and
+    government, supporting the precinct’s ambition to become a global leader in innovation and advanced
+    manufacturing.
+
+
+
+Advancing Manufacturing – the Fishermans Bend opportunity, September 2021
+29. Advancing Manufacturing – the Fishermans Bend opportunity sets out the strategic vision for the Fishermans Bend
+    National Employment and Innovation Cluster (NEIC), aiming to build on the precinct’s industrial legacy by
+    transforming it into a globally recognised centre for advanced manufacturing, engineering and design. The document
+    outlines a long-term economic strategy to attract investment, stimulate high-value job growth, foster collaboration
+    between industry, research and investors, and guide development through key moves such as catalysing the
+    Fishermans Bend Innovation Precinct at the former GMH site.
+
+30. A key objective also emphasises the integration of digital technology via fast, reliable, high-capacity infrastructure
+    that enables living lab opportunities, underpinning advanced manufacturing and innovation in the precinct.
+
+  Broadly, the proposal aligns with the vision for the Fishermans Bend National Employment and Innovation Cluster
+  (NEIC) by supporting advanced manufacturing, engineering, and design-led innovation, contributing to the precinct’s
+  target of 40,000 jobs and 20,000 students by 2050.
+
+31. More specifically, the development is consistent with the following components of the document:
+       • supports Key Move 01 (Catalyst Site) by leveraging government landholdings to attract globally significant
+           tenants and research institutions, fostering collaboration between industry, academia, and innovators within
+           the precinct.
+
+        •   responds to Key Move 03 (Green Network) and Key Move 05 (Urban Design) by integrating high-quality
+            public realm, green infrastructure, and flexible built form outcomes that enhance amenity, sustainability, and
+            long-term adaptability for advanced manufacturing uses.
+
+        •   addresses the design criteria outlined in the strategic directions by promoting flexible built form outcomes,
+            protecting larger landholdings for advanced manufacturing, encouraging active frontages and high-amenity
+            public spaces, and embedding design excellence and adaptability to support the long-term evolution of the
+            precinct.
+
+    The proposal is consistent with the strategic objectives to promote innovation, support a critical mass of industry and
+    education, and deliver a vibrant, accessible, and globally competitive innovation ecosystem at Fishermans Bend.
+
+Additional Strategic Context
+
+
+
+
+                                                                                                                 Report   Page 22
+                                                                                         Planning permit no. PA2504019
+                                                        OFFICIAL
+32. The Fishermans Bend Integrated Transport Plan (2025) supports the delivery of new and upgraded public transport,
+    cycling, and pedestrian infrastructure to improve connectivity within the precinct and to the broader metropolitan
+    area.
+33. The plan will not conflict the recommissioning of the light rail corridor along Wharf Road and the extension of tram
+    and heavy rail services as key priorities, which will benefit future employees and visitors to the site.
+
+34. The City of Melbourne Council Plan and Economic Development Strategy reinforce the importance of Fishermans
+    Bend as a globally competitive innovation district, supporting the growth of advanced manufacturing, research, and
+    digital industries. The proposed data centre directly supports these objectives by providing essential infrastructure
+    and fostering collaboration between industry, research, and government.
+
+
+35. The proposal is also consistent with the key and relevant objectives of the State Planning Policy Framework and the
+    Municipal Planning Strategy, which seek to promote economic development, protect and enhance biodiversity,
+    manage environmental risks, and ensure high-quality urban design and amenity.
+
+Melbourne Planning Policy Framework
+36. The Planning Policy Framework (PPF) of the Melbourne Planning Scheme encourages appropriate land use and
+    development that enhances the built environment, supports economic growth, delivers diversity in employment and
+    innovation, integrates transport and infrastructure planning, and ensures environmental sustainability. The PPF
+    seeks to facilitate the transformation of strategic precincts such as Fishermans Bend into globally competitive centres
+    for advanced manufacturing, research, and technology.
+
+37. The relevant Melbourne Planning Scheme (MPS) and Planning Policy Framework (PPF) policies have been
+    considered in assessing the application, and the following are considered relevant:
+
+
+
+       Clause                    Description
+       Clause 11                 Settlement
+       11.01-1S                  Settlement
+       11.01-1R                  Settlement – Metropolitan Melbourne
+       11.02-1S                  Supply of Urban Land
+       11.03-1S                  Activity Centres and Precincts
+       11.03-6L-05               Fishermans Bend Employment Precinct
+       Clause 12                 Environmental and Landscape Values
+       12.01-1S                  Protection of Biodiversity
+       12.01-2S                  Native Vegetation Management
+       Clause 13                 Environmental Risks and Amenity
+       13.01-3S                  Urban Heat
+       13.03-1S                  Floodplain Management
+       13.05-1S                  Noise Management
+       13.07-1S                  Land Use Compatibility
+       13.07-2S                  Major Hazard Facilities
+       Clause 15                 Built Environment and Heritage
+       15.01-1S                  Urban Design
+       15.01-2S                  Building Design
+       15.03-2S                  Aboriginal Cultural Heritage
+       Clause 17                 Economic Development
+       17.01-1S                  Diversified Economy
+       17.01-1R                  Diversified Economy – Metropolitan Melbourne
+       17.01-2S                  Innovation and Research
+       17.03-1S                  Industrial Land Supply
+
+
+
+
+                                                                                                                 Report   Page 23
+                                                                                         Planning permit no. PA2504019
+                                                        OFFICIAL
+       17.03-3S                  State Significant Industrial Land
+       Clause 18                 Transport
+       18.01-1L                  Land Use and Transport Planning
+       Clause 19                 Infrastructure
+       19.03-2S                  Infrastructure Design and Provision
+       19.03-3S                  Integrated Water Management
+       19.03-3L                  Stormwater Management (Water Sensitive Urban Design)
+       19.03-5S                  Waste and Resource Recovery
+
+
+38. The proposal is generally supported the state and local policies. A response to the relevant MPS and PPF policies is
+    as follows:
+
+
+   •   Policy seeks the consolidation, redevelopment and intensification of existing urban areas (Clause 11.02-1S). The
+       proposal redevelops a vacant, previously industrial site within the Fishermans Bend Employment Precinct,
+       supporting urban renewal and efficient use of land in a strategic location.
+   •   Policy seeks to provide for significant employment opportunities and support the growth of advanced
+       manufacturing, technology, and innovation sectors (Clauses 11.03-6L-05, 17.01-1S, 17.01-1R). The data centre
+       will act as a catalyst for economic activity, job creation, and innovation within the precinct, consistent with the
+       vision for Fishermans Bend as a National Employment and Innovation Cluster.
+   •   Policy seeks to ensure that use and development does not detrimentally impact community amenity and is
+       compatible with adjoining or nearby land uses (Clauses 13.05-1S, 13.07-1S). The subject land is centrally located
+       within an industrial precinct, surrounded by compatible land uses. The application is supported by an Acoustic
+       Report and Environmental Noise Assessment, demonstrating compliance with relevant standards.
+   •   Policy seeks to ensure that wastewater and stormwater discharge from development is managed and detrimental
+       effects on downstream waterways are appropriately mitigated (Clauses 12.01-1S, 14.02-1S, 19.03-3S, 19.03-3L).
+       The applicant has submitted a Stormwater Management Plan and Water Sensitive Urban Design Report,
+       detailing best practice measures for water management and ecological protection, particularly in relation to
+       Westgate Park.
+   •   Policy seeks to create safe and functional urban environments while delivering design and siting outcomes that
+       contribute positively to the local context (Clauses 15.01-1S, 15.01-2S). The proposal incorporates high-quality
+       architectural design, active street frontages, and substantial landscaping, enhancing the visual and ecological
+       character of the area.
+   •   Policy seeks to achieve best practice environmentally sustainable development in large-scale projects (Clauses
+       15.01-2S, 19.03-3S). The applicant has prepared a Sustainability Management Plan, which details initiatives for
+       energy efficiency, water management, recycling, and sustainable building materials. The proposal targets a 5 Star
+       NABERS energy rating and incorporates extensive landscaping with native species.
+   •   Policy seeks to strengthen and facilitate economic growth in state-significant industrial land through the delivery
+       of jobs across a broad range of employment sectors (Clauses 17.01-1S, 17.03-1S, 17.03-3S). The data centre
+       will support the growth of advanced manufacturing, research, and technology sectors, consistent with the
+       strategic objectives for Fishermans Bend.
+   •   Policy seeks the timely provision of planned infrastructure to communities through the preparation and
+       implementation of development contributions plans and infrastructure contributions plans (Clause 19.03-2S). The
+       proposal will contribute to the delivery of infrastructure and services required to support the ongoing growth of the
+       precinct.
+
+Use
+39. The proposal seeks approval for the use and development of the land at 127 Todd Road, Port Melbourne, for a Data
+    Centre (Utility Installation). The facility will operate 24 hours a day, 7 days a weekThe total Gross Floor Area (GFA) is
+    94,987 square metres. Ancillary infrastructure includes substations, bulk water storage tanks, a shared use
+    collaboration area, office space, car parking, and extensive landscaping.
+
+
+
+
+                                                                                                                   Report   Page 24
+                                                                                           Planning permit no. PA2504019
+                                                         OFFICIAL
+40. The proposal is being assessed under Clause 53.22 – Significant Economic Development, with written advice from
+    Invest Victoria confirming the project’s financial feasibility. The development is expected to generate significant
+    investment, facilitate employment generation, and deliver substantial economic benefits to the Fishermans Bend
+    Employment Precinct and the broader Melbourne region.
+
+41. The proposal aligns well with the purpose and intent of the Industrial 1 Zone (IN1Z). In particular:
+
+        •   The scale, footprint and operational characteristics of the data centre are suited to industrial land and cannot
+            be readily accommodated within commercial or mixed-use zones.
+        •   The use will operate on a 24-hour basis with limited staff numbers and minimal traffic generation, avoiding
+            conflict with surrounding industrial and logistics activities.
+        •   Noise and visual impacts associated with plant equipment can be effectively managed through building
+            design, setbacks and acoustic treatment, consistent with relevant decision guidelines.
+        •   The development makes efficient use of existing and planned utility infrastructure within the precinct,
+            including high-voltage power supply and fibre networks.
+        •   The built form, layout and intensity of the proposal are appropriate for the Industrial 1 Zone and reinforce the
+            economic function of the precinct as a technology and employment hub.
+
+42. The proposal also responds positively tothe economic development policies under Clause 17.01-1S and 17.01-1R by
+    creating opportunities within emerging technology industries. The use of the land for a Data Centre supports the
+    provision of critical digital infrastructure for data storage, processing, and management, which is essential for
+    Victoria’s digital economy.
+
+43. Clause 13.07-1S (Land Use Compatibility) outlines the objective of protecting community amenity, human health,
+    and safety while facilitating appropriate commercial, industrial, and infrastructure uses. The proposed data centre is
+    sited with substantial setbacks from all boundaries and is expected to have minimal impact on the surrounding area,
+    which is predominantly industrial and/or vacant land.
+
+44. There are no residential or other sensitive uses within the immediate surrounds. The proposal incorporates a
+    considerate design response that maintains coherence with the industrial context of Fishermans Bend. An
+    Environmental Noise Assessment has been prepared for the site, confirming that predicted noise levels will comply
+    with relevant criteria for all day, evening, and night periods at all receivers.
+
+45. Traffic generation, as detailed in the Traffic Engineering Assessment prepared by Traffix Group, is expected to be
+    modest given the relatively low number of staff at any one time. The assessment forecasts that the proposed data
+    centre will generate approximately 60 vehicle movements during the AM peak hour and 56 movements during the
+    PM peak hour. The majority of these trips are associated with staff and contractors, with visitor and service vehicle
+    trips managed via a pre-booking system. The report concludes that the surrounding road network, including Todd
+    Road, has sufficient capacity to accommodate the forecast traffic volumes, and that the development will not have a
+    significant impact on the operation or safety of the local road network.
+
+
+Buildings and Works
+46. In considering the design and built form of the proposed development, the most relevant clauses of the Melbourne
+    Planning Scheme are Clause 15.01-1S (Urban Design), Clause 15.01-1R (Urban Design – Metropolitan Melbourne),
+    Clause 15.01-2S (Building Design), Clause 15.01-1L-03 (Sunlight to Public Spaces), and Clause 43.02 (Design and
+    Development Overlay – Schedule 74, Fishermans Bend Employment Precinct). The proposal’s response to
+    integrated water management and transport is addressed by Clause 19.03-3L (Stormwater Management – WSUD)
+    and Clause 18.01-1L (Land Use and Transport Planning).
+
+
+
+
+                                                                                                                   Report   Page 25
+                                                                                           Planning permit no. PA2504019
+                                                        OFFICIAL
+47. This assessment considers the building design response with respect to height, massing, setbacks, interface,
+    architectural expression, materials, streetscape activation, access, circulation, landscaping, overshadowing, amenity,
+    ESD/WSUD, and DDO74 compliance, referencing the architectural plans and supporting reports.
+
+
+Design and Development Overlay Schedule 74 – Fishermans Bend Employment Precinct
+
+48. DDO74 relates to the Fishermans Bend Employment Precinct and broadly seeks to further the strategic goals for
+    NEIC and provide guidance for development, specifically targeting built form that enhances and positively contributes
+    to the public realm and furthers connectivity and accessibility within the precinct.
+
+49. The following table provides an assessment against DDO74:
+
+
+                Decision Guideline                                               Assessment
+     Does the development support the             The proposal delivers enabling digital infrastructure that directly
+     precinct as a centre of innovation for       supports advanced manufacturing, research, and innovation
+     advanced manufacturing, engineering,         activities within the Fishermans Bend Employment Precinct. The
+     design and tertiary education?               data centre will facilitate the operation and growth of businesses
+                                                  and institutions in these sectors, consistent with the NEIC vision.
+     Does the density of development              While the site is outside the ‘core’ sub-precinct, the development
+     support higher levels of activity and        will generate significant economic activity and employment, and
+     employment in the 'core' sub-precinct?       provide critical IT capacity for businesses within the core. The
+                                                  facility is expected to act as a demand generator for further
+                                                  investment and activity in the precinct.
+     Is the development generally in              The subject site is not included within Map 2 of DDO74.
+     accordance with Map 2?
+     Would the density of development             The proposal does not prejudice the precinct’s ability to
+     prejudice the precinct’s ability to          accommodate targeted uses. Rather, it enhances the precinct’s
+     accommodate advanced                         capacity by providing essential infrastructure, while being located
+     manufacturing, engineering, design and       outside the core to avoid constraining future core development.
+     tertiary education?
+     Does the development improve urban           The design provides a high-quality architectural response, with
+     design quality and amenity, including        articulated facades, active frontages to key interfaces, and a robust
+     through contemporary architecture,           sustainability strategy. The proposal incorporates substantial
+     active frontages, sustainable design,        landscaping and material variation, positively contributing to the
+     and high-quality materials?                  public realm and local character.
+     Does subdivision or development              The proposal utilises the large site to deliver a purpose-built facility
+     outside the 'core' sub-precinct maintain     with appropriately scaled floorplates. No subdivision is proposed.
+     or enhance land parcel sizes suitable        The development maintains the site’s suitability for any future
+     for large floorplate activities?             large-scale employment uses.
+     Does the development positively              The proposal enhances the public realm through generous
+     contribute to the quality of public and      landscaped setbacks, a civic plaza at the main corner, and
+     publicly accessible open space and the       improved ecological connections to Westgate Park. The design
+     public realm?                                addresses each interface to balance operational requirements with
+                                                  public amenity.
+     Is the development designed to support       While security requirements limit through-site public access, the
+     and enhance accessibility and                proposal provides improved pedestrian experience and
+     connectivity for pedestrians and             permeability at the northern frontage and includes end-of-trip
+     cyclists?                                    facilities and bicycle parking to support active transport.
+     Does the development protect                 The development does not impede the existing light rail corridor
+     opportunities for future extension of rail   along Wharf Road and preserves opportunities for future public
+     freight connections and public transport     transport upgrades. No adverse impacts are posed to current or
+     services?                                    future transport infrastructure.
+     Would a subdivision increase the Floor       No subdivision is proposed. The proposal seeks a minor
+
+
+
+
+                                                                                                                     Report   Page 26
+                                                                                             Planning permit no. PA2504019
+                                                          OFFICIAL
+     Area Ratio above the DDO74                 exceedance of the discretionary FAR (1.63:1 vs 1.5:1), justified by
+     maximum?                                   the enabling role of the facility and the substantial public and
+                                                economic benefits delivered.
+
+
+
+
+Building Height and Massing
+
+50. The proposed building attains a maximum height of 40.5 metres to the upper roof level and 47.5 metres to the top of
+    roof plant (see Elevations, Sheet DA13). The building is arranged over a ground floor and five upper levels, with the
+    uppermost plant and equipment zones recessed from the primary façades to reduce perceived bulk when viewed
+    from the public realm. The overall Gross Floor Area (GFA) is 94,987 m², as confirmed on the Ground Floor Plan and
+    Area Schedule (Sheet DA06). The height, scale and intensity of development are commensurate with the site’s
+    location within the Fishermans Bend Employment Precinct, which is identified for substantial employment-generating
+    and infrastructure-intensive development.
+
+51. The massing is broken into three north–south oriented pods, with data halls occupying the central and southern
+    wings, and commercial/office components and the Innovation Hub (Technology Centre of Excellence) located at the
+    prominent Todd Road/Wharf Road intersection. This approach reduces the apparent scale of the development and
+    avoids the presentation of a single, monolithic built form, consistent with Clause 15.01-1S, which seeks urban
+    environments that respond to their context and enhance visual amenity.
+
+52. The articulation of the building into discrete pods also responds to Clause 15.01-2S, which encourages built form
+    outcomes that achieve appropriate scale, form and massing, particularly for large developments. The north–south
+    orientation improves legibility, creates visual breaks along the street frontage and allows the more publicly accessible
+    and active uses to address the key intersection, reinforcing urban structure and wayfinding within the employment
+    precinct.
+
+53. Locating the Innovation Hub and office components at the Todd Road/Wharf Road corner supports the objectives of
+    Clause 11.01-1S and Clause 17.01-1S by promoting knowledge-based employment, innovation and economic
+    productivity in a strategically significant employment area. This interface provides a more articulated and engaging
+    built form at a highly visible gateway location, while allowing the data hall functions to be accommodated in a manner
+    that is operationally efficient and visually contained.
+
+54. The recessed upper-level plant and equipment zones respond to Clause 15.01-2S and Clause 15.02-1S by
+    minimising visual dominance, managing views from surrounding streets and reducing potential amenity impacts
+    associated with building bulk and service infrastructure. This is particularly important for a data centre use, where
+    rooftop plant is essential but can be sensitively integrated into the overall building envelope.
+
+55. Overall, the proposed height, massing and layout achieve an appropriate balance between accommodating a major
+    piece of digital infrastructure and delivering a built form outcome that is consistent with State planning policy for
+    employment precincts, contemporary industrial development and high-quality urban design within Fishermans Bend.
+
+
+
+Setbacks
+
+56. The architectural plans confirm the following minimum setbacks:
+     • Todd Road (east): ~13.6 m to the building envelope, with an internal service road, substation, and generator
+        infrastructure (Site Plan, Sheet DA04).
+     • Wharf Road (north-west): ~18.1 m to the building envelope, with extruded, glazed office volumes providing
+        activation and articulation.
+
+
+
+
+                                                                                                                  Report   Page 27
+                                                                                          Planning permit no. PA2504019
+                                                        OFFICIAL
+     •   Todd/Wharf intersection (north): ~35.2 m ground-level setback, accommodating landscaping and short-term
+         parking.
+     •   Westgate Park (south): ~9 m minimum setback at the closest corner, with substantial setbacks elsewhere
+         directing mass away from the park boundary.
+
+57. These setbacks prioritise public realm quality along Wharf Road (the civic spine) and the corner address, while
+    pushing mass away from Westgate Park to preserve amenity, views, and sunlight access in accordance with Clause
+    15.01-1L-03.
+
+58. In addition, the variable setbacks and orientation of the built form assist in protecting key viewlines to and from
+    Westgate Park and along Wharf Road, which is identified as a primary civic spine within Fishermans Bend. By
+    increasing setbacks at the Todd Road/Wharf Road intersection and limiting building encroachment along the
+    southern interface, the proposal maintains visual permeability and oblique views toward the parkland, consistent with
+    Clause 15.01-1S and Clause 15.01-1L-03, which seek to protect important views and integrate development with
+    adjacent open space.
+
+59. This approach ensures the development does not present as a visual barrier, reinforces the legibility of the open
+    space network, and supports a high-quality interface between the employment precinct and Westgate Park.
+
+60. Overall, the distribution of setbacks and ground-plane uses is consistent with DDO74 objectives to enhance
+    connectivity and positively contribute to the public realm
+
+Architectural Expression, Materiality, and Climate Response
+
+61. The architectural character employs a regular structural rhythm expressed through precast blade columns, with
+    angled precast and aluminium fin elements creating depth and relief (see Elevations, Sheet DA13). The materials
+    palette includes textured precast concrete, tinted and fritted glazing, flat and angled aluminium cassettes in grey,
+    black, and red, galvanised steel mesh screens, and weatherproof louvres.
+
+62. The Innovation Hub at the Todd/Wharf intersection is highly glazed and articulated, with a landscaped plaza that
+    invites visitors and supports precinct legibility. The design’s honest expression of structure and services is in keeping
+    with Fishermans Bend’s industrial legacy and Clause 15.01-2S guidance for high-quality, contextually responsive
+    design.
+
+Streetscape, Activation and Public Realm
+
+63. The Innovation Hub addresses the Todd/Wharf intersection with a transparent, articulated frontage and a landscaped
+    plaza. Glazed office “pop-outs” along Wharf Road animate the street edge and provide passive surveillance,
+    consistent with Clause 15.01-1S principles for safe and engaging public interfaces. Where security requirements limit
+    permeability (e.g., data hall frontages), the scheme substitutes activation with rhythmic articulation, varied materials,
+    and landscape layers. Thisavoids extended blank walls and meeting Clause 15.01-2S expectations for attractive
+    public realm interfaces even in service-intensive contexts.
+
+Noise
+64. The applicant has submitted an Environmental Noise Assessment prepared by Aurecon Australasia Pty Ltd, dated
+    30 September 2025. The assessment was undertaken in accordance with the Environment Protection Act 2017, the
+    Environment Protection Regulations 2021, and EPA Publication 1826.4: Noise limit and assessment protocol for the
+    control of noise from commercial, industrial and trade premises and entertainment venues (Noise Protocol). The
+    assessment establishes noise limits for all relevant noise sensitive areas (NSAs) in the vicinity of the site, including
+    West Gate Park, residential areas in Port Melbourne and Yarraville, and educational facilities, based on measured
+    background levels and zoning.
+
+
+
+
+                                                                                                                   Report   Page 28
+                                                                                           Planning permit no. PA2504019
+                                                         OFFICIAL
+65. The noise limits for the nearest sensitive receptors during the night period range from 45 dB(A) to 52 dB(A) LAeq,
+    depending on the receptor type and location. For example, the night period noise limit at West Gate Park (NSA2) is
+    52 dB(A) LAeq, while for the nearest residential receptors at 137 Williamstown Rd and 300 Plummer St, Port
+    Melbourne (NSA3 and NSA4), the night period limit is 49 dB(A) LAeq. The assessment also applies cumulative noise
+    sharing adjustments in accordance with the Noise Protocol, ensuring that the project’s contribution remains within the
+    allowable limits when considered alongside other industrial and commercial sources in the area.
+
+66. Noise modelling was undertaken using a 3D computational model (SoundPLAN v9.1), incorporating all major noise-
+    generating equipment, including air-cooled chillers, condensers, pumps, transformers, and emergency generators.
+    The modelling predicts that, with the inclusion of a 7-metre high rooftop noise barrier and other mitigation measures,
+    noise emissions from the proposed data centre will comply with the relevant EPA noise limits at all assessed
+    sensitive receivers during both typical operation and emergency generator testing scenarios. No exceedances are
+    predicted at any time period, and the assessment concludes that the proposal will not result in unreasonable noise
+    impacts on the amenity of the surrounding area
+
+
+
+
+Figure 7: Identified surrounding Commercial and Industrial sites and location of noise testing receptors
+
+Landscaping
+67. The applicant has submitted a detailed Landscape Concept Report prepared by LatStudios, dated 9 October 2025.
+    The landscape design for 127 Todd Road, Port Melbourne, responds to the site’s prominent location within the
+    Fishermans Bend National Employment and Innovation Cluster and its interface with Westgate Park. The proposal
+    seeks to deliver a robust, ecologically responsive, and visually distinctive landscape that supports both the current
+    industrial context and the precinct’s future as a high-density, mixed-use urban environment.
+
+68. The landscape plan proposes the planting of 181 new trees, with a focus on native and endemic species such as
+    Spotted Gum, Swamp Gum, Banksia integrifolia, and Banksia marginata. These are complemented by a diverse
+    understorey of locally indigenous shrubs, grasses, and groundcovers, including Kangaroo Grass, Sweet Bursaria,
+    White Correa, and Lomandra species. The planting palette has been selected for resilience to local conditions, low
+    water requirements, and the ability to thrive without reliance on irrigation. In addition to new plantings, 19 existing
+    mature trees—including significant Swamp Gums and Spotted Gums—will be retained to anchor the landscape and
+
+
+
+                                                                                                                            Report   Page 29
+                                                                                                    Planning permit no. PA2504019
+                                                              OFFICIAL
+    provide immediate canopy cover. In total, 125 existing trees were surveyed, with 106 to be removed due to poor
+    health or conflicts with the proposed built form, and all removals are offset by the extensive new planting program.
+
+
+69. The landscape design is structured around several key zones:
+     • Technology Centre Plaza: A civic forecourt at the Todd Road/Wharf Road corner, featuring bluestone and
+         concrete paving, custom seatable planters, integrated lighting, and feature trees. This space is intended as a
+         welcoming public interface and a primary pedestrian arrival point, supporting the future Innovation Precinct.
+     • Car Park and South-West Corner: Lined with endemic eucalyptus canopy trees and a native grass
+         understorey, this area provides shade, cooling, and habitat, while passively filtering stormwater runoff from the
+         car park. The planting strategy creates an ecological bridge between Westgate Park and the established street
+         trees along Sabre Drive.
+     • Built Form Interfaces: The building is framed by deep soil planting zones with banksias, ferns, and a mix of
+         locally native species, softening the building edges and enhancing biodiversity. These plantings provide year-
+         round visual interest and support pollinators, birds, and other fauna.
+     • Wharf Road Interface: A swale planted with wetland species runs alongside existing mature vegetation,
+         passively irrigating both new and established plantings and reflecting the area’s historic wetland ecosystems.
+         The swale also filters stormwater and strengthens ecological connections with Westgate Park.
+     • Todd Road Interface: Existing mature trees, including spotted gums and swamp gums, are retained where
+         possible, with new drought-tolerant native understorey plantings to suppress weeds, reduce the urban heat
+         island effect, and enhance the streetscape’s ecological value.
+
+70. The proposal provides generous landscape setbacks to all site boundaries, with a minimum 3-metre low planting
+    offset to security fencing and deep soil zones to support healthy tree growth. The design exceeds the minimum 2-
+    metre landscaped side setback to car parking areas, as recommended for large sites, and integrates usable
+    landscaped areas throughout the site. The landscape plan also incorporates passive irrigation, stormwater swales,
+    and a layered planting approach to maximise ecological function and visual amenity.
+
+71. The landscape strategy is closely aligned with the broader vision for Fishermans Bend, supporting habitat
+    connectivity, biodiversity, and the restoration of local ecological vegetation classes. The planting palette draws on
+    species from the original Damp Sands Herb-rich Woodland and Brackish Wetlands EVCs, aiming to strengthen
+    habitat links with Westgate Park and the Yarra River corridor. The design also acknowledges the cultural significance
+    of the land, with an Acknowledgement of Country and a commitment to working with local groups such as Westgate
+    Biodiversity to source locally endemic plants.
+
+
+72. Overall, the proposed landscaping integrates well with the site’s industrial character and the evolving urban context.
+    It also provides a direct response to Westgate Park and improves existing conditions. It delivers a high level of
+    amenity for staff, visitors, and the broader community, while contributing to the precinct’s ecological resilience and
+    public realm quality. The landscape plan demonstrates best practice in sustainable urban design, water
+    management, and biodiversity enhancement, and is consistent with the objectives of the Melbourne Planning
+    Scheme and the Fishermans Bend urban renewal framework.
+
+Native Vegetation
+
+73. The proposal involves the removal of 106 trees from the site, of which 97 are native species. This extent of tree
+    removal is necessitated by the scale and operational requirements of the proposed data centre, which demands
+    significant site redevelopment to accommodate the intended IT capacity.
+
+74. As outlined in the Flora and Fauna Assessment prepared by Biosis, the majority of native vegetation present is
+    planted rather than remnant. Consequently, a planning permit under Clause 52.17 is only required for the removal of
+    native understorey vegetation, with no permit trigger for the removal of site trees. The proposed vegetation removal
+    therefore does not contravene the objectives of Clause 52.17, as it will not result in a net loss of biodiversity.
+
+
+
+
+                                                                                                                 Report   Page 30
+                                                                                         Planning permit no. PA2504019
+                                                       OFFICIAL
+    Furthermore, the landscaping strategy provides for appropriate offset planting, as detailed in Section 7.6.2 of this
+    report.
+
+75. Clause 52.17 (Native Vegetation) requires a planning permit to remove, destroy or lop native vegetation including
+    some dead native vegetation subject to exemptions. Decision guidelines that must be considered by the referral or
+    responsible authority are contained in Section 7 of the Guidelines, and referred to in Clause 52.17-4. Clause 52.17
+    does not apply if a Native Vegetation Precinct Plan corresponding to the land is incorporated in the Scheme. Where
+    native vegetation does not meet the definition of a patch or scattered tree as described in Section 3.1 there is no
+    offset requirement under the Guidelines. However, a permit is still required to remove, destroy or lop native
+    vegetation that is not a patch or scattered tree under Clause 52.17 subject to exemptions.
+
+76. The Flora and Fauna Assessment also confirms that, given the highly modified nature of the site, the removal of
+    native vegetation poses minimal risk to threatened species or ecological communities. Notwithstanding, the proposal
+    seeks to retain planted Spotted Gums and Red Ironbark where feasible, in accordance with Biosis’
+    recommendations.
+
+77. The landscaping response will incorporate a native planting palette, including species characteristic of the local area,
+    to reinforce ecological connections and enhance overall biodiversity within the site and its surrounds.
+
+78. The removal of native vegetation is considered acceptable under Clause 52.17 of the Melbourne Planning Scheme.
+    The majority of trees proposed for removal are of low to moderate arboricultural value and do not make a significant
+    contribution to site amenity or local biodiversity. Their removal enables the delivery of a high-quality development
+    outcome without compromising the broader landscape or ecological values of the precinct. The proposal retains
+    higher value and off-site trees, and the landscape plan provides for extensive replacement planting with locally
+    indigenous species, ensuring a net benefit to biodiversity and clear alignment with the objectives of Clause 52.17, the
+    Melbourne Planning Scheme, and the Fishermans Bend urban renewal framework.
+
+Car and Bicycle Parking, Loading, and Other Services
+
+Car Parking
+
+79. The following car parking rates are relevant to the application:
+
+     Proposed     Rate                   Amount Required               Amount Provided
+     Use
+     Data         N/A                    N/A                           158
+     Centre
+
+
+80. A data centre (utility installation) is not identified as a separately defined use with a prescribed car parking rate under
+    Clause 52.06 of the Melbourne Planning Scheme, as amended by VC227. Accordingly, in the absence of a statutory
+    rate, the appropriate number of car parking spaces is to be determined to the satisfaction of the Responsible
+    Authority, having regard to the site context, nature of the use and demonstrated demand.
+
+
+81. Car parking provision for the proposed data centre has been informed by a detailed Car Parking Demand
+    Assessment that recognises the specific operational characteristics of the use, including the very low staff-to-floor
+    area ratio associated with data halls and the ancillary and limited nature of the office and technology centre
+    components. In accordance with Clause 52.06 of the Melbourne Planning Scheme, as amended by VC227, the
+    assessment adopts demand-based rates rather than default commercial or industrial rates.
+
+82. The Car Park Demand Assessment applies a rate of 0.9 car spaces per 100 m² for ancillary office and Innovation
+    Hub areas, and 0.3 car spaces per 100 m² for data hall areas. On this basis, a total demand of 158 car parking
+    spaces is generated, which is exactly matched by the proposed provision across the site. This equates to an overall
+
+
+
+                                                                                                                    Report   Page 31
+                                                                                            Planning permit no. PA2504019
+                                                          OFFICIAL
+    parking rate of approximately 0.41 spaces per 100 m² of gross floor area, reflecting the low-intensity employment
+    profile of the development
+
+83. Car parking will be actively managed through a booking and allocation system to ensure that parking demand does
+    not exceed available supply and to avoid any reliance on on-street parking. This approach is consistent with the
+    objectives of Clause 52.06 and VC227, which seek to manage parking demand efficiently and discourage the
+    oversupply of car parking, particularly in strategic employment precincts.
+
+
+
+84. The site is serviced by several bus routes (235, 606, and 237) providing access to the Melbourne CBD and
+    surrounding areas. While the site is not within the Principle Public Transport Network Area, future improvements to
+    public transport—including a proposed tram along Wharf Road and a new railway station nearby—will further
+    enhance accessibility. The site is also well served by off-road bicycle trails and shared paths, supporting alternative
+    transport modes.
+
+85. The accompanying Traffic Engineering Assessment confirms that the proposed provision of 158 car parking spaces
+    is sufficient to accommodate peak staff and visitor demand associated with the data centre use. The assessment
+    also confirms that the development will not rely on on-street parking, which is limited or restricted along Todd Road
+    and Wharf Road, and will not result in adverse traffic or parking impacts on the surrounding road network.Design
+    Standards for Car Parking
+
+86. The car park layout and access arrangements have been assessed against Clause 52.06-9 of the Planning Scheme
+    and relevant Australian Standards (AS2890.1-2004 and AS2890.6-2022). The proposal complies with all relevant
+    design standards, including accessway widths, turning radii, headroom, disabled parking, and pedestrian sightlines.
+    Three disabled car spaces are provided, exceeding the minimum requirement
+
+Access, Traffic Movement and Circulation
+
+87. The Traffic Engineering Assessment includes swept path analysis demonstrating that the site can accommodate
+    access by 20m semi-trailers (for loading), 12.5m heavy rigid vehicles (for waste collection and emergency services),
+    and B99 design vehicles (for passenger vehicles). All vehicles can enter and exit the site in a forward direction, with
+    separate access points for light and heavy vehicles to ensure safe and efficient circulation.
+
+88. The assessment finds that the proposed access arrangements to Todd Road are appropriate, with a left-turn lane to
+    be provided at the northern (light vehicle) access. The level of traffic generated by the development is modest and
+    can be comfortably accommodated by the surrounding road network, with negligible impacts on traffic flow or safety.
+
+Bicycle Facilities
+
+89. Clause 52.34 of the Scheme does not specify a bicycle parking requirement for a data centre (utility installation).
+    Notwithstanding, the proposal provides a total of 36 bicycle spaces, including 10 open spaces adjacent to the
+    building and 26 secure spaces within a dedicated bicycle room. End-of-trip facilities, including four combined
+    changerooms and showers, are provided adjacent to the secure bicycle room, supporting active transport for staff
+    and visitors.
+
+
+Loading / Unloading
+
+90. Off-street loading is provided via a formal loading dock capable of accommodating two 20m semi-trailers, with side
+    loading available along the south-eastern face of the building. The site layout allows for the circulation of 20m semi-
+    trailers and 12.5m heavy rigid vehicles throughout the site. Waste collection is undertaken by private contractor using
+    an 8.8m waste collection vehicle within the loading bay. Emergency service vehicles (up to 12.5m) can access all
+    areas of the site. Swept path diagrams confirm that all vehicles can enter and exit in a forward direction.
+
+
+
+
+                                                                                                                  Report   Page 32
+                                                                                          Planning permit no. PA2504019
+                                                        OFFICIAL
+91. The proposed loading and service arrangements are considered appropriate and meet the requirements of the
+    Planning Scheme and relevant Australian Standards.
+
+
+Waste
+
+92. A detailed Waste Management Plan (WMP) has been submitted as part of the application, prepared by Encycle
+    Consulting (Rev_2, dated 17 October 2025). The WMP outlines a comprehensive strategy for the management of
+    waste and recycling generated by the proposed data centre and associated office and technology centre uses at 127
+    Todd Road, Port Melbourne.
+
+93. The WMP sets a target of at least 90% diversion of solid waste from landfill, with a strong focus on prevention,
+    elimination, and reduction of wasteful practices, as well as maximising recycling across all facilities. The plan has
+    been developed in accordance with the City of Melbourne Guidelines for Waste Management Plans (2021) and
+    incorporates operational data from similar data centres to estimate waste generation rates.
+
+94. Waste generation is expected primarily from office areas (5,415 m²) and data halls (31,815 m²). For office areas, the
+    plan adopts a generation rate of 0.1L/m²/day for both general waste and recycling, with the recycling stream
+    comprising commingled materials, paper, cardboard, and soft plastics. The majority of waste from the data centre is
+    anticipated to arise from the unpacking and installation of servers and equipment, with bin systems designed to
+    accommodate fluctuations in waste volumes through flexible collection frequencies.
+
+95. The bin store is located on the lower ground floor, adjacent to the loading bay, and is accessible internally from lifts
+    and service corridors. The store is fully enclosed, weatherproof, and secure, with sufficient space for the storage,
+    manoeuvring, and washing of bins. It is equipped with impermeable floors and walls, industrial floor waste, hot and
+    cold water, and ventilation compliant with AS1668. Lighting, signage, and noise minimisation measures are
+    incorporated to ensure safety and amenity for staff and neighbouring properties. Additional contingency areas are
+    provided for temporary storage of bulk waste or missed collections.
+
+96. Waste, recycling, and organic waste collections will be undertaken by private service providers, with collection
+    frequencies adjusted as needed during peak periods. Collection vehicles access the bin store via the loading bay,
+    with swept path analysis confirming that vehicles can enter and exit in a forward direction. The loading bay is open to
+    the air, with no clearance or access issues anticipated for standard waste collection vehicles. Security staff will
+    facilitate access for waste service providers.
+
+
+Environment
+
+Environmentally Sustainable Design (ESD)
+
+97. The applicant has provided a Sustainability Management Plan (SMP) prepared by Aurecon and dated 14 October
+    2025. The SMP demonstrates compliance with Clause 15.01-2L-01 (Environmentally sustainable development) of
+    the Melbourne Planning Scheme via a Built Environment Sustainability Scorecard (BESS) assessment. The
+    proposed data centre achieves an initial BESS score of 55% (Best Practice ≥50%), with category performance of
+    Integrated Water Management 70%, Operational Energy 72%, Indoor Environment Quality 53%, Transport 87%,
+    Waste & Resource Recovery 33%, and Urban Ecology 1%. The SMP confirms the project’s good practice
+    commitments to sustainable design, procedures and operations for a large, 24/7 data centre and associated
+    offices/auditorium uses.
+
+98. The development is designed as all-electric for day-to-day operations, with diesel back-up generation retained for
+    resilience typical of the building type. Compliance is demonstrated with NCC 2022 Section J envelope and services
+    requirements (thermal performance; lighting; hot water), and a NABERS Energy Commitment Agreement is
+    proposed for the data halls. This approach minimises greenhouse gas emissions and peak demand relative to
+    benchmark, and provides a framework for performance tuning during operations. No on-site solar PV is presently
+
+
+
+                                                                                                                    Report   Page 33
+                                                                                            Planning permit no. PA2504019
+                                                         OFFICIAL
+    committed (identified as an opportunity for offices), and no cogeneration/trigeneration is proposed at this stage.
+    Overall, Operational Energy ≥72% meets the BESS minimum threshold (≥50%) and satisfies Clause 15.01-2L-01
+    objectives for minimising emissions and maximising energy efficiency in a high-load asset class.
+
+99. The SMP proposes high-efficiency fixtures and fittings (e.g., WELS 6-star taps, 4-star WCs) achieving an estimated
+    28% reduction in potable water use, and a stormwater “treatment train” with gross pollutant traps and six
+    roof-to-reuse tanks, modelled to meet City of Melbourne WSUD performance targets (TSS 80%, TP 45%, TN 45%;
+    flow reduction 0%) using MUSIC. Landscaping is to be water-efficient (no permanent irrigation) and building systems
+    are to reduce potable water consumption during routine fire system testing by storing and re-using test water,
+    consistent with the SMP’s best-practice integrated water management outcomes.
+
+100. The SMP confirms daylight and ventilation strategies for office areas (≥50% of nominated office floor area
+   achieving daylight factor ≥2%; outdoor air rates targeting 10 L/s/person, i.e., +33% above AS1668.2 minimum with
+   filtered air), low-emitting materials (paints, sealants, carpets, engineered wood), and shading to regular use glazing.
+   Sustainable transport measures include EV charging infrastructure, 17 employee and 5 visitor bicycle spaces, and
+   end-of-trip facilities (≥5 showers, lockers exceeding minimums), consistent with Clause 15.01-2L-01 objectives and
+   BESS Transport ≥87%.
+
+101. The SMP identifies commitments and opportunities for supplementary cementitious materials (SCM) in concrete,
+   responsible steel/timber sourcing, and PVC-free permanent formwork/pipes where practicable, together with waste
+   avoidance and packaging policies. Operational waste systems (convenience of recycling) are integrated, with further
+   food/organics diversion opportunities acknowledged to increase BESS Waste performance over time
+
+Stormwater Management
+
+102. The applicant has submitted a Concept Stormwater Management Plan prepared by Innovis, dated 21 October
+   2025. The SWMP addresses Clause 53.18 (Stormwater management in urban development) and City of Melbourne
+   Clause 19.03-3L (Integrated water management) and sets out design criteria, hydrology, in-ground drainage,
+   overland flow routing, and WSUD treatment.
+
+103. Pre-development, stormwater from the site was split between discharge to the wetland and the Council drainage
+   network. Post-development, this balance is largely maintained, with only a negligible change to flows entering the
+   Council system and a modest increase to the wetland, primarily due to increased site imperviousness. The existing
+   wetland outfall has sufficient capacity for frequent storm events, with larger events safely managed via designed
+   overland flow paths to Todd Road and Wharf Road. This approach is consistent with Council standards for pipe
+   sizing and major storm flow management and ensures no adverse impacts to building access or critical operations.
+
+104. Stormwater quality targets will be achieved through a combination of landscaped swales, bio-retention systems
+   and gross pollutant traps, as documented in the Stormwater Management Plan and to be confirmed through a
+   separate WSUD assessment at detailed design stage. The drainage strategy responds to site geotechnical
+   conditions by minimising deep trenching and managing outfall connections carefully, reducing construction risk while
+   maintaining compliance with Council requirements and relevant Australian Standards.
+
+Dangerous Goods Storage
+105. The proposal required a Section 55 determining referral pursuant to Clause 66.02-7 of the Melbourne Planning
+   Scheme to the Victorian WorkCover Authority (WorkSafe) under the Dangerous Goods (Storage and Handling)
+   Regulations 2022.
+
+106. The application involves the storage and handling of significant quantities of dangerous goods, specifically 3,570
+   kL of diesel (C1 combustible liquid) and approximately 900 tonnes of lithium-ion batteries (Class 9 miscellaneous
+   dangerous goods), as well as smaller quantities of water treatment chemicals and sulphur hexafluoride. The
+   applicant provided a Preliminary Hazard and Risk Assessment prepared by Aurecon (dated 10/10/2025), which
+
+
+
+
+                                                                                                                 Report   Page 34
+                                                                                         Planning permit no. PA2504019
+                                                       OFFICIAL
+    addresses the legislative and policy context, identifies hazards, and recommends risk controls and management
+    measures.
+
+107. The assessment confirms that the quantities of diesel stored on site exceed the placarding, manifest, and fire
+   protection thresholds under the Dangerous Goods (Storage and Handling) Regulations 2022, triggering the need for
+   notification to WorkSafe, manifest and placarding requirements, and written advice from Fire Rescue Victoria (FRV)
+   regarding the fire protection system.
+108. While lithium-ion batteries in use are not subject to the DG Regulations, their fire and explosion risks have been
+   assessed, and best-practice safeguards are proposed, including battery management systems, fire-rated
+   construction, ventilation, detection and suppression systems, and emergency response planning. The risk
+   assessment demonstrates that, with the implementation of recommended technical and management controls, the
+   residual risk to off-site receptors is low, particularly given the industrial context and absence of sensitive uses within
+   200 metres of the site.
+109. WorkSafe Victoria reviewed the application and raised no objection to the granting of a planning permit, subject to
+   conditions. These include the preparation of a detailed Fire Safety Study (FSS) and an Emergency Management
+   Plan (EMP) prior to the commencement of construction and commissioning, in consultation with FRV. The FSS must
+   identify and mitigate all fire-related hazards associated with dangerous goods storage and handling, and the EMP
+   must address emergency procedures for high-risk scenarios. The applicant is also required to notify WorkSafe of
+   dangerous goods exceeding manifest quantities and to comply with all relevant requirements of the Dangerous
+   Goods (Storage and Handling) Regulations 2022.
+
+110. The Preliminary Emergency Response Plan (ERP), prepared by Aurecon, outlines the emergency management
+   framework for the proposed data centre. The ERP addresses a range of emergency scenarios, including fire,
+   chemical incidents, power failure, and hostile intrusion. The plan identifies the storage and use of significant
+   quantities of dangerous goods (approx. 3,480 kL diesel and 900 tonnes lithium-ion batteries) and details fire safety
+   features and emergency response procedures. The ERP highlights the need for ongoing engagement with
+   emergency services and includes ‘HOLD’ points to be resolved prior to commissioning, such as finalising contact
+   details and detailed response procedures.
+
+111. Overall, the proposal demonstrates a comprehensive approach to dangerous goods management, consistent with
+   Clause 33.01-2 and Clause 66.02-7 of the Melbourne Planning Scheme, the Dangerous Goods Act 1985, and the
+   Dangerous Goods (Storage and Handling) Regulations 2022. The risk assessment and referral process confirm that,
+   subject to the implementation of recommended controls and compliance with regulatory requirements, the storage
+   and handling of dangerous goods on site is acceptable from a planning and safety perspective.
+
+Amenity Impacts
+
+Overshadowing
+
+112. The built form is sited to the north and west of the property, confining the majority of shadow within the site
+   boundary. Minor external shadowing is limited in both scale and duration, primarily affecting the Westgate Park
+   maintenance shed and track. Importantly, the Westgate Biodiversity plant nursery currently located in the shadowed
+   area is scheduled for relocation prior to construction, as confirmed with Westgate Biodiversity. As such, the proposal
+   preserves amenity for park users and the health of existing flora, with no detrimental impact to the nursery. Shadow
+   diagrams submitted with the application demonstrate minimal shadow impacts to Westgate Park (Architectural Plans
+   and Overshadowing Diagrams, prepared by Architectus, dated 01/09/2025).
+
+Noise
+
+113. An Environmental Noise Assessment, prepared by Aurecon, dated 30/09/2025, confirms the development will
+   comply with applicable noise limits. Design measures to mitigate noise include rooftop noise barriers, selection of
+   quiet equipment, acoustic attenuation, optimised plant layouts, and central siting of plant within the development.
+   These strategies ensure noise impacts to surrounding areas, including Westgate Park and nearby properties, are
+   effectively managed in accordance with Clause 13.05-1S of the State Planning Policy Framework.
+
+
+
+
+                                                                                                                   Report   Page 35
+                                                                                           Planning permit no. PA2504019
+                                                         OFFICIAL
+Light Spill
+
+114. External lighting is provided for security and operational purposes and will be designed in accordance with
+   AS4282-1999 to control the effects of outdoor lighting. Lighting has been oriented and baffled to minimise spill
+   towards Westgate Park, with all fixtures selected and located to mitigate amenity impacts on the park and the
+   broader public realm.
+
+Wind Impacts
+
+115. An Environmental Wind Assessment, prepared by Aurecon, dated 15/03/2025, confirms that wind conditions
+   generated by the proposal will be within acceptable pedestrian comfort levels for both internal and external areas.
+
+Other Matters
+
+Signage
+
+116.    No signs are proposed as part of the development.
+
+Cultural Heritage
+
+117.    The site is located within an area of Aboriginal Cultural Heritage Sensitivity.
+
+118. The Aboriginal Cultural Heritage Letter of Advice, prepared by Urbis, dated 05/08/2025 assesses the legislative
+   requirements and cultural heritage risks for the proposed redevelopment. While the site is located on a coastal dune
+   deposit (an area of cultural heritage sensitivity), it has been subject to extensive ground disturbance through
+   historical land uses, including sand mining and industrial development. Geotechnical investigations confirm
+   contaminated fill to depths exceeding 3.5m, with no evidence of natural topsoil or in-situ archaeological deposits. No
+   registered Aboriginal Places are present within 2.5km of the site, and previous assessments indicate low potential for
+   Aboriginal cultural heritage.
+
+119. The report concludes that a Cultural Heritage Management Plan (CHMP) is not required, as the site no longer
+   meets the definition of an area of cultural heritage sensitivity. A voluntary CHMP is also not recommended due to the
+   low potential for unknown cultural heritage and the risks associated with contaminated soils. The assessment
+   demonstrates compliance with the Aboriginal Heritage Act 2006 and Regulations 2018, providing a clear pathway for
+   the project to proceed without further heritage approvals, subject to ongoing legislative compliance.
+
+
+
+
+                                                                                                                  Report   Page 36
+                                                                                          Planning permit no. PA2504019
+                                                          OFFICIAL
+Recommendation
+
+120.   The proposal is consistent with relevant State and local planning policies, the Fishermans Bend Framework Plan,
+   and the Advancing Manufacturing – Fishermans Bend Opportunity vision, delivering critical digital infrastructure that
+   supports innovation, high-skilled employment, and the ongoing development of the Employment Precinct.
+
+121. The development is supported by the accompanying technical assessments and referral documentation, which
+   demonstrate that key matters including built form, traffic and parking, stormwater management, amenity and
+   emergency management can be appropriately addressed.
+
+
+On balance, the proposal represents an appropriate use and development of the land and is unlikely to result in
+unacceptable off-site impacts.
+
+122. It is recommended that a planning permit for the use and development of the land for a data centre at 127 Todd
+   Road, Port Melbourne be issued, subject to appropriate conditions.
+
+
+
+123.    It is recommended that the applicant and the council be notified of the above in writing.
+
+
+
+
+                                                                                                                   Report   Page 37
+                                                                                           Planning permit no. PA2504019
+                                                         OFFICIAL
+                                   Report   Page 39
+           Planning permit no. PA2504019
+OFFICIAL
+

@@ -1,0 +1,977 @@
+PUBLIC ACCOUNTS AND ESTIMATES COMMITTEE
+
+
+            Inquiry into the 2026–27 Budget Estimates
+
+                        Melbourne – Tuesday 19 May 2026
+
+
+
+
+                                   MEMBERS
+
+     Sarah Connolly – Chair                               Lauren Kathage
+     John Pesutto – Deputy Chair                          Aiv Puglielli
+     Jade Benham                                          Richard Riordan
+     Michael Galea                                        Meng Heang Tak
+     Mathew Hilakari
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                    1
+
+
+
+
+WITNESSES
+
+Steve Dimopoulos, Minister for Economic Growth and Jobs; and
+
+Matt Carrick, Secretary,
+
+Danni Jarrett, Deputy Secretary, Industry, Trade and Investment,
+
+Heather Ridley, Deputy Secretary, Corporate Services,
+
+Julian Lyngcoln, Deputy Secretary, Economic Policy, Programs and Services, and
+
+Daniel Rodger, Chief Financial Officer, Department of Jobs, Skills, Industry and Regions.
+
+  The CHAIR: I declare open this hearing of the Public Accounts and Estimates Committee, and I ask that
+mobile telephones please be turned to silent.
+
+On behalf of the Parliament, the committee is conducting this Inquiry into the 2026–27 Budget Estimates. The
+committee’s aim is to scrutinise public administration and finance to improve outcomes for the Victorian
+community.
+
+I advise that all evidence taken by the committee is protected by parliamentary privilege. However, any
+comments repeated outside of this hearing may not be protected by this privilege.
+
+Witnesses will be provided with a proof version of the transcript to check, and verified transcripts, presentations
+and handouts will be placed on the committee’s website.
+
+I welcome the Minister for Economic Growth and Jobs the Honourable Steve Dimopoulos as well as officials
+from DJSIR. Minister, I invite you to make an opening statement or presentation of no more than 5 minutes,
+after which time committee members will ask you questions. Your time starts now.
+
+  Steve DIMOPOULOS: Thank you, Chair. Thanks for giving me the chance to make a statement. I
+acknowledge the traditional owners of the land upon which we meet, and I pay my respects to their elders past
+and present.
+
+Visual presentation.
+
+   Steve DIMOPOULOS: This portfolio is focused on one clear objective: strengthening Victoria’s economic
+growth. That means attracting investment, supporting business growth, helping Victorian companies reach
+global markets, building the skills base, attracting talent and backing the infrastructure and innovation that leads
+to productivity. Last year we saw $11.6 billion in new foreign direct investment. Since June 2020 more than
+123,000 businesses in net terms were created. That is growth of 20 per cent – one of the strongest percentage
+growths in the country. Business investment has grown strongly, increasing by 44 per cent since 2020 – the
+strongest in the nation – and Victoria’s exports reached a record high of $79.3 billion in 2025.
+
+Next slide. We are seeing strength across the portfolio. Victoria retained the position as Australia’s leading
+food- and fibre-exporting state, with exports growing by 10 per cent to reach $22.1 billion in the 2024–25
+financial year. International education remained Victoria’s largest single export in 2025, valued at $17.9 billion
+and supporting around 69,000 jobs. Victoria is also home to more than 4400 startups, valued at $139 billion.
+That represents growth of almost 20-fold over the last decade. Since establishment, Breakthrough Victoria has
+committed $497 million in capital across 91 investments, attracting $1.4 billion in co-investment, helping shape
+the state’s economic future. These numbers represent jobs in farms, laboratories, universities, small businesses,
+export firms and technology companies across the state.
+
+Next slide. In terms of our recent achievements in the portfolio, in 2025–26 we are on track to facilitate
+1050 jobs and $95 million in innovation expenditure from international investment, while the investment
+coordinator-general has helped unlock more than $24 billion in private investment across key sectors. The AI
+mission statement and the sustainable data centre action plan send a clear signal to investors and industry:
+Victoria is open to economic growth and the responsible use of digital technology, including AI. The digital
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                    2
+
+
+
+
+jobs program is a $4.3 million program to support workers to gain the digital skills necessary to succeed in
+future construction and advanced manufacturing jobs. In November last year BioNTech launched its research-
+grade mRNA manufacturing facility at La Trobe University, Bundoora, making Victoria the only place in the
+world where both global mRNA leaders, Moderna and BioNTech, have chosen to establish R and D and
+manufacturing operations, cementing our state’s position as a world-leading hub for the next generation of
+medical innovation.
+
+Next slide. In 2025–26 Global Victoria has facilitated more than $304.4 million in export sales, supported over
+1790 Victorian businesses and strengthened Victoria’s global connections through 354 international economic
+engagements, including with visiting officials from 40 countries and 38 Australian ambassadors. Melbourne
+was again ranked as Australia’s best student city and the fifth-best globally, cementing Victoria’s position as a
+world-class study destination. That matters, because international education is not only an export industry but it
+is also a talent pipeline, a research strength and a long-term bridge between Victoria and the world.
+
+Next slide. This year’s budget continues that focus on investment, innovation and productivity in future
+industries. As a sample, we are investing $13.7 million under the AI mission statement to harness AI for
+innovation, jobs and growth, including $8.2 million for the digital jobs AI career conversion program to help
+workers move to AI roles and $5.5 million for a sustainable data centre action plan to position us as an Asia
+Pacific data centre hub while managing sustainable sector growth.
+
+Next slide. The budget also backs the skills, global presence and advanced manufacturing capabilities Victoria
+needs to keep growing. There is $12 million over four years to attract and secure the skilled talent Victorian
+businesses need to grow. There is $3 million over two years provided for the continued operation of mRNA
+Victoria, supporting delivery of major sovereign mRNA manufacturing facilities, and there is $2.4 million to
+maintain Victoria’s trade and investment facilities, services and activities to strengthen Victoria’s international
+relations. Thank you. Chair.
+
+  The CHAIR: Thank you very much, Minister. We are going to go to the Deputy Chair for 7 minutes.
+
+   John PESUTTO: Thank you, Chair. Good evening, Minister and senior officials. Minister, I refer you to
+page 17 of budget paper 2 where it states Victoria had a growth rate of only 1.1 per cent in 2024–25. Table 2.1
+states that growth is forecast to increase to 1.5 per cent in 2025–26 but then drop again in 2026–27 to 1.25 per
+cent. Minister, don’t these figures demonstrate that economic growth is flatlining under Premier Jacinta Allan
+and Labor?
+
+   Steve DIMOPOULOS: Thank you, Deputy Chair. There are a number of ways you could represent the
+economic growth figures, and you clearly have looked at one of those. But can I tell you that from where I sit it
+is a pretty extraordinary story. The Victorian economy has grown 28.7 per cent over the last decade. That is a
+higher growth rate than our nearest neighbour, New South Wales, by 5 percentage points. State final demand
+has grown by 0.7 per cent in the December quarter, so the growth has been long term over 10 years. Even one
+of the most recent quarters – the last quarter of 2025 – saw growth. In fact today I saw, Deputy Chair, figures
+that came out for consumer demand, which were 6.5 per cent in April, where the national figure was 3.5 per
+cent.
+
+I have got a bunch of figures I could talk you through, and I would argue in my portfolio the work that we are
+doing to support businesses right through our 23 trade offices, right through Global Victoria, Invest Victoria,
+the breakthrough fund, LaunchVic, we are really catalysing economic growth. Data centres are one big part of
+that, but it is far, far wider than data centres.
+
+   John PESUTTO: Minister, are you satisfied in your first budget as the minister responsible for economic
+growth that Victoria’s growth rate will fall by a quarter of a per cent next year?
+
+   Steve DIMOPOULOS: The Treasurer would have gone to aggregate macro-economic factors. We are here
+to support businesses in Victoria, despite what is going on in the rest of the world, despite global interest rates
+peaking, despite a fuel crisis, despite uncertainty in foreign relations and wars around the place. We are
+steadfast in our support. What I am proud of, and some of the presentation went to this, is the amount of
+business we have secured for Victoria through DJSIR and through the apparatus of government, both the
+international footprint and the local footprint.
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                   3
+
+
+
+
+   John PESUTTO: So, Minister, can I ask you then: the growth rate in Victoria on a per capita basis is
+currently at negative 0.8 per cent, and that is based on Parliamentary Budget Office reports. That is not growth,
+Minister. Doesn’t this demonstrate that Labor’s policies are failing to deliver economic growth?
+
+   Steve DIMOPOULOS: Deputy Chair, you are inviting the Australian to the Treasurer’s hearing. But what I
+will say to you is that, as I said, in the 0.7 per cent growth in state final demand in the December quarter,
+equally in the December quarter we had our biggest ever in the history of Victoria level of business investment:
+$20 billion in one quarter. That was a record figure. I could go on. This is driven clearly by data centres, energy
+projects, a whole bunch of different investments. We have seen 896,000 jobs created in this economy in the
+time we have been in office. That is a pretty extraordinary figure, and it outranks every other state in the
+country. Rather than just reaching back into the past, I will tell you that in the last three years 300,000 more
+Victorians have found work. You cannot have those clear markers of health in the economy and then have a
+conclusion that the economy is not doing well. Of course there are pressure points. Of course.
+
+  John PESUTTO: Thanks, Minister. Can I direct you this question to the Secretary. At page 81 of the
+‘Department Performance Statement’ it states there has been a cut of 24.3 per cent in the trade and investment
+output next year, equating to $39.5 million. How can you achieve economic growth if you have cut the trade
+and investment budget by almost 25 per cent?
+
+  Matt CARRICK: Sorry, that was directed at me, Mr Pesutto?
+
+  Steve DIMOPOULOS: What page are we? Sorry, Deputy Chair.
+
+  John PESUTTO: I had page 81 of the ‘Department Performance Statement’.
+
+   Matt CARRICK: I will hand to Ms Jarrett in a second. But what I can say is that the department has
+actually been fulfilling its objectives and the KPIs which have been set for it in terms of global Victoria
+performance. You see that in terms of the investment outcomes, you see that in terms of the facilitated
+employment outcomes and you see that in terms of facilitated exports. There have been a range of budget
+initiatives which help support our overall activities as a department in terms of economic development, which
+means we will fulfil the KPIs which have been set for us.
+
+  John PESUTTO: But with that cut in mind, it does appear that the government has given up trying to
+compete with Queensland and South Australia for investment.
+
+   Mathew HILAKARI: We just keep beating them. You would have heard the previous answer. We keep
+beating New South Wales and Queensland. You should not be a booster for them. You should be celebrating
+record quarters of business development.
+
+  John PESUTTO: Does the minister or someone wish to respond?
+
+   Steve DIMOPOULOS: I just broadly say that this budget is a budget that delivers on the commitment the
+Premier and Treasurer made in relation to fiscal discipline, and within the remit we have been given, as the
+Secretary said, we are absolutely confident we will kick it out of the park in terms of the success of the business
+investment in this state and the employment growth. The stats, even the most recent quarter stats, indicate that.
+We have, just as an example, Deputy Chair, overtaken New South Wales in many areas, but one area I will give
+you an example is in data centre investment. Historically they have been the go-to place for US companies. I
+am not talking about low flyers, I am talking about the top end of town in the US. Now we have overtaken New
+South Wales with – I will get the most recent stats, I think it is about 40 – yes, that is right. In 2025 Victoria
+recorded a $5.8 billion dollar capital expenditure for internet, web search, data processing businesses ahead of
+New South Wales’s $4.6 billion. So forget New South Wales, I would say even forget Queensland.
+
+  The CHAIR: Thank you, Minister. Let us hope they are watching tonight. Mr Galea.
+
+   Michael GALEA: I am sure they are. They can know their place. Thank you, Chair. Good evening,
+Minister, Secretary and officials. Thank you for joining us. Minister, referring to budget paper 1, page 2, I
+would like to talk about the Economic Growth Statement and indeed how this budget is supporting jobs,
+investment and productivity in the Victorian economy. You have just given a very good example in one area of
+Tuesday 19 May 2026                     Public Accounts and Estimates Committee                                         4
+
+
+
+
+the data centres and that helpful interstate comparison that this committee always enjoys. But, Minister, if you
+could elaborate on, in a broader sense, how this budget is driving that.
+
+   Steve DIMOPOULOS: Thank you, Mr Galea. We have an approach in our portfolio of basically catalysing
+economic growth through three key opportunities. Obviously we are backing business investment. We do that
+through Invest Victoria, Visit Victoria – apologies, that is the next session, but Visit Victoria does help – and
+Global Victoria. We have also done that through the breakthrough fund and through LaunchVic, and we will go
+to that a bit later, but we are combining those two into a new entity to have a single door. But we also do it in
+terms of building a skilled workforce and, out of my portfolio, clearly the achievement of literally taxpayer
+funding a bunch of skills gaps for employers through our skills guarantee and our free TAFE. The other one is
+about lifting productive capacity in place.
+
+The Economic Growth Statement itself talked about I think 40-odd – I may be corrected – odd initiatives to
+help catalyse economic growth. Cutting red tape was a key amongst those, and maybe the Treasurer went to
+this, but it absolutely is. Some businesses have said to me – and this is not just our story, it is a global story of
+governments – regulation is also a tax, delays are also a tax. So we have tried to really focus on catalysing
+investment by just making it easier. Part of it is halving the number of regulators, which would achieve a
+$500 million economic benefit by 2030, as outlined in the economic growth strategy. There are a bunch of
+other things I could say, Mr Galea, but fundamentally it is making it easier to do business. And despite the
+negative talk by some quarters, it is a message that many people have taken up – many businesses. I am not
+talking about just data centres and AI. I am talking about medical research and medical technologies. I am
+talking about the extraordinary international companies that have located here. Mondelēz’s biggest warehouse
+in the world is right here. A bunch of others are in the pipeline. I am talking about aviation, defence industries
+in Minister Brooks’s portfolio.
+
+   Michael GALEA: Thank you, Minister. And just building on that, how does the Economic Growth
+Statement guide those priorities for investment attraction and industry development that you have talked about?
+
+   Steve DIMOPOULOS: It does in a couple of ways. The first is it is actually almost like a prospectus to
+business to say, ‘We are here, and we’re serious for seeking your investment.’ The regulators are probably a
+really big part of it. Also the other part I would say is that in the Economic Growth Statement we established the
+coordinator-general investment –
+
+   Danni JARRETT: Investment coordinator-general.
+
+   Steve DIMOPOULOS: Investment coordinator-general. That is a role that literally is meant to – this is
+figuratively speaking – break down walls across government, from the planning system to the health system to
+anything that may be an obstacle for investment, in a way that is nuanced of course. You still have to observe
+regulations and accord with regulations. But that investment coordinator-general has had outstanding success.
+That office has handled, shaped and helped secure $24 billion worth of investment. I think people forget this is
+a large economy. It is $637 billion. It is 23 per cent of Australia’s gross domestic product. This is not some
+flaky place. The investment coordinator-general does extraordinary work in saying, ‘I’m going to help you
+through these processes.’
+
+   Michael GALEA: Despite not being a mining state, that is a very significant portion of GDP. When you
+take that into account that is actually well and truly punching above our weight.
+
+   Steve DIMOPOULOS: Yes, exactly.
+
+   Michael GALEA: The investment front door, Minister. How is this utilised to bring in that investment and
+attract further industry support in Victoria?
+
+   Steve DIMOPOULOS: I will make a couple of comments, and I might, if we have enough time, throw to
+the Deputy Secretary. We did a review previous to my time in this role about our apparatus, our ecosystem, and
+how we try and market ourselves in terms of a place to do business. We found that we cannot underestimate
+how important it is for a business to have one point of contact, because we had a bunch of different funds, we
+had a bunch of different agencies. We had medical funds, we had growth funds, we had other funds. Now we
+have one, and we also are combining two agencies. But I might throw to the Deputy Secretary to say how the
+front door works.
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                  5
+
+
+
+
+   Danni JARRETT: Thanks, Minister. The investment front door is really a triaging facilitation service
+whereby since the Economic Growth Statement was released it has received around 40 potential investment
+leads through that front door. That is not just the only means through which we receive prospective investment
+opportunities, but through that front door, it has been very effective in terms of, as I said, triaging and then
+working with those investors to understand their investment aspirations and their projects and then how we can
+support them to secure those investments.
+
+   Steve DIMOPOULOS: Deputy Secretary, I might just say to Mr Galea: a business located overseas, as one
+example, may have planning issues that it needs to get across, it may have health regulation issues from the
+Department of Health, it may have facilitation funds issues. All those are shepherded through one point of
+contact in DJSIR rather than finishing with one aspect and saying, ‘Please go to the health department and
+speak to them about X.’
+
+  Michael GALEA: ‘And now do that, and now do that,’ and then just that productivity tax effectively that
+you are talking about.
+
+  Steve DIMOPOULOS: Yes, that is it exactly.
+
+  Danni JARRETT: That is right.
+
+   Michael GALEA: Thank you, Minister and Deputy Secretary. Very quickly, with the time I have got left,
+the Asia-Pacific innovation symposium: can you talk to me about the role the government has played with that
+in driving that investment as well?
+
+  Steve DIMOPOULOS: Yes. I love this kind of symposium –
+
+  Jade BENHAM: We love a symposium.
+
+  Steve DIMOPOULOS: and I would love you to ask me, in the next question you get –
+
+  Richard RIORDAN: He loves a symposium –
+
+   Steve DIMOPOULOS: No, it is extraordinarily powerful. We literally have decision-makers who have
+global funds at their disposal coming to Melbourne to meet and talk business and investment.
+
+  The CHAIR: Thank you. We are going to go to Mr Riordan.
+
+   Richard RIORDAN: Thank you, Chair. Secretary, I refer to page 28 of the questionnaire and note the
+Breakthrough Victoria and LaunchVic merger will be known as Innovation Victoria. Breakthrough Victoria
+was allocated $2 billion back in the 2021 budget over a 10-year period, with a $200 million allocation each
+year. In 2024–25 the fund was rephased over 15 years, reducing the annual allocation to around $110 million
+from that year. Can you advise how much of the $2 billion fund has been provided to Breakthrough Victoria to
+date?
+
+   Matt CARRICK: Mr Riordan, my understanding is that around $500 million has been distributed for
+investments. There will be an operational component around that. Importantly, with the money which has been
+distributed for Breakthrough Victoria to invest, they have actually crowded in $1.4 billion in additional
+investment from the private sector into the companies that they have invested in. So this is a significant
+investment in the start-up ecosystem and in terms of turbocharging innovation here in the state of Victoria.
+
+  Richard RIORDAN: And the state controls that $500 million investment?
+
+   Matt CARRICK: The way it works is that Breakthrough Victoria, which is about to be merged into
+Innovation Victoria, is a state-owned entity, and basically the money is distributed from the state to the entity
+and the entity then makes a series of investments in different companies. They are never the exclusive investor
+in those companies. They will invest with other investors in the target companies.
+
+  Richard RIORDAN: Okay. How much –
+Tuesday 19 May 2026                   Public Accounts and Estimates Committee                                  6
+
+
+
+
+   Steve DIMOPOULOS: Mr Riordan just quickly, the Treasurer is the shareholder on behalf of the state of
+Victoria for Innovation Victoria, as she was with Breakthrough. The board is appointed by cabinet, and they are
+savvy businesspeople, and they have investment committees that support their work. We do not get involved in
+deciding which companies to support. We effectively make the payments when they ask us for the milestone
+payments to pay to those companies.
+
+  Richard RIORDAN: Okay. How much of the original $2 billion remains available?
+
+  Steve DIMOPOULOS: That would be in the annual report.
+
+   Matt CARRICK: In terms of the distribution of funds, that is basically dealt with as part of the annual
+reporting process.
+
+  Richard RIORDAN: Right. So that will be later in the year?
+
+  Steve DIMOPOULOS: Yes.
+
+  Matt CARRICK: Yes.
+
+   Richard RIORDAN: Will this money be allocated to the new Innovation Victoria entity – the carryover of
+the $2 billion?
+
+   Matt CARRICK: Putting aside whatever the figure is, in effect you are seeing a merger of two
+organisations, and the funding that comes with that and the assets that come with Breakthrough Victoria, yes,
+will go into the new entity. The new entity is planning to go live on 1 July, and in effect that brings together
+Breakthrough Victoria and LaunchVic, and basically what you will see is that the staff will be transferred from
+those two organisations into the single entity.
+
+    Richard RIORDAN: I get the gist of that, but I am just really worried about that corpus of $2 billion. What
+is left of it?
+
+  Matt CARRICK: The way it works is that the funds which are distributed on an annual basis to the
+company – that which is currently with Breakthrough Victoria is transferred into the new entity.
+
+  Richard RIORDAN: But the original commitment of $2 billion – how much of it is left to commit?
+
+   Steve DIMOPOULOS: Mr Riordan – I am not passing the buck – that is effectively a question for the
+Treasurer and the Budget and Finance Committee of Cabinet, because what happens is that organisation – I
+sign off on effectively what they request. When they draw down on certain figures and certain sums of money
+they go back to central contingency for the rest. They are not hamstrung by funding. They are literally looking
+judiciously at opportunities to support businesses and startups and all the rest of the ecosystem, and when they
+need more they come back to government for more.
+
+   Richard RIORDAN: That original commitment of $2 billion over 10 years – I am wanting to know where
+that commitment is at. Have we changed that focus?
+
+   Matt CARRICK: That would be one for the Treasurer, as the shareholder, in terms of the distribution over
+time.
+
+  Richard RIORDAN: Mr Carrick, you have never had that conversation with the Treasury to say, ‘How
+much is left of this original commitment?’
+
+  Matt CARRICK: Money is phased from year to year. What we are responsible for is when the company
+comes back with a request for an allocation, trying to ensure that they get the allocation that they need.
+
+  Richard RIORDAN: What I am hearing is you are not really anticipating the fact you will get the $2 billion
+over the 10 years.
+
+  Steve DIMOPOULOS: That is not the case, Mr Riordan.
+
+  Richard RIORDAN: So you will get the $2 billion then?
+Tuesday 19 May 2026                   Public Accounts and Estimates Committee                                    7
+
+
+
+
+  Steve DIMOPOULOS: Literally, it is market driven. We draw down on what we need when we need it.
+
+  Richard RIORDAN: It is now no longer a core government commitment.
+
+  Matt CARRICK: Perhaps we can –
+
+  Richard RIORDAN: We will move on.
+
+  Steve DIMOPOULOS: That is not right.
+
+  Richard RIORDAN: What bit is not right?
+
+  Steve DIMOPOULOS: As I said, Mr Riordan, just for the committee’s knowledge, this is market driven.
+This entity invests to create wealth and jobs for Victoria.
+
+  Richard RIORDAN: I am just interested in that promise for the $2 billion.
+
+   Steve DIMOPOULOS: Hang on. Then what happens is when it needs to draw down on those funds to then
+provide them to the startup or to the company it seeks permission from me – the department and me. I sign it
+off. If there is any opportunity where they have got more funding they need to provide than what is given, I go
+and seek that from the Treasurer for contingency.
+
+   Richard RIORDAN: Roughly you have done $500 million and there is $2 billion, so there is $1.5 billion
+left; you could access it.
+
+  Steve DIMOPOULOS: I could have a conversation with the Treasurer. That is the point.
+
+  Richard RIORDAN: How much funding will Innovation Victoria receive when it begins operating?
+
+   Matt CARRICK: The funding allocations will be reported in the annual report, but what you will see is
+that, to go back to my earlier point, we will be bringing together LaunchVic and Breakthrough Victoria.
+Effectively you will see the resourcing attached to both of those actually come into a new entity, which takes
+effect for the new financial year, and they will report all their financials as part of the normal reporting
+mechanisms.
+
+  Steve DIMOPOULOS: They report an annual report to Parliament.
+
+  Richard RIORDAN: So the same funding that the two agencies had before?
+
+  Matt CARRICK: Yes.
+
+  Richard RIORDAN: Will Innovation Victoria be a state-owned enterprise, or will it be a government
+agency?
+
+  Steve DIMOPOULOS: It is a state-owned enterprise, and the shareholder is the Treasurer.
+
+  Richard RIORDAN: I understand Mr Bristow at Breakthrough Victoria has been –
+
+  The CHAIR: Thank you, Mr Riordan. We will go to Ms Kathage.
+
+  Steve DIMOPOULOS: You have a long list of questions there, Mr Riordan.
+
+   Lauren KATHAGE: Thank you so much, Chair, Minister and officials. I want to ask about employers
+investing in Victoria or investment leading to employment. I can see on page 62 of BP3 government funding in
+jobs, manufacturing, trade and investment. Can you outline how the government is supporting businesses and
+employers to invest and grow in Victoria?
+
+   Steve DIMOPOULOS: Thank you, Ms Kathage. I am excited by opportunities that the department and the
+apparatus of government see and seize, because they do create jobs. I know this government is pro-business.
+This government believes in the strength of the business community to create jobs and economic wealth. We do
+that through what the Deputy Secretary talked about before in terms of the front door and what Mr Galea
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                   8
+
+
+
+
+raised. We do that through the new Innovation Victoria entity as of 1 July, but the existing apparatus of
+LaunchVic, and we do it through Global Victoria and Investment Victoria. Invest Victoria’s job is to get
+international investment here, and Global Victoria is to get Victorian businesses to expand into international
+markets.
+
+Just on the former, a good example of that – and you would have heard this – is that the Favourites chocolates
+you are having right now, and you have had probably all week, literally come from this beautiful state. Apart
+from the Mondelēz factory in Ringwood, we have the biggest warehouse in the world right here, a $130 million
+national distribution centre in Truganina. This is the most advanced facility in the world. This company
+invested that money because it had support and a sense of camaraderie, holding hands with government, a
+trusted partner, to break through some of the barriers that would ordinarily exist. We also invested in that. As I
+said, it is the biggest one in the world – 47,000 square metres, a high-tech centre.
+
+Again, they come and they look, and we assist and facilitate. Also, we go looking through the 23 offices around
+the world. We have more trade offices around the world than any other state in the country. That is how much
+we value seizing opportunities for Victoria. I will give you one other example. The Walkinshaw Group is a big
+group internationally, with a $114 million headquarters and expanded manufacturing facility right here in
+Dandenong South. I have been to their place. It is extraordinary. It is factory after factory.
+
+  John PESUTTO: Did you buy a Ram?
+
+  Steve DIMOPOULOS: What is that?
+
+  John PESUTTO: You have got to buy a Ram. They do the Rams.
+
+   Steve DIMOPOULOS: That is right – and 155 jobs created. It is interesting with the Walkinshaw Group
+that Ryan Walkinshaw also owns a supercar racing company. We are talking about significant individuals
+globally who have capital ownership of different assets. Again, that was an achievement through DJSIR and the
+work of our offices.
+
+On your broad question, of course a $637 billion economy would take care largely of itself, but we make a
+significant difference for these big investments to come here through facilitation and sometimes through grant
+money. Facilitation is probably one of the most powerful tools, because if you are going to a new state, with
+new regulation and new regulatory framework, if you have the government of that state as your partner, you are
+more likely to feel confident going through the hurdles of establishing a business or growing an existing
+business. We know it leads to jobs for Victorians.
+
+   Lauren KATHAGE: How do those investments, like the ones you spoke about by employers, help secure
+long-term stable manufacturing roles?
+
+   Steve DIMOPOULOS: Have you got anything more to add, Deputy Secretary? But one thing would be,
+Ms Kathage, that you build out the ecosystem. I will give you medical technologies as one example. The
+minute you start having almost a tipping point of that industry in Melbourne, then global investments start to
+sort of concentrate where there is already an ecosystem, because their trading partners, their suppliers and their
+other business partners are also in the same location. That is increasingly happening with data centres. You do
+one or two or three of these, and all of a sudden you have catalysed an interest in that industry to continue to
+invest here. Therefore you secure a long-term pipeline. You are more than one company deep in particular
+industries and sectors, and we are definitely more than one company deep in a bunch of sectors in this economy
+in Victoria because of the work of the government.
+
+  Lauren KATHAGE: What about flow-on benefits for local suppliers or regional communities?
+
+   Steve DIMOPOULOS: Absolutely, and I do not know whether we have got any data on that or more
+information on that.
+
+   Danni JARRETT: Sure. Thanks, Minister. There is a really good example of a company that we support –
+and just to expand upon the minister’s comments, we look to identify investments through key sectors that we
+see deliver the most value and where we are most competitive as a state from an investment as well as a trade
+perspective. We really look to focus our attention – and it is outlined in the Economic Growth Statement as well
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                    9
+
+
+
+
+– in sectors such as digital, health and life sciences, energy, circular economy, advanced manufacturing and ag
+food and agritech. Chobani is a great example. It is an American company. We have the only other
+manufacturing site outside of America in Victoria, and all of its dairy products are sourced from Gippsland.
+
+  Lauren KATHAGE: Chobani?
+
+  Danni JARRETT: Sorry, Chobani yoghurt.
+
+  Lauren KATHAGE: Yes, right.
+
+   Danni JARRETT: They get all their feedstock, so to speak, from Gippsland, so again, there is that long tail
+of supply chain of regional development, the regional economy, farmers, everyone that contributes to the
+breeding of cows and the dairy farms in Gippsland, transporting that product to their facility in Dandenong. We
+have worked very closely with Chobani around council regulations, planning, all of those approvals that they
+need to be able to set up the right type of facility to then manufacture their products. Then, likewise, as they
+look to then export their products, we assist them through that.
+
+  The CHAIR: Thank you, Ms Kathage. We are going to Ms Benham.
+
+    Jade BENHAM: Thank you, Chair. I want to talk about the budget paper 5, ‘Statement of Finances’,
+page 204 – the COVID-19 business lockdown class action legal costs. Secretary, on page 204, like I said, there
+is reference made to the state’s contingent liabilities, including legal proceedings. Can you please confirm if the
+COVID-19 class action remains a contingent liability against the department?
+
+  Matt CARRICK: I might have to take that one on notice.
+
+   Jade BENHAM: Okay. Do you know how much in total the department spent on legal fees defending the
+class action before agreeing to pay the $125 million in compensation to the businesses who were locked down
+by the government?
+
+  Matt CARRICK: I will have to come back to you with a precise figure on that.
+
+  Jade BENHAM: Okay.
+
+  Steve DIMOPOULOS: Sorry, that is fine, but I just wanted to say that it was not a class action against
+DJSIR.
+
+  Jade BENHAM: Okay.
+
+  Steve DIMOPOULOS: It was the state of Victoria, so the decision would not have been DJSIR’s decision.
+
+  Jade BENHAM: But the figures would come under DJSIR.
+
+  Steve DIMOPOULOS: Potentially. I cannot even confirm that.
+
+  Jade BENHAM: That is where they are listed in the ‘Statement of Finances’, so that is why we are asking.
+
+  Matt CARRICK: We will clarify for you, and we will come back to you.
+
+   Jade BENHAM: That would be great. Thank you, Secretary. I want to talk about the DJSIR budget. On
+page 36 of the questionnaire it reports that the net result after the department’s income and expenditure is
+accounted for that the department will deliver a budget deficit of $56 million for this financial year. This result
+is $18 million worse than what was originally anticipated. Can you explain how the department managed to
+deliver a $56 million loss?
+
+   Matt CARRICK: In terms of $56 million, that will be in terms of timing of when money is released from
+contingency for different projects, so that will be timing about when we might be paying out funds. If you look
+at much of what we do as a department, essentially it is actually about money which will be distributed to
+entities – we have over 50 entities. So that will be part of the reason as to why there is a $50 million-plus
+deficit.
+Tuesday 19 May 2026                   Public Accounts and Estimates Committee                                   10
+
+
+
+
+   Jade BENHAM: Okay. You have got over 50 entities, like you said, so is there no detail on timing, because
+that is a pretty big lump in the budget?
+
+  Matt CARRICK: From time to time departments will have that, and as you would have seen through your
+examination of other departments, that is not uncommon to have that. We can come back to you with a little bit
+more detail on that.
+
+  Jade BENHAM: That would be great. Thank you very much. Has there ever been a deficit posted before,
+despite the fact you have received an additional $21 million in special appropriations and $292 million in
+additional grant funding – an additional $313 million combined – and still managed a $56 million deficit?
+
+   Matt CARRICK: The department goes through different iterations at different times, so that one, I am not
+sure.
+
+  Heather RIDLEY: I do not have the historic knowledge, I am afraid, I am sorry.
+
+   Matt CARRICK: Yes, we do not have that historic knowledge, but it is not uncommon for that to happen
+for departments.
+
+  Jade BENHAM: Okay. No worries. Thank you.
+
+  Steve DIMOPOULOS: Can I just observe that the department’s budget is about $2.5 billion or –
+
+  Matt CARRICK: Yes, depending on how you calculate it in terms of the throughput of money, but, yes –
+
+  Steve DIMOPOULOS: Throughput of money, that –
+
+  Matt CARRICK: So that is a small percentage –
+
+  Steve DIMOPOULOS: Of the bigger figure, yes.
+
+   Jade BENHAM: But still big numbers, really, when we are talking about taxpayer money. We are just
+trying to ascertain where the lumps and bumps are.
+
+   Matt CARRICK: It is not a company in the sense that it is a loss. It is about when the funding is actually
+allocated and goes out the door. But as I say, we can clarify whether that has happened previously.
+
+  Jade BENHAM: That would be great.
+
+   Matt CARRICK: If you would like, we can ask our CFO to come forward and answer some of the more
+detailed questions?
+
+  Jade BENHAM: We are happy to take them on notice given we have got very limited time.
+
+  Matt CARRICK: He is here if you want to talk more detail on some of this.
+
+   Jade BENHAM: I have got a couple of other questions first. I want to just go back to Innovation Victoria, if
+that is all right. Then, if we have got time, we might go to the CFO. That would be great.
+
+  Matt CARRICK: Sure.
+
+  Jade BENHAM: Breakthrough Victoria has appointed a new CEO – it is now Innovation Victoria,
+obviously. The position was not advertised or subject to a competitive recruitment process?
+
+   Matt CARRICK: If I may, Minister. The position which Mr Bristow applied for for Breakthrough Victoria
+was, as I understand it, publicly advertised. While that predates my time with the department, I understand that
+to be the case. He went through a competitive process, and he was appointed as CEO of Breakthrough Victoria.
+If we now fast-forward to the merged entity, what has happened is that Kate Cornick, who is the CEO of
+LaunchVic, has actually been headhunted to head up the Tech Council of Australia. Now, this is very
+important. The Tech Council of Australia – a wonderful organisation – has traditionally been very
+Sydneycentric, so for her to be based out of Melbourne as the head of the tech council is a massive
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                  11
+
+
+
+
+endorsement not only of her amazing capacity and ability but also says a lot about the tech scene here in
+Victoria.
+
+  Jade BENHAM: So she will remain here? She is not being relocated?
+
+  Matt CARRICK: My understanding is that Kate is remaining here in Victoria, which is fantastic.
+
+  Steve DIMOPOULOS: We are the startup capital.
+
+  Jade BENHAM: You are the startup capital.
+
+  Steve DIMOPOULOS: No, we are. Victoria is. Genuinely, we are the startup capital. It is extraordinary.
+
+   Matt CARRICK: That goes to the point of the work that LaunchVic has done under Kate’s leadership and
+also Leigh Jasper as chair – a magnificent job in terms of helping to catalyse the startup community here in
+Victoria. We now have over 4400 startups, and I think a great deal of credit goes to LaunchVic under the
+leadership of Kate and Leigh and the board to get to where we have.
+
+  Steve DIMOPOULOS: And $139 billion of value, as I said in my opening remarks.
+
+   Matt CARRICK: That is right. Then if we fast-forward in terms of a new entity which is being stood up,
+with Kate leaving, Mr Bristow was an obvious candidate. Basically, upon the recommendation of the
+department, a decision was made by the minister at the time appointing Mr Bristow as the inaugural CEO. The
+rationale when we looked at that was he had the right skill set, he had been through a competitive process quite
+recently and we wanted to be up and running come 1 July.
+
+  Jade BENHAM: Okay. Thank you.
+
+  The CHAIR: Thank you. Mr Tak.
+
+   Meng Heang TAK: Thank you, Chair, Minister and officials. I refer to budget paper 3, ‘Service Delivery’,
+page 64, which highlights the supporting of delivery of major sovereign mRNA manufacturing facilities.
+Minister, can you please outline the progress on the mRNA manufacturing facilities in Victoria and how this
+strengthens our sovereign capability?
+
+   Steve DIMOPOULOS: Thank you, Mr Tak. I cannot claim any responsibility for this other than for its
+continuing support and stewardship, but this is something we should all be extraordinarily proud of. We seized
+an opportunity in the context of a global pandemic, and in the context of the fuel crisis right now people are
+again turning to the conversation of sovereign capability, as we did turn to that conversation globally when it
+came to COVID. But we actually did something about it. The government, our government, at that point in
+time got a deal with the Commonwealth in facilitating, supporting, investing in, bringing in – and I will refer it
+to the Deputy Secretary in a moment because she had a bit more to do with it while she was there. Sorry, it
+happened during both the Secretary’s and the Deputy Secretary’s watch. But what is incredible about it is not
+only the fact that it is located in Melbourne, so there is a better opportunity for us, God forbid, should
+something like that happen again – mRNA is not just about vaccines, mind you. It is about personalised cancer
+treatment; it is about many, many other things. It is located in Victoria, this facility on Blackburn Road opposite
+Monash University, very close to your patch – it may even be in your patch; no, it is in my patch – and it has
+capacity to do 100 million vaccines of all types of mRNA.
+
+What is interesting about that is that was related to Ms Kathage’s question about the downstream effects of
+these investments. It is related to the fact that BioNTech decided to locate here and Moderna is here. We are the
+only city on the planet that has those two powerhouse medical research companies and pharmaceutical
+companies who have located here, which gives us then more opportunity beyond the initial investment. Do you
+want to –
+
+   Danni JARRETT: Sure. Thanks, Minister. In addition to securing both Moderna and BioNTech, through
+mRNA Victoria’s very targeted approach to essentially developing a new sector, which is what mRNA vaccine
+and therapeutic manufacturing involves, mRNA Victoria has supported over 65 projects since its establishment
+in 2021 with $34.1 million, but also it has committed to have leveraged up to $109 million in other capital. It
+has contributed to spin-off companies and attracted $17 million in private venture capital as well. What that
+Tuesday 19 May 2026                     Public Accounts and Estimates Committee                                   12
+
+
+
+
+does is develop the growth of mRNA as a new industry that contributes to new vaccines being developed not
+just for COVID but for other diseases and cancer therapies as well. In and of itself it is contributing to not just
+research capability but manufacturing capability in Victoria.
+
+  Meng Heang TAK: Thank you. Minister, can I also bring you back to another question: can you outline
+how global investment, such as the Moderna establishment operation in Victoria, which is next to – you said
+Blackburn Road – the heart hospital and Monash University, the medical hub, is creating jobs and building
+Victoria’s skill base?
+
+   Steve DIMOPOULOS: Thank you, Mr Tak. Part of it is the talent attraction, because – this goes without
+saying – most of these advancements are made at this stage by human beings assisted by artificial intelligence
+on occasion. Being able to have that facility located literally next door to the biggest university in Australia,
+with also a medical school, a faculty that is in the top 50 in the world, and then the synchrotron next door –
+again, proudly a Labor government under John Brumby and Steve Bracks – means you start getting a really
+deep ecosystem and you attract talent, you attract people, professors, postdoctoral researchers and high net
+worth individuals. BioNTech, if I am not mistaken, Deputy Secretary, was a couple of researchers who found a
+discovery and set up a company that has become global, and they have located here. You start attracting not just
+the talent, but they bring with them other compatriots and other colleagues, and they bring with them capital.
+Then all of a sudden you start getting a supplier-to-supplier, business-to-business arrangement – quite a hefty
+industry – and you attract more and more. That means Victorians get access to jobs. I feel like it is almost
+straight out of the University of Monash and many others too. You walk across the road to a world of
+opportunity – not just across the road but around the precinct. It leads to long-term jobs, high-value jobs, high-
+paid jobs and the creation of intellectual property, which then already is headquartered here in Melbourne and
+Victoria, because they are here. Then there are a whole bunch of startups that come from those opportunities.
+
+  Meng Heang TAK: Minister, if you can talk about how the investment strengthens Victoria’s long-term
+economic resilience and innovation capacity.
+
+  Steve DIMOPOULOS: I think the resilience comes from, Mr Tak, the fact that, again, going back to
+COVID or the fuel crisis, we realise how vulnerable we are when global supply chains are threatened. The
+more we have here on things that really matter – the Deputy Secretary talked about those key sectors and those
+key industries – the more of the supply chain, the more of the intellectual property and the more of the talent we
+have here, we are protected in a health sense, in a public policy sense and in job creation by having it located in
+Melbourne and Victoria.
+
+  Meng Heang TAK: Thank you, Minister.
+
+  The CHAIR: Thank you, Mr Tak. We are going to Mr Puglielli.
+
+  Aiv PUGLIELLI: Thank you, Chair. Good evening, Minister and officials.
+
+  Steve DIMOPOULOS: Hello.
+
+  Aiv PUGLIELLI: Looking at Invest Victoria, which we were just talking about a little bit earlier, can I ask:
+has Invest Victoria had any engagement with the company Palantir?
+
+  Steve DIMOPOULOS: I am not sure if the Deputy Secretary – can you give us more information,
+Mr Puglielli?
+
+  Aiv PUGLIELLI: It is a particular company. It has historically been used in different departments of
+government. Given Invest Victoria and its portal for securing investment for the state, have there been any
+engagements, partnerships, contracts, meetings, anything ongoing?
+
+  Steve DIMOPOULOS: What do they do? Do you know what the company –
+
+  Matt CARRICK: Yes. What I can say is that we certainly do not have any contracts with that company.
+
+  Aiv PUGLIELLI: Okay.
+
+  Matt CARRICK: I am unaware that we have had any direct dealings.
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                   13
+
+
+
+
+  Danni JARRETT: It has not come through the investment front door.
+
+  Aiv PUGLIELLI: It has not? Okay.
+
+   Matt CARRICK: Yes. If any other further information comes to hand that contradicts that, we would
+certainly let you know.
+
+  Aiv PUGLIELLI: Are you aware of this because historically that has been the case in the past?
+
+  Matt CARRICK: No, I am aware of that because you asked a question about it the other day.
+
+  Aiv PUGLIELLI: That is right. Fair enough. Someone has been watching PAEC.
+
+  Matt CARRICK: You are all very entertaining. How could you not?
+
+   Aiv PUGLIELLI: We have just been speaking about data centres, and the Premier recommended I raise
+this with this session actually.
+
+  Steve DIMOPOULOS: Bless her.
+
+   Aiv PUGLIELLI: Once a data centre is set up and it is running in Victoria, how many people does it
+typically employ, and in what capacity and what roles once it is set up?
+
+  Steve DIMOPOULOS: Data centres?
+
+  Aiv PUGLIELLI: Yes.
+
+   Steve DIMOPOULOS: I will throw over to the Deputy Secretary to give you a more complete answer,
+given her length in the portfolio. But if I can just make one quick comment, because I think it is very important:
+yes, of course the first line of sight is construction jobs. We have got requests already by these industry groups
+to have thousands more electricians trained. What you would want and expect after that is that we have a seat at
+the table of a global industry that is only growing because we have a weight of data centres here. Then we can
+actually have a conversation with the operators of data centres and the tenants of data centres, whether it be
+Amazon or Microsoft or whoever else, about what else is in play for Victoria. We have already got a bunch of
+this at embryonic level, but I would like to see high-value jobs for Victorians who actually write the script for
+the next breakthrough in AI. Data centres are just the beginning of the equation. I might ask the Deputy
+Secretary if she has more information about what types of jobs.
+
+  Danni JARRETT: Thanks, Minister. In terms of the number of jobs – I think that was your question.
+
+  Aiv PUGLIELLI: And what types of roles we are talking, once it has opened particularly.
+
+   Danni JARRETT: Sure. In terms of the number of jobs, at the moment we have 24 projects in our
+investment pipeline. We are estimating that that would equate to around 4780 jobs once they are operational, so
+around 200 jobs per project as such. I think the types of jobs that they would require – really some of that is
+somewhat determined by the customers and the clients that they have for data centres. Data centres are in a
+sense a hotel for data. They have clients, whether it is banks, security companies, a range of different types of
+companies, that will rely on data centres to hold their data. So the types of jobs really are attached to the
+customers that are using those data centres to hold their data, but safe to say, it is highly technical.
+
+  Aiv PUGLIELLI: Just to build upon that answer, once a centre is opened does the department retain
+oversight of the employment that goes on within that centre, or is that no longer visible?
+
+   Matt CARRICK: The short answer to that is not directly, because what you will find with data centres is
+the sort of assistance that we are providing is non-financial assistance. It is facilitation in terms of advice on
+planning regime, site selection, things like that. That is different for the category of companies we provide
+grants to, because there are contracts in place and milestones that have to be met in terms of payments against
+job outcomes and reporting provisions which are in place. So there is no legal avenue to keep tab on the
+number of jobs. But what we can say, based on our experience and also based on the relationship with the
+companies, is they tend to share information with us, given that we work with them quite a bit.
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                    14
+
+
+
+
+The other thing I would supplement, if I may, is the number of jobs will vary. The average is about a couple of
+hundred, but it will vary from a few to many more than that 200 figure. In terms of the types of skills, it is really
+interesting in that it requires a blend of what you might call blue-collar skills. Electricians are in high demand
+for those ongoing operational roles, but then there is a range of other skills which data centres are looking to
+populate their workforce with. The sorts of skills which are required are around machine learning, data
+engineering, software development, and so there is a whole range of different skills which are required.
+
+   Steve DIMOPOULOS: Just quickly, I think I know that your concern might be in terms of social licence
+around these things. Can I just say quickly that digital jobs is a program that is supported in this budget and has
+been for the last few years in different forms, literally taking effectively white-collar professionals here in
+Victoria and giving them a course and upgrading their skills, micro-credentialing and beyond that, to how they
+would do their job in an AI world. There are some really good examples here from a company called Umps
+Health and a whole bunch of others that we have worked with. I think we are doing an intake of 500 Victorians
+on that – things like machine learning, generative AI implementation, prompt engineering, data engineering, AI
+model evaluation and testing. We are not just leaving it at a data centre stage of the investment. We are
+investing in the workforce. Our sustainable data action plan includes five pillars; one of them is a skilled
+workforce, not just for the establishment of the data centre but beyond – the AI world.
+
+  Aiv PUGLIELLI: Thank you, Minister.
+
+  The CHAIR: Thank you, Mr Puglielli. Mr Hilakari.
+
+   Mathew HILAKARI: Thank you, Minister. Thank you officials. It is good to see you again this evening.
+On ‘Attracting talent to Victoria’ on budget paper 3, page 65, we have talked a lot about talent tonight and the
+sort of wonderful talent we are establishing in Victoria through the many programs that we run and supported
+by state government, but particularly with reference to the state visa nomination program, I am keen to
+understand how that is bringing that wider range of skills into Victoria.
+
+   Steve DIMOPOULOS: Thank you, Mr Hilakari. Just to give you a bit more detail on it, I will throw to the
+Deputy Secretary, but as I said earlier in response to a question by Mr Tak, when capital is footloose and they
+are seeking to go somewhere and we know that they are seeking go somewhere, we have so much in our
+armoury to encourage them to come here – the stuff I talked about: the planning assistance, facilitation, even
+funding facilitation, getting this under the regulatory hurdles. What is also a really lovely adjoiner to that is
+having a visa nomination process, which is normally a Commonwealth responsibility. It still is, but the
+Commonwealth effectively takes our recommendation in almost all cases.
+
+  Mathew HILAKARI: As they should always.
+
+   Steve DIMOPOULOS: What is lovely about that is you can offer the talent, whatever talent we are seeking
+– a skilled person, whether it be the capital owner or their top executives or employees – an opportunity to have
+a full investment here in Victoria, including a new life for some of those people. We use that as required. Some
+may not be seeking the nomination, but it is an important tool for talent attraction in the broader scheme of
+things.
+
+  Mathew HILAKARI: You get to supplement, if you like, because I am really keen to understand more
+about the program.
+
+   Danni JARRETT: I am happy to supplement. As the minister outlined, the skilled migration program that
+we support is where we really focus on ensuring that we get the right skills that are most in demand and deliver
+the most economic outcome and impact for the state. We review that each year in terms of how many
+occupations and skills that are most in demand for in Victoria. And alongside that, you mentioned the global
+talent attraction program, which was announced in last year’s budget for $3 million. That is really to seek to
+attract international leaders in R&D. We are really leaning into our strength as a state for medical research
+capability, so we are looking and working with partners to identify some international leaders in medical
+research, highly skilled, that we can secure and bring them and their research labs to Victoria. That program is
+currently underway. We are looking to hopefully make some announcements shortly.
+
+   Steve DIMOPOULOS: We have got some very willing universities who are willing to give us some
+pipeline.
+Tuesday 19 May 2026                    Public Accounts and Estimates Committee                                    15
+
+
+
+
+  Mathew HILAKARI: Do not give anything away yet, but in terms of when a research lab comes to
+Victoria, it is not just the individual researcher but a whole team around them that comes through?
+
+   Danni JARRETT: It depends. It could be a team, it could be the individual, but what that brings then is
+them bringing their own network internationally as well that they can leverage as to whether they come here,
+and we are also then expanding our network as Victorian researchers with their own international network of
+researchers. It is the profile that that brings in terms of the credibility of bringing new knowledge and expertise
+that then will result in research outcomes that can then be applied to research institutes here in Victoria that then
+helps to achieve that sort of agglomerative outcome and impact for –
+
+   Steve DIMOPOULOS: And Mr Hilakari, can I just say, as the Deputy Secretary alluded to, there are a
+couple of different categories, but the state visa nomination program in 2025–26 has nominated 689 health
+professionals, 652 education professionals, 87 social services professionals and 27 construction workers. So it
+is quite a wide field, but 689 is the biggest, being the health industry, with 67 professionals working in new
+energy and advanced manufacturing and 41 professionals working in regional hospitality and tourism. They
+follow, not entirely but largely, the growth priorities in the economic growth strategy. I tell you, we always do
+well in filling our quota, and in many respects, I would argue for more from the Commonwealth.
+
+  Mathew HILAKARI: What does that mean for the productivity of Victoria and business investment for
+Victoria? When they are bringing their lab and their support and their networks, what does that do for our
+economy?
+
+   Steve DIMOPOULOS: Just quickly, I was literally at the Australian Hotels Association, as a few people
+from across the Parliament were, last night, and I met with the executive of the AHA beforehand. They have a
+real pinch point. They raised this, not me; they raised migration as a real pinch point for their business. They
+cannot get enough chefs and sous-chefs and even other roles in hospitality. They said to me that they are
+advocating to both sides of politics in Canberra. If you take just that example from a big industry, AHA, that is
+a constraint on growth. If you cannot find the right workforce where you need it, particularly when you talk
+about regional Victoria but even in Melbourne, that is a constraint on growth. We have a very, very high
+participation rate in this state. If we had the participation rate of the rest of the country, our unemployment rate
+would be 1 per cent. We have a lot of people who are already gainfully employed, but also our people have not
+given up; they are still seeking employment. But even with that quite good labour market, there are constraints
+to the workforce, particularly in hospitality, but probably in these other areas. I do not leave you much room, do
+I, Deputy Secretary.
+
+  Mathew HILAKARI: In the seconds we have left, it strikes me that there are many one-university towns –
+we are a multi-university town. What happens if we cut the visas for university students, as the federal
+opposition would propose?
+
+   Steve DIMOPOULOS: It would be devastating for our economic growth; it really would be. We have two
+of the world’s top 50 as well. We have got many, many excellent universities.
+
+   The CHAIR: Thank you. I am going to stop you there, Minister. We are almost 5 minutes behind time.
+Minister and officials, thank you very much for appearing before the committee today. The committee will
+follow up on any questions taken on notice in writing, and responses are required within five working days of
+the committee’s request.
+
+The committee is going to take an extremely short break – 1 minute in fact – before beginning its consideration
+of the portfolio for sports and major events at 7:55. I declare the hearing adjourned.
+
+Witnesses withdrew.
+

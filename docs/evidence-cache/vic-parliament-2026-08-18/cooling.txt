@@ -1,0 +1,54 @@
+Title: Cooling Water Discharge
+
+URL Source: https://www.sawater.com.au/__data/assets/file/0007/11401/Cooling-Water-Discharge.pdf
+
+Number of Pages: 2
+
+Markdown Content:
+# Cooling water discharge 
+
+> Released: 26 July 2021
+
+Trade waste discharges from companies with cooling water discharges could harm the sewerage system. Discharges can contain high levels of suspended solids, organic matter, biocides and heavy metals. Appropriate management practices at each site are needed. 
+
+For the purpose of this guideline ‘cooling water’ refers to any fluid emanating from 
+
+single pass cooling devices, contained waters used in evaporative cooling systems, cooling towers and closed-loop cooling circuits. 
+
+# Key trade waste quality requirements 
+
+Parameter Generally accepted level 
+
+Suspended solids ≤500 mg/L 
+
+Total dissolved solids ≤2000 mg/L pH Between 6-10 units Temperature ≤38 degrees C 
+
+Chlorine Normal operation ≤5 mg/L, or ≤10 mg/L 
+
+when decontaminating cooling tower Flow rate to sewer 1 litre per second combined flow rate, larger flows will be dependent on capacity of receiving sewer 
+
+> Note: Discharge limits may be varied under certain circumstances for individual dischargers.
+
+# Typical pre-treatment 
+
+• All Cooling towers must have a water meter fitted on the feed line. Water meters must be installed in a location that is easily accessible for reading and does not require the need for a ladder or other elevated work platform. 
+
+• A discharge meter must be installed on discharge pipes from individual cooling towers or closely grouped cooling towers, if the combined annual discharge volume is forecasted to be more than 2,000 kilolitres at the time of application. The Discharge Flow Meters Guideline has more information. 
+
+• The discharge flow rate when draining the cooling tower basin should be reduced as much as is practical. Particular care is required when draining basins with more than 10,000 litres capacity. Our Trade Waste team can advise customers of the acceptable maximum flow rate at particular locations in its sewerage networks. 
+
+• Where wastewaters from cooling water installations contain contaminants exceed our Restricted Wastewater Acceptance Standards, appropriate pre-treatment is installed prior to discharge to sewer. Pre-treatment may include pH correction, metal precipitation (e.g. Cr, Zn) and suspended solids removal. 
+
+• Wastewater from de-scaling operations is treated to remove gross solids. Further pre-treatment may be required prior to discharge to sewer. 
+
+• Fluids from closed-loop cooling/refrigeration systems can contain high concentrations of glycols, ammonia, ethanol or other chemicals. They must not be discharged to sewer unless specific approval to do so is obtained from our Trade Waste team. 
+
+• Wastewaters not permitted to be discharged to sewer are held in an approved container or tank prior to disposal, by a licensed liquid waste contractor, in accordance with Bunding and Blind Tank Guideline .
+
+• Containers of corrosion inhibitors, biocides and other chemical solutions are stored in a bunded compound, in accordance with the Bunding and Blind Tank Guideline .
+
+• Alternative chemicals are used in place of chromate/zinc scale and corrosion inhibitors. 
+
+# More information 
+
+Mains Water Protection (AS/NZS3500.1:2018) Backflow Prevention Requirements - Office of the Technical Regulator

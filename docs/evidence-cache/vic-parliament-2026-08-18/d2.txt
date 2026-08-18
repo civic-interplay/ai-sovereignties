@@ -1,0 +1,1126 @@
+Industry Water Connection Guide
+May 2026
+
+
+
+
+                          OFFICIAL
+   We acknowledge and respect Victorian Traditional Owners as the original custodians of Victoria’s land and waters, their unique ability
+   to care for Country and deep spiritual connection to it. We honour Elders past and present whose knowledge and wisdom has ensured
+   the continuation of culture and traditional practices. DEECA is committed to genuinely partnering with Victorian Traditional Owners and
+   Victoria’s Aboriginal community to progress their aspirations.
+
+
+Cover photograph: Kororoit Creek, Altona Coastal Park. Image shows Kororoit
+Creek in the middle ground flowing to the bay, with tree plantings in the Altona       Disclaimer
+Coastal Park on the right bank and industrial buildings on the left bank. The
+Melbourne Central Business District skyline can be seen in the far distance.            This publication may be of assistance to you but the State of Victoria and its
+Credit: Colin Page Photography                                                          employees do not guarantee that the publication is without flaw of any kind or is
+ISBN 978-1-76176-731-9 (pdf/online/MS word)                                             wholly appropriate for your particular purposes and therefore disclaims all liability
+© The State of Victoria Department of Energy, Environment and Climate Action            for any error, loss or other consequence which may arise from you relying on any
+December 2026                                                                           information in this publication.
+Creative Commons                                                                        Accessibility
+This work is licensed under a Creative Commons Attribution 4.0 International            To receive this document in an alternative format, phone the
+licence, visit the Creative Commons website                                             Customer Service Centre on 136 186, email
+(http://creativecommons.org/licenses/by/4.0/).                                          customer.service@delwp.vic.gov.au, or contact National Relay
+You are free to re-use the work under that licence, on the condition that you credit    Service on 133 677. Available at DEECA website
+the State of Victoria as author. The licence does not apply to any images,              (www.water.vic.gov.au).
+photographs or branding, including the Victorian Coat of Arms, and the Victorian
+Government and Department logos.
+                                                                                   OFFICIAL
+Contents
+Background................................................................................2             Best practice for large urban water users ....................15
+Purpose of the Guide .................................................................2                 Early engagement with your local urban water corporation ...... 15
+Support and Advice....................................................................2                 Consider water efficient opportunities ...................................... 16
+Large non-residential urban water users in Victoria .... 3                                              Consider rainwater, recycled water and stormwater use
+                                                                                                        opportunities ............................................................................ 18
+Who is this Guide for? ................................................................3
+                                                                                                        Decision guidelines .................................................................. 19
+Why are they important to Victoria? ...........................................3
+Understanding this unique demand type ....................................3                             Programs and supports available .................................20
+Supporting emerging industries through a strong and resilient                                           Leak detection & network efficiency programs ......................... 20
+water system..............................................................................4             Invest Victoria .......................................................................... 20
+Applying for access to urban water services ................ 6                                          Smart meter and data insights initiatives providing real-time
+                                                                                                        monitoring and benchmarking .................................................. 20
+Approval pathway if within a reticulated urban water network ....6
+                                                                                                        WaterSmart.............................................................................. 20
+Approval pathway outside of an urban water network ................8
+                                                                                                        Offsetting your water use ......................................................... 20
+Policy and Regulation ................................................... 10
+                                                                                                        Glossary ..........................................................................22
+Urban Water Planning Framework ...........................................10
+Trade waste regulation ............................................................12                   Appendix A – Urban water corporation contact
+                                                                                                        information & application references ...........................24
+Economic regulation of the water sector ..................................13
+Protecting our water system and ensuring transparency for large                                         Appendix B –Urban water corporation high water use
+users ........................................................................................14        data request form ...........................................................26
+
+
+
+
+Industry Water Connection Guide           1
+                                                                                                   OFFICIAL
+Background                                                                             new large customers, to incorporate best-practice water efficient designs and
+                                                                                       supply them with non-potable water, such as recycled water, rather than drinking
+In November 2025, the Victorian Government announced the Sustainable Data              water, wherever feasible.
+Centre Action Plan, to leverage our state’s land, energy and talent to unlock
+                                                                                       Before providing approval, water corporations must be satisfied that water
+projects valued at up to $25 billion, establishing the state as the Asia-Pacific hub
+                                                                                       security and supply can be met, without negatively impacting communities and
+for sustainable data centres.
+                                                                                       other users.
+As part of the Action Plan, this Guide was commissioned, including a new
+                                                                                       This Guide also outlines how proponents can fund new infrastructure required to
+dedicated data request form, to support data centres and other large industrial
+                                                                                       meet water demand, and how water corporations publicly report if their large
+water users to sustainably access the water they need to grow Victoria’s
+                                                                                       customers are engaged in a water conservation program.
+economy from within urban networks. This will ensure a smoother process for
+proponents to get projects moving faster- and unlock the economic benefits for         These measures are essential to protect Victoria’s water supplies and enable
+our state.                                                                             new industries to grow sustainably. The Guide provides proponents with greater
+                                                                                       certainty while reinforcing the need for responsible water stewardship. It
+This guidance makes clear the Government’s position that large non-residential
+                                                                                       supports economic growth, long-term water security, and community values.
+users should prioritise the use of non-drinking water, to minimise the impact on
+our state’s precious drinking water supply.                                            Support and Advice
+This Guide is consistent with the National Data Centre Expectations, released in
+                                                                                       Why early engagement matters:
+March 2026, outlining the importance of sustainable and efficient water use.
+                                                                                        • Helps confirm whether the site is suitable and allows water efficiency
+A water sector executive working group was also established to ensure
+                                                                                          measures and non-potable water options to be built into project design.
+Victoria’s water policies keep pace with this emerging sector and remain fit for
+purpose. The first task of this group was to support development of this Guide.         • Identifies potential infrastructure constraints or upgrades early and reduces
+                                                                                          the risk of redesigns or unexpected costs later.
+Purpose of the Guide                                                                    • Provides clarity on timelines, technical requirements and approval
+                                                                                          pathways.
+The Guide outlines the key policies, processes and obligations that apply to
+large non-residential water users in Victoria’s urban areas, including emerging        What your urban water corporation can provide:
+sectors such as data centres.                                                           • Guidance on system performance, servicing options and regulatory
+                                                                                          requirements.
+The Guide will help proponents clearly understand how to access and connect to
+water, sewerage and recycled water services, what requirements they need to             • Templates, checklists and technical documents to support a complete and
+meet, and the steps involved in working with their local water corporation.               high-quality application.
+This guidance also sets standards that proponents must meet to ensure their             • Advice on demand management, water efficiency and opportunities for non-
+urban developments do not compromise water security, environmental                        potable water use.
+outcomes or the reliability of supply for existing and future customers.
+                                                                                        • Ongoing support through a dedicated contact or business partner for large
+Victoria’s water supplies are under growing pressure from climate change,                 or complex applications.
+reduced rainfall and strong population and industrial growth. Against this
+                                                                                       Proponents are encouraged to reach out to their urban water corporation using
+backdrop, the guidance emphasises the importance of efficient and sustainable
+                                                                                       the new form, which can be found at Appendix B, and online at
+water use and reiterates that Victoria’s urban water corporations will work with
+                                                                                       water.vic.gov.au/for-agriculture-and-industry/industry-water-connection-guide.
+
+
+Industry Water Connection Guide   2
+                                                                                OFFICIAL
+Large non-residential urban water users in Victoria
+Who is this Guide for?                                                               Understanding this unique demand type
+This Guide is aimed at large non-residential, industrial and commercial              In Victoria, non-residential demand forms an important part of overall system
+businesses and facilities that use more than 20ML/yr and are located within          consumption, underpinning thousands of jobs and supporting the functioning of
+urban areas. The needs of these users require more detailed servicing                key supply chains and services. Large non-residential users sit within this
+assessments, infrastructure planning and regulatory oversight. These users           broader non-residential category and often exhibit unique demand profiles which
+cover a spectrum of sectors central to Victoria’s economy, from manufacturing,       require tailored servicing approaches from water corporations.
+food and beverage processing and advanced industrial operations, to hospitals,
+                                                                                     Business models depend on efficiency: reducing water consumption reduces
+laboratories, logistics hubs, commercial precincts and, increasingly, digital
+                                                                                     costs, minimises exposure to operational risks and aligns with corporate
+infrastructure such as data centres. Water supply for these industries is an
+                                                                                     environmental, social and governance commitments. Many large users
+essential input that supports safety, productivity, cooling, sanitation, product
+                                                                                     participate voluntarily in water efficiency programs, invest in high-efficiency plant
+quality or business continuity.
+                                                                                     and equipment, and prioritise leak detection and demand optimisation because it
+                                                                                     delivers both financial and reputational benefits.
+Why are they important to Victoria?                                                  Nonetheless, there remains ongoing opportunity for continuous improvement,
+Manufacturers, energy and other industrial water users account for around 13%        and the water sector plays an important role in supporting businesses to identify
+of the state’s total water use, yet their overall contribution to Victoria’s Gross   further efficiencies, adopt new technologies and consider alternative water
+State Product is disproportionately higher. This reflects the high economic value    sources that lower reliance on drinking water.
+generated per litre of water consumed across many industrial sectors.
+
+                                                                                     Table 1 - Forecast Demands Across Greater Melbourne & Geelong Customer Base
+                                                                                                Source: High water demand growth scenario from 2024 Melbourne Water
+                                                                                                update to DEECA
+
+                                                                                      Financial Year   Residential      Non-             Non-Revenue      Potable Water
+                                                                                      Ending           Potable          Residential      Water            Demand
+                                                                                                                        Potable
+
+                                                                                      2025             342 GL           118 GL           54 GL            514 GL
+                                                                                      2030             368 GL           128 GL           57 GL            554 GL
+                                                                                      2050             508 GL           173 GL           81 GL            762 GL
+
+
+
+
+Industry Water Connection Guide   3
+                                                                              OFFICIAL
+Supporting emerging industries through a strong and resilient water system
+
+Victoria’s Track Record of Supporting Large Water Users                             Strong Regulatory and Planning Foundations
+Victoria’s water sector has a strong history of adapting to support large non-      Victoria’s urban water corporations are well placed to assess and integrate new
+residential users. Over several decades, the sector has worked closely with         large-scale demands, ensuring system reliability and long-term sustainability.
+major industrial customers to respond to changing market conditions, facilitate
+                                                                                    Key enablers include:
+expansions and help new industries establish themselves in urban areas.
+                                                                                    • Strong regulatory protections for existing customers and the environment.
+Examples include:
+                                                                                    • A coordinated planning framework for water, sewerage and recycled water
+• Enabling growth in food manufacturing through recycled water schemes.
+                                                                                      networks.
+• Supporting high-tech medical and research precincts with enhanced system
+                                                                                    • Flexibility to service emerging sectors such as data centres, advanced
+  reliability.
+                                                                                      manufacturing and technology precincts.
+• Helping commercial and industrial hubs integrate on-site reuse and
+                                                                                    Adapting to Emerging Industries
+  efficiency systems.
+                                                                                    Emerging sectors require tailored servicing approaches, and Victoria is already
+Responding to a Changing Water Environment
+                                                                                    adapting to meet this need. The sector is prioritising:
+The sector is actively strengthening its position to continue meeting the needs
+                                                                                          •   Water efficiency
+of emerging industries. While Victoria faces challenges from climate variability,
+population growth and pressure on water resources, the state has a robust                 •   Non-potable water sources, such as recycled water
+policy and planning framework that manages these pressures sustainably.
+                                                                                          •   System optimisation
+Long-Term Security Through the Water Security Plan                                        •   Regulatory reform
+The Victorian Water Security Plan provides a clear, long-term strategy to           These measures enable new large urban water users to be supported without
+secure water for households, businesses and the environment. It outlines            creating undue impacts on existing customers.
+actions to:
+                                                                                    A Collaborative and Sustainable Approach
+    •   Diversify water sources
+                                                                                    Victoria’s water management approach is grounded in long-term planning,
+    •   Improve system resilience                                                   transparency and collaboration. As partnerships between the water sector,
+                                                                                    government and industry mature, the state is well positioned to accommodate
+    •   Optimise existing assets
+                                                                                    economic growth while ensuring strong protections for communities, the
+    •   Prepare for more variable water availability                                environment and future water security.
+This gives industry and government confidence that Victoria is planning not just
+for today, but for the next several decades of growth and innovation.
+
+
+
+
+Industry Water Connection Guide   4
+                                                                               OFFICIAL
+Case study: Viva Energy Geelong Refinery & Northern Water                              •    Demonstrated viability of industrial-scale recycled water: Heavy-
+Plant — Barwon Water                                                                        industry water demand can be met sustainably through well-designed
+                                                                                            recycled-water infrastructure, offering a model for other large users.
+Context
+                                                                                       •    Reinforced collaborative models: This was a public–private–
+The Geelong region was experiencing growing water demand for residential,                   government partnership (refinery, water corporation, state/federal
+municipal and industrial users while water security challenges were                         support), illustrating how cooperation can deliver mutually beneficial
+increasing. The large industrial demand from the Geelong Refinery made it                   environmental, social and economic outcomes.
+critical to find a sustainable water solution.
+                                                                                       What This Demonstrates
+Challenge
+                                                                                       •    Large industrial water users can be supported without compromising
+•   The refinery’s processes required significant volumes of water, leading to              water security, by collaborating and leveraging recycled water.
+    a high demand on the urban potable water supply.
+                                                                                       •    Well-structured recycled water and wastewater treatment can offer
+•   Discharge of industrial and domestic wastewater required effective                      mutually beneficial outcomes.
+    treatment to avoid environmental harm, and traditional disposal would
+    result in large volumes of water being wasted.                                     •    Policy frameworks in the guidance have on-ground precedents, giving
+                                                                                            proponents confidence to pursue sustainable servicing pathways.
+•   The region’s sewerage and water planning needed to accommodate
+    industrial demand without compromising community water security or                 •    Urban water corporation’s role is crucial: through planning, infrastructure
+    discharging excessive treated effluent to ocean outfalls.                               investment, regulatory compliance and partnership, they enable
+                                                                                            sustainable industry growth while protecting shared resources.
+Solution: Collaboration & Infrastructure
+Barwon Water and the Geelong Refinery (then Shell, now Viva Energy)
+partnered to develop the Northern Water Plant (NWP). Key features include:
+•   Construction of a purpose-built wastewater treatment and reuse facility
+    (NWP) combining domestic sewage from northern suburbs and industrial
+    wastewater from the refinery, enabling industrial-scale water recycling.
+•   High-quality recycled water (Class A standard) supplied back to the
+    refinery for its industrial processes, replacing potable water demand.
+Outcomes and Achievements
+•   Significant drinking water savings: Reclaimed and recycled water
+    saves around 2 billion litres per year, equivalent to around 5% of greater
+    Geelong’s yearly drinking water needs.
+•   Reduced environmental discharge: Approximately 10% less treated
+    water is discharged to ocean outfalls, reducing the ecological impact.
+                                                                                             Image 1. Geelong Energy Hub. Credit Viva Energy Australia
+
+
+
+
+Industry Water Connection Guide   5
+                                                                                 OFFICIAL
+Applying for access to urban water services
+Approval pathway if within a reticulated urban water network
+There is a clear, staged pathway to ensure that new connections to water,               feasible to reduce the reliance on potable water, and enhance environmental
+wastewater and recycled water services are managed in a way that protects               and sustainability outcomes. Early adoption of these practices can also
+existing customers, supports future growth, and maintains the long-term                 reduce approval timelines and overall project costs.
+reliability and sustainability of the water system.
+                                                                                        Business support and account management
+The new dedicated data request form can be found online                                 Large non-residential applicants may be assigned a dedicated business
+www.water.vic.gov.au/for-agriculture-and-industry/large-urban-water-user-               partner or case manager within the urban water corporation to guide them
+guidance.                                                                               through the connection process. This contact helps manage the technical,
+                                                                                        regulatory, and financial aspects of the connection, provides updates on the
+Protection of existing and future customers                                             progress of approvals, and maintains the ongoing relationship between the
+Urban water corporations carefully assess all connection and expansion
+                                                                                        water corporation and the customer once the connection is active.
+requests to ensure that existing customers will not be adversely affected.
+Planned future customers are also considered, ensuring that network                     By following this pathway, urban water corporations ensure that new or
+upgrades or allocation decisions today do not limit the ability to meet                 expanded connections are delivered efficiently, safely, and equitably, while
+anticipated urban growth. This approach ensures fairness and reliability                maintaining strong protections for existing customers and supporting the long-
+across the system while supporting strategic planning objectives.                       term sustainability of Victoria’s urban water networks.
+
+Connection pathway
+Applicants typically follow a structured process to connect new customers
+under Section 145 of the Water Act 1989 that may include:
+•    Preliminary Servicing Advice (PSA): Initial review of the proposed site
+     to identify available water sources, potential infrastructure requirements,
+     and feasibility considerations.
+
+•    Design and Infrastructure Planning: Water corporations assess if
+     additional infrastructure (e.g. pipelines, pumps, storage, recycled water
+     connections) is required and outline the scope, timing, and New
+     Customer Contributions with imposed conditions of servicing.
+
+Satisfaction of the water corporation requirements for servicing and
+connection will permit Consent to Connect (BPC/PIC number) to be issued.
+Throughout this process, water-efficient design and the incorporation of non-
+potable water sources (e.g. recycled water) are strongly emphasised. Water
+corporations will work with proponents to supply recycled water wherever                            Image 2 Birrarung (Yarra River), Melbourne. Credit DEE
+
+
+
+Industry Water Connection Guide   6
+                                                                                 OFFICIAL
+Case study: Amazon Web Services Data Centre in Western Melbourne
+
+Context                                                                               Solution
+Amazon Web Services (AWS) does not need water to cool its Melbourne data              GWW worked closely with AWS to understand its water and servicing objectives,
+centres for 96% of the year, instead using “free-air cooling”, which involves using   water quality requirements, short- and long-term water demand, and how
+outside air to cool its servers. During the hottest summer temperatures, it uses a    seasonal weather changes would impact this over time. This collaborative
+direct evaporative cooling system, which uses (and continues to reuse) water to       approach identified an opportunity to connect to the existing recycled water
+cool the air before it enters the data centre, removing heat from its servers.        network and supply recycled water from the Melton Recycled Water Plant to
+                                                                                      AWS’s data centre from the first day of operations, with potable water serving as
+In both cases AWS's goal is to move just enough air through its servers to keep
+                                                                                      backup. As required of all new customers, AWS is funding all the necessary
+them from overheating and to use the lowest amount of energy and water to do
+                                                                                      upgrades to both GWW's water and recycled water network that are necessary
+that.
+                                                                                      to deliver recycled water to the AWS data centre.
+This combination of cooling systems enabled AWS to achieve a Water Usage
+                                                                                      Outcomes and Benefits
+Effectiveness (WUE) of 0.02 litres of water withdrawn per kilowatt-hour of IT
+Load (L/kWh) across its Melbourne data centres in 2024. That is equivalent to         This collaborative approach will deliver the first data centre to be connected to
+one tablespoon of water per kilowatt hour and below the Australian industry           and supplied with recycled water in Victoria. This will also be the first AWS data
+average, which is estimated to be 1.8 L/kWh (Mandala, 2025).                          centre to be connected to recycled water in Australia.
+In addition to reducing how much water its data centres use, AWS seeks to use         The water will be sourced from the Melton Recycled Water Plant where it will
+more sustainable sources of water, with plans to quadruple the use of recycled        undergo advanced treatment processes to meet the stringent operational and
+water in data centres by 2030. This is part of AWS’s global commitment to             health requirements of Class A recycled water for use in data centre cooling
+become water positive by 2030, meaning it will return more water to                   systems.
+communities than it consumes across its data centre operations. As of 2024,
+                                                                                      AWS and GWW continue to work closely together to identify opportunities to
+AWS is more than 53% of the way toward meeting its global commitment to
+                                                                                      partner on water replenishment projects in the community as part of AWS’s
+become water positive by 2030, having invested in 23 water replenishment
+                                                                                      commitment to return more water to the community and the environment than it
+projects globally and 4.3 billion litres of water being returned to communities
+                                                                                      uses by 2030.
+from active replenishment projects around the world.
+                                                                                      What This Demonstrates
+Challenge
+                                                                                      •   The benefits of siting data centres near recycled water sources to enable
+AWS wanted to source recycled water for its data centre operations in
+                                                                                          non-potable water use for cooling requirements.
+Melbourne that will support increasing customer cloud and artificial intelligence
+(AI) demand. It sought a confirmed recycled water source to supply data centre        •   What a collaborative approach to sustainable water management in data
+operations from day one, reserving potable water for cooling only during                  centres can look like.
+recycled water supply shortages. The nearest source of recycled water was
+Greater Western Water’s (GWW) Melton Recycled Water Plant, but it was not
+clear if this plant could provide the required capacity within the required
+timeframe.
+
+
+
+
+Industry Water Connection Guide   7
+                                                                               OFFICIAL
+Approval pathway outside of an urban water network
+For large industrial users located outside of an urban water corporation’s               It is important for proponents to engage early with their local urban water
+reticulated urban network, accessing water requires a different approach than            corporation when planning projects in an urban area but outside an urban water
+connections within the standard service area. Urban water corporations can               network. Early discussions help identify the most appropriate water source,
+advise if you fit into this category, for example in a regional or peri-urban context,   assess feasibility, and clarify the commercial and technical obligations under a
+and the options for accessing water. Options could include a Section 51 licence,         supply agreement. Unlike standard connections within an urban water
+water shares, or a supply agreement depending on your circumstance. (More                corporation’s service area, these agreements are contractual and not governed
+information on the various entitlements is available at                                  by customer service charters or standard regulatory obligations, so clarity and
+https://www.water.vic.gov.au/about-us/water-entitlements-and-the-water-act)              mutual understanding are critical to ensure that the water supply meets
+                                                                                         operational needs, reliably and sustainably.
+Generally, a supply agreement will be the way water supply is arranged. This is a
+contractual arrangement between the water corporation and the user. A supply             The supply agreement pathway allows large non-residential urban users to
+agreement sets out the terms and conditions under which water will be provided           secure water for their operations outside conventional urban networks, while
+and is tailored to the specific circumstances of the site. Key elements that may         providing flexibility for bespoke arrangements that suit site-specific conditions
+be included in a supply agreement are:                                                   and ensure environmental and network safeguards.
+•    Volume and flow rates: The maximum amount of water that can be
+     delivered and the timing of supply, ensuring that operational requirements
+     are met without exceeding network or environmental limits.
+•    Water quality: Standards for water delivered, particularly where recycled,
+     raw, or untreated water is involved.
+•    Duration: The period over which water will be supplied, including renewal or
+     review provisions.
+•    Purpose of use: Clarifying the intended applications of the water (e.g.,
+     industrial processes, cooling, irrigation, or other non-potable uses).
+•    Infrastructure requirements: Where a private pipeline or other delivery
+     infrastructure is required, responsibilities for construction, operation, and
+     maintenance are detailed.
+
+Supply agreements are commonly required in scenarios such as:
+
+    •   Sites outside a declared Water Supply District, where water is not
+        automatically available under standard service obligations.
+    •   Situations requiring private pipelines or other bespoke infrastructure to
+        deliver water to the site.
+    •   Accessing raw (untreated) water or recycled water within an urban water
+                                                                                               Image 3 Moondarra pipes, Gippsland Water. Credit: Annelise Answerth
+        system where standard reticulated supply is unavailable.
+
+
+
+
+Industry Water Connection Guide   8
+                                                                                 OFFICIAL
+Case study: Gippsland Water Industrial Water Use
+Context                                                                      What This Demonstrates
+
+Gippsland Water is the state’s major industrial water supplier and for       The Latrobe Valley is unique with its significant water resources and established major
+decades has supported critical industry including power generation,          industry infrastructure for both water supply and waste treatment, co-located with
+paper mill production and food manufacturing.                                appropriately zoned land and highway access. Power infrastructure and dark cable
+                                                                             communication channels are within close proximity making the area attractive for
+Challenge                                                                    strategic investment.
+Most systems are not set up to supply large quantities of high-quality       It provides opportunity for large non-residential water users to invest and establish
+raw water to customers, resulting in the reticulated network water being     industry outside of metropolitan areas.
+used which has very limited capacity.
+They may also require bespoke infrastructure that is not readily
+available in all locations and requires regulatory approvals and
+considerable construction time.
+Arrangement and experience
+Gippsland Water has significant water resources available and major
+raw water infrastructure in place to support large scale supply to key
+industrial zones.
+The organisation has extensive experience in establishing supply
+agreements for major industrial customers (refer to Image 4 for
+example) and can support a range of tailored service models suited to
+site-specific conditions, including access to raw water. There is also a
+range of large-scale wastewater management options.
+Outcomes and Benefits
+For decades, Gippsland Water has supported and adapted to major
+customer needs and changing industrial conditions. The region’s natural
+resources and digital connectivity have allowed energy, manufacturing,
+tourism and food and fibre sectors to thrive.
+The organisation also has a proven track record of treating and
+managing the state’s biggest and most complex industrial waste
+streams.
+As industrial transitions occur, the organisation is responding to change
+and exploring new opportunities that maximise the value of the Latrobe
+Valley’s water resources and support long-term financial sustainability.              Image 4 Latrobe Valley water resources and industrial customers
+                                                                                                                 Credit Gippsland Water
+
+
+
+Industry Water Connection Guide   9
+                                                                            OFFICIAL
+Policy and Regulation
+Urban Water Planning Framework
+Water planning in Victoria is a fundamental part of ensuring that both current        In some cases, urban water corporations may require:
+and future demands for water are met in a sustainable, reliable, and cost-
+                                                                                       • Water-efficient design improvements
+effective manner. The urban water planning framework combines long-term
+forecasts, strategic infrastructure planning, and demand management to                 • Use of recycled water where available
+safeguard the security of water supplies for all users, including residential,
+agricultural, environmental, and non-residential sectors.
+How Forecasts Shape Planning
+Forecasting plays a central role in this framework. During five-yearly Urban
+Water Strategy processes, water corporations develop detailed projections of                                          5-yearly
+demand for both residential and non-residential users, including industrial,                                            water
+commercial, and emerging sectors. Forecasts help determine:                                                          corporation
+ • Expected growth in demand                                                                                        UWS & price
+                                                                                                                     submission
+ • Where and when infrastructure will be required
+ • Whether existing systems can support new developments
+ • How to maintain water security for existing and future communities
+ • The role of recycled water, stormwater and efficiency opportunities
+When an application falls within forecasted demand, servicing is usually more
+straightforward because the system has been planned to accommodate this
+                                                                                                         WC                           Negotiation
+                                                                                                    assessment                       between WCs
+growth.
+                                                                                                    of individual                      & non-res
+When Demand Exceeds Forecasts                                                                      developments                       businesses
+If a proposed water demand exceeds what has been planned for, additional
+assessment is required. Urban water corporations will consider:
+ • Resource availability, network performance and any risks to pressure,              Figure 1: The interconnected nature of the urban water planning framework
+   reliability or water quality
+ • Impacts on environmental flows and bulk entitlement limits
+ • Whether infrastructure upgrades are feasible within required timeframes
+ • Opportunities to reduce potable water demand through efficiency or
+   alternative water sources
+
+
+Industry Water Connection Guide   10
+                                                                                 OFFICIAL
+The Urban Water Strategy Guidelines are listed here -
+https://www.water.vic.gov.au/__data/assets/pdf_file/0027/775413/guidelines-for-
+the-development-of-urban-water-strategies-and-drought-preparedness-plans.pdf
+Each urban water corporation’s UWS must provide detail about demand from
+major industrial customers serviced by the system/s and major demands for
+water and sewerage services (Core Requirement 7.5).
+The Urban Water Strategy Guidelines also reiterate that water corporations
+should engage early with proponents, and that ‘water corporations should work
+with new large industrial customers such as data centres, to supply them with
+recycled water, instead of drinking water, wherever feasible.’
+In addition to Urban Water Strategies, each urban water corporation is
+responsible for creating a Drought Preparedness Plan that outlines how they will
+manage limited water resources in the event of a drought or emergency event.
+Urban water corporations are required to supply water for critical human needs
+at all times.
+Drought Preparedness Plans outline long-term planning and short-term
+mitigations that will determine how each urban water corporation manages
+reliable water supply for all users. By working with the local water corporation to        Image 5 Melton Recycled Water Plant. Credit Craig Moodie
+identify climate-independent water sources, applicants can mitigate the impacts
+of future dry conditions on water availability for their own operations and for the
+community.
+What This Means for Applicants
+To support timely assessment, applicants should engage early with urban water
+corporations and provide accurate demand information to identify options and
+inform project planning and approval.
+
+
+
+
+Industry Water Connection Guide   11
+                                                                                OFFICIAL
+Trade waste regulation
+
+Trade waste regulation is a critical component of Victoria’s urban water             Typical Considerations in Assessment
+management framework. Trade waste refers to any liquid waste discharged to
+                                                                                     Urban water corporations will assess:
+the sewerage system from non-residential premises that is not purely domestic
+in nature. This can include process water, cleaning water, cooling water, or               •   Whether the proposed discharge meets trade waste acceptance criteria
+other wastewater streams from industrial, commercial, or institutional activities.
+                                                                                           •   Impacts on sewer capacity and downstream treatment assets
+Trade waste regulation protects:
+                                                                                           •   Safety and environmental risks
+    •   The sewerage network from damage, blockages and corrosion
+                                                                                           •   Whether pre-treatment or process changes are required
+    •   Treatment plants and downstream processes
+                                                                                           •   The applicant’s ability to monitor and manage wastewater reliably
+    •   Public health and the environment
+                                                                                     For large non-residential users, trade waste requirements form one component
+    •   Service reliability for all customers                                        of the overall servicing assessment undertaken by the urban water corporation.
+                                                                                     Trade waste considerations are assessed in parallel with water supply, recycled
+Urban water corporations are required to manage trade waste carefully
+                                                                                     water, sewerage capacity and broader system impacts to ensure a coordinated
+because industrial discharges can be highly variable and may contain
+                                                                                     and consistent decision-making process. This avoids creating multiple approval
+substances that impact the sewer system.
+                                                                                     pathways and ensures that all elements of the application are evaluated
+                                                                                     together as a single, integrated case. Proponents can support this process by
+                                                                                     providing clear information about their expected wastewater characteristics,
+Trade Waste Agreements
+                                                                                     which helps the water corporation determine any treatment, monitoring or
+Most non-residential customers who discharge anything other than domestic            compliance requirements without implying or predetermining the outcome of the
+wastewater require a trade waste agreement, which outlines:                          overall connection assessment.
+    •   Conditions for discharge
+                                                                                     Supporting Compliance and Best Practice
+    •   Acceptable quality limits (e.g. pH, temperature, contaminants)
+                                                                                     Applicants can support the assessment process by:
+    •   Monitoring and reporting obligations
+                                                                                           •   Providing accurate descriptions of industrial processes
+    •   Any pre-treatment or on-site control requirements
+                                                                                           •   Sharing chemical inventories and safety data sheets
+    •   Responsibilities for maintenance and compliance
+                                                                                           •   Identifying opportunities to minimise wastewater generation or reuse
+These conditions are tailored to the industry and nature of the wastewater,
+                                                                                               water internally
+recognising that different industries have varying waste profiles and potential
+impacts on the sewerage network. The framework is designed to be both                      •   Designing processes that avoid harmful substances entering the sewer
+protective and enabling, ensuring that large non-residential users can operate
+                                                                                     This enables a smoother assessment and ensures that wider servicing
+effectively while meeting their environmental and legal obligations.
+                                                                                     decisions consider the full operational footprint of the site.
+
+
+
+
+Industry Water Connection Guide   12
+                                                                                OFFICIAL
+Economic regulation of the water sector
+
+Victoria’s water sector is economically regulated by the Essential Services               2. Negotiated NCCs (most common for large users)
+Commission (ESC), which ensures prices, service standards and reliability
+                                                                                          These are used for large-scale, unique or bespoke developments. They
+are fair, efficient and in the long-term interests of customers. The ESC’s
+                                                                                          allow tailored, site-specific arrangements that reflect actual infrastructure
+powers come from the Essential Services Commission Act 2001 and the
+                                                                                          needs. They typically involve more detailed engagement between the
+Water Industry Regulatory Order (WIRO) under the Water Industry Act
+                                                                                          applicant and water corporation.
+1994. This regulation provides transparency and predictability for all water
+users, including large non-residential customers.                                         Gifted Assets
+New Customer Contributions (NCCs)                                                         Proponents undertaking infrastructure works to enable new connection will
+                                                                                          typically design and construct required infrastructure themselves as agreed
+Large non-residential customers can place significant additional demand
+                                                                                          with the urban water corporation. These assets are at the cost of the
+on water, sewerage or recycled water networks. When new or upgraded
+                                                                                          proponent that can then be transferred (“gifted”) to the urban water
+infrastructure is required to service that demand, NCCs ensure the costs
+                                                                                          corporation for ongoing ownership and operation.
+are recovered from the applicant and not subsidised by existing customers.
+                                                                                              •   This can support faster delivery or alignment with project timelines.
+Important points for applicants:
+                                                                                              •   Applicants must meet the urban water corporation’s technical,
+    •   NCCs operate on a causer-pays principle.
+                                                                                                  quality and compliance standards.
+    •   NCCs allow urban water corporations to recover the present-day
+                                                                                          Early Engagement on NCCs Is Essential
+        cost of works required to connect new customers.
+                                                                                          Understanding NCC implications early helps proponents:
+    •   Early understanding of NCC obligations is critical for realistic
+        project budgeting and timing.                                                         •   Accurately forecast project capital costs
+    •   NCCs can apply to potable water, sewerage and recycled water                          •   Plan construction sequencing
+        infrastructure.
+                                                                                              •   Assess feasibility of non-potable water or demand-management
+                                                                                                  options
+Types of NCCs                                                                                 •   Avoid delays caused by unexpected infrastructure requirements
+The ESC regulates two types of NCC charges:                                               The ESC’s NCC framework ensures that large developments are
+                                                                                          supported transparently, equitably and sustainably, without shifting costs to
+1. Standard NCCs
+                                                                                          existing customers.
+These apply in areas with predictable growth and established Development
+                                                                                          More information is available at:
+Servicing Plans. They Provide clarity on maximum charges for applicants.
+                                                                                          www.esc.vic.gov.au/water/industry-standards-codes-and-guidelines/new-
+                                                                                          customer-contributions-guiding-resources
+
+
+
+
+Industry Water Connection Guide    13
+                                                                               OFFICIAL
+Protecting our water system and ensuring transparency for large users
+
+Urban water corporations play a central role in ensuring that Victoria’s water and       •   Defer the connection or refuse the application entirely
+sewerage services are delivered reliably, safely, and equitably to all customers,
+                                                                                     Section 145(3) of the Water Act 1989 gives urban water corporations clear
+including large non-residential users. Their responsibilities are underpinned by
+                                                                                     authority to refuse or condition a connection to ensure resource availability and
+legislation, regulatory standards, and ministerial obligations, all of which
+                                                                                     customer service levels are not compromised. If a connection would reduce
+establish clear protections for existing customers and the environment while
+                                                                                     network capacity to the point that existing customers are impacted or deemed to
+providing a pathway for new sustainable connections.
+                                                                                     have adverse impacts, it cannot be approved.
+Stewardship and Responsible Water Management
+                                                                                     Transparency and Monitoring of Large Users
+Urban water corporations have a duty to manage water sustainably and
+                                                                                     Water corporations have a role in ensuring transparency for large water users.
+equitably, ensuring new large user connections:
+                                                                                     Water Act 1989, Section 122ZJ requires water corporations to report the water
+    •   Do not reduce reliability or service levels for existing customers           users whose annual use exceeds a range specified by the Minister, and in
+                                                                                     particular, if they are participating in a water conservation program.
+    •   Do not negatively impact environmental outcomes
+                                                                                     The range/s is specified each year by the Minister, via the Letter of Expectations
+    •   Do not place undue pressure on limited water supplies
+                                                                                     issued to water corporations prior to each annual reporting period.
+This stewardship role underpins all decisions relating to servicing large
+                                                                                     In 2025-26, the range specified for reporting on number of customers was from
+customers and ensures that growth occurs responsibly and in line with long-term
+                                                                                     >50ML, while reporting on customer name and participation in a water
+water security goals.
+                                                                                     conservation program was from >100ML.
+Service Standards and Legislative Obligations
+                                                                                     Ensuring a Sustainable and Reliable System
+Urban water corporations follow established principles when assessing large
+                                                                                     Through strong regulatory powers, rigorous assessment processes and
+customer connections. These obligations are reinforced through:
+                                                                                     proactive engagement with proponents, water corporations ensure that large
+    •   The Water Act 1989, The Water Industry Act 1994, The Minister’s              non-residential customers can be serviced in a way that is:
+        Statements of Obligations, The Essential Services Commission’s Water
+                                                                                         •   Reliable
+        Industry Standards – Urban Customer Service (Part E), which sets
+        minimum service levels and reliability expectations                              •   Equitable
+Connection Refusal or Conditional Approval                                               •   Environmentally responsible
+To protect customers and network integrity, urban water corporations assess the          •   Consistent with long-term water security planning
+feasibility of every new connection. Where capacity constraints exist, they may:
+                                                                                     This integrated approach safeguards the interests of existing customers,
+    •   Require infrastructure upgrades                                              supports responsible industry growth and protects Victoria’s shared water
+                                                                                     resource.
+    •   Impose conditions on the connection
+
+
+
+
+Industry Water Connection Guide   14
+                                                                              OFFICIAL
+Best practice for large urban water users
+Early engagement with your local urban water corporation
+Proponents are strongly encouraged to engage with their local urban water             By engaging early, proponents can work with the relevant water corporation to
+corporation early in the planning process. See www.water.vic.gov.au/for-              understand the availability, cost, reliability, and environmental implications of
+agriculture-and-industry/large-urban-water-user-guidance for appropriate              each water source.
+contact information. Proponents are also encouraged to engage early with
+                                                                                      This enables more informed site selection and development design, reduces
+other utility providers to ensure that all of their infrastructure needs can be met
+                                                                                      the risk of delays or redesign later in the process, and helps identify
+at their selected site.
+                                                                                      opportunities to integrate water efficiency measures, non-potable water
+Early engagement provides the opportunity to identify suitable sites where            sources, and recycling into the project from the outset.
+water supply, sewerage, and recycled water services can be reliably provided
+                                                                                      Early collaboration also allows water corporations to provide guidance on
+to meet operational requirements. By starting discussions at the outset,
+                                                                                      required infrastructure, potential system upgrades, and any regulatory
+proponents can understand the constraints and opportunities of the water
+                                                                                      approvals, ensuring that new large water users can be accommodated without
+system, assess the feasibility of different locations, and make informed
+                                                                                      compromising service to existing customers or the environment.
+decisions that align with both their business objectives and the long-term
+sustainability of the water network.
+A key consideration in site selection is the type and availability of water at the
+proposed location. Different water sources have distinct characteristics that
+affect suitability for particular uses. For example:
+  Potable water may come at a higher cost and carry stricter regulatory
+   requirements for use and conservation.
+  Recycled water can offer a cost-effective, sustainable option for non-
+   potable water applications such as cooling, irrigation, or process water, but
+   availability may be limited depending on the location and network capacity.
+  Surface water or groundwater access may be possible in certain urban or
+   peri-urban areas, but these sources can be variable in volume, subject to
+   licensing and environmental constraints, and require treatment to meet
+   quality standards.
+  Raw (untreated) water may be available for industrial supply from urban
+   water corporations in some areas and may require dedicated infrastructure
+   to enable this.
+
+                                                                                            Image 6 Bendigo Reservoir, Coliban Water. Credit: Craig Moodie
+
+
+
+
+Industry Water Connection Guide   15
+                                                                                 OFFICIAL
+Consider water efficient opportunities
+Integrating water-efficiency measures into large non-residential sites can deliver     High-efficiency fixtures and appliances, such as the Water Efficiency
+a wide range of benefits.                                                               Labelling and Standards scheme rated taps (4–6 stars), toilets (4–5 stars),
+                                                                                        and showerheads (4–5 stars). Commercial dishwashers and laundry
+By integrating efficiency measures early, businesses can reduce operating
+                                                                                        systems with 4 stars or above are also effective for reducing water
+costs, improve resilience and enhance sustainability outcomes, while supporting
+                                                                                        consumption. More information is available at Water Rating.
+broader water system reliability.
+                                                                                       Cooling systems: Replace single-pass cooling with recirculating systems,
+Some of the key benefits include:
+                                                                                        implement water treatment to reduce blowdown, and optimise cooling tower
+  Cost savings: Reducing water use lowers water bills, and where hot water             bleed setpoints.
+   is involved, can also reduce energy costs. Water efficiency measures can
+                                                                                       Digital sub-metering and monitoring to quickly identify leaks, overuse, or
+   also contribute to deferred infrastructure upgrades, reduced maintenance,
+                                                                                        inefficiencies.
+   lower asset replacement costs, and savings on wastewater treatment,
+   chemical use, and pumping energy.                                                 Benchmarking and assessment tools:
+  Business continuity: Efficient water use reduces the risk of operational            Utilise tools such as NABERS to compare a site’s water use against similar
+   disruption during periods of water scarcity or supply constraints.                   industries, helping to identify opportunities for improvement and track
+                                                                                        efficiency progress over time.
+  Simplified approvals: Keeping site consumption low can streamline
+   approval processes, reducing administrative burden and delays.                    For more practical examples, case studies and guidance on saving water in
+                                                                                     commercial and industrial operations, visit Smart Water Advice.
+  Emissions reductions: Saving water reduces greenhouse gas emissions,
+                                                                                     https://smartwateradvice.org/
+   supporting industries striving for net zero carbon targets and potentially
+   reducing compliance or operational costs.
+  Community and stakeholder confidence: Demonstrating water efficiency
+   and sustainable practices can strengthen brand reputation, increase
+   community acceptance and provide a competitive advantage.
+  Sustainability performance: Efficient water use helps businesses meet
+   shareholder and corporate sustainability expectations, including green
+   building certifications such as the National Australian Built Environment
+   Rating System (NABERS).
+
+
+Water-efficient technologies:
+When exploring water-efficiency opportunities, proponents should consider a
+range of measures and technologies, depending on site characteristics and
+operational needs. Examples include:                                                 Image 7 Mobil Alterna Refinery, Altona. Credit - Smart Water Advice
+
+
+
+Industry Water Connection Guide   16
+                                                                               OFFICIAL
+Case Study: WaterSmart Business Program – Barwon Water
+Context                                                                                     •   Conducting water audits to identify efficiency improvements, quantify
+                                                                                                water loss and evaluate upgrade opportunities
+Barwon Water’s Sustainable Water Use Plan (SWUP) sets an ambitious target
+to save approximately 200 ML per year and up to 1,000 ML by June 2028                       •   Partnering with councils and coastal committees to deliver water-saving
+through a suite of demand-management and water-efficiency initiatives. These                    projects such as:
+actions support regional water security in the face of growth, climate variability
+                                                                                                    o   Irrigation system reviews
+and increasing commercial and industrial water demand.
+                                                                                                    o   Fixture replacements in public facilities
+Challenge
+                                                                                            •   Providing business grants and rebates to support implementation of
+Many large customers operate complex sites with ageing infrastructure,
+                                                                                                recommended water-saving projects in the commercial and industrial
+extensive plumbing networks, or variable occupancy patterns. Common
+                                                                                                sector
+challenges include:
+                                                                                            •   Offering education and behaviour-change guidance to empower
+    •   Undetected leaks resulting in extremely high-water losses
+                                                                                                customers to actively monitor and manage water use
+    •   Limited visibility of usage trends or consumption anomalies
+                                                                                       Outcomes and Achievements
+    •   Inefficient fixtures and ageing water-using assets
+                                                                                       Barwon Water’s WaterSmart Business Program has delivered demonstrable
+    •   Lack of internal expertise to identify, quantify or prioritise water-saving    benefits across the region:
+        opportunities
+                                                                                            •   High volumes of water previously lost to unregistered leaks have been
+    •   Competing operational budgets that make water efficiency investment                     prevented, translating directly into avoided operational costs for
+        difficult without support                                                               businesses and improved regional water security.
+At the same time, these sites often hold high community value, meaning water                •   Water audits have led to implementation of efficiency upgrades across a
+waste can have broader social and environmental impacts.                                        range of sectors, reducing potable water use and extending asset life.
+Approach and Solution                                                                       •   Community-focused organisations have realised immediate and ongoing
+                                                                                                efficiency gains.
+Barwon Water’s WaterSmart Business Program provides proactive, hands-on
+support to help large customers reduce water use and strengthen their                  What This Demonstrates
+operational efficiency. The program’s approach includes:
+                                                                                            •   Proactive partnerships work. Targeting high-usage sites delivers
+    •   Targeting high-usage, high-community-value sites using consumption                      outsized benefits for both customers and the broader system.
+        data and risk indicators
+                                                                                            •   Data is a powerful tool. Providing real-time information empowers
+    •   Offering free installation of digital data loggers to provide customers with            customers to take ownership of water use and respond quickly to leaks.
+        real-time usage data
+                                                                                            •   Water corporations can influence large user behaviour through
+    •   Providing customers with access to real-time data, enabling them to                     structured programs, grants and education.
+        track usage, identify leaks and receive automated alerts
+
+
+
+
+Industry Water Connection Guide   17
+                                                                                 OFFICIAL
+Consider rainwater, recycled water and stormwater use opportunities
+
+Large non-residential users should prioritise the use of non-drinking water, to     Sewer mining
+minimise the impact on our state’s precious drinking water supply. This can
+                                                                                    Some large sites may be able to establish on-site treatment systems that extract
+include alternative sources such as rainwater, recycled water, stormwater, and
+                                                                                    and treat wastewater from the urban water corporation sewer network for reuse
+internal wastewater streams.
+                                                                                    on-site. Sewer mining can provide a reliable alternative water source, particularly
+Integrating these sources into site design and operations not only supports         for industrial or high-demand facilities, and may be suitable where recycled
+sustainability goals but can also reduce costs, improve resilience, and help        water networks are not available.
+businesses meet regulatory and community expectations.
+                                                                                    Utilising non-potable water sources can complement water efficiency initiatives,
+Rainwater and stormwater harvesting                                                 reduce reliance on potable water, and demonstrate proactive environmental
+                                                                                    stewardship.
+Large non-residential developments with large roof areas are prime candidates
+for rainwater harvesting. Capturing rainwater or stormwater on-site can provide a   Early engagement with the water corporation is essential to explore these
+sustainable supply for non-potable water applications such as toilet flushing,      options, understand technical and regulatory requirements, and ensure
+irrigation, cooling, or cleaning operations.                                        integration with broader water management planning.
+Properly designed harvesting systems can significantly reduce demand for
+drinking water while also helping manage excess stormwater runoff and
+protecting the local waterways.
+Internal wastewater and greywater recycling
+Reusing wastewater generated on-site — including greywater from sinks,
+showers, or process water — can support industrial processes, manufacturing,
+and cleaning operations. This approach reduces the volume of potable water
+required, improves operational efficiency, and can provide resilience against
+temporary supply constraints.
+Recycled water
+Where available, urban water corporations can supply recycled water to non-
+residential sites for a range of uses. Proponents should engage with their local
+water corporation early to understand availability, quality, and cost.
+DEECA is currently developing a Recycled Water Data Dashboard which, once
+published, will be included here. The Dashboard will provide a snapshot of the
+locations of recycled water availability, helping proponents identify feasible
+options.
+                                                                                                Image 8 Melton Recycled Water Plant. Credit: Craig Moodie
+
+
+
+
+Industry Water Connection Guide   18
+                                                                               OFFICIAL
+Decision guidelines
+When making decisions about connecting or expanding large non-residential                    reuse can reduce overall potable water demand, making it easier for water
+urban users, urban water corporations follow decision guidelines that ensure                 corporations to accommodate large users within the network safely and
+network reliability, protect existing customers, and support sustainable                     sustainably.
+growth. A key element of this process is the use of potable water demand
+                                                                                             Early engagement with the local water corporation is essential in these
+forecasts.
+                                                                                             cases. Discussing design options, efficiency measures, and potential
+Urban water corporations develop detailed forecasts for different customer                   alternative water solutions helps proponents understand the feasibility of
+types, including residential, commercial, and industrial (non-residential)                   their application, identify necessary infrastructure upgrades, and develop
+users. These forecasts are based on historical consumption, planned                          solutions that align with both operational needs and the long-term
+developments, emerging industries, and anticipated changes in technology                     sustainability of the urban water system.
+or water efficiency. For further information on forecasts and the urban water
+planning framework, refer to section 2.3.
+When an application falls within the parameters of these forecasts, the water
+corporation can generally approve the connection more efficiently, as the
+network is planned to accommodate this level of demand without
+compromising service to existing or future customers.
+Where a connection request exceeds forecasted demand, additional
+assessment is required to ensure that network capacity, water security, and
+service levels are not compromised. In these cases, water corporations will
+carefully evaluate:
+    •   Whether the existing infrastructure can support the additional
+        demand.
+    •   Potential impacts on pressure, reliability, and quality for other
+        customers.
+    •   Environmental considerations, including compliance with bulk
+        entitlement limits.
+
+Applicants in these situations are encouraged to demonstrate water-efficient
+design, non-potable water use, or to consider offsets (refer to section 5.5) as
+part of their application. Measures such as high-efficiency fixtures, recycled               Image 9 Edgewater Lake, Maribyrnong River
+water use, rainwater or stormwater harvesting, and internal wastewater
+
+
+
+
+Industry Water Connection Guide   19
+                                                                                  OFFICIAL
+Programs and supports available
+Leak detection & network efficiency programs                                       Smart meter and data insights initiatives
+Efficient use of water begins with ensuring that water losses are minimised at     providing real-time monitoring and
+both the network and customer level. While customers are responsible for
+detecting and repairing leaks within their own property boundary, urban water
+                                                                                   benchmarking
+corporations actively manage their networks to identify leaks, reduce losses and   Digital monitoring, either through data loggers or digital water meters, helps
+improve system efficiency. These programs help safeguard water security,           businesses to understand how water is being used, establish a water use
+reduce costs for customers and support the sustainable use of Victoria’s limited   baseline, identify options and make more informed and data-driven decisions
+water resources.                                                                   around water use. Data from smart metering can be used for NABERS
+                                                                                   assessments and benchmarking against other sites within the same industry.
+Urban water corporations employ a range of industry-leading tools and
+practices to monitor their networks and identify emerging issues before they
+affect customers. These may include district metering areas (DMAs), smart          WaterSmart
+meter analytics, acoustic monitoring, pressure management zones and targeted
+leak detection surveys. These programs allow water corporations to quickly         WaterSmart provides eligible non-residential customers with support to
+detect system inefficiencies, prioritise repairs and optimise network              understand their water use, detect leaks and identify opportunities to reduce
+performance in real time.                                                          water-related operating costs, through digital water use monitoring and/or a
+                                                                                   one-off water efficiency audit.
+Identifying and repairing leaks early helps businesses reduce operating costs,
+prevent service disruptions and lower the risk of exceeding consumption            Water efficiency audits help organisations identify where they are using the
+thresholds that may trigger additional regulatory requirements. Efficient water    most water and make recommendations on how to use water more efficiently.
+use is also a visible demonstration of responsible water stewardship, supporting   WaterSmart is funded by the Victorian Government and delivered by water
+broader sustainability goals and community expectations.                           corporations.
+Through a combination of urban water corporation programs and proactive
+customer actions, leak minimisation forms a critical component of ensuring         Offsetting your water use
+Victoria’s water resources are used efficiently, supporting long-term water
+security and enabling emerging industries to grow sustainably.                     In areas where non-potable water, such as recycled water, is not supplied and
+                                                                                   available, proponents can discuss funding or contributing to new infrastructure
+Invest Victoria                                                                    that enables non-potable water use elsewhere in the network. Doing so
+                                                                                   minimises the overall impact on potable water resources by ‘offsetting’ their
+Invest Victoria provides a range of services from market insights, business case   potable water use.
+support and set up guidance to help international and domestic companies
+enter and expand in Victoria. Companies are encouraged to utilise the services     The concept of offsetting is an emerging space which can be discussed with
+of the Victorian Government’s Investment Front Door and Invest Victoria to         your local urban water corporation.
+assist with the streamlining of investment related engagements -
+https://www.invest.vic.gov.au/get-tailored-support/investment-front-door.
+
+
+
+
+Industry Water Connection Guide   20
+                                                                              OFFICIAL
+Case study: Recycled Water offsets for major infrastructure projects – Yarra Valley Water
+Context                                                                              •    Community benefit: Ongoing use of recycled water supports local open
+                                                                                          spaces and contributes to public amenity.
+Yarra Valley Water (YVW) has introduced a recycled-water offset scheme so
+projects can “offset” their impact on drinking-water supplies by helping fund new    •    Regulatory and planning alignment: The program aligns with the
+recycled-water infrastructure where it’s needed.                                          principles of efficient water use, alternative water sourcing, and strategic
+                                                                                          planning that underpin Victoria’s broader water security and sustainability
+Challenge                                                                                 goals.
+Large infrastructure projects often require substantial volumes of water during      What This Demonstrates
+construction. Using our limited drinking water resources can put pressure on
+available reserves, but many projects are too far away from existing recycled-       •    Alternative water offsets offer a practical approach for managing large or
+water networks to be cost effective or logistically possible.                             temporary water demands, with ongoing community benefits.
+Solution: Recycled-Water Offset Program                                              •    Water corporations can act as enablers of sustainable growth. Through
+                                                                                          partnership and innovative program design, water corporations can support
+YVW launched one of Australia’s first recycled-water offset schemes:                      infrastructure, construction and emerging industries while protecting potable
+•   Gives projects an option to fund new recycled-water infrastructure when a             water supply and environmental outcomes.
+    direct connection is not viable.                                                 •    The scheme provides a practical model for future large users, with similar
+•   Builds new recycled water infrastructure to supply Class A recycled water for         recycled-water approaches to help manage demand on potable water
+    non-drinking uses, including irrigating parks, sporting fields or landscaping.        supplies and support system resilience.
+Example:
+For a level-crossing removal project, YVW offset the drinking water used during
+construction by extending ~300 metres of a recycled-water main to supply a
+nearby reserve and sporting oval. This supports ongoing recycled-water supply
+for the community, turning the need for water during construction into a long-
+term alternative water supply.
+Outcomes and Benefits
+•   Offset drinking-water use: Practical option for projects to compensate for
+    their drinking water use by funding new recycled-water infrastructure.
+•   Long-term infrastructure for the community: Recycled-water assets
+    installed for community projects remain in place, supplying non-drinking
+    water for parks, sporting fields, and other public open spaces.
+•   Demonstrates innovation and leadership: Showing nationwide leadership
+                                                                                          Image 10. YVW unveiling new recycled water main. Credit Utility Magazine
+    in managing water use for large projects.
+
+
+
+
+Industry Water Connection Guide   21
+                                                                               OFFICIAL
+Glossary
+ Term                                  Definition
+ Alternative water                     Any water source other than potable drinking water, including recycled water, stormwater, rainwater and sewer-mined water.
+ Bulk entitlement                      A legal right held by a water corporation under the Water Act 1989 to take and store water from a river, reservoir or aquifer
+                                       under specified limits and conditions.
+ Causer-pays principle                 The regulatory requirement that new customers must pay for the infrastructure upgrades needed to service them, preventing
+                                       costs from being passed on to existing customers.
+ Climate variability                   Natural and human-induced variations in rainfall, temperature and water availability over time, influencing water security and
+                                       system planning.
+ Connection approval                   Formal approval issued by a water corporation allowing a customer to connect to water, sewerage or recycled water networks,
+                                       subject to conditions.
+ Declared Water Supply                 A geographic area where a water corporation has statutory obligations to supply drinking water services. Areas outside a
+ District (DWSD)                       DWSD require supply agreements.
+ Demand forecasting                    The process of estimating future water needs across residential, commercial and industrial sectors to inform planning,
+                                       infrastructure investment and allocation decisions.
+ Development Servicing Plan            A published plan outlining future servicing needs, growth assumptions and standard NCC charges for specific growth areas.
+ (DSP)
+ Digital sub-metering                  Technology used to monitor water consumption at a granular level to detect leaks and inefficiencies.
+ Essential Services                    Victoria’s independent economic regulator responsible for water pricing, service standards and oversight of New Customer
+ Commission (ESC)                      Contributions.
+ Gifted asset                          Infrastructure that is funded and built by a developer but transferred to a water corporation for ongoing ownership,
+                                       maintenance and operation.
+ Greywater                             Wastewater from showers, basins and laundry systems that can be treated for reuse in non-potable water applications.
+ Infrastructure upgrades               Water, sewerage or recycled water system improvements required to support new customer demand.
+ Large non-residential water           Industrial or commercial customers whose water demand is significant enough to require detailed assessment of system
+ user                                  capacity, water security and infrastructure impacts.
+ Minister’s Statement of               A regulatory document outlining obligations water corporations must meet in planning, service delivery and environmental
+ Obligations (SoO)                     management.
+ NABERS                                The National Australian Built Environment Rating System, used to benchmark water, energy and waste performance of
+                                       buildings.
+ New Customer Contributions            Charges applied to new customers to recover the cost of system augmentations required to service their development.
+ (NCCs)                                Includes standard and negotiated NCCs.
+ Negotiated NCC                        A site-specific NCC charge used where infrastructure needs or growth patterns are unique or unpredictable.
+ Non-residential demand                Water use from commercial, industrial, institutional and other non-residential sectors.
+ Potable water                         Drinking-quality water supplied through a reticulated urban network.
+ Preliminary Servicing Advice          Early, high-level assessment used to identify feasibility, servicing options and potential constraints for a proposed
+ (PSA)                                 development.
+
+
+Industry Water Connection Guide   22
+                                                                               OFFICIAL
+ Raw water                             Untreated water sourced directly from rivers, dams or aquifers, typically requiring treatment before use.
+ Recycled water                        Treated wastewater suitable for non-potable water uses such as irrigation, cooling or industrial processes.
+ Sewer mining                          Extraction and treatment of wastewater directly from a sewer pipe for reuse on-site.
+ Standard NCC                          A fixed, maximum NCC charge set by the ESC for areas with predictable growth and published Development Servicing Plans.
+ Stormwater harvesting                 Collection and treatment of stormwater runoff for reuse on-site, typically for irrigation or industrial cooling.
+ Trade waste                           Liquid waste discharged from non-residential premises into the sewer system, requiring regulation to protect infrastructure and
+                                       the environment.
+ Trade Waste Agreement                 A legal agreement governing conditions for trade waste discharge, including quality, pre-treatment, monitoring and compliance
+ (TWA)                                 obligations.
+ Urban Water Corporation               A government-owned entity responsible for supplying water, sewerage and recycled water services in urban areas of Victoria.
+ Victorian Water Security Plan         The state’s long-term strategy for managing water resources, ensuring resilience to climate change, population growth and
+                                       emerging industry demand.
+ Water Act 1989                        Primary legislation governing water entitlements, allocation, licensing and management in Victoria.
+ Water efficiency                      Measures that reduce the volume of water needed to operate a site, including technology upgrades, process optimisation and
+                                       behaviour changes.
+ Water Industry Act 1994               Legislation establishing responsibilities for water corporations, including service delivery, customer rights and regulatory
+                                       obligations.
+ Water Industry Standards              Standards set by the ESC that govern service quality, reliability and customer protection for water corporations.
+ (ESC)
+ WELS Rating                           Australia’s Water Efficiency Labelling and Standards scheme for fixtures and appliances.
+ Works (Infrastructure)                Physical assets required to connect a development to water, sewerage or recycled water services, including pipes, pumps,
+                                       storage and treatment systems.
+
+
+
+
+Industry Water Connection Guide   23
+                                                                               OFFICIAL
+Appendix A – Urban water corporation contact information & application references
+ Urban water        Website                  New connection / development information                   New development enquiries contact*
+ corporation
+ Greater            gww.com.au               Building & development hub – includes “Connecting a        General customer and technical enquiries via Contact
+ Western                                     property” and “Property development” pages for new         us, or phone 13 44 99 (includes “Connections &
+ Water                                       connections and larger developments: Building &            Technical Services” as contact point for building
+                                             development → Building → Connecting a property /           approvals and property development).
+                                             Property development
+ South East         southeastwater.com.au    Building and development portal, including                 Online enquiry / complaint forms via Contact us and
+ Water                                       PropertyConnect for online connection and development      Send us an enquiry. General enquiries phone 131 694 /
+                                             applications: Building and development → Developers        131 851.
+                                             (technical standards and process)
+ Yarra Valley       yvw.com.au               Develop and build applications via easyACCESS portal       General and development-related enquiries via online
+ Water                                       for plumbing, connection and land development              form and enquiry@yvw.com.au, phone 1300 304 688
+                                             approvals: Develop and build applications                  (see Customer Charter / enquiries section).
+ Barwon             barwonwater.vic.gov.au   Land development – process and forms for water/sewer       development@barwonwater.vic.gov.au listed for
+ Water                                       servicing and subdivision: Apply for a development         development-related contact / enquiries.
+ Central            chw.net.au               Land development page with land development manual,        For subdivision / development enquiries, contact
+ Highlands                                   forms, and process for connecting developments: Land       Property Services via the “Contact property services” /
+ Water                                       development                                                general Contact us channels on the CHW site.
+ Coliban            coliban.com.au           Builders & Developers hub and connection pages:            Development / subdivision enquiries via the Builders &
+ Water                                       Builders & Developers → Connect a property and Land        Developers contact options and general Contact us
+                                             Development Manual / Quick Guides for new                  channels on the Coliban Water website.
+                                             developments and subdivisions.
+ East               egwater.vic.gov.au       Land development and subdivision forms and process         General and development enquiries via East Gippsland
+ Gippsland                                   (e.g. plan application form) under: Land development and   Water, phone 1300 720 700 (listed on
+ Water                                       subdivision                                                building/development guidance) or via the website
+                                                                                                        contact details.
+ Gippsland          gippswater.com.au        Building and development section including Developing      General / development enquiries via Gippsland Water’s
+ Water                                       land, New Customer Contribution and developer works        contact channels, phone 1800 050 500 (customer
+                                             forms/manual: Building and development → Developing        contact centre) and online forms.
+                                             land
+
+
+
+Industry Water Connection Guide   24
+                                                                          OFFICIAL
+ Goulburn           gvwater.vic.gov.au        Development hub for developers, plumbers and builders,     Development and connection enquiries via GVW’s
+ Valley Water                                 including “Application to connect water and sewer”:        Development contacts (phone 1800 454 500) and forms
+                                              Development → Developers → Application to connect          listed on the Development pages.
+                                              water and sewer
+ GWMWater           gwmwater.org.au           Developers & land development information is provided      New development enquiries via GWMWater’s general
+ (Grampians                                   through GWMWater’s development and connection              Contact us channels (phone and online forms) noting
+ Wimmera                                      pages (e.g. land development manuals / application         specific development contact details referenced in their
+ Mallee Water)                                guidance for new water and sewer assets).                  land development documentation.
+ Lower Murray       lmw.vic.gov.au            Building and developing hub, incl. Land development and    Development and connection enquiries via LMW’s
+ Water                                        New developments and subdivisions pages and Urban          Contact / Building & Developing contact routes (phone
+                                              water and sewer connections page for connection            and forms) listed on the building and developing pages.
+                                              approvals: Building and developing → Land development
+                                              / New developments and subdivisions / Urban water &
+                                              sewer connections
+ North East         newater.com.au            Developers & Plumbers: Developers & Plumbers →             Property development enquiries can be directed to
+ Water                                        Plumbers → Property connections / Water & sewer            North East Water’s Property Development Department
+                                              connection information                                     – development@newater.com.au, phone 02 6055 8480,
+                                                                                                         as noted on water tappings / connections application
+                                                                                                         forms.
+ South              sgwater.com.au            Building & development / Land development pages giving     Development enquiries via South Gippsland Water’s
+ Gippsland                                    process, manuals and forms for connecting new              Contact us channels (phone and online form) as
+ Water                                        developments and land subdivisions.                        referenced on the website contact page.
+ Wannon             wannonwater.com.au        Building and development section, including Building and   New development enquiries via Wannon Water’s
+ Water                                        renovating and Land development – Apply for a              Contact / Building & Development contact points (phone
+                                              development and Water and sewerage connections             and email) listed on the building and development
+                                              information: Building and development → Land               pages.
+                                              development – Apply for a development
+ Westernport        westernportwater.com.au   Development section, supported by a Land Development       Development enquiries via Westernport Water’s
+ Water                                        Manual and online forms that outline processes and         development documentation and general Contact us
+                                              requirements for provision of water, sewerage and          channels (phone and online form) referenced in the
+                                              recycled water services to new developments:               Land Development Manual / permit information.
+                                              Customers → Development and associated Land
+                                              Development Manual.
+
+
+
+
+Industry Water Connection Guide   25
+                                                                           OFFICIAL
+Appendix B –Urban water corporation high water use
+data request form
+
+
+
+
+Industry Water Connection Guide   26
+                                       OFFICIAL
+Industry Water Connection Guide   27
+                                       OFFICIAL
+

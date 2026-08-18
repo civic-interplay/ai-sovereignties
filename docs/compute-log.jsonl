@@ -8,3 +8,6 @@
 {"date": "2026-08-16", "kind": "session", "model": "claude-fable-5", "calls": 289, "input_tokens": 548879, "cache_read_tokens": 39756126, "output_tokens": 233939}
 {"date":"2026-08-16","kind":"pipeline","source":"gdelt","model":"claude-sonnet-5","calls":1,"input_tokens":5408,"output_tokens":371}
 {"date":"2026-08-16","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28757,"output_tokens":5424}
+{"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6818,"output_tokens":1920}
+{"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6818,"output_tokens":1875}
+{"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6791,"output_tokens":1019}

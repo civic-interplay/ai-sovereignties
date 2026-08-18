@@ -1,0 +1,947 @@
+PUBLIC ACCOUNTS AND ESTIMATES COMMITTEE
+
+
+            Inquiry into the 2026–27 Budget Estimates
+
+                        Melbourne – Thursday 21 May 2026
+
+
+
+
+                                   MEMBERS
+
+     Sarah Connolly – Chair                                Lauren Kathage
+     John Pesutto – Deputy Chair                           Aiv Puglielli
+     Jade Benham                                           Richard Riordan
+     Michael Galea                                         Meng Heang Tak
+     Mathew Hilakari
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                    1
+
+
+
+
+WITNESSES
+
+Harriet Shing MLC, Minister for Water; and
+
+Kate Houghton, Secretary,
+
+Kirsten Shelly, Deputy Secretary, Water and Catchments,
+
+Andrew Fennessy, Executive Director, Water Security and Resilience,
+
+Deb Brown, Executive Director, Water Sector Strategy and Partnerships,
+
+Jesse Rose, Executive Director, Water Resource Strategy, Department of Energy, Environment and Climate
+Action.
+
+   The CHAIR: I declare open this hearing of the Public Accounts and Estimates Committee. I ask that mobile
+telephones please be turned to silent.
+
+On behalf of the Parliament the committee is conducting this Inquiry into the 2026–27 Budget Estimates. The
+committee’s aim is to scrutinise public administration and finance to improve outcomes for the Victorian
+community.
+
+I advise that all evidence taken by the committee is protected by parliamentary privilege. However, comments
+repeated outside of this hearing may not be protected by this privilege.
+
+Witnesses will be provided with a proof version of the transcript to check. Verified transcripts, presentations
+and handouts will be placed on the committee’s website.
+
+I welcome the Minister for Water the Honourable Harriet Shing, as well as officials from DEECA. Minister, I
+invite you to make an opening statement or presentation of no more than 5 minutes, after which time the
+committee will ask you questions. Your time starts now.
+
+   Harriet SHING: Thank you, Chair, and thank you, committee members, for the opportunity to present to
+you today on the water portfolio. I would like to begin by acknowledging the traditional owners of the lands
+upon which we gather. We are on Wurundjeri country today, and I pay my respects to elders past and present. I
+would also like to acknowledge any and all Aboriginal and Torres Strait Islander leaders or emerging leaders
+who are here today or who are part of the vital work to make sure that as we deliver on Water is Life, on the
+work around our commitments to truth, treaty and reconciliation, we can understand the innate connection
+between the world’s oldest continuous culture and water country.
+
+Visual presentation.
+
+   Harriet SHING: I might take us to the first substantive slide, if I may. Thank you. Water, as people would
+be aware and appreciate, underpins our economy and our livelihoods. Global cost-of-living pressures, climate
+change and population growth are placing a lot of pressure on many services across Australia. Despite this,
+Victoria’s water sector continues to deliver the safe, reliable and affordable services that Victorians need to
+unlock economic opportunity and also to support healthy environments and communities. Our water
+corporations are investing almost $4 billion into infrastructure in 2026–27 to service our growing communities.
+Melbourne’s water bills, importantly, remain the lowest of any capital city in Australia – on average $114
+below the next city, Sydney. Our water markets support an irrigation system which underpins $5 billion worth
+of irrigated agriculture annually and Victorian jobs and food security. Water corporations are unlocking more
+homes for Victorians, with 15,998 applications for water connections and 526 development applications
+processed so far this year. The water sector has been on the ground as well when communities need them,
+including though the bushfires earlier this year and also in flood response and recovery. I want to thank the
+water sector for their quick work during the bushfires and floods to support communities, restore essential
+water services and provide drinking water relief for families.
+
+Next slide, please. Our investment in sustainable water management is also critical to meet these growing
+strategic challenges, and there is $707 million over the next four years through the sixth tranche of the
+Thursday 21 May 2026                    Public Accounts and Estimates Committee                                        2
+
+
+
+
+environmental contributions for 2024–28. $192 million will be rolled out in 2026–27 to support regional jobs,
+protect waterways and catchment health and strengthen the effective, innovative and efficient use of water
+resources across the state, including fit-for-purpose recycled and stormwater use. We are making communities
+safer with priority reforms to flood preparedness and response to better protect communities in line with Plan
+for Victoria and key recommendations of the 2022 flood inquiry. We are backing affordability with rebates to
+almost 3000 customers in hardship through our community rebate program, saving households $64 per year on
+bills on average, with a total estimated water saving of 71 megalitres. We are boosting reliability with
+$24 million for integrated water management projects that will improve water security and waterway and
+landscape health, including at Birdsland, where I was earlier this week with the Member for Monbulk Daniela
+De Martino, to preserve the significant breeding population of platypus across Monbulk Creek.
+
+Next slide, please. This is all critical to address the biggest challenge that we have, which is water security.
+Much of Victoria continues to experience very dry conditions, and major storages are now 47 per cent full. The
+Melbourne storage system’s storage levels are currently at 64 per cent. Regionally, Geelong storages are down
+to 36 per cent as of today. Looking ahead, the Bureau of Meteorology’s outlook predicts low to moderate
+likelihood of above-average rainfall in the next few months.
+
+Next slide, please. But we are planning now to meet future water needs. Modelling by Melbourne Water
+indicates the region will need an extra 95 gigalitres of water per year by 2030, even with the desalination plant
+operating at full capacity. Without the desalination plant our supplies would already be at critical levels. The
+desalination project has contributed 505 gigalitres, or 27.9 per cent, of the Melbourne water storage capacity
+since 2016–17. We have also ordered 150 gig of desal water for this year to bolster supplies. Since 2016 it will
+have contributed more than 655 gigalitres of water, equivalent to 415 MCGs. The Melbourne–Geelong
+pipeline, completed late last year, is also increasing water security for Geelong, which would be on water
+restrictions now but for that work. The every drop counts campaign, the water security plan and the expert
+water security task force will also inform investigations.
+
+The Murray–Darling Basin is the next slide I do not have the opportunity to go to, but Ms Benham, I am
+looking forward to discussing it.
+
+  Members interjecting.
+
+  The CHAIR: Thank you. We will go to Ms Benham. I can hear the excitement.
+
+  Jade BENHAM: I am excited. Thank you, Chair. Welcome, fellow water people – it is lovely to have you –
+and welcome back to this portfolio, Minister.
+
+  Harriet SHING: Thank you.
+
+   Jade BENHAM: Let us start by talking about the Murray–Darling Basin plan then. I was reading the
+executive summary to the Victorian government’s submission to the plan review, and some of those points in
+there are critical, so thank you for that – and thank you for your work in this portfolio in Victoria’s interests in
+the plan. Can you tell me if the government has secured any funding support associated with the
+Commonwealth’s $300 million voluntary water buyback program under the restoring our rivers initiative?
+
+  Harriet SHING: Thank you, Ms Benham, and thank you for the opportunity for me to reinforce Victoria’s
+position. We remain opposed to non-strategic buybacks –
+
+  Jade BENHAM: Hear, hear!
+
+   Harriet SHING: on the basis that they cause and sustain significant socio-economic damage to areas of the
+state which are also Australia’s food bowl, particularly where Victoria has continued to do heavy lifting when it
+comes to the return of environmental water to some of the most stressed river systems in Australia. The basin
+supports towns and food production that underpin so much of our national economy. This is where the strategic
+approach that was outlined in our prospectus has been really of key importance to making sure that the
+Commonwealth is aware of opportunities to move in a strategic direction into the future to make sure that we
+have got sustainable environmental outcomes that also support resilient regional communities and economies.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                  3
+
+
+
+
+You have seen from the submission that we have made to the basin plan review that we have called for an
+immediate and permanent end to non-strategic water buybacks; acknowledgement of the missing chapter and
+critical role that irrigation plays in the basin; recognition of local knowledge and lived experience; improved
+environmental outcomes; recognition of First Peoples’ rights; stronger action to adapt to climate change; and a
+transition plan for incomplete SDLAM projects
+
+  Jade BENHAM: So are we getting more funding?
+
+   Harriet SHING: Yes. This has supported Victoria to secure $120 million for the Coliban rural water
+efficiency project; up to $132 million for the Broken reconfiguration project, built on many years of
+community-driven discussions; over $40 million to deliver restoring flows to the Mallee floodplain; almost
+$1.4 million for stock and domestic feasibility studies, and that sits on top of over $19 million to implement the
+Murray–Darling Basin plan and over $100 million to progress – I have to be careful not to use all of the
+abbreviations that we all know within the water space – the Victorian Murray floodplain restoration project at
+Hattah Lakes North, Nyah and Vinifera.
+
+  Jade BENHAM: You can use them here in the interests of time.
+
+  Harriet SHING: Thank you.
+
+   Jade BENHAM: I get it; it is fine. We could talk about this for hours and we have got less than 5 minutes
+left, but what assessment has the government undertaken on the impact that further water buybacks could have
+on Victorian irrigators, regional economies and agriculture production?
+
+  Harriet SHING: We have continued, following initial work that was undertaken as part of the Frontier
+Economics report that was tabled back in 2024, to deliver on research to understand not only what the impact of
+non-strategic buybacks does to communities in monetary terms but also what it means for job losses, and we
+continue to do that work. That is also set out in the submission that we have referred to in the course of the
+basin plan review, so in the interests of time, I will refer you back to that.
+
+  Jade BENHAM: Great. Excellent. Thank you so much. Can you confirm that – I was going to say ‘we’ –
+Victoria has already surrendered more than 22 per cent of the high-reliability water entitlements in the southern
+connected basin through previous Commonwealth buybacks?
+
+   Harriet SHING: We have previously returned water through Commonwealth buybacks in earlier rounds
+prior to the Murray–Darling Basin plan and to the most recent reforms and those non-strategic buybacks that
+have occurred under this and the previous Commonwealth government. So, yes, we had buybacks that initially
+caused significant damage, which was the basis for the research around what the impact of those buybacks was.
+
+  Jade BENHAM: So 22 per cent or more than that – i.e., Victoria are doing the heavy lifting here, and New
+South Wales need to step up.
+
+   Harriet SHING: I take that as the point that you are driving here, Ms Benham, but I do just want to note
+that under the current buybacks – this is according to the Australian government’s data – as at February this
+year 78.4 gig of water has been agreed or contracted to be recovered from Victoria. We have contributed 41 per
+cent of the open tender water purchases agreed or contracted to date, and of these Victorian transfers, 62.1 gig
+are high-reliability water shares, and the socio-economic impacts of buying that back are far greater than low-
+reliability shares.
+
+   Jade BENHAM: I might go to the very last one. Does the government then accept – I think I know the
+answer to this – that rising irrigation water prices caused by buybacks, amongst other things, are increasing
+pressure on agricultural production costs and regional farm viability?
+
+   Harriet SHING: We know that the impact of any upward pressure on costs for production has an impact
+further downstream, whether it is at the farm gate or as far as supply chain and delivery.
+
+  Jade BENHAM: And at the supermarket shelf.
+
+   Harriet SHING: Well, that is the end product. Again, this is where one of the things that we have continued
+to do, including through the prospectus and through that strategic plan and proposal, Is to identify how we can
+Thursday 21 May 2026                    Public Accounts and Estimates Committee                                       4
+
+
+
+
+return environmental water in accordance with the principles and the objectives of the Murray-Darling Basin
+Plan, whilst also minimising the socio-economic impact upon communities. We also know that return of
+environmental water, when done well, means we can get better environmental outcomes without using as much
+water, so there is a significant benefit to be had there. We will continue to work alongside the Commonwealth.
+The legislative framework that exists at a Commonwealth level exists; we cannot do anything about that. What
+we can do, however, is make sure that we are continuing to advocate to the Commonwealth and that the
+Commonwealth is clear about their understanding of our ongoing opposition but that we do want to collaborate
+to make sure that Victorian communities get as much support as possible as this process occurs and that as the
+process occurs it happens in an equitable way and in a way that minimises socio-economic impact.
+
+   Jade BENHAM: Great. That advocacy – can you tell me what you are advocating for instead of direct
+entitlement buybacks from productive agricultural communities?
+
+   Harriet SHING: Have a look in the submission again that we provided to the basin plan review. That is
+probably, in the very limited time that we have available, the best starting point for the work that we have
+undertaken to date and what we would like to see happen into the future.
+
+   Jade BENHAM: Excellent. I do have another 7 minutes very soon, so we might even come back to that and
+talk about –
+
+  Harriet SHING: I look forward to it, Ms Benham.
+
+  The CHAIR: Thank you. Mr Galea.
+
+   Michael GALEA: Thank you, Chair. Good afternoon, Minister, Secretary and officials. Minister, I would
+like to talk about financial sustainability of water corporations, specifically budget paper 4, chapter 3, in its
+entirety in fact, where we can see that water corporations are investing approximately $4 billion in capital
+works over the coming financial year. How is this being financed?
+
+   Harriet SHING: Thank you, Mr Galea, for that question. Water corporations’ prices and water prices are
+regulated by the independent regulator. The Essential Services Commission is the entity that sets those water
+prices. Water corporations forecast what their expenditure and debt requirements are, and that is reflected in the
+price review process and financials that are then reported through annual reports. Now, debt plays a really
+important role in enabling water corporations to finance that long-term investment, and that ensures that the
+cost of capital is shared by all customers that benefit from that asset across the life of the asset. So taking on
+debt, with its gradual payback, actually allows for the cost to be smoothed so that the customer bills do not vary
+significantly from year to year. As I said earlier, our water bills are the lowest of any capital city around
+Australia – $124 below Canberra, $156 below Sydney, which are the next-lowest capital cities. Again, this
+pricing process is about making sure that we are balancing the need for investment in infrastructure and how to
+deliver that over the long term, whilst also maintaining affordability in water pricing.
+
+  Michael GALEA: Minister, have the returns to government affected these capital investments in any way?
+
+    Harriet SHING: Governments over decades have invested in the initial vital infrastructure that our water
+corporations need to deliver that safe and reliable and affordable water to our homes – that is not a new
+concept. Dividends and capital repatriation allow us to return that investment to taxpayers and also to support
+the programs that Victorian communities rely on that support schools and hospitals and public transport. A
+dividend is only paid out of profit, so this is after the delivery of new water and wastewater infrastructure where
+it is needed most. That then assists the state as we grow to ensure that our water and wastewater infrastructure is
+safe and sustainable. These matters are then reported through budget papers and annual reports. But dividends
+and capital repatriation do not impact prices and capital investment or result in any increases to customers’ bills,
+so that is a really important thing to underscore here.
+
+   Michael GALEA: Thank you, Minister. Page 242 of budget paper 5, under ‘Public non-financial
+corporations’ dividends, talks through each individual metropolitan water company’s dividends and shows no
+payment on the part of Greater Western Water. In our financial performance outcomes hearings last year we
+discussed this quite a bit with department officials in terms of their recent billing challenges. Are those billing
+challenges the reason why there is no dividend this year?
+Thursday 21 May 2026                    Public Accounts and Estimates Committee                                 5
+
+
+
+
+   Harriet SHING: Well, it is really clear that Greater Western Water has failed to meet customer
+expectations. That is why we commissioned an independent review that was about understanding what had
+happened so that we can prevent it from happening again and so that we can also understand the magnitude of
+the problem. There is new leadership within Greater Western Water that has been very clear in apologising to
+customers, accepting all of the recommendations of that review and reaffirming its singular focus on delivering
+a return-to-service plan and also rebuilding trust with customers and the community. As Greater Western Water
+has said, Greater Western Water is paying for this. There will be no increase to customers’ bills, and there are
+legislative obligations to report on finances through the annual reports.
+
+Greater Western Water’s annual report in 2024–25 indicated that the Treasurer had provided a letter of comfort
+to Greater Western Water. Letters of comfort are not sitting idly in bank accounts as large cheques; they are
+actually directed to where they receive the best outcome and return to Victorians. Water corporations also have
+access to short-term borrowing arrangements, and the Essential Services Commission accepted a $130 million
+enforceable undertaking from Greater Western Water. That is the largest enforceable undertaking the Essential
+Services Commission has ever accepted. Through that undertaking, Greater Western Water is providing
+$55 million in redress credits to customers who have experienced prolonged delays, waiving $75 million in
+unbilled charges from 2024 and improving communication with customers, as one could reasonably expect.
+
+Customers who are experiencing hardship or are unsure about their bills, though, should contact Greater
+Western Water. The number for the purposes of anyone who wants to pass this on is 13 44 99. There is also in-
+person support that is available in Greater Western Water’s Footscray and Sunbury offices. There are ongoing
+supports around extended payment arrangements and also hardship and utility relief grants. So there is a lot of
+work for Greater Western Water to do, but again, the steps that are being taken are in the right direction, and I
+am assured that there is a commitment to long-term change and improvement to acceptable standards.
+
+   Michael GALEA: Thank you, Minister. At the risk of delighting my colleagues to my left, I would also like
+to ask you about the Murray–Darling Basin plan, specifically budget paper 3, page 27, which outlines a number
+of investments and output initiatives in this budget which do seek to support communities in the face of the
+very damaging Commonwealth push for buybacks. Minister, how will these initiatives support these basin
+communities?
+
+   Harriet SHING: Yes. Thank you. I will reiterate with the time I have available a lot of what I have said to
+Ms Benham and direct you to those answers. We have put an alternative plan to the Commonwealth with the
+Planning our Basin Future Together prospectus, and that has then enabled us to secure funding for prospectus
+projects, so that was the Coliban rural water efficiency project, the Broken reconfiguration project and restoring
+flows to the Murray floodplain.
+
+   Michael GALEA: Thank you, Minister. Indeed this is a very important issue for many northern Victorian
+communities, as we have already been through and as I am sure Ms Benham will be taking you through again
+in just a few moments time.
+
+      Harriet SHING: Thank you so much.
+
+      Jade BENHAM: Does that include funding for a new Mildura weir? Because that is in the pipeline too, isn’t
+it?
+
+      The CHAIR: Thank you. We are going to – is it to Ms Benham?
+
+  Jade BENHAM: Sorry, yes. Okay, back to me. Thank you. That 78 gigalitres we were talking about before
+purchased from Victoria – can you tell me whether any of that was purchased from the large water portfolios?
+
+      Harriet SHING: Can you just provide a bit more context?
+
+   Jade BENHAM: There was the 78 gig that you were talking about before that were purchased in that first
+round of buybacks. Can you disclose whether any of that was purchased from the big water portfolios that may
+or may not have an AUL?
+
+      Kirsten SHELLY: We might have to –
+
+      Jade BENHAM: Come back to me on notice? That is okay.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                   6
+
+
+
+
+  Jesse ROSE: The source of truth for the purchases that the Commonwealth have undertaken is the
+Commonwealth government’s AusTender website. They will have the details there of the contracts that they
+have struck, so that will likely be the best source of information around who the sellers were.
+
+  Jade BENHAM: Okay. We cannot get any more information than that?
+
+  Jesse ROSE: Not beyond what the Commonwealth are publishing themselves.
+
+   Jade BENHAM: Okay. The other question I had on that is probably Commonwealth related, so as much as
+I would like to continue discussing the Murray–Darling Basin plan and some of the big projects that are going
+online –
+
+  Harriet SHING: I am always here for you, Ms Benham.
+
+  Jade BENHAM: Terrific. We should also recognise the work of the Mallee catchment authority too. Jenny
+Collins and James there do an amazing job.
+
+  Harriet SHING: All of the CMAs and the water corporations do a phenomenal job, absolutely.
+
+   Jade BENHAM: I deal with mine; they are brilliant. I just wanted to get that on the record. Minister, I want
+to talk about water security demand planning and future water supply. Page 18 of the ‘Department Performance
+Statement’, table 4, shows funding for water and catchments decreasing from a revised budget of
+$329.7 million in 2025–26 to $302.9 million in 2026–27. Can we explain why funding has been reduced
+despite growing pressure on Victoria’s water system, as we just saw in the slide presentation? I am happy to
+take that answer from anywhere.
+
+   Harriet SHING: We are investigating all of the viable options that are available to us to maintain our
+supply. The water security plan is a really big part of that work, and investigations on that will be informed by
+an expert bipartisan approach. We have got former water ministers Lisa Neville and Peter Walsh, again
+showing that joined-up approach, and industry expert Dr Jane Doolan as well. We do have taskforce findings
+that are due to be provided to government in March 2027, and in investigating these options we will evaluate
+the best available data and the insights around how we can provide investment decisions around future water
+supply sources. But again, I just want to be really clear around the fact that the taskforce needs to complete its
+investigations, and their decisions and their investigations, recommendations and findings will guide outcomes
+or any mix of options that might be considered into the future.
+
+  Jade BENHAM: Like an another desal plant potentially?
+
+   Harriet SHING: The Water Security Taskforce does need to complete its work. But to go back to some of
+the comments that I made in my opening remarks, the desalination plant is providing a really significant
+volume of water into our system. 27.9 per cent of our water supplies are coming from the desalination plant, so
+a quarter of this glass of water is coming from the desalination plant. So we do need to make sure that we
+understand what water security looks like and also how we need to innovate, but that is work that the taskforce
+needs to be able to do in order to come up with those options.
+
+   Jade BENHAM: With the data centres, the proposed data centres across metro Melbourne, what assessment
+has been done for future water demand? Because they use a lot of water. What assessments have been done
+there with water availability and water security?
+
+   Harriet SHING: Thank you for that question. Data centres are just like any other large water user: we have
+to make sure that we are ensuring water supply and security for drinking water is not affected.
+
+  Jade BENHAM: Or irrigation water – just saying.
+
+   Harriet SHING: Again, irrigators and large-scale primary producers are also part of that work, so I just
+want to be clear about that. Data centres will not proceed if they would compromise existing caps on extraction
+or also service reliability for existing customers. We also know, though, that many data centres use those
+closed-loop systems, and they have also got net zero water commitments as well.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                     7
+
+
+
+
+Technology is continuing to evolve around how data centres are developed and delivered and the technology
+that underpins their operations. We do support data centre investment – we have been very clear about that –
+but we also need to make sure that we are managing the water, energy, land use and community impact, and
+our expectation is that Victoria’s urban water corporations will work with all large customers, including data
+centres, to incorporate what that best practice looks like in design and in supply and then also what alternatives
+look like around recycled water.
+
+   Jade BENHAM: Great. Has the department undertaken any modelling on phantom-demand scenarios,
+where multiple large-scale developments are proposed but only a portion ultimately proceed, potentially
+distorting long-term water infrastructure planning?
+
+  Harriet SHING: Are you talking specifically around data centres or more broadly?
+
+   Jade BENHAM: No, more broadly. Data centres is a great example, but there might be other large-scale
+proposed developments.
+
+   Andrew FENNESSY: Yes, data centres are a good example of that. It is actually the water corporations
+who receive the application, so they are the ones that look to process it. But we do know in the case of data
+centres, sometimes they might get, you know, even five or six applications for the one site for development. So
+we need to be very careful that they are not extrapolating that number from what the demand is going to be on
+the system. That is why it is imperative that the water corporations work early with the data centres when they
+come in to actually identify what the true demand is within the system there.
+
+  Jade BENHAM: Yes. Great. Can we go back, in the 20 seconds I have got left, and talk about a new
+Mildura weir. Is that planning in the pipeline?
+
+   Harriet SHING: I was in Mildura the last time I had the portfolio, talking about exactly this matter,
+Ms Benham. There are always projects happening around the state to make better use of waterways and
+riverine environments, whether that is for the visitor and tourism economy, whether that is for First Peoples or
+for industry or for primary production. I would welcome an opportunity to talk with you further.
+
+  Jade BENHAM: Great. Come to Mildura.
+
+  Harriet SHING: Again!
+
+  The CHAIR: Ms Kathage.
+
+   Lauren KATHAGE: Thank you very much, Chair, minister and officials. I want to talk about budget
+paper 3, page 27. There is information there about VMFRP projects and that they must be complete by the end
+of the year. Are they on schedule?
+
+    Harriet SHING: Thank you, Ms Kathage. I am really delighted about the opportunity to be able to talk
+about what we are doing up north. It does not get enough coverage or discussion, and I know that we may seem
+flippant in our enthusiasm about this, but it is so essential that people are across what is happening further up
+near the border. We have secured $100 million of Commonwealth investment. That is about restoring the
+health of those critically important floodplains at Hattah Lakes North, Nyah and Vinifera. That will provide
+around 7.5 gig of water recovery and deliver that regional employment. That means better environmental
+outcomes and also more water remaining in the system for basin communities and farmers. Works are on track
+to be constructed by the end of 2026; that is in line with federal legislated timelines. And two regional Victorian
+construction companies have been engaged to deliver those works, and that then in turn delivers local jobs and
+provides that economic boost to Murray townships and surrounding regional communities.
+
+  Lauren KATHAGE: Thank you. And I can see on the same page that there is funding for both constraints
+and what we have just been speaking about. So what is the difference between the two?
+
+   Harriet SHING: Thank you. Constraints alone cannot actually meet the frequency and the duration of the
+flooding required for the environmental health of these floodplains, so for constraints to achieve the same
+environmental outcomes as the VMFRP there would be significant flooding that would impact upon towns and
+properties along the river, so we need to calibrate that really carefully. Any decisions about whether to commit
+to full implementation need to really properly understand what those benefits and costs and risks look like.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                   8
+
+
+
+
+Anybody who lives in any riverine environment will know what the high-water mark looks like along trees and
+why it is important to make sure that we understand, appreciate and mitigate those risks.
+
+We have secured $8.8 million of investment from the Commonwealth government in two years to build on that
+really extensive technical and policy work that was published by Victoria in June 2024 as part of that
+constraints feasibility study. That is funding that will also ensure construction of permanent environmental
+works. That is to allow site-specific environmental watering. When we do environmental watering we are
+enabling water to flow really gently over the landscape. That then means that we get the environmental benefit
+without those high-water marks because of flooding. Ryan’s Lagoon in north-east Victoria is a really good
+example of that. But, again, we are not going to flood private land without landholders’ consent or
+compulsorily acquire land or easements for the purpose of this project.
+
+   Lauren KATHAGE: Okay. Thank you. I would like to take us back to the water security plan that we have
+been discussing. It is referenced on page 39 of the questionnaire. But for the benefit of the committee, can you
+just sort of outline what this plan is and how we are managing falling water storage?
+
+   Harriet SHING: Yes. Thank you for that question. And again, this is something which I think deserves
+much more community awareness and public discussion. As at today’s date, our water storages across Victoria
+are 47 per cent. After three years of La Niña and those really significant falls, we are now heading dramatically
+in the other direction. Melbourne’s storage levels are at 64 per cent. Our water storages across Melbourne have
+dropped 24 per cent in two years. This is the largest drop since the millennium drought. As people would
+remember, we were down to silt in our storages at that point in time. So without the desalination plant, Geelong
+and Melbourne would be on water restrictions. That is a plant that, as people would remember, was howled
+down as excessive and unnecessary, and we are relying upon it in order to avoid water restrictions. The
+Geelong pipeline, Melbourne–Geelong, is providing up to 60 per cent of Geelong’s demand, so without that,
+Geelong storages would be at just 6.7 per cent.
+
+  Lauren KATHAGE: It is crazy.
+
+   Harriet SHING: The desalination plant has contributed an enormous volume. I did describe it in MCGs
+before, which is a somewhat challenging thing for me to do, given that sport is not my forte, but it has
+contributed 505 gig already and by mid next year it will have contributed 655 gigalitres. Yes, it is 415 MCGs.
+But these orders are actually a really ordinary part of the way in which we are supplying drinking water, not
+just in Victoria or around Australia – globally, there is an increasing reliance upon desalinated water. It is also
+about supporting populations as they grow and providing a measure of protection against the impacts of climate
+change. We also need to make sure that this fits in with the work we are doing as a government across multiple
+jurisdictions. Working within the water security plan, it is important to investigate what those options look like
+for augmenting our water supplies to meet this task of forecast gap in demand.
+
+The infrastructure that we have is also necessary to prevent and avoid permanent 3A water restrictions, and
+increasing and expanding the water grid, for example, to Cape Paterson, Inverloch and Wonthaggi was an
+important part of making sure we could address that shortage in demand. This is happening all over the state.
+But a bipartisan taskforce, as I mentioned in response to Ms Benham’s question earlier, is a big part of making
+sure that we can have those answers, those investigations and those options around acuity of need and also
+where and how we might develop and deliver solutions, including in partnership with the Commonwealth. The
+Make Every Drop Count campaign is another really important example. How do we reduce our consumption?
+How do we conserve what we have? How do we augment supply? And how do we plan for the future? These
+are all of the questions that guide integrated water management, good stewardship and that overarching plan
+that involves all levels of government, CMAs, water corporations, DEECA obviously and the work of policy
+direction.
+
+  Lauren KATHAGE: And greater public awareness.
+
+  Harriet SHING: Absolutely.
+
+  Lauren KATHAGE: Thank you, Minister.
+
+  The CHAIR: Thank you. We are going to the Deputy Chair.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                    9
+
+
+
+
+   John PESUTTO: Thank you, Chair, Minister and officials. Minister, can I take you to page 63 of budget
+paper 5, please. Minister, can we establish for our viewing audience that water authorities sit within what we
+call the public non-financial corporation sector?
+
+  Harriet SHING: Yes.
+
+   John PESUTTO: And can you see there in the net debt figure table 2.2 at the bottom of the page the revised
+figure for net debt of the public non-financial corporation sector, which comprises for the most part water
+authorities? Net debt for this current financial year is $30.1 billion, and it increases steadily to the estimate in
+2030 of net debt for the public non-financial corporation sector of nearly $50 billion. Minister, I put it to you
+that particularly in light of your comments before about debt, that represents nearly a 70 per cent increase in net
+debt across the water sector and other entities within the PNFC in four years. Can you please tell Victorians
+who pays for that debt and who pays for the interest on that debt if not Victorians and in particular water
+customers?
+
+  Harriet SHING: Mr Pesutto, I might take this opportunity to talk you through the way in which dividends
+and capital repatriation and debt operate.
+
+  John PESUTTO: I have not come to dividends yet. I will. I just want to know about debt.
+
+  Harriet SHING: I am wanting to perhaps –
+
+   John PESUTTO: You talked about debt and water authorities taking on debt – okay. But I am trying to
+establish for Victorians that that has to be paid for. Who pays for it?
+
+  Harriet SHING: This is where long-term investment is something which we address, as I indicated in my
+answer to Mr Galea – a smoothing of the cost of capital so that we share that across all customers.
+
+   John PESUTTO: It is not a smoothing, Minister, it is an explosion in debt. That increase in debt across the
+water sector is nearly three times or more the rate of increase in the growth of debt in the general government
+sector. It is three times worse than it is in the general government sector. Don’t you have concerns that this level
+of debt is going to have a number of effects, including higher water prices in the future and less investment in
+infrastructure? Because the burdens of that debt are enormous.
+
+   Harriet SHING: Mr Pesutto, debt has a really important role to play in enabling water corporations to
+finance that long-term investment in infrastructure that they rely upon, that we rely upon. The work that we are
+doing to ensure that we have adequate infrastructure, that we have adequate supply, goes to all of the things that
+I have just discussed in answers to previous questions. When we talk about water prices – and I want to be very,
+very clear about this – I want to ensure that you are aware that the Essential Services Commission sets prices
+for water. It is not done by water corporations. The work of dividends, capital repatriation and water pricing is
+not something that impacts upon or results in increases to customers’ bills.
+
+  John PESUTTO: How could it not?
+
+  Harriet SHING: Because they are set independently by the Essential Services –
+
+  John PESUTTO: It is coming out of the coffers of our water authorities.
+
+  Harriet SHING: It is set by the Essential Services Commission, Mr Pesutto.
+
+  John PESUTTO: Is there a money tree that we do not know about somewhere in the state of Victoria,
+Minister? Because how do you pay for this if not through higher bills and poorer infrastructure?
+
+  The CHAIR: Deputy Chair, the Minister is answering you quite clearly.
+
+   Harriet SHING: Mr Pesutto, Melbourne’s water bills – I have said it before; I will say it again – are lower
+than any other Australian capital city. Melbourne’s water bills are $124 below Canberra, $156 below Sydney –
+
+  John PESUTTO: But interstate the water authorities do not have this kind of debt profile, Minister.
+
+  Lauren KATHAGE: It is not just water authorities, though.
+Thursday 21 May 2026                    Public Accounts and Estimates Committee                                   10
+
+
+
+
+  John PESUTTO: No, it is not, but it is the most part. Other states do not have water authorities that are so
+badly leveraged as to have nearly $50 billion in net debt within four years.
+
+   Harriet SHING: I am going to take that as an expression of opinion, Mr Pesutto. The Essential Services
+Commission, as I have just outlined, sets water prices by reference to a range of criteria. It sets prices to recover
+the cost of investments, but it also takes the cost of finance into account. In setting those water prices, as the
+ESC has determined, those levels continue to be the lowest water prices of any capital city in Australia.
+
+  John PESUTTO: But who is paying for this then, Minister?
+
+   Harriet SHING: Now, that then ensures that we have an appropriate balance struck between the bills that
+customers receive, affordability and service delivery and then also financial sustainability. When future
+customers get the benefit of the investments in infrastructure that are being made now, that is also reflected in
+the cost of finance and what that looks like for delivery of that infrastructure. Now, as a further safeguard, the
+Department of Treasury and Finance also sets a limit on how much a water corporation can borrow in a
+financial year, as you would be aware, which generally aligns with that forecast view of capital expenditure in
+the course of that year.
+
+   John PESUTTO: Thank you, Minister. Can I just ask, given the earlier discussion with Ms Benham and
+your presentation: can you rule out for Victorians any scenario in the next 12 months or in the 12 months
+following where any existing water restrictions will be tightened or any other water restrictions will be
+introduced? Can you assure Victorians there will not be any need for any decisions on that front?
+
+  Harriet SHING: You are asking me, Mr Pesutto, to forecast the weather.
+
+   John PESUTTO: No. Have you had any advice? On the advice you have received, obviously, can you say
+that there will be no change to the current settings around water restrictions?
+
+   Harriet SHING: What I would say, Mr Pesutto, is because of our interventions – because of the largest
+possible order being placed from the desalination plant – we are in the best available position to safeguard
+ourselves against water restrictions. We would already be there, Mr Pesutto, in Melbourne and in Geelong. We
+safeguarded –
+
+  John PESUTTO: But there is no possibility in the next 12 months?
+
+  Harriet SHING: through previous years with quick-fill, quick-drain areas of –
+
+  John PESUTTO: Sure, but is there no possibility of any change to water restriction settings in the next
+12 months?
+
+  Harriet SHING: Again, we are managing what appears to be, based on long-term forecasts, lower than
+average rainfall. If you are asking me to predict the weather, Mr Pesutto, that might be a skill set you have; it is
+not one that I am equipped with.
+
+  The CHAIR: Thank you. Mr Tak.
+
+  Meng Heang TAK: Thank you, Chair, Minister and officials. Further to Ms Kathage’s question, Minister,
+page 34 of the department questionnaire references the drought support package. What is being done in the
+water portfolio to support drought-impacted communities?
+
+   Harriet SHING: Thank you. This actually builds on the conversation that we have been having. Again, we
+have a very good understanding of the likely trajectory of where we are heading based on climate information,
+based on the scenarios for longer term modelling done by technical experts with far greater capacity to make
+these informed opinions than me. But we are continuing to deliver on drought support for affected
+communities, and the drought taskforce established by the Premier has been really central in this work. That
+includes $25 million in water sector initiatives.
+
+We have got a network of about 300 emergency water supply points, and that is about making sure that we are
+addressing the need for carting, for emergency stock and for domestic purposes in times of shortage. There has
+been $5.5 million allocated to review and upgrade the emergency water supply points and also to facilitate
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                  11
+
+
+
+
+access to unutilised groundwater and those bores under the Farmer Helping Farmer program. We are also
+working to explore the Dilwyn aquifer to strengthen water security at that really critical point of the food bowl
+at Heytesbury through the feasibility study. This is about improving access to emergency stock and domestic
+water supply for those regional Victorians. And we have turned the sod on an 80-kilometre extension to the
+East Grampians rural pipeline. That is backed by $15 million in investment from the Allan government and
+also $15.6 million from Grampians Wimmera Mallee Water. This is about providing that really vital relief to
+communities.
+
+People who live in and around waterways are increasingly used to too much and too little. The challenges are
+that we are seeing volatility in climatic conditions that mean that flood preparedness is as essential as planning
+for long-term reduction in groundwater or rainfall and reduced levels there. We want to make sure we are
+partnering with communities, then, to ensure that sustainability is at the heart of the decisions that we are
+taking, and this is where we have got ongoing work in consultative committees – the work with our CMAs, the
+western region sustainable water strategy, which again is about making sure we can kickstart those
+conversations in the west. We know that the challenges are not going anywhere. It is about how we respond to
+them.
+
+I might go back to a question that Mr Pesutto raised around the forward estimates. There is a difference
+between weather and what might happen in any one year – in any one season as you sow or as you harvest –
+and climate, what the trends are into the long term. The climate of a diminishing supply means that the themes,
+despite variations from year to year, mean that we can and should be taking decisions to reduce consumption, to
+improve availability, to shore up security and to have those infrastructure projects in place that manage and
+accommodate, for example, population growth. This means engineers – those assessments and that technical
+on-ground work – are really important. And this has enormous environmental benefit as well when we are
+investing in those projects, however small they may be – as I mentioned earlier, safeguarding one of the
+smallest remaining populations of platypus’ breeding area in the Monbulk Creek because we are investing in an
+automated wetland that basically means we can release water when it is dry and we can hold water back for
+storage when it is wet and we get deluges through, for example, the Dandenong Ranges.
+
+It is those projects that enhance the work that is already happening on the ground and that deploy technology.
+Often it is pretty rudimentary – it is solutions that involve pumps on the ground – but it is also work that is
+informed by data. It is evidence backed. This is where we know that where we do that work, we are
+safeguarding some often really fragile environments. We are ensuring that we have got sustainability.
+Livability, though, also means that people can go out and spend time in and around waterways that, again,
+contribute enormously through flora and fauna preservation. There are opportunities to manage encroachment
+and delivery of new community infrastructure but also in a way that balances what it is the environment needs
+and what we need to do to continue to support it.
+
+   Meng Heang TAK: Thank you, Minister. Also, as you mentioned in your presentation, and it is reflected in
+budget paper 4, from page 83 onwards, we can see that significant amounts of capital investment are being
+delivered by Victoria’s water corporations. We also know that a key piece of delivering more houses for
+Victorians is not just building houses but delivering the enabling infrastructure for those houses, including
+sewerage and water. Minister, can you take us through what the water sector is doing to support delivery of
+more housing?
+
+   Harriet SHING: Yes. Thank you. There is about $3.6 million in investment across capital works for the
+next financial year alone. That then means that almost four – sorry, I said ‘million’, didn’t I? It has been a long
+morning. It is billion – $3.6 billion in water infrastructure capital works. That takes us to almost $4 billion on
+top of that for the next financial year. We want to make sure that Victorians are able to get into a home faster,
+and that then means that connections and that essential infrastructure are important. Melbourne Water is
+processing over a thousand applications every month, and we also know from the Commonwealth budget that
+investment in that essential and enabling infrastructure is going to facilitate the delivery of more housing.
+Melbourne Water’s public reporting on their performance in processing development applications shows that at
+least 90 per cent of applications are completed within service standards, and that has been really important
+around the streamlined development and delivery work that they have done. That includes identifying flood and
+drainage requirements early, and that has therefore reduced delays. We have also got new practical guidance
+that has been delivered through a range of systems, including a flux clarifying the assessment of floodwater
+flows. We want to make sure that decisions are consistent, so over 36,000 housing lots were enabled by
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                  12
+
+
+
+
+Melbourne Water in 2025 and more than 11,000 were enabled this year. All of that translates into more people
+into their homes sooner.
+
+  Meng Heang TAK: Thank you, Minister.
+
+  The CHAIR: Thank you. Mr Puglielli.
+
+   Aiv PUGLIELLI: Thank you, Chair. Good afternoon, Minister and officials. Starting on budget paper 3,
+page 27, the Environment Protection Regulations 2021 changed wastewater regulations so that industries are
+now self-auditing the wastewater that they send to Melbourne Water. I understand that since then levels of
+solids such as grease and fats in wastewater have skyrocketed, which means that Melbourne Water is now
+treating far higher levels of solids than it was doing previously. Regional projections from Melbourne Water for
+increased solids in wastewater by 2050 have already been overtaken as a result of the shift to self-auditing. I
+understand upgrades to equipment to keep up with this demand are projected to cost over $300 million, and
+many expect this cost will likely be pushed onto home owners and businesses in the form of increased rates.
+Can I ask: what is the department doing to rectify this dangerous situation?
+
+   Harriet SHING: Thank you, Mr Puglielli, for that question. In a moment I am going to throw to Ms Brown,
+who is an expert in these matters, but I do just want to note that we are encouraging innovation to make sure
+that we have got valuable products being developed as part of a circular economy, so what was once considered
+to be a by-product without purpose or capacity to be deployed is now valuable indeed. The water minister’s
+climate innovation challenge is one of the examples where we are providing really targeted competitive grants
+to water entities to be able to deliver the solutions that tackle the impacts of climate change but also the issues
+that you have raised. We will be continuing to seek those solutions that transform how biosolids are managed
+and utilised. That is about reducing emissions, recovering resources and addressing those contaminants of
+concern.
+
+Again, I just want to use this as an opportunity: people need to make sure that they are not flushing oil or fats,
+that they are not flushing wipes. We have in the system what are known as fatbergs. They are these giant
+masses that cause all sorts of problems. They are enormous masses that are avoidable and preventable if people
+are not putting things into waterways that do not belong in waterways. That is a really important thing to note.
+Please make sure that you are only using your sinks and taps for the purposes for which they were intended.
+Ms Brown, with that public service announcement, I might throw to you.
+
+   Deb BROWN: Thanks, Minister. I would just add last year that there were updates to trade waste
+regulations, which articulate the arrangements by which people can put matters into the sewer, and that is often
+to ensure that that occurs in a way that the system can be sustainable. So there are obligations on individuals to
+ensure that they are not putting matters into those sewerage systems that are not appropriate, so we do have
+updated regulations in relation to that. And it is the expectation of the water corporations that they have those
+conversations with their customers around ensuring that what they are putting into that system is compliant
+with those regulations.
+
+  Aiv PUGLIELLI: Thank you for that information. They are still self-auditing, though, correct – the
+wastewater that they are sending to Melbourne Water – is that correct?
+
+  Deb BROWN: A customer is obligated to ensure that what they are putting into the system is consistent
+with those regulations.
+
+  Aiv PUGLIELLI: Okay. But is that process self-audited?
+
+  Deb BROWN: I am not quite sure what you mean by self-audited.
+
+   Aiv PUGLIELLI: So the companies themselves are auditing the wastewater that they are sending in, is that
+correct, or has that since changed?
+
+  Deb BROWN: I do not have that in terms of an auditing arrangement.
+
+  Harriet SHING: We can see what we can get you in terms of what the arrangements are.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                  13
+
+
+
+
+   Aiv PUGLIELLI: My understanding is that changed in 2021, and we are talking about resulting effects
+since that change came into effect.
+
+  Harriet SHING: Why don’t we see what we can get you around what has changed since the timeframe that
+you have referred to –
+
+  Aiv PUGLIELLI: Yes. That is all right. That is much appreciated.
+
+  Harriet SHING: because it is out of the window that we are talking about here.
+
+  Aiv PUGLIELLI: And if I can follow that one up. Are there any plans to make further regulatory changes
+over the forward estimates so that these companies are no longer allowed to self-audit their wastewater?
+
+   Harriet SHING: We have some pretty stringent standards that do apply around what can happen and what
+cannot and also what happens if there is a breach. So again, there are not any plans that I am aware of. I am not
+going to make any announcements here today in terms of any change to policy or to direction. But there is
+oversight. There are auditing functions and there are penalties for breach, and action can be taken where there is
+persistent breach, including as that may offend various provisions of different legislative arrangements. Do you
+want to add anything, Deb?
+
+   Deb BROWN: Yes, I was just going to make the additional comment that there is the general environmental
+duty, which is under the EPA arrangements, that speaks to the expectation of individuals to behave in a certain
+way in relation to the environment. In addition to that, we do have those trade waste agreements and regulations
+that set standards above that, particularly when putting materials into sewerage systems. So it is important to
+note that there is more than one regulatory arrangement by which the management of products into the system
+is managed and those expectations on individual customers meeting those trade waste regulations and
+agreement in addition to the obligations in the general environmental duty.
+
+   Aiv PUGLIELLI: Thank you. Can I ask: does the department hold its own projections of costs over the
+estimates to tackle this issue of increasing levels of fats and solids in wastewater?
+
+  Kate HOUGHTON: We have conversations with water authorities, including Melbourne Water, the urban
+water corporations as well as our regionals. Through that, issues are raised. Systematic issues, like the one that
+you have just raised, we will ask them about that. It has not been proactively raised from them to us.
+
+  Aiv PUGLIELLI: There is not an estimated cost to hand that you would be able to provide?
+
+  Kate HOUGHTON: It has not been an issue that has been raised as a concern from the water corporations,
+but we are more than happy to proactively ask them what they are seeing.
+
+   Aiv PUGLIELLI: Thanks, appreciate it. I will move on. I understand $24 million in funding was
+announced at the end of last year for integrated water management grants to accelerate adoption of integrated
+and sustainable water management practices across the state. Can I ask how many of those have related
+specifically to the Birrarung?
+
+    Harriet SHING: I am getting ready to make some comments about the issuing of grants, Mr Puglielli. I
+would be very happy to make sure that you are aware of the extent to which Birrarung is part of that, but again,
+I just want to note the work that we are doing is consistent with the work of Birrarung being recognised as a
+living entity. Burndap Birrarung Burndap Umarkoo is basically a framework by which we understand how we
+can preserve and incorporate the importance of this living entity into the work that we do. This is, again, the
+sort of thing that informs grant decisions like this.
+
+  Aiv PUGLIELLI: Okay. Thank you. Are any more of these grants being provided in the 2026–27 budget?
+
+  Harriet SHING: I am looking forward to having more to say about that, Mr Puglielli. I am not here to make
+any announcements, but we have had about $7 million in allocations to date. $24 million is the total envelope.
+
+  The CHAIR: Thank you.
+
+  Aiv PUGLIELLI: Thank you.
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                  14
+
+
+
+
+  Harriet SHING: We will keep talking. You know where to find me, Mr Puglielli.
+
+  The CHAIR: Mr Hilakari.
+
+   Mathew HILAKARI: Thank you, Minister and officials, for your attendance this afternoon. I iterate your
+call on fatbergs and only flushing and putting down the drain what you need to. I have been to the Altona
+treatment plant, and I saw real live versions of it.
+
+  Harriet SHING: They are just – do not google it.
+
+   Mathew HILAKARI: No. And if you attend one of the treatment plants, be prepared. Minister, I want to
+take us to something different, which is related to bushfire relief and recovery – budget paper 3, page 3 – and
+the substantial investment that we have made in that area, particularly in waterway restoration. I am hoping you
+can talk through some of the activity of the department in relation to this and the recovery that is going on in
+some communities across Victoria.
+
+   Harriet SHING: Yes, absolutely. Thank you for the opportunity to talk to bushfire recovery. Communities
+have done it really, really tough when it comes to managing not just the impact of response but also rescue and
+recovery. We want to make sure that we are also equipping them through a range of measures that are
+supported by the work of water corporations and the way in which we are rising to the challenge, including on
+emergencies and natural disasters. In the same way that I spoke to Ms Benham before about flooding, it is not
+dissimilar in terms of bushfires.
+
+Our climate, as I have talked to on multiple occasions today and in other hearings as well, continues to become
+warmer and drier. That is obviously then going to be creating the sort of climatic conditions that can lead to
+really significant bushfire events. Where we have overlapping fires, we have got heatwaves and we have also
+got flash flooding, there are some challenges. We know, for example, at Wye River we had inundation and
+coastal erosion at the same time that we had bushfires occurring in the very same area. So we want to make
+sure we are strengthening the resilience of our water system across the board when it comes to natural disasters
+and response to climate change.
+
+We had a really big disruption to water supplies as a result of the bushfires in January. That affected Harcourt,
+Longwood, Longwood East and Gellibrand. There was a lot of damage and contamination to water tanks, and
+that is a common thing. Water tanks will often require a complete flush, and that affects households in those
+non-reticulated areas. Water corporations played a really important role in making sure that we had a
+maintenance of that essential water across the system: supplying drinking water at relief centres, refilling
+domestic tanks, providing extensive relief and recovery support in addition to that core service delivery
+responsibility.
+
+Going back to what we talked about earlier in flooding, it is the same sort of challenge that arises: drinking
+water supplies, security of essential services and making sure that we can get in and repair or replace damaged
+infrastructure so that supply can be secured. There were four water service disruptions that occurred to
+customers associated back to the bushfires, with those events, and water corps worked really hard to make sure
+that those services were restored. Longwood was one of those examples. There were 260 households that were
+affected for seven days. Longwood East had 140 households affected for seven days. Harcourt, due to the
+Ravenswood fire, had 900 households affected for eight days, and Gellibrand had 300 households affected for
+nine days. In all of those instances drinking water was provided as a relief to impacted customers. Incident
+control centres as well are a really important part of responding to natural disasters and emergencies, and they
+have also had water corporation presence in them alongside what we have seen with flooding as well.
+
+This is about continuous improvement. Water corporations continue to get better at being integrated, alongside
+catchment management authorities, into the work that happens on response, rescue and recovery, and this was
+no different. There were rapid restoration efforts around water and sewer services. There were assistance
+measures provided to non-customer landholders and proactive check-ins as well on vulnerable community
+members, and a drinking water supply was established alongside drinking water refill points and hydration
+stations and also customer liaison officers, supporting businesses and locals as well. We know that, where
+fundamentals like water and power are disrupted, people do not stay in the towns where they need to be in
+order to rebuild their lives or to take stock of what may remain of their homes or outbuildings or properties in
+the event that they do need to get to work once it is safe to return. Helping the community on those recovery
+Thursday 21 May 2026                   Public Accounts and Estimates Committee                                   15
+
+
+
+
+efforts is also really important. It might mean making land available for emergency grazing for cattle that have
+been displaced and also making sure that we are auditing in the first instance the impact of bushfire on our
+catchments and on our waterways.
+
+We have also seen, for example, in East Gippsland just recently the release of fish. I think it was a trout variety
+of some description. Their population was all but wiped out in the Black Summer bushfires. Having a
+population that is taken out, bred up and then able to be returned once we have seen oxygen return, oxygenated
+water levels go up and a reduction of contaminants in water means that we can then restore those populations.
+That is just one example of the hundreds of things that are done in response to bushfires and natural disasters.
+There has been $16.1 million allocated for immediate public land and waterway recovery since the January
+fires. That includes funding for CMAs to undertake that urgent waterway repair and also rebates to assist
+landholders in tank, roof and gutter cleaning and eligible households getting up to 20,000 litres of relief water
+as well.
+
+Again, it is an enormously distressing thing to come through bushfires or any natural disaster and have to
+navigate a system which is often incredibly complex. CMAs have definitely risen to the challenge alongside
+water corporations, and this is all part of the adaptation plan and the sort of work that we are doing across the
+board to understand risk, including as our population grows, as people move to areas that previously were not
+so densely populated.
+
+   The CHAIR: Thank you very much, Mr Hilakari. Minister and officials, thank you very much for appearing
+before the committee today. The committee will follow up on any questions taken on notice in writing, and
+responses are required within five working days of the committee’s request.
+
+The committee is going to take a break before beginning its consideration of the portfolio for police at 1:45 pm.
+I declare this hearing adjourned.
+
+Witnesses withdrew.
+

@@ -1,0 +1,289 @@
+ Demand for water cannot be an 'afterthought' in AI push - ABC News 
+ Skip to main content Skip to news navigation, settings and search Explore the ABC
+ More from ABC 
+ Close menu ABC   ABC News 
+   ABC iview 
+   ABC listen 
+   Kids & Students 
+   Indigenous 
+   Information & Services 
+ Editorial Policies 
+ Read our editorial guiding principles 
+ Follow the ABC 
+ news 
+ iview 
+ listen 
+ Loading 
+ ABC News Just In 
+ For You 
+ Politics 
+ World 
+ Business 
+ Analysis 
+ Sport 
+ Lifestyle 
+ Entertainment 
+ Quizzes 
+ More Search 
+ News Home Just In 
+ For You 
+ Analysis 
+ Rural 
+ Watch Live 
+ Health 
+ Indigenous 
+ Politics 
+ Science 
+ Deep Time 
+ Elections 
+ World 
+ Environment 
+ Investigations 
+ Business 
+ Local news 
+ Quizzes 
+ Sport AFL 
+ NRL 
+ Football 
+ Tennis 
+ Cricket 
+ Netball 
+ Lifestyle Wellbeing 
+ Relationships & Family 
+ Food & Recipes 
+ Personal Finance 
+ Home & Garden 
+ Entertainment TV & Movies 
+ Books 
+ Music 
+ Pop Culture 
+ Arts 
+ Facebook 
+ YouTube 
+ Instagram 
+ Twitter 
+ Emergency
+ Backstory
+ Newsletters
+ 中文新闻
+ BERITA BAHASA INDONESIA
+ TOK PISIN
+ Appearance (BETA) 
+ Follow system settings
+ Select an option 
+ Always light 
+ Always dark 
+ Follow system settings 
+ ABC iView 
+ ABC Listen 
+ ABC News News Home 
+ Demand for water cannot be an 'afterthought' in AI push 
+ Share Share article 
+ Demand for water cannot be an 'afterthought' in AI push
+ A
+ By Ahmed Yussuf
+ Topic: AI
+ Posted Wed 10 Dec 2025 at 5:55am Wed 10 Dec 2025 at 5:55am Wed 10 Dec 2025 at 5:55am , updated Wed 10 Dec 2025 at 9:14am Wed 10 Dec 2025 at 9:14am Wed 10 Dec 2025 at 9:14am 
+ Australia saw the second largest investment in data centres last year, second only to the United States. ( Supplied: Microsoft ) 
+ In short:
+ Australia has more than 250 data centres and more in the pipeline, prompting experts to warn against using drinking water to cool servers.
+ It comes after the Commonwealth announced its National AI Plan after a two-year consultation period.
+ One water authority is already exploring the use of recycled waste water for data centres.
+ abc.net.au/news/demand-for-data-centre-water-in-ai-push/106102208
+ Link copied 
+ Share Share article 
+ Australia's data centres should be built near waste treatment plants to avoid using drinking water to run the thirsty facilities, according to one of the country's leading experts in stormwater treatment.
+ The Commonwealth unveiled last week its 37-page National AI Plan which sets out a road map to drive the development and adoption of artificial intelligence by bolstering investment in skills training and data centres that store servers.
+ The United Nations Environment Programme has stressed that data centres "consume large amounts of energy and water, and we know that consumption is only going to grow" around the world.
+ Loading... University of Melbourne's Professor Tim Fletcher, an urban ecohydrologist, said governments needed to start planning now because Australia was already drought-prone and water scarce.
+ The World Economic Forum estimated a one-megawatt data centre could consume up to 25.5 million litres of water each year just for cooling, comparable to the daily water use of about 300,000 people.
+ "Global AI demand is expected to consume 4.2 to 6.6 billion cubic metres of water by 2027," the UN said. 
+ The International Energy Agency estimated data centres would drive more than 20 per cent of electricity demand between now and 2030.
+ Australia's data centres consumed about 4 terawatt hours of electricity in 2024, about two per cent of grid-supplied power, and electricity demand from these users was expected to triple by 2030.
+ Australia saw the world second largest investment in data centres last year, behind only the United States, with about $10 billion spent.
+ Professor Fletcher pointed to the challenges ahead.
+ "First of all is what water will we provide to data centres? And then the next question that flows from that is, well, therefore, where should we put them?" he said.
+ " We are talking really significant amounts of water. " 
+ What do we know about data centre water use?
+ These centres are physical facilities that store and run IT infrastructure, such as software and data.
+ The key components include routers, firewalls, storage systems, and servers, and requirements elements include an uninterrupted power supply and a cooling system.
+ Australia has more than 250 data centres and most are located in the most populous cities — Melbourne and Sydney.
+ Water is required to cool the servers.
+ For example, a one megawatt (MW) data centre consumes about 25.5 million litres of water a year for cooling .
+ A hyperscale data centre , specifically used for AI, has the capacity of about 100MW or more. It consumes the same amount of power as 100,000 homes annually.
+ Sydney and Melbourne Water authorities are already contending with the potential increased water consumption by data centres.
+ In July, Greater Western Water was assessing 19 data centre applications that requested to use nearly 20 gigalitres of water a year, on par with the water usage of 330,000 Melburnians.
+ The water body said it currently had about 21 data centre proposals across stages of development.
+ "We assess each proposal to ensure any new development is sustainable, and does not negatively impact existing customers," said Ian Burton, general manager of asset planning and delivery at Greater Western Water.
+ Is Australia's promised green hydrogen industry ever going to happen?
+ Billions of dollars in private investment are being pulled out of green hydrogen projects.
+ Sydney Water has projected that data centres could use about a quarter of the city's annual drinking water by the end of the decade.
+ University of Sydney's Professor Stuart Khan, who specialises in urban water management, drew a comparison with green hydrogen.
+ "Water was an afterthought for the hydrogen industry," Professor Khan said. 
+ "Understanding where the water's going to come from reliably is going to be a key thing for data centres in terms of where we approve their locations, just as it would be for energy."
+ Could we better utilise existing water supplies?
+ Professor Fletcher said there were alternatives to using drinking water to cool data centres.
+ He suggested greater focus on reusing wastewater and building data centres close to treatment plants.
+ He pointed to the example of one treatment plant in Werribee, in Melbourne's west, which was responsible for processing about 50 per cent of the city's wastewater
+ "If you get the planning of where these things are built you could have a really large supply of water that's having no impact on our potable water security," he said.
+ "And indeed it reduces the amount of water we have to discharge to the environment, in the case of Werribee, to the ocean."
+ Loading... Professor Fletcher believed investment in stormwater storage could also be an option.
+ "Wastewater is much more readily available," he said.
+ "Stormwater would take more investment, but the wastewater is right there and could be grabbed right now at very, very low cost."
+ Melbourne Water said it was exploring opportunities to use recycled water for data centres.
+ The water body's executive general manager, Chris Brace, said it was working with the data centre sector to understand its plans for growth.
+ "Our position is that large industrial users of waters, like data centres, should prioritise the use of non-drinking water, including recycled water and stormwater," Mr Brace said. 
+ Melbourne Water said its exploring the use of recycled water for the city's data centres. ( ABC Illawarra: Justin Huntsdale ) 
+ One of the companies working on providing recycled water is Hydroleap, which operates across the Asia-Pacific region including in Singapore and Australia.
+ Chief executive Mohammad Sherafatmand, an environmental and chemical engineer, said wastewater from treatment plants was ideal for data centres.
+ But there were other options, such as breweries, which could provide water.
+ "[At a] minimum per litre of the brews that get generated there are nearly five to six litres of wastewater … so you are talking about a big source of water," he said.
+ "What happens currently to it … [is] a very, very minimal treatment and just spread it out on agriculture."
+ How are data centres managing water consumption?
+ There are two types of cooling tower systems used in data centres, closed and open loops.
+ Open loop systems consume more water but use much less energy, according to Dr Sherafatmand.
+ DeepSeek makes AI cheaper, but energy demands will keep growing
+ Despite the energy innovations of artificial intelligence newcomer DeepSeek's models, AI power requirements as a whole are predicted to rise.
+ The National AI Plan pointed out CDC Data Centres' use of closed loop cooling.
+ "CDC is … a leader in water conservation, with its closed-loop LiquidCoreTM cooling system consuming near-zero water, saving billions of litres of water annually across 16 CDC-operated data centres in Australia and New Zealand," the report said.
+ It has plans to build three more, including one in Sydney which will be the biggest data centre campus in the Southern Hemisphere.
+ A spokesperson for CDC Data Centres said site planning was a complicated process which required taking into consideration environmental, customer and commercial factors.
+ "Unlike other data centres, CDC designs its facilities to eliminate water consumption for primary cooling purposes," a spokesperson said. 
+ "In other words, CDC's facilities are similar to other commercial properties, where water consumption is a function of the number of people occupying that facility."
+ Closed cooling systems can save between 50 and 75 per cent of water used by data centres. ( Supplied: Google ) 
+ University of New South Wales' Scientia Professor Toby Walsh said the closed loop cooling system helped reduce water consumption.
+ The technology is estimated to save between 50 and 75 per cent of water used by data centres.
+ "If you're willing to build and put the effort in and spend a bit more money on energy you can use closed water cycle cooling systems where the water is recirculated," he said.
+ "Once it's taken the heat away then you bring the water back.
+ " You don't actually have to evaporate the water and lose it permanently. " 
+ Share options Copy link 
+ Facebook 
+ X (formerly Twitter) 
+ See more ABC coverage in your search results
+ Make ABC a preferred source in Google 
+ Top Stories
+ Sydney Swans coach 'disappointed' as four players linked to sexual assault investigation 
+ Topic: AFL
+ Origin Energy hack traced to Accenture's Manila office 
+ Topic: Cyber Crime
+ Labor prepared to fast-track fix to negative gearing 'widow tax' 
+ Topic: Tax
+ Two Coalition MPs cross the floor to vote against gambling ad reform 
+ LIVE
+ Former Alan Jones colleague tells court of currying favour through texts 
+ Topic: Courts
+ Related stories
+ Government drops AI 'mandatory guardrails', reveals road map on data centres 
+ Topic: AI
+ Data centre spending spree and housing boom drive economic growth 
+ Topic: Economic Growth
+ A quarter of your water. Could this be the true cost of AI? 
+ Topic: Environmental Impacts
+ AI could be the ultimate test of Australia's democracy 
+ Topic: Analysis
+ Related topics
+ AI
+ Australia
+ NSW
+ Recycling and Waste Management
+ VIC
+ Water Resources
+ Top Stories 
+ Sydney Swans coach 'disappointed' as four players linked to sexual assault investigation 
+ Topic: AFL
+ Origin Energy hack traced to Accenture's Manila office 
+ Topic: Cyber Crime
+ Labor prepared to fast-track fix to negative gearing 'widow tax' 
+ Topic: Tax
+ Two Coalition MPs cross the floor to vote against gambling ad reform 
+ LIVE
+ Former Alan Jones colleague tells court of currying favour through texts 
+ Topic: Courts
+ Just In
+ David Warner leaves court with drink driving conviction and $1.5k fine 
+ Topic: Courts
+ Tue 18 Aug 2026 at 2:01pm Tue 18 Aug 2026 at 2:01pm Tue 18 Aug 2026 at 2:01pm 
+ Why Tallis Duncan could be the answer for Australia's World Cup shortage 
+ Analysis by Nick Campton
+ Tue 18 Aug 2026 at 1:48pm Tue 18 Aug 2026 at 1:48pm Tue 18 Aug 2026 at 1:48pm 
+ Weatherald dropped from Test squad after stunning loss to Bangladesh 
+ Topic: Cricket
+ Tue 18 Aug 2026 at 1:43pm Tue 18 Aug 2026 at 1:43pm Tue 18 Aug 2026 at 1:43pm 
+ Better late than never as high school receives library book 72 years late 
+ Topic: Books
+ Tue 18 Aug 2026 at 1:40pm Tue 18 Aug 2026 at 1:40pm Tue 18 Aug 2026 at 1:40pm 
+ More Just In 
+ Back to top 
+ ABC News Contact ABC News Your home of Australian stories, conversations and events that shape our nation.
+ This service may include material from Agence France-Presse (AFP), APTN, Reuters, AAP, CNN and the BBC World Service which is copyright and cannot be reproduced.
+ Follow ABC News
+ Sections
+ ABC News Home 
+ Just In 
+ For You 
+ Watch Live News 
+ Live ABC NewsRadio 
+ Politics 
+ Elections 
+ Australia 
+ World 
+ Sport 
+ Live Sport 
+ Rural 
+ Business 
+ Analysis 
+ Science 
+ Health 
+ Lifestyle 
+ Entertainment 
+ Quizzes 
+ More Topics 
+ News in Language
+ Chinese 中文 
+ Tok Pisin 
+ Berita Bahasa Indonesia 
+ Related
+ ABC News app 
+ Local News 
+ ABC Emergency 
+ ABC Indigenous 
+ ABC Religion & Ethics 
+ ABC Asia 
+ ABC Pacific 
+ Music & Audio
+ ABC Listen Home 
+ triple j 
+ Live Radio 
+ Movies & TV
+ ABC iview Home 
+ List of ABC Shows 
+ Live TV 
+ TV Guide 
+ Kids & Students
+ BTN 
+ Education 
+ Heywire 
+ Takeover 
+ ABC Kids 
+ Get the ABC News AM newsletter
+ Get the latest ABC News delivered to your email inbox
+ Email address 
+ Subscribe 
+ Your information is being handled in accordance with the ABC Privacy Collection Statement . 
+ All ABC newsletters
+ Stay informed and connected with the ABC. Covering a wide range of topics and brands including News, iview, listen, and more.
+ Browse all ABC newsletters 
+ ABC home Information & Services
+ Editorial Policies 
+ Accessibility 
+ Help 
+ Contact Us 
+ Commercial 
+ Careers 
+ About the ABC 
+ Privacy Policy 
+ Terms of Use 
+ © 2026 ABC 
+ Follow the ABC
+ We acknowledge Aboriginal and Torres Strait Islander peoples as the First Australians and Traditional Custodians of the lands where we live, learn and work.
+ 

@@ -1,0 +1,949 @@
+PUBLIC ACCOUNTS AND ESTIMATES COMMITTEE
+
+
+            Inquiry into the 2025–26 Budget Estimates
+
+                       Melbourne – Wednesday 11 June 2025
+
+
+
+
+                                  MEMBERS
+
+     Sarah Connolly – Chair                             Lauren Kathage
+     Nicholas McGowan – Deputy Chair                    Aiv Puglielli
+     Jade Benham                                        Meng Heang Tak
+     Michael Galea                                      Richard Welch
+     Mathew Hilakari
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                    1
+
+
+
+
+WITNESSES
+
+Sonya Kilkenny MP, Minister for Planning; and
+
+Jeroen Weimar, Secretary,
+
+Andrew McKeegan, Deputy Secretary, Planning and Land Services,
+
+Stuart Moseley, Deputy Secretary, Housing, Building and Land Delivery,
+
+Colleen Peterson, Head, State Planning, and
+
+Dean Rochfort, Acting Chief Executive Officer, Victorian Planning Authority, Department of Transport and
+Planning.
+
+  The CHAIR: I declare open this hearing of the Public Accounts and Estimates Committee.
+
+I ask that mobile telephones please be turned to silent.
+
+On behalf of the Parliament the committee is conducting this Inquiry into the 2025–26 Budget Estimates. The
+committee’s aim is to scrutinise public administration and finance to improve outcomes for the Victorian
+community.
+
+I advise that all evidence taken by the committee is protected by parliamentary privilege. However, comments
+repeated outside of this hearing may not be protected by this privilege.
+
+All evidence given today is being recorded by Hansard and is broadcast live on the Parliament’s website. The
+broadcast includes automated captioning. Members and witnesses should be aware that all microphones are live
+during hearings and anything said may be picked up and captioned, even if said quietly.
+
+As Chair I expect that committee members will be respectful towards our witnesses, the Victorian community
+joining the hearing via the live stream and other committee members.
+
+Witnesses will be provided with a proof version of the transcript to check. Verified transcripts, presentations
+and handouts will be placed on the committee’s website.
+
+I welcome the Minister for Planning the Honourable Sonya Kilkenny as well as officials from DTP. Minister, I
+am going to invite you to make an opening statement or presentation of no more than 5 minutes, after which
+time committee members will ask you some questions. Your time starts now.
+
+Visual presentation.
+
+    Sonya KILKENNY: Thank you very much, Chair. Can we go to slide 1. Chair, thank you for the
+opportunity to talk about how the Victorian government is building more homes and more opportunity for
+Victorians. Since I last appeared before this committee we have launched our new Plan for Victoria. This plan
+was shaped by the largest consultation this state has ever seen – more than 110,000 Victorians engaging with us
+and helping to write our new Plan for Victoria. One of the key messages throughout this consultation was that
+it is increasingly harder for younger Victorians to buy or rent a home. It is clear that the planning system
+requires reforms to be able to create the conditions to build 800,000 new homes over the next decade. But in
+addition, Plan for Victoria also protects what we love, whether that is our open spaces or tree canopy, and
+recognises our heritage places of significance. I am pleased to have this opportunity to talk about how we are
+doing just that.
+
+Next slide, please. We have been working alongside communities, local governments and industry to identify
+where we can build more homes. For the first time we now have housing targets across every local government
+area that must be met so that we can reach that overall target of 2.24 million homes across Victoria by 2051.
+The plan to get us there includes delivering 300,000 more homes for young people, families and downsizers
+around more than 50 train stations and busy tram stops across Melbourne’s suburbs while boosting housing
+throughout the inner city; the Suburban Rail Loop, which is more than just a transport project, it is also a city-
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                    2
+
+
+
+
+defining housing project which will create more than 70,000 homes; and 180,000 more homes with backyards
+in our growing suburbs as we continue to deliver on our 10-year greenfields plan.
+
+Next slide, please. The government has meticulously reviewed how the planning system can be streamlined to
+enable more Victorians to add a second home, build two new homes or subdivide a block into two lots. As we
+set the capacity for more homes in place we are committed to turning that supply into bricks-and-mortar homes
+faster. This is about getting your planning permit faster, with more certainty for developers and community
+about what the required standards are to get that planning approval and get on and build more homes. Our
+development facilitation program will continue to be that fast-track pathway for projects that inject investment
+into Victoria, create jobs and build more homes, and we will get the fundamentals right as we review and
+rewrite the Planning and Environment Act to build a modern, fit-for-purpose planning system.
+
+Next slide, please. Our new Townhouse and Low-rise Code for the first time creates consistent deemed-to-
+comply standards across the state for townhouses and multiresidential developments of three storeys or less,
+giving certainty to industry while improving livability, sustainability and amenity for residents and neighbours.
+This is all about accelerating the approval of more duplexes, townhouses and low-rise apartments for workers,
+working families and young people, especially in established suburbs close to transport, jobs and services. We
+are currently developing a new code for buildings that are four to six storeys for implementation later this year
+and the Great Design Fast Track, which is about rewarding affordable, well-designed buildings and the
+developers who put in the effort to build them, granting them a fast track through the planning system.
+
+Final slide. Chair, in concluding my presentation, I would like to quickly touch on a significant investment in
+this year’s budget. We have invested $3.7 million to make sure the environment effects statement process is
+better suited to delivering more renewable energy. We want to make better decisions and we want to make
+them faster, and Victorians deserve a process that provides greater certainty for community and industry and
+ensures that everyone can still have their say. This is all about creating more opportunity for more Victorians
+and making sure our planning system serves the people it is there to serve. Thank you, Chair. That concludes
+my presentation.
+
+  The CHAIR: Thank you very much, Minister. We are going to go straight to Mr Welch.
+
+   Richard WELCH: Thank you, Chair. Thank you, Minister. Minister, in your opening comments you just
+referenced 800,000 houses as the housing target. The Plan Vic document has dropped this to 740,000, and we
+are actually currently running at a 600,000 rate. Are you going to meet these targets?
+
+   Sonya KILKENNY: Thank you, Mr Welch. Back in October 2023 the government released our housing
+statement, and that was, if you like, a mark in the sand to say there is a housing crisis. Too many Victorians,
+particularly young Victorians, are unable to find a place to buy or rent.
+
+  Richard WELCH: But your own targets have dropped. You are only at 600,000, not 800,000.
+
+   Sonya KILKENNY: Our target is 800,000 over the decade. Plan for Victoria sets in motion the plan for
+delivering 2.24 million homes out to 2051.
+
+  Richard WELCH: But you are a long way behind that with your own targets right now, correct?
+
+  Sonya KILKENNY: Well, what we are doing is putting in place the framework, if you like –
+
+  Richard WELCH: But you are a long way behind your targets.
+
+  Sonya KILKENNY: and the reforms to ensure that we are getting the conditions right. I think if we look at
+our planning system –
+
+  Richard WELCH: Minister, how can you say you are getting the conditions right if you are already
+200,000 below what you were targeting?
+
+  Sonya KILKENNY: Unfortunately, Mr Welch, where we find ourselves has been a long time in the
+making. We know that over decades now we have had a planning system that has not been working for
+Victorians, and we are seeing that now in the level of despair in many young Victorians –
+Wednesday 11 June 2025                Public Accounts and Estimates Committee                                  3
+
+
+
+
+   Richard WELCH: You do not think the tax system has something to do with those unbuilt houses – it is not
+just –
+
+  Sonya KILKENNY: who do not feel that they are able to find a home.
+
+   Richard WELCH: What culpability does the government have for the failure to build houses, including, for
+instance, through the tax system and the way you tax development?
+
+   Sonya KILKENNY: The best way to build homes is to not block them, and the best way to build homes is
+to make sure your systems are working to support that.
+
+  Richard WELCH: Do measures like the windfall gains tax help?
+
+  Sonya KILKENNY: I have to remind Mr Welch that I am here as the planning minister, and I am talking
+about the significant reforms that we are making across our planning system to address what is an issue that has
+been decades in the making.
+
+  Richard WELCH: But you would have to concede at the moment it is failing.
+
+   Sonya KILKENNY: I think what we have in place are significant reforms that are going to put us on the
+pathway to delivering 800,000 homes over the next decade.
+
+   Richard WELCH: With respect, Minister, within a year it has gone from 80,000 each and every year now
+to 200,000 less than that. So how do those two statements reconcile?
+
+  Sonya KILKENNY: Mr Welch, we have set targets.
+
+  Richard WELCH: Yes.
+
+   Sonya KILKENNY: For the first time we have set housing targets in every local government area across
+this state. This is significant. It is a game changer.
+
+  Richard WELCH: Setting targets is very different to delivering.
+
+  Sonya KILKENNY: Setting targets is about setting what it is that we are seeking to achieve. What we are
+doing now is –
+
+  Richard WELCH: Anyone can set a target.
+
+  Sonya KILKENNY: through the housing statement –
+
+  Richard WELCH: Anyone can set a target. It is actually the quality of delivery that matters. And by your
+own measurements, by the benchmark that you created, you are not meeting it. How do you explain that?
+
+  Sonya KILKENNY: So what we are doing is setting targets.
+
+  Richard WELCH: Yes – targets.
+
+  Sonya KILKENNY: We have set in place now reforms across our planning system, which are the boldest,
+most transformative reforms we have ever seen in this state. Change –
+
+  Richard WELCH: I think young people are more interested in the delivery than the announcement.
+
+   Sonya KILKENNY: I could not agree more, which is exactly why this government is a government of
+action and a government of building. We see it in our infrastructure pipeline and delivery. We see it in our
+housing.
+
+  Richard WELCH: You are not making housing affordable.
+
+  Sonya KILKENNY: We see it in the fact that Victoria is leading the nation on home approvals, home
+builds and home completions. You have –
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                    4
+
+
+
+
+  Richard WELCH: How much affordable housing is in that mix – because there is not much?
+
+  Sonya KILKENNY: Could I take you to something? One of the changes that we have made has been the
+development facilitation program. This is a fast-track assessment pathway that enables faster assessment and a
+concierge service, if you like, for projects –
+
+  Richard WELCH: By removing local consultation and council –
+
+  Sonya KILKENNY: that deliver significant investment into Victoria’s economy but also deliver significant
+housing as well as affordable housing. Since we commenced the DFP, 36 major residential projects have been
+approved, delivering –
+
+  Richard WELCH: Including one in Greensborough, where 17 storeys are going up with no community
+consultation. So you are saying the only way you can deliver housing is to completely bypass local planning
+and local concerns – that is the only way you know how to do it.
+
+   Sonya KILKENNY: Mr Welch, in relation to Greensborough, the local planning laws as they currently
+exist have actually extinguished public notice and third-party rights. That was put in place by the local council,
+which I think is Banyule. So with that development it is incorrect to say that we were bypassing local planning
+rules and laws. In fact in that instance it was just following the local planning rules and laws.
+
+Be that as it may, I was talking about the development facilitation program. This is just one example of the
+reforms that we have brought in that is actually delivering more homes. And to be included –
+
+  Richard WELCH: But it has not yet, though, has it?
+
+  Sonya KILKENNY: It has delivered more homes –
+
+  Richard WELCH: It is an announcement.
+
+  Sonya KILKENNY: It has delivered I think it is about 5000 homes. But importantly –
+
+  Richard WELCH: That is the achievement, is it?
+
+  Sonya KILKENNY: 4729 homes. Importantly, 25 per cent – a quarter – of these homes are affordable
+homes.
+
+  Richard WELCH: Are they actually built?
+
+  Sonya KILKENNY: As well, the development facilitation program requires either a contribution of 10 per
+cent affordable homes or a contribution to the Social Housing Growth Fund. That has now contributed
+$5 million to that Social Housing Growth Fund.
+
+  The CHAIR: Thank you, Minister. Ms Kathage.
+
+   Lauren KATHAGE: Thank you, Chair, Minister and officials. I refer to BP 3, page 83, and we can see
+there the government’s investment in ‘Accelerating approvals for large scale renewable energy projects’, that
+initiative, and ‘Accelerating the environmental effects statement process’. So how is this funding accelerating
+energy approvals while still ensuring adequate environmental and planning assessments are undertaken? How
+are you striking a balance there?
+
+   Sonya KILKENNY: Thank you for that. Ms Kathage, the environmental effects statement is probably or is
+the most rigorous and transparent environmental assessment in Victoria. It is a process that projects that have
+been referred to that pathway must go through. They must satisfy certain things to ensure that if there are any
+environmental impacts from that project that they can be appropriately managed to reduce that impact to be
+able to deliver that project. The environmental effects statement process is an important process to Victorians,
+and proponents and stakeholders invest very heavily in the EES. Therefore it is important that they have
+confidence in the system, they have confidence in the processes and that principles are applied consistently and
+transparently across it.
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                      5
+
+
+
+
+In the context of energy transition, and renewable energy more particularly, as we deliver more renewable
+energy projects it is vital that where those projects are referred to an environmental effects statement process
+that that process is run in a timely, consistent and certain manner. That is not just good news for industry and
+for those who are investing here, it is also a good outcome for community. Community needs to understand the
+process and to be informed about the process and have certainty in that process as well.
+
+The funding that you have referenced, which is $3.7 million in this budget, will accelerate that EES process.
+This will be achieved in a number of ways. One is sharper assessment scopes, so better understanding what the
+scope of the project is and what the scope of any environmental impacts are that will need to be managed. Then
+there is better utilisation of what is called an environmental report as opposed to a full environmental effects
+statement: that is a quicker alternative to an EES. At the moment an EES feels like it is a bit of a one size fits
+all. An environment report can be more tailored with different conditions that can be run in a more efficient
+manner. There is also providing extra support to proponents when they are responsible for delays: we know part
+of this process is not always government. It may be that proponents have not properly completed an element of
+the scoping work that they are doing – so better interaction with proponents as well.
+
+The other thing that is very important is speeding up the public engagement process but engaging early with
+communities. It is my expectation that proponents of major renewable energy projects will and do engage with
+community. Often it is that lack of engagement that creates that vacuum – that not knowing what this project is
+or how it might impact them or what measures are going to be taken to mitigate measures. Often that
+knowledge and information is unknown. It is my expectation that proponents will engage and engage early with
+communities.
+
+What we are looking at with this funding of $3.7 million is to look at the environment effects statement process
+as it applies to our major renewable energy projects – how does it work and how can we make it more efficient,
+more certain, more focused, if you like, with an aim to reduce the timeline for an environmental effects
+statement. At the moment it can be anything from three years, two years. We want to get that down to
+18 months, and with the environment report get that down to a 12- month process. Importantly these reforms
+will ensure that we still have those very robust quality protections in place around environmental management
+and mitigation. At the same time we want to really promote and support our transition to renewable energy and
+that means the development of renewable energy projects here in Victoria.
+
+   Lauren KATHAGE: You have spoken about, I guess, shoring up certainty for consumers and for
+proponents, but what does that investment then do – I guess zooming out for investment in Victoria?
+
+   Sonya KILKENNY: Certainty is important for all parties. We have heard from community members who
+want to understand what it means to have these projects come into their local area and their local community.
+What say do they have in the development and construction of these projects? Certainty is also very important
+for proponents and investors – investors who want to come in and invest here to develop renewable energy
+projects. It provides a clear framework for those planning and for that investment. A well-defined EES process
+has consistent timelines, a scope that proponents and industry can understand and decision-making criteria that
+are public and understood by proponents so they know exactly what it is that they are dealing with if they want
+to invest and bring these projects here to Victoria.
+
+One of the biggest costs for many projects, but particularly renewable energy projects, is around that
+uncertainty, and so we want to encourage investment here. It is no surprise that investing in our EES process
+was also recognised as part of our Economic Growth Statement to ensure that we are attracting that investment
+and those jobs here in Victoria.
+
+  The CHAIR: Thank you, Minister. Ms Benham.
+
+   Jade BENHAM: Thank you, Chair. Morning, Minister. When we talk about planning being the key to
+unlocking housing, why then, as was reported by Channel 9 news on Sunday, would you block all expert
+recommendations for the Cape Paterson growth area?
+
+   Sonya KILKENNY: Well, first of all, I think it is a given that planning laws across our nation have not
+been enablers of more housing, and what we have seen – and this is replicated not just in our jurisdiction, it is
+replicated nationally and across the world – is that the planning system does not serve the people it is meant to
+serve. So we are seeing a housing crisis and a housing challenge.
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                      6
+
+
+
+
+   Jade BENHAM: Because of the blocking of housing developments like Cape Paterson and like the MOIA
+in Mildura and –
+
+  Sonya KILKENNY: I will come to that. What we need to do is look at our planning system and look at
+how we make this work better for Victorians. How do we make it work better so that we are building homes in
+–
+
+   Jade BENHAM: This has been going on for years, and all of the experts have agreed that this is a good
+thing. I am just after a simple answer in the interests of time.
+
+   Sonya KILKENNY: How are we building homes in the right places and protecting those things that we
+love?
+
+   Nick McGOWAN: Minister, an independent panel said this was the right place.
+
+   Jade BENHAM: Many independent panels have agreed.
+
+   Sonya KILKENNY: I will take you – so it is –
+
+  Jade BENHAM: Not everyone wants to live in activity centres, in apartments; some people want low-
+density living like Cape Paterson, like Mildura.
+
+   Sonya KILKENNY: You are absolutely correct that not everyone wants to live in the same suburb. The
+issue is diversity and choice, and that exactly goes to the heart of the planning reforms that we are undertaking,
+so that is about –
+
+   Jade BENHAM: Minister, the precedent has been set for cases like this. In 2018 it ended up in court, and
+the decision was overturned, costing taxpayers $6 million then. Are you worried that this decision is also going
+to end up in court, costing the taxpayer millions because of the wrong decisions being made by you?
+
+   Sonya KILKENNY: I completely reject the premise of your question here. The role of planning is to
+identify the best use of land; it is to identify the best future use of land. The work we are doing is to identify that
+we are in a housing crisis and we need a planning system that is going to identify and give greater diversity of
+choice.
+
+   Nick McGOWAN: But, Minister, the independent panel report found this was appropriate land. You are
+flying in the face of the independent panel report, and you and I both know that. This is an independent panel
+report, and you have taken an alternate position in contrast against the panel decision.
+
+   Jade BENHAM: Because of a small group of people and the local MP.
+
+   Sonya KILKENNY: The matter that you are referring to was an election commitment to protecting what is
+known as distinctive areas and landscapes, and this goes to my very point: as we build more homes it is not
+about building more homes everywhere; it is about recognising there are things that people love and they want
+to protect. Our Plan for Victoria goes directly to this: it is about identifying those areas where more homes are
+suitable, looking at our train and tram zones –
+
+  Jade BENHAM: There are not many of them in Cape Paterson. Is this a political decision or a planning
+decision?
+
+   Sonya KILKENNY: suitable places for more homes.
+
+   Jade BENHAM: Thanks, Minister. I am going to pass over to Mr Welch. We are not getting anywhere.
+
+   Richard WELCH: Minister, in the 2024–25 budget, close to $302 million was spent on planning and
+heritage. In the 2025–26 budget, funding for planning and heritage has been nearly halved, with a cut of
+$140 million. Which planning and heritage programs have been scrapped to accommodate the $140 million
+reduction in funding?
+
+  Sonya KILKENNY: Thank you for raising it. It is a very important issue, and it goes to a matter that I think
+you will agree is a very important one as well. The variation between 2024–25 and the 2025–26 funding of
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                     7
+
+
+
+
+$166 million is a direct result of the $400 million investment that was made through the growth areas
+infrastructure contributions, which was included in the output cost for last year. You may remember we
+released $400 million, which was growth areas infrastructure contribution funding.
+
+  Richard WELCH: Are you saying there have been no cuts to the heritage budget?
+
+   Sonya KILKENNY: We released $400 million, and that went to infrastructure projects in our seven growth
+areas. That was from funding that is collected from developers.
+
+  Richard WELCH: But the question was about heritage protection.
+
+   Sonya KILKENNY: The GAIC funding was included as an output cost in 2024–25 and has not been
+included in this year’s output cost of 2025–26, which brings us down to –
+
+   Richard WELCH: I am confused by that answer. We are talking about a substantial $140 million cut to
+planning and heritage.
+
+  Sonya KILKENNY: Yes.
+
+  Richard WELCH: What have you had to cancel?
+
+   Sonya KILKENNY: What I am trying to describe to you is that the variance between those is attributed
+directly to an investment that was made in 2024–25 out of the $400 million infrastructure investment. That was
+the growth areas infrastructure contribution. That was funding that was released to deliver infrastructure
+projects in our seven growth areas as part of 2024–25, and it has been included as an output cost in the 2024–25
+budget.
+
+  Richard WELCH: And in the following year, in 2025–26?
+
+  Sonya KILKENNY: We are now back to pretty much normal levels of funding. It has been fairly static
+over those times.
+
+  Richard WELCH: So in 2025–26 what is the funding?
+
+  Sonya KILKENNY: It is in the budget paper: $166 million.
+
+  Richard WELCH: Minister, according to your new planning provisions, landowners have no right to object
+and councils are left floundering there on the sideline. They have been sidelined with little or no input. How can
+you describe this as fair and transparent planning?
+
+  Sonya KILKENNY: Again, I reject the –
+
+  The CHAIR: Thank you, Mr Welch. We are going to Mr Galea.
+
+   Michael GALEA: Thank you, Chair. Good morning, Minister, Secretary and officials; thank you for joining
+us. Minister, I would like to talk as well about Plan for Victoria. In your presentation, in slide 2, this was raised,
+and you spoke extensively to it in relation indeed to the consultation that has been undertaken for Plan for
+Victoria and in particular how this is – as the name suggests – a plan for the whole state, not just for Melbourne,
+as previous plans have been. How have you taken on board the consultation, and how will this plan, more
+importantly, lead to these ambitious housing targets being met so that we can house more young Victorians?
+
+   Sonya KILKENNY: Thank you very much, Mr Galea. Several years ago we had Plan Melbourne, and I
+never understood why we had a plan just for Melbourne and not for our regions. I also never understood why
+no-one ever really referred to Plan Melbourne. It became a priority for me that I wanted to see a plan that was
+for all of Victoria, but importantly, I wanted this plan to be written by Victorians and for Victorians, and that is
+exactly what we did. We went out and embarked on what has been the biggest engagement and community
+consultation ever undertaken in this state, running for over 18 months. We reached hundreds of thousands of
+Victorians, and we engaged with 110,000 Victorians who contributed to this. We sought them out in all the
+places where they live, where they work, where they engage in sports, where they shop, talking to Victorians
+about: what is your future for Victoria? What do you want to see? Then we are going to help them get there.
+Wednesday 11 June 2025                        Public Accounts and Estimates Committee                                               8
+
+
+
+
+What Victorians told us loudly and clearly is, ‘We want more homes, and we want more diversity of homes.
+We want greater housing choice, but importantly, we want that choice about where we can live.’ We ran
+countless engagements – we had forums, we had pop-ups, we had online engagement – meeting with all of
+these Victorians who were helping us create and design this vision for Victoria. We also met, as part of this,
+with every local government across Victoria. We have met with stakeholders, we have met with industry and
+we have spoken to thousands of people about what it is we should be seeking for Victoria and how are we
+going to get there.
+
+Then once we got all of that information, once we gathered that and pulled it all together, I also wanted to
+ensure that this was truly written by Victorians. We got together a panel – we called it the people’s panel – and
+we did that by sending out 15,000 random letters to Victorian community members inviting them to be part of
+this panel which was going to write Plan for Victoria. We had 500 people who put up their hand to say, ‘We
+want to be part of this.’ In the end we got that down to 50 and they – together with some terrific facilitators, and
+I joined them as well – came up with the vision for Plan for Victoria, and that is the vision that sits proudly at
+the start of this document. I do want to read it to you, because I think it is really important.
+
+  Nick McGOWAN: Not the whole report, Minister.
+
+  Sonya KILKENNY: Not the whole Plan for Victoria. Not the whole plan; just the people’s vision:
+    By 2050, Victoria will be a vibrant, accessible and connected community, valued for its diverse cultures, sustainable
+    environmental practices and respect for the First Peoples of Victoria.
+    Building a state that provides choices and opportunities for current and future generations of Victorians in quality housing,
+    transport, employment, environment and connectivity will require input from the community, government, local businesses and
+    industry alike.
+    We will create a society that caters to the unique needs of all Victorians, nurturing individual health through physical and
+    cultural recreation.
+
+We released this Plan for Victoria earlier this year, and when I met with the people’s panel to present this to
+them and showed them that their vision now sits proudly at the start of this, it was an emotional meeting and
+they felt really invested in this. When we took them through it, they felt that this embodied exactly what it was
+that they were seeking to achieve. What this is is a plan for all of Victoria that sets out where we want to be in
+2051, and it sets it out under a number of pillars. Importantly, housing is one of those pillars, as well as jobs and
+equity. Then what the plan does is set in motion those first steps about how we are going to get there –
+22 actions short- and medium-term actions that are setting us on that path. One of those actions is setting the
+housing targets for every single local government. One of the actions is the train and tram zone activity centre
+work that we are doing to unlock that capacity in those places where we know people want to live but they just
+cannot afford to live yet. One of the actions, for the first time ever, is setting a tree canopy target for all of our
+urban areas. We have never done this before.
+
+  Jade Benham interjected.
+
+   Sonya KILKENNY: You might ridicule targets, but they are so important, because they give you
+something to aim for that makes you work for them. You set in place the reforms, the systems and the processes
+you need to deliver on it and to get you there, and that is exactly what this Plan for Victoria is doing. I am really
+proud of the work. I am proud of all of the Victorians, the thousands and thousands of community members,
+who have contributed to this, who have set us the task, set us the vision. Now with our planning reforms, with
+the work in Plan for Victoria, with our work and engagement with local councils, with industries and
+communities, we are well on our path to delivering on this vision for Victorians.
+
+  Michael GALEA: Thank you, Minister. Thank you, Chair.
+
+  The CHAIR: Thank you very much, Mr Galea. Ms Benham.
+
+   Jade BENHAM: Thank you. I might just follow up on the Cape Paterson decision, Minister. Have you
+released your statement of reasons for the decision?
+
+  Sonya KILKENNY: I believe those were released at the same time as the decision was made.
+
+  Jade BENHAM: I believe that is due process, but has it happened?
+Wednesday 11 June 2025                Public Accounts and Estimates Committee                                  9
+
+
+
+
+  Sonya KILKENNY: I believe that has happened, yes. I will get confirmation on it, but I believe it has
+happened. That is standard process; that is what we do. We release the reports and we release the decision. I do
+want to come back –
+
+   Nick McGOWAN: Forgive me, Minister, I might have misheard before, but I think you said it was an
+election commitment. Was that correct?
+
+   Sonya KILKENNY: The Bass Coast distinctive areas and landscapes was an election commitment – to put
+that in place.
+
+  Nick McGOWAN: But not to refuse this development per se?
+
+   Sonya KILKENNY: What the distinctive areas and landscapes does is recognise significant areas and
+significant landscapes that are really important, not just to local community but to the broader community.
+
+  Nick McGOWAN: I understand that, Minister. I am trying to understand whether your decision was based
+on a political promise – which is fine – at an election, versus you now making a decision.
+
+   Sonya KILKENNY: We made an election commitment to deliver a Bass Coast distinctive areas and
+landscapes, just like we have done for Macedon – which protects some beautiful areas in Macedon – and just
+like we have done on the Surf Coast and in Bellarine. This is about responding to the community, who said,
+‘We want to protect what we love.’
+
+  Nick McGOWAN: Yes, but the independent panel found that it was not an appropriate place. I think I will
+move on to Mr Welch.
+
+   Jade BENHAM: Actually, just one more thing – the statement of reasons. Are we able to get a copy of that
+for the committee?
+
+  Sonya KILKENNY: Can I come back to you?
+
+  Jade BENHAM: They are not available publicly. Secretary?
+
+  Jeroen WEIMAR: We will check into where it is.
+
+  Jade BENHAM: Great. Thank you very much.
+
+  Sonya KILKENNY: That is fine.
+
+  Nick McGOWAN: Mr Welch?
+
+   Richard WELCH: I would like to move on to the activity centres program. The expansion program has
+received $24 million in funding for 2025–26, but there is no funding in the forwards beyond that. Do we take it
+that the planning for all 60 activity centres will be completed in 2025–26?
+
+  Sonya KILKENNY: The funding in this budget is to facilitate the rollout of the train and tram zone activity
+centre project. That work has already started.
+
+  Richard WELCH: Will it be complete in the financial year? Because there is no funding beyond this for the
+expansion program.
+
+  Sonya KILKENNY: We are aiming to complete the 50 projects by next year; that is correct.
+
+  Richard WELCH: Next financial year or calendar year?
+
+   Sonya KILKENNY: Next financial year. We have already kicked off the first tranche, which is the first 25.
+Engagement is open right now, so we are asking communities to come and consult on what they love about
+their areas and how they want to see their areas grow.
+
+   Richard WELCH: So all 60 will be issued before the end of June 2026, including the full consultation
+periods?
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                  10
+
+
+
+
+  Sonya KILKENNY: Well, consultation is already open, and –
+
+  Richard WELCH: No, Blackburn – I do not think that it is, for many of them.
+
+  Sonya KILKENNY: Blackburn is in the second tranche; you are correct.
+
+  Richard WELCH: So by 30 June 2026 all consultation will be complete for all 60 activity centres?
+
+   Sonya KILKENNY: Yes, that is correct. Consultation is open now on the first 25. Consultation on the
+second tranche, which includes your local area, Blackburn, will commence later this year, I think around about
+October, and that work will then continue. We are working to deliver planning rules for those 48 centres, and
+then there will be two, Melbourne and South Yarra, which are going to take a slightly different approach.
+
+   Richard WELCH: Of that $24 million, is any of that being allocated to the councils for them to supplement
+or support this process?
+
+  Sonya KILKENNY: The way these work and the lessons we drew from the 10 pilot activity centres are that
+many councils have done some really good planning work already.
+
+  Richard WELCH: From this $24 million, will you be giving them financial support?
+
+  Sonya KILKENNY: We will be working with councils, but the $24 million is for us to undertake that work.
+
+  Richard WELCH: So is there any financial support for councils?
+
+   Sonya KILKENNY: We will be working with councils, and where we can, what we will do is actually
+leverage some of their planning strategy work that they have already done, because some of them have done
+some really good work, and so it is about picking up –
+
+  Richard WELCH: Are you providing any financial support to councils?
+
+  Sonya KILKENNY: and drawing on that.
+
+   Richard WELCH: Minister, please, are you providing any financial support to councils as part of this
+process?
+
+  Sonya KILKENNY: The support will be working with councils, to work with them –
+
+  Richard WELCH: Does that include money?
+
+  Sonya KILKENNY: to pick up work that they have already done.
+
+  Richard WELCH: Are they going to do this labour for free?
+
+   Sonya KILKENNY: This work is being conducted by the project team within the state government, and the
+project team will work with local governments –
+
+   Richard WELCH: I understand that. But are you providing any financial support to councils to support the
+process?
+
+  Sonya KILKENNY: We are working with councils. Councils have undertaken – many councils have
+undertaken – very good strategic planning work.
+
+   Richard WELCH: Okay. You are not going to answer that question. I understand. That is fine. How much
+of the $8 billion in this year’s government’s infrastructure funding will be provided for infrastructure within the
+activity centres? Are you building up any social infrastructure that matches the planned population growth?
+
+  Sonya KILKENNY: Where are you in the budget papers there, Mr Welch?
+
+   Richard WELCH: You are spending money on infrastructure this year. Is there any activity centre specific
+planning for infrastructure?
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                   11
+
+
+
+
+  Sonya KILKENNY: I think you have had an opportunity to meet with the infrastructure minister, so that
+would have been the opportunity to raise those matters.
+
+   Richard WELCH: But when you consult with the activity centres, when you are doing this consultation
+with the communities, the very, very common question is: what happens in conjunction with this, apart from
+just property development? And in the consultation paper it is almost like a deliberate exclusion – ‘Oh, we
+cannot answer that.’ So will you, in your consultation period, be explaining clearly to the communities what
+infrastructure will come along with the activity centre?
+
+   Sonya KILKENNY: Right. Well, if I take you back a step, the reason that these activity centres have been
+selected is because of their access to public transport. They are well-located, well-connected centres. They are
+connected into services and jobs.
+
+  Richard WELCH: So no extra infrastructure?
+
+  The CHAIR: Thank you, Mr Welch. We are going to Mr Tak.
+
+   Meng Heang TAK: Thank you, Chair. Minister, delivery of more homes in train and tram zones – let me
+ask you in a different way. I refer to budget paper 3 on pages 83 and 85. Minister, could you please explain how
+the train and tram zone activity centre expansion will deliver more homes for Victorians around 50 train
+stations and tram lines?
+
+   Sonya KILKENNY: Thank you, Mr Tak. This is an important part of the work that we are doing to unlock
+that capacity for more homes, and we are doing this because we know in many of these areas where there has
+been good investment there is good investment in public transport, there is great access to services, there are
+shops, there is access to jobs. These are the kinds of areas where people want to live, but we know – the data
+tells us – that they are becoming more and more unaffordable for ordinary Victorians who want to be able to
+live there, and that is because we have had in place a planning system that has not worked for Victorians. It has
+essentially been working to lock them out of these places, and that is just not fair. It is not fair that young
+Victorians do not have the same opportunities that I had, and I know all of us here want to make sure that
+younger Victorians also have the same opportunities.
+
+The train and tram zone project is building on the pilot activity centre work that we have done, and that is to
+identify locations that are already well serviced with public transport or planned public transport, that have
+great services and really good connections and where we know there is capacity and viability for market to
+invest as well. So we are looking at these areas, but we are working closely with communities, because every
+single activity centre is unique, and so we are going in, doing a street-by-street, metre-by-metre analysis to say,
+‘Right, how can we unlock homes here, and how can we maintain the great livability that the residents who are
+here currently enjoy?’ And that is what the train and tram zone work is all about – how do we unlock that
+capacity, how do we grow great communities and how do we bring the community along with us?
+
+From the pilot – and we are using the tools that were developed during the 10 pilot activity centres – there will
+be a core for each activity centre, and many of those are already established. For example, Blackburn is already
+a neighbourhood activity centre and Ringwood is already an activity centre. These are already areas that have
+been identified for higher growth because of that connectivity and that accessibility. Then the team will look at
+those areas and will work very closely with local councils, many of whom have already done a substantial
+amount of strategic work. In some cases, though, councils have not done any strategic work for sometimes 15
+or 20 years, so we want to be able to support those councils and get that strategic planning work in place to
+enable orderly planning of more homes in those areas.
+
+When we talk about ‘orderly’, it is also important to remember that this is not change overnight; this is asking
+communities: what could your community look like over the next 10 years, 20 years? How can we plan now to
+allow more Victorians, particularly young Victorians, to have the opportunity to live in these really great
+locations as well? So that is the activity centre work: identifying those activity centres that are well connected
+and then for each unique centre working out what is the area around that centre that can also accommodate
+more homes, particularly townhouses, because we know that is a great option and a much more affordable
+option for so many people. The train and tram zone activity centre program is looking to unlock 300,000 homes
+– that is across the 50 centres.
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                 12
+
+
+
+
+The other benefit of this orderly planning and engaging with the community is that it takes the burden off our
+growth areas. For many, many years it has been our growth areas that have carried a completely
+disproportionate burden of new homes, and we are seeing the impact of that. Communities out there are feeling
+the impact of that, and it is not fair. It is about saying we need to be, according with our longstanding policy,
+directing more homes into our established areas where there is existing infrastructure and great connections to
+jobs and services and ensuring that younger Victorians are not locked out of those markets any longer. The train
+and tram zone program is just one part of our suite of reforms that is correcting this imbalance, that is making
+things fairer, that is going to enable greater opportunity for young Victorians to get into the housing market, to
+find a place where they can afford to live in an area where they want to live. That is what is driving this.
+
+    Meng Heang TAK: I can see the benefit, Minister. In a place like Clayton, one of the activity centres, there
+is the train near Monash hospital, Monash University and also an employment hub. Minister, you mentioned
+the activity centre pilot program, which I understand was previously funded through the 2023–24 budget
+update. Minister, how was the process concluded and how have the pilot program and community consultation
+process informed the rollout of the expansions?
+
+   Sonya KILKENNY: It is important, too, because it will be picked up and used for tranche 1 and tranche 2
+of the train and tram zone. There were extensive consultations conducted. We had over 10,000 engagements
+alone for those 10 pilot activity centres. There was a very significant process of engagement and consultation
+with the community, bringing the community along, and in fact in response to feedback from the community,
+for a number of those centres the boundaries were changed. We brought in boundaries in direct response to that
+community feedback. I encourage anyone in tranche 1 to get on and engage.
+
+  The CHAIR: Thank you, Mr Tak. Mr Puglielli.
+
+   Aiv PUGLIELLI: Thank you. Good morning. Staying on budget paper 3, page 85, outputs, action 4 of the
+Plan for Victoria says you will explore simpler rules for affordable housing as part of the review of the
+Planning and Environment Act 1987 so the Minister for Planning and councils can obtain a fair and equitable
+affordable housing contribution as part of a new development. Can I ask: is that work going to happen before or
+after the activity centres program expansion?
+
+   Sonya KILKENNY: Thank you, Mr Puglielli. We are already embarking on work to deliver more
+affordable housing right across Victoria. It is a clear priority of this government not only to make homes more
+affordable by building more of them but also ensure that developments will contribute to affordable housing for
+Victorians as well, and we have seen it in action already. I think I brought members earlier to the development
+facilitation program pathway. It alone – of its 4700 homes, a quarter of those are affordable homes. That is the
+importance of creating these fast-track, accelerated pathways – that we can get on and enable delivery of more
+affordable homes.
+
+  Aiv PUGLIELLI: Thank you. Just pulling us back to the question, though, on the review of the Planning
+and Environment Act 1987. When do we anticipate that work will be complete?
+
+  Sonya KILKENNY: We are undertaking that review right now. This is a really important review. You have
+got to remember we have got an Act that is nearly 40 years old and was probably introduced at a time before
+we were even talking about climate change, for goodness sake, so it is well and truly time for a new planning
+and environment Act and it is well and truly time for a new planning and environment Act that is also going to
+enable us to deliver on the priorities that are facing Victorians – and that is certainly the issue around housing
+and housing affordability.
+
+  Aiv PUGLIELLI: When can we anticipate that review to be completed – which is my question?
+
+   Sonya KILKENNY: We are undertaking that work right now, and there will be legislative reforms that will
+be delivered to Parliament when that review work is ready. It is a priority of mine because it needs to work to
+ensure that we are now addressing the needs and priorities of Victorians.
+
+   Aiv PUGLIELLI: I appreciate that, yes, but there is not a timeline that you can provide otherwise – it is just
+that it is a priority?
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                   13
+
+
+
+
+  Sonya KILKENNY: It is an absolute priority and fits within this quite extraordinary suite of reforms that
+we are delivering in order to respond to community Victorians who are saying we need more homes.
+
+  Aiv PUGLIELLI: Okay. Can I ask, are any of the next 50 activity centres going to require affordable
+housing contributions at the point at which they are rezoned?
+
+    Sonya KILKENNY: Thank you for that. The way the train and tram zone program will run – there will be
+the first 25, which are out for community consultation and engagement now, and then later in the year the
+second tranche will go out for community consultation and engagement. They all follow a similar path as the
+10 pilots, so they go through two rounds of quite extensive consultation and engagement. That will be looking
+at the planning rules for the activity centre core. In many cases that will not be a rezoning. It will be like we did
+for the pilot activity centres. It was using the activity centre zone, which is an already-existing zone, and putting
+over that what is called a built form overlay. That goes to the built form envelope of what can be built in that
+activity centre core. Around the core we are introducing what is called the housing choice and transport zone,
+and that will be looking at that much gentler density out from the activity centre. On the outer edge of that area
+will be the three-storey height limit, and that is where we really want to encourage and see the duplexes or the
+townhouses, which I said are a really good, affordable option for many Victorians and are going to fit really
+well in these neighbourhoods.
+
+We will also be encouraging of course utilisation of the DFP, which will provide that 10 per cent affordable
+housing, but also working with communities and with industry and with local government to ensure that we are
+working towards those targets for those local government areas as well. The Plan for Victoria – I cannot recall
+which action item it is; someone might pick it up – does talk about further investigating targets for affordable
+housing within each local government area as well, so that is an action that we are undertaking and will
+continue to work towards.
+
+  Aiv PUGLIELLI: Thank you. Can I ask: does the government plan to establish a head of power for the
+Planning and Environment Act to mandate affordable housing contributions?
+
+   Sonya KILKENNY: Thank you. This is a matter that has come up a lot in conversations with community,
+with local government and with industry. I do not want to foreshadow any of the matters that might or might
+not be part of the new Planning and Environment Act. However, I think it is fair to say that it is a priority for
+this government that we deliver more housing, all types of housing, right across Victoria, including in regional
+Victoria – Ms Benham, I know this is an issue close to your heart – where we want to ensure that regional areas
+continue to and do enjoy the economic prosperity that comes from more housing and growth in those areas and
+in the areas where they are best suited.
+
+  Aiv PUGLIELLI: Thank you. We have canvassed that quite a lot today. Can I ask a further question: how
+many developments since 2020 have included affordable housing components?
+
+   Sonya KILKENNY: You have raised a really important point, because this is part of the issue, that through
+the development facilitation program we can identify exactly how many affordable homes have been delivered.
+
+  Aiv PUGLIELLI: So you cannot identify that now?
+
+   Sonya KILKENNY: However, where local councils are delivering and approving planning applications,
+they might be entering into individual section 173s with industry.
+
+  The CHAIR: Thank you, Minister. Mr Hilakari.
+
+   Mathew HILAKARI: Thank you, Minister, and thank you, officials, for your attendance this morning.
+Minister, I will take you to ‘Delivering the 10-year plan for Melbourne’s greenfields’. It is on budget paper 3,
+page 83, and it sets out a little bit over $10 million for that greenfields plan. I am hoping you can talk about how
+that will set up a pipeline of homes for Victorians.
+
+   Sonya KILKENNY: This is another really important component of the overall reform. It comes back to the
+very point that Ms Benham made before, and that is about delivering diversity and housing choice, because
+whilst we know not everyone wants to live in a townhouse or a multistorey apartment, many, many Victorians
+also want that opportunity to live in outer suburban areas with a backyard. It is important that we maintain that
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                     14
+
+
+
+
+growth there as well to continue that housing choice and housing diversity but that we do it in a measured way
+that is going to ensure that it no longer carries the disproportionate burden of new housing. For the first time
+ever we have delivered the longest – it is a 10-year plan for greenfields development. We worked very closely
+with industry in developing this, and I know it is something that is very important to industry as well, to
+understand with certainty what the future of the greenfields looks like.
+
+   Mathew HILAKARI: That certainly helps with the investments of course that they are all making.
+
+   Sonya KILKENNY: Exactly right. When is land going to come on line for developers to be able to get in
+there to invest and to deliver? We have established now, working very closely with industry, with community
+and with local government, the 10-year greenfields plan, which is going to unlock capacity of 180,000 homes
+over the next 10 years, and that is looking at roughly 18,000 homes a year. That is to give that certainty to
+industry that there is still going to be that pipeline for housing delivery out there in our greenfield areas. This
+year’s budget includes funding over four years of $12 million to continue the work that is done by now the
+department but formerly the Victorian Planning Authority to undertake the PSPs, the precinct structure plans, to
+facilitate the rezoning and then the pathway through to delivery and development out in our growth areas.
+
+The way that we are doing it is by identifying some three time horizons and including PSPs within those
+horizons so industry has a clear snapshot of when and where PSPs are going to come on line. It means industry
+has that certainty about when to invest. Also, importantly, it enables greater and better staging of the
+infrastructure that is going to support the delivery of those homes out there in a much better staged approach so
+that we are getting the infrastructure and the services together with the housing as well.
+
+    Mathew HILAKARI: That is exactly what we talk about in outer suburban areas – when the infrastructure
+is going to come online making sure that both government and councils are delivering that on time so it actually
+fits communities.
+
+   Sonya KILKENNY: Yes. Exactly.
+
+   Mathew HILAKARI: I know that very sharply.
+
+   Sonya KILKENNY: Yes, you would out there representing those communities. It is something I have
+spoken a lot with Ms Kathage about as well when I have been out there and touring those communities too. It is
+about that staging and sequencing. Again, it fits within everything that we are delivering in Plan for Victoria –
+this vision for Victoria – about providing that housing choice and housing diversity, creating the plan and
+getting in place the reforms. They are not going to change everything overnight, but it is about getting the
+conditions right so that industry gets in there with certainty and is able to build in all the right places and that we
+grow sustainably.
+
+  Mathew HILAKARI: Minister, the sharpness of how I know about it is we have got better planning around
+East Werribee, where we are putting the roads and the schools in right now. We are actually just asking the
+community today what we are going to name those schools, so that is pretty exciting in the lead-up to 2026. I
+want to take you to the land supply and how this 10-year plan helps with that land supply certainty for the years
+ahead. Is there adequate land supply to make sure that we meet those housing needs?
+
+   Sonya KILKENNY: That is part of this plan as well– to ensure that we have got that adequate supply of
+land to meet future need and demand. Land within the urban growth boundary has already been set aside for
+future greenfield urban development. We know Melbourne has the four growth areas around Melbourne, and
+until a PSP is gazetted, the use of the land for housing is limited by the application of the urban growth zone.
+That just acts as a holding zone, if you like, until the PSP is prepared. I think that is an important feature of this
+work as well.
+
+Regional cities, I should add, also use their own urban growth zone to designate their growth areas and set aside
+land pending the preparation of a PSP. Coming back to regional areas too, and I think this is important: regional
+areas have never really had their own urban growth boundary like Melbourne. One of the actions in Plan for
+Victoria is for us to work very closely with not only the major regional cities but also we want to encourage
+many regional towns and cities to start that preparation work around regional boundaries for their areas –
+putting in place, again, the boundary that gives certainty to community and certainty to industry about where to
+build and what to protect. I say that particularly in our regional areas but also our growth areas, because we
+Wednesday 11 June 2025                Public Accounts and Estimates Committee                                  15
+
+
+
+
+need to protect and preserve really important places like agricultural land, right? And we need agricultural land
+close to where we are – close to market. So, again, it is very important. You can see how all the pieces fit
+together. This is not just about housing, it is a broader piece –
+
+  The CHAIR: Thank you, Minister.
+
+  Nick McGOWAN: Point of order.
+
+  The CHAIR: Mr McGowan.
+
+   Nick McGOWAN: At the risk of embarrassing the minister, can I just extend my thanks to the minister and
+the department and their officers for their – I need to use my words carefully – constructive approach from time
+to time. I will not expand beyond that, but it is appreciated, and it does produce an outcome that I think is
+demonstrably much better for my community, so thank you.
+
+   The CHAIR: Thank you, Mr McGowan. You never cease to surprise me. Minister and officials, thank you
+very much for taking the time to appear before the committee today. The committee will follow up on any
+questions taken on notice in writing, and responses are required within five working days of the committee’s
+request.
+
+The committee is going to take a break before beginning its consideration of the portfolio for skills and TAFE
+at 11:45 am. I declare this hearing adjourned.
+
+Witnesses withdrew.
+

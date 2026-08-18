@@ -1,0 +1,491 @@
+OFFICIAL
+
+Addendum to Melbourne Water’s 2026 Price Submission
+In section 11.3 of Melbourne Water’s 2026 Price Submission, Melbourne Water
+proposed to introduce a new mechanism to collect upfront contributions and
+cost-recovery fees for large and/or complex connections either to connected
+water corporations or directly to Melbourne Water.
+Since the submission, policy has been clarified and large scale applications
+have been received by water corporations. Melbourne Water has further
+consulted and developed this proposal.
+Consultation on this proposal
+Melbourne Water has consulted with connected water corporations through
+workshops and with the Department of Energy, Environment and Climate
+Action (DEECA) through regular discussions, and has assessed the statutory
+and regulatory requirements to ensure alignment with the Water Act 1989
+(Vic), the Commission’s NCC Framework (22 January 2026), and the Victorian
+Government’s AI Mission Statement (30 January 2026).
+The workshops with water corporations explored:
+•
+
+•
+
+•
+
+•
+
+Whether there was merit in Melbourne Water exploring a capital
+contributions scheme for bulk water and sewerage services. There was
+consensus to move forward noting applications are happening now.
+The statutory and regulatory underpinnings of capital contributions and
+the different powers of Melbourne Water as a bulk service provider
+compared to retailer-distributor powers and those of vertically integrated
+regional businesses. Section 264(1) of the Water Act 1989 (Vic) allows
+Melbourne Water to ‘set charges for anything it does in the performance of
+its functions’. This is less specific than the ‘owner finance’ provisions in the
+Act which enable water corporates to recover contributions from
+properties owners and apply to Melbourne Water when exercising its
+waterways management functions under Part 10 of the Act.
+Potential options and timings for scheme design. There was consensus
+that new ‘large’ entrants should contribute to connection costs, including
+an element payable to Melbourne Water.
+Practical implementation matters, including development of policies,
+procedures and agreements.
+
+Melbourne Water has also developed proposed ongoing charges and principles
+that would apply if an applicant sought to undertake sewer mining activities
+from Melbourne Water’s assets. Further engagement and consultation on this
+work will continue ahead of implementation.
+
+2
+
+OFFICIAL
+
+Melbourne Water’s proposal
+Our proposal seeks to provide clarity for developers and customers that may
+require Melbourne Water to build or bring forward works, and balance the costs
+and benefits of growth by allocating them between new and existing
+customers. It comprises:
+•
+
+•
+
+•
+
+back-to-back arrangements between Melbourne Water and connected
+water corporations so that all costs that are incurred as a result of the
+connection are recovered
+miscellaneous fees to recover:
+–
+investigation and application costs
+–
+ongoing fixed, usage and reservation costs
+–
+disconnection costs
+–
+any other up-front or ongoing operating costs incurred by Melbourne
+Water to service the new connection
+a capital contribution, which:
+–
+is calculated for each application
+–
+recovers the costs of constructing – or bringing forward –
+infrastructure required for the new connection
+–
+is charged:
+>
+to the water corporation to which an applicant seeks to connect
+and subsequently passed through to the applicant via a
+negotiated new customer contribution;
+>
+or in the case of a direct connection to Melbourne Water’s works,
+from the applicant.
+
+The capital contribution and its pass-through to applicants via water
+corporations would be governed by:
+•
+•
+
+section 264(1) of the Water Act 1989 (Vic) which allows Melbourne Water
+to ‘set charges for anything it does in the performance of its functions’
+relevant provisions in Melbourne Water’s and each water corporation’s
+Connections Policy and Negotiating Framework.
+
+Further work
+Melbourne Water will continue to work with the water corporations, DEECA and
+the Commission on implementation in the next regulatory period consistent
+with the Commission’s NCC Framework. This will include:
+•
+
+Connection Policies: Development of a connection policy that clearly
+outlines when a referral is needed to Melbourne Water that may result in
+contribution for upgrades or bring-forward of bulk assets. We will work
+closely with connected water corporations to ensure consistency with
+connected water corporations’ policies.
+3
+
+OFFICIAL
+
+•
+
+•
+
+•
+
+Detailed pricing principles: Melbourne Water will continue to work with
+water corporations on detailed pricing principles and the charging
+framework.
+Negotiating Framework: Preparation of a negotiating framework that
+would outline the steps and processes which Melbourne Water would take
+and how it would fit in the water corporations’ negotiating framework. This
+would include dispute resolution processes.
+Tripartite Agreements: Development of a standard tripartite agreement
+to be used as a template for future connections that would be subject to a
+contribution for bulk assets managed by Melbourne Water.
+
+Implications for revenue, expenditure and demand forecasts in PS26
+Melbourne Water has not incorporated any forecast expenditure or revenue
+associated with the forecast demand from large or complex connections in its
+2026 Price Submission. Any revenue would be treated in the regulatory
+framework consistent with other contributions and tariff revenue. For example,
+cost recovery of capital expenditure through upfront charges would offset the
+regulatory asset base, capital expenditure would be added to the regulatory
+asset base and annual revenue would be forecast into offsetting the revenue
+requirement.
+We note that this is an emerging area and our desktop studies of global data
+centres show high variability in water efficiency. As such, the future water use
+of this industry is subject to significant influence from state policy, including
+through the Government’s Sustainable Data Centre Road Map.
+Proposed pricing principles
+Melbourne Water has drafted two sets of pricing principles for inclusion in our
+future policies. These are:
+•
+
+•
+
+Pricing principles for special and other charges for large and/or complex
+connections to water, sewerage and recycled water services (Attachment
+1). The pricing principles set the principles to calculate special charge (i.e.
+upfront contribution) and the other charges (investigation, ongoing and
+disconnection), as well as connections policy development, negotiation
+framework and dispute resolution provisions.
+Pricing principles for sewer mining (Attachment 2). The pricing principles
+set the principles to calculate prices for sewer mining activities for the
+purpose of on-selling water, sewage and/or recycled water, and may
+discharge back into the source sewer.
+
+4
+
+OFFICIAL
+
+Attachment 1: Pricing principles for special and other
+charges for large and/or complex connections to water,
+sewerage and recycled water services
+The following principles relate to special charges and other charges
+payable for large and/or complex connections to water, sewerage or recycled
+water services, that Melbourne Water sets under section 264(1) of the Water
+Act 1989 (Vic) 1.
+
+Core pricing principles
+Special charges will be calculated by applying the following pricing principles.
+Special charges will have regard to:
+•
+
+•
+
+incremental infrastructure and associated costs in one or more of
+Melbourne Water’s statutory cost categories attributable to the given
+connection, which must be greater than the avoidable cost of not servicing
+the connection and less than the standalone cost of servicing that
+connection (incremental cost)
+incremental future benefits that will be earned by Melbourne Water from
+customers at that connection.
+
+Notes:
+1. Given that special charges are to be based on the net incremental cost of
+connection (i.e. incremental costs net of incremental benefits), in this context,
+the costs referred to in the efficient pricing bound are the net costs, specifically
+the avoidable net cost of connection and standalone net cost of connection.
+2. Where the connection arrangement requires assets to be gifted, the value of
+gifted assets will be excluded for the purpose of calculating net costs.
+2. Where the connection arrangement requires assets to delivered by one or
+more Water Corporations other than Melbourne Water, the incremental costs
+and benefits and gifted assets attributable to those other Water Corporations
+will be excluded for the purpose of calculating Melbourne Water’s special
+charge.
+3. Incremental costs may include incremental financing costs associated with
+constructing an asset sooner than planned.
+4. The Water Corporations are those that have a bulk supply agreement with
+Melbourne Water, which includes the following plus any other water
+corporation that enters into a bulk supply agreement with Melbourne Water:
+•
+
+Barwon Water
+
+1
+Section 264(1) of the Water Act 1989 (Vic) provides that ‘An Authority may, by by-law or otherwise, set charges for
+anything it does in the performance of its functions, including any function delegated to it.’
+
+5
+
+OFFICIAL
+
+•
+•
+•
+•
+•
+•
+
+Gippsland Water
+Greater Western Water
+South East Water
+South Gippsland Water
+Westernport Water
+Yarra Valley Water
+
+Incremental financing costs
+Incremental financing costs (IFC) should be calculated using this formula:
+1
+�� × cost of capital being provided sooner than planned
+IFC = �1 − �
+(1 + r)n
+Where:
+r
+estimated pre-tax regulatory rate of return
+n
+
+the number of years the asset is required sooner than planned
+
+Application
+Special charges for Melbourne Water apply to Water Corporations, or to the
+applicant in the case of a direct connection, in relation to the connection of a
+new customer, or increase in the capacity of an existing connection, to
+Melbourne Water’s works or the Water Corporations’ works:
+•
+•
+•
+
+that is separately titled or is, or can be, individually metered, or is
+connected directly to Melbourne Water’s works 2,3
+where the new connection is not Standard 4 under the Water Corporations’
+own NCC frameworks
+where the requirements of the new connection are sufficiently large or
+complex such that infrastructure is required to be provided by Melbourne
+Water.
+
+Large or complex connections
+Large or complex connections are those that:
+•
+
+•
+
+have an instantaneous peak, annual demand, or trade waste load
+significantly higher or different to those of residential, domestic or light
+commercial use as set out in the connections policies of Melbourne Water
+and/or the Water Corporations; or
+require Melbourne Water to construct works to service the connection
+directly or indirectly via the Water Corporation’s networks; or
+
+2
+Connections to Melbourne Water’s works are generally not approved by Melbourne Water, but may be considered
+where there is no adverse impact to operations and where they do not result in inefficient bypass.
+3
+Works has the same meaning as per the Water Act 1989 (Vic).
+4
+Standard connections are where infrastructure requirements and growth rates are relatively well known and are
+documented in a connected water corporation’s Development Servicing Plan. Standard connections are common across
+a defined group of connections within a clearly specified area and any specified criteria for connection characteristics
+as defined by the connected water corporation.
+
+6
+
+OFFICIAL
+
+•
+
+require Melbourne Water to construct works earlier and/or at a greater
+capacity than planned.
+
+Direct connections to Melbourne Water’s works
+Direct connection to Melbourne Water’s works, outside of its treatment plants
+could occur when a Water Corporation cannot meet the needs of the applicant
+and when the arrangement would not result in inefficient bypass.
+A direct connection to Melbourne Water’s works includes one or more of:
+•
+•
+•
+•
+•
+
+a connection to Melbourne Water’s bulk water works for the purposes of
+water supply;
+a connection directly to Melbourne Water’s bulk sewerage works for the
+purposes of sewage or trade waste disposal; or
+a connection to Melbourne Water’s bulk sewerage system for the purpose
+of treating sewage to produce recycled water, or
+a connection directly to Melbourne Water’s recycled water works for the
+purposes of water supply, where approved; or
+properties or entities connecting directly to Melbourne Water’s recycled
+water works for the purposes of further treating the recycled water prior
+to use, where approved.
+
+Direct connections include entities that utilise Melbourne Water’s services on
+premises, and entities that seek to on-sell water, sewerage or recycled water
+services to other properties or entities.
+
+Connections Policy
+Melbourne Water will maintain and publish a Connections Policy which
+outlines the circumstances under which Melbourne Water will consider direct
+connections to its services, thresholds for Melbourne Water special charges,
+interactions with the Water Corporations’ connections policies, bulk supply
+agreements and billing arrangements as well as other charges payable to
+Melbourne Water, negotiating frameworks and dispute resolution
+arrangements.
+
+Other charges payable
+Other charges payable to Melbourne Water include application investigations,
+ongoing charges and disconnection charges.
+Investigations
+
+7
+
+OFFICIAL
+
+Prices for investigations and to process applications will be set in accordance
+with Pricing principles for miscellaneous services not included in Schedule 2 5
+and include but are not limited to:
+•
+•
+•
+•
+•
+•
+•
+
+Technical assessments (including preliminary technical assessments)
+Investigations and feasibility studies
+Site visits
+Internal or external reports including engineering, environment, legal and
+planning reviews
+Detailed design
+Administrative processing, and
+Any other direct or indirect cost associated with the investigation or
+application to connect
+
+Ongoing charges
+Prices for ongoing charges payable to Melbourne Water via the Water
+Corporations or, in the case of any direct connection, the large and/or complex
+customer, will include fixed charges 6, usage charges, and reservation charges 7
+and will be set in accordance with Melbourne Water’s cost allocation
+methodology.
+Ongoing charges are applicable to the connection unless the property has
+disconnected.
+Disconnection charges
+Disconnection charges apply when a large and/or complex customer that has
+connected to a water corporation, or Melbourne Water’s water, sewerage or
+recycled water services:
+•
+•
+
+removes the physical connections to the water corporation and/or
+Melbourne Water; and
+has paid a connection contribution charge to Melbourne Water via its the
+water corporation.
+
+Disconnection charges must be set to have regard to works constructed to
+serve the large and/or complex customer, the forecast utilisation of the works
+constructed by the wider customer base, and consider any contribution made
+by the large and/or complex customer.
+
+Schedule 4.5 in the Melbourne Water Determination 1 July 2021 to 30 June 2026.
+Fixed charges may include annual service charges that reflect any ongoing metering, monitoring and other costs
+incurred directly or indirectly by Melbourne Water with the connection.
+7
+Reservation charges may apply if the new connection requires supplementary and/or intermittent back-up supply.
+5
+6
+
+8
+
+OFFICIAL
+
+Dispute resolution
+In the event of a dispute between parties, Melbourne Water, and where
+relevant, the Water Corporation, will continue attempts to resolve the matter
+by negotiation.
+After Melbourne Water provides its Offer, or a Water Corporation provides its
+Offer incorporating Melbourne Water’s costs, if the Connection Applicant does
+not accept the Offer, the Connection Applicant has particular rights to seek a
+review in VCAT of the terms and conditions of connection and the costs
+applied. These VCAT review rights, including various time lines, rights and
+process are set out in the Water Act 1989 (Vic) and the Victorian Civil and
+Administrative Tribunal Act 1998 (Vic).
+
+9
+
+OFFICIAL
+
+Attachment 2: Pricing principles for sewer mining
+Sewer mining is the practice of extracting sewage from a sewer and treating
+the sewage to recover a desired resource (e.g. recycled water). Sewer mining
+may also involve management of waste byproducts (e.g. by way of disposal
+back to the source sewer, or another sewer).
+Sewer mining pricing principles apply when a sewer mine connected to the
+works of a Water Corporation 8 and is sufficiently large or complex so as to
+alter the planning for and/or operations of Melbourne Water’s works, or if a
+sewer mine directly connects to Melbourne Water’s works. Direct connection to
+Melbourne Water’s works for the purpose of sewer mining can only occur when
+there is not an alternative water corporation that can meet the needs of the
+applicant and when the arrangement would not result in inefficient bypass.
+Prices for sewer mining under a tripartite agreement with the relevant water
+corporation must be set to have regard to:
+•
+
+•
+
+•
+
+•
+
+•
+
+8
+
+connection costs – costs to Melbourne Water to allow a sewer miner to
+construct physical infrastructure and access the sewer, including feasibility
+studies of works to be undertaken by Melbourne Water. Disconnection
+costs would be incurred by the operator when a sewer mining operation
+ceased.
+monitoring costs – costs incurred monitoring and managing the
+composition of sewage extractions from, and discharges into, the
+sewerage system. Monitoring would have to ensure that technical,
+operational and safety requirements were met and that acceptance
+standards for trade waste discharges by sewer miners were complied with.
+metering costs – costs incurred measuring the quantities and qualities of
+sewage extracted and trade waste returned to the sewer by the sewer
+miner, for monitoring and billing purposes. Costs would include installing,
+maintaining and reading meters and the costs of developing a protocol for
+measuring sewage volumes.
+administrative costs – costs incurred to reach agreement with a sewer
+miner on terms and conditions, to finalise a contract, and to monitor
+performance under the contract. This would include billing costs. There
+may be additional costs to revise or develop maintenance and emergency
+plans that take the sewer mining operation into account.
+extraction costs and benefits – costs and benefits that reflect
+reasonable assumptions regarding the sewer miner’s extraction. This
+would include costs that may be avoided or deferred (either capital or
+operating costs) by Melbourne Water by reduction in sewage volumes and
+loads at the treatment plant, and costs incurred by Melbourne Water to
+make the connection available.
+
+Water corporation refers to a water corporation that has works connected to Melbourne Water’s works
+
+10
+
+OFFICIAL
+
+•
+
+9
+
+discharge costs – costs associated with discharging waste into the sewer
+if directly discharging into Melbourne Water works. These prices must be
+set consistent with Pricing Principles where scheduled prices do not
+apply 9.
+
+Schedule 4.2 in the Melbourne Water Determination 1 July 2021 to 30 June 2026.
+
+11
+
+

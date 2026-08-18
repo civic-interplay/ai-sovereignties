@@ -1,86 +1,141 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="700" viewBox="0 0 1040 700" font-family="Helvetica, Arial, sans-serif" font-size="14">
   <defs>
     <marker id="ar--head" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L7,3 L0,6 Z" fill="#555"/>
     </marker>
+    <marker id="ar--dash" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
   </defs>
-  <rect x="0" y="0" width="1000" height="620" fill="#fafafa"/>
+  <rect x="0" y="0" width="1040" height="700" fill="#fafafa"/>
   <text x="24" y="36" font-size="20" font-weight="bold" fill="#222">Contestation system: automated / manual + sovereignty</text>
   <text x="24" y="58" font-size="13" fill="#555">green = transportable (you own it / can move it)&#160;&#160;&#160;red = inbuilt dependency (vendor or licence)&#160;&#160;&#160;blue = your pipeline&#160;&#160;&#160;grey = planned</text>
+  <text x="24" y="76" font-size="12" fill="#888">Updated 18 August 2026</text>
 
   <!-- column labels -->
-  <text x="24" y="92" font-size="12" font-weight="bold" fill="#888">SOURCES</text>
-  <text x="360" y="92" font-size="12" font-weight="bold" fill="#888">PIPELINE (TypeScript, any Node)</text>
-  <text x="710" y="92" font-size="12" font-weight="bold" fill="#888">STORE &amp; CONSUMERS</text>
+  <text x="20" y="102" font-size="12" font-weight="bold" fill="#888">SOURCES</text>
+  <text x="330" y="102" font-size="12" font-weight="bold" fill="#888">PIPELINE (TypeScript, any Node)</text>
+  <text x="720" y="102" font-size="12" font-weight="bold" fill="#888">STORE &amp; PUBLISHED</text>
 
-  <!-- arrows (drawn first, under boxes) -->
-  <g stroke="#555" stroke-width="1.6" marker-end="url(#ar--head)" fill="none">
-    <path d="M250,135 L355,250"/>
-    <path d="M250,205 L355,255"/>
-    <path d="M250,275 L355,262"/>
-    <path d="M250,345 L355,270"/>
-    <path d="M250,415 L355,285"/>
-    <path d="M505,140 L505,205"/>
-    <path d="M505,360 L505,320"/>
-    <path d="M660,260 L700,255"/>
-    <path d="M835,300 L835,300"/>
-    <path d="M835,275 L835,300"/>
-    <path d="M835,360 L835,385"/>
+  <!-- ===== arrows (drawn first, under boxes) ===== -->
+  <g stroke="#555" stroke-width="1.6" fill="none">
+    <!-- source stubs onto the collector spine -->
+    <path d="M270,137 L300,137"/>
+    <path d="M270,201 L300,201"/>
+    <path d="M270,265 L300,265"/>
+    <path d="M270,329 L300,329"/>
+    <path d="M270,393 L300,393"/>
+    <path d="M270,457 L300,457"/>
+    <!-- collector spine -->
+    <path d="M300,137 L300,457"/>
+    <!-- spine into the two consumers of source material -->
+    <path d="M300,243 L326,243" marker-end="url(#ar--head)"/>
+    <path d="M300,385 L326,385" marker-end="url(#ar--head)"/>
+    <!-- cron trigger -->
+    <path d="M490,158 L490,196" marker-end="url(#ar--head)"/>
+    <!-- pipeline write -> Notion -->
+    <path d="M650,243 L716,243" marker-end="url(#ar--head)"/>
+    <!-- discovery + review -> Notion -->
+    <path d="M650,385 L685,385"/>
+    <path d="M650,459 L685,459 L685,262 L716,262" marker-end="url(#ar--head)"/>
+    <!-- Notion -> published spine -->
+    <path d="M740,286 L740,549"/>
+    <path d="M740,357 L756,357" marker-end="url(#ar--head)"/>
+    <path d="M740,421 L756,421" marker-end="url(#ar--head)"/>
+    <path d="M740,485 L756,485" marker-end="url(#ar--head)"/>
+    <path d="M740,549 L756,549" marker-end="url(#ar--head)"/>
+  </g>
+  <!-- model dependency, dashed -->
+  <g stroke="#c0392b" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+    <path d="M450,516 L450,418" marker-end="url(#ar--dash)"/>
+    <path d="M630,520 L662,520 L662,300 L654,300" marker-end="url(#ar--dash)"/>
+  </g>
+  <!-- RSS planned, dashed grey -->
+  <g stroke="#999" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+    <path d="M270,521 L300,521 L300,457"/>
   </g>
 
-  <!-- sources -->
+  <!-- ===== sources ===== -->
   <g>
-    <rect x="20" y="110" width="230" height="55" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
-    <text x="135" y="133" text-anchor="middle" font-weight="bold">GDELT</text>
-    <text x="135" y="151" text-anchor="middle" font-size="12" fill="#555">open news index &#183; [auto]</text>
+    <rect x="20" y="110" width="250" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+    <text x="145" y="132" text-anchor="middle" font-weight="bold">GDELT</text>
+    <text x="145" y="150" text-anchor="middle" font-size="12" fill="#555">open news index &#183; [auto, in cron]</text>
 
-    <rect x="20" y="180" width="230" height="55" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
-    <text x="135" y="203" text-anchor="middle" font-weight="bold">RSS on named sites</text>
-    <text x="135" y="221" text-anchor="middle" font-size="12" fill="#555">[auto] &#183; planned</text>
+    <rect x="20" y="174" width="250" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+    <text x="145" y="196" text-anchor="middle" font-weight="bold">NSW ePlanning OnlineDA</text>
+    <text x="145" y="214" text-anchor="middle" font-size="12" fill="#555">public keyless API &#183; [auto, in cron]</text>
 
-    <rect x="20" y="250" width="230" height="55" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
-    <text x="135" y="273" text-anchor="middle" font-weight="bold">Planning portals</text>
-    <text x="135" y="291" text-anchor="middle" font-size="12" fill="#555">submissions &#183; [semi] &#183; planned</text>
+    <rect x="20" y="238" width="250" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+    <text x="145" y="260" text-anchor="middle" font-weight="bold">Planning portals</text>
+    <text x="145" y="278" text-anchor="middle" font-size="12" fill="#555">submissions &#183; [semi] &#183; awaiting feed</text>
 
-    <rect x="20" y="320" width="230" height="55" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
-    <text x="135" y="343" text-anchor="middle" font-weight="bold">Factiva via RMIT</text>
-    <text x="135" y="361" text-anchor="middle" font-size="12" fill="#555">licensed &#183; [MANUAL]</text>
+    <rect x="20" y="302" width="250" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+    <text x="145" y="324" text-anchor="middle" font-weight="bold">Inbox (hand-filed JSON)</text>
+    <text x="145" y="342" text-anchor="middle" font-size="12" fill="#555">policy docs &#183; [MANUAL] &#183; transportable</text>
 
-    <rect x="20" y="390" width="230" height="55" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
-    <text x="135" y="413" text-anchor="middle" font-weight="bold">Council / town halls</text>
-    <text x="135" y="431" text-anchor="middle" font-size="12" fill="#555">[MANUAL] deep-dive</text>
+    <rect x="20" y="366" width="250" height="54" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="145" y="388" text-anchor="middle" font-weight="bold">Factiva via RMIT</text>
+    <text x="145" y="406" text-anchor="middle" font-size="12" fill="#555">licensed &#183; [MANUAL] &#183; no scraping</text>
+
+    <rect x="20" y="430" width="250" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+    <text x="145" y="452" text-anchor="middle" font-weight="bold">Council / town halls</text>
+    <text x="145" y="470" text-anchor="middle" font-size="12" fill="#555">[MANUAL] deep-dive</text>
+
+    <rect x="20" y="494" width="250" height="54" rx="6" fill="#eeeeee" stroke="#888888" stroke-width="1.6"/>
+    <text x="145" y="516" text-anchor="middle" font-weight="bold" fill="#555">RSS on named sites</text>
+    <text x="145" y="534" text-anchor="middle" font-size="12" fill="#777">[auto] &#183; planned</text>
   </g>
 
-  <!-- pipeline -->
-  <rect x="360" y="95" width="290" height="45" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
-  <text x="505" y="122" text-anchor="middle">GitHub Actions cron &#183; [auto]</text>
+  <!-- ===== pipeline ===== -->
+  <rect x="330" y="110" width="320" height="48" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="490" y="130" text-anchor="middle" font-weight="bold" font-size="13">GitHub Actions cron &#183; 1st &amp; 15th, 06:00 UTC</text>
+  <text x="490" y="148" text-anchor="middle" font-size="11" fill="#555">runs: gdelt &#183; portals &#183; discover &#183; review &#183; compute log</text>
 
-  <rect x="360" y="200" width="290" height="120" rx="8" fill="#dfe7ff" stroke="#3a5bd0" stroke-width="2"/>
-  <text x="505" y="232" text-anchor="middle" font-weight="bold" font-size="15">PIPELINE</text>
-  <text x="505" y="256" text-anchor="middle" font-size="13">retrieve &#8594; classify &#8594; resolve &#8594; write</text>
-  <text x="505" y="280" text-anchor="middle" font-size="12" fill="#3a5bd0">controlled vocabulary + site resolver</text>
-  <text x="505" y="300" text-anchor="middle" font-size="12" fill="#555">(transportable)</text>
+  <rect x="330" y="196" width="320" height="128" rx="8" fill="#dfe7ff" stroke="#3a5bd0" stroke-width="2"/>
+  <text x="490" y="222" text-anchor="middle" font-weight="bold" font-size="15">CONTESTATION PIPELINE</text>
+  <text x="490" y="246" text-anchor="middle" font-size="13">retrieve &#8594; classify &#8594; resolve &#8594; write</text>
+  <text x="490" y="270" text-anchor="middle" font-size="12" fill="#3a5bd0">controlled vocabulary + site resolver</text>
+  <text x="490" y="288" text-anchor="middle" font-size="12" fill="#3a5bd0">syndication dedup &#183; one wire story, one item</text>
+  <text x="490" y="310" text-anchor="middle" font-size="12" fill="#555">(transportable)</text>
 
-  <rect x="360" y="360" width="290" height="55" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
-  <text x="505" y="383" text-anchor="middle" font-weight="bold">Anthropic API</text>
-  <text x="505" y="401" text-anchor="middle" font-size="12" fill="#555">the classifier intelligence</text>
+  <rect x="330" y="356" width="320" height="58" rx="6" fill="#dfe7ff" stroke="#3a5bd0" stroke-width="1.6"/>
+  <text x="490" y="378" text-anchor="middle" font-weight="bold">Discovery agent</text>
+  <text x="490" y="396" text-anchor="middle" font-size="12" fill="#555">writes [PROPOSED] rows only &#183; human review</text>
 
-  <!-- store + consumers -->
-  <rect x="700" y="200" width="270" height="80" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
-  <text x="835" y="230" text-anchor="middle" font-weight="bold">Notion</text>
-  <text x="835" y="249" text-anchor="middle" font-size="12" fill="#555">Infra + Contestation trackers</text>
-  <text x="835" y="267" text-anchor="middle" font-size="12" fill="#555">data is exportable</text>
+  <rect x="330" y="430" width="320" height="58" rx="6" fill="#dfe7ff" stroke="#3a5bd0" stroke-width="1.6"/>
+  <text x="490" y="452" text-anchor="middle" font-weight="bold">QA self-review</text>
+  <text x="490" y="470" text-anchor="middle" font-size="12" fill="#555">flags rows for a human &#183; never publishes</text>
 
-  <rect x="700" y="300" width="270" height="55" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
-  <text x="835" y="323" text-anchor="middle" font-weight="bold">Map app</text>
-  <text x="835" y="341" text-anchor="middle" font-size="12" fill="#555">Cloudflare + Mapbox</text>
+  <rect x="330" y="520" width="320" height="56" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="490" y="543" text-anchor="middle" font-weight="bold">Claude API</text>
+  <text x="490" y="561" text-anchor="middle" font-size="12" fill="#555">classifier + discovery intelligence</text>
 
-  <rect x="700" y="385" width="270" height="50" rx="6" fill="#eeeeee" stroke="#888888" stroke-width="1.6"/>
-  <text x="835" y="408" text-anchor="middle" font-weight="bold">/sovereignties page</text>
-  <text x="835" y="425" text-anchor="middle" font-size="12" fill="#555">planned</text>
+  <!-- ===== store ===== -->
+  <rect x="720" y="200" width="300" height="86" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="870" y="228" text-anchor="middle" font-weight="bold">Notion</text>
+  <text x="870" y="247" text-anchor="middle" font-size="12" fill="#555">Infra Tracker + Contestation Tracker</text>
+  <text x="870" y="265" text-anchor="middle" font-size="12" fill="#555">data is exportable &#183; CSV / JSON / Markdown</text>
 
-  <!-- footnote -->
-  <text x="24" y="500" font-size="13" fill="#444">The substance (code, vocabulary, resolver, open sources, your data) is transportable.</text>
-  <text x="24" y="520" font-size="13" fill="#444">The dependencies are the model (Anthropic), the store (Notion), hosting (Cloudflare/Mapbox), and one licensed source (Factiva).</text>
-  <text x="24" y="540" font-size="13" fill="#444">No dependency traps your data; the lock-in is in tooling and the model, which is the tension the project studies.</text>
+  <!-- ===== published ===== -->
+  <rect x="760" y="330" width="260" height="54" rx="6" fill="#fce4e4" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="890" y="352" text-anchor="middle" font-weight="bold">Map</text>
+  <text x="890" y="370" text-anchor="middle" font-size="12" fill="#555">Next.js on Cloudflare + Mapbox tiles</text>
+
+  <rect x="760" y="394" width="260" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+  <text x="890" y="416" text-anchor="middle" font-weight="bold">Summary data sheets</text>
+  <text x="890" y="434" text-anchor="middle" font-size="12" fill="#555">/sheets &#183; per-state &#183; /glossary</text>
+
+  <rect x="760" y="458" width="260" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+  <text x="890" y="480" text-anchor="middle" font-weight="bold">News feed</text>
+  <text x="890" y="498" text-anchor="middle" font-size="12" fill="#555">/news + RSS 2.0 at /news/feed.xml</text>
+
+  <rect x="760" y="522" width="260" height="54" rx="6" fill="#e3f1e3" stroke="#27ae60" stroke-width="1.6"/>
+  <text x="890" y="544" text-anchor="middle" font-weight="bold">Zenodo deposit</text>
+  <text x="890" y="562" text-anchor="middle" font-size="12" fill="#555">frozen citable snapshot &#183; DOI</text>
+
+  <!-- ===== footnotes ===== -->
+  <text x="24" y="618" font-size="13" fill="#444">The substance (code, vocabulary, resolver, open sources, your data) is transportable. Nothing agent-created enters published figures:</text>
+  <text x="24" y="638" font-size="13" fill="#444">discovery writes [PROPOSED] rows with no type and no coordinates, invisible to the map and sheets until a human reviews them.</text>
+  <text x="24" y="662" font-size="13" fill="#444">The dependencies are the model (Claude), the store (Notion), hosting (Cloudflare/Mapbox), and one licensed source (Factiva).</text>
+  <text x="24" y="682" font-size="13" fill="#444">No dependency traps your data; the lock-in is in tooling and the model, which is the tension the project studies.</text>
 </svg>

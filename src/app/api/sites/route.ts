@@ -8,6 +8,8 @@
 //   NOTION_TOKEN        – internal integration secret (starts with "ntn_" / "secret_")
 //   NOTION_DATABASE_ID  – optional; defaults to the tracker below
 
+import { isStateAssessed } from '@/lib/tracker';
+
 const DEFAULT_DATABASE_ID = '8b537010f4cb4aa6b6df470f9d0d40c9';
 const NOTION_VERSION = '2022-06-28';
 
@@ -215,9 +217,12 @@ async function queryNotion(token: string, databaseId: string) {
           contested:
             selectName(props['Community Concern']) === '🔴 Active Opposition' ||
             selectName(props['Community Concern']) === '🟡 Emerging Concern',
-          fastTracked:
-            multiNames(props['Governance Flags']).includes('Ministerial fast-track') ||
-            multiNames(props['Governance Flags']).includes('NSW State Significant Development'),
+          // State fast-tracked = the State, not the council, is the consent
+          // authority. Read from Planning Pathway (the statutory route), not
+          // from the governance flags that used to carry it — those flags are
+          // analyst annotations being retired, and deriving this from them
+          // would drop the overlay to zero the moment they go.
+          fastTracked: isStateAssessed(label(selectName(props['Planning Pathway']))),
           // How the approval was handled. The flags are analyst findings about
           // the pathway, so the popup shows them with it rather than apart.
           pathway: label(selectName(props['Planning Pathway'])),

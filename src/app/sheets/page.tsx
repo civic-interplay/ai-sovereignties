@@ -1,6 +1,6 @@
 // National summary sheet: the tracker's headline numbers, by state, with the
 // analysis-subset rule applied and stated. Data is fetched live from Notion.
-import { fetchTrackerRows, slugForState, countryBucket, lastUpdated } from '@/lib/tracker';
+import { fetchTrackerRows, slugForState, countryBucket, lastUpdated, isStateAssessed } from '@/lib/tracker';
 import {
   SheetShell,
   SheetNav,
@@ -55,11 +55,7 @@ export default async function SheetsIndex() {
   const contested = subset.filter(
     (r) => r.communityConcern?.includes('Active Opposition') || r.communityConcern?.includes('Emerging Concern'),
   ).length;
-  const fastTracked = subset.filter(
-    (r) =>
-      r.governanceFlags.includes('Ministerial fast-track') ||
-      r.governanceFlags.includes('NSW State Significant Development'),
-  ).length;
+  const fastTracked = subset.filter((r) => isStateAssessed(r.pathway)).length;
 
   return (
     <SheetShell>

@@ -210,6 +210,24 @@ export function lastUpdated(rows: TrackerRow[]): string | null {
 
 // Bucket the Energy Source select the same way the map does, split into
 // on-grid / off-grid / not tracked for the state-sheet summary.
+// Planning Pathway values where the State, not the council, is the consent
+// authority. This is what "State fast-tracked" means on the map and sheets.
+//
+// It used to be derived from two Governance Flags ("Ministerial fast-track",
+// "NSW State Significant Development"). Those flags are analyst annotations
+// that duplicate the statutory route, and they are being retired — deriving
+// the figure from them would silently drop it to zero the moment they go.
+// Planning Pathway is the field of record, and it is also more complete:
+// six rows carry the pathway without ever having been given the flag.
+export const STATE_ASSESSED_PATHWAYS = new Set([
+  'State significant development',
+  'Ministerial fast-track',
+]);
+
+export function isStateAssessed(pathway: string | null): boolean {
+  return pathway !== null && STATE_ASSESSED_PATHWAYS.has(pathway);
+}
+
 export function energyBucket(v: string | null): string {
   if (!v) return 'Not tracked';
   if (v.includes('on-site')) return 'Off-grid — on-site renewable';

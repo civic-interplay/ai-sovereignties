@@ -1,0 +1,4154 @@
+OFFICIAL
+
+Melbourne Water Determination
+1 July 2026 – 30 June 2031
+1 June 2026
+
+Acknowledgement
+We acknowledge the Traditional Owners of the lands and waterways on which we work and live.
+We acknowledge all Aboriginal and Torres Strait Islander communities, and pay our respects to
+Elders past and present.
+As the First Peoples of this land, belonging to the world’s oldest living cultures, we recognise and
+value their knowledge, and ongoing role in shaping and enriching the story of Victoria.
+
+An appropriate citation for this paper is:
+Essential Services Commission, Melbourne Water Determination: 1 July 2026 – 30 June 2031, 1
+June
+© Essential Services Commission, 2026.
+
+This work, Melbourne Water Determination, is licensed under a Creative Commons Attribution 4.0
+licence [creativecommons.org/licenses/by/4.0]. You are free to re-use the work under that licence,
+on the condition that you credit the Essential Services Commission as author, indicate if changes
+were made and comply with the other licence terms.
+The licence does not apply to any brand logo, images or photographs within the publication.
+
+Preface
+Essential Services Commission Melbourne Water Determination
+
+i
+
+Contents
+1. General
+
+3
+
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+
+3
+3
+4
+4
+4
+4
+4
+
+Introduction
+Application
+Effective period
+Modification of time periods
+Summary and structure
+Definitions and interpretation
+Annexure A
+
+2. Price control
+2.1
+2.2
+2.3
+2.4
+2.5
+
+6
+
+General principles
+Ancillary matters
+Annual adjustment of prices
+Price changes during a billing period
+Reporting requirements
+
+6
+6
+7
+10
+10
+
+3. Amendment of Schedule 2 Part B – Change to tariff basket form of price control
+4. Uncertain or unforeseen events
+4.1
+4.2
+4.3
+
+12
+15
+
+General principles
+Considerations by the commission
+Procedure
+
+15
+15
+16
+
+5. Material error or unintended consequences
+Schedule 1 – Definitions and interpretation
+Schedule 2 – Prices
+
+19
+20
+24
+
+Schedule 2 Part A — Water and sewerage charges
+Schedule 2 Part B — Waterways and drainage tariffs
+
+24
+26
+
+Schedule 3 – Application of prices
+Schedule 4 – Pricing principles
+Schedule 5 – Adjustment of Schedule 2
+Annexure A
+
+31
+37
+45
+56
+
+Contents
+Essential Services Commission Melbourne Water Determination
+
+ii
+
+1. General
+1.1.
+
+Introduction
+
+(a) Clause 14 of the WIRO requires the commission to either:
+(i) approve the maximum prices the regulated entity may charge for prescribed services or
+the manner in which the regulated entity’s prices are to be calculated, determined or
+otherwise regulated, as proposed by the regulated entity in its price submission (as
+defined in the WIRO); or
+(ii) specify the maximum prices the regulated entity may charge for prescribed services or
+the manner in which the regulated entity’s prices are to be calculated, determined or
+otherwise regulated.
+(b) On 1 June 2026, the commission made its decision in respect of the prices which Melbourne
+Water may charge for prescribed services during the regulatory period.
+(c) This Determination is made by the commission under section 33 of the ESC Act, pursuant to
+clauses 10 and 14 of the WIRO.
+(d) The purposes for the making of this Determination are to:
+(i) give effect to the decision of the commission referred to in clause 1.1(b);
+(ii) specify the maximum prices which Melbourne Water may charge for prescribed services
+during the regulatory period or the manner in which such prices are to be calculated,
+determined or otherwise regulated;
+(iii) facilitate the achievement of the commission’s objectives in the ESC Act and the WI Act;
+and
+(iv) reflect the requirements of the WIRO.
+(e) The reasons for the making of this Determination are as set out in the decision of the
+commission made on 1 June 2026.
+(f) For all purposes of this determination, the prescribed services provided by Melbourne Water
+comprising storage operator and bulk water services, bulk sewerage services, bulk recycled
+water services and metropolitan waterways and drainage services as defined in the WIRO, are
+each considered to be a single service encompassing different price components to which
+different tariffs and charges apply. Price components and tariffs and charges for these services
+are specified in Schedule 2.
+
+1.2.
+
+Application
+
+This Determination applies to Melbourne Water and its successors and assigns in respect of the
+business carried on by Melbourne Water at the date of this Determination.
+
+1. General
+Essential Services Commission Melbourne Water Determination
+
+3
+
+1.3.
+
+Effective period
+
+(a) Term
+This Determination takes effect on the later of the date on which notice of its making is published in
+the Government Gazette or 1 July 2026, and subject to clause 1.3(b), has effect until the date on
+which it is amended or revoked by a later determination or 30 June 2031.
+(b) Next regulatory period
+Subject to clause 2.3(b)(iv) and clause 2.3(c)(ii), if the commission has not made a determination in
+respect of the prices to apply in the next regulatory period on or before 30 June 2031, the prices
+or the manner in which such prices are to be calculated or otherwise determined as set out in this
+Determination will continue to apply in respect of prescribed services provided by Melbourne
+Water from 1 July 2031 to the day before the date on which the determination for the next
+regulatory period comes into effect.
+
+1.4.
+
+Modification of time periods
+
+The commission may, by notice to Melbourne Water, extend or reduce the time by which, or the
+period within which, Melbourne Water or the commission must comply with an obligation under
+this Determination.
+
+1.5.
+
+Summary and structure
+
+Clause 2 of this Determination specifies the prices which will apply to prescribed services during
+the regulatory period and sets out the procedure and formula according to which prices may be
+adjusted during the regulatory period on an annual basis. Clauses 3, 4 and 5 provide for the
+circumstances in which prices may be adjusted or amended during the regulatory period other
+than in accordance with clause 2.
+
+1.6.
+
+Definitions and interpretation
+
+In this Determination, unless the contrary intention appears:
+(a) words and phrases in bold italics have the meanings given to them in part A of Schedule 1 (or,
+where only used within a clause, the meaning given upon their first use); and
+(b) the rules of interpretation in part B of Schedule 1 will apply.
+
+1.7.
+
+Annexure A
+
+(a) For convenience, Annexure A to this Determination summarises the assumptions underpinning
+the prices to apply to Melbourne Water during the regulatory period or the manner in which
+such prices are to be calculated, determined or otherwise regulated.
+1. General
+Essential Services Commission Melbourne Water Determination
+
+4
+
+(b) Full details of these assumptions are contained in the commission’s decision in which it has set
+out its reasons for this Determination.
+(c) For the avoidance of doubt, Annexure A does not form part of this Determination.
+
+1. General
+Essential Services Commission Melbourne Water Determination
+
+5
+
+2. Price control
+2.1
+
+General principles
+
+Subject to this Determination:
+(a) Scheduled prices
+Melbourne Water must not charge more than:
+(i) the scheduled prices in Schedule 2, during the first regulatory year; and
+(ii) the amounts determined in accordance with clause 2.3, during each subsequent regulatory
+year,
+in respect of those prescribed services to which the scheduled prices in Schedule 2 relate.
+(b) Application principles
+The application principles in Schedule 3 will apply to the prices charged by Melbourne Water in
+respect of prescribed services specified or deemed to be included in Schedule 2 during the
+regulatory period.
+(c) Pricing principles
+During the regulatory period, Melbourne Water must apply the pricing principles in Schedule 4
+when determining the prices to apply to the prescribed services to which the pricing principles in
+Schedule 4 relate.
+(d) Adjustment for changes in the costs associated with the Victorian Desalination Plant
+and annual updates to the trailing average cost of debt
+During the regulatory period, Melbourne Water must apply changes in the costs associated with
+the Victorian Desalination Plant and annual updates to the trailing average cost of debt in
+accordance with Schedule 5 when determining the prices to apply to the prescribed services to
+which the adjustments in Schedule 5 relate.
+
+2.2.
+
+Ancillary matters
+
+(a) Contracts
+Where Melbourne Water has entered into a contract which relates to the provision of prescribed
+services prior to 1 July 2026 (a relevant contract), it may charge the prices for prescribed
+services which are set out in that relevant contract until its expiration, termination or a periodic
+review of the prices set out in the contract. Once a relevant contract has expired or been
+
+2. Price control
+Essential Services Commission Melbourne Water Determination
+
+6
+
+terminated or the prices in a relevant contract have been subject to a periodic review, the
+scheduled prices in Schedule 2 (as adjusted in accordance with this Determination) or the prices
+determined in accordance with the pricing principles in Schedule 4 will apply for the remainder of
+the regulatory period.
+(b) Dispute resolution
+Any dispute as to whether a price has been set in accordance with this Determination will be
+determined by the commission on the basis of its interpretation of this Determination.
+(c) Publication
+Melbourne Water must publish a list of its current prices and pricing principles for prescribed
+services, and all relevant supporting information that it has relied upon to apply the prices or
+pricing principles, on its website at all times during the regulatory period and must provide a
+written copy of the list to its customers on request. The list must clearly indicate in respect of each
+price, the amount determined in accordance with this Determination, the amount of GST payable
+and the total price.
+(d) GST
+Melbourne Water will not be considered to be in contravention of this Determination if a price
+charged by it for a prescribed service exceeds the amount determined in accordance with clause
+2 only by reason of the levying of a charge on account of GST.
+
+2.3.
+
+Annual adjustment of prices
+
+(a) Adjustment
+(i) Subject to clause 2.3(b)(iii), the scheduled prices in Schedule 2 Part A will be adjusted in
+each subsequent regulatory year in the regulatory period in accordance with the formulas
+in clause 2.3(b)(ii) and Schedule 5, and the procedure in clause 2.3(d), and will apply to the
+prescribed services to which the scheduled prices in Schedule 2 Part A relate in that
+regulatory year.
+(ii) The scheduled prices in Schedule 2 Part B will be adjusted in each subsequent regulatory
+year in the regulatory period in accordance with the formulas in clause 2.3(c)(i) and
+Schedule 5, and the procedure in clause 2.3(d), and will apply to the prescribed services
+to which the scheduled prices in Schedule 2 Part B relate in that regulatory year.
+(b) Tariff basket formula
+(i) Subject to Schedule 2 Part A and if applicable Schedule 5, each price for the prescribed
+services referred to in clause 2.3(a)(i) will be adjusted in accordance with the formula set
+
+2. Price control
+Essential Services Commission Melbourne Water Determination
+
+7
+
+out in clause 2.3(b)(ii) with effect from the beginning of each subsequent regulatory year in
+the regulatory period (the revised charge schedule).
+(ii) The average price movement for the regulatory year and for each subsequent regulatory
+year in the regulatory period determined in accordance with the revised charge
+schedule must not exceed the weighted average price movement that would otherwise
+have applied under this Determination as per the following formula:
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+𝑗𝑗=1 𝑝𝑝𝑡𝑡 × 𝑞𝑞𝑡𝑡−2
+
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+�𝑡𝑡−1 × 𝑞𝑞𝑡𝑡−2
+𝑗𝑗=1 𝑝𝑝
+
+≥
+
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+𝑗𝑗=1 𝑝𝑝̂ 𝑡𝑡 × 𝑞𝑞𝑡𝑡−2
+
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+�𝑡𝑡−1 × 𝑞𝑞𝑡𝑡−2
+𝑗𝑗=1 𝑝𝑝
+
+where Melbourne Water has i = 1, 2, …, n charge categories, which each have up to j = 1,
+2, …, m charge components and,
+𝑖𝑖𝑖𝑖
+
+is the scheduled price in regulatory year t for component j of charge i determined in
+accordance with clause 2.3(c)(i) excluding Schedule 5 adjustments
+
+𝑖𝑖𝑖𝑖
+
+is the proposed price in regulatory year t for component j of charge i determined in
+accordance with the revised charge schedule excluding Schedule 5 adjustments
+
+𝑝𝑝𝑡𝑡
+𝑝𝑝̂𝑡𝑡
+
+𝑖𝑖𝑖𝑖
+
+𝑝𝑝�𝑡𝑡−1
+𝑖𝑖𝑖𝑖
+
+𝑞𝑞𝑡𝑡−2
+
+is the price charged in regulatory year t-1 for component j of charge i including
+Schedule 5 adjustments
+is the quantity of component j of charge i that was sold in regulatory year t-2 or, if an
+actual quantity is not available, either an estimate of the quantity that would have been
+sold or a forecast of the quantity that was expected to be sold in regulatory year t-2.
+
+(iii) An increase in any scheduled price in Schedule 2 Part A in any regulatory year in
+accordance with clause 2.3(b)(ii), excluding adjustments in accordance with Schedule 5,
+must not exceed the weighted average of all scheduled price movements in that regulatory
+year by more than 3 per cent in real terms.
+(iv) If the commission has not made a determination in respect to the prices to apply in the next
+regulatory period on or before 30 June 2031, 𝑃𝑃𝑃𝑃𝑀𝑀𝑡𝑡 will be set equal to zero and prices in
+Schedule 2 Part A will be adjusted in accordance with the formulas in clause 2.3(b)(ii) and
+Schedule 5 for regulatory years commencing on or after 1 July 2031 until the date on
+which this Determination is amended or revoked by a later determination.
+
+2. Price control
+Essential Services Commission Melbourne Water Determination
+
+8
+
+(c) Price cap formula
+(i) Subject to Schedule 2 Part B and if applicable Schedule 5, each price for the prescribed
+services referred to in clause 2.3(a)(ii) will be adjusted as per the following formula with
+effect from the beginning of each subsequent regulatory year in the regulatory period:
+𝑖𝑖𝑖𝑖
+
+𝑖𝑖𝑖𝑖
+
+𝑝𝑝𝑡𝑡 = 𝑝𝑝𝑡𝑡−1 ×
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+𝑖𝑖𝑖𝑖
+× (1 + 𝑃𝑃𝑃𝑃𝑃𝑃𝑡𝑡 )
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡−1
+
+where Melbourne Water has i = 1, 2, …, n tariff categories which each have up to j = 1, 2,
+…, m tariff components and,
+is the scheduled price in regulatory year t for component j of tariff I excluding
+Schedule 5 adjustments
+
+𝑖𝑖𝑖𝑖
+
+𝑝𝑝𝑡𝑡
+
+is the scheduled price in regulatory year t-1 for component j of tariff i determined in
+
+𝑖𝑖𝑖𝑖
+
+𝑝𝑝𝑡𝑡−1
+
+accordance clause 2.3(b)(i), excluding Schedule 5 adjustments
+is the All Groups Consumer Price Index: Australia as published by the Australian
+Bureau of Statistics (Table 17 – Series ID: A2325846C) for the March quarter
+immediately preceding the start of regulatory year t
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡−1
+𝑖𝑖𝑖𝑖
+
+𝑃𝑃𝑃𝑃𝑃𝑃𝑡𝑡
+
+is the All Groups Consumer Price Index: Australia as published by the Australian
+Bureau of Statistics (Table 17 – Series ID: A2325846C) for the March quarter
+immediately preceding the start of regulatory year t-1
+is the prescribed price movement for component j of tariff I in regulatory year t
+specified in Schedule 2.
+
+(ii) If the commission has not made a determination in respect of the prices to apply in the next
+regulatory period on or before 30 June 2031, 𝑃𝑃𝑃𝑃𝑃𝑃𝑡𝑡 will be set equal to zero and prices in
+
+Schedule 2 Part B will be adjusted in accordance with the formulas in clause 2.3(c)(i) and
+Schedule 5 for regulatory years commencing on or after 1 July 2031 until the date on
+which this Determination is amended or revoked by a later determination.
+(d) Adjustment procedure
+(i) At least 30 business days prior to the commencement of each subsequent regulatory
+year in the regulatory period, Melbourne Water must submit its proposed prices for the
+prescribed services referred to in clause 2.3(a) to apply in that subsequent regulatory
+year (the revised scheduled prices) to the commission for approval, together with
+sufficient information to enable the commission to assess whether the proposed prices
+comply with this Determination.
+
+2. Price control
+Essential Services Commission Melbourne Water Determination
+
+9
+
+(ii) The commission will approve the revised scheduled prices if it considers that they have
+been calculated in accordance with the formulas set out in clauses 2.3(b)(ii), 2.3(b)(iii) and
+2.3(c)(i).
+(iii) The commission will be deemed to have approved the revised scheduled prices if it has
+not provided notice under clause 2.3(d)(iv) to Melbourne Water within 20 business days
+from the date of its receipt of the revised scheduled prices.
+(iv) If the commission does not approve the revised scheduled prices, the commission:
+(A) will provide notice to Melbourne Water (including a statement of its reasons);
+(B) may request Melbourne Water to provide any additional information specified by the
+commission;
+(C) will take any additional information provided by Melbourne Water into account; and
+(D) will determine the revised scheduled prices.
+
+2.4.
+
+Price changes during a billing period
+
+(a) Application of this clause
+This clause 2.4 applies where Melbourne Water issues an invoice in respect of a billing period
+during which a change to any price for a prescribed service comes into effect in accordance with
+this Determination.
+(b) Method of charging
+Melbourne Water must not charge the prices determined in accordance with this Determination in
+respect of any part of a billing period prior to the effective date of the change, but may charge for
+prescribed services in respect of the periods before and after the effective date of the change at
+the prices applicable for each of those periods on a pro-rata basis.
+
+2.5.
+
+Reporting requirements
+
+(a) Melbourne Water must make available to the commission all information reasonably requested
+by the commission from time to time for the purpose of enabling it to confirm that Melbourne
+Water is complying with this Determination.
+(b) Without limiting clause 2.5(a), if, during the regulatory period, Melbourne Water renews,
+renegotiates or enters into a contract which relates to the provision of a prescribed service
+(new contract) to which the pricing principles in Schedule 4 relate, Melbourne Water must, on
+request by the commission, provide the commission with a notice specifying:
+(i) details of the new contract; and
+(ii) information which demonstrates the way in which the prices in the new contract reflect the
+relevant pricing principles.
+
+2. Price control
+Essential Services Commission Melbourne Water Determination
+
+10
+
+(c) Without limiting clause 2.5(a), if Melbourne Water proposes to stop providing a prescribed
+service or refuses to provide a prescribed service to a customer, or potential customer,
+during the regulatory period, it must:
+(i) in the case of a proposal to stop providing a prescribed service, provide a notice to the
+commission stating the nature of the prescribed service which it proposes to stop
+providing and the reason why it proposes to stop providing the prescribed service, at least
+30 business days prior to the date upon which Melbourne Water proposes to stop
+providing the prescribed service; and
+(ii) in the case of a refusal to provide a prescribed service to a customer, or potential
+customer, provide a notice to the commission within 5 business days of the refusal, stating
+the nature of the prescribed service and the reason for the refusal.
+
+2. Price control
+Essential Services Commission Melbourne Water Determination
+
+11
+
+3. Amendment of Schedule 2 Part B – Change to
+tariff basket form of price controlAmendment
+(i) Melbourne Water may apply to the commission in accordance with this clause 3 and
+Schedule 5 for the amendment of the prescribed price movements and/or price components
+specified in Schedule 2 Part B for the following regulatory year (the next regulatory year)
+and all subsequent regulatory years in the regulatory period (the revised tariff
+schedule).
+(ii) The average price movement for the next regulatory year and for each subsequent
+regulatory year in the regulatory period determined in accordance with the revised tariff
+schedule must not exceed the weighted average price movement that would otherwise
+have applied under this Determination as per the following formula:
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+𝑗𝑗=1 𝑝𝑝𝑡𝑡 × 𝑞𝑞𝑡𝑡−2
+
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+�𝑡𝑡−1 × 𝑞𝑞𝑡𝑡−2
+𝑗𝑗=1 𝑝𝑝
+
+≥
+
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+𝑗𝑗=1 𝑝𝑝̂ 𝑡𝑡 × 𝑞𝑞𝑡𝑡−2
+
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+∑𝑛𝑛𝑖𝑖=1 ∑𝑚𝑚
+�𝑡𝑡−1 × 𝑞𝑞𝑡𝑡−2
+𝑗𝑗=1 𝑝𝑝
+
+where Melbourne Water has i = 1, 2, …, n tariff categories, which each have up to j = 1, 2,
+…, m tariff components and,
+𝑖𝑖𝑖𝑖
+
+is the scheduled price in regulatory year t for component j of tariff i determined in
+accordance clause 2.3(c)(i) excluding Schedule 5 adjustments
+
+𝑖𝑖𝑖𝑖
+
+is the proposed price in regulatory year t for component j of tariff i determined in
+accordance with the revised tariff schedule, excluding Schedule 5 adjustments
+
+𝑝𝑝𝑡𝑡
+𝑝𝑝̂𝑡𝑡
+
+𝑖𝑖𝑖𝑖
+
+𝑝𝑝�𝑡𝑡−1
+𝑖𝑖𝑖𝑖
+𝑞𝑞𝑡𝑡−2
+
+is the price charged in regulatory year t-1 for component j of tariff i including
+Schedule 5 adjustments
+is the quantity of component j of tariff i that was sold in regulatory year t-2 or, if an
+actual quantity is not available, either an estimate of the quantity that would have been
+sold or a forecast of the quantity that was expected to be sold in regulatory year t-2.
+
+(iii) An increase in any scheduled price in Schedule 2 Part B in any regulatory year in
+accordance with clause 3(a)(ii), excluding adjustments in accordance with Schedule 5, must
+not exceed the weighted average of all scheduled price movements in that regulatory year
+by more than 3 per cent in real terms.
+
+3. Amendment of Schedule 2 Part B – Change to tariff basket form of price control
+Essential Services Commission Melbourne Water Determination
+
+12
+
+(b) Amendment procedure
+(i) An application by Melbourne Water under this clause 3 must be received by the
+commission at least 80 business days prior to the commencement of the next regulatory
+year and must be accompanied by the following information:
+(A) a clearly articulated new tariff strategy in relation to the revised tariff schedule that is
+consistent with clause 11 of the WIRO (the revised tariff strategy) or an explanation of
+how the revised tariff schedule is consistent with the current tariff strategy for
+Melbourne Water approved by the commission in connection with this Determination
+(the current tariff strategy);
+(B) a revised tariff schedule that specifies proposed prices for the next regulatory year
+and prescribed price movements for each subsequent regulatory year in the
+regulatory period that is consistent with the revised tariff strategy or the current
+tariff strategy, as the case may be, and complies with clause 3(a)(ii);
+(C) a statement setting out evidence demonstrating that Melbourne Water has provided
+information to its customers explaining the revised tariff schedule and how the revised
+tariff schedule relates to the revised tariff strategy or the current tariff strategy, as
+the case may be, and has consulted effectively with its customers on the revised tariff
+strategy (if applicable) and the revised tariff schedule;
+(D) a statement setting out the customer impacts resulting from the revised tariff schedule
+and actions proposed by Melbourne Water to address these customer impacts; and
+(E) an explanation of the calculation of the quantities specified in clause 3(a)(ii), including
+whether and why it is reasonable.
+(ii) The commission may approve the revised tariff schedule submitted by Melbourne Water
+under this clause 3 if it is satisfied that:
+(A) the revised tariff strategy (if applicable) is consistent with clause 11 of the WIRO;
+(B) the revised tariff schedule is consistent with the revised tariff strategy or the current
+tariff strategy for Melbourne Water, as the case may be;
+(C) the price movements calculated in accordance with the revised tariff schedule comply
+with clause 3(a)(ii);
+(D) Melbourne Water has consulted effectively with its customers on the revised tariff
+strategy (if applicable) and the revised tariff schedule;
+(E) Melbourne Water has effectively addressed customer impacts resulting from the
+revised tariff schedule;
+(F) the basis for calculating the quantities specified in clause 3(a)(ii) is reasonable; and
+(G) Melbourne Water has provided all information required under clause 3(b)(i)(A)-(E).
+(iii) In determining whether it will approve the revised tariff schedule, the commission may
+request Melbourne Water to provide any additional information specified by the
+commission and/or to resubmit any of the matters in clause 3(b)(i)(A)–(E).
+
+3. Amendment of Schedule 2 Part B – Change to tariff basket form of price control
+Essential Services Commission Melbourne Water Determination
+
+13
+
+(iv) The commission will be deemed to have not approved a revised tariff schedule if it has
+not provided notice to Melbourne Water within 40 business days from the date of its
+receipt of Melbourne Water’s application under this clause 3.
+(v) An approved revised tariff schedule will be taken to amend Schedule 2 to the extent of
+any inconsistency.
+
+3. Amendment of Schedule 2 Part B – Change to tariff basket form of price control
+Essential Services Commission Melbourne Water Determination
+
+14
+
+4. Uncertain or unforeseen events
+4.1.
+
+General principles
+
+(a) Melbourne Water may apply to the commission for the amendment of this Determination
+and/or the adjustment of the scheduled prices in Schedule 2 to reflect increased or decreased
+costs incurred by Melbourne Water and/or increased or decreased revenue received by
+Melbourne Water as a result of events which were uncertain or unforeseen at the time this
+Determination was made (an uncertain events application).
+(b) Whether or not Melbourne Water makes an application under clause 4.1(a), it must promptly
+notify the commission upon becoming aware of an event which could form part or all of the
+basis of an application.
+(c) The commission may on its own initiative, and in its sole discretion, initiate its own process to
+amend this Determination and/or adjust the scheduled prices in Schedule 2 to reflect increased
+or decreased costs incurred by Melbourne Water and/or increased or decreased revenue
+received by Melbourne Water as a result of events which were uncertain or unforeseen at the
+time this Determination was made. Such a process may only be initiated if the commission
+identifies an event or events which it, in its sole discretion, considers has had or may have a
+material impact on Melbourne Water’s operating expenditure and/or capital expenditure and/or
+revenue.
+(d) The commission may only amend this Determination and/or adjust the scheduled prices in
+Schedule 2 in response to an uncertain events application, or a process initiated by the
+commission under clause 4.1(c), where the commission is satisfied that such action is
+necessary or desirable to take account of events that were uncertain or unforeseen at the time
+of making this Determination and that such action takes into account the interests of customers.
+The commission may limit an adjustment to only some events or a single event.
+
+4.2.
+
+Considerations by the commission
+
+(a) Examples of uncertain or unforeseen events
+Examples of potential uncertain or unforeseen events include, but are not limited to:
+(i) actual licence fees or contributions payable by Melbourne Water during a regulatory year
+in the regulatory period under section 51 of the Safe Drinking Water Act 2003 (Vic),
+section 55 of the Environment Protection Act 2017 (Vic) and section 4H(2) of the WI Act
+which differ from the forecast licence fees or contributions set out in Annexure A for that
+regulatory year;
+(ii) changes in the timing or scope of expenditure by Melbourne Water on major capital
+projects;
+4. Uncertain or unforeseen events
+Essential Services Commission Melbourne Water Determination
+
+15
+
+(iii) instances where the commission is satisfied that there is a material difference between the
+forecast demand levels set out in Annexure A and actual demand levels for Melbourne
+Water in one or more regulatory years during the regulatory period; or
+(iv) a change in or to any of the following:
+(A) the WI Act, the Water Act, the Safe Drinking Water Act 2003 (Vic), the State Owned
+Enterprises Act 1992 (Vic) and the Environment Protection Act 2017 (Vic) or relevant
+regulations or orders or other statutory instruments made under any of them;
+(B) any licence issued pursuant to any of the Acts referred to in clause 4.2(a)(iv)(A);
+(C) a bulk entitlement under the Water Act that affects Melbourne Water;
+(D) any tax imposed by or payable directly or indirectly to any government or public authority
+in the Commonwealth of Australia (including GST) but excluding:
+(1) penalties and interest for late payment of any tax; and/or
+(2) any tax that replaces any of the taxes referred to in 4.2(a)(iv)(D), where tax includes
+any rate, duty, charge or other like or analogous impost;
+(E) the Statement of Obligations; or
+(F) the introduction or cessation of a statutory carbon price or tax or a national emissions
+trading scheme or other scheme relating to the reduction of greenhouse gas emissions.
+(b) Exclusions
+In considering an uncertain events application or a process initiated by the commission under
+clause 4.1(c), the commission will not take into account matters that:
+(i) are or should be within Melbourne Water’s control;
+(ii) were or should have been known by Melbourne Water at the time the Determination was
+made;
+(iii) could reasonably have been foreseen by Melbourne Water;
+(iv) should be or should have been planned for or managed by Melbourne Water; and/or
+(v) reflect inefficient expenditure by Melbourne Water.
+(c) Dispute resolution
+Any dispute as to whether a matter should be taken into account by the commission under this
+clause 4 will be determined by the commission in its absolute discretion.
+
+4.3.
+
+Procedure
+
+(a) Application information for Melbourne Water
+(i) An uncertain events application must be accompanied by a statement setting out:
+(A) the details of each relevant uncertain or unforeseen event;
+
+4. Uncertain or unforeseen events
+Essential Services Commission Melbourne Water Determination
+
+16
+
+(B) the amount and timing of any increase or decrease in operating expenditure and/or
+capital expenditure and/or revenue associated with the relevant event during the
+regulatory period;
+(C) the basis for calculating the increase or decrease in operating expenditure and/or capital
+expenditure and/or revenue referred to in clause 4.3(a)(i)(B); and
+(D) details of the proposed action to be taken by the commission under clause 4.3(b).
+(ii) The commission may request Melbourne Water to provide any additional information
+specified by the commission in connection with an uncertain events application.
+Melbourne Water is obliged to provide the requested information to the commission.
+(b) Commission processes
+(i) The commission may in its sole discretion decide the steps, timing of and processes to be
+followed in relation to an uncertain events application or a process initiated by the
+commission under clause 4.1(c).
+(ii) The commission may in its sole discretion decide the nature and extent of stakeholder
+consultation it will undertake in relation to an uncertain events application or a process
+initiated by the commission under clause 4.1(c).
+(iii) The commission will advise Melbourne Water of the matters in clause 4.3(b)(i) and clause
+4.3(b)(ii) in writing and publish details of this on its website.
+(iv) In most cases, an amendment of this Determination and/or adjustment of the scheduled
+prices in Schedule 2, will be undertaken in accordance with the commission’s standard
+consultation process for price determinations, including the issue of a draft decision and an
+invitation for interested parties to make submissions to the commission in relation to the
+draft decision, as set out in clause 16(a) and (b) of the WIRO.
+(v) In some limited circumstances, the commission may amend this Determination and/or
+adjust the scheduled prices in Schedule 2 without or with only limited consultation. This will
+be the case where there is urgency that justifies the commission moving quickly, as set out
+in clause 16(c) of the WIRO. In these circumstances, the commission will provide its
+reasons for proceeding with the amendment and/or price adjustment without consultation
+(or with a modified consultation process).
+(vi) The commission may request Melbourne Water to provide information required for any
+purposes of an uncertain events application or a process initiated by the commission
+under clause 4.1(c). Melbourne Water is obliged to provide the requested information to
+the commission.
+
+4. Uncertain or unforeseen events
+Essential Services Commission Melbourne Water Determination
+
+17
+
+(c) Action by the commission
+If the commission is satisfied of the matters set out in clause 4.1(d) in respect of an uncertain
+events application or a process initiated by the commission under clause 4.1(c), the commission
+may, in its absolute discretion:
+(i) amend this Determination and/or adjust the scheduled prices in Schedule 2 (and make any
+consequential adjustments to Annexure A) with effect from a date and in a manner decided
+by the commission (in respect of one or more events) at a time decided by the commission;
+or
+(ii) take the uncertain events application or any process initiated by the commission under
+clause 4.1(c) into account in making its determination in respect of the prices which
+Melbourne Water may charge for prescribed services in the next regulatory period.
+(d) Effective date of amendment and/or price adjustment
+A determination made by the commission under this clause 4 to amend this Determination and/or
+adjust the scheduled prices in Schedule 2 takes effect from the date on which notice of its making
+is published in the Government Gazette or any later date of commencement as may be specified in
+the determination.
+
+4. Uncertain or unforeseen events
+Essential Services Commission Melbourne Water Determination
+
+18
+
+5. Material error or unintended consequences
+(a) Where the commission is satisfied that in any material respect:
+(i) this Determination or any information relied upon in the making of this Determination
+contains an error, deficiency or miscalculation;
+(ii) any information on which this Determination was based was false or misleading in a
+material respect; or
+(iii) such amendment or price adjustment is necessary or desirable to avoid an unintended
+consequence of this Determination,
+the commission may decide to amend this Determination and/or adjust the scheduled prices in
+Schedule 2, provided that it is satisfied that such amendment and/or price adjustment takes into
+account the interests of customers.
+(b) In most cases, an amendment of this Determination and/or adjustment of the scheduled prices
+in Schedule 2, will be undertaken in accordance with the commission’s standard consultation
+process for price determinations, including the issue of a draft decision and an invitation for
+interested parties to make submissions to the commission in relation to the draft decision, as
+set out in clause 16(a) and (b) of the WIRO.
+(c) In some limited circumstances, the commission may amend this Determination and/or adjust
+the scheduled prices in Schedule 2 without further consultation, or with only limited
+consultation. This will be the case where an amendment and/or price adjustment is not
+sufficiently material to warrant a full consultation process, or where there is urgency that
+justifies the commission moving quickly, as set out in clause 16(c) of the WIRO. In these
+circumstances, the commission will provide its reasons for proceeding with the amendment
+and/or price adjustment without consultation (or with a modified consultation process).
+(d) A determination made by the commission under this clause 5 to amend this Determination
+and/or adjust the scheduled prices in Schedule 2 takes effect from the date on which notice of
+its making is published in the Government Gazette or any later date of commencement as may
+be specified in the determination.
+
+5. Material error or unintended consequences
+Essential Services Commission Melbourne Water Determination
+
+19
+
+Schedule 1 – Definitions and interpretation
+A
+
+Definitions
+
+bulk supply agreement means an agreement between Melbourne Water and a water
+corporation for the supply of bulk water and/or bulk sewerage services by Melbourne Water.
+business day means a day on which banks are open for general banking business in Melbourne,
+not being a Saturday or a Sunday.
+connection applicant means the owner or occupier of a property that is seeking connection to a
+water corporation’s works that is a large and/or complex connection; or a direct customer
+seeking connection to Melbourne Water’s works.
+connections policy means a policy published by Melbourne Water that sets out the types of
+connection services and customers covered, the connection processes, charges payable and
+dispute resolution arrangements.
+desalination water order management costs means the actual costs of managing the Victorian
+desalination water order in a given financial year, calculated as the sum of mechanical and
+electrical asset maintenance costs, chemical savings and electricity consumption priced at the
+benchmark electricity price:
+Cost Item
+
+Basis
+
+Mechanical & electrical asset Each instance of bladder replacement which is sporadic
+maintenance (increased
+
+depending on the cumulative cycle times year-on-year. For five,
+
+maintenance)
+
+back-to-back large water orders above 125GL, two bladder
+replacements are expected within that period.
+
+Chemical savings
+
+Reduction in chemical costs (e.g. fluorosilicic acid) at Silvan
+and/or Cardinia Reservoir as a result of treated desalinated water
+received from consecutive, large orders.
+
+Electricity (pumping)
+
+Cost of additional pumping between Cardinia and Silvan
+Reservoir required to manage large water orders (e.g. a 125GL
+water order may require additional pumping of 15GL), based on
+the benchmark electricity price per MWh in 2025-26 dollars:
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+$85.52
+
+$84.51
+
+$92.44
+
+$102.20
+
+$133.45
+
+Schedule 1 – Definitions and interpretation
+Essential Services Commission Melbourne Water Determination
+
+20
+
+direct customer means a person for whom Melbourne Water is able, consistent with the Water
+Act, any relevant bulk entitlements granted under the Water Act, and any other relevant legislation
+and regulations, to:
+• provide, manage, operate, maintain and protect water supply systems for the supply of water; or
+• provide, manage, operate, maintain and protect systems for the collection, in bulk, of sewage;
+but
+is not a water corporation e.g. a person prescribed for the purposes of section 171B or 184A of
+the Water Act.
+diversion service has the meaning given in the WIRO.
+ESC Act means the Essential Services Commission Act 2001 (Vic).
+GST has the meaning given in section 195-1 of the A New Tax System (Goods and Services) Tax
+Act 1999 (Cth).
+large and/or complex connections means new or amended connections that meet both
+conditions (a) and (b):
+(a) the new or amended connection:
+• is a direct connection of a direct customer to Melbourne Water’s works; or
+• has an instantaneous peak, annual demand, or trade waste load significantly higher or different
+to those of residential, domestic or light commercial use as set out in the connections policies
+of Melbourne Water and/or the water corporation in whose district the property is located.
+(b) the new or amended connection requires Melbourne Water to:
+• construct works to service the connection directly, or indirectly via the water corporation’s
+works; or
+• construct works earlier and/or at a greater capacity than planned.
+Melbourne Water means Melbourne Water Corporation (trading as Melbourne Water (ABN 81 945
+386 953)).
+miscellaneous services means services that are provided in direct connection with prescribed
+services, prices in respect of which are either specified in Schedule 2 or determined in accordance
+with the relevant pricing principles in Schedule 4.
+new contract means any contract for prescribed services which is renewed, renegotiated or
+entered into during the regulatory period.
+
+Schedule 1 – Definitions and interpretation
+Essential Services Commission Melbourne Water Determination
+
+21
+
+next regulatory period means the period commencing on 1 July 2031 and ending on a date
+specified by the commission.
+non-project deed costs means the costs incurred by the State during the term of the Project
+Deed for managing the Victorian Desalination Project, other than Project Deed Payments.
+offer means the terms and conditions provided by Melbourne Water to either a sewer miner,
+water corporation, or direct customer to connect to Melbourne Water’s works.
+prescribed services has the meaning given in the WIRO and includes miscellaneous services.
+RAB means regulatory asset base.
+regulated entity has the meaning given in the WIRO.
+regulatory period means the period commencing on 1 July 2026 and ending on 30 June 2031.
+regulatory year means each period of 12 months commencing on 1 July and ending on 30 June.
+relevant contract means a contract which relates to the provision of prescribed services.
+relevant tax means any tax imposed by or payable directly or indirectly to any government or
+public authority in the Commonwealth of Australia (including GST) but excluding:
+(a) the licence fees referred to in clause 4.2 of this Determination;
+(b) penalties and interest for late payment of any tax; or
+(c) any tax that replaces any of the taxes referred to in (a) and (b), where tax includes any rate,
+duty, charge or other like or analogous impost.
+sewer miner may be a water corporation or direct customer and means the entity that conducts
+sewer mining as approved by Melbourne Water consistent with Melbourne Water’s connections
+policy and relevant legislation, regulation and policy, as amended from time to time.
+Statement of Obligations means an applicable statement of obligations made under section 4I(2)
+of the Water Industry Act 1994 (Vic).
+supply agreement means an agreement between Melbourne Water and a direct customer who
+may also be a sewer miner.
+Water Act means the Water Act 1989 (Vic).
+water corporations means those that have a bulk supply agreement with Melbourne Water,
+which includes Barwon Water, Gippsland Water, Greater Western Water, South East Water, South
+Gippsland Water, Westernport Water and Yarra Valley Water, plus any other water corporation that
+enters into a bulk supply agreement with Melbourne Water.
+
+Schedule 1 – Definitions and interpretation
+Essential Services Commission Melbourne Water Determination
+
+22
+
+waterways and drainage service has the meaning given to the term 'metropolitan waterways and
+drainage service' in the WIRO.
+WI Act means the Water Industry Act 1994 (Vic).
+WIRO means the Water Industry Regulatory Order 2014 in force as at the date of this
+Determination.
+
+B
+
+Interpretation
+
+Headings are for convenience only and do not affect interpretation. The following rules apply
+unless the context requires otherwise.
+(a) The singular includes the plural, and the converse also applies.
+(b) If a word or phrase is defined, its other grammatical forms have a corresponding meaning.
+(c) A reference to a person includes a corporation, trust, partnership, unincorporated body or other
+entity, whether or not it comprises a separate legal entity.
+(d) A reference to a clause or schedule is a reference to a clause of or schedule to this document.
+(e) A reference to a determination, agreement or document (including a reference to this
+document) is to the agreement or document as amended, supplemented, novated or replaced,
+except to the extent prohibited by this document or that other agreement or document.
+(f) A reference to an Act, ordinance, code or other law includes regulations and other instruments
+under it and consolidations, amendments, re-enactments or replacements of any of them.
+(g) If a period of time is specified and commences on a given day or on a day of an act or event,
+the period of time is to be calculated inclusive of that day.
+(h) Any “notice” to be given or matter to be “notified” must be in writing.
+(i) The symbol ‘Σ’ requires a summation to be performed over the range of variables specified in
+respect of the algebraic terms specified.
+(j) All data which is utilised in calculations made under this Determination will be utilised to the
+accuracy, in terms of the number of decimal places, to which it is given.
+(k) A fixed price, charge or fee determined in accordance with this Determination is to be rounded
+down and specified to two decimal places.
+(l) A volumetric price, charge or fee determined in accordance with this Determination is to be
+rounded down and specified to four decimal places.
+(m) When a calculation is required under this document:
+(i) regulatory year t is the regulatory year in respect of which the calculation is being made;
+(ii) regulatory year t-1 is the regulatory year immediately preceding regulatory year t;
+(iii) regulatory year t-2 is the regulatory year immediately preceding regulatory year t-1.
+
+Schedule 1 – Definitions and interpretation
+Essential Services Commission Melbourne Water Determination
+
+23
+
+Schedule 2 – Prices
+This schedule should be read in conjunction with Schedule 3, Schedule 4 and Schedule 5. Variable
+bulk water and sewerage charges and waterways and drainage tariffs are rounded down to four
+decimal places. All other charges are rounded down to two decimal places.
+
+Schedule 2 Part A — Water and sewerage charges
+Tariff and Price Component
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+1.1 Bulk water headworks charge – South-Central Pool ($/month)*
+Greater Western Water
+
+15,656,466.98
+
+3.35%
+
+1.31%
+
+1.31%
+
+1.31%
+
+South East Water
+
+19,794,213.53
+
+5.40%
+
+-0.46%
+
+-0.46%
+
+-0.46%
+
+Yarra Valley Water
+
+19,569,389.97
+
+10.81%
+
+-1.75%
+
+-1.75%
+
+-1.75%
+
+Barwon Water
+
+415,032.00
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+South Gippsland Water
+
+53,899.90
+
+30.97%
+
+30.97%
+
+30.97%
+
+30.97%
+
+Westernport Water
+
+22,574.70
+
+20.40%
+
+20.40%
+
+20.40%
+
+20.40%
+
+Gippsland Water
+
+29,202.06
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+* 2026-27 prices include the cost of the 150GL desalinated water order.
+
+1.2 Bulk water usage charges – South-Central Pool ($/ML supplied)
+Drinking water (Greater
+Western Water, South East
+Water, Yarra Valley Water,
+Barwon Water, Westernport
+
+832.7533
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+638.2704
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Water, South Gippsland
+Water, Gippsland Water)
+Raw water (South East
+Water, Yarra Valley Water,
+Gippsland Water)
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+24
+
+Tariff and Price Component
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+1.3 Bulk water headworks charge – North South Pipeline ($/ML entitlement)
+Greater Western Water,
+South East Water, Yarra
+
+471.31
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Valley Water
+1.4 Bulk sewerage usage charges – Treatment ($/ML)
+Western System (Greater
+Western Water, South East
+
+75.2392
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+91.6028
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Water, Yarra Valley Water)
+Eastern System (South East
+Water, Yarra Valley Water)
+
+1.5 Bulk sewerage usage charges – Transfer ($/ML)
+Western System (Greater
+Western Water, South East
+
+15.4579
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+5.0589
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Water, Yarra Valley Water)
+Eastern System (South East
+Water, Yarra Valley Water)
+
+1.6 Bulk sewerage usage charges – Load ($/tonne)
+Biochemical oxygen
+demand – Eastern System
+Biochemical oxygen
+demand – Western System
+Suspended solids – Eastern
+System
+Suspended solids – Western
+System
+Total kjeldahl nitrogen –
+Eastern System
+
+964.1201
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+615.1965
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+504.8567
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+167.5916
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+386.1893
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+25
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+1,612.9390
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+40.1387
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Tariff and Price Component
+Total kjeldahl nitrogen –
+Western System
+Inorganic total dissolved
+solids – Western System
+
+1.7 Bulk sewerage service charge ($/month)
+Greater Western Water
+
+9,461,946.12
+
+6.77%
+
+8.83%
+
+8.83%
+
+8.83%
+
+South East Water
+
+18,839,150.85
+
+1.90%
+
+3.92%
+
+3.92%
+
+3.92%
+
+Yarra Valley Water
+
+19,049,507.76
+
+-1.73%
+
+0.25%
+
+0.25%
+
+0.25%
+
+1.8 Other
+Various non-core
+
+In accordance with pricing principles/ at cost
+
+miscellaneous items
+
+Schedule 2 Part B — Waterways and drainage tariffs
+Tariff and Price Component
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+2.1 Waterways and drainage charge
+For all properties located within the area designated as the Urban Growth Boundary and major airports,
+except those indicated in 2.2
+
+Residential (per annum)
+
+130.56
+
+-0.48%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Non-residential (per annum)
+
+196.16
+
+-0.72%
+
+0.00%
+
+0.00%
+
+0.00%
+
+2.2 Waterways and drainage charge
+For all properties located outside the area designated as the Urban Growth Boundary, except major
+airports and those indicated in 2.3
+
+Rural (per annum)
+
+71.65
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+26
+
+Tariff and Price Component
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+2.3 Special drainage area charge
+For all properties in the following parts of the former Dandenong Valley and Western Port Authority area as
+at 5 November 1991 which, up to 1997, were subject to a special drainage and river improvement rate
+
+Koo Wee Rup–Longwarry
+flood protection district
+(per annum)
+
+258.65
+
+5.16%
+
+5.16%
+
+5.16%
+
+5.16%
+
+Properties with access to
+timber jetties
+
+922.65
+
+-2.82%
+
+-2.82%
+
+-2.82%
+
+-2.82%
+
+Properties with access to
+concrete jetties
+
+852.08
+
+-2.82%
+
+-2.82%
+
+-2.82%
+
+-2.82%
+
+Jetties annual maintenance
+
+170.26
+
+29.97%
+
+29.97%
+
+29.97%
+
+29.97%
+
+Quiet Lakes bore flushing *
+
+159.49
+
+17.59%
+
+17.59%
+
+17.59%
+
+17.59%
+
+Patterson Lakes
+
+* For all properties that border one of Lake Legana, Lake Illawong or Lake Carramar in the ‘Quiet Lakes’
+area of Patterson Lakes
+
+2.4 Miscellaneous service fees and charges
+Property information
+statement (Greater Western
+Water, South East Water,
+Yarra Valley Water)
+
+6.00
+
+1.04%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Flood level certificate
+
+57.47
+
+0.65%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Flood feasibility study
+
+In accordance with pricing principles/ at cost
+
+Hydrological data
+Storm frequency analysis for
+selected storm events
+
+189.56
+
+-1.48%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Hydrological data (per dataset
+– daily, hourly, 6 minute)
+
+117.86
+
+-1.48%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Other requests (per hour)
+
+189.56
+
+-1.48%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+27
+
+Tariff and Price Component
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+Construction, works and connections
+Application/ connection fee
+
+217.60
+
+10.00%
+
+10.00%
+
+10.00%
+
+10.00%
+
+Additional connections/ works/
+build over
+
+599.55
+
+10.00%
+
+10.00%
+
+10.00%
+
+10.00%
+
+Application to construct over
+or near Melbourne Water
+easements or assets
+
+294.32
+
+10.00%
+
+10.00%
+
+10.00%
+
+10.00%
+
+1,508.40
+
+10.00%
+
+10.00%
+
+10.00%
+
+10.00%
+
+188.50
+
+-1.48%
+
+0.00%
+
+0.00%
+
+0.00%
+
+381.93
+
+10.00%
+
+10.00%
+
+10.00%
+
+10.00%
+
+Fast track assessment
+Inspections
+Water supply inspection
+(per hour)
+Inspection fee
+(maximum three inspections)
+
+2.5 Waterway diversion charges – Unregulated waterways
+Licence service fee –
+All licences (per annum)
+
+342.87
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Power generation licence
+(per kilowatt)
+
+30.77
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+All-months licence
+
+44.97
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+On–stream winter-fill
+
+22.64
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+Off–stream winter-fill
+
+22.64
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+Licensed farm dam
+
+22.64
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+2.83
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+Non-consumptive
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+28
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+Works operating licence –
+General (per annum)
+
+77.31
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Works operating licence –
+Hazardous dam (per annum)
+
+130.89
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Tariff and Price Component
+
+2.6 Waterway diversion charges - Regulated waterways
+Licence service fee –
+All licences (per annum)
+
+342.87
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+All-months licence
+
+94.15
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+Off-stream winter-fill
+
+22.64
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Licence service fee
+(per annum)
+
+342.87
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+Volume charge (per ML) –
+All-months licence
+
+44.9790
+
+0.10%
+
+0.10%
+
+0.10%
+
+0.10%
+
+2.7 Stormwater harvesting charges
+
+2.8 Application fees
+Transfer – Sale of land
+
+In accordance with pricing principles/ at cost
+
+Amalgamation, subdivision
+(existing licence)
+
+In accordance with pricing principles/ at cost
+
+Minor amendment (e.g. add or
+remove parcel/ party/ existing
+entity to existing licence)
+
+In accordance with pricing principles/ at cost
+
+Transfer – Downstream trade
+
+In accordance with pricing principles/ at cost
+
+Transfer – Upstream trade
+
+In accordance with pricing principles/ at cost
+
+Transfer – Repeat trade
+application
+
+In accordance with pricing principles/ at cost
+
+New licence – Stormwater
+
+In accordance with pricing principles/ at cost
+
+New licence – Power
+generation/ Non-consumptive
+
+In accordance with pricing principles/ at cost
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+29
+
+Tariff and Price Component
+
+Price
+
+PPM
+
+PPM
+
+PPM
+
+PPM
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+Additional charge where
+irrigation & drainage plan
+required
+
+In accordance with pricing principles/ at cost
+
+Works licence – Amendment
+(e.g. pump replacement)
+
+In accordance with pricing principles/ at cost
+
+New works construction
+licence – Dam/ Stormwater
+
+In accordance with pricing principles/ at cost
+
+New works construction
+licence – Pump only
+
+In accordance with pricing principles/ at cost
+
+Re-issue - Failure to renew –
+Domestic & stock
+
+In accordance with pricing principles/ at cost
+
+Re-issue – Failure to renew –
+All licences
+
+In accordance with pricing principles/ at cost
+
+Re-issue –
+Following revocation
+
+In accordance with pricing principles/ at cost
+
+Copy of record
+
+In accordance with pricing principles/ at cost
+
+Domestic & stock dam
+registration
+
+In accordance with pricing principles/ at cost
+
+Application to renew
+
+In accordance with pricing principles/ at cost
+
+Land information statement
+
+In accordance with pricing principles/ at cost
+
+2.9 Other
+Various non-core
+miscellaneous items
+
+In accordance with pricing principles/ at cost
+
+As set out in clause 1.1(d) of this Determination, the role of the commission in making this
+Determination is limited to determining the maximum prices that Melbourne Water may charge for
+prescribed services during the regulatory period, or the manner in which such prices are to be
+calculated, determined or otherwise regulated.
+It is the role of Melbourne Water to set a tariff for prescribed services in accordance with the
+Water Act and to ensure that tariff complies with this Determination. The commission does not
+have a role in hearing disputes about individual billing issues that users may have.
+
+Schedule 2 – Prices
+Essential Services Commission Melbourne Water Determination
+
+30
+
+Schedule 3 – Application of prices
+3.1
+
+Waterways and drainage tariffs
+
+Waterways and drainage tariffs are applied to serviced properties (as defined in the Water Act)
+located within Melbourne Water’s Waterway Management District.
+(a) Residential properties located within the Urban Growth Boundary are charged a single service
+charge in respect of each separate occupancy, as defined in the Local Government Act 1989.
+A ‘residential property’ includes:
+• a property used or intended to be used primarily as a residence or residences; and
+• in the case of vacant land, land zoned for residential purposes.
+(b) Non-residential properties located within the Urban Growth Boundary are charged a single
+service charge in respect of each separate occupancy, as defined in the Local Government Act
+1989.
+(c) A single service fee reflecting only waterway management costs will be applied to properties
+located outside the Urban Growth Boundary, except major airports and those included under
+tariff category 2.3 in Schedule 2 (commonly known as the ’Rural’ charge).
+(d) Properties located within the Koo Wee Rup–Longwarry flood protection district, which forms
+part of the former Dandenong Valley and Western Port Authority as at 5 November 1991, which
+up to 1997 were subject to a special drainage and river improvement rate, pay a fee per
+serviced property based on the calculation of a 10-year transition from a rate based on 1990
+property values (Net Annual Value as at 30 June 1990) to a flat rate, with an adjustment factor
+for large properties to avoid revenue under recovery during the early years of the transition.
+
+Schedule 3 – Application of prices
+Essential Services Commission Melbourne Water Determination
+
+31
+
+3.2
+
+Miscellaneous fees and charges
+
+The following table sets out the definitions of the miscellaneous services included in Schedule 2.
+Miscellaneous Service
+
+Definition
+
+Property information statement
+
+Provision of information consistent with section 158 of the
+Water Act.
+
+Flood level certificate
+
+Provision of flood level information within 10 days of receiving a
+request under sections 212 and 264 of the Water Act.
+
+Flood feasibility study
+
+Melbourne Water's assistance in determining the most
+appropriate drainage works that would be required to service a
+development.
+
+Hydrological data
+
+Provision of stream flow, levels, storm intensity and rainfall data
+(in hardcopy or digital format) within 10 days of receiving a
+request.
+
+Application to construct over or
+
+Processing of development proposals that involve construction
+
+near Melbourne Water
+
+over or near Melbourne Water easements or assets.
+
+easements or assets
+Stormwater connections/
+
+Melbourne Water requires all new stormwater connections to
+
+third-party works
+
+be made to the local council system. Where this is not possible,
+a stormwater connection application must be made to
+Melbourne Water under section 145 of the Water Act.
+Third-party works include construction of shared paths,
+pedestrian and road crossings, utility crossings and other types
+of works that may affect Melbourne Water assets/ property.
+
+Inspections
+
+On-site inspections in relation to water supply connections and
+repeated visits for complicated construction works, charged on
+an hourly basis.
+
+3.3
+
+Large and/or complex connection charges
+
+(a) Melbourne Water’s charges for large and/or complex connections must be cost
+reflective across the lifecycle of the connection, in accordance with the principles outlined
+in this section and any policies published by Melbourne Water. These charges may be
+included within, or be payable in addition to, any charges applicable to the property by the
+water corporation that has declared the land to be a serviced property.
+Schedule 3 – Application of prices
+Essential Services Commission Melbourne Water Determination
+
+32
+
+(b) Large and/or complex connection charges may be applied to a connection applicant
+via a water corporation, or directly by Melbourne Water for a direct customer.
+(c) Melbourne Water may apply the following charges in relation to large and/or complex
+connections:
+• application and investigation charges
+• special charges which may include incremental financing cost
+• ongoing charges
+• disconnection charges
+• sewer mining charges
+• additional charges where Melbourne Water incurs other costs as a result of the
+connection.
+The following table sets out the definitions of the large and/or complex connection charges that
+apply:
+Large and/or Complex Definition
+Connection Charge
+Application and
+
+Costs associated with reviewing, investigating and assessing the
+
+investigation charges
+
+feasibility of an application from a connection applicant to connect to
+works. This may include investigating whether a new direct connection
+is required, or whether any assets upstream (or downstream) may need
+to be brought forward to service the new connection.
+The activities these charges may apply to include, but are not limited to:
+• technical assessments (including preliminary technical assessments)
+• investigations and feasibility studies
+• commercial and/or financial model development
+• site visits
+• internal or external reports including engineering, environment, legal
+and planning reviews
+• detailed design
+• administrative processing
+• any other direct or indirect cost associated with the investigation or
+application to connect.
+Connection applicants would be provided with a budget estimate
+where costs exceed a threshold of $10,000 as costs could be significant
+depending on the size and complexity.
+Continued next page
+
+Schedule 3 – Application of prices
+Essential Services Commission Melbourne Water Determination
+
+33
+
+Large and/or Complex Definition
+Connection Charge
+Special charges
+
+One-off charges to recover the total incremental cost of a large and/or
+complex connection to Melbourne Water’s works or any asset due to
+the connection (net of benefits). Other than in the case of a direct
+connection, special charges are charged to the water corporation to
+which an applicant seeks to connect and are subsequently passed
+through to the connection applicant via a negotiated new customer
+contribution.
+All costs and all benefits associated with a new connection would be
+included in the special charge calculation including, but not limited to,
+the costs of any new water entitlement, water treatment, desalinated
+water, recycled water, sewage treatment, water network, recycled water
+network, sewerage network capacity, environmental offsets, tax
+implications and any other costs associated with the large and/or
+complex connection.
+
+Ongoing charges
+
+Prices for ongoing charges payable to Melbourne Water via a water
+corporation or directly from a direct customer in respect of a large
+and/or complex connection, will include fixed charges and usage
+charges, and may include reservation charges for supplementary or
+intermittent supply.
+Ongoing charges, including any take or pay charges, are applicable to
+the connection unless the property has disconnected and may be
+included in a supply agreement.
+Fixed charges may include annual service charges that reflect ongoing
+metering, monitoring and other costs incurred directly or indirectly by
+Melbourne Water with the connection.
+Reservation charges may apply if the new connection requires
+supplementary and/or intermittent back-up supply.
+Take or pay charges may apply if conditions in the supply agreement
+have not been met.
+Continued next page
+
+Schedule 3 – Application of prices
+Essential Services Commission Melbourne Water Determination
+
+34
+
+Large and/or Complex Definition
+Connection Charge
+Disconnection charges
+
+Disconnection charges apply to address circumstances when the large
+and/or complex connection:
+• ceases operations, abandons or removes the physical connections
+to the water corporation and/or Melbourne Water’s works, or the
+supply agreement with the customer is terminated; and
+• has paid a special charge to Melbourne Water directly or via the
+water corporation; and
+• the special charge was calculated on the basis of ongoing
+incremental revenue beyond the date of disconnection or Melbourne
+Water needs to invest in rectifying or making its works safe following
+the disconnection.
+Disconnection charges must be set to recover the costs of:
+• any works constructed by Melbourne Water to enable a water
+corporation or, in the case of a direct customer, to serve a given
+large and/or complex connection and must consider the forecast
+utilisation of the works constructed by the wider customer base,
+including any contribution made to Melbourne Water by the large
+and/or complex connection via a water corporation or directly
+from the direct customer
+• rectification, repair and making good any damage to the site arising
+from the works
+• any and all remediation works necessary to return the site to a
+condition compliant with applicable environmental laws.
+Depending on whether capital costs have been fully recovered upfront,
+a disconnection charge may reflect the cost of expenditure to make the
+works safe or remove the works. This can include rehabilitation and
+rectification works that are required to return Melbourne Water’s works
+as whole and functioning.
+In the case where capital costs have not been fully recovered over the
+lifetime of the large customer, a disconnection charge may reflect any
+remaining capital costs to ensure that existing customers are protected
+and avoid stranded assets.
+Continued next page
+
+Schedule 3 – Application of prices
+Essential Services Commission Melbourne Water Determination
+
+35
+
+Large and/or Complex Definition
+Connection Charge
+Disconnection charges
+
+In setting disconnection charges, Melbourne Water must consider,
+
+(continued)
+
+after assessing relevant financial and other risks to the connection
+applicant and project, whether a proportion of estimated disconnection
+fees should be secured by requiring provision of a bank guarantee,
+letter of credit or other similar instrument, which must be transferable to
+any successor or subsequent operator over the life of the connection.
+Any security arrangement should take account of the financing and
+other costs incurred by the customer.
+
+Schedule 3 – Application of prices
+Essential Services Commission Melbourne Water Determination
+
+36
+
+Schedule 4 – Pricing principles
+4.1
+
+Recycled water pricing principles
+
+Recycled water prices should be set so as to:
+• have regard to the price of any substitutes and customers’ willingness to pay;
+• cover the full cost of providing the service (with the exception of services related to specified
+obligations or maintaining balance of supply and demand); and
+• include a variable component.
+Where Melbourne Water does not propose to fully recover the costs associated with recycled
+water, it must demonstrate to the commission that:
+• it has assessed the costs and benefits of pursuing the recycled water project;
+• it has clearly identified the basis on which any revenue shortfall is to be recovered; and
+• if the revenue shortfall is to be recovered from non-recycled water customers, either the project
+is required under the Statement of Obligations which applies to Melbourne Water or pursuant
+to other government policies that apply to Melbourne Water or there has been consultation with
+the affected customers about their willingness to pay for the benefits of increased recycling.
+
+4.2
+
+Pricing principles where scheduled prices do not apply
+
+Where the prices set out in Schedule 2 do not apply because the nature of the service provided to
+a particular customer (including, in the case of trade waste customers, the volume or load of waste
+treated) is unique, prices must be set as follows:
+• variable prices (including, in the case of trade waste customers, load-based charges) should
+reflect the long run marginal cost of providing services (including, in the case of trade waste
+customers, trade waste transfer, treatment and disposal);
+• the total revenue received from each customer should be greater than the cost that would be
+avoided from ceasing to serve that customer, and (subject to meeting avoidable cost) less than
+the standalone cost of providing the service to the customer in the most efficient manner;
+• the methodology used to allocate common and fixed costs to that customer should be clearly
+articulated and be consistent with any guidance provided by the commission;
+• prices should reflect reasonable assumptions regarding the customer’s demand for services
+(including, in the case of trade waste customers, the volume and strength of trade waste
+anticipated to be produced by that customer);
+• depreciation rates and rates of return used to determine prices should be consistent with those
+adopted by the commission for the purposes of making this Determination;
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+37
+
+• customers should be provided with full details of the manner in which prices have been
+calculated and any new, renewed or renegotiated contractual agreements with customers
+should indicate that the prices to apply are subject to any determination made by the
+commission; and
+• where applying these principles results in significant changes to prices or tariff structures,
+arrangements for phasing in the changes may be considered and any transitional arrangements
+should be clearly articulated.
+
+4.3
+
+Developer charges, drainage schemes
+
+Developer charges will be calculated by:
+• identifying historic and future capital expenditure for each year of the expected life of the
+scheme;
+• determining the appropriate developable unit (developable hectares for greenfield schemes,
+developable floor area or other density unit where appropriate for infill schemes);
+• identifying actual income and developable units;
+• identifying forecast developable units each year;
+• applying a pre-tax real discount rate (consistent with that determined by the commission) to
+convert historic and future cash flows into present value terms;
+• setting the developer charge such that the present value of historic and future income equals
+the present value of historic and future costs, where future income is equal to the developable
+units in each year multiplied by the developer charge; and
+• reviewing the financial assumptions relating to each scheme on an annual basis and reviewing
+engineering specifications every five years.
+
+4.4
+
+Developer charges, stormwater quality
+
+• Stormwater quality charges comprise a Scheme Stormwater Quality Charge and a Stormwater
+Quality Offset Charge, and reflect the nitrogen discharged by the scheme relative to the
+minimum standard. These charges will apply where a development does not meet the minimum
+standard.
+• The Scheme Stormwater Quality Charge is scheme-specific and recovers the cost of schemerelated stormwater quality initiatives. The charge is applied to the mass of nitrogen discharged,
+relative to the required minimum standard.
+• The Stormwater Quality Offset Charge is applied to developments which cannot meet the
+required minimum nitrogen reduction standard relative to the impervious area. The charge
+recovers the cost of stormwater management as identified by Melbourne Water’s stormwater
+program and funds an equivalent amount of nitrogen reduction outside the development. This
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+38
+
+charge does not apply if minimum treatment standards are met or if the development is
+contributing to a council managed offset scheme.
+• Where on-site stormwater treatment is undertaken, the developer will receive an offset of up to
+the full amount of their stormwater quality charges.
+• Charges for greenfield schemes will be based on on-site works undertaken by the developer,
+the Stormwater Quality Offset Charge and Scheme Stormwater Quality Charge.
+• Charges for non-scheme area developments will be based on on-site works and the Stormwater
+Quality Offset Charge.
+
+4.5
+
+Pricing principles for large and/or complex connections
+
+The following principles relate to large and/or complex connection charges that Melbourne
+Water sets under section 264(1) of the Water Act. Large and/or complex connection charges
+for Melbourne Water apply to the water corporations.
+Application and investigation charges pricing principles
+Prices for application and investigation charges must be set according to the actual cost calculated
+on the basis of the aggregate of:
+• direct third party or contractor invoice cost;
+• direct marginal internal costs including labour, materials and transport costs; and
+• a fair contribution to overheads.
+For bank dishonour, debt collection and legal fees, the third party costs must be charged directly to
+the customer with no contribution for internal costs or a contribution to overheads.
+Special charges pricing principles
+Special charges will be calculated by applying the following pricing principles.
+Special charges must recover incremental and associated costs, and will have regard to:
+• incremental infrastructure and associated costs in one or more of Melbourne Water’s statutory
+cost categories attributable to the water corporation in whose district the connected property is
+located or the direct customer, as a result of a given large and/or complex connection:
+-
+
+incremental infrastructure and associated costs attributable to a given connection must be
+greater than the avoidable cost of not servicing the large and/or complex connection and
+less than the standalone cost of servicing that connection (incremental cost); and
+
+• incremental future revenues (or other benefits) that will be earned by Melbourne Water from the
+water corporation in whose district the connected property is located or the direct customer,
+as a result of that connection.
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+39
+
+Notes:
+1. The efficient pricing bound applies to assessing the adequacy of the incremental costs included
+in the calculation of the special charge. Where the connection arrangement requires assets to
+be gifted to Melbourne Water by a water corporation or directly or via a direct customer, the
+value of those gifted assets will be excluded for the purposes of calculating net costs (and will
+be excluded from Melbourne Water’s regulatory asset base).
+2. Where the connection arrangement requires assets to delivered by a water corporation or
+directly by a direct customer other than Melbourne Water, the incremental costs and benefits
+and gifted assets attributable to those other entities will be excluded for the purposes of
+calculating Melbourne Water’s special charges.
+3. Incremental costs must include:
+(a) incremental financing costs associated with constructing an asset sooner than planned;
+and/or
+(b) connection-specific costs (e.g. transfer network extensions) and incremental shared network
+costs (e.g. supply, transfer and treatment augmentations) to meet the levels of service
+required at the connection.
+Incremental financing costs
+Incremental financing costs (IFC) should be calculated as per the following formula:
+1
+
+where:
+
+𝑟𝑟
+𝑛𝑛
+
+IFC = �1 − (1+r)n � × cost of capital being provided sooner than planned
+is the estimated pre-tax regulatory rate of return reflecting a ‘standard’ cost of equity
+(4.1 per cent) from our relevant guidance
+is the number of years the asset is required sooner than planned.
+
+Ongoing charges pricing principles
+Prices for ongoing charges must be set as follows:
+• variable prices should have regard to the long run marginal cost of providing services (including,
+in the case of sewage and/or trade waste, trade waste transfer, treatment and disposal);
+• the total revenue received from each customer should be greater than the cost that would be
+avoided from ceasing to serve that customer, and (subject to meeting avoidable cost) less than
+the standalone cost of providing the service to the customer in the most efficient manner;
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+40
+
+• the methodology used to allocate common and fixed costs (including a fair contribution of
+overheads) to that customer should be clearly articulated and be consistent with any guidance
+provided by the commission;
+• prices should reflect reasonable assumptions regarding the customer’s demand for services
+(including, in the case of trade waste, the volume and strength of trade waste anticipated to be
+produced by that customer);
+• prices should include any direct third party or contractor invoice cost and/or direct marginal
+internal costs including labour, materials and transport costs;
+• prices should include any costs associated with environmental offsets, or equivalent, as agreed
+with the connection applicant;
+• depreciation rates should reflect the utilisation of the assets in servicing the large and/or
+complex connections;
+• rates of return used to determine prices should be based on a ‘standard’ return on equity of 4.1
+per cent;
+• customers should be provided with full details of the manner in which prices have been
+calculated and any new, renewed or renegotiated contractual agreements with customers
+should indicate that the prices to apply are subject to any determination made by the
+commission, and
+• for bank dishonour, debt collection and legal fees, the third party costs must be charged directly
+to the customer with no contribution for internal costs or a contribution to overheads.
+Disconnection charges pricing principles
+Prices for disconnection charges must be set according to the actual cost calculated on the basis of
+the aggregate of:
+• any remaining capital costs to ensure that existing customers are protected and avoid stranded
+assets;
+• direct third party or contractor invoice cost;
+• direct marginal internal costs including labour, materials and transport costs; and
+• a fair contribution to overheads.
+For bank dishonour, debt collection and legal fees, the third party costs must be charged directly to
+the customer with no contribution for internal costs or a contribution to overheads.
+Sewer mining charges pricing principles and application of charges
+Sewer mining is the practice of extracting sewage from Melbourne Water’s works or a water
+corporation’s works and treating the sewage to recover a desired resource (e.g. recycled water)
+by a sewer miner, where expressly permitted by Melbourne Water and/or the water corporation.
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+41
+
+Sewer mining also involves the management of waste byproducts by way of disposal back to a
+water corporation’s works or Melbourne Water’s works, where permitted.
+Pricing principles
+Prices for sewer mining must be set as follows:
+• variable prices should have regard to the long run marginal cost of providing services (including,
+in the case of sewage and/or trade waste disposal, trade waste transfer, treatment and
+disposal);
+• the total revenue received from the sewer miner should be greater than the cost that would be
+avoided from ceasing to serve the sewer miner, and (subject to meeting avoidable cost) less
+than the stand alone cost of providing the service to the sewer miner in the most efficient
+manner;
+• the methodology used to allocate common and fixed costs (including a fair contribution of
+overheads) to the sewer miner should be clearly articulated and be consistent with any
+guidance provided by the commission;
+• prices should reflect reasonable assumptions regarding the sewer miner’s demand for services
+(including, in the case of trade waste, the volume and strength of trade waste anticipated to be
+produced by the sewer miner);
+• prices should include any direct third party or contractor invoice cost and/or direct marginal
+internal costs including labour, materials and transport costs;
+• depreciation rates should reflect the utilisation of the assets in servicing the large and/or
+complex connections;
+• rates of return used to determine prices should be based on a ‘standard’ return on equity of 4.1
+per cent;
+• sewer miners should be provided with full details of the manner in which prices have been
+calculated and any new, renewed or renegotiated contractual agreements with customers
+should indicate that the prices to apply are subject to any determination made by the
+commission; and
+• for bank dishonour, debt collection and legal fees, the third party costs must be charged directly
+to the customer with no contribution for internal costs or a contribution to overheads.
+Application of the charges
+Where a sewer miner requires infrastructure to be built by Melbourne Water, it will be treated as a
+large and/or complex connection and the provisions in clause 4.5 of this Schedule 4 would apply,
+including those relating to ongoing charges and disconnection charges.
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+42
+
+Prices for sewer mining must be set to recover:
+• application and investigation costs – including, but not limited to, investigation and feasibility
+studies of works to be undertaken by Melbourne Water;
+• connection costs – costs to Melbourne Water to allow a sewer miner to construct physical
+infrastructure and access the sewer including, but not limited to, infrastructure costs,
+augmentation and bring-forward infrastructure costs. Disconnection costs would be incurred by
+the operator when a sewer mining operation ceased;
+• monitoring costs – costs incurred monitoring and managing the composition of sewage
+extractions from, and discharges into, the sewerage system. Monitoring confirms whether
+technical, operational, safety and any trade waste acceptance standards are being met by a
+sewer miner;
+• metering costs – costs incurred measuring the quantities and qualities of sewage extracted and
+trade waste returned to the sewer by the sewer miner, for monitoring and billing purposes.
+Costs could include, but are not limited to, installing, maintaining and reading meters and the
+costs of developing a protocol for measuring sewage volumes;
+• administrative costs – including, but not limited to, costs incurred to reach agreement with a
+sewer miner on terms and conditions, to finalise a contract and to monitor performance under
+the contract. This would include billing costs. There may be additional costs to revise or develop
+maintenance and emergency plans that take the sewer mining operation into account;
+• extraction costs and benefits – costs and benefits that reflect reasonable assumptions regarding
+the sewer miner’s extraction. This would include costs that may be avoided or deferred (either
+capital or operating costs) by Melbourne Water by reduction in sewage volumes and loads at
+the treatment plant, and costs incurred by Melbourne Water to make the connection available;
+• discharge costs – costs associated with discharging waste into the sewer.
+Take or pay charges may apply if conditions in the supply agreement have not been met.
+Where the sewer miner is located on a serviced property, the owner or occupier of that property
+will also be liable for water, sewerage, trade waste and recycled water charges by the water
+corporation in whose district it is located as declared under the Water Act, at the prices resolved
+by that water corporation.
+
+4.6
+
+Pricing principles for miscellaneous services not included in
+
+Schedule 2
+Prices for miscellaneous services must be set according to the actual cost calculated on the
+basis of the aggregate of:
+• direct third party or contractor invoice cost;
+• direct marginal internal costs including labour, materials and transport costs; and
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+43
+
+• a fair contribution to overheads.
+For bank dishonour, debt collection and legal fees, the third party costs must be charged directly to
+the customer with no contribution for internal costs or a contribution to overheads.
+
+4.7
+
+Guidelines
+
+Melbourne Water must comply with any guidelines issued by the commission from time to time
+which relate to the setting of prices for prescribed services to which Schedule 4 relates.
+
+Schedule 4 – Pricing principles
+Essential Services Commission Melbourne Water Determination
+
+44
+
+Schedule 5 – Adjustment of Schedule 2
+If in any regulatory year Condition A and/or Condition B and/or Condition C as specified in
+Schedule 5B and 5C, the price cap formula set out in clause 2.3(c) or the tariff basket formula set
+out in clause 2.3(b) is not applicable to the extent it relates to the prices outlined in Schedule 5A
+(being the prices set out in items 1.1, 1.3, 1.7, 2.1, 2.2 and 2.3 of Schedule 2 of this
+Determination).
+Instead, the prices in Schedule 5A will be adjusted in accordance with the formulas (as applicable)
+specified in Schedule 5B and 5C, with effect from the beginning of each subsequent regulatory
+year in the regulatory period.
+Melbourne Water must comply with any guidance issued by the commission from time to time
+which relate to the setting of prices for prescribed services to which Schedule 2 and Schedule 4
+relate.
+
+Schedule 5A – Adjustments to prices
+Tariffs
+
+1.1 Bulk water headworks charges
+– South-Central Pool a
+1.3 Bulk water headworks charges
+– North-South Pipeline
+1.7 Bulk sewerage service charge b
+2.1 Residential waterways and
+drainage charge
+2.2 Non-residential waterways and
+drainage charge
+2.3 Rural waterways and drainage
+charge
+
+Condition C
+
+Condition B (Change in
+
+(Annual RRR
+
+desalination contract
+
+update)
+
+costs)
+
+Condition C
+(Desalinated
+water order)
+
+X
+
+X
+
+X
+
+X
+X
+X
+
+X
+
+X
+
+a, b Adjustments to be allocated according to retailers’ cost share as outlined in tables 4, 5 and 6 of Annexure A.
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+45
+
+Schedule 5B – Prices
+Condition A – Annual regulatory rate of return update
+Condition A will apply when the actual RRR in any regulatory year t differs from the forecast
+RRR, as per Table 2 of Annexure A, in that year. The actual RRR is calculated as per Formula
+4.
+The difference in the forecast and actual RRR in any regulatory year t is multiplied by the
+average of the regulatory asset base (RAB) -
+
+𝑹𝑹𝑹𝑹𝑹𝑹𝒕𝒕 + 𝑹𝑹𝑹𝑹𝑹𝑹𝒕𝒕−𝟏𝟏
+𝟐𝟐
+
+- to determine the change in
+
+Melbourne Water’s total expected return. The RAB is set out in Table 8 of Annexure A.
+The change between forecast and actual RRR will be apportioned across the tariffs and
+charges listed in Schedule 5A.
+Formula 1 to 6 outlines the process required to determine the actual RRR in any given year.
+Formula 1: Determining nominal return on equity
+𝑅𝑅𝑅𝑅𝑅𝑅 𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 = (1 + 𝜋𝜋𝑅𝑅𝑅𝑅𝑅𝑅 ) × �1 + 𝑅𝑅𝑅𝑅𝐸𝐸 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 � − 1
+𝑅𝑅𝑅𝑅𝑅𝑅 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟
+𝜋𝜋𝑅𝑅𝑅𝑅𝑅𝑅
+
+is the real cost of equity of 4.1% for all regulatory years
+is the inflation factor which is equal to 2.9% for all regulatory years.
+
+Formula 2: Determining nominal cost of debt
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 =
+
+𝐶𝐶𝐶𝐶𝐷𝐷𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛
+
+𝑡𝑡−1
+
+𝐶𝐶𝐶𝐶𝐷𝐷𝑖𝑖𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛
+�
+10
+
+𝑖𝑖= 𝑡𝑡−10
+
+is equal to the simple average of the 10 years up to (but not inclusive of)
+regulatory year t of:
+• the historical nominal cost of debt series outlined in Table 1 of Annexure
+A; and
+• Non-financial corporate BBB-rated bonds – Yield – 10-year target tenor
+[Statistical Table F3 – Series ID: FNFYBBB10M] from 1 April to 31 March
+before the start of regulatory year t (e.g. 1 April 2025 to 31 March 2026
+in relation to 2026-27) as published by the Reserve Bank of Australia plus
+debt raising cost charged by the Treasury Corporation of Victoria.
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+46
+
+Formula 3: Determining the nominal RRR (regulatory rate of return)
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 = 𝑅𝑅𝑅𝑅𝐸𝐸 𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 × (1 − 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔) + 𝐶𝐶𝐶𝐶𝐷𝐷𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 × 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔
+is the post-tax ‘vanilla’ RRR in nominal terms for regulatory year t
+𝑹𝑹𝑹𝑹𝑹𝑹𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏𝒏
+𝒕𝒕
+𝑅𝑅𝑅𝑅𝐸𝐸 𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 is the total cost of equity in nominal terms for all regulatory years
+
+𝐶𝐶𝐶𝐶𝐷𝐷𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 is the total cost of debt in nominal terms for regulatory year t
+𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔
+
+is equal to 60%.
+
+Formula 4: Determining the actual real RRR (regulatory rate of return)
+Formula 4 outlines the process for converting the post-tax ‘vanilla’ RRR from nominal to real using
+the Fisher equation.
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡𝑎𝑎𝑎𝑎𝑎𝑎 =
+𝑹𝑹𝑹𝑹𝑹𝑹𝒂𝒂𝒂𝒂𝒂𝒂
+𝒕𝒕
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛
+𝜋𝜋𝑅𝑅𝑅𝑅𝑅𝑅
+
+�1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 �
+−1
+(1 + 𝜋𝜋𝑅𝑅𝑅𝑅𝑅𝑅 )
+
+is the post-tax ‘vanilla’ RRR in real terms for year t rounded to 2 decimal places,
+i.e. 2.799% is rounded to 2.80%
+is the post-tax ‘vanilla’ RRR in nominal terms for regulatory year t
+is the inflation factor which is equal to 2.9% for all regulatory years.
+
+Formula 5: Apportioning the regulatory rate of return adjustment
+
+𝑖𝑖𝑖𝑖
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡 = �𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡𝑎𝑎𝑎𝑎𝑎𝑎 − 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡
+
+� × 𝑅𝑅𝑅𝑅𝐵𝐵𝑡𝑡 ×
+
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡
+1
+𝑖𝑖𝑖𝑖
+× 𝑆𝑆ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑡𝑡 × 𝑑𝑑𝑑𝑑𝑑𝑑,𝑖𝑖𝑖𝑖
+𝐶𝐶𝐶𝐶𝐼𝐼𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏
+𝑞𝑞
+𝑡𝑡
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+47
+
+𝒊𝒊𝒊𝒊
+
+𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝒕𝒕
+
+is the regulatory rate of return adjustment applied proportionally to tariff or charge
+‘i’ for water corporation ‘j’ (where applicable), based on tariff or charge ‘i’ for water
+corporation j’s (where applicable) share of total regulatory rate of return adjustment
+in regulatory year t.
+Total regulatory rate of return adjustment in regulatory year t refers to:
+𝑪𝑪𝑪𝑪𝑰𝑰𝒕𝒕
+𝒇𝒇𝒇𝒇𝒇𝒇
+= �𝑹𝑹𝑹𝑹𝑹𝑹𝒂𝒂𝒂𝒂𝒂𝒂
+𝒕𝒕 − 𝑹𝑹𝑹𝑹𝑹𝑹𝒕𝒕 � × 𝑹𝑹𝑹𝑹𝑩𝑩𝒕𝒕 ×
+𝑪𝑪𝑪𝑪𝑰𝑰𝒃𝒃𝒃𝒃𝒃𝒃𝒃𝒃
+
+is the All Groups Consumer Price Index: Australia as published by the Australian
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+
+Bureau of Statistics (Table 17 – Series ID: A2325846C) for the March quarter
+immediately preceding the start of regulatory year t
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡𝑎𝑎𝑎𝑎𝑎𝑎
+
+is the All Groups Consumer Price Index: Australia as published by the Australian
+Bureau of Statistics (Table 17 – Series ID: A2325846C) for the March quarter in
+year 2026 equal to 101.7
+is the actual calculated real post tax ‘vanilla’ regulatory rate of return for regulatory
+year t as per Formula 4
+
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡
+
+is the forecast real post tax ‘vanilla’ regulatory rate of return as per Table 2 of
+
+𝑅𝑅𝑅𝑅𝐵𝐵𝑡𝑡
+
+is the average RAB -
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+Annexure A
+𝑅𝑅𝑅𝑅𝐵𝐵𝑡𝑡 +𝑅𝑅𝑅𝑅𝐵𝐵𝑡𝑡−1
+
+Table 8 of Annexure A
+
+2
+
+- in regulatory year t. The RAB is specified in
+
+𝑆𝑆ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑡𝑡
+
+Is the share of the total regulatory rate of return adjustment to tariff or charge ‘i’ for
+
+𝑑𝑑𝑑𝑑𝑑𝑑,𝑖𝑖𝑖𝑖
+
+Is the determination quantity for tariff or charge ‘i’ for water corporation ‘j’ (where
+
+𝑖𝑖𝑖𝑖
+
+𝑞𝑞𝑡𝑡
+
+water corporation ‘j’ (where applicable) in regulatory year t
+
+applicable) in regulatory year t.
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+48
+
+Formula 6: Regulatory rate of return price adjustment
+
+𝑖𝑖𝑖𝑖
+
+𝑖𝑖𝑖𝑖
+
+𝑝𝑝𝑡𝑡 = 𝑝𝑝𝑡𝑡−1 ×
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+𝑖𝑖𝑖𝑖
+𝑖𝑖𝑖𝑖
+× �1 + 𝑃𝑃𝑃𝑃𝑃𝑃𝑡𝑡 � + 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡−1
+
+𝑖𝑖𝑖𝑖
+
+is the price for the price component for tariff or charge ‘i’ for water
+corporation ‘j’ (where applicable) for regulatory year t that accounts for
+changes in Melbourne Water’s actual regulatory rate of return
+
+𝑝𝑝𝑡𝑡−1
+
+𝑖𝑖𝑖𝑖
+
+is the price for the price component for tariff or charge ‘i’ for water
+corporation ‘j’ (where applicable) in regulatory year t-1 determined in
+accordance with either clause 2.3(b)(ii) or clause 3(a)(i), as applicable,
+before any adjustment
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+
+is the All Groups Consumer Price Index; Australia as published by the
+Australian Bureau of Statistics (Table 17 – Series ID: A2325846C) for
+the March quarter immediately preceding the start of regulatory year t
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡−1
+
+is the All Groups Consumer Price Index; Australia as published by the
+Australian Bureau of Statistics (Table 17 – Series ID: A2325846C) for
+the March quarter immediately preceding the start of regulatory year t1
+
+𝑖𝑖𝑖𝑖
+
+the prescribed price movement for the price component for tariff or
+charge ‘i’ for water corporation ‘j’ (where applicable) in regulatory year t
+specified in Schedule 2 of this Determination
+
+𝑖𝑖𝑖𝑖
+
+Is the regulatory rate of return adjustment applied proportionally to tariff
+or charge ‘i’ for water corporation ‘j’ (where applicable), based on tariff or
+charge ‘i’ for water corporation j’s (where applicable) share of total
+regulatory rate of return adjustment in regulatory year t.
+
+𝑝𝑝𝑡𝑡
+
+𝑃𝑃𝑃𝑃𝑃𝑃𝑡𝑡
+
+𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡
+
+Formula 6 outlines the process for annually adjusting the prices outlined in Schedule 5A to reflect
+the new RRR (regulatory rate of return). This is done in two steps.
+The first step is to update the previous year’s price for CPI and the PPM.
+The second step is to add on the adjustment for the movement in the RRR. This is done by
+multiplying the change in RRR by the average RAB before proportioning the change in RRR by
+each product and then revenue share of each tariff or charge.
+
+Schedule 5C – Desalination cost adjustments to prices
+Condition B – Contract costs – Desalination plant
+Condition B will apply when the contract costs for the Victorian Desalination Plant in any
+regulatory year t, t-1 or t-2 differ from the forecast for that year as per Table 10 in Annexure
+A. The change in costs will be calculated in accordance with Formula 7.
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+49
+
+Formula 7: Desalination contract cost changes
+𝑎𝑎𝑎𝑎𝑎𝑎
+
+𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+
+𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+= 𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡
+
+− 𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡𝑑𝑑𝑑𝑑𝑑𝑑 ×
+
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡
+𝑓𝑓𝑓𝑓𝑓𝑓
+𝑠𝑠𝑠𝑠𝑠𝑠
+𝑎𝑎𝑎𝑎𝑎𝑎 )
++ �𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−1
+− 𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−1 � ×
+× (1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−1
+𝐶𝐶𝐶𝐶𝐼𝐼𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡−1
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝑠𝑠𝑠𝑠𝑠𝑠 )
+×
+− 𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−2
++ (𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−2
+
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡
+𝑎𝑎𝑎𝑎𝑎𝑎 )
+𝑎𝑎𝑎𝑎𝑎𝑎 )
+× (1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−1
+× (1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−2
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡−2
+
+is the total change in desalination contract costs in regulatory year t to be
+proportioned to charges
+is the All Groups Consumer Price Index; Australia as published by the
+Australian Bureau of Statistics (Table 17 – Series ID: A2325846C) for the
+
+March quarter immediately preceding the start of regulatory year t
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏
+
+is the All Groups Consumer Price Index: Australia as published by the
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡−2
+
+is the All Groups Consumer Price Index; Australia as published by the
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+𝐷𝐷𝐷𝐷𝐷𝐷𝑡𝑡
+
+Australian Bureau of Statistics (Table 17 – Series ID: A2325846C) for the
+March quarter in year 2026 equal to 101.7
+Australian Bureau of Statistics (Table 17 – Series ID: A2325846C) for the
+March quarter immediately preceding the start of regulatory year t-2
+is the forecast desalination contract costs and any non-project deed costs
+applicable for regulatory year ‘t’ provided prior to commencement of
+regulatory year ‘t’ to Melbourne Water by the Department of Energy,
+Environment and Climate Action. This will be in regulatory year ‘t’
+dollars.
+
+𝐷𝐷𝐷𝐷𝐷𝐷𝑡𝑡𝑑𝑑𝑑𝑑𝑑𝑑
+
+𝑠𝑠𝑠𝑠𝑠𝑠
+𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−1
+
+is the desalination contract cost allowed for in the revenue requirement for
+regulatory year t as per Table 7 in Annexure A
+is the forecast desalination contract costs and any non-project deed costs
+applicable for regulatory year t-1 set by Melbourne Water prior to
+commencement of regulatory year t. This will be in real dollars regulatory
+year t-1.
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−1
+
+is the forecast desalination contract costs and any non-project deed costs
+applicable for regulatory year t-1 provided prior to commencement of
+regulatory year t-1 to Melbourne Water by the Department of Energy,
+Environment and Climate Action. This will be in real dollars regulatory
+year t-1.
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−1
+
+is the real post tax ‘vanilla’ regulatory rate of return in regulatory year t-1
+as per Formula 4
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+50
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−2
+
+is the actual incurred desalination contract costs and any non-project deed
+
+𝑠𝑠𝑠𝑠𝑠𝑠
+𝐷𝐷𝐷𝐷𝐶𝐶𝑡𝑡−2
+
+is the forecast desalination contract costs and any non-project deed costs
+
+costs applicable for regulatory year t-2. This will be in real dollars
+regulatory year t-2.
+applicable for regulatory year t-2 set by Melbourne Water prior to
+commencement of regulatory year t-1. This will be in real dollars
+regulatory year t-2.
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−2
+
+is the real post tax ‘vanilla’ regulatory rate of return in regulatory year t-1
+as per Formula 4.
+
+Formula 7 calculates the total contract cost changes in three components as Melbourne Water
+may be advised of a change in contract costs prior the commencement of the regulatory year t
+and actual incurred costs by Melbourne Water are not finalised prior to the commencement of
+regulatory year t.
+The first component determines difference between:
+•
+
+the forecast changes in contract costs for regulatory year t, prior to the commencement of
+regulatory year t; and
+
+•
+
+the latest advised contract costs and any non-project deed costs payable by Melbourne
+Water from Department of Energy, Environment and Climate Action set in the revenue
+requirement for regulatory year t adjusted for inflation as per Table 7 of Annexure A.
+
+The second component determines the difference between:
+•
+
+an updated forecast desalination contract costs for regulatory year t-1 set prior to the
+commencement of regulatory year t; and
+
+•
+
+the previously advised contract costs and any non-project deed costs payable by
+Melbourne Water from the Department of Energy, Environment and Climate Action for
+regulatory year t-1 set prior to the commencement of regulatory year t-1; and
+
+•
+
+an adjustment for inflation and RRR.
+
+The third component determines the difference between:
+•
+
+actual desalination contract costs for regulatory year t-2; and
+
+•
+
+the updated forecast desalination contract costs and any non-project deed costs payable by
+Melbourne Water for regulatory year t-2 set prior to the commencement of regulatory
+year t-1; and
+
+•
+
+an adjustment for inflation and RRR.
+
+The total change in desalination contract costs for regulatory year t is then proportionally applied
+to the charges listed in Schedule 5A following the Desalination Water Order Entitlements for
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+51
+
+2020-21 to 2025-26 (as per Table 3 in Annexure A) and South-Central Reform shares for 2026-27
+to 2030-31 (as per Table 4 in Annexure A).
+Condition C – Water order – Desalination plant
+Condition C will apply when the water order volume in any regulatory year t, t-1 or t-2 differs
+from a water order of 0 GL. In this case, the Bulk water headworks charges – South-Central
+Pool will be adjusted in accordance with Formula 8 in Schedule 5C, accounting for the
+desalination water order (DWO) costs invoiced to Melbourne Water by the responsible
+Department in the Victorian Government and actual costs associated with moving water
+through the system to accommodate an order of desalinated water in previous years.
+Formula 8: Desalinated water order cost adjustment
+𝑎𝑎𝑎𝑎𝑎𝑎
+
+𝐷𝐷&𝑀𝑀𝑡𝑡
+
+𝒂𝒂𝒂𝒂𝒂𝒂
+
+𝑫𝑫𝑫𝑫&𝑴𝑴𝒕𝒕
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+= 𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+𝑠𝑠𝑠𝑠𝑠𝑠
++ �𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−1
+− 𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−1 � ×
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝑠𝑠𝑠𝑠𝑠𝑠 )
+×
+− 𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−2
++ (𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−2
+
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡
+𝑎𝑎𝑎𝑎𝑎𝑎 )
+× (1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−1
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡−1
+
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡
+𝑎𝑎𝑎𝑎𝑎𝑎 )
+𝑎𝑎𝑎𝑎𝑎𝑎 )
+× (1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−1
+× (1 + 𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−2
+𝐶𝐶𝐶𝐶𝐼𝐼𝑡𝑡−2
+
+is the total desalination water order and management costs adjustment by
+Melbourne Water in regulatory year t to be proportioned to charges
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡
+
+is the All Groups Consumer Price Index; Australia as published by the Australian
+
+𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡−1
+
+is the All Groups Consumer Price Index; Australia as published by the Australian
+
+Bureau of Statistics (Table 17 – Series ID: A2325846C) for the March quarter
+immediately preceding the start of regulatory year t
+
+Bureau of Statistics (Table 17 – Series ID: A2325846C) for the March quarter
+immediately preceding the start of regulatory year t-1
+
+𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡
+
+is the forecast desalination water order and management costs for regulatory
+
+𝑠𝑠𝑠𝑠𝑠𝑠
+𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−1
+
+is the forecast desalination water order and management costs for regulatory
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+year t provided prior to commencement of regulatory year t to Melbourne Water.
+This will be in regulatory year t dollars.
+
+year t-1 set by Melbourne Water prior to commencement of regulatory year t.
+This will be in real dollars regulatory year t-1.
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+52
+
+𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−1
+
+is the forecast desalination water order and management costs for regulatory
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−1
+
+is the real post tax ‘vanilla’ regulatory rate of return in regulatory year t-1 as per
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−2
+
+is the actual incurred desalination water order and management costs for
+
+𝑠𝑠𝑠𝑠𝑠𝑠
+𝐷𝐷𝐷𝐷&𝑀𝑀𝑡𝑡−2
+
+is the forecast desalination water order and management costs for regulatory
+
+𝑎𝑎𝑎𝑎𝑎𝑎
+𝑅𝑅𝑅𝑅𝑅𝑅𝑡𝑡−2
+
+is the real post tax ‘vanilla’ regulatory rate of return in regulatory year t-1 as per
+
+𝑓𝑓𝑓𝑓𝑓𝑓
+
+year t-1 provided prior to commencement of regulatory year t-1 to Melbourne
+Water. This will be in regulatory year t-1 dollars.
+
+Formula 4
+
+regulatory year t-2. This will be in real dollars regulatory year t-2.
+
+year t-2 set by Melbourne Water prior to commencement of regulatory year t-1.
+This will be in real dollars regulatory year t-2.
+
+Formula 4.
+
+Formula 8 calculates the total desalination water order and management cost in three components
+as costs incurred by Melbourne Water for regulatory year t are not finalised prior to the
+commencement of the regulatory year t.
+The first component is the initial forecast desalination water order and management costs for
+regulatory year t associated with the volume ordered by the Minister for Water, prior to the
+commencement of regulatory year t.
+The second component determines the difference between:
+•
+
+an updated forecast desalination water order and management costs for regulatory year t1 set prior to the commencement of regulatory year t; and
+
+•
+
+the initial forecast desalination water order and management costs for regulatory year t-1
+associated with the volume ordered by the Minister for Water, prior to the commencement
+of regulatory year t-1; and
+
+•
+
+an adjustment for inflation and RRR.
+
+The third component determines the difference between:
+•
+
+actual desalination water order and management costs for regulatory year t-2; and
+
+•
+
+the updated forecast desalination water order and management costs for regulatory year
+t-2 set prior to the commencement of regulatory year t-1; and
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+53
+
+•
+
+an adjustment for inflation and RRR.
+
+The total change in desalination water order and management costs for regulatory year t is then
+proportionally applied to the charges listed in Schedule 5A following the Desalination Water Order
+Entitlements for 2020-21 to 2025-26 (as per Table 3 in Annexure A) and South-Central Reform
+shares for 2026-27 to 2030-31 (as per Table 4 in Annexure A).
+
+Schedule 5 – Adjustment of Schedule 2
+Essential Services Commission Melbourne Water Determination
+
+54
+
+THE COMMON SEAL of the ESSENTIAL SERVICES )
+COMMISSION was affixed pursuant to the authority of )
+The Commission on the 4th day of June 2026
+
+)
+
+…………………………………..
+Gerard Brody
+Chairperson
+
+Seal
+Essential Services Commission Melbourne Water Determination
+
+55
+
+Annexure A
+Table 1 Historical cost of debt (percentage, nominal) *
+2016-17 2017-18 2018-19 2019-20 2020-21 2021-22 2022-23 2023-24 2024-25 2025-26
+4.91
+
+4.53
+
+4.61
+
+3.31
+
+3.05
+
+3.75
+
+6.76
+
+6.53
+
+5.84
+
+5.59
+
+* The average of 10-year non-financial corporate BBB-rated bond yields from 1 April to 31 March preceding the
+regulatory year (source: Reserve Bank Australia) plus debt raising costs (source: Treasury Corporation of Victoria).
+
+Table 2
+
+Forecast regulatory rate of return (percentage, real)
+
+Regulatory rate of return
+Table 3
+
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+2.80
+
+2.84
+
+2.90
+
+2.96
+
+3.09
+
+Victorian Desalination Project bulk delivery entitlements
+per year of the 2021–26 regulatory period
+
+Water corporation
+
+Entitlement (ML)
+
+Retailer share (%)
+
+Greater Western Water
+
+39,595
+
+26.4
+
+South East Water
+
+53,454
+
+35.6
+
+Yarra Valley Water
+
+56,951
+
+38.0
+
+Total
+
+150,000
+
+100.0
+
+Table 4
+
+South Central Pool shares
+per year of the 2026–31 regulatory period
+
+Water corporation
+
+Retailer share (%)
+
+Greater Western Water
+
+28.048
+
+South East Water
+
+35.329
+
+Yarra Valley Water
+
+35.669
+
+Barwon Water
+
+0.705
+
+South Gippsland Water
+
+0.147
+
+Westernport Water
+
+0.053
+
+Gippsland Water
+
+0.050
+
+Total
+
+100.0
+
+Annexure A
+Essential Services Commission Melbourne Water Determination
+
+56
+
+Table 5
+
+North-South Pipeline bulk delivery entitlements
+per year of the 2026-31 regulatory period
+
+Water corporation
+
+Entitlement (ML)
+
+Greater Western Water
+
+25,000
+
+South East Water
+
+25,000
+
+Yarra Valley Water
+
+25,000
+
+Table 6
+
+Sewerage cost allocation shares
+per year of the 2026–31 regulatory period
+
+Water corporation
+
+Retailer share (%)
+
+Greater Western Water
+
+22.696
+
+South East Water
+
+40.000
+
+Yarra Valley Water
+
+37.304
+
+Total
+
+100.0
+
+Table 7
+
+Benchmark revenue requirement ($m 2025-26)
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+Total
+
+1,121.9
+
+1,115.8
+
+1,128.6
+
+1,091.1
+
+1,074.8
+
+5,532.1
+
+451.6
+
+480.5
+
+515.2
+
+551.9
+
+603.3
+
+2,602.4
+
+330.6
+
+350.0
+
+365.9
+
+360.9
+
+364.7
+
+1,772.1
+
+-1.9
+
+-1.9
+
+-1.9
+
+-1.9
+
+-1.9
+
+-9.7
+
+27.7
+
+29.0
+
+23.9
+
+18.9
+
+14.1
+
+113.5
+
+1,929.9
+
+1,973.3
+
+2,031.6
+
+2,020.7
+
+2,055.0
+
+10,010.4
+
+Operating
+expenditure
+Return on assets
+Regulatory
+depreciation
+Adjustments from
+last period
+Tax allowance
+Total
+
+Annexure A
+Essential Services Commission Melbourne Water Determination
+
+57
+
+Table 8
+
+Closing regulatory asset base ($m 2025-26)
+2021-22
+
+2022-23
+
+2023-24
+
+2024-25
+
+2025-26
+
+13,975.0
+
+14,252.1
+
+14,629.7
+
+15,089.7
+
+15,621.2
+
+727.4
+
+847.2
+
+921.0
+
+992.8
+
+598.2
+
+24.5
+
+36.1
+
+54.5
+
+66.0
+
+80.6
+
+Less Government contributions
+
+0.0
+
+0.0
+
+0.0
+
+0.0
+
+0.0
+
+Less Customer contributions
+
+230.1
+
+244.5
+
+229.9
+
+222.8
+
+223.9
+
+Less Proceeds from disposals
+
+13.8
+
+4.7
+
+2.7
+
+1.7
+
+2.5
+
+Less Regulatory depreciation
+
+230.9
+
+256.5
+
+283.0
+
+302.8
+
+319.8
+
+14,252.1
+
+14,629.7
+
+15,089.7
+
+15,621.2
+
+15,753.8
+
+Opening RAB at 1 July
+Plus Gross capital expenditure
+Plus Desalination security
+payment capitalisation
+
+Closing RAB at 30 June
+Table 9
+
+Forecast regulatory asset base ($m 2025-26)
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+Opening RAB at 1 July
+
+15,753.8
+
+16,500.2
+
+17,335.7
+
+18,192.1
+
+19,095.5
+
+Plus Gross capital expenditure
+
+1,223.6
+
+1,333.3
+
+1,349.3
+
+1,373.6
+
+1,311.5
+
+112.3
+
+130.0
+
+140.3
+
+157.9
+
+175.9
+
+Less Government contributions
+
+9.3
+
+15.0
+
+0.0
+
+0.0
+
+0.0
+
+Less Customer contributions
+
+241.9
+
+256.7
+
+261.6
+
+261.6
+
+259.1
+
+Less Proceeds from disposals
+
+7.6
+
+6.2
+
+5.6
+
+5.6
+
+4.2
+
+Less Regulatory depreciation
+
+330.6
+
+350.0
+
+365.9
+
+360.9
+
+364.7
+
+16,500.2
+
+17,335.7
+
+18,192.1
+
+19,095.5
+
+19,955.1
+
+Plus Desalination security
+payment capitalisation
+
+Closing RAB at 30 June
+
+Annexure A
+Essential Services Commission Melbourne Water Determination
+
+58
+
+Table 10
+
+Prescribed operating expenditure ($m 2025-26)
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+611.1
+
+618.8
+
+621.7
+
+621.8
+
+625.5
+
+Desalination security payments
+
+591.5
+
+609.3
+
+636.8
+
+609.6
+
+607.2
+
+Less capitalisation
+
+-80.6
+
+-112.3
+
+-130.0
+
+-140.3
+
+-157.9
+
+Desalination water order costs
+
+110.6
+
+-
+
+-
+
+-
+
+-
+
+1,232.5
+
+1,115.8
+
+1,128.6
+
+1,091.1
+
+1,074.8
+
+Prescribed operating expenditure
+excluding desalination costs
+
+Total
+
+Note: Melbourne Water submitted the total desalination water order cost for 2026-27 in $2026-27 terms which has been
+deflated to $2025-26 terms. Costs for subsequent years will be confirmed by DEECA in May each year.
+
+Table 11
+
+Forecast licence fees and environmental contributions ($m 2025-26)
+2026-27
+
+2027-28
+
+2028-29
+
+2029-30
+
+2030-31
+
+1.5
+
+1.6
+
+1.6
+
+1.6
+
+1.6
+
+0.3
+
+0.3
+
+0.3
+
+0.3
+
+0.3
+
+1.5
+
+1.5
+
+1.5
+
+1.5
+
+1.5
+
+Environmental contribution
+
+0.4
+
+0.4
+
+0.3
+
+0.3
+
+0.3
+
+Total
+
+3.6
+
+3.8
+
+3.8
+
+3.8
+
+3.8
+
+Essential Services Commission
+licence fee
+Department of Health licence fee
+Environment Protection Authority
+licence fee
+
+Annexure A
+Essential Services Commission Melbourne Water Determination
+
+59
+
+Table 12
+
+Major capital projects and programs
+Expected
+
+Expected
+
+start
+
+completion
+
+WTP Full Preliminary Treatment Augmentation
+
+2027-28
+
+2031-32
+
+WTS - Shallow Conduit Rehabilitation
+
+2026-27
+
+2030-31
+
+Cardinia Dam Safety Upgrade Works
+
+2026-27
+
+2031-32
+
+ETP PST and Grit Tank Augmentation
+
+2028-29
+
+2033-34
+
+ETP Sludge Dewatering Upgrade
+
+2025-26
+
+2030-31
+
+Link Main Stage 1
+
+2028-29
+
+2031-32
+
+WTP Primary Treatment Capacity Augmentation
+
+2023-24
+
+2029-30
+
+Cardinia Pump Station Upgrade
+
+2027-28
+
+2030-31
+
+Olinda Mitcham Main Renewals - Stage 2 M054 and M055
+
+2028-29
+
+2032-33
+
+Elsternwick Creek and Elwood MD Flood Mitigation Works
+
+2025-26
+
+2028-29
+
+DRB013 Cardinia Ck Drop Structure RB Upgrade
+
+2029-30
+
+2031-32
+
+Reimagining Tarralla Creek Stage 2
+
+2026-27
+
+2029-30
+
+Elwood Diversion Drain 4925 - Outfall Renewal
+
+2025-26
+
+2028-29
+
+Reimagining Eumemmerring Creek
+
+2026-27
+
+2028-29
+
+Project
+
+Programs
+Urban Development Program
+
+Ongoing
+
+Water Quality - Primary Treatment Program
+
+Ongoing
+
+Sewerage Transfer - West Program
+
+Ongoing
+
+Manufactured and New Water Sources Program
+
+2035-36
+
+Western Treatment Plant - Supporting Services Program
+
+Ongoing
+
+Annexure A
+Essential Services Commission Melbourne Water Determination
+
+60
+
+

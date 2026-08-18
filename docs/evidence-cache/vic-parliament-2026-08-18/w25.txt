@@ -1,0 +1,850 @@
+PUBLIC ACCOUNTS AND ESTIMATES COMMITTEE
+
+
+            Inquiry into the 2025–26 Budget Estimates
+
+                       Melbourne – Wednesday 11 June 2025
+
+
+
+
+                                  MEMBERS
+
+     Sarah Connolly – Chair                             Lauren Kathage
+     Nicholas McGowan – Deputy Chair                    Aiv Puglielli
+     Jade Benham                                        Meng Heang Tak
+     Michael Galea                                      Richard Welch
+     Mathew Hilakari
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                   1
+
+
+
+
+WITNESSES
+
+Gayle Tierney MLC, Minister for Water; and
+
+John Bradley, Secretary,
+
+Kirsten Shelly, Deputy Secretary, Water and Catchments, and
+
+Andrew Fennessy, Executive Director, Water Security and Resilience, Department of Energy, Environment
+and Climate Action.
+
+  The CHAIR: I declare open this hearing of the Public Accounts and Estimates Committee.
+
+I ask that mobile telephones please be turned to silent.
+
+On behalf of the Parliament the committee is conducting this Inquiry into the 2025–26 Budget Estimates. The
+committee’s aim is to scrutinise public administration and finance to improve outcomes for the Victorian
+community.
+
+I advise that all evidence taken by the committee today is protected by parliamentary privilege. However, any
+comments repeated outside of this hearing may not be protected by this privilege.
+
+All evidence given today is being recorded by Hansard and is broadcast live on the Parliament’s website. The
+broadcast includes automated captioning. Members and witnesses should be aware that all microphones are live
+during the hearings and anything you say may be picked up and captioned, even if you say it quietly.
+
+Witnesses will be provided with a proof version of the transcript to check, and verified transcripts, presentations
+and handouts will be placed on the committee’s website.
+
+As Chair I expect that committee members will be respectful towards witnesses, the Victorian community
+joining the hearing via the live stream today and other committee members.
+
+I welcome the Minister for Water the Honourable Gayle Tierney as well as officials from DEECA. Minister, I
+invite you to make an opening statement or presentation of no more than 5 minutes, after which time committee
+members will ask you some questions. Your time starts now.
+
+   Gayle TIERNEY: Thank you, Chair. I start this session by also acknowledging the traditional owners of the
+lands on which we are meeting, the Wurundjeri people, and acknowledge their elders past, present and
+emerging.
+
+Visual presentation.
+
+   Gayle TIERNEY: The Allan Labor government is continuing to partner with the water sector to deliver
+secure, affordable, high-quality water for Victorians. In addition to public health and environmental outcomes,
+our water sector also plays a critical role in economic development. In infrastructure our water corporations are
+investing over $3.2 billion in this financial year and $3.6 billion next year to service our growing communities.
+Victoria has amongst the lowest water bills in Australia, with average household bills in Melbourne $124 lower
+than the next lowest capital city, Canberra. Our waterway health investments of over $270 million over four
+years also support direct employment – around 325 jobs across regional Victoria. Victoria’s water corporations
+also play a critical role in delivering the housing statement, investing over $905 million in 2024 to meet the
+rapid increase in residential water connections.
+
+The government’s investment in sustainable water management is critical to meeting the sector’s strategic
+challenges and underpins its contribution to the economy. The government previously announced the latest
+tranche of the environmental contribution for 2024–28. This is expected to generate $705 million to reinvest in
+sustainable management of water, or roughly $176 million per year. Funding from the EC6 will ensure
+effective, innovative and sustainable water use resources, including through promoting recycled water use;
+protecting waterway and catchment health for long-term resilience into the future; supporting economic
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                     2
+
+
+
+
+prosperity, cultural values, health and wellbeing; and funding regional jobs essential for waterway health within
+the catchment management authorities.
+
+Alongside our long-term planning we are responding to the immediate pressures of low rainfall and drought.
+Despite rainfall in recent days, much of Victoria continues to experience very dry conditions. Many areas have
+had their lowest rainfall on record. The majority of the state received less than 40 per cent of average May
+rainfall. This drops to less than 20 per cent for much of central and north-west Victoria. At the end of May the
+Melbourne system combined storage level is 73 per cent, compared to 88 per cent this time last year. Water
+restrictions are not expected in greater Melbourne for 2025; however, stage 3 water restrictions are in place for
+Apollo Bay, which may progress to stage 4 by late June, dependent on current rainfall. Stage 2 water
+restrictions are in place for Euroa and Violet Town, and we are closely monitoring the latest rainfall,
+particularly for the at-risk regional systems listed on the slide.
+
+We know in years to come we will see less overall rainfall while our population continues to grow. Based on
+expert advice in response to significant drops in water reserves, I have placed an order of 50 gigalitres from the
+desalination plant. We are also investing in the Melbourne–Geelong pipeline to strengthen Geelong’s water
+security. Since we built it, the desalination plant will have contributed 505 gigalitres to our storages since 2016–
+17. This is the equivalent of filling the MCG 320 times.
+
+The Premier has established a dedicated drought response taskforce that met just last week, and I am leading
+the water sector’s contribution. DEECA water and the water corporations continue to support Agriculture
+Victoria as the lead agency for drought response on this whole-of-government effort to provide much-needed
+relief to our farmers. The government through the agriculture portfolio has committed an additional
+$37.7 million to expand support for farmers and communities across the state, and this builds on the
+government’s existing $29.4 million investment. DEECA and regional water corporations are supporting
+farmers and industry by updating the public database for water-carting points; providing hardship relief for
+water bills and a dedicated water-trading room for the south-west; identifying options for temporary
+infrastructure; and providing recycled water and operational supports and long-term infrastructure programs for
+additional investment in the East Grampians rural pipeline.
+
+  The CHAIR: Thank you, Minister. We are going to go to Ms Benham.
+
+   Jade BENHAM: Thank you, Chair. Thank you, Minister. On the first slide – also budget paper 4 – you
+pointed out that water infrastructure is critical to the government’s housing statement and delivery of that. How
+many vacant residential blocks in Victoria have full sewerage and water infrastructure in place now, compared
+to pre COVID, in 2018–19? Do we have those figures?
+
+   Gayle TIERNEY: No. The water corporations might have those figures, but we certainly would not have
+that level of operational detail.
+
+  Jade BENHAM: You could not supply those on notice or get me those figures?
+
+  Gayle TIERNEY: It is not held by the department.
+
+  Jade BENHAM: So do you know of any developments that are waiting on that infrastructure for full water
+and sewerage infrastructure now, compared to pre COVID?
+
+  Gayle TIERNEY: Again, that is not something that has come to our notice.
+
+  Jade BENHAM: Okay. Do you have any idea of the level of debt that each water corp is in right now, and
+how it compares, again, to pre COVID? I am just trying to get an idea of where we are at.
+
+  Gayle TIERNEY: In terms of lines of borrowing, it is pretty business as usual for water corporations to
+undertake that. They do that to fund a range of things. There is nothing unusual, as I understand it, unless the
+department – Andrew?
+
+   Andrew FENNESSY: No. It is standard practice that they do run through a level of debt. They do have debt
+borrowings that they can actually apply through Treasury for, and they are all within those particular bounds at
+the moment. The debt levels will be set by their capital programs, and the capital programs are actually
+approved by the Essential Services Commission, who are able to fund that level of debt within there. So the
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                     3
+
+
+
+
+level of debt, whether it is talking about pre COVID or post COVID, will vary depending on the capital
+programs for the water corporations.
+
+   Jade BENHAM: Okay. Thank you. Also in the presentation, in the beginning you mentioned that
+Melbourne is not expected to face water restrictions. We know that the storage is about 73 per cent at the
+minute. But the experts suggested an order for 50 gig, I think, from the desal plant. Who were the experts that
+are recommending that 50-gig order?
+
+  Gayle TIERNEY: This is the advice that the department receives. Kirsten.
+
+  Kirsten SHELLY: So from Melbourne Water and then from Melbourne metro retailers, the water retailers.
+
+  Jade BENHAM: Okay. Melbourne metro retailers, you said.
+
+  Kirsten SHELLY: Water retailers.
+
+   Jade BENHAM: Right, okay. All right. Excellent. Thank you for that. Can we just talk about also the
+SDLAM projects really quickly – the sustainable diversion limit adjustment mechanisms, or SDLAMs in my
+part of the world. Timelines have been extended now. How are those projects progressing?
+
+  Gayle TIERNEY: Andrew, were you wanting to talk about this?
+
+   Andrew FENNESSY: Yes. So there are the two main projects. As you rightly say, a lot of them are within
+your area. We have got the constraints project and we have got the Victorian Murray Floodplain Restoration
+Project. I will take the floodplain restoration project in particular. There are nine projects that we are looking at
+for that program of works. There are three that we are still looking at at the moment that we are on track to
+deliver by 2026. There is one in regard to the Belsar site that was assessed as not actually providing the overall
+benefits, so that one will not be progressed at this particular stage, and we are looking to progress the other five
+projects.
+
+  Jade BENHAM: So Belsar is off the program?
+
+  Andrew FENNESSY: Yes, at the moment it is because it did not actually stack up within the overall
+benefits.
+
+   Jade BENHAM: Right. Okay. When the funding lapsed and there was a period of uncertainty we lost a lot
+of good staff. You mentioned the CMAs in the program as well. In the Mallee CMA Jenny and James have
+kept going, and they are brilliant. We lost a lot of good people, though. Where are staffing levels at now to
+make sure those projects are completed?
+
+  Andrew FENNESSY: I cannot give the exact numbers for the staffing levels within it, but we have
+continued to ramp that up. As you rightly say, the project is being delivered under the guise also of Lower
+Murray Water, so we are using that as the main vehicle to do it, but it relies heavily as well on our catchment
+management authorities. It does run as a reasonably small project team within the office, but it does that relying
+on catchment management authorities such as the Mallee CMA, as you have outlined, and the North Central
+CMA there as well.
+
+   Jade BENHAM: So the Mallee CMA and Lower Murray Water have enough staff now to make sure that is
+delivered by 2026?
+
+  Andrew FENNESSY: That is correct. While the program is running through – that is correct.
+
+  Jade BENHAM: Great. Minister, will Victoria meet its obligations under the basin plan? The previous
+minister, Minister Shing, was excellent at digging her heels in and continuing to fight against buybacks. I trust
+you are going to continue with that same plan.
+
+   Gayle TIERNEY: Absolutely. I think that it was probably my first week back in Parliament after being
+bestowed the honour of being water minister that I stood up and made it very clear to the sector and to anyone
+that is interested in the Murray River –
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                    4
+
+
+
+
+  Jade BENHAM: We are interested, all right.
+
+   Gayle TIERNEY: that I have got a very similar position, if not the same position, as former Minister for
+Water Ms Harriet Shing. I also showed the chamber the prospectus documentation and talked about the need
+for communities to continue to talk amongst themselves and with government to work through the best possible
+solutions. I also have talked to the new federal minister Murray Watt in relation to buybacks, and he is very
+clear that I made clear what the Victorian government’s position is in respect to that.
+
+   Jade BENHAM: Is his position the same as the previous water minister’s, or is that the reason that she has
+lost that portfolio?
+
+   Gayle TIERNEY: Well, that is subject to commentary that I am not party to, and I would not think it was
+important particularly for this hearing to go into any discussion about the way federal portfolio matters are
+distributed. But can I say that I had a really good relationship with Murray Watt when he was agriculture
+minister at a federal level and I was state Minister for Agriculture. We worked very, very closely on biosecurity
+matters, and I believe that we will be able to continue to work together productively. We have got different
+positions and different views on buybacks, but I am sure that we can have a productive relationship.
+
+  Jade BENHAM: Great. Thank you.
+
+  The CHAIR: Thank you, Minister. We are going to go to Miss Kathage.
+
+   Lauren KATHAGE: Thank you, Chair, Minister and officials. Minister, I want to draw your attention to
+page 28 of budget paper 3. There is a line item there around protecting Victoria’s water security. We know,
+obviously, water is the most precious asset; I think that is probably one of the reasons why you said it is such a
+privilege to be the water minister. It has been such a dry summer. We have touched a bit on the desal water
+order, but can you talk a bit about what that actually means in terms of supporting the state’s water security?
+
+   Gayle TIERNEY: The desal order essentially impacts on the water grid. The water grid obviously is
+Melbourne and Geelong, although parts of Gippsland also benefit from any desal order. Of course what it does
+is not just boost drinking water levels. It means that there is more drinking water, and therefore non-drinking-
+water areas are dealt with in a different way. It means that we have got an insurance policy by having that desal
+plant. As I said, primarily it is based on advice that the water minister receives as to whether an order is put in
+place. It means that Victorians can rely on the fact that water will come through their taps. It is incredibly
+important for Geelong in particular, because their water storage levels were much lower than even Melbourne,
+so it was time that something needed to happen to assure us that water could continue.
+
+It also is a fact that we are investing in the Melbourne–Geelong pipeline, and that means that there is greater
+capacity for water to get to Geelong. For many people that are not familiar with the water system in terms of
+Gippsland, Melbourne and Geelong, water actually comes from the east and has got to make its way to the
+west, and the grid is incredibly important to that connectivity. Having the desal plant where it is means that
+water can enter the system and provide water security for the majority of Victorians. As I said, we built it at a
+time when there was significant drought, and over the period in which it has existed, 505 gigalitres have gone
+into our storages. I used this in my presentation, but it is a very handy visual: picture the MCG. Most people
+understand what the MCG looks like; they have been there or seen it on TV. We have been able to order the
+equivalent of filling the MCG 320 times, so it is an enormous asset for Victorians, particularly in terms of water
+security.
+
+Of course having the drought that we have had in regional Victoria has highlighted the need for water security
+and the precious nature of water. That is why it has been incredibly important that we support our agriculture
+industry and our farmers and, to that point, incredibly important that the Premier herself is chairing and has
+announced a drought taskforce to respond to the drought. And yes, we have received an enormous amount of
+rain the last few days.
+
+  Jade BENHAM: Not enormous.
+
+  Gayle TIERNEY: In certain parts it has been enormous. But I think most know that even so, that does not
+mean that the drought is over – far from it. There is a lot of work that still needs to happen, and we still need to
+make sure that people in metro Melbourne understand the issues that are confronting those in regional Victoria.
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                       5
+
+
+
+
+That is why it is important that we reinforce the fact that we also need to ensure that people are doing things
+like being mindful about the types of behaviours associated with laundry washing, shortening their showers –
+all of those sorts of things. Those permanent savings are in place for metro Melbourne as well. But we also of
+course need to understand that there is hardship and difficulty facing the agriculture sector and our farmers, and
+that is why it is so important that all of the key players and representatives of peak organisations are around the
+table looking at a number of things that we might be able to do to alleviate some of the pressures that are
+confronting our agricultural sector.
+
+But can I say that by ordering the desal plant, by having the water restrictions in certain parts of Victoria and by
+having the drought in certain parts of regional Victoria, it means that the whole opportunity of educating the
+Victorian community in a more whole-of-government way is incredibly important. Indeed it is very important
+that we make sure that those that were not even around during the last drought are educated pretty quickly
+about what it means to have water, what it means not to have water and what they need to do as individuals and
+as a community to make sure that we have the proper values and actions around water now and into the future
+because as I said in my presentation, we know that rainfall is going to reduce over time and that what we also
+need to do is not just respond to difficulties but also build the resilience within our communities on how we
+deal with lower rainfall now and into the future. I know that a lot of the water corporations have put their mind
+to that and have got their shoulder to the wheel; they are looking at some very innovative ideas.
+
+  The CHAIR: Thank you, Minister. We are going to Ms Benham.
+
+   Jade BENHAM: Thank you, Chair. I want to keep discussing the desal plant. An additional $10 million, by
+the looks of it, from last year’s $685 million budget was allocated toward the desal plant for 2025–26, making
+the state’s contribution nearly $700 million. How much of that is for the 50-gigalitre order? And if there has
+been enormous rain, do we pause the order? How is all that decided?
+
+  Gayle TIERNEY: Again, an order was placed at the end of May – I am looking for confirmation.
+
+  Andrew FENNESSY: It was the end of April.
+
+   Gayle TIERNEY: Was it April? The order has to be lodged yes or no by that time, so there is no going
+back. But having said that, as you have just indicated, water resources and rainfall are not going to change
+dramatically, even with the amount of rain that we have had on the weekend, so the order will continue to be
+needed and will come through our taps next month, as I understand it.
+
+  Jade BENHAM: What is the cost of the 50-gig order?
+
+   Gayle TIERNEY: The cost of the 2025–26 water order is expected to be $34.3 million. Given the cost-of-
+living pressures being experienced, a state contribution was deemed to be appropriate. In this instance the cost
+of the water order was subsidised by $3.8 million to bring the average monthly cost for a customer using
+150 kilolitres of water to less than $1 a month.
+
+   Jade BENHAM: One dollar a month increase. Okay. If we can now go to capital – actually, I want to go
+back to the water corporation debt levels. You did say that they are within the normal levels at the minute. Can
+we get just a broader picture of where they are at? You can take this on notice if you need to, but I just want to
+get a better idea of where they are actually at.
+
+   Andrew FENNESSY: They will differ by water corporation as well, given their size and their ability to be
+able to finance that.
+
+   Jade BENHAM: Have you got a breakdown of, or could you supply a breakdown of, each of the water
+corps?
+
+  Gayle TIERNEY: We do not have the total debt with us.
+
+  Jade BENHAM: I am happy to take it on notice.
+
+   Gayle TIERNEY: What I can say is that all water corporations have retained investment-grade credit
+ratings. This is an indicator of healthy balance sheets of water corporations and their ability to repay any debt.
+Using debt to spread the payment of the asset across the life of the asset means customers can pay through
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                     6
+
+
+
+
+prices as they receive the benefit from it. This means the cost of the asset does not fall disproportionately on
+only current customers. For example, the construction period for a new pipeline may be two or three years,
+which is when the capital costs are incurred, but the benefits of that asset may be up to, say, 40 years. Taking on
+debt with its gradual payback allows for the cost to be smoothed so that customer bills do not vary significantly
+from year to year. Borrowing limits with the Treasury Corporation of Victoria are a cap on how much water
+corporations may borrow. They do not necessarily borrow up to that limit, but you would know that. There is a
+process of scrutiny by the Department of Treasury and Finance to ensure that business can manage their debt,
+and water corporations forecast their expenditure and debt requirements in their corporate plans. The price
+review process and borrowing limits reflect that.
+
+   Jade BENHAM: No-one is doubting the need for water infrastructure and investment. We just want to get
+an idea of where the debt levels are at for the water corps. I am happy to take it on notice just in the interests of
+time.
+
+  Gayle TIERNEY: Well, the other thing is to actually look at their annual reports. It should be in those.
+
+ Jade BENHAM: Okay. Minister, are you familiar with the Aither report commissioned by the Victorian
+Water Register that was released in March 2023? A-I-T-H-E-R. I do not know if I am pronouncing it correctly.
+
+  Andrew FENNESSY: There have been a number of reports produced by Aither. I am just trying to
+understand –
+
+  Jade BENHAM: The water supply and demand in the southern Murray–Darling Basin.
+
+  Andrew FENNESSY: The socio-economic assessment? Yes. It started in 2016–17 and I think there was
+another one in 2022.
+
+  Jade BENHAM: A 2022 update.
+
+  Andrew FENNESSY: Yes. That is correct.
+
+   Jade BENHAM: In that report it was noted that the lower Murray part of the basin would not have
+sufficient water in a dry year – like it is now, despite the rain – such as 2015–16 and would be well short in a
+moderately dry or extremely dry year. What work is being done now to ensure that farmers’ water security is
+being guaranteed, because it is a real concern?
+
+  Gayle TIERNEY: Did you want to do that?
+
+   Andrew FENNESSY: I can start with that one, Minister, if you like. As you are aware, within the northern
+system as well there are a number of things that farmers can actually look to do. We do have an active water
+market within the north of the system as well so that people can actually look to trade their water and so that it
+does allow it to go from areas which may not be using their water, whether that is used within cotton and rice
+within southern New South Wales as well, and it can move through the market. We do allow that to actually
+occur. We have other products there with –
+
+  Jade BENHAM: Do we trust those in northern basin, though?
+
+  Andrew FENNESSY: Well, I do not think it is up to me to actually make comments in regard to it. But we
+do recognise that there does need to be the synergy, and the Aither report does actually point that out as well.
+
+  Jade BENHAM: It does.
+
+  Andrew FENNESSY: We do need to have an active –
+
+  Jade BENHAM: Victoria is doing its part of the heavy lifting.
+
+   Andrew FENNESSY: Exactly right, and it does need to ensure that. There are obviously the buybacks
+which are occurring within the north, and that is where the Aither report really goes to as well with the amount
+of water coming out of the system. And a key part of what Victoria is looking to do there is that it has produced
+what is referred to as a prospectus. So it is within the northern system, and it is a better way that Victoria
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                     7
+
+
+
+
+actually believes that if the Commonwealth is going to come into the market instead of having open tenders it
+can undertake work such as targeting in particular areas. We have seen evidence of that already within northern
+Victoria. In managing the water as it stands with less water in the environment, it is coming down to whether it
+is trade and carryover and other products such as that.
+
+  The CHAIR: Thank you, Mr Fennessy. Mr Galea.
+
+   Michael GALEA: Thank you, Chair. Good afternoon, Minister, Secretary and officials. Minister, I would
+like to ask you about the ways in which we are preserving the water that we do have in terms of effective water
+management and supply. There are a significant number of outputs discussed and a fair amount of funding to
+discuss in the ‘Department Performance Statement’, page 33. I am aware in my electorate of one recent project
+at Max Pawsey Reserve in Narre Warren, which will save a considerable amount of water. Minister, could you
+talk to me about how the funding in this budget will be supporting schemes such as the one at Max Pawsey and
+others to save water?
+
+   Gayle TIERNEY: Recycling water and stormwater recapture are incredibly important, and again the best
+way that we can harness both those things is through projects where there is serious community involvement,
+and that I think has occurred with the Max Pawsey example as well as others that have been and continue to be
+underway. And of course the importance is not just the capture, it is the fact that it helps conserve drinking
+water. And the other special by-product in all of this is that locals continue to have their sporting facilities and
+their recreational spaces kept green so that they can enjoy what is available locally.
+
+We are taking steps to conserve our precious drinking water in so many ways. The one that you mentioned, the
+Max Pawsey Reserve, was a $5.3 million investment, and it was exciting to see everyone there. Max Pawsey,
+as I understand – and I will give a shout-out to him; whilst he might have passed, his family are very keen to
+have his legacy known – was an engineer primarily in local government that had an absolute commitment to
+and fascination with all things water, and he would have absolutely enjoyed the launch of the Max Pawsey
+Reserve. It is an example of what we are investing in to support using more stormwater and recycled water, as I
+said, to protect our drinking water. The new system is helping keep the local sporting grounds in tiptop
+condition whilst saving up to 40 Olympic-sized swimming pools for drinking water. That is quite a bit of water,
+and one would imagine that it has been put to great effect in the last few days given the rainfall that we have
+received. It is stormwater that is run-off and then treated and used to irrigate the gardens and the open spaces,
+and it also helps futureproof community recreational spaces.
+
+We know that Victoria’s population is growing and it is putting pressure on our precious drinking water
+supplies. That is why this new infrastructure investment is so important. It is important to older communities,
+but also I think it is important in terms of designing it into new developments and new communities so it does
+not have to be retrofitted at some other point in time. And of course there is the great accompaniment of the
+planning that is required in those new growth areas for recreational and green space and environmental design.
+
+The project that you mentioned does have many, many benefits, and we are wanting to see more and more
+communities step up and have conversations with government and have conversations with their local
+government to work up proposals so that we can harness this run-off and put it to better use, but also build up
+our drinking water reserves.
+
+   Michael GALEA: Fantastic. I did not know that history about Max Pawsey himself, so you learn something
+new every day. Thank you, Minister. In terms of other initiatives like this, can you talk to us about some of the
+other projects across the state that are, in a similar vein, working to improve our efficiency with water?
+
+   Gayle TIERNEY: Look, there are so many, so it is hard, but I will try and give you a regional example. The
+one that comes to mind is Horsham. There was an investment of $11.8 million for the Horsham SmartWater
+and integrated water management project, and it included new water recycling infrastructure at the wastewater
+treatment plant. That will help parks and gardens stay green across Horsham. The project involved the
+construction of a new network of pipes through the city of Horsham with connections to green spaces. As I
+said, ovals, parks, the cemetery and the racecourse also benefit from this. It provides up to 126 megalitres of
+recycled water for irrigation per year, reducing the need to use valuable drinking water. This also includes
+better water quality for the Horsham SMART farm for their crop irrigation research, and of course that is
+incredibly important.
+Wednesday 11 June 2025                  Public Accounts and Estimates Committee                                    8
+
+
+
+
+Agriculture Victoria has many SMART farms. We are just very special in Mildura because we have got one
+attached to our TAFE. It is also helping in terms of agricultural research, this project. It is really, really good.
+Having an integrated water management project like this is crucial to diversify our water sources and to secure
+more sustainable water supplies for our communities, whether they are in urban metro Melbourne or indeed in
+the west, in the Mallee, in the Wimmera or in Horsham.
+
+  Michael GALEA: Indeed. I am also learning a lot this week about how wonderful the city of Mildura is.
+
+  Jade BENHAM: You should come and visit. Come to tropical north Victoria.
+
+  Michael GALEA: I am looking forward to taking you up on that, Ms Benham, and visiting you in tropical
+north Victoria. Minister, that is my time up, so thank you for those answers.
+
+  The CHAIR: Thank you, Mr Galea. Back to Ms Benham.
+
+   Jade BENHAM: Yes, me again. If we can go back to the environmental water, there will be water shortfalls
+this year, and we know that that will drive the price of irrigation water up for farmers. Do we know what the
+water shortfall will be and hence what allocations will be?
+
+    Gayle TIERNEY: This is a live question, and I cannot give you an ironclad response at this particular time.
+It is a moving piece that we are all watching and obviously concerned with, but I can assure you that we will
+continue to advocate for a different position to the Commonwealth in terms of buybacks. I can also advise you
+that we will continue to raise the profile of our four Victorian projects that remain under consideration for
+funding by the Australian government, and they are the lagoon reconfiguration, the Loddon system
+reconfiguration, the Campaspe system reconfiguration and the GMW irrigation district configuration.
+
+   Jade BENHAM: As far as shortfalls go, you can understand farmers need to plan because the shortfall in
+water means prices skyrocket. The environmental water holder carry water over every year. Do you agree that
+removing water from the consumptive pool and returning it to the environment is going to make the problem
+worse, and is there flexibility to take that carryover from the environmental pool and put it into the consumptive
+pool to help farmers with their projected costs, given they are being slugged? Yes, the emergency services tax
+has been paused, but with land tax and all the other taxes that they are facing, they are doing it tough. Anything
+that we can do as far as keeping water costs down for food producers would be greatly received.
+
+   Gayle TIERNEY: There are two elements to this. There are a number of things that the taskforce is dealing
+with. It would be inappropriate for me, and it is early days as well, to make comment. There are a number of
+propositions that have been informally put in relation to that. Can I say to you, though, that I have not given up
+on buybacks – far from it.
+
+  Jade BENHAM: I hope not.
+
+   Gayle TIERNEY: And indeed I have also written to the minister for water and have sought a commitment
+to pause on buybacks.
+
+  Jade BENHAM: But as far as the environmental water goes, they are like any other irrigator, they carry
+over every year when there is an abundance. Is there a view in Victoria that we could release some of that water
+back to the consumptive pool just to keep the prices down?
+
+   Gayle TIERNEY: This, again, is a matter that requires a whole-of-government approach. We are
+considering a whole range of options at the moment because so many people are being impacted as a result of
+the drought. But, Andrew, if you have got anything else –
+
+  Jade BENHAM: It is a pretty simple one, though, isn’t it?
+
+  Andrew FENNESSY: Under the Water Act, the environmental water must actually be used just for positive
+environmental outcomes, so there will be things like that that need to be considered. So whilst –
+
+  Jade BENHAM: Permanent plantings are surely a positive thing for the environment. Food security.
+
+  Gayle TIERNEY: The Act is the Act.
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                   9
+
+
+
+
+  Andrew FENNESSY: The Act is the Act in regard to how it is actually looked at for environmental
+purposes and for environmental benefits.
+
+   Jade BENHAM: But Minister, as the minister, surely you could make some amendments to that Act, in
+times of drought and hardship, for farmers.
+
+    Gayle TIERNEY: I understand your question. The fact of the matter is that there are legislative
+consequences to a whole range of things, and I am not in a position to give you the answer that you are seeking
+at this point.
+
+  Jade BENHAM: I would love a yes. It is something we are working on.
+
+  Gayle TIERNEY: We know that you would love a yes, but the Act is the Act, and it is pretty clear.
+
+   Jade BENHAM: It could be changed by the government. But I will move on. I want to ask you about the
+2022 commitment to build the new water register. I think this was written about in the Weekly Times yesterday.
+You have spent $36 million to date, and we are still using outdated systems from 2007. So after $36 million and
+that long – nearly 20 years – it has been a failure. When is it going to be ready?
+
+    Gayle TIERNEY: This was a project that was started around 2020; I have been in this portfolio for close to
+I think five months. This is a project that, in terms of the answers you are seeking, should probably be directed
+to those that have been closer to the project, so I will let the department respond.
+
+   Kirsten SHELLY: In terms of the expenditure that you outlined of the $36 million, that was a program
+outlined in EC5, or in environmental contribution 5, and that was delivered against sustaining a resilient and
+secured water register for Victoria. That was four years of operation of the Victorian Water Register, and it
+included things like operation of the water register, maintenance of the water register, water accounting and
+trade services as well as working towards the new water register platform.
+
+  Jade BENHAM: So when will it be ready?
+
+   Kirsten SHELLY: We are now working through a proof of concept. We were looking at a new build, a
+greenfields build.
+
+  Jade BENHAM: So we are only at concept stage right now?
+
+   Kirsten SHELLY: We were at looking at a new build, a greenfield, so a brand new platform if you like. We
+looked at that; it was cost prohibitive not only to do the new build but also to operate that build. So we are now
+looking at migrating the current platform to something that will be supported ongoing. We know that Microsoft
+is moving away from supporting the current platform in the next three to four years.
+
+  Jade BENHAM: They do that?
+
+  Kirsten SHELLY: They do do that. So proof of concept completed, we will be moving to implementation
+towards the end of the year.
+
+  Jade BENHAM: So how much –
+
+  The CHAIR: Thank you. We are going to Mr Tak.
+
+   Meng Heang TAK: Thank you, Chair, Minister. In the ‘Department Performance Statement’, page 33, we
+can see that the performance measure ‘Number of traditional owner groups funded to undertake self-
+determined water projects’ was met and was higher than last year. This is a fantastic outcome for the First
+Nation people who have long been denied fair and just access to water. Minister, you made an announcement
+recently about the Latrobe 3/4 bench bulk water reallocation. Can you take us through what that means for
+Gippsland, including traditional owners?
+
+   Gayle TIERNEY: Yes, and thank you so much for that question. Of course I am very pleased to go through
+in some detail in respect to this initiative. It was great to be able to be in Gippsland to make that announcement
+with traditional owners and the community. It means that our government is delivering an additional
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                    10
+
+
+
+
+16 gigalitres of water for Gippsland farmers, as well as traditional owners, to improve the health of the Latrobe
+River. The water was previously set aside for power generation but is currently unused and has been now
+reallocated. Sixteen gigalitres will be equally shared between agriculture, traditional owners and the
+environment.
+
+Additional water for environmental flows will improve the health of the La Trobe River as well as the
+Gippsland Lakes system downstream. The Gunaikurnai Land and Waters Aboriginal Corporation will have
+access to additional water for self-determined cultural uses. Southern Rural Water will make additional water
+available to farmers. Agriculture supports thousands of jobs in Gippsland, and the availability of more water
+licences to help boost the local economy is incredibly important. This water allocation is – you are quite
+correct – known as the Latrobe 3/4 bench bulk water entitlement, and it was originally allocated back in 1996
+for coal-fired power generation. The decision to reallocate the 16 gigalitres of the 25-gigalitre water entitlement
+was made through the Central and Gippsland Region Sustainable Water Strategy. The remaining 9 gigalitres of
+the entitlement will be retained by government to provide continued flexibility to respond to emerging needs
+within the Gippsland region. The allocation is absolutely a win–win–win for Gippsland. This change ensures
+more water supply within Gippsland to support the environment, farming and traditional owners. I have got to
+say the excitement in the area was absolutely amazing, but even in terms of the taskforce that met in
+Camperdown last Friday there was a representative from one of the financial entities. She is also a farmer in
+Gippsland, and she spoke very highly of this particular project and how well it has been received by the
+farming community. So again, can I just use this as an opportunity to thank everyone who has been involved in
+this. It has been a real example of different community groups working through issues. Some of them were
+pretty tough, but they have worked through issues, and they have been able to construct an arrangement where
+everyone is a winner.
+
+Thank you for your question. Again I use this as an opportunity to encourage anyone who has got issues in their
+area where they think that there can be win–win situations – we are very happy to hear from them and for
+anything we can do to facilitate different parts of the community coming together and working through issues
+that, on the face of it, might be almost insurmountable but actually bring about an outcome that everyone
+enjoys.
+
+   Meng Heang TAK: Thank you. Minister, I refer to your presentation: you mentioned that Victoria has
+among the lowest water bills in the country, which is absolutely fantastic and good news. It is clear that this
+government is taking the cost of living seriously. Minister, can you outline what the government and water
+corporations are doing to keep water bills low?
+
+   Gayle TIERNEY: Thank you. We are a government that absolutely supports high-quality, safe and
+affordable water for all Victorians, and I thank you for the question because it does allow me to highlight the
+importance of having secure, reliable and affordable water. We continue to have some of the lowest water bills
+in the country, and households are benefiting from stable water prices. Victorians pay amongst the lowest water
+bills in each category of water corporations in Australia, from major urban to small regional. According to the
+latest available data, Melbourne’s water bills are lower than any other capital city in Australia. Recent data
+based on 2023–24 indicates that for customers in metropolitan Melbourne a typical household water bill is $156
+below Sydney. In my presentation I said it is $124 below Canberra, $182 below Adelaide, $1027 below
+Darwin, $743 below Perth and $605 below south-east Queensland. Across Victoria’s regions we have some of
+the lowest water bills in Australia as well, and I would like to take the opportunity to remind the committee
+about how water prices are set.
+
+The state’s independent economic regulator, the Essential Services Commission, the ESC, reviews all water
+corporations’ proposed services and prices to ensure they are fair every five years.
+
+  Meng Heang TAK: Thank you, Minister.
+
+  The CHAIR: Thank you, Mr Tak. We are going to go to Mr Puglielli.
+
+  Aiv PUGLIELLI: Thank you. Good afternoon. I want to ask some questions about drinking or potable
+water across greater Melbourne. Looking at budget paper 3, page 121, ‘Output’, you have earmarked
+$296 million in this budget for ‘Effective Water Management and Supply’. There are some concerns in the
+community about potable water being used for non-domestic or typical industrial or commercial purposes.
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                     11
+
+
+
+
+Particularly I would like to ask about the use of potable water by data centres in their day-to-day operations.
+Can I ask: what is the total annual volume of potable water currently under application by data centres in
+greater Melbourne?
+
+  Gayle TIERNEY: That would be the Minister for Planning.
+
+  John BRADLEY: We have some information.
+
+  Gayle TIERNEY: Okay. Sure.
+
+   John BRADLEY: Thank you. Just in terms of the information we have got currently, we have got 46 data
+centres in operation in Melbourne at the moment, and existing data centres tend to have water usage that we
+have estimate at around 50 litres per second. What we know is that with additional data centres coming in the
+future we will need to plan well and be ahead of that, because they do tend to be more water intensive unless
+they have a closed loop system or they are looking at zero water operations. At this stage there would be
+46 data centres in operation that are typically using around 50 litres per second.
+
+  Aiv PUGLIELLI: Okay. Was that for Melbourne or greater Melbourne?
+
+  John BRADLEY: That is across Melbourne.
+
+  Aiv PUGLIELLI: Okay. In terms of total annual volume, can you come back to me with a figure on that?
+
+  John BRADLEY: As the minister alluded to, we would not have that kind of detailed customer information.
+That would be held individually by the water corporations.
+
+   Aiv PUGLIELLI: Okay – good to know. Do you know for those centres if any have applications or
+licences for the use of recycled water? If so, can you tell me what that total annual volume is – or the figures
+you can provide?
+
+   John BRADLEY: We do not have data at the moment in relation to the use of recycled water by data
+centres. We do know that the planning application will consider issues like water use as part of that assessment,
+and there are different demands for water depending on the operating model of the data centre, including some
+use of closed loop systems.
+
+   Gayle TIERNEY: I can add to that. I just want to reiterate that there are significant benefits for Victoria
+from attracting data centres, both for creating jobs and also for the national strategic importance of data being
+held in this country. Water corporations work with large water users, like data centres, all the time to assess
+their requests for significant volumes of water. When water corporations review applications, they assess
+whether the broader water network has the capacity to support that request, and the government encourages all
+large water users to prioritise access to manufactured water sources such as recycled water and treated
+stormwater rather than putting any pressure on drinking water supplies. The use of recycled water and treated
+stormwater are part of the Victorian government’s broad efforts to ensure secure water supplies into the future.
+As a government, we are actively working with water corporations and data centre providers to understand the
+current and future requirements for a range of data centre development inputs, including water, energy, land
+and of course skills.
+
+   Aiv PUGLIELLI: Can I query something with you, Minister? I would like your assessment. Are you aware
+that there is currently no government policy preventing data centres from using drinking water for server
+cooling or requiring them to connect to recycled water?
+
+   Gayle TIERNEY: What I am aware of is that it is the government’s view that all large water users need to
+prioritise access to manufactured water services such as recycled water and treated stormwater. That is
+absolutely important versus pressure on drinking water.
+
+  Aiv PUGLIELLI: Can I ask: has government considered any restrictions on data centres consuming potable
+water for the purpose of cooling their servers – like a moratorium on new applicants, for example?
+
+  Gayle TIERNEY: This I think would feed into a consideration that the Minister for Planning might have,
+but we have made it clear that we see recycled water and stormwater as the preferred source.
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                  12
+
+
+
+
+  Aiv PUGLIELLI: Okay. Is government continuing to develop policy in this area on data-centre water use?
+
+  Gayle TIERNEY: The government continues to develop a range of views and policies on a whole range of
+new areas that are being developed. Data centres are just one.
+
+   Aiv PUGLIELLI: Okay. I am going to move on, but I think it is still on the same budget page, though – still
+‘Effective water management and supply’. Recently, after a production of documents motion, government did
+not release the water grid plan. It was a single document, and I understand the reasoning was due to insufficient
+time provided. Minister, can I get a confirmation: does the plan exist?
+
+  Gayle TIERNEY: The plan is being finalised, and I am hoping to have that submitted fairly shortly.
+
+  Aiv PUGLIELLI: Submitted to the Parliament?
+
+  Gayle TIERNEY: Well, it will be open for the public to have a look at.
+
+  Aiv PUGLIELLI: Okay. Just checking another matter as well, Water Is Life: is it true that three years on,
+none of the commitments on that road map have been achieved?
+
+  Gayle TIERNEY: Thank you. I am absolutely committed to traditional owners roles in the decision-making
+on access to water in Victoria. We announced in the last Victorian budget $41 million over the next four years,
+and that was made in response to the needs articulated by traditional owners across Victoria. It demonstrates a
+commitment to increasing traditional owner participation. I can go through the exact investments.
+
+  The CHAIR: I am going to cut you off there, Mr Puglielli. Apologies.
+
+  Gayle TIERNEY: I am happy to provide that to you.
+
+  Aiv PUGLIELLI: Thank you.
+
+  The CHAIR: Thank you, Minister. Mr Hilakari.
+
+   Mathew HILAKARI: Thank you, Minister and officials, for your attendance this afternoon. What a point
+of generosity, Minister, in taking those questions on notice.
+
+Minister, I might take us to hardship supports. I understand that in your previous answers you have talked about
+Victoria having low bills, but of course there are a number of people for whom those bills are still something
+that they are going to really struggle with, particularly in this time of cost of living. I am just hoping you can
+outline what hardship supports the water corporations have put in place to support people who are struggling to
+pay their bills.
+
+   Gayle TIERNEY: Thank you, Mr Hilakari, for your question – a timely question given the impact that cost
+of living is having on a range of members in the community. Obviously, whilst we have got some of the lowest
+bills in the country – that is one thing – there are other people in the community that are really, really
+struggling. What I have found since I have moved into the water portfolio is that the water corporations have
+got fairly serious and well-developed hardship funds, and I think that is because they have had a track record
+and history and are close to the community in understanding the difficulties that people are going through. It is I
+think a real feather in their cap that they actually are proactive in working with community generally but also
+individuals to work out the best possible way that they can assist financially. The hardship funds I think are
+looked upon as real industry cutting edge in terms of support and care for the community, and again I would
+encourage anyone that is facing serious financial difficulties to contact their water corporation as soon as
+possible so that they can understand what the rules and the requirements are to be eligible for them. Do you
+want to mention anything else, Kirsten?
+
+   Kirsten SHELLY: Just that the water corporations also have flexible payment plans, hardship and water
+saving assistance programs, and we have seen utility relief grant support of over 44,069 grants at a value of
+$11.2 million. We have also seen customers on instalment or flexible plans, and there have been
+153,760 customers supported. Hardship grants: we have seen –
+
+  Mathew HILAKARI: Sorry, how many customers was that?
+Wednesday 11 June 2025                 Public Accounts and Estimates Committee                                  13
+
+
+
+
+  Kirsten SHELLY: 153,760.
+
+  Mathew HILAKARI: Wow. Yes, that speaks to the challenge, doesn’t it?
+
+  Kirsten SHELLY: Yes. We have also seen the hardship grants – 17,000-odd customers supported – and
+concessions for 24 per cent of customers with their water bills, totalling $177 million across over
+600,000 households.
+
+   Mathew HILAKARI: So that reaching out early is really important so that they can work with water
+corporations and find the best solutions for anyone facing hardship.
+
+  Kirsten SHELLY: Absolutely.
+
+   Mathew HILAKARI: Minister, I might take you to a different area which is related to housing and the
+infrastructure that is being brought forward to make sure we can meet the needs of housing. Of course if you do
+not have sewerage and water coming to properties as the housing is built, that is a real challenge. I reference in
+particular budget paper 4, pages 91 through to 93. I am just hoping you could run me through what the water
+sector is undertaking to meet the housing statement, which is a whole-of-government priority.
+
+   Gayle TIERNEY: Yes. Thank you for the question. Can I start by just saying that what I really like about
+what we are doing in the housing area is that all of the ministers that touch upon it, whether it be the Minister
+for Planning, the minister for housing or me, have been meeting various peak bodies to hear from them directly
+on a fairly frequent basis on any issues that are arising and getting those issues fixed around the table or in a
+very short timeframe. The water corporations have a key role, you are quite correct, in providing water
+connections for new properties as our towns and cities grow, and delivering the housing statement is a priority
+for this government and the water sector more generally.
+
+As I said in my presentation, there is more than $3.2 billion of water infrastructure capital works, and they are
+planned for this financial year alone to support our growing communities. Melbourne Water is responsible for
+assessing flood risks and planning applications in both greenfield and established urban areas, including
+drainage schemes for new developments. In the past year Melbourne Water has taken significant steps to speed
+up approvals for new housing development applications. Melbourne Water’s goal was to eliminate a backlog of
+planning applications by 31 December last year and to ensure that at least 90 per cent of contemporary
+applications were processed by 31 March 2025. I am pleased to say that Melbourne Water exceeded these
+targets ahead of schedule and cleared 98 per cent of the applications. Earlier this year, as I said, I met with the
+housing industry peak bodies, and they have been pleased with that result, I can assure you.
+
+Obviously we need to keep our foot on the accelerator pedal. We cannot allow for backlogs. We have just got
+to keep on pushing ahead. I know that Melbourne Water has had various teams of people looking at the permits
+and working out the different categories, from ‘fairly simple’ to ‘medium’ to ‘quite complex’, and having
+particular efforts, skills and responsibilities applied to different categories of issues connected to permits. So
+they have taken this on in a very serious way, and you can see the results. They have done a fantastic job.
+
+  Mathew HILAKARI: I see it in the community I represent.
+
+   The CHAIR: Thank you, Mr Hilakari. Minister and officials, thank you very much for appearing before the
+committee today. The committee will follow up on any questions taken on notice in writing, and responses are
+required within five working days of the committee’s request.
+
+The committee is going to take a break before beginning its consideration of the portfolio of agriculture at
+3:00 pm.
+
+I declare this hearing adjourned.
+
+Witnesses withdrew.
+
