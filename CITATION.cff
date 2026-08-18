@@ -15,5 +15,7 @@ abstract: >-
 url: "https://sovereignties.civicinterplay.io"
 repository-code: "https://github.com/civic-interplay/ai-sovereignties"
 license: CC-BY-4.0
-date-released: "2026-06-29"
-doi: "10.5281/zenodo.21026430"
+version: "v0.2.0"
+date-released: "2026-08-18"
+# Concept DOI — always resolves to the latest version.
+doi: "10.5281/zenodo.21026429"

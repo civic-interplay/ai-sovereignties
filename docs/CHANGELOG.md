@@ -4,6 +4,48 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-08-18
+
+- **Governance-flag vocabulary reduced 11 → 3.** Flags that restated the
+  statutory route (Ministerial fast-track, NSW State Significant Development,
+  Bypassed local council) were retired once Planning pathway carried that
+  information. Sovereign compute claim, Social licence contested, Open data
+  commitment and Worker transition plan also retired. Surviving vocabulary:
+  Transparency deficit, Community consultation lacking, FIRB scrutiny.
+- **First Nations engagement flag removed.** Its six uses were four WA, one NT,
+  one VIC, against 62 Victorian and 46 NSW rows — a record of where an analyst
+  looked, not where engagement is unclear. Because a flag is silent both when a
+  row passes and when nobody checked, an empty filter result could read as "no
+  Traditional Owner concerns here". Replacement, when done, is the statutory
+  record (Cultural Heritage Management Plan status, assessed with the Registered
+  Aboriginal Party), not our judgement. See METHODOLOGY.md.
+- **Planning pathway vocabulary made state-neutral.** "State significant
+  development" is NSW statute and was being applied to Western Australian rows
+  that have no such pathway; it is now **State assessed**, covering NSW SSD, WA's
+  Part 17 pathway and equivalents, with the local instrument named per row.
+  Three WA rows corrected: Hazelmere → Local council (assessed as
+  warehouse/storage), Mt Weld → Not applicable (a mine, under the Mining Act and
+  EP Act Part IV), Westech Pilbara cleared as undetermined.
+- **"State fast-tracked" re-derived and redefined.** The figure came from two
+  governance flags and would have silently reported zero once they were retired;
+  it now reads Planning pathway (36 → 41 rows, none lost). The published
+  definition said "not subject to normal public consultation" — wrong for NSW
+  SSD, which is exhibited. It now says the State, not the council, is the consent
+  authority, and points to Public notice for exhibition.
+- **New field: Resource conditions.** Whether the legal instrument of approval
+  imposes any obligation on energy or water use — Numeric / Generic via endorsed
+  document / Claim only — unconditioned / Not accessible. Graded only from the
+  instrument itself; blank means unread. Two rows graded so far.
+- **Enforcement research, five jurisdictions.** No instrument of approval found
+  in NSW, VIC, TAS, WA or SA imposing a numeric energy or water condition.
+  Marsden Park (SSD-70889211): zero occurrences of PUE or WUE. Oroya Drive
+  Truganina (PA2504032, Minister for Planning): sustainability handled by
+  endorsing the proponent's own plan; water referred out to a Greater Western
+  Water agreement. Tasmania: cl 6.11.2 gives councils no head of power to impose
+  such a condition at all. WA on the record: "specific water take limits have not
+  been formally set for the data centre industry as a distinct customer class"
+  (Tabled Paper 1137, 5 May 2026). QLD and NT not yet closed.
+
 ## 2026-08-10
 
 - **Corrections from adversarial verification** (16 of 22 claims checked; 14
