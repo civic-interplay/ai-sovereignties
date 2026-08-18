@@ -1,0 +1,940 @@
+{
+ "taken": "2026-08-18",
+ "purpose": "pre-migration record of Governance Flags before retiring 7 of 11 options",
+ "rows": [
+  {
+   "id": "3be18df0-b775-81aa-9f6e-f08956c93b4b",
+   "name": "Stockland / Fife Capital — 90 Aldington Road Data Centre, Kemps Creek (SSD)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "3be18df0-b775-8147-a032-fcc658591920",
+   "name": "AirTrunk — Kurri Kurri Data Centre (SSD-128819490)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "3be18df0-b775-81b4-bf7a-d0c5119f57ce",
+   "name": "[REJECTED] duplicate — NEXTDC S5 (merged into existing row 2026-08-16)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-812d-841e-c087ffb228d0",
+   "name": "Data Centre — 140-204 Western Avenue, Westmeadows",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-81c5-ad67-c2c27427e031",
+   "name": "Data Centre — 80 Kinloch Court (Hume)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-8190-8796-d96038660541",
+   "name": "Data Centre — 148-158 O'Briens Road, Corio (Geelong)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-81eb-9ea0-c20002714eeb",
+   "name": "Stockland — 72-76 Cherry Lane, Laverton North (PA2604458)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Unknown",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-819e-afb1-cf803d64db49",
+   "name": "Digital Realty MEL12 — Deer Park",
+   "state": "Victoria",
+   "pathway": null,
+   "public_notice": "Unknown",
+   "flags": [
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "3b418df0-b775-814a-a70f-fd34c96bcf50",
+   "name": "AWS — Cobblebank (Melton)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-81ca-af9f-f03e981efe8f",
+   "name": "CDC — Laverton North Campus",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-814c-9964-f5207290d729",
+   "name": "NEXTDC M2 — Tullamarine",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3b418df0-b775-81fb-8922-c8f35275e0d4",
+   "name": "Equinix ME1/ME2 — Lorimer Street, Port Melbourne",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "3a918df0-b775-81a3-b71d-cb90d0b75d1c",
+   "name": "AirTrunk — Mars Road / Apollo Place (87–91 Mars Road, Lane Cove West)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "3a918df0-b775-81e8-9811-d2ff929146e1",
+   "name": "Goodman — Project Mars (12 Mars Road, Lane Cove West)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": "Exhibited",
+   "flags": [
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-8126-80ca-e289eb1741d9",
+   "name": "Stockland — Brooklyn Data Centre (Melbourne west)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-8133-bc00-ffcbd86824df",
+   "name": "Data Centre — South Morang (McDonalds Rd / Plenty Rd, PA2402997)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-817c-9543-e882d9ac89c9",
+   "name": "Data Centre — 171 Leakes Road, Truganina (PA2403416)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-81c0-b829-da2f82217b7d",
+   "name": "NEXTDC M3 expansion — Tottenham (PA2604231)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Sovereign compute claim"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-81c6-bc0f-ed7f75d3a43e",
+   "name": "Perri Projects — West Footscray Data Centre (63 Sunshine Road)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-811c-a5c1-eeb5c9cb1fca",
+   "name": "Victoria — Sustainable Data Centre Action Plan (Feb 2026)",
+   "state": "Victoria",
+   "pathway": null,
+   "public_notice": null,
+   "flags": [
+    "Transparency deficit",
+    "Social licence contested"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Social licence contested"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-8137-b6e3-ea1427c019cf",
+   "name": "PGIM — Truganina Data Centre (1 Oroya Drive)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking",
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-8184-b6e6-dc0a5a429f14",
+   "name": "Victoria — Development Facilitation Program (data centre pathway)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-8196-b83c-d9d92193bfc6",
+   "name": "GreenSquareDC WAi1 — Hazelmere (Perth) [withdrawn]",
+   "state": "Western Australia",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "Social licence contested",
+    "First Nations engagement unclear"
+   ],
+   "flags_after_migration": [
+    "First Nations engagement unclear"
+   ],
+   "flags_being_removed": [
+    "Social licence contested"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-81a2-8fd7-c6923b3cd71e",
+   "name": "STACK Infrastructure MEL02 — Truganina",
+   "state": "Victoria",
+   "pathway": null,
+   "public_notice": "Unknown",
+   "flags": [
+    "Sovereign compute claim",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "39a18df0-b775-81d3-89ef-dfee7ab7e6c3",
+   "name": "NEXTDC M4 — Port Melbourne (Fishermans Bend)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": "Exempted",
+   "flags": [
+    "Sovereign compute claim",
+    "Ministerial fast-track",
+    "Bypassed local council",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Sovereign compute claim",
+    "Ministerial fast-track",
+    "Bypassed local council"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-8100-b983-ccea31de5a7b",
+   "name": "Lane Cove Data Centre (Mars Road)",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-8120-8aa7-fd591aa6d788",
+   "name": "NEXTDC S4 — Fairfield",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-8134-a27a-ddea4af52531",
+   "name": "GreenSquare DC — SYD1 Stage 2",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-813d-91d2-ef0056f7938d",
+   "name": "Glendenning Road Data Centre",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-8142-9297-ebf49484e697",
+   "name": "Microsoft — Honeman Close Data Centre",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-8145-aa97-c8b788b76ae5",
+   "name": "NEXTDC S5 — 269 Lane Cove Road, Macquarie Park (SSD)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-814a-bbdf-f72a31ad123b",
+   "name": "Goodman — Project Atlas (Blacktown)",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-814e-a816-f058e463ebff",
+   "name": "Stack Infrastructure — 78 Lockwood Road (Penrith)",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-8156-910b-d27fa40f233b",
+   "name": "Stockland — NSW data centres (Wetherill Park / Kemps Creek / Ryde)",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38e18df0-b775-81ef-8b2a-da8bbdf242a3",
+   "name": "AIMS — Bella Vista Data Centre Campus",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Ministerial fast-track",
+    "NSW State Significant Development"
+   ]
+  },
+  {
+   "id": "38d18df0-b775-810e-80b4-f734638e70a5",
+   "name": "Campbellfield Data Centre (former Ford site)",
+   "state": "Victoria",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Social licence contested",
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Social licence contested",
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "38d18df0-b775-8132-acf9-d1dcce34b734",
+   "name": "Plumpton Data Centre (Melbourne west)",
+   "state": "Victoria",
+   "pathway": null,
+   "public_notice": null,
+   "flags": [
+    "Social licence contested",
+    "Community consultation lacking"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking"
+   ],
+   "flags_being_removed": [
+    "Social licence contested"
+   ]
+  },
+  {
+   "id": "38d18df0-b775-8128-b14a-dea99cd0e77e",
+   "name": "AirTrunk Mamre Road (Kemps Creek)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": "Exhibited",
+   "flags": [
+    "Social licence contested",
+    "NSW State Significant Development",
+    "Ministerial fast-track"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Social licence contested",
+    "NSW State Significant Development",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "33918df0-b775-8103-99d0-d9aae3ddeefe",
+   "name": "Australia Critical Minerals Strategy 2030",
+   "state": "National / Federal",
+   "pathway": "Not applicable",
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim",
+    "Community consultation lacking"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking"
+   ],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "33918df0-b775-810f-a8a8-df84d856aad9",
+   "name": "Northern Minerals — Browns Range",
+   "state": "Western Australia",
+   "pathway": "Federal assessment",
+   "public_notice": null,
+   "flags": [
+    "FIRB scrutiny",
+    "Social licence contested",
+    "First Nations engagement unclear",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "FIRB scrutiny",
+    "First Nations engagement unclear",
+    "Transparency deficit"
+   ],
+   "flags_being_removed": [
+    "Social licence contested"
+   ]
+  },
+  {
+   "id": "33918df0-b775-8112-aebd-da2092fd5dbc",
+   "name": "Microsoft Azure — Canberra Region",
+   "state": "National / Federal",
+   "pathway": "Federal assessment",
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim",
+    "FIRB scrutiny"
+   ],
+   "flags_after_migration": [
+    "FIRB scrutiny"
+   ],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "33918df0-b775-8113-960d-e922e9474d72",
+   "name": "AirTrunk Sydney (SYD01)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "FIRB scrutiny",
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "FIRB scrutiny",
+    "Transparency deficit"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "33918df0-b775-811f-96b8-fa9581e584fe",
+   "name": "Anthropic / Albanese Government MOU",
+   "state": "National / Federal",
+   "pathway": "Federal assessment",
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim",
+    "Transparency deficit",
+    "Community consultation lacking"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit",
+    "Community consultation lacking"
+   ],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "33918df0-b775-812c-b2b9-cf6cbbf857c4",
+   "name": "Lynas Rare Earths — Mt Weld Mine",
+   "state": "Western Australia",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "First Nations engagement unclear"
+   ],
+   "flags_after_migration": [
+    "First Nations engagement unclear"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "33918df0-b775-813d-b5cc-cb163b3f15ef",
+   "name": "AWS — Asia Pacific Sydney Region",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "Transparency deficit",
+    "FIRB scrutiny"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit",
+    "FIRB scrutiny"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "33918df0-b775-816a-a94d-c6ea7188e296",
+   "name": "China rare earth export controls — Gallium/Germanium",
+   "state": "International",
+   "pathway": "Not applicable",
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "33918df0-b775-8177-bbc8-ffab1c96a0c9",
+   "name": "Arafura Rare Earths — Nolans Project",
+   "state": "Northern Territory",
+   "pathway": "Federal assessment",
+   "public_notice": null,
+   "flags": [
+    "First Nations engagement unclear",
+    "Community consultation lacking"
+   ],
+   "flags_after_migration": [
+    "First Nations engagement unclear",
+    "Community consultation lacking"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "33918df0-b775-8197-b2ed-f609e48a800a",
+   "name": "NextDC S1 — Sydney",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "Open data commitment"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Open data commitment"
+   ]
+  },
+  {
+   "id": "33918df0-b775-81a7-827b-da13c70e508b",
+   "name": "Iluka Resources — Eneabba Refinery",
+   "state": "Western Australia",
+   "pathway": "Federal assessment",
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "33918df0-b775-81a9-815e-c6221322f31c",
+   "name": "Westech Energy — Pilbara Data Centre",
+   "state": "Western Australia",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "Community consultation lacking",
+    "First Nations engagement unclear"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking",
+    "First Nations engagement unclear"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "32a18df0-b775-812f-975c-e9c8a8106691",
+   "name": "Amazon — Sydney & Melbourne ($20B investment)",
+   "state": "New South Wales",
+   "pathway": "Ministerial fast-track",
+   "public_notice": null,
+   "flags": [
+    "Bypassed local council",
+    "Ministerial fast-track",
+    "Community consultation lacking"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking"
+   ],
+   "flags_being_removed": [
+    "Bypassed local council",
+    "Ministerial fast-track"
+   ]
+  },
+  {
+   "id": "32a18df0-b775-8144-a9dd-da7f8cbd28ed",
+   "name": "CDC — Marsden Park Hyperscale (Western Sydney)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": "Exhibited",
+   "flags": [
+    "NSW State Significant Development",
+    "Open data commitment"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "NSW State Significant Development",
+    "Open data commitment"
+   ]
+  },
+  {
+   "id": "32a18df0-b775-817d-a799-c399cd496045",
+   "name": "Keppel — Hazelwood AI Campus",
+   "state": "Victoria",
+   "pathway": "Local council",
+   "public_notice": null,
+   "flags": [
+    "Social licence contested",
+    "First Nations engagement unclear",
+    "Worker transition plan"
+   ],
+   "flags_after_migration": [
+    "First Nations engagement unclear"
+   ],
+   "flags_being_removed": [
+    "Social licence contested",
+    "Worker transition plan"
+   ]
+  },
+  {
+   "id": "32a18df0-b775-81d3-9a9d-f8937517f249",
+   "name": "CDC — Maddington (Perth)",
+   "state": "Western Australia",
+   "pathway": null,
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim"
+   ],
+   "flags_after_migration": [],
+   "flags_being_removed": [
+    "Sovereign compute claim"
+   ]
+  },
+  {
+   "id": "32a18df0-b775-81e9-bd61-e2c55201c582",
+   "name": "AirTrunk MEL2 — Melbourne North-west",
+   "state": "Victoria",
+   "pathway": null,
+   "public_notice": "Exempted",
+   "flags": [
+    "Transparency deficit"
+   ],
+   "flags_after_migration": [
+    "Transparency deficit"
+   ],
+   "flags_being_removed": []
+  },
+  {
+   "id": "32a18df0-b775-81ff-a6f9-cb27a31447ae",
+   "name": "NEXTDC S7 — Eastern Creek AI Campus (OpenAI)",
+   "state": "New South Wales",
+   "pathway": "State significant development",
+   "public_notice": null,
+   "flags": [
+    "Sovereign compute claim",
+    "NSW State Significant Development",
+    "Community consultation lacking"
+   ],
+   "flags_after_migration": [
+    "Community consultation lacking"
+   ],
+   "flags_being_removed": [
+    "Sovereign compute claim",
+    "NSW State Significant Development"
+   ]
+  }
+ ]
+}
