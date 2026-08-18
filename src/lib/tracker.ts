@@ -72,6 +72,8 @@ export interface TrackerRow {
   announcedInvestment: number | null;
   source: string | null;
   notionPublicUrl: string;
+  latitude: number | null;
+  longitude: number | null;
   hasCoords: boolean;
   notes: string;
   lastEdited: string | null;
@@ -165,6 +167,8 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
         announcedInvestment: num(p['Announced investment (AUD)']),
         source: urlVal(p['Source']),
         notionPublicUrl: 'https://studio-esem.notion.site/' + page.id.replace(/-/g, ''),
+        latitude: num(p['Latitude']),
+        longitude: num(p['Longitude']),
         hasCoords: num(p['Latitude']) !== null && num(p['Longitude']) !== null,
         notes: plain(p['Notes']),
         lastEdited: page.last_edited_time ?? null,

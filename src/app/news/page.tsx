@@ -73,6 +73,34 @@ export default async function News() {
         sub="Press coverage, planning submissions, council motions and public statements around tracked sites — collected fortnightly, coded by stance and grounds."
       />
 
+      {/* Subscribe affordance. The <link rel="alternate"> tag lets readers
+          auto-detect the feed, but only if someone already pointed a reader at
+          the page — so the URL is also visible and copyable here. */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          flexWrap: 'wrap',
+          margin: '0 0 16px',
+          padding: '8px 12px',
+          border: '1px solid #2a322c',
+          borderRadius: 10,
+          fontSize: 12,
+          color: '#9aa39b',
+        }}
+      >
+        <span aria-hidden style={{ color: CI_PERIWINKLE, fontSize: 13 }}>⇩</span>
+        <span>Follow this feed in any news reader:</span>
+        <a
+          href="/news/feed.xml"
+          style={{ color: CI_PERIWINKLE, textDecoration: 'none', fontFamily: 'ui-monospace, monospace' }}
+        >
+          /news/feed.xml
+        </a>
+        <span style={{ color: '#6b7568' }}>· RSS 2.0, updated fortnightly</span>
+      </div>
+
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         {dated.map((i) => (
           <Panel key={i.id}>
@@ -155,12 +183,6 @@ export default async function News() {
         (<em>announced, proposed, planned, lodged, approved, development application, to build, hyperscale</em>).
         Forums, conference panels and broadcast appearances are not indexed by this sweep — they are added
         manually.
-      </Footnote>
-      <Footnote>
-        Subscribe to this feed in any news reader:{' '}
-        <a href="/news/feed.xml" style={{ color: CI_PERIWINKLE }}>
-          RSS / XML feed ↗
-        </a>
       </Footnote>
     </SheetShell>
   );

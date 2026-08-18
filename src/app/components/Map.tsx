@@ -431,6 +431,8 @@ export default function Map() {
   const [regs, setRegs] = useState<string[]>([]);
   const [supers, setSupers] = useState<string[]>([]);
   const [stages, setStages] = useState<string[]>([]);
+  // How much of the map is sized on a real number vs no disclosed capacity.
+  const [capCount, setCapCount] = useState<{ known: number; total: number }>({ known: 0, total: 0 });
   // Stages currently included. Empty set means no filter (show everything),
   // which is also the initial state — the map should open unfiltered.
   const [stageFilter, setStageFilter] = useState<Set<string>>(new Set());
@@ -587,11 +589,30 @@ export default function Map() {
       setRegs(REGISTER_ORDER.filter((k) => registerSet.has(k)));
       setSupers(SUPER_ORDER.filter((k) => superSet.has(k)));
       setStages(STAGE_ORDER.filter((k) => stageSet.has(k)));
+      setCapCount({
+        known: data.features.filter((f) => typeof f.properties?.capacity === 'number').length,
+        total: data.features.length,
+      });
 
       m.addSource('sites', { type: 'geojson', data });
 
       const color = COLOR_EXPR[lensRef.current];
-      const capacity = ['coalesce', ['get', 'capacity'], 30] as unknown as mapboxgl.ExpressionSpecification;
+
+      // Radius carries disclosed capacity (MW) — so it must not invent one.
+      // Most tracked sites have no MW figure in any public record (that absence
+      // is the disclosure finding), and the previous `coalesce(capacity, 30)`
+      // drew every one of them at the size of a real 30MW site. Undisclosed now
+      // gets its own fixed, deliberately small radius, and the scale runs on to
+      // 1200MW so the gigawatt campuses stop clamping to the same dot as 400MW.
+      const capValue = ['coalesce', ['get', 'capacity'], -1] as unknown as mapboxgl.ExpressionSpecification;
+      const capKnown = ['>', capValue, -1] as unknown as mapboxgl.ExpressionSpecification;
+      const radius = (unknown: number, r30: number, r400: number, r1200: number) =>
+        [
+          'case',
+          capKnown,
+          ['interpolate', ['linear'], capValue, 30, r30, 400, r400, 1200, r1200],
+          unknown,
+        ] as unknown as mapboxgl.ExpressionSpecification;
 
       // Outer pulse ring
       m.addLayer({
@@ -599,7 +620,7 @@ export default function Map() {
         type: 'circle',
         source: 'sites',
         paint: {
-          'circle-radius': ['interpolate', ['linear'], capacity, 30, 20, 400, 50] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-radius': radius(13, 20, 50, 68),
           'circle-color': color,
           'circle-opacity': 0.15,
           'circle-stroke-width': 1.5,
@@ -621,7 +642,7 @@ export default function Map() {
         type: 'circle',
         source: 'sites',
         paint: {
-          'circle-radius': ['interpolate', ['linear'], capacity, 30, 8, 400, 20] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-radius': radius(5, 8, 20, 27),
           'circle-color': color,
           'circle-opacity': ['case', isOperating, 0.9, isPipeline, 0.12, 0.4] as unknown as mapboxgl.ExpressionSpecification,
           // A sharp edge reads as "outline"; the glow is what makes a dot look solid.
@@ -643,7 +664,7 @@ export default function Map() {
         filter: ['==', ['get', 'contested'], true] as unknown as mapboxgl.FilterSpecification,
         layout: { visibility: 'none' },
         paint: {
-          'circle-radius': ['interpolate', ['linear'], capacity, 30, 16, 400, 44] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-radius': radius(10, 16, 44, 60),
           'circle-opacity': 0,
           'circle-stroke-width': 2.5,
           'circle-stroke-color': STATUS_CONTESTED,
@@ -658,9 +679,9 @@ export default function Map() {
       // often on together, which is the point of the map. Both rings sit outside
       // contested's radius so a site carrying both reads as one bright inner
       // ring plus two softer outer ones.
-      for (const [id, r0, r1] of [
-        ['sites-fasttracked', 23, 53],
-        ['sites-fasttracked-outer', 28, 60],
+      for (const [id, rU, r0, r1, r2] of [
+        ['sites-fasttracked', 15, 23, 53, 72],
+        ['sites-fasttracked-outer', 19, 28, 60, 81],
       ] as const) {
         m.addLayer({
           id,
@@ -669,7 +690,7 @@ export default function Map() {
           filter: ['==', ['get', 'fastTracked'], true] as unknown as mapboxgl.FilterSpecification,
           layout: { visibility: 'none' },
           paint: {
-            'circle-radius': ['interpolate', ['linear'], capacity, 30, r0, 400, r1] as unknown as mapboxgl.ExpressionSpecification,
+            'circle-radius': radius(rU, r0, r1, r2),
             'circle-opacity': 0,
             'circle-stroke-width': 1.5,
             'circle-stroke-color': STATUS_INK_SOFT,
@@ -695,7 +716,7 @@ export default function Map() {
         filter: ['==', ['get', 'namedPlatform'], true] as unknown as mapboxgl.FilterSpecification,
         layout: { visibility: 'none' },
         paint: {
-          'circle-radius': ['interpolate', ['linear'], capacity, 30, 7, 400, 13] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-radius': radius(5, 7, 13, 17),
           'circle-color': OVERLAY_PIP,
           'circle-opacity': 0.3,
           'circle-blur': 1,
@@ -708,7 +729,7 @@ export default function Map() {
         filter: ['==', ['get', 'namedPlatform'], true] as unknown as mapboxgl.FilterSpecification,
         layout: { visibility: 'none' },
         paint: {
-          'circle-radius': ['interpolate', ['linear'], capacity, 30, 3, 400, 6.5] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-radius': radius(2.5, 3, 6.5, 8.5),
           'circle-color': OVERLAY_PIP,
           'circle-opacity': 0.95,
           'circle-stroke-width': 1.75,
@@ -1368,6 +1389,30 @@ export default function Map() {
               }}
             />
             <span>Colour: {legendTitle}</span>
+          </div>
+
+          {/* Size key. Radius carries disclosed capacity, and most sites have no
+              disclosed capacity at all — so the key has to name the absence,
+              not just the scale, or a reader reads "small" for "unrecorded". */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
+            <span aria-hidden style={{ display: 'flex', alignItems: 'center', gap: 3, width: 9, flex: '0 0 auto' }}>
+              <span style={{ width: 4, height: 4, borderRadius: '50%', background: C_NEUTRAL, flex: '0 0 auto' }} />
+              <span style={{ width: 9, height: 9, borderRadius: '50%', background: C_NEUTRAL, flex: '0 0 auto' }} />
+            </span>
+            <span style={{ marginLeft: 6 }}>Size: capacity (MW)</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5, color: INK_MUTED }}>
+            <span
+              aria-hidden
+              style={{
+                width: 9, height: 9, borderRadius: '50%', flex: '0 0 auto',
+                border: `1px dashed ${INK_MUTED}`,
+              }}
+            />
+            <span>
+              Smallest dot: no capacity disclosed
+              {capCount.total > 0 && ` (${capCount.total - capCount.known} of ${capCount.total})`}
+            </span>
           </div>
 
           {view !== DEFAULT_VIEW && (

@@ -57,3 +57,6 @@ next-env.d.ts
 
 # personal / not for the repo
 /AAG BARNS 2026.pdf
+
+# Zenodo deposit bundle — derived output, regenerate with pipeline/export-zenodo.ts
+zenodo/
