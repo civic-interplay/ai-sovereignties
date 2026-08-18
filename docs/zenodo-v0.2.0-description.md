@@ -71,15 +71,33 @@ or a media release. `governance_flags` records findings about how an approval wa
 handled; an absent flag means the row was not assessed on that dimension, not
 that it passed.
 
-### How much of it is human-verified
+### How much of it is verified
 
-Stated plainly, because a reuser should not have to work it out: of 126 rows, one
-is marked Human-verified, 45 Human, 21 Agent, and 59 carry no classification.
-"Human-verified" is a high bar — it means a person walked the claim to a primary
-or official source under the fact-checking guide. Rows classified Agent are
-unreviewed and are excluded from published figures. The tracker is openly a
-work in progress, and the `classified_by` and `confidence` columns are there so
-you can filter to the level of assurance your use requires.
+Verification in this project happens at the level of the claim, not the row, and
+the two measures differ — so both are given here.
+
+**Claim-level.** 28 claims have been put through adversarial verification, in
+which independent agents are tasked with refuting each claim from fresh sources:
+20 confirmed, 2 plausible, 6 refuted. The refutation rate is 21%. All six
+refutations were upheld on independent re-check and corrected in the dataset and
+in published documents the same day. Every claim, its verdict and its failure
+mode are listed in `VERIFICATION-RECORD.md`. Separately, the Victorian
+disclosure audit checked each checkable planning record in its cohort against
+the exhibited primary documents; that audit and its caveats are in
+`DISCLOSURE-AUDIT.md`.
+
+**Row-level.** The `classified_by` column is a stricter and much narrower
+measure: it marks a row Human-verified only when a person has walked the row *as
+a whole* to a primary or official source under the fact-checking guide. On that
+bar, of 126 rows one is Human-verified, 45 are Human-entered, 21 are Agent, and
+59 carry no classification. Rows classified Agent are unreviewed and are
+excluded from published figures.
+
+The gap between the two is real and is not hidden: claim-level checking has
+covered considerably more ground than the row-level flag records, because
+verifying one field on a row does not verify the row. Use `classified_by` and
+`confidence` to filter to the level of assurance your use requires, and read
+`VERIFICATION-RECORD.md` for what has actually been tested.
 
 ### Use of AI, on the record
 
