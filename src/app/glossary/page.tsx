@@ -227,12 +227,24 @@ export default async function Glossary() {
         <Term name="Governance flags" color={ACCENT.yellow}>
           analyst findings about <em>how</em> an approval was handled, recorded per site and shown in the map
           popup beneath the pathway, as tags on the state data sheets, and as a filter under Planning pathway
-          on the map. The vocabulary is: Transparency deficit · Community consultation lacking · First Nations
-          engagement unclear · FIRB scrutiny. Each records a gap in how a decision was made, not a legal
-          finding, and an absent flag means the row has not been assessed on that dimension rather than that
-          it passed. Flags that merely restated the statutory route — ministerial fast-track, State
-          significant development, bypassed local council — were retired once Planning pathway carried that
-          information on its own.
+          on the map. The vocabulary is: Transparency deficit · Community consultation lacking · FIRB
+          scrutiny. Each records a gap in how a decision was made, not a legal finding, and an absent flag
+          means the row has not been assessed on that dimension rather than that it passed. Flags that merely
+          restated the statutory route — ministerial fast-track, State significant development, bypassed local
+          council — were retired once Planning pathway carried that information on its own.
+        </Term>
+        <Term name="Why there is no First Nations flag">
+          there was one, and it was removed on 18 August 2026. It had been applied almost only to mines and
+          remote projects — four of its six uses were in Western Australia, one in the Northern Territory,
+          against one of 62 Victorian rows and none of 46 in New South Wales. That is a record of where
+          anyone thought to look, not of where engagement is unclear. Because a flag is silent both when a
+          row passes and when nobody checked it, an empty filter result could be read as &ldquo;no Traditional
+          Owner concerns here&rdquo; — a claim about other people&rsquo;s Country that this tracker should
+          never make by accident. Every site on it sits on Country. The defensible replacement is the
+          statutory record rather than our judgement: whether a Cultural Heritage Management Plan was
+          required and approved under the Aboriginal Heritage Act 2006, assessed with the Registered
+          Aboriginal Party for that Country. Whether engagement was adequate is for Traditional Owner
+          organisations to say, and would be recorded here only by citing them.
         </Term>
         <Term name="Announcement vs approval date">
           the two clocks of a project: when the company announced it, and when the planning system approved it.

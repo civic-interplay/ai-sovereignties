@@ -1,0 +1,72 @@
+{
+ "taken": "2026-08-18",
+ "retired_flag": "First Nations engagement unclear",
+ "why": "Applied almost only to mines and remote projects (4 of 6 in WA, 1 NT); 1 of 62 VIC rows, 0 of 46 NSW. An empty filter result read as 'no Traditional Owner concerns here' \u2014 a claim about other people's Country made by accident. Statutory record (CHMP under the Aboriginal Heritage Act 2006, assessed with the Registered Aboriginal Party) is the checkable replacement.",
+ "rows": [
+  {
+   "id": "39a18df0-b775-8196-b83c-d9d92193bfc6",
+   "name": "GreenSquareDC WAi1 \u2014 Hazelmere (Perth) [withdrawn]",
+   "state": "Western Australia",
+   "flags_before": [
+    "First Nations engagement unclear"
+   ],
+   "flags_after": []
+  },
+  {
+   "id": "33918df0-b775-810f-a8a8-df84d856aad9",
+   "name": "Northern Minerals \u2014 Browns Range",
+   "state": "Western Australia",
+   "flags_before": [
+    "FIRB scrutiny",
+    "First Nations engagement unclear",
+    "Transparency deficit"
+   ],
+   "flags_after": [
+    "FIRB scrutiny",
+    "Transparency deficit"
+   ]
+  },
+  {
+   "id": "33918df0-b775-812c-b2b9-cf6cbbf857c4",
+   "name": "Lynas Rare Earths \u2014 Mt Weld Mine",
+   "state": "Western Australia",
+   "flags_before": [
+    "First Nations engagement unclear"
+   ],
+   "flags_after": []
+  },
+  {
+   "id": "33918df0-b775-8177-bbc8-ffab1c96a0c9",
+   "name": "Arafura Rare Earths \u2014 Nolans Project",
+   "state": "Northern Territory",
+   "flags_before": [
+    "First Nations engagement unclear",
+    "Community consultation lacking"
+   ],
+   "flags_after": [
+    "Community consultation lacking"
+   ]
+  },
+  {
+   "id": "33918df0-b775-81a9-815e-c6221322f31c",
+   "name": "Westech Energy \u2014 Pilbara Data Centre",
+   "state": "Western Australia",
+   "flags_before": [
+    "Community consultation lacking",
+    "First Nations engagement unclear"
+   ],
+   "flags_after": [
+    "Community consultation lacking"
+   ]
+  },
+  {
+   "id": "32a18df0-b775-817d-a799-c399cd496045",
+   "name": "Keppel \u2014 Hazelwood AI Campus",
+   "state": "Victoria",
+   "flags_before": [
+    "First Nations engagement unclear"
+   ],
+   "flags_after": []
+  }
+ ]
+}

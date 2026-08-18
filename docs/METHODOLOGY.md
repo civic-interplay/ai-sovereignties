@@ -136,3 +136,35 @@ instrument carrying a `Numeric` value has been found. Western Australia has
 stated the position on the record: "specific water take limits have not been
 formally set for the data centre industry as a distinct customer class"
 (Tabled Paper 1137, 5 May 2026).
+
+### A flag we removed (18 August 2026)
+
+`First Nations engagement unclear` was retired from the governance-flag
+vocabulary. It is recorded here because the reason generalises.
+
+The flag had six uses: four in Western Australia, one in the Northern
+Territory, one in Victoria — against 62 Victorian rows and 46 in New South
+Wales, neither of which is plausibly a jurisdiction where the question does not
+arise. Five of the six were mines or remote projects. The distribution was a
+record of where an analyst thought to look, not of where engagement is unclear.
+
+The failure mode is specific to flags. A flag is silent both when a row passes
+and when nobody assessed it, so silence carries no information — but a reader
+filtering the map to Melbourne and seeing an empty result has only one
+available reading, that there are no Traditional Owner concerns there. That is
+a claim about other people's Country, made by accident, on a dimension where
+being wrong carries real weight. Every site in this tracker sits on Country.
+
+The replacement, when the work is done, is the statutory record rather than our
+judgement: whether a Cultural Heritage Management Plan was required and
+approved under the Aboriginal Heritage Act 2006 (Vic) and its equivalents,
+assessed with the Registered Aboriginal Party for that Country. Whether
+engagement was *adequate* is for Traditional Owner organisations to say, and
+belongs here only as a citation to them.
+
+Prior values are preserved in
+`docs/disclosure-audit/first-nations-flag-retired-2026-08-18.json`.
+
+**The general rule this yields:** a flag is only safe where its absence is
+genuinely uninformative to a reader. Where an empty result would be read as a
+clearance, use a field with an explicit "not assessed" value instead.

@@ -36,3 +36,36 @@ Cost drivers (Claude Code's own read-out): 94% of usage at >150k context, 71% fr
 time: `/compact` or `/clear` between phases (map / research / Notion / deploy / docs) would cut it.
 Energy: Anthropic doesn't publish per-session energy; a token→kWh figure would be a crude guess,
 so it's left unstated rather than faked — fittingly, the honesty rule the Energy lens itself follows.
+
+---
+
+## 2026-08-18 — Claude Opus 5 (1M context), via Claude Code
+
+**Work:** research-strategy session — no map or pipeline code touched.
+- Read the handoff brief against the repo and argued with its premise: both the
+  influence and output tracks are already running; what is missing is closure.
+- Wrote `docs/VERIFICATION-RECORD.md` — the aggregate of every adversarially
+  verified claim (28 claims, 20 CONFIRMED / 2 PLAUSIBLE / 6 REFUTED, 21%),
+  compiled from the two per-run records, with each refutation sorted against the
+  claim-type taxonomy it failed under.
+- Wrote `docs/PRE-REGISTRATION.md` — frozen protocol for the QLD/NT/WA/SA/TAS
+  sweep, to be deposited before any record in scope is opened. Commits
+  cross-family (non-Claude) verification for load-bearing claims, addressing the
+  correlated-error limit of same-family skeptics.
+- Wrote `docs/OUTPUTS-TODO.md` — six outputs, ordered, with the Senate inquiry's
+  unrecorded closing date flagged as the first blocker.
+- Built `docs/gen-citations.py` → `docs/citations.ris`: 262 unique sources
+  harvested from `zenodo/*.csv` and the research documents, each carrying its
+  FACT-CHECKING-GUIDE §2 source rung as a keyword. 236 of 262 titles are derived
+  from tracker rows or URL slugs and are flagged as such in-record.
+- Audited the Zenodo deposit against its own README: every published statistic
+  reconciles (89/37/94/1/11/33 and the jurisdiction table). Found one blocking
+  defect — 16 `[REJECTED]` pipeline-triage rows shipping unexplained — plus the
+  "37 other infrastructure rows" description, blank `confidence` on 40 of 89
+  data-centre rows, and `zenodo/` being gitignored.
+
+**Compute figures:** not captured in-session — `/cost` was not run before the
+session ended. To backfill from the Anthropic usage dashboard for 2026-08-18, or
+from this session's transcript into `docs/compute-log.jsonl` per `COMPUTE.md`.
+Recorded as unmeasured rather than estimated, on the same rule the Energy lens
+applies to operators: a blank means unassessed, not zero.
