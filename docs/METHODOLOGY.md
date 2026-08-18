@@ -103,3 +103,36 @@ records are compiled from public sources, cited per entry. Cite as:
 Sarah Barns, *A living atlas of contesting and curating AI sovereignties
 (Australian view)*, Civic Interplay, 2026.
 [doi.org/10.5281/zenodo.21026430](https://doi.org/10.5281/zenodo.21026430).
+
+## Resource conditions (added 18 August 2026)
+
+A per-row field recording whether the *legal instrument of approval* imposes any
+obligation on energy or water consumption. It answers a question the tracker's
+other fields do not: not what a project says it will use, nor whether that was
+disclosed, but whether anything binds it.
+
+| Value | Meaning |
+|---|---|
+| `Numeric` | The instrument names a figure — volume, rate, ratio or source — as a condition. Quotable with a condition number. |
+| `Generic — via endorsed document` | The instrument endorses a plan or statement that may contain figures, without restating them. Binding, but the number lives one step away. |
+| `Claim only — unconditioned` | A figure exists in an impact statement or corporate material; the instrument conditions nothing. |
+| `Not accessible` | The instrument exists but could not be obtained — unpublished, purged from the register, or portal-blocked. |
+| *(blank)* | Not yet checked. |
+
+**The rule: grade only from the instrument itself.** Not the assessment report,
+not the application, not the EIS, not a media release. If the consent or permit
+has not been read, the field stays blank. `Not accessible` means that specific
+instrument was sought and could not be obtained — it is a finding about the
+register, not a placeholder for work not yet done.
+
+As at 18 August 2026 two rows are graded, both from instruments read in full:
+CDC Marsden Park (SSD-70889211 — zero occurrences of PUE or WUE; the assessment
+record states "No specific conditions required") and PGIM Truganina at 1 Oroya
+Drive (permit PA2504032 — condition 19 endorses a sustainability management
+plan, no figure appears in the permit). Every other row is honestly blank.
+
+Across the five jurisdictions examined so far — NSW, VIC, TAS, WA, SA — no
+instrument carrying a `Numeric` value has been found. Western Australia has
+stated the position on the record: "specific water take limits have not been
+formally set for the data centre industry as a distinct customer class"
+(Tabled Paper 1137, 5 May 2026).
