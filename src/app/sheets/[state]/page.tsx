@@ -20,6 +20,7 @@ import {
   SectionHead,
   BarRow,
   Footnote,
+  ScopeNote,
   Updated,
   ACCENT,
   CI_PERIWINKLE,
@@ -214,7 +215,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
               <th style={th}>Site</th>
               <th style={th}>Operator → ultimate owner</th>
               <th style={th}>MW</th>
-              <th style={th}>Pathway / notice</th>
+              <th style={th}>Pathway / notice / flags</th>
               <th style={th}>Registers</th>
               <th style={th}>Subset</th>
               <th style={th}>Links</th>
@@ -233,6 +234,30 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                 <td style={td}>
                   {r.pathway ?? '—'}
                   {r.publicNotice ? ` · ${r.publicNotice}` : ''}
+                  {/* Governance flags belong with the pathway: they are analyst
+                      findings about how this approval was handled, not a
+                      separate attribute of the site. */}
+                  {r.governanceFlags.length > 0 && (
+                    <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', marginTop: 4 }}>
+                      {r.governanceFlags.map((f) => (
+                        <span
+                          key={f}
+                          style={{
+                            fontSize: 9.5,
+                            letterSpacing: '0.04em',
+                            textTransform: 'uppercase',
+                            color: ACCENT.yellow,
+                            border: `1px solid ${ACCENT.yellow}66`,
+                            borderRadius: 6,
+                            padding: '0 5px',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </td>
                 <td style={td}>{r.registers.length ? r.registers.join(', ') : '—'}</td>
                 <td style={{ ...td, color: r.inSubset ? ACCENT.green : '#4a534e' }}>{r.inSubset ? '●' : '○'}</td>
@@ -308,6 +333,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
       )}
 
       <Updated date={updated} style={{ marginTop: 28 }} />
+      <ScopeNote />
     </SheetShell>
   );
 }

@@ -8,6 +8,7 @@ import {
   Panel,
   SectionHead,
   Footnote,
+  ScopeNote,
   ACCENT,
   CI_PERIWINKLE,
 } from '../sheets/sheet-ui';
@@ -365,6 +366,7 @@ export default async function Glossary() {
         </a>
         .
       </Footnote>
+      <ScopeNote />
     </SheetShell>
   );
 }

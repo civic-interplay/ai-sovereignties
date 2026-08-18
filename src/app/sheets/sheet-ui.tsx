@@ -67,6 +67,33 @@ export function SheetNav({ current }: { current: string }) {
   );
 }
 
+export const CONTACT_URL = 'https://studio-esem.notion.site/a504252cf109454598a7b02e5024b10d';
+
+// Scope statement for the foot of every public page. What the tracker covers is
+// a claim in its own right, and leaving it unstated invites the reader to treat
+// the tracker as an inventory — so it says what it is, and asks to be corrected.
+export function ScopeNote() {
+  return (
+    <div
+      style={{
+        marginTop: 36,
+        paddingTop: 14,
+        borderTop: PANEL_BORDER,
+        fontSize: 11.5,
+        lineHeight: 1.7,
+        color: DIM,
+      }}
+    >
+      This tracker covers the build-out wave and its planning record, not the full historical inventory of
+      data centres in Australia. It is not necessarily comprehensive.{' '}
+      <a href={CONTACT_URL} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
+        Get in touch here
+      </a>{' '}
+      if you spot missing items.
+    </div>
+  );
+}
+
 export function SheetTitle({ kicker, title, sub }: { kicker: string; title: string; sub?: React.ReactNode }) {
   return (
     <header style={{ marginBottom: 28 }}>

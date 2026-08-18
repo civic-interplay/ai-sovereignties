@@ -9,6 +9,7 @@ import {
   SheetTitle,
   Panel,
   Footnote,
+  ScopeNote,
   ACCENT,
   CI_PERIWINKLE,
 } from '../sheets/sheet-ui';
@@ -141,7 +142,22 @@ export default async function News() {
                 <span style={{ fontSize: 10.5, color: '#6b7568' }}>syndicated ×{i.syndicated}</span>
               )}
               {(i.confidence ?? 1) < 0.6 && (
-                <span style={{ fontSize: 10, color: '#8d5108', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <span
+                  title={
+                    'Classified by a language model and not yet checked by a human. ' +
+                    'Most often this is because the item could not be tied to a specific tracked site, ' +
+                    'which caps its confidence score — state-wide policy stories are flagged automatically. ' +
+                    `Confidence ${(i.confidence ?? 0).toFixed(2)} (below the 0.6 review threshold).`
+                  }
+                  style={{
+                    fontSize: 10,
+                    color: '#8d5108',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    borderBottom: '1px dotted #8d5108',
+                    cursor: 'help',
+                  }}
+                >
                   pending review
                 </span>
               )}
@@ -184,6 +200,7 @@ export default async function News() {
         Forums, conference panels and broadcast appearances are not indexed by this sweep — they are added
         manually.
       </Footnote>
+      <ScopeNote />
     </SheetShell>
   );
 }

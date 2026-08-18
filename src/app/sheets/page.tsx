@@ -10,6 +10,7 @@ import {
   SectionHead,
   BarRow,
   Footnote,
+  ScopeNote,
   Updated,
   ACCENT,
   CI_PERIWINKLE,
@@ -207,6 +208,7 @@ export default async function SheetsIndex() {
         </a>
       </Footnote>
       <Updated date={lastUpdated(dc)} style={{ marginTop: 8 }} />
+      <ScopeNote />
     </SheetShell>
   );
 }
