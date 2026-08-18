@@ -1741,7 +1741,8 @@ function flagsHtml(flags: string | undefined): string {
   const list = (flags ?? '').split(',').map((f) => f.trim()).filter(Boolean);
   if (!list.length) return '';
   return (
-    '<div style="display:flex;flex-wrap:wrap;gap:4px 10px;justify-content:flex-end;margin:1px 0 2px;">' +
+    '<div title="Governance flags — findings about how this approval was handled. See the glossary."' +
+    ' style="display:flex;flex-wrap:wrap;gap:4px 10px;justify-content:flex-end;margin:1px 0 2px;cursor:help;">' +
     list
       .map(
         (f) =>
