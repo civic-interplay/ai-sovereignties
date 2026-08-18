@@ -1050,8 +1050,10 @@ export default function Map() {
   const fastTrackedDef = showFastTracked ? defBlock(
     <>
       <RingGlyph rings={2} color={STATUS_INK_SOFT} />
-      <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — not subject to normal public
-      consultation: assessed as State Significant Development, or approved without public exhibition.
+      <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — the State, not the local council,
+      is the consent authority: the planning pathway is State assessed, or ministerial fast-track / call-in.
+      It does not mean the application skipped public exhibition — whether it was exhibited is tracked
+      separately, under Public notice.
     </>,
   ) : null;
   const namedDef = showNamedPlatform ? defBlock(
