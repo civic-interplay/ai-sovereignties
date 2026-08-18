@@ -10,8 +10,8 @@
 //   tsx pipeline/export-zenodo.ts            # write zenodo/ from the live tracker
 //   tsx pipeline/export-zenodo.ts --out DIR  # write somewhere else
 
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { copyFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CONTESTATION_DATABASE_ID, INFRA_DATABASE_ID, NOTION_VERSION } from './config.ts';
 import { requireEnv } from './lib/env.ts';
@@ -276,10 +276,27 @@ ${ITEM_COLUMNS.map(([c, , d]) => `| \`${c}\` | ${d} |`).join('\n')}
   writeFileSync(join(outDir, 'README.md'), readme);
   writeFileSync(join(outDir, 'data-dictionary.md'), dict);
 
+  // The datasheet tells a reuser how the data was verified and points at the
+  // records that prove it. Those documents have to travel with the deposit —
+  // without them the README cites things the download does not contain, and a
+  // reader cannot tell an unassessed blank from an assessed absence.
+  const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
+  const COMPANION_DOCS = [
+    'docs/METHODOLOGY.md',        // how the atlas is compiled, verified, corrected
+    'docs/FACT-CHECKING-GUIDE.md', // the working verification protocol
+    'docs/VERIFICATION-RECORD.md', // adversarial results, including refuted claims
+    'docs/DISCLOSURE-AUDIT.md',    // a completed audit, method and findings together
+    'docs/CHANGELOG.md',           // what changed between deposited versions
+  ];
+  for (const rel of COMPANION_DOCS) {
+    copyFileSync(join(repoRoot, rel), join(outDir, basename(rel)));
+  }
+
   console.log(`Wrote to ${outDir}`);
   console.log(`  sites.csv               ${siteRows.length} rows`);
   console.log(`  contestation_items.csv  ${itemRows.length} rows`);
   console.log(`  README.md, data-dictionary.md`);
+  console.log(`  + ${COMPANION_DOCS.length} companion docs: ${COMPANION_DOCS.map((d) => basename(d)).join(', ')}`);
   console.log(`\nData centres: ${dcs.length}; with capacity: ${withCap.length}; mapped: ${withCoords.length}; [PROPOSED]: ${proposed.length}`);
 }
 
