@@ -29,6 +29,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "citations.ris"
 
+# Concept DOI — resolves to the newest version of the deposit. Cite this rather
+# than a version DOI so the bibliography does not pin to a superseded snapshot.
+DATABASE = "AI Sovereignties tracker (doi.org/10.5281/zenodo.21026429)"
+PROVIDER = "Civic Interplay"
+
 URL_RE = re.compile(r"https?://[^\s;,)\]\'\"<>`]+")
 MD_LINK_RE = re.compile(r"\[([^\]\n]{2,200})\]\((https?://[^)\s]+)\)")
 
@@ -172,19 +177,20 @@ def publisher(url: str) -> str:
 def title_from_url(url: str) -> str:
     """Readable title derived from the URL slug. A lead, not a headline."""
     path = url.split("?")[0].rstrip("/").split("/")
-    slug = ""
     for part in reversed(path[3:]):
-        if part and not re.fullmatch(r"\d{1,4}|index|default|home|en|au", part):
-            slug = part
-            break
-    slug = re.sub(r"\.(html?|pdf|aspx|php)$", "", slug, flags=re.I)
-    slug = re.sub(r"[-_+]+", " ", slug)
-    slug = re.sub(r"\s+", " ", slug).strip()
-    if not slug or len(slug) < 4:
-        return publisher(url) + " - " + host(url)
-    if re.fullmatch(r"[0-9a-f\-]{12,}", slug):
-        return publisher(url) + " - " + host(url)
-    return slug[:1].upper() + slug[1:]
+        cand = re.sub(r"\.(html?|pdf|aspx|php)$", "", part, flags=re.I)
+        cand = re.sub(r"[-_+]+", " ", cand)
+        cand = re.sub(r"\s+", " ", cand).strip()
+        # skip pure IDs, hashes and date fragments - they are not titles
+        if (not cand or len(cand) < 4
+                or re.fullmatch(r"\d+", cand)
+                or re.fullmatch(r"[0-9a-f]{8,}", cand, re.I)
+                or cand.lower() in {"index", "default", "home", "en", "au", "news",
+                                    "pdf", "docs", "document", "documents", "file",
+                                    "files", "download", "downloads", "content"}):
+            continue
+        return cand[:1].upper() + cand[1:]
+    return publisher(url) + " - " + host(url)
 
 
 def year_of(*candidates) -> str:
@@ -307,52 +313,76 @@ def main():
         stats["derived"] += derived
         stats["by_rung"][rung] = stats["by_rung"].get(rung, 0) + 1
 
-        lines = [f"TY  - {ty}", f"TI  - {title}"]
-        if rec.get("author"):
-            lines.append(f"AU  - {rec['author']}")
-        pub = publisher(u)
-        if pub:
-            lines.append(f"PB  - {pub}")
-        py = year_of(rec.get("date"), u)
-        if py:
-            lines.append(f"PY  - {py}")
-        da = ris_date(rec.get("date", ""))
-        if da:
-            lines.append(f"DA  - {da}")
-        lines.append(f"UR  - {u}")
-        lines.append("Y2  - 2026/08/18/")
+        lines = []
+
+        def put(tag, value, limit=None):
+            """Emit one tag. Values are single-line: RIS field values cannot
+            contain a newline, and tags with empty values confuse importers."""
+            v = re.sub(r"\s+", " ", str(value or "")).strip()
+            if not v:
+                return
+            if limit and len(v) > limit:
+                v = v[:limit - 1].rsplit(" ", 1)[0] + "…"
+            lines.append(f"{tag}  - {v}")
+
+        put("TY", ty)
+        put("TI", title, limit=400)
+        put("AU", rec.get("author"))
+        put("PB", publisher(u))
+        put("PY", year_of(rec.get("date"), u))
+        put("DA", ris_date(rec.get("date", "")))
+        put("UR", u)
+        put("Y2", "2026/08/18/")
         for k in sorted(rec["kw"]):
-            lines.append(f"KW  - {k}")
-        lines.append(f"KW  - {RUNG_LABEL[rung]}")
+            put("KW", k)
+        put("KW", RUNG_LABEL[rung])
         notes = list(dict.fromkeys(rec["n1"]))
         if derived:
-            notes.insert(0, "TITLE DERIVED by gen-citations.py from the tracker row "
-                            "or URL slug - not the publisher's own title; correct by hand "
-                            "before quoting.")
-        notes.append("Harvested from: " + ", ".join(sorted(rec["cited_in"])) + ".")
+            notes.insert(0, "TITLE DERIVED from the tracker row or URL slug - "
+                            "not the publisher's own title; correct before quoting.")
         if rung >= 5:
-            notes.append("Per FACT-CHECKING-GUIDE.md section 2 this is a low rung: "
-                         "treat as a claim or a lead, never as a record.")
-        lines.append("N1  - " + "  ".join(notes))
-        lines.append("DB  - AI Sovereignties tracker (doi.org/10.5281/zenodo.21026430)")
+            notes.append("Low rung per FACT-CHECKING-GUIDE.md s2: a claim or a "
+                         "lead, never a record.")
+        # capped: some importers truncate or reject very long field values
+        put("N1", " ".join(notes), limit=900)
+        put("DB", DATABASE)
+        put("DP", PROVIDER)
         lines.append("ER  - ")
-        out.append("\n".join(lines))
+        out.append(lines)
 
-    header = (
-        "Provider: AI Sovereignties - a living atlas of contesting and curating\n"
-        "AI sovereignties (Australian view), Sarah Barns, Civic Interplay, 2026.\n"
-        "doi.org/10.5281/zenodo.21026430\n"
-        "Generated by docs/gen-citations.py on 2026-08-18. Do not hand-edit;\n"
-        "correct the tracker or the research documents and re-run.\n"
-    )
-    OUT.write_text("\n".join("%" + l for l in header.strip().split("\n"))
-                   + "\n\n" + "\n\n".join(out) + "\n")
+    # RIS has no comment syntax: the file must begin with the first TY tag, and
+    # records are CRLF-delimited for EndNote/RefMan compatibility.
+    body = "\r\n".join("\r\n".join(rec) + "\r\n" for rec in out)
+    OUT.write_bytes(body.encode("utf-8"))
 
     print(f"wrote {OUT.relative_to(ROOT)}")
     print(f"  {stats['total']} records; {stats['derived']} with DERIVED titles "
           f"({stats['total'] - stats['derived']} with real link text)")
     for rung in sorted(stats["by_rung"]):
         print(f"  {stats['by_rung'][rung]:4d}  {RUNG_LABEL[rung]}")
+
+    # --- conformance check -------------------------------------------------
+    raw = OUT.read_bytes().decode("utf-8")
+    problems = []
+    if not raw.startswith("TY  - "):
+        problems.append("file does not begin with a TY tag")
+    if "\r\n" not in raw:
+        problems.append("line endings are not CRLF")
+    tag = re.compile(r"^[A-Z][A-Z0-9]  - ")
+    for i, line in enumerate(raw.split("\r\n"), 1):
+        if line and not tag.match(line):
+            problems.append(f"line {i} is neither blank nor a valid tag: {line[:60]!r}")
+    n_ty, n_er = raw.count("\r\nTY  - ") + raw.startswith("TY  - "), raw.count("ER  - ")
+    if n_ty != n_er:
+        problems.append(f"{n_ty} TY tags but {n_er} ER tags")
+    longest = max((len(l) for l in raw.split("\r\n")), default=0)
+    if problems:
+        print("  RIS CONFORMANCE FAILED:")
+        for p in problems[:10]:
+            print("   -", p)
+        return 1
+    print(f"  RIS conformance OK: {n_ty} records, longest line {longest} chars")
+    return 0
 
 
 if __name__ == "__main__":
