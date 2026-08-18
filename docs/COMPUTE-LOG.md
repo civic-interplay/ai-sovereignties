@@ -69,3 +69,41 @@ session ended. To backfill from the Anthropic usage dashboard for 2026-08-18, or
 from this session's transcript into `docs/compute-log.jsonl` per `COMPUTE.md`.
 Recorded as unmeasured rather than estimated, on the same rule the Energy lens
 applies to operators: a blank means unassessed, not zero.
+
+## 2026-08-18 (evening) — recovery, vocabulary migration, deposit v0.2.0
+
+Session resumed after a crash killed an eight-agent research run mid-flight.
+
+- **Recovered the enforcement research** from agent transcripts on disk: three
+  agents had written complete reports before the crash, five had done the
+  reading but not the synthesis. Recovered to
+  `docs/enforcement-research-recovered-2026-08-18.md`.
+- **Relaunched the jurisdiction strands.** 21 agents ran (3 launched, 18
+  self-delegated), 611 tool calls, all terminated on a monthly spend limit
+  before writing reports. After the limit reset, three completed: Victorian
+  parliamentary record, Tasmania, and WA/SA water utilities. 61 cached primary
+  sources preserved to `docs/evidence-cache/vic-parliament-2026-08-18/`.
+- **Read one instrument directly** rather than delegating: planning permit
+  PA2504032 (Oroya Drive, Truganina). Born-digital, published as 300dpi page
+  scans, so unreadable to any text search.
+- **Vocabulary migration**: governance flags 11 → 3; First Nations flag retired;
+  Planning pathway made state-neutral. See `CHANGELOG.md`.
+- **Deployed** to both domains, then **published Zenodo v0.2.0**
+  (`10.5281/zenodo.21994643`) — nine files, dataset type, method and
+  verification records travelling with the data for the first time.
+
+**Two operational lessons, recorded because both cost real time:**
+
+1. *Deploy code before migrating the data it depends on.* The live site derived
+   "State fast-tracked" from two governance flags. Retiring those flags before
+   deploying the pathway-based replacement dropped the figure to zero on the
+   live sheets and emptied the map overlay — silently, for about an hour, with
+   no error anywhere. The failure had been predicted in the same session and the
+   ordering was not followed.
+2. *Definitions live in more than one file.* Correcting the "State fast-tracked"
+   wording in the glossary left the map's own copy untouched and stale. Grep for
+   duplicates before assuming a definition has one home.
+
+**Compute figures:** not captured in-session — `/cost` was not run. Backfill from
+the Anthropic usage dashboard for 2026-08-18 into `docs/compute-log.jsonl` per
+`COMPUTE.md`. Recorded as unmeasured rather than estimated.
