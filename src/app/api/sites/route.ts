@@ -218,6 +218,11 @@ async function queryNotion(token: string, databaseId: string) {
           fastTracked:
             multiNames(props['Governance Flags']).includes('Ministerial fast-track') ||
             multiNames(props['Governance Flags']).includes('NSW State Significant Development'),
+          // How the approval was handled. The flags are analyst findings about
+          // the pathway, so the popup shows them with it rather than apart.
+          pathway: label(selectName(props['Planning Pathway'])),
+          publicNotice: label(selectName(props['Public notice'])),
+          governanceFlags: multiNames(props['Governance Flags']).join(', '),
           tenants: multiNames(props['Tenant / model served']).join(', '),
           status: selectName(props['Status']),
           // Ownership chain: operator → parent → ultimate owner → country/type.

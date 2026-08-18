@@ -852,6 +852,12 @@ export default function Map() {
                 (Number(p.superExposure) > 0 ? ' · ' + Math.round(Number(p.superExposure) * 100) + '%' : ''))
             : '',
           p.capacity && row('Capacity', p.capacity + ' MW'),
+          // Pathway, then any governance flags directly beneath it: the flags
+          // are findings about how this approval was handled, so they read as
+          // an annotation on the pathway rather than a separate attribute.
+          (p.pathway || p.publicNotice) &&
+            row('Pathway', [p.pathway, p.publicNotice].filter(Boolean).join(' · ')),
+          flagsHtml(p.governanceFlags),
           p.registers && row('Register', p.registers),
           p.tenants && row('Serves', p.tenants),
           p.waterRisk && row('Water risk', p.waterRisk),
@@ -1629,6 +1635,27 @@ function tab(active: boolean): React.CSSProperties {
     padding: '8px 12px',
     cursor: 'pointer',
   };
+}
+
+// Governance flags, rendered under the Pathway row as a yellow dot per flag.
+// Right-aligned to sit under the pathway value, and in the same status yellow
+// the sheets use, so a flag reads as a caveat on the approval above it.
+function flagsHtml(flags: string | undefined): string {
+  const list = (flags ?? '').split(',').map((f) => f.trim()).filter(Boolean);
+  if (!list.length) return '';
+  return (
+    '<div style="display:flex;flex-wrap:wrap;gap:4px 10px;justify-content:flex-end;margin:1px 0 2px;">' +
+    list
+      .map(
+        (f) =>
+          '<span style="display:inline-flex;align-items:center;gap:4px;font-size:9.5px;color:#ffd23f;">' +
+          '<span style="width:5px;height:5px;border-radius:50%;background:#ffd23f;display:inline-block;"></span>' +
+          f +
+          '</span>',
+      )
+      .join('') +
+    '</div>'
+  );
 }
 
 function row(key: string, value: string): string {
