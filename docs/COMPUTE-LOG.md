@@ -57,7 +57,11 @@ so it's left unstated rather than faked — fittingly, the honesty rule the Ener
 - Built `docs/gen-citations.py` → `docs/citations.ris`: 262 unique sources
   harvested from `zenodo/*.csv` and the research documents, each carrying its
   FACT-CHECKING-GUIDE §2 source rung as a keyword. 236 of 262 titles are derived
-  from tracker rows or URL slugs and are flagged as such in-record.
+  from tracker rows or URL slugs and are flagged as such in-record. Rewritten
+  19 Aug after the first file failed to import: RIS has no comment syntax, so
+  the provenance header at the top broke the first record; also switched to CRLF
+  and stopped emitting empty tags. The generator now self-checks conformance and
+  exits non-zero on failure.
 - Audited the Zenodo deposit against its own README: every published statistic
   reconciles (89/37/94/1/11/33 and the jurisdiction table). Found one blocking
   defect — 16 `[REJECTED]` pipeline-triage rows shipping unexplained — plus the

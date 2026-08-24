@@ -17,6 +17,12 @@ text is the title. Otherwise the title is DERIVED from the tracker row or the
 URL slug, and the record says so in N1. Derived titles are leads for a human to
 correct, not the publisher's own headline.
 
+Format: strict RIS. The file begins with the first TY tag (RIS has no comment
+syntax, so a provenance header at the top breaks the first record), lines are
+CRLF-terminated for EndNote/RefMan, no tag is emitted with an empty value, and
+field values are single-line and length-capped. The generator self-checks all of
+this and exits non-zero if it fails.
+
 Run:  python3 docs/gen-citations.py
 """
 
