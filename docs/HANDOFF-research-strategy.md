@@ -19,12 +19,12 @@ design, which is probably why it feels like one or the other. The two halves
 already exist in the repository:
 
 **Influence-side assets**
-- `content updates/senate-submission-DRAFT.md` — submission to the Senate
-  Environment and Communications References Committee inquiry into AI and data
-  centres. Has a "Recommendations" section and, notably, an "Offer" section.
-- `content updates/outreach-contacts.md` — a mapped field of actors with
-  verified emails: campaigners (Concerned Waterways Alliance as the closest
-  organised counterpart), ministers, MPs, councils.
+- The Senate submission to the Environment and Communications References
+  Committee inquiry into AI and data centres. Held locally while unlodged; it
+  has a "Recommendations" section and, notably, an "Offer" section.
+- A mapped field of actors: campaigners (Concerned Waterways Alliance as the
+  closest organised counterpart), ministers, MPs, councils. Held locally,
+  because it carries individuals' contact details.
 - The live site — map, per-state summary sheets, news feed with RSS.
 - A working relationship with City of Melbourne officers, who supplied the
   consolidated Victorian list and have asked for water/energy approval-gap and
@@ -156,8 +156,8 @@ Full detail: `docs/enforcement-research-recovered-2026-08-18.md`.
 |---|---|
 | `docs/METHODOLOGY.md` | The existing citable method statement — the spine of any output |
 | `docs/enforcement-research-recovered-2026-08-18.md` | The live worked example, full evidence |
-| `content updates/senate-submission-DRAFT.md` | The influence artifact as it currently stands |
-| `content updates/outreach-contacts.md` | The mapped field of actors |
+| The Senate submission draft (held locally) | The influence artifact as it currently stands |
+| The outreach contact map (held locally) | The mapped field of actors |
 | `docs/ROADMAP.md` | Planned visualisations and open data-model questions |
 | `docs/DISCLOSURE-AUDIT.md` | A completed both-at-once piece of work, for reference |
 

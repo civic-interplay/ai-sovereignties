@@ -60,3 +60,13 @@ next-env.d.ts
 
 # Zenodo deposit bundle — derived output, regenerate with pipeline/export-zenodo.ts
 zenodo/
+
+# This repo is PUBLIC: a commit here is a publication. Unlodged drafts,
+# third-party documents we did not author, material shared with us rather than
+# published, individuals' contact details, and internal QA that records which
+# claims are not yet verified all stay local. Primary-source evidence from
+# public registers is committed on purpose: it is the audit record.
+docs/internal/
+content updates/*.xlsx
+content updates/senate-submission-DRAFT.md
+content updates/outreach-contacts.md
