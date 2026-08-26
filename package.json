@@ -13,7 +13,8 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
     "pipeline": "tsx pipeline/run.ts",
     "review": "tsx pipeline/review.ts",
-    "discover": "tsx pipeline/discover.ts"
+    "discover": "tsx pipeline/discover.ts",
+    "verify": "tsx pipeline/verify.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.106.0",

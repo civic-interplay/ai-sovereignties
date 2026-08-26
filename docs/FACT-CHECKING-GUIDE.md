@@ -106,12 +106,39 @@ Every checked claim gets written back to Notion:
   1–3 of the hierarchy for the row's load-bearing facts.
 - **Confidence** → 0.9+ primary record sighted; 0.7 official register/named
   official; 0.5 press-only; leave/lower if contested.
+- **Evidence rung** → the rung you actually reached, 1–6.
+- **Verified by** / **Verified date** → your initials and the date, so coverage
+  is a query rather than a reading exercise.
 - **Notes** → append one line: date, what you checked, how, result — e.g.
   `Verified 2026-08-14 (RA: <initials>): permit PDF searched, no MW figure;
   stormwater conditions only.` Keep the source URL.
 - If a claim **fails**, do not silently edit: correct the row, note the
   correction and date, and check whether the same error propagated to
   `docs/DISCLOSURE-AUDIT.md`, the map popup, or published copy.
+
+**Do not do this by hand.** Use the tool, so the rules cannot drift between
+people:
+
+```bash
+npm run verify -- --queue --tier 1      # what to work on, in priority order
+npm run verify -- --status              # coverage across the tracker
+
+npm run verify -- --row "NEXTDC M4" --by SB --rung 2 \
+  --evidence "https://planning.vic.gov.au/…" \
+  --note "permit PDF searched 34pp; stormwater conditions only" \
+  --dry-run                             # preview, then re-run without it
+```
+
+It refuses three things on purpose: rung 4–6 cannot mark a row
+`Human-verified`; rung 1–3 requires `--evidence`, because a verification
+without a URL is an assertion the next person cannot check; and an ambiguous
+`--row` lists the candidates rather than guessing.
+
+This records verification at **row** level. Claim-level adversarial
+verification — what was put to refutation and what survived — lives in
+[VERIFICATION-RECORD.md](VERIFICATION-RECORD.md) and the per-run files in
+`disclosure-audit/`. They are complements: one says which claims survived
+refutation, the other says which rows a person has stood behind.
 
 ## 7. Escalation
 
