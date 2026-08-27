@@ -70,3 +70,21 @@ docs/internal/
 content updates/*.xlsx
 content updates/senate-submission-DRAFT.md
 content updates/outreach-contacts.md
+
+# ------------------------------------------------------------------
+# NOTHING BUT CODE, METHOD AND REGISTER EVIDENCE GOES IN THIS REPO.
+# It is public: a commit here is a publication. Everything below stays
+# local, whatever its format.
+# ------------------------------------------------------------------
+# Our own unpublished work: drafts, submissions, briefings, internal QA
+docs/internal/
+# Third-party literature — copyrighted journal articles are not ours to
+# redistribute, whatever we cite them for
+lit review/
+# Working material: contacts, screenshots, spreadsheets, scraped pages
+content updates/
+*.xlsx
+*.docx
+/*.pdf
+/*.html
+/*.png

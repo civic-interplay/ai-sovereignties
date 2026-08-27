@@ -48,7 +48,7 @@ The Victorian planning portal renders each application as a three-step
 timeline: *Application received* ✓ → *Public notice* → *Decision: Permit* ✓.
 On the ministerial / Development Facilitation Program approvals, the middle
 circle — **Public notice — is simply empty**. The step wasn't failed; it was
-exempted. Screenshots in `content updates/` (`lol 1-3.png`) capture this for
+exempted. Register screenshots held with the working files capture this for
 recent approvals. This is now recorded on the tracker as
 `Public notice: Exempted` per site, which the map can render directly.
 
