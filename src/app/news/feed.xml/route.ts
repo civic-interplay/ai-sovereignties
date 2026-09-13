@@ -59,7 +59,7 @@ export async function GET() {
     '    <title>Australian Data Centres — News Feed</title>',
     `    <link>${SITE}/news</link>`,
     `    <atom:link href="${SITE}/news/feed.xml" rel="self" type="application/rss+xml"/>`,
-    '    <description>Press coverage, planning submissions, council motions and public statements around tracked Australian data-centre sites, collected fortnightly and coded by stance and grounds.</description>',
+    '    <description>Press coverage, planning submissions, council motions and public statements around tracked Australian data-centre sites, coded by stance and grounds.</description>',
     '    <language>en-au</language>',
     ...items,
     '  </channel>',

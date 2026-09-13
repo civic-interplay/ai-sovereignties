@@ -467,6 +467,8 @@ export default function Map() {
   const [showFastTracked, setShowFastTracked] = useState(false);
   // Supply-chain mode: illustrative rare-earth flows to offshore separation.
   const [showSupplyChain, setShowSupplyChain] = useState(false);
+  const [siteCount, setSiteCount] = useState<number | null>(null);
+  const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   // Sites where a platform company is actually named as a tenant.
   const [showNamedPlatform, setShowNamedPlatform] = useState(false);
   // Which named view is active, mirrored into ?view= so it can be shared.
@@ -557,6 +559,9 @@ export default function Map() {
       } catch {
         // Leave the map empty on failure rather than crashing.
       }
+      setSiteCount((data.features ?? []).length);
+      const stamp = (data as unknown as { updatedAt?: string }).updatedAt;
+      if (stamp) setUpdatedAt(stamp.slice(0, 10));
 
       // Derive `namedPlatform`: does the tracker name an AI model or company as a
       // user of this site? The `tenants` field lists things like "OpenAI (GPT)"
@@ -898,6 +903,7 @@ export default function Map() {
             (sovereignty ? '<div style="color:#6b7568;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
             rows +
             lifecycleHtml(p) +
+            provenanceHtml(p) +
             (link ? '<div style="margin-top:6px;">' + link + '</div>' : '') +
             '</div>',
           )
@@ -1153,6 +1159,10 @@ export default function Map() {
           <div style={{ fontSize: 11.5, color: INK_MUTED, marginTop: 5, maxWidth: 210, lineHeight: 1.55 }}>
             Monitoring data centre investments as a super cycle urban transition.
           </div>
+          <div style={{ fontSize: 10, color: INK_MUTED, marginTop: 6, maxWidth: 210, lineHeight: 1.5 }}>
+            {siteCount !== null ? siteCount + ' sites' : 'Loading'}
+            {updatedAt ? ' · updated ' + updatedAt : ''}
+          </div>
           <a
             href={NOTION_DATA_URL}
             target="_blank"
@@ -1168,6 +1178,21 @@ export default function Map() {
             }}
           >
             Source data ↗
+          </a>
+          <a
+            href="/glossary"
+            style={{
+              display: 'inline-block',
+              marginTop: 8,
+              marginLeft: 14,
+              fontSize: 10,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: CI_PERIWINKLE,
+              textDecoration: 'none',
+            }}
+          >
+            Glossary
           </a>
           <a
             href="/sheets"
@@ -1763,6 +1788,44 @@ function row(key: string, value: string): string {
     '<div style="display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;">' +
     '<span style="color:#6b7568;">' + key + '</span>' +
     '<span style="color:#c8cfc4;text-align:right;">' + value + '</span>' +
+    '</div>'
+  );
+}
+
+// How far this row has been walked, shown on every popup.
+//
+// The tracker's own standard (FACT-CHECKING-GUIDE) is that nothing is quotable
+// until a person has reached a primary record, an official register or a named
+// official. Most rows have not been, and a popup that lists Status, Operator and
+// Capacity with no provenance implies an authority the record does not carry.
+// So the footer states the sourcing plainly. A project that asks planning systems
+// to disclose has to disclose the limits of its own evidence, and saying so is
+// the argument rather than a weakness.
+//
+// It also flags approximate coordinates: many positions are street- or
+// locality-level geocodes, and a pin that looks surveyed invites a reader to
+// check it against an address and find it off by a suburb.
+function provenanceHtml(p: Record<string, string>): string {
+  const verified = p.classifiedBy === 'Human-verified';
+  const conf = Number(p.confidence);
+  const bits: string[] = [];
+
+  if (verified) {
+    bits.push('verified against ' + (p.evidenceRung ? p.evidenceRung.toLowerCase() : 'a primary source'));
+  } else if (p.classifiedBy) {
+    bits.push(p.classifiedBy === 'Agent' ? 'compiled by agent, not yet human-verified' : 'compiled by hand, not yet verified to a primary source');
+  } else {
+    bits.push('sourcing not yet assessed');
+  }
+  if (Number.isFinite(conf) && conf > 0) bits.push('confidence ' + conf.toFixed(2));
+  if (p.approxLocation === 'true' || p.approxLocation === true as unknown as string) bits.push('location approximate');
+
+  const tint = verified ? '#8fae7c' : '#6b7568';
+  return (
+    '<div title="How far this claim has been walked. See the glossary." ' +
+    'style="margin-top:8px;padding-top:6px;border-top:1px solid #1e231d;color:' + tint +
+    ';font-size:9px;line-height:1.5;letter-spacing:0.04em;">' +
+    bits.join(' · ') +
     '</div>'
   );
 }

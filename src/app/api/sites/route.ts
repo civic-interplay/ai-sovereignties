@@ -170,6 +170,7 @@ function exposureChannelKey(v: string | null): string {
 
 async function queryNotion(token: string, databaseId: string) {
   const features: Array<Record<string, unknown>> = [];
+  let updatedAt = '';
   let cursor: string | undefined;
 
   do {
@@ -190,13 +191,14 @@ async function queryNotion(token: string, databaseId: string) {
     }
 
     const data = (await res.json()) as {
-      results: Array<{ id: string; url?: string; properties: Record<string, NotionProp> }>;
+      results: Array<{ id: string; url?: string; last_edited_time?: string; properties: Record<string, NotionProp> }>;
       has_more: boolean;
       next_cursor: string | null;
     };
 
     for (const page of data.results) {
       const props = page.properties ?? {};
+      if (page.last_edited_time && page.last_edited_time > updatedAt) updatedAt = page.last_edited_time;
       const lat = num(props['Latitude']);
       const lng = num(props['Longitude']);
       if (lat === null || lng === null) continue; // no location → not on the map
@@ -260,6 +262,19 @@ async function queryNotion(token: string, databaseId: string) {
           mineralFocus: multiNames(props['Mineral Focus']),
           notes: plain(props['Notes']),
           source: urlVal(props['Source']),
+          // Provenance, surfaced so the popup can say how far a claim has been
+          // walked. The tracker's own standard is that nothing is quotable until
+          // a human has reached a primary or official source, and most rows have
+          // not been. Showing that is the argument, not an admission.
+          classifiedBy: label(selectName(props['Classified by'])),
+          confidence: num(props['Confidence']),
+          evidenceRung: label(selectName(props['Evidence rung'])),
+          // Many coordinates are street- or locality-level geocodes of a
+          // published address. Where a row says so in its notes, the map should
+          // say so too, rather than implying a surveyed position.
+          approxLocation: /coordinates approximate|coords approximate|approximate \(/i.test(
+            plain(props['Notes']),
+          ),
           notionUrl: page.url ?? null,
           // Public (published-web) URL for the row, so the map can link to the
           // full entry — where the Source/report link and all the context live —
@@ -272,7 +287,7 @@ async function queryNotion(token: string, databaseId: string) {
     cursor = data.has_more ? data.next_cursor ?? undefined : undefined;
   } while (cursor);
 
-  return features;
+  return { features, updatedAt };
 }
 
 export async function GET() {
@@ -289,9 +304,9 @@ export async function GET() {
   }
 
   try {
-    const features = await queryNotion(token, databaseId);
+    const { features, updatedAt } = await queryNotion(token, databaseId);
     return Response.json(
-      { type: 'FeatureCollection', features },
+      { type: 'FeatureCollection', features, updatedAt },
       {
         status: 200,
         headers: {

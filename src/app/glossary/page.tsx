@@ -106,7 +106,7 @@ export default async function Glossary() {
           company announcement, press with corroboration).
         </Term>
         <Term name="Analysis subset">
-          the current build-out wave — the data-centre projects the summary figures describe. A site is included
+          the data-centre projects the summary figures describe. A site is included
           when any of the following holds: (a) it has a planning application on the public record (PA / SSD
           number, EIS, recorded planning pathway or state approval body); (b) a named hyperscaler (Amazon/AWS,
           Microsoft, Google, Meta, Oracle, Apple) is its owner, parent, tenant or operator; (c) it is a campus of

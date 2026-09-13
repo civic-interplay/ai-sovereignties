@@ -10,6 +10,14 @@ const INK = '#c8cfc4';
 const DIM = '#6b7568';
 const MID = '#9aa39b';
 
+// Where a reader goes to add or correct something. Named "Contribute" rather
+// than "Contact": the tracker asks to be corrected, and that is participation
+// in the record rather than correspondence with its author.
+export const CONTACT_URL = 'https://studio-esem.notion.site/a504252cf109454598a7b02e5024b10d';
+// The compiler's institutional page. A named, affiliated researcher standing
+// behind the data is part of the evidence, not decoration.
+export const AUTHOR_URL = 'https://cur.org.au/people/dr-sarah-barns/';
+
 export const ACCENT = {
   green: '#00e08a',
   red: '#ff4d6d',
@@ -62,12 +70,11 @@ export function SheetNav({ current }: { current: string }) {
       {link('/glossary', 'Glossary & methods', current === 'glossary')}
       {link('/news', 'News feed', current === 'news')}
       {link('https://civicinterplay.io/data-centres-map/', 'About ↗')}
-      {link('https://studio-esem.notion.site/a504252cf109454598a7b02e5024b10d', 'Contact ↗')}
+      {link(CONTACT_URL, 'Contribute ↗')}
     </nav>
   );
 }
 
-export const CONTACT_URL = 'https://studio-esem.notion.site/a504252cf109454598a7b02e5024b10d';
 
 // Scope statement for the foot of every public page. What the tracker covers is
 // a claim in its own right, and leaving it unstated invites the reader to treat
@@ -87,9 +94,13 @@ export function ScopeNote() {
       This tracker covers the build-out wave and its planning record, not the full historical inventory of
       data centres in Australia. It is not necessarily comprehensive.{' '}
       <a href={CONTACT_URL} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
-        Get in touch here
-      </a>{' '}
-      if you spot missing items.
+        Contribute a correction or a missing site
+      </a>
+      . Compiled by{' '}
+      <a href={AUTHOR_URL} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
+        Dr Sarah Barns
+      </a>
+      , RMIT Centre for Urban Research.
     </div>
   );
 }
