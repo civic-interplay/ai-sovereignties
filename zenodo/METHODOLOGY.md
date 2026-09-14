@@ -1,0 +1,170 @@
+# Methodology
+
+*How the AI Sovereignties atlas is compiled, verified and corrected.
+This page is the citable method statement for the project; the working
+verification protocol is in [FACT-CHECKING-GUIDE.md](FACT-CHECKING-GUIDE.md).*
+
+## What this is
+
+A living atlas of the physical infrastructure behind AI in Australia — data
+centres, mines, refineries, energy and water dependencies — with each site's
+ownership chain, approval pathway, and the public contestation forming around
+it. The map at [datacentres.civicinterplay.io](https://datacentres.civicinterplay.io)
+renders a Notion-held tracker; every map point is a tracker row with
+coordinates, and every row carries its sources.
+
+## Sources
+
+Rows are compiled from, in descending order of weight:
+
+1. **Planning records** — permits, delegate reports, exhibited EIS documents,
+   Gazette notices, register entries (Victorian ministerial permits register,
+   NSW Major Projects portal, PlanningAlerts).
+2. **Official lists and correspondence** — including a consolidated
+   data-centre list for Melbourne and Victoria provided by City of Melbourne
+   officers (June 2026), which seeded much of the Victorian coverage.
+3. **Corporate records** — ASIC extracts, land titles, ASX disclosures.
+4. **Operator disclosures** — location pages, sustainability reports, press
+   releases (treated as claims, and labelled as such).
+5. **Trade and local press** — used for leads and corroboration, cited
+   per-row.
+6. **A fortnightly automated scan** (GDELT news retrieval and planning-portal
+   feeds) that surfaces candidate updates for human review.
+
+## How AI is used, and where humans decide
+
+This project uses AI agents (Anthropic's Claude) openly and on the record:
+
+- **Compilation**: agents parse source lists, geocode addresses, retrieve and
+  search planning documents, and draft row entries.
+- **Research sweeps**: parallel agents research defined questions (e.g. each
+  operator's contracted energy supply vs certificate claims) and must return
+  evidence with URLs; findings are written to rows *with* their evidence.
+- **Adversarial verification**: before findings are published, independent
+  agents are tasked with *refuting* each claim from fresh sources; claims are
+  graded CONFIRMED / PLAUSIBLE / REFUTED / UNVERIFIABLE, and refuted claims
+  are corrected everywhere they appear.
+- **Human verification**: every row carries a `Classified by` field
+  (Agent / Human / Human-verified) and a `Confidence` score. Nothing is
+  represented as human-verified unless a person has walked the claim to a
+  primary or official source per the fact-checking guide. Compute use is
+  logged (`docs/COMPUTE-LOG.md`).
+
+Blank fields are honest: a blank means *unassessed*, and an explicit
+"Unknown" or "None" means *assessed, nothing found* — the distinction is kept
+deliberately, including for the energy, water and superannuation-exposure
+lenses.
+
+## Classification choices worth knowing
+
+- **Energy lens**: "Renewable (contracted)" includes corporate REC/PPA
+  *matching* — the strongest claim most operators can make — but row notes
+  always distinguish certificate matching from physical supply, and offsets
+  are never counted as renewable electricity.
+- **Water lens**: design claims (closed-loop, waterless) are recorded with
+  their provenance; an operator design claim is not treated as an assessed
+  volume.
+- **Public notice**: set to *Exempted* where the approval pathway skipped
+  public notice (e.g. Victoria's Development Facilitation Program), based on
+  the register's own process record; *Exhibited* where documents were
+  publicly exhibited (e.g. NSW SSD).
+- **Sovereignty registers** (Rented / Financial / Operational / Productive)
+  classify what kind of sovereignty a site actually confers; the map colours
+  by the most sovereign register present.
+- **Capacity (MW)**: recorded from published figures with the source; where a
+  figure exists only in marketing and not in any planning record, that gap is
+  itself recorded (see the [disclosure audit](DISCLOSURE-AUDIT.md)).
+
+## Known limitations
+
+- Some coordinates are street-level geocodes of published addresses, marked
+  approximate in notes where relevant.
+- Negative findings ("no figure in the record") are bounded by what is
+  public: redacted documents and unlocatable records are reported as exactly
+  that, no more.
+- Operator identities behind consultant- or shelf-company-lodged applications
+  are stated as *reported* until confirmed by corporate/land records or
+  register amendments.
+- The tracker is a living document; rows carry `Date Logged` and notes are
+  append-only with dates, so the state of knowledge at any time is
+  reconstructable.
+
+## Corrections
+
+Errors are corrected in place, noted with a date in the row, and — where they
+reached published documents or the map — corrected there with a visible
+commit. Corrections are part of the method: the project applies to itself the
+disclosure standard it argues planning systems should meet.
+
+## Licence and citation
+
+Methodology, classification and written analysis: CC BY 4.0. Underlying
+records are compiled from public sources, cited per entry. Cite as:
+Sarah Barns, *A living atlas of contesting and curating AI sovereignties
+(Australian view)*, Civic Interplay, 2026.
+[doi.org/10.5281/zenodo.21026430](https://doi.org/10.5281/zenodo.21026430).
+
+## Resource conditions (added 18 August 2026)
+
+A per-row field recording whether the *legal instrument of approval* imposes any
+obligation on energy or water consumption. It answers a question the tracker's
+other fields do not: not what a project says it will use, nor whether that was
+disclosed, but whether anything binds it.
+
+| Value | Meaning |
+|---|---|
+| `Numeric` | The instrument names a figure — volume, rate, ratio or source — as a condition. Quotable with a condition number. |
+| `Generic — via endorsed document` | The instrument endorses a plan or statement that may contain figures, without restating them. Binding, but the number lives one step away. |
+| `Claim only — unconditioned` | A figure exists in an impact statement or corporate material; the instrument conditions nothing. |
+| `Not accessible` | The instrument exists but could not be obtained — unpublished, purged from the register, or portal-blocked. |
+| *(blank)* | Not yet checked. |
+
+**The rule: grade only from the instrument itself.** Not the assessment report,
+not the application, not the EIS, not a media release. If the consent or permit
+has not been read, the field stays blank. `Not accessible` means that specific
+instrument was sought and could not be obtained — it is a finding about the
+register, not a placeholder for work not yet done.
+
+As at 18 August 2026 two rows are graded, both from instruments read in full:
+CDC Marsden Park (SSD-70889211 — zero occurrences of PUE or WUE; the assessment
+record states "No specific conditions required") and PGIM Truganina at 1 Oroya
+Drive (permit PA2504032 — condition 19 endorses a sustainability management
+plan, no figure appears in the permit). Every other row is honestly blank.
+
+Across the five jurisdictions examined so far — NSW, VIC, TAS, WA, SA — no
+instrument carrying a `Numeric` value has been found. Western Australia has
+stated the position on the record: "specific water take limits have not been
+formally set for the data centre industry as a distinct customer class"
+(Tabled Paper 1137, 5 May 2026).
+
+### A flag we removed (18 August 2026)
+
+`First Nations engagement unclear` was retired from the governance-flag
+vocabulary. It is recorded here because the reason generalises.
+
+The flag had six uses: four in Western Australia, one in the Northern
+Territory, one in Victoria — against 62 Victorian rows and 46 in New South
+Wales, neither of which is plausibly a jurisdiction where the question does not
+arise. Five of the six were mines or remote projects. The distribution was a
+record of where an analyst thought to look, not of where engagement is unclear.
+
+The failure mode is specific to flags. A flag is silent both when a row passes
+and when nobody assessed it, so silence carries no information — but a reader
+filtering the map to Melbourne and seeing an empty result has only one
+available reading, that there are no Traditional Owner concerns there. That is
+a claim about other people's Country, made by accident, on a dimension where
+being wrong carries real weight. Every site in this tracker sits on Country.
+
+The replacement, when the work is done, is the statutory record rather than our
+judgement: whether a Cultural Heritage Management Plan was required and
+approved under the Aboriginal Heritage Act 2006 (Vic) and its equivalents,
+assessed with the Registered Aboriginal Party for that Country. Whether
+engagement was *adequate* is for Traditional Owner organisations to say, and
+belongs here only as a citation to them.
+
+Prior values are preserved in
+`docs/disclosure-audit/first-nations-flag-retired-2026-08-18.json`.
+
+**The general rule this yields:** a flag is only safe where its absence is
+genuinely uninformative to a reader. Where an empty result would be read as a
+clearance, use a field with an explicit "not assessed" value instead.

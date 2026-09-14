@@ -59,7 +59,6 @@ next-env.d.ts
 /AAG BARNS 2026.pdf
 
 # Zenodo deposit bundle — derived output, regenerate with pipeline/export-zenodo.ts
-zenodo/
 
 # This repo is PUBLIC: a commit here is a publication. Unlodged drafts,
 # third-party documents we did not author, material shared with us rather than
@@ -88,3 +87,7 @@ content updates/
 /*.pdf
 /*.html
 /*.png
+
+# zenodo/ is NOT ignored: it is the derived snapshot bundle, and committing it
+# each run is what gives the project a diffable series. See
+# pipeline/diff-snapshots.ts.
