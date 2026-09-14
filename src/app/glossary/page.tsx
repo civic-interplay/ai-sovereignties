@@ -269,12 +269,19 @@ export default async function Glossary() {
       <Panel>
         <Term name="Closed-loop" color="#3fd17a">
           cooling water recirculates; mains/potable water is drawn only for periodic top-up, not continuous
-          evaporative use. Coded as Low water risk.
+          evaporative use. Coded as Low water risk &mdash; but read that coding as a <em>claim</em>, not a
+          measurement. Of the 23 data centres carrying it, only four have any volume figure attached and two
+          of those rest on a primary record; the rest come from operator design specifications, vendor
+          material or sustainability reporting. Each row&rsquo;s note states which.
         </Term>
         <Term name="Water risk">
           High = continuous draw on potable supply in a stressed catchment; Medium = some pressure on local
-          supply; Low = closed-loop or air-cooled. Blank / n-a = <em>not yet assessed</em> — data centres always
-          draw water, so an unassessed site is never evidence of low risk.
+          supply; Low = a closed-loop or air-cooled design is <em>claimed</em>. Blank / n-a = <em>not yet
+          assessed</em> &mdash; data centres always draw water, so an unassessed site is never evidence of low
+          risk. The three levels are not evidenced alike: High is drawn mostly from exhibited environmental
+          impact statements, which carry annual volumes, while Low rests mostly on what operators say about
+          their own designs. Treat the asymmetry as a finding about the public record rather than a ranking of
+          the sites.
         </Term>
         <Term name="Renewable — contracted">
           energy coding: supply contracted through a PPA or retail renewable product. Note: this includes

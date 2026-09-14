@@ -255,7 +255,12 @@ const WATER_COLORS: Record<string, string> = {
 const WATER_LABELS: Record<string, string> = {
   high: 'High — potable stressed',
   medium: 'Medium — some pressure',
-  low: 'Low — closed-loop',
+  // "Claimed" is load-bearing. 23 of 94 data centres carry this value, and only
+  // 4 have any volume figure behind it; 20 are flagged in their own notes as
+  // operator, vendor or marketing claims. High, by contrast, comes mostly from
+  // exhibited EIS figures. Rendering both as plain findings would make the
+  // evidence asymmetric in the direction that understates water risk.
+  low: 'Low — closed-loop (claimed)',
   // 42 of the 44 sites carrying this value are data centres, which always draw
   // water — so this is "we haven't looked yet", not "doesn't apply". Labelling
   // it "Not applicable" overstated the coverage: it read as an assessed

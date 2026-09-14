@@ -1,6 +1,10 @@
 // Build the Zenodo deposit bundle: two CSVs and a datasheet, written to
-// `zenodo/` for upload as a new version of the existing record (DOI
-// 10.5281/zenodo.21026430).
+// `zenodo/` for upload as a new version of the existing record.
+//
+// DOIs: 10.5281/zenodo.21026429 is the CONCEPT DOI and always resolves to the
+// latest version — that is what the datasheet tells a reuser to cite. Each
+// deposit also mints its own version DOI (v0.1.0 was 10.5281/zenodo.21026430);
+// cite a version DOI only when you mean that frozen state specifically.
 //
 // The tracker is a live Notion database; a Zenodo version is a frozen citable
 // snapshot of it on a given day. Everything here is derived — never hand-typed
@@ -168,7 +172,7 @@ async function main() {
   const readme = `# AI Sovereignties — Australian data centre tracker (summary data)
 
 **Snapshot: ${stamp}** · Sarah Barns (RMIT University), Civic Interplay
-· Concept DOI [10.5281/zenodo.21026430](https://doi.org/10.5281/zenodo.21026430)
+· Concept DOI [10.5281/zenodo.21026429](https://doi.org/10.5281/zenodo.21026429) (always resolves to the latest version)
 · Live version: <https://datacentres.civicinterplay.io> · Code: <https://github.com/civic-interplay/ai-sovereignties>
 · Licence: CC-BY-4.0
 
@@ -223,7 +227,14 @@ items proposed by the discovery pipeline and not yet verified by a human;
 \`confidence\` carries the estimate. Nothing marked Agent should be quoted to a
 council, journalist or parliament without walking it back to source.
 
-**5. The public record itself is unstable.** At least one audited application's
+**5. Water risk is not evidenced alike at each level.** \`water_risk\` = Low
+records that a closed-loop, air-cooled or recycled-water design is *claimed*,
+usually by the operator. High is drawn mostly from exhibited environmental
+impact statements, which carry annual volumes. So the evidence is asymmetric in
+the direction that understates water draw, and Low should never be read as a
+measured result. Each row's \`notes\` state the provenance of its claim.
+
+**6. The public record itself is unstable.** At least one audited application's
 exhibited documents were removed from the live Victorian planning site after
 the decision and survive only in web archives. Source URLs in this dataset may
 resolve to nothing even where the document was public when recorded.
@@ -250,7 +261,7 @@ by the automated sweep and enter only through manual ingestion.
 
 > Barns, S. (${stamp.slice(0, 4)}). *A living atlas of contesting and curating AI
 > sovereignties (Australian view)* [Data set]. Zenodo.
-> https://doi.org/10.5281/zenodo.21026430
+> https://doi.org/10.5281/zenodo.21026429
 
 Corrections are part of the method. If you find an error, please open an issue
 on the repository — dated corrections are recorded in the row's \`notes\`.
