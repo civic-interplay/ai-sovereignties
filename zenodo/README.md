@@ -1,6 +1,6 @@
 # AI Sovereignties — Australian data centre tracker (summary data)
 
-**Snapshot: 2026-09-14** · Sarah Barns (RMIT University), Civic Interplay
+**Snapshot: 2026-09-15** · Sarah Barns (RMIT University), Civic Interplay
 · Concept DOI [10.5281/zenodo.21026429](https://doi.org/10.5281/zenodo.21026429) (always resolves to the latest version)
 · Live version: <https://datacentres.civicinterplay.io> · Code: <https://github.com/civic-interplay/ai-sovereignties>
 · Licence: CC-BY-4.0
@@ -14,15 +14,15 @@ and water arrangements, and the public contestation forming around them.
 
 | File | Rows | Grain |
 |---|---|---|
-| `sites.csv` | 136 | One row per tracked site or project. |
+| `sites.csv` | 143 | One row per tracked site or project. |
 | `contestation_items.csv` | 37 | One row per source event (article, submission, motion, statement). Joins to sites on `site_id`. |
 | `data-dictionary.md` | — | Every column, defined. |
 
 ## What is in this snapshot
 
-- **94** data-centre rows; **42** other infrastructure rows.
+- **94** data-centre rows; **49** other infrastructure rows.
 - **99** rows carry coordinates and appear on the published map.
-- **2** rows are unreviewed pipeline discoveries, prefixed `[PROPOSED]`, excluded from all published statistics.
+- **9** rows are unreviewed pipeline discoveries, prefixed `[PROPOSED]`, excluded from all published statistics.
 - **11** of 37 contestation items are below the 0.6 confidence threshold and have not been human-checked.
 
 Data-centre rows by jurisdiction:

@@ -1,6 +1,6 @@
 # Data dictionary
 
-Snapshot 2026-09-14. Blank means not recorded or not disclosed — never zero.
+Snapshot 2026-09-15. Blank means not recorded or not disclosed — never zero.
 
 ## sites.csv
 
