@@ -304,7 +304,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                 }}
               />
               <span style={{ color: '#fff', fontWeight: 600 }}>{d.source}</span>{' '}
-              <span style={{ color: '#6b7568', textTransform: 'uppercase', fontSize: 10, letterSpacing: '0.08em' }}>
+              <span style={{ color: '#7f8a7c', textTransform: 'uppercase', fontSize: 10, letterSpacing: '0.08em' }}>
                 {d.access === 'api' ? 'API' : d.access === 'manual' ? 'Machine readable, no feed' : 'No API'}
               </span>
               <div style={{ color: '#9aa39b', marginLeft: 16 }}>{d.note}</div>
@@ -319,7 +319,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           <Panel>
             {other.map((r) => (
               <div key={r.notionPublicUrl} style={{ fontSize: 12, lineHeight: 1.9 }}>
-                <span style={{ color: '#6b7568' }}>{r.infraType ?? 'Other'}</span> — {r.name}{' '}
+                <span style={{ color: '#7f8a7c' }}>{r.infraType ?? 'Other'}</span> — {r.name}{' '}
                 <a href={r.notionPublicUrl} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
                   ↗
                 </a>

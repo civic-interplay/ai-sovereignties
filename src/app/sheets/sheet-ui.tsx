@@ -7,7 +7,13 @@ const FIELD = '#0a0c0b';
 // Same panel chrome as the map's section rail (see Map.tsx `panel`).
 const PANEL_BORDER = '1px solid #3f4744';
 const INK = '#c8cfc4';
-const DIM = '#6b7568';
+// Muted text: labels, kickers, footnotes, the scope note. Raised from the old
+// value 0x6b7568, which measured 3.79:1 against the panel and 4.08:1 against the field — below
+// the 4.5:1 WCAG 2.1 AA minimum for body text, and it is used at 10.5–11px
+// where the large-text exemption does not apply. #7f8a7c holds the same hue and
+// desaturation, measures 5.05:1 on the panel, and stays clearly below MID
+// (7.01:1) so the three-step type hierarchy survives.
+const DIM = '#7f8a7c';
 const MID = '#9aa39b';
 
 // Where a reader goes to add or correct something. Named "Contribute" rather
@@ -209,7 +215,7 @@ export function Updated({ date, style }: { date: string | null; style?: React.CS
     timeZone: 'Australia/Sydney',
   });
   return (
-    <div style={{ fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7568', ...style }}>
+    <div style={{ fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#7f8a7c', ...style }}>
       Data last updated {d}
     </div>
   );

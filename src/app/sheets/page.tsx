@@ -131,7 +131,7 @@ export default async function SheetsIndex() {
             <Panel key={state}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                 <div style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>{state}</div>
-                <div style={{ fontSize: 12, color: '#6b7568' }}>{inState.length} sites</div>
+                <div style={{ fontSize: 12, color: '#7f8a7c' }}>{inState.length} sites</div>
               </div>
               <div style={{ fontSize: 12, color: '#9aa39b', marginTop: 6, lineHeight: 1.7 }}>
                 {sub.length} in analysis subset · {Math.round(mw).toLocaleString()} MW known

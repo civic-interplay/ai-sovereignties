@@ -102,9 +102,9 @@ export default async function News() {
         >
           /news/feed.xml
         </a>
-        <span style={{ color: '#6b7568' }}>· RSS 2.0</span>
+        <span style={{ color: '#7f8a7c' }}>· RSS 2.0</span>
         {newest && (
-          <span style={{ color: '#6b7568' }}>· most recent item {newest}</span>
+          <span style={{ color: '#7f8a7c' }}>· most recent item {newest}</span>
         )}
       </div>
 
@@ -112,7 +112,7 @@ export default async function News() {
         {dated.map((i) => (
           <Panel key={i.id}>
             <div style={{ display: 'flex', gap: 10, alignItems: 'baseline', flexWrap: 'wrap' }}>
-              <span style={{ fontSize: 10.5, color: '#6b7568', letterSpacing: '0.06em' }}>{i.date}</span>
+              <span style={{ fontSize: 10.5, color: '#7f8a7c', letterSpacing: '0.06em' }}>{i.date}</span>
               {i.stance && (
                 <span
                   style={{
@@ -143,9 +143,9 @@ export default async function News() {
                   {STATE_SHORT[stateBySite.get(i.siteId) ?? ''] ?? stateBySite.get(i.siteId)}
                 </span>
               )}
-              {i.sourceType && <span style={{ fontSize: 10.5, color: '#6b7568' }}>{i.sourceType}</span>}
+              {i.sourceType && <span style={{ fontSize: 10.5, color: '#7f8a7c' }}>{i.sourceType}</span>}
               {i.syndicated > 1 && (
-                <span style={{ fontSize: 10.5, color: '#6b7568' }}>syndicated ×{i.syndicated}</span>
+                <span style={{ fontSize: 10.5, color: '#7f8a7c' }}>syndicated ×{i.syndicated}</span>
               )}
               {(i.confidence ?? 1) < 0.6 && (
                 <span
@@ -177,7 +177,7 @@ export default async function News() {
                 &ldquo;{i.quote}&rdquo;
               </div>
             )}
-            <div style={{ marginTop: 6, fontSize: 11, color: '#6b7568' }}>
+            <div style={{ marginTop: 6, fontSize: 11, color: '#7f8a7c' }}>
               {i.actor && <>{i.actor}{i.actorType ? ` (${i.actorType})` : ''} · </>}
               {i.grounds.length > 0 && <>{i.grounds.join(' · ')} · </>}
               {i.source && (

@@ -104,7 +104,7 @@ const C_ROSE = '#db687c';
 const C_UMBER = '#8d5108';
 // Off-scale / no-data. Deliberately outside both sets so it never reads as a
 // category or as a rung on a scale.
-const C_NEUTRAL = '#6b7568';
+const C_NEUTRAL = '#7f8a7c';
 
 // Overlay ink — reserved, never a lens category.
 // Contested is red because red means contested and nothing else on this map
@@ -905,7 +905,7 @@ export default function Map() {
             '<div style="background:#0a0c0b;border:1px solid ' + color + ';border-radius:12px;padding:10px 14px;font-family:var(--font-fira),system-ui,sans-serif;font-size:11px;color:#c8cfc4;min-width:200px;">' +
             '<div style="color:' + color + ';font-size:10px;letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;">' + (p.infraType || '') + '</div>' +
             '<div style="font-size:13px;margin-bottom:4px;">' + (p.name || '') + '</div>' +
-            (sovereignty ? '<div style="color:#6b7568;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
+            (sovereignty ? '<div style="color:#7f8a7c;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
             rows +
             lifecycleHtml(p) +
             provenanceHtml(p) +
@@ -1753,7 +1753,7 @@ function tab(active: boolean): React.CSSProperties {
     background: active ? CI_PURPLE : 'transparent',
     border: 'none',
     borderRadius: 8,
-    // #6b7568 measured 3.79:1 on the panel — below the 4.5:1 AA floor for normal
+    // #7f8a7c measured 3.79:1 on the panel — below the 4.5:1 AA floor for normal
     // text, and it was the most common text in the chrome. #9aa39b is 7.01:1 and
     // still reads as unselected next to the white-on-purple active state.
     color: active ? '#fff' : '#9aa39b',
@@ -1791,7 +1791,7 @@ function flagsHtml(flags: string | undefined): string {
 function row(key: string, value: string): string {
   return (
     '<div style="display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;">' +
-    '<span style="color:#6b7568;">' + key + '</span>' +
+    '<span style="color:#7f8a7c;">' + key + '</span>' +
     '<span style="color:#c8cfc4;text-align:right;">' + value + '</span>' +
     '</div>'
   );
@@ -1825,7 +1825,7 @@ function provenanceHtml(p: Record<string, string>): string {
   if (Number.isFinite(conf) && conf > 0) bits.push('confidence ' + conf.toFixed(2));
   if (p.approxLocation === 'true' || p.approxLocation === true as unknown as string) bits.push('location approximate');
 
-  const tint = verified ? '#8fae7c' : '#6b7568';
+  const tint = verified ? '#8fae7c' : '#7f8a7c';
   return (
     '<div title="How far this claim has been walked. See the glossary." ' +
     'style="margin-top:8px;padding-top:6px;border-top:1px solid #1e231d;color:' + tint +
@@ -1856,7 +1856,7 @@ function lifecycleHtml(p: Record<string, string>): string {
       '<div style="display:flex;align-items:flex-start;gap:7px;">' +
       '<span style="font-size:12px;line-height:1.25;">' + s.flag + '</span>' +
       '<div style="flex:1;min-width:0;">' +
-      '<span style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#6b7568;">' + s.label + '</span>' +
+      '<span style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#7f8a7c;">' + s.label + '</span>' +
       '<div style="font-size:10px;color:' + (s.hot ? STAT_HOT : '#c8cfc4') + ';line-height:1.3;">' + s.val + '</div>' +
       '</div></div>' +
       (i < stages.length - 1 ? '<div style="height:9px;border-left:1px solid #333;margin-left:6px;"></div>' : ''),
@@ -1868,12 +1868,12 @@ function lifecycleHtml(p: Record<string, string>): string {
     p.approvalDate && 'approved ' + p.approvalDate,
   ].filter(Boolean).join('  ·  ');
   const dateLine = dates
-    ? '<div style="font-size:9px;color:#6b7568;margin-top:6px;">' + dates + '</div>'
+    ? '<div style="font-size:9px;color:#7f8a7c;margin-top:6px;">' + dates + '</div>'
     : '';
 
   return (
     '<div style="margin-top:8px;padding-top:8px;border-top:1px solid #333;">' +
-    '<div style="font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:#6b7568;margin-bottom:6px;">Ownership lifecycle</div>' +
+    '<div style="font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:#7f8a7c;margin-bottom:6px;">Ownership lifecycle</div>' +
     steps + dateLine +
     '</div>'
   );
