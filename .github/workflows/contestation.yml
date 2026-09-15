@@ -66,16 +66,30 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
+      # Freeze the tracker and report what moved since the last freeze. The
+      # snapshot is the citable state; the diff is the finding — a capacity that
+      # firmed up or halved, an investment figure replaced, a disclosure that
+      # went blank. The report lands in the run summary so a change is visible
+      # without anyone running git locally.
+      - name: Snapshot the tracker and diff it against the last one
+        if: ${{ !cancelled() }}
+        run: |
+          npx tsx pipeline/export-zenodo.ts
+          npx tsx pipeline/diff-snapshots.ts --out /tmp/snapshot-diff.md
+          cat /tmp/snapshot-diff.md >> "$GITHUB_STEP_SUMMARY"
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
       # Compute transparency: the scans above append their token usage to
       # docs/compute-log.jsonl (see docs/COMPUTE.md). Commit it so the public
       # log — surfaced on /glossary — stays complete.
-      - name: Commit compute log
+      - name: Commit snapshot and compute log
         if: always()
         run: |
-          if ! git diff --quiet docs/compute-log.jsonl 2>/dev/null; then
+          if ! git diff --quiet docs/compute-log.jsonl zenodo/ 2>/dev/null; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add docs/compute-log.jsonl
-            git commit -m "Compute log: pipeline run $(date -u +%Y-%m-%d)"
+            git add docs/compute-log.jsonl zenodo/
+            git commit -m "Snapshot and compute log: pipeline run $(date -u +%Y-%m-%d)"
             git pull --rebase origin main && git push
           fi
