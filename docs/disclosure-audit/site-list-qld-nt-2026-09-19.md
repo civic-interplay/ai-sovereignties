@@ -67,7 +67,8 @@ results — an index that returned nothing is evidence about the index.
 | 2026-09-19 | Q1 Dalby | PlanningAlerts | ~~Authority not covered — `/authorities/western-downs` returns HTTP 404.~~ **WRONG — CORRECTED SAME DAY.** The slug is `western_downs` with an underscore, which returns HTTP 200. The authority **is** covered. The 404 was a bad guess at the URL, recorded as a fact about the index. See the correction note below. |
 | 2026-09-19 | Q2 Brendale | PlanningAlerts | Covered — `/authorities/moreton_bay` returns HTTP 200. |
 | 2026-09-19 | Q2 Brendale | Council DA Tracker | City of Moreton Bay runs its own tracker, not Development.i. `pdonline.moretonbay.qld.gov.au` does not resolve; the council site returns HTTP 403 to scripted requests. Not yet searched. |
-| 2026-09-19 | Q2 Brendale | Council open data | **City of Moreton Bay publishes development applications as open data** — `datahub.moretonbay.qld.gov.au/datasets/development-applications`, covering everything properly made since 1 Feb 2016. Not yet queried. This is a better index than any portal and should be tried first. |
+| 2026-09-19 | Q2 Brendale | Council open data | **Queried successfully.** ArcGIS FeatureServer via `datahub.moretonbay.qld.gov.au`, 16,519 applications, 2016-01-31 → 2026-08-21. Index verified working (controls: `DWELLING` 3,302; `INDUSTR` 402). **`DATA` appears in ZERO of 16,519 application descriptions.** Supernode's own DA not identified — see below. |
+| 2026-09-19 | Q2 Brendale | Council DA Tracker | Three candidate DAs opened by SB: all Determined; none names Supernode or Quinbrook. One resolved to a property described as "Cribb Rd Water Pollution Control/Pump Station" — a different site ~1.2 km west. Candidates rejected. |
 | 2026-09-19 | Q2 Brendale | Trade press and ministerial statement | Site confirmed as **Brendale, City of Moreton Bay** — 30 ha beside the South Pine substation, up to four data centre buildings, council planning approval and FIRB approval both granted. **Already approved, so a decision notice with conditions should exist.** |
 | 2026-09-19 | Q1 Dalby | Trade and general press | DA lodged **17 Aug 2026** with Western Downs Regional Council by **WDDP Pty Ltd** (Zerra DC / AGP): Material Change of Use for Research and Technology Industry, workforce accommodation, and a high-impact-industry concrete batching plant. Site 1933 Dalby–Kogan Road, **Lot 125 on DY316**, 725.5 ha. No council reference number published. |
 | 2026-09-19 | Q3 Swanbank | Ipswich Development.i portal | Application-number search for `2285/2026/MCU` returned **"No results"**. Address search returns a page whose results render client-side and could not be read by script. **This index has not been properly searched** — see caveat below. |
@@ -75,6 +76,52 @@ results — an index that returned nothing is evidence about the index.
 | 2026-09-19 | Q3 Swanbank | Trade press | Reference **2285/2026/MCU**, 6 Leaf Street (Lot 5), Swanbank, lodged **4 Aug 2026** by Northern Concept Swanb Pty Ltd. Reported as **code assessable** — no public notification required. |
 | 2026-09-19 | Q2 Supernode | — | Not yet searched. |
 | 2026-09-19 | NT | — | Not yet searched. |
+
+### Q2 Supernode — searched, not located. Recorded as that.
+
+Supernode is **83 Kremzow Road, Brendale**, adjacent to the South Pine
+switchyard: ~$3bn, a 30 ha campus combining large-scale battery storage with
+hyperscale data centres, up to four buildings, 260 MW-IT, three high-voltage
+connections totalling 800 MW, Stage 1 BESS operational at 260 MW / 619 MWh.
+Council and FIRB approvals are both on the public record via ministerial
+statement and trade press.
+
+**Its development application has not been located in the council's own open
+data.** Searched 19 Sep 2026:
+
+- `DATA CENTRE`, `DATA CENTER`, `DATA STORAGE`, `SERVER`, `SUPERNODE`,
+  `QUINBROOK` — **zero matches each**, across all 16,519 records.
+- `DATA` as a bare string — **zero matches**.
+- Spatially, every application within ~1.2 km of Kremzow Road (108 records) and
+  within ~4 km of Brendale (1,291 records): warehouses, stormwater, dwellings,
+  medium-impact industry. Nothing recognisable as the campus.
+- Nearest plausible artefacts: `DA/2023/1419`, a **Battery Storage Facility**
+  permit approved Nov 2023 about 2 km west; and `DA/2021/2718` / `DA/2023/3495`
+  / `DA/2024/5313`, three Minor Changes to one permit for *High Impact Industry,
+  Utility Installation and ERA6/ERA54*. **None confirmed**; the three were
+  opened and none names the project or proponent.
+
+**This is "not located by these indexes", not "no record exists".** The index
+demonstrably works — the controls return thousands — so the null is about the
+match, not the dataset. Three explanations remain open and none has been chosen:
+the approval may predate 1 Feb 2016; it may sit outside the council pathway
+(a Priority Development Area or state-assessed route — note `DA/2026/3398`, a
+**PDA** permit for "Research and Technology Industry and ancillary substation"
+at Petrie, showing that second route exists); or it is present under a
+description generic enough that it cannot be recognised as what it is.
+
+**The finding that holds regardless of which explanation is right:** in a
+council hosting one of the southern hemisphere's largest data centre campuses,
+no development application description contains the word "data". The battery is
+legible in the planning record, because *Battery Storage Facility* is a use
+class. The data centre is not, because Queensland's use classes have no term
+for one — it is a *utility installation*, a *high impact industry*, or at Dalby
+a *research and technology industry*. A resident searching their council's own
+open data for "data centre" finds nothing, and this is the transparent end of
+the system.
+
+That is a vocabulary failure rather than a records failure, and it is the same
+one that forces the NSW adapter to infer data centres from construction cost.
 
 ### Correction, 19 September 2026 — a null that was an artefact of the query
 
