@@ -91,3 +91,12 @@ content updates/
 # zenodo/ is NOT ignored: it is the derived snapshot bundle, and committing it
 # each run is what gives the project a diffable series. See
 # pipeline/diff-snapshots.ts.
+
+# Source documents for the disclosure audit.
+#
+# NOT committed, deliberately. A single transmission planning report is 26-35 MB
+# and git keeps it forever. What makes the audit reproducible is not the file in
+# this repo — it is the sha256 and source URL recorded in each audit record, so
+# anyone can fetch the document themselves and prove they have the same bytes.
+# The manifest in docs/disclosure-audit/SOURCES.md lists every one.
+docs/disclosure-audit/*.pdf
