@@ -42,6 +42,19 @@ interface Proposal {
   sourceUrl: string | null;
   confidence: number;
   notes: string;
+  /**
+   * The cost of development as stated in the statutory application — NSW's
+   * Capital Investment Value and its equivalents. Distinct from the announced
+   * investment figure, which is a press number covering land, equipment and
+   * every future stage; this one is defined by regulation and is what
+   * assessment and infrastructure charges are calculated against.
+   *
+   * The feed has always carried it — the relevance gate depends on it — but it
+   * was only ever formatted into a prose note, so the tracker kept the press
+   * number and discarded the statutory one having already paid to fetch it.
+   */
+  statutoryCost?: number | null;
+  costBasis?: string;
 }
 
 // --- Dedup helpers ---------------------------------------------------------
@@ -118,6 +131,8 @@ function eplanningProposal(d: Discovery): Proposal {
     state: 'New South Wales',
     sourceUrl: null,
     confidence: d.matchedOn === 'data-centre term' ? 0.5 : 0.35,
+    statutoryCost: d.cost,
+    costBasis: 'NSW Capital Investment Value',
     notes: [
       `Discovered by the pipeline from the NSW ePlanning OnlineDA API (${d.matchedOn}).`,
       `${d.address} · ${d.council} · ${d.applicationType} · status: ${d.status}.`,
@@ -197,6 +212,10 @@ async function createProposal(p: Proposal): Promise<void> {
   };
   if (p.state) properties['State / Region'] = { select: { name: p.state } };
   if (p.sourceUrl) properties.Source = { url: p.sourceUrl };
+  if (p.statutoryCost != null) {
+    properties['Statutory cost (AUD)'] = { number: p.statutoryCost };
+    if (p.costBasis) properties['Cost basis'] = { select: { name: p.costBasis } };
+  }
 
   const res = await fetch(`${API}/pages`, {
     method: 'POST',
