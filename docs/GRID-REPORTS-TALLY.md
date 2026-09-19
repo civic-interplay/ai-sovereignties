@@ -99,9 +99,21 @@ cycle, not the limit of what an operator knows. The claim is about the public
 record, not about the operator's awareness. Whether a mid-cycle update or
 enquiry register exists is worth asking them directly.
 
-**Still worth getting:** the 2026 community presentation, which may carry
-updated figures ahead of the next TAPR, and is the only 2026 Powerlink material
-located so far.
+### When the next Queensland forecast lands
+
+The 2025 TAPR was published Nov/Dec 2025 with data **current as at 30 September
+2025**. If Powerlink holds that cycle, the 2026 edition is due around Nov/Dec
+2026 with a cut-off near **30 September 2026**.
+
+That would make it the first Queensland transmission forecast to sit after both
+the Western Downs lodgement (17 Aug 2026) and the Anthropic announcement
+(16 Sep 2026). **It is the document to watch**, and the window to ask about its
+scope is now rather than after publication — a question about what a forecast
+will contain reads differently from a complaint about what it omitted.
+
+The report names its own enquiry contact on page 1. Contact details are kept
+out of this repository under the publication boundary; they are recorded
+locally with the questions worth asking.
 
 ## The 2026 comparison, now that three exist
 
