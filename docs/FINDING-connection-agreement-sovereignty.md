@@ -132,6 +132,48 @@ memoranda before any public institution has deliberated it". The connection
 agreement is that claim with a named instrument attached. It is not a metaphor
 for pre-emption; it is the document.
 
+## Update, 14 August 2026 — the instrument has been named
+
+Since this argument was drafted, Transgrid's **Network Capacity Allocation
+Policy** took effect (14 Aug 2026). It confirms the mechanism rather than
+contradicting it:
+
+- Network capacity is allocated **only on signature of a Network Connection
+  Agreement**. The NCA is now the named instrument, in published policy.
+- A six-part readiness test applies to any large load **≥30 MW or 30 MVA** —
+  a threshold consistent with the AEMC's draft Package 2 rule change on large
+  data centre connections.
+- A conditional NCA requires demonstrated progress on planning permits, land
+  ownership, construction, long-lead equipment and financing.
+
+So the allocation is being formalised and gated. **What has not changed is
+whether the public can see it.** A readiness test makes the queue more orderly;
+it does not make the resulting agreement a public document, and it does not put
+the allocation into any instrument a resident can read or contest.
+
+Two developments make the stakes explicit:
+
+- Transgrid is pursuing a **"use it or pay for it"** rule change — take-or-pay
+  network agreements, prudential security, application and exit fees — on
+  modelling that it could cut like-for-like transmission costs for consumers by
+  up to 15%.
+- The NSW Government's 17 Aug 2026 consultation proposes a **Major Network
+  Upgrade Fee**, default **$200,000/MW** in the Sydney–Newcastle–Wollongong
+  area and $100,000/MW elsewhere, levied on rated connection capacity — and
+  **competitive allocation, such as a tender, instead of first-come-first-served.**
+
+That is a price being put on the asset this finding argues was given away
+invisibly, and a proposal to auction it. It strengthens the underlying claim —
+the capacity is scarce, valuable and public — while answering only the
+*pricing* half of it. Whether the allocation becomes visible is a separate
+question, and neither reform appears to address it.
+
+**Also to reconcile:** Transgrid's submission to the NSW parliamentary inquiry
+into data centres (submission 114) reports **>10 GW of enquiries over 18 months
+with ~6 GW progressing to formal application**, against the 2026 TAPR's ~20 GW.
+Different windows and probably different definitions. Neither figure should be
+quoted until that is resolved.
+
 ## What would make this measurable
 
 1. **Record the connection** as a tracked attribute: connecting network
