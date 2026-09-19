@@ -101,6 +101,26 @@ data.** Searched 19 Sep 2026:
   Utility Installation and ERA6/ERA54*. **None confirmed**; the three were
   opened and none names the project or proponent.
 
+**Further routes tried, all negative (19 Sep 2026):**
+
+- **By decision date.** The approval is reported as secured by 13 Jul 2022
+  (ministerial statement, Deputy Premier Steven Miles). Every application
+  decided in Brendale between 1 Jan 2020 and that date: **177 records.**
+  Warehouses, stormwater, advertising devices, dwellings, electrical
+  reticulation. Exactly one could plausibly be a multi-billion-dollar campus —
+  `DA/2021/2718`, *High Impact Industry, Utility Installation and ERA6/ERA54* —
+  and it is a **Minor Change**, so an original permit exists.
+- **By parcel history.** Nine applications at that parcel back to 2016. The
+  original permit for that use **is not in the dataset**, so it predates
+  1 Feb 2016. The parcel's own earlier history is a *service station, food
+  outlet and showroom* and *medium impact industry* — not a 30 ha campus.
+- **By actual address.** Supernode is **83 Kremzow Road**, beside the South
+  Pine switchyard, ~1.8 km from that parcel. Sixty-six applications at or near
+  Kremzow Road: hotels, warehouses, showrooms, advertising devices,
+  stormwater. Nothing resembling the campus.
+
+So the earlier candidates are rejected too: they are at the wrong parcel.
+
 **This is "not located by these indexes", not "no record exists".** The index
 demonstrably works — the controls return thousands — so the null is about the
 match, not the dataset. Three explanations remain open and none has been chosen:
