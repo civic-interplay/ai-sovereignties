@@ -9,26 +9,21 @@ the document itself.
 
 | File | Source | Why it is here |
 | --- | --- | --- |
-| `supernode-brendale-paddock-streetview-2026.png` | **WANTED** — Google Street View, 26 Strathwyn St, Brendale. See below. | The Supernode site as it stands: a paddock, and the transmission towers that make it valuable. The siting argument in one frame. |
+| `supernode-brendale-paddock-streetview-2026.png` | Google Street View, 26 Strathwyn St, Brendale QLD, captured 19 Sep 2026 | The Supernode site as it stands: a dry paddock, one tree, and transmission towers on the horizon at left and right. The site of a campus reported at $2.5–3bn, and the reason it is worth that is standing on the skyline behind it. The Street View address label is in frame, so the image evidences its own location. |
 | `transgrid-2026-tapr-fig2-supply-chain.png` | Transgrid, *2026 Transmission Annual Planning Report*, Figure 2, p. 8 | **"Direct connect customers" is one of three customer classes**, wired straight from a transmission substation and bypassing distribution entirely. Both Queensland data centres examined in this project connect this way. The diagram is the network operator's own statement that this is a normal category, not an exception — which is what makes the planning system's silence about it notable. |
 
-## Wanted: the Brendale paddock
+## The Brendale paddock — captured 19 Sep 2026
 
-**Not yet captured.** The Street View frame of the Supernode site — empty
-paddock, one tree, transmission towers on the horizon in both directions. It is
-the single strongest image this project has produced and it exists only as a
-screenshot that has since been lost to a temp folder.
-
-To recapture:
+Held. To re-shoot, or to capture an "after" once construction starts:
 
 - **Street View at `26 Strathwyn St, Brendale QLD 4500`** — approximately
   `-27.3203, 152.9773`. Face the open paddock so the transmission towers sit on
   the skyline at both left and right. That framing is the whole point: the land
   is worth what it is worth because of what stands behind it.
-- Save as `supernode-brendale-paddock-streetview-2026.png` in this folder.
-- Note the capture date in the table below. Street View imagery is re-shot
-  periodically, so the date matters — a later capture may show construction,
-  which would make the pair *before and after* and be worth more than either.
+- Street View imagery is re-shot periodically. **This frame is the "before".**
+  If a later capture shows construction, the pair is worth considerably more
+  than either image alone — so check back rather than assuming this frame will
+  still be there.
 
 **Copyright.** The Street View frame is Google's, reproduced for research and
 criticism with the source and capture date named. If it is going on a card,
