@@ -168,11 +168,45 @@ the capacity is scarce, valuable and public — while answering only the
 *pricing* half of it. Whether the allocation becomes visible is a separate
 question, and neither reform appears to address it.
 
-**Also to reconcile:** Transgrid's submission to the NSW parliamentary inquiry
-into data centres (submission 114) reports **>10 GW of enquiries over 18 months
-with ~6 GW progressing to formal application**, against the 2026 TAPR's ~20 GW.
-Different windows and probably different definitions. Neither figure should be
-quoted until that is resolved.
+### Reconciled: the two enquiry figures are a time series, not a conflict
+
+Transgrid's submission to the NSW Legislative Council inquiry (submission 114)
+is **dated 27 March 2026**, before the 2026 TAPR. It reports:
+
+> "Over the past 18 months, Transgrid has received connection enquiries from
+> data centre proponents totalling **more than 10 gigawatts (GW)** of potential
+> load, with **approximately 6 GW progressing at pace** through to lodging a
+> formal connection application."
+
+So the sequence is:
+
+| | Figure | Meaning |
+| --- | --- | --- |
+| **Mar 2026**, submission 114 | **>10 GW** | enquiries, prior 18 months |
+| **Mar 2026**, submission 114 | **~6 GW** | of those, progressing to formal application |
+| **2026 TAPR**, later that year | **~20 GW** | enquiries |
+
+The enquiry pipeline **roughly doubled inside one year**, and the ~6 GW is a
+different measure — the subset progressing to a formal application, which is
+the honest answer to "how much of the 20 GW is real". Both figures can be
+quoted, provided each is dated and labelled.
+
+The submission also gives the facility-size distribution, which nothing else
+does: individual transmission-connected facilities **range from 250 MW to more
+than 1,200 MW, averaging around 650 MW**, with smaller proponents expected to
+connect to distribution instead. That is the threshold at which a data centre
+stops being visible to the network that serves households.
+
+And it confirms the siting argument in the operator's own words — Transgrid
+reports "increasing concentration of large load enquiries **near major
+transmission hubs**", enquiries "lodged earlier in project development and at
+increasingly larger scales", and "a significant rise in what may be speculative
+enquiries".
+
+One comparison from the submission is worth keeping for scale: the ~6 GW
+progressing through the connections pipeline is, in Transgrid's own words,
+"comparable in scale to establishing a Renewable Energy Zone similar to the
+Central-West Orana REZ.
 
 ## What would make this measurable
 
