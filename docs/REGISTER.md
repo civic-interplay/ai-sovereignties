@@ -115,7 +115,16 @@ instruments can hold four different answers without contradiction.
 | field | type | note |
 | --- | --- | --- |
 | Document | relation → Document | |
-| Item | select | IT load (MW) / Site load (MW) / Water source / Water volume (ML/yr) / WUE / PUE / Cooling type / Backup fuel / Emissions / Grid connection / Jobs |
+| Item | select | Connection capacity (MVA/MW) / Energy consumption (kWh/MWh per yr) / PUE / Water source / Water volume operational / Water volume construction / WUE / Cooling type / Backup fuel / Emissions / Jobs |
+
+**Connection capacity and energy consumption are deliberately separate items.**
+A connection size states how much the grid must be able to supply; it is not a
+statement of what the facility will draw, and with no PUE or load factor in the
+record the second cannot be derived from the first. Collapsing them forces a
+single verdict that is wrong either way — see
+`disclosure-audit/coding-rules-2026-09-19.md`. Water is split by phase for the
+same reason: operational demand is what a site imposes for decades, and at
+Dalby it is one twentieth of the construction figure.
 | Status | select | **Disclosed — numeric** / **Disclosed — qualitative** / **Claim only** / **Redacted** / **Not found** / **Not required** |
 | Value | text | as written in the source, units included, not normalised |
 | Location in doc | text | clause or page — §3 wants "cl. 12–14", not "somewhere" |
