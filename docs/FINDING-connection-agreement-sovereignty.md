@@ -11,6 +11,45 @@ only input that is unambiguously publicly owned, genuinely scarce, and
 impossible to relocate** — and it is allocated by a commercial contract that
 appears in no planning record and is subject to no public process.
 
+## Against the stack ladder
+
+The field note *Who holds each layer of the Australian AI stack?* (16 Aug 2026)
+sets out six layers, and marks exactly one as Australian:
+
+| | Layer | Held by |
+| --- | --- | --- |
+| 06 | Value & returns | offshore — booked through Dublin and Singapore |
+| 05 | Models & workloads | US labs — foreign weights on leased capacity |
+| 04 | Compute | hyperscalers — public share ~150 H100-equivalents |
+| 03 | Facilities | global funds — A$65bn announced private build |
+| **02** | **Land · water · energy** | **Australia** |
+| 01 | Minerals | Washington / Beijing — China refines ~90% |
+
+*Australia holds the ground of a stack it does not hold.* Layer 02 is the
+stable layer — the one that cannot be booked offshore, and the only one where
+value can be captured locally, through rates, charges, water pricing, land and
+labour.
+
+**This finding is a correction to layer 02's own caption.** The field note reads
+"granted through state planning · fast-tracked · public notice exempted". That
+is true of land and of water. **It is not true of energy.**
+
+Land use and water are assessed through the planning system: exhibited,
+notifiable, open to submission, appealable. Grid connection is not in that
+system at all. It is allocated by a commercial contract between a proponent and
+a network operator. It was never fast-tracked or notice-exempted, because it was
+never in the instrument that could exempt it.
+
+So the layer Australia holds is not one thing. It splits:
+
+- **Land and water** — granted through planning, visible, contestable, and
+  already documented as fast-tracked and notice-exempted.
+- **Energy** — granted through a connection agreement, invisible, uncontestable,
+  and outside planning entirely.
+
+And energy is the component that makes the other two worth having. A hyperscale
+site without a connection is a paddock.
+
 ## Against the four registers
 
 The typology distinguishes **locational** sovereignty (compute onshore,
