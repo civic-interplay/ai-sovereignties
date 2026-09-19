@@ -28,6 +28,10 @@ import {
   td,
   th,
   fmtMW,
+	STRONG,
+	MID,
+	DIM,
+	CATEGORY,
 } from '../sheet-ui';
 
 export const dynamic = 'force-dynamic';
@@ -37,7 +41,7 @@ const REGISTER_COLORS: Record<string, string> = {
   Operational: ACCENT.blue,
   Financial: ACCENT.yellow,
   Rented: ACCENT.red,
-  'Not coded': '#4a534e',
+  'Not coded': CATEGORY.unknown,
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ state: string }> }) {
@@ -155,11 +159,11 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                 'United States': ACCENT.blue,
                 China: ACCENT.red,
                 Singapore: ACCENT.yellow,
-                Japan: '#b478ff',
-                Switzerland: '#ff8c42',
-                Other: '#9aa5a0',
-                Unknown: '#4a534e',
-              }[country] ?? '#9aa5a0'
+                Japan: CATEGORY.japan,
+                Switzerland: CATEGORY.switzerland,
+                Other: CATEGORY.other,
+                Unknown: CATEGORY.unknown,
+              }[country] ?? CATEGORY.other
             } />
           ))}
       </Panel>
@@ -175,12 +179,12 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
             color={
               {
                 'Off-grid — on-site renewable': ACCENT.green,
-                'On-grid — renewable contracted': '#3fd17a',
+                'On-grid — renewable contracted': CATEGORY.renewable,
                 'On-grid — mixed': ACCENT.yellow,
-                'On-grid — coal/gas heavy': '#ff6b35',
-                'Nuclear (proposed)': '#b478ff',
-                'Not tracked': '#4a534e',
-              }[k] ?? '#9aa5a0'
+                'On-grid — coal/gas heavy': CATEGORY.coalGas,
+                'Nuclear (proposed)': CATEGORY.japan,
+                'Not tracked': CATEGORY.unknown,
+              }[k] ?? CATEGORY.other
             }
           />
         ))}
@@ -219,8 +223,15 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
             </tr>
           </thead>
           <tbody>
+            {/* Rows outside the subset used to carry opacity:0.55. Fading a row
+                scales its contrast down with it: body text fell to 3.25:1 and
+                links to 2.59:1 against the field, below the 4.5:1 AA floor, and
+                no opacity below 1 kept every step in the palette passing. The
+                distinction is already carried twice over — the ●/○ column and the
+                sort, which puts subset rows first — so the fade was a third,
+                weakest cue and the only one that cost legibility. */}
             {sorted.map((r) => (
-              <tr key={r.notionPublicUrl} style={{ opacity: r.inSubset ? 1 : 0.55 }}>
+              <tr key={r.notionPublicUrl}>
                 <td style={td}>{r.name}</td>
                 <td style={td}>
                   {r.operator || '—'}
@@ -257,7 +268,9 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                   )}
                 </td>
                 <td style={td}>{r.registers.length ? r.registers.join(', ') : '—'}</td>
-                <td style={{ ...td, color: r.inSubset ? ACCENT.green : '#4a534e' }}>{r.inSubset ? '●' : '○'}</td>
+                {/* DIM, not the swatch grey: this glyph is read, so it needs the
+                    4.5:1 that a bar fill does not. */}
+                <td style={{ ...td, color: r.inSubset ? ACCENT.green : DIM }}>{r.inSubset ? '●' : '○'}</td>
                 <td style={td}>
                   <a href={r.notionPublicUrl} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
                     entry↗
@@ -288,7 +301,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           infrastructure behind these figures, and how this tracker actually accessed it.
         </Footnote>
         {dataAccess.length === 0 ? (
-          <div style={{ fontSize: 12, color: '#9aa39b' }}>Not yet assessed for this state.</div>
+          <div style={{ fontSize: 12, color: MID }}>Not yet assessed for this state.</div>
         ) : (
           dataAccess.map((d) => (
             <div key={d.source} style={{ fontSize: 12.5, lineHeight: 1.7, margin: '8px 0' }}>
@@ -303,11 +316,11 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                   background: d.access === 'api' ? ACCENT.green : d.access === 'manual' ? ACCENT.yellow : ACCENT.red,
                 }}
               />
-              <span style={{ color: '#fff', fontWeight: 600 }}>{d.source}</span>{' '}
-              <span style={{ color: '#7f8a7c', textTransform: 'uppercase', fontSize: 10, letterSpacing: '0.08em' }}>
+              <span style={{ color: STRONG, fontWeight: 600 }}>{d.source}</span>{' '}
+              <span style={{ color: DIM, textTransform: 'uppercase', fontSize: 10, letterSpacing: '0.08em' }}>
                 {d.access === 'api' ? 'API' : d.access === 'manual' ? 'Machine readable, no feed' : 'No API'}
               </span>
-              <div style={{ color: '#9aa39b', marginLeft: 16 }}>{d.note}</div>
+              <div style={{ color: MID, marginLeft: 16 }}>{d.note}</div>
             </div>
           ))
         )}
@@ -319,7 +332,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           <Panel>
             {other.map((r) => (
               <div key={r.notionPublicUrl} style={{ fontSize: 12, lineHeight: 1.9 }}>
-                <span style={{ color: '#7f8a7c' }}>{r.infraType ?? 'Other'}</span> — {r.name}{' '}
+                <span style={{ color: DIM }}>{r.infraType ?? 'Other'}</span> — {r.name}{' '}
                 <a href={r.notionPublicUrl} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
                   ↗
                 </a>

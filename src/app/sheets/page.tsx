@@ -14,6 +14,10 @@ import {
   Updated,
   ACCENT,
   CI_PERIWINKLE,
+	STRONG,
+	MID,
+	DIM,
+	CATEGORY,
 } from './sheet-ui';
 
 export const dynamic = 'force-dynamic';
@@ -28,10 +32,10 @@ const COUNTRY_COLORS: Record<string, string> = {
   'United States': ACCENT.blue,
   China: ACCENT.red,
   Singapore: ACCENT.yellow,
-  Japan: '#b478ff',
-  Switzerland: '#ff8c42',
-  Other: '#9aa5a0',
-  Unknown: '#4a534e',
+  Japan: CATEGORY.japan,
+  Switzerland: CATEGORY.switzerland,
+  Other: CATEGORY.other,
+  Unknown: CATEGORY.unknown,
 };
 
 export default async function SheetsIndex() {
@@ -108,7 +112,7 @@ export default async function SheetsIndex() {
               label={country}
               count={Math.round(mw)}
               total={totalMW}
-              color={COUNTRY_COLORS[country] ?? '#9aa5a0'}
+              color={COUNTRY_COLORS[country] ?? CATEGORY.other}
               suffix=" MW"
             />
           ))}
@@ -130,10 +134,10 @@ export default async function SheetsIndex() {
           return (
             <Panel key={state}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                <div style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>{state}</div>
-                <div style={{ fontSize: 12, color: '#7f8a7c' }}>{inState.length} sites</div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: STRONG }}>{state}</div>
+                <div style={{ fontSize: 12, color: DIM }}>{inState.length} sites</div>
               </div>
-              <div style={{ fontSize: 12, color: '#9aa39b', marginTop: 6, lineHeight: 1.7 }}>
+              <div style={{ fontSize: 12, color: MID, marginTop: 6, lineHeight: 1.7 }}>
                 {sub.length} in analysis subset · {Math.round(mw).toLocaleString()} MW known
                 {noticeExempt > 0 && (
                   <>

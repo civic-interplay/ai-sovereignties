@@ -12,6 +12,12 @@ import {
   ScopeNote,
   ACCENT,
   CI_PERIWINKLE,
+	STRONG,
+	MID,
+	DIM,
+	INK,
+	RULE,
+	CATEGORY,
 } from '../sheets/sheet-ui';
 
 export const dynamic = 'force-dynamic';
@@ -23,11 +29,11 @@ export const metadata = {
 };
 
 function stanceColor(stance: string | null): string {
-  if (!stance) return '#9aa5a0';
+  if (!stance) return CATEGORY.other;
   if (stance.includes('Oppos')) return ACCENT.red;
   if (stance.includes('Support')) return ACCENT.green;
   if (stance.includes('Conditional')) return ACCENT.yellow;
-  return '#9aa5a0';
+  return CATEGORY.other;
 }
 
 const STATE_SHORT: Record<string, string> = {
@@ -88,10 +94,10 @@ export default async function News() {
           flexWrap: 'wrap',
           margin: '0 0 16px',
           padding: '8px 12px',
-          border: '1px solid #2a322c',
+          border: `1px solid ${RULE}`,
           borderRadius: 10,
           fontSize: 12,
-          color: '#9aa39b',
+          color: MID,
         }}
       >
         <span aria-hidden style={{ color: CI_PERIWINKLE, fontSize: 13 }}>⇩</span>
@@ -102,9 +108,9 @@ export default async function News() {
         >
           /news/feed.xml
         </a>
-        <span style={{ color: '#7f8a7c' }}>· RSS 2.0</span>
+        <span style={{ color: DIM }}>· RSS 2.0</span>
         {newest && (
-          <span style={{ color: '#7f8a7c' }}>· most recent item {newest}</span>
+          <span style={{ color: DIM }}>· most recent item {newest}</span>
         )}
       </div>
 
@@ -112,7 +118,7 @@ export default async function News() {
         {dated.map((i) => (
           <Panel key={i.id}>
             <div style={{ display: 'flex', gap: 10, alignItems: 'baseline', flexWrap: 'wrap' }}>
-              <span style={{ fontSize: 10.5, color: '#7f8a7c', letterSpacing: '0.06em' }}>{i.date}</span>
+              <span style={{ fontSize: 10.5, color: DIM, letterSpacing: '0.06em' }}>{i.date}</span>
               {i.stance && (
                 <span
                   style={{
@@ -143,9 +149,9 @@ export default async function News() {
                   {STATE_SHORT[stateBySite.get(i.siteId) ?? ''] ?? stateBySite.get(i.siteId)}
                 </span>
               )}
-              {i.sourceType && <span style={{ fontSize: 10.5, color: '#7f8a7c' }}>{i.sourceType}</span>}
+              {i.sourceType && <span style={{ fontSize: 10.5, color: DIM }}>{i.sourceType}</span>}
               {i.syndicated > 1 && (
-                <span style={{ fontSize: 10.5, color: '#7f8a7c' }}>syndicated ×{i.syndicated}</span>
+                <span style={{ fontSize: 10.5, color: DIM }}>syndicated ×{i.syndicated}</span>
               )}
               {(i.confidence ?? 1) < 0.6 && (
                 <span
@@ -157,10 +163,10 @@ export default async function News() {
                   }
                   style={{
                     fontSize: 10,
-                    color: '#8d5108',
+                    color: CATEGORY.pending,
                     letterSpacing: '0.06em',
                     textTransform: 'uppercase',
-                    borderBottom: '1px dotted #8d5108',
+                    borderBottom: `1px dotted ${CATEGORY.pending}`,
                     cursor: 'help',
                   }}
                 >
@@ -168,16 +174,16 @@ export default async function News() {
                 </span>
               )}
             </div>
-            <div style={{ fontSize: 13.5, color: '#fff', margin: '6px 0 2px', lineHeight: 1.5 }}>{i.title}</div>
+            <div style={{ fontSize: 13.5, color: STRONG, margin: '6px 0 2px', lineHeight: 1.5 }}>{i.title}</div>
             {i.frameSummary && (
-              <div style={{ fontSize: 12, color: '#9aa39b', lineHeight: 1.6 }}>{i.frameSummary}</div>
+              <div style={{ fontSize: 12, color: MID, lineHeight: 1.6 }}>{i.frameSummary}</div>
             )}
             {i.quote && (
-              <div style={{ fontSize: 12, color: '#8a938c', fontStyle: 'italic', marginTop: 4, lineHeight: 1.6 }}>
+              <div style={{ fontSize: 12, color: MID, fontStyle: 'italic', marginTop: 4, lineHeight: 1.6 }}>
                 &ldquo;{i.quote}&rdquo;
               </div>
             )}
-            <div style={{ marginTop: 6, fontSize: 11, color: '#7f8a7c' }}>
+            <div style={{ marginTop: 6, fontSize: 11, color: DIM }}>
               {i.actor && <>{i.actor}{i.actorType ? ` (${i.actorType})` : ''} · </>}
               {i.grounds.length > 0 && <>{i.grounds.join(' · ')} · </>}
               {i.source && (
@@ -192,12 +198,12 @@ export default async function News() {
 
       <Footnote>
         Items are collected by the fortnightly pipeline and coded by a language model for stance, actor and
-        grounds; items marked <span style={{ color: '#8d5108' }}>pending review</span> have not yet been checked
+        grounds; items marked <span style={{ color: CATEGORY.pending }}>pending review</span> have not yet been checked
         by a human. Jurisdiction tags come from the tracked site each item relates to. Coding rules are in the{' '}
         <a href="/glossary" style={{ color: CI_PERIWINKLE }}>glossary &amp; methods</a>.
       </Footnote>
       <Footnote>
-        <span style={{ color: '#c8cfc4' }}>Search terms, stated:</span> the press sweep queries the GDELT news
+        <span style={{ color: INK }}>Search terms, stated:</span> the press sweep queries the GDELT news
         index (Australian sources) for <em>data centre / data center / rare earths / refinery</em> combined with
         debate terms in both directions — <em>opposition, objection, protest, community concern, submission,
         water use</em> and <em>support, welcomes, jobs, investment, backs</em> — so the feed captures the whole

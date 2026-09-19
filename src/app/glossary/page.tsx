@@ -11,6 +11,10 @@ import {
   ScopeNote,
   ACCENT,
   CI_PERIWINKLE,
+	STRONG,
+	MID,
+	RULE,
+	CATEGORY,
 } from '../sheets/sheet-ui';
 
 export const metadata = {
@@ -62,8 +66,8 @@ async function fetchComputeLog(): Promise<ComputeEntry[]> {
 function Term({ name, color, children }: { name: string; color?: string; children: React.ReactNode }) {
   return (
     <div style={{ margin: '10px 0', fontSize: 12.5, lineHeight: 1.7 }}>
-      <span style={{ color: color ?? '#fff', fontWeight: 600 }}>{name}</span>{' '}
-      <span style={{ color: '#9aa39b' }}>— {children}</span>
+      <span style={{ color: color ?? STRONG, fontWeight: 600 }}>{name}</span>{' '}
+      <span style={{ color: MID }}>— {children}</span>
     </div>
   );
 }
@@ -177,7 +181,7 @@ export default async function Glossary() {
           owner type: one of the global cloud majors (Amazon/AWS, Microsoft, Google, Meta, Oracle, Apple) owning
           or anchoring the facility.
         </Term>
-        <Term name="Named hyperscaler" color="#ff47e5">
+        <Term name="Named hyperscaler" color={CATEGORY.hyperscaler}>
           map overlay (magenta pip): an AI platform or model company is publicly named as a user of the site —
           derived directly from the tenant field, so it marks only what the tracker can evidence, independent of
           register coding.
@@ -267,7 +271,7 @@ export default async function Glossary() {
 
       <SectionHead>Water & energy</SectionHead>
       <Panel>
-        <Term name="Closed-loop" color="#3fd17a">
+        <Term name="Closed-loop" color={CATEGORY.closedLoop}>
           cooling water recirculates; mains/potable water is drawn only for periodic top-up, not continuous
           evaporative use. Coded as Low water risk &mdash; but read that coding as a <em>claim</em>, not a
           measurement. Of the 23 data centres carrying it, only four have any volume figure attached and two
@@ -322,25 +326,25 @@ export default async function Glossary() {
 
       <SectionHead>How this is built — platforms & models</SectionHead>
       <Panel>
-        <div style={{ fontSize: 12.5, lineHeight: 1.8, color: '#9aa39b', maxWidth: 760 }}>
-          The tracker itself is a <span style={{ color: '#fff' }}>Notion</span> database — the single source of
+        <div style={{ fontSize: 12.5, lineHeight: 1.8, color: MID, maxWidth: 760 }}>
+          The tracker itself is a <span style={{ color: STRONG }}>Notion</span> database — the single source of
           truth that every view queries live. The map and these sheets are a{' '}
-          <span style={{ color: '#fff' }}>Next.js</span> (React) application rendering the map through{' '}
-          <span style={{ color: '#fff' }}>Mapbox GL</span>, deployed via OpenNext to{' '}
-          <span style={{ color: '#fff' }}>Cloudflare Workers</span> at the edge. Code, methods and the compute
-          log are versioned in the open on <span style={{ color: '#fff' }}>GitHub</span>, where a fortnightly{' '}
-          <span style={{ color: '#fff' }}>GitHub Actions</span> pipeline sweeps press coverage (GDELT) and
+          <span style={{ color: STRONG }}>Next.js</span> (React) application rendering the map through{' '}
+          <span style={{ color: STRONG }}>Mapbox GL</span>, deployed via OpenNext to{' '}
+          <span style={{ color: STRONG }}>Cloudflare Workers</span> at the edge. Code, methods and the compute
+          log are versioned in the open on <span style={{ color: STRONG }}>GitHub</span>, where a fortnightly{' '}
+          <span style={{ color: STRONG }}>GitHub Actions</span> pipeline sweeps press coverage (GDELT) and
           planning-portal feeds for new contestation events. Model work is done with{' '}
-          <span style={{ color: '#fff' }}>Anthropic Claude</span>: <code>claude-sonnet-5</code> codes the
+          <span style={{ color: STRONG }}>Anthropic Claude</span>: <code>claude-sonnet-5</code> codes the
           structure of each contestation source (who objects, on what grounds, how framed), and interactive
           research, audit and build sessions run in Claude Code on Opus and Fable-class models. This is a{' '}
-          <span style={{ color: '#fff' }}>civic AI collaboration</span> with a deliberate division of labour:
+          <span style={{ color: STRONG }}>civic AI collaboration</span> with a deliberate division of labour:
           the{' '}
-          <span style={{ color: '#fff' }}>human in the loop</span> designs the lenses and the four-register
+          <span style={{ color: STRONG }}>human in the loop</span> designs the lenses and the four-register
           scheme, interprets what the data means, fact-checks claims against primary planning documents,
           decides what is published, and organises the interface and its legends; the models retrieve, code
           structure at scale, and draft. Every claim destined for publication is human-verified. Releases are
-          archived with a DOI on <span style={{ color: '#fff' }}>Zenodo</span>.
+          archived with a DOI on <span style={{ color: STRONG }}>Zenodo</span>.
         </div>
         <div style={{ marginTop: 10 }}>
           <a
@@ -373,12 +377,12 @@ export default async function Glossary() {
           (~0.3&ndash;3&nbsp;Wh) while noting these agentic calls are far larger than typical queries.
         </Footnote>
         {byModel.size === 0 ? (
-          <div style={{ fontSize: 12, color: '#9aa39b' }}>Compute log unavailable right now — see the repository.</div>
+          <div style={{ fontSize: 12, color: MID }}>Compute log unavailable right now — see the repository.</div>
         ) : (
           [...byModel.entries()].map(([model, m]) => (
             <div key={model} style={{ fontSize: 12.5, lineHeight: 1.8 }}>
-              <span style={{ color: '#fff', fontWeight: 600 }}>{model}</span>{' '}
-              <span style={{ color: '#9aa39b' }}>
+              <span style={{ color: STRONG, fontWeight: 600 }}>{model}</span>{' '}
+              <span style={{ color: MID }}>
                 — {m.calls.toLocaleString()} calls · {m.input.toLocaleString()} input /{' '}
                 {m.output.toLocaleString()} output tokens
                 {m.cacheRead > 0 && ` (+ ${m.cacheRead.toLocaleString()} cached-context reads)`}
@@ -387,9 +391,9 @@ export default async function Glossary() {
           ))
         )}
         {listCostUSD > 0 && (
-          <div style={{ fontSize: 12.5, lineHeight: 1.8, marginTop: 8, borderTop: '1px solid #2a302e', paddingTop: 8 }}>
-            <span style={{ color: '#fff', fontWeight: 600 }}>What that converts to</span>{' '}
-            <span style={{ color: '#9aa39b' }}>
+          <div style={{ fontSize: 12.5, lineHeight: 1.8, marginTop: 8, borderTop: `1px solid ${RULE}`, paddingTop: 8 }}>
+            <span style={{ color: STRONG, fontWeight: 600 }}>What that converts to</span>{' '}
+            <span style={{ color: MID }}>
               — ≈ US${Math.round(listCostUSD).toLocaleString()} at API list rates
               {unpriced > 0 && ` (${unpriced} model${unpriced > 1 ? 's' : ''} unpriced, excluded)`}; energy
               indicatively {Math.round(totalCalls * 0.3 / 1000 * 10) / 10}&ndash;
