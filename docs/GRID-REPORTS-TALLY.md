@@ -27,21 +27,23 @@ so a zero for "data centre" is a property of the document, not of the
 extraction. This is now standing practice — see
 [`AGENT-RECURSIVE-LISTENING.md`](AGENT-RECURSIVE-LISTENING.md).
 
-## Do not read this table as a comparison between states
+## Never compare across the two tables
 
-**Transgrid is 2026. Everything else is 2025.** The gap between 187 and 10 is
-overwhelmingly a *year*, not a *jurisdiction*. Transgrid's own forecast of data
-centre load growth quadrupled between its 2025 and 2026 reports, by its own
-statement, so its 2025 edition would read far closer to Powerlink's.
+The tables are split by year on purpose. **Transgrid's 187 and Powerlink's 10
+are a year apart, not a jurisdiction apart.** Transgrid's own forecast of data
+centre load growth quadrupled between its 2025 and 2026 editions, by its own
+statement, so its 2025 report would read far closer to Powerlink's than to its
+own successor.
 
-Comparing a 2026 document to a 2025 one and calling the difference a state
+Reading a 2026 document against a 2025 one and calling the difference a state
 effect would be exactly the error this project spent 19 September catching
-three times over. The table is a record of what has been read, not a finding.
+three times over. Compare within a table, never across.
 
-**The 2026 editions are the ones that matter**, and Powerlink's is the single
-most valuable document still unread: Queensland received the largest data
-centre proposed in Australia in August 2026, and its 2025 report had explicitly
-excluded data centres from the load forecast.
+**Powerlink's 2026 TAPR is the single most valuable document still unread.**
+Queensland received the largest data centre proposed in Australia in August
+2026, and its 2025 report had explicitly excluded data centres from the load
+forecast. Whatever that report says is the test of how fast a transmission
+planner can turn.
 
 ## The 2026 comparison, now that three exist
 
