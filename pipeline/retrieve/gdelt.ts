@@ -6,6 +6,33 @@ import type { Candidate } from './types.ts';
 
 const ENDPOINT = 'https://api.gdeltproject.org/api/v2/doc/doc';
 
+/**
+ * GDELT could not be reached — as distinct from "GDELT was reached and had
+ * nothing". Thrown only after every retry is spent.
+ *
+ * This distinction is the whole point of the class. Returning [] on a throttled
+ * sweep makes an outage indistinguishable from a quiet fortnight, which is how
+ * the 2026-09-15 run went green while retrieving nothing: the press strand had
+ * in fact failed, and the tracker recorded that silence as "no news".
+ */
+export class GdeltUnavailableError extends Error {
+  constructor(
+    readonly reason: 'throttled' | 'network',
+    readonly attempts: number,
+    options?: { cause?: unknown },
+  ) {
+    super(
+      reason === 'throttled'
+        ? `GDELT throttled through all ${attempts} attempts (HTTP 429 / "limit requests" notice). ` +
+            'No articles retrieved — this is an outage, not an empty result set.'
+        : `GDELT unreachable through all ${attempts} attempts (network error). ` +
+            'No articles retrieved — this is an outage, not an empty result set.',
+      options,
+    );
+    this.name = 'GdeltUnavailableError';
+  }
+}
+
 // Infrastructure terms AND debate terms, biased to Australian sources. The
 // debate terms deliberately include BOTH opposition and support framing, so the
 // tracker captures the whole structure of the debate (the classifier records
@@ -40,9 +67,17 @@ export async function fetchGdelt(
   //   2. A thrown fetch error — connect timeout / dropped connection. This is
   //      NOT an HTTP status; it escapes any status check, and is what silently
   //      lost the 1 Jul 2026 scheduled run. Must be caught, not just inspected.
-  // Only give up (and surface a red run) after the last attempt.
-  const MAX_ATTEMPTS = 5;
+  //
+  // Measured 2026-09-19 from a residential IP: one query in roughly ten got
+  // through; six backoff attempts across three minutes did not. Throttling is
+  // the norm, not the exception, so the backoff is generous — and running out
+  // of attempts raises GdeltUnavailableError rather than returning [].
+  const MAX_ATTEMPTS = 6;
+  const BACKOFF_MS = [8000, 15000, 25000, 40000, 60000];
   let body = '';
+  let lastNetworkError: unknown = null;
+  let exhausted: 'throttled' | 'network' | null = null;
+
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     const last = attempt === MAX_ATTEMPTS - 1;
 
@@ -50,23 +85,41 @@ export async function fetchGdelt(
     try {
       res = await fetch(`${ENDPOINT}?${params}`);
     } catch (err) {
-      // Network-level failure: transient, so back off (exponential) and retry.
-      if (last) throw err;
-      await new Promise((r) => setTimeout(r, 1000 * 2 ** attempt));
+      // Network-level failure: transient, so back off and retry.
+      lastNetworkError = err;
+      if (last) {
+        exhausted = 'network';
+        break;
+      }
+      await new Promise((r) => setTimeout(r, BACKOFF_MS[attempt]));
       continue;
     }
 
-    body = res.ok ? await res.text() : '';
+    // Read the body whatever the status: a throttle notice arrives as
+    // plain text under both 429 and 200, and discarding it on !ok loses the
+    // only evidence of which failure this was.
+    body = await res.text().catch(() => '');
     const throttled = res.status === 429 || body.includes('limit requests');
     if (!throttled) {
       if (!res.ok) throw new Error(`GDELT failed (${res.status})`);
       break;
     }
-    if (last) break; // still throttled; fall through to parse -> [] (green run)
-    await new Promise((r) => setTimeout(r, 7000));
+    if (last) {
+      exhausted = 'throttled';
+      break;
+    }
+    await new Promise((r) => setTimeout(r, BACKOFF_MS[attempt]));
   }
 
-  // On no results GDELT can return empty or a throttle notice; guard the parse.
+  if (exhausted) {
+    throw new GdeltUnavailableError(exhausted, MAX_ATTEMPTS, {
+      cause: lastNetworkError ?? undefined,
+    });
+  }
+
+  // A reached-but-empty GDELT legitimately returns an empty or non-JSON body;
+  // that is a real zero and stays a zero. Only an exhausted retry budget above
+  // is treated as an outage.
   let data: { articles?: Array<Record<string, string>> };
   try {
     data = JSON.parse(body);

@@ -14,7 +14,8 @@
 import { REVIEW_THRESHOLD, type Classification } from './config.ts';
 import { getSites, getExistingSourceUrls, createContestationItem, type Site } from './lib/notion.ts';
 import { resolveSite } from './lib/resolve.ts';
-import { fetchGdelt } from './retrieve/gdelt.ts';
+import { fetchGdelt, GdeltUnavailableError } from './retrieve/gdelt.ts';
+import { optionalEnv } from './lib/env.ts';
 import { fetchInbox } from './retrieve/inbox.ts';
 import { fetchPortals } from './retrieve/portals.ts';
 import type { Candidate } from './retrieve/types.ts';
@@ -154,7 +155,22 @@ function dry(fresh: Candidate[], sites: Site[]) {
   console.log(`Resolved ${resolved}/${fresh.length} by headline alone (the model will do better on full text).`);
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error(err);
+  // A retrieval outage is reported as an outage. Without this the run summary
+  // shows "0 candidates from gdelt" and reads as a quiet fortnight.
+  if (err instanceof GdeltUnavailableError) {
+    const stepSummary = optionalEnv('GITHUB_STEP_SUMMARY');
+    const note =
+      `### Press scan unavailable\n\n` +
+      `GDELT was ${err.reason === 'throttled' ? 'throttled' : 'unreachable'} through ` +
+      `all ${err.attempts} attempts. **No articles were retrieved — this run searched nothing, ` +
+      `it did not find nothing.**\n`;
+    if (stepSummary) {
+      const { appendFileSync } = await import('node:fs');
+      appendFileSync(stepSummary, note);
+    }
+    console.error(`\n${note}`);
+  }
   process.exit(1);
 });

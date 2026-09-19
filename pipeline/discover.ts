@@ -21,7 +21,7 @@ import { INFRA_DATABASE_ID, NOTION_VERSION } from './config.ts';
 import { requireEnv, optionalEnv } from './lib/env.ts';
 import { getInfraRows, type InfraRow } from './lib/notion.ts';
 import { resolveSite, type Resolution } from './lib/resolve.ts';
-import { fetchGdelt } from './retrieve/gdelt.ts';
+import { fetchGdelt, GdeltUnavailableError } from './retrieve/gdelt.ts';
 import { fetchEplanning, type Discovery } from './retrieve/eplanning.ts';
 
 const MODEL = optionalEnv('DISCOVERY_MODEL') ?? 'claude-sonnet-5';
@@ -60,6 +60,49 @@ function existingKeys(rows: InfraRow[]) {
 
 function panKey(pan: string): string {
   return pan.replace(/[-\s]/g, '').toUpperCase();
+}
+
+// A street address, flattened enough that the same site written twice matches:
+// case, punctuation and repeated whitespace all go.
+function addressKey(address: string): string {
+  return address
+    .toUpperCase()
+    .replace(/[.,/\\'"-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// Pull the address back out of a note written by eplanningProposal(). The
+// format is "…API (matchedOn). <address> · <council> · …", so the address is
+// the first dot-separated field after the preamble.
+function addressFromNotes(notes: string): string | null {
+  const m = notes.match(/OnlineDA API \([^)]*\)\.\s*([^·]+)·/);
+  const addr = m?.[1]?.trim();
+  return addr ? addr : null;
+}
+
+/**
+ * Addresses and planning numbers a human has already looked at and rejected.
+ *
+ * The [REJECTED] rows are the pipeline's false-positive log and are deliberately
+ * kept — but until now nothing read them, so a *new* application at an
+ * already-rejected address came back as a fresh proposal. Astoria Street,
+ * Marsden Park was rejected three times (PAN-633348, -653616, -666052) and
+ * proposed a fourth time on 2026-09-15 as PAN-573337. Matching on address as
+ * well as PAN stops the reviewer re-deciding the same site every fortnight.
+ */
+function rejectedKeys(rows: InfraRow[]) {
+  const addresses = new Map<string, string>(); // address key -> row name that rejected it
+  const pans = new Set<string>();
+  for (const r of rows) {
+    if (!r.name.startsWith('[REJECTED]')) continue;
+    const addr = addressFromNotes(r.notes);
+    if (addr) addresses.set(addressKey(addr), r.name);
+    for (const m of `${r.name} ${r.notes}`.matchAll(/\b(?:PAN?-?\d{5,}|SSD[-\s]?\d{3,})\b/gi)) {
+      pans.add(panKey(m[0]));
+    }
+  }
+  return { addresses, pans };
 }
 
 // --- Strand A: NSW ePlanning ----------------------------------------------
@@ -177,6 +220,7 @@ async function main() {
 
   const rows = await getInfraRows();
   const { urls, pans } = existingKeys(rows);
+  const rejected = rejectedKeys(rows);
   // The resolver needs the Site shape; proposals must not match existing rows.
   const sites = rows.map((r) => ({ id: r.id, name: r.name.replace(/^\[PROPOSED\]\s*/, ''), operator: '', state: r.state, infraType: r.infraType }));
   console.log(`Loaded ${rows.length} tracker rows (${pans.size} planning numbers, ${urls.size} source URLs) for dedup.\n`);
@@ -186,30 +230,73 @@ async function main() {
   // Strand A — NSW ePlanning, last 60 days of updates.
   const since = new Date(Date.now() - 60 * 86400_000).toISOString().slice(0, 10);
   console.log(`Strand A: NSW ePlanning OnlineDA (updated since ${since})…`);
+  let strandAFailed: string | null = null;
+  const seenAddresses = new Set<string>(); // collapses repeats within one run
+  let suppressed = 0;
   try {
     const das = await fetchEplanning({ since, maxPages: 3 });
     for (const d of das) {
       if (pans.has(panKey(d.pan))) continue; // already tracked or proposed
+      const addr = d.address ? addressKey(d.address) : null;
+
+      // Previously rejected by a human, at this address or under this PAN.
+      const priorRejection = rejected.pans.has(panKey(d.pan))
+        ? `PAN ${d.pan}`
+        : addr && rejected.addresses.has(addr)
+          ? rejected.addresses.get(addr)!
+          : null;
+      if (priorRejection) {
+        console.log(`  skip ${d.pan} — address already rejected (${priorRejection}).`);
+        suppressed++;
+        continue;
+      }
+
+      // A second application at the same address inside one run (typically a
+      // DA plus its Modification Applications) is one site, not three.
+      if (addr && seenAddresses.has(addr)) {
+        console.log(`  skip ${d.pan} — same address as an earlier proposal this run.`);
+        suppressed++;
+        continue;
+      }
+
       const res: Resolution = resolveSite(`${d.address} ${d.suburb ?? ''} data centre`, sites);
       if (res.site) continue; // decisively an existing site
       proposals.push(eplanningProposal(d));
       pans.add(panKey(d.pan));
+      if (addr) seenAddresses.add(addr);
     }
-    console.log(`  ${das.length} relevant DA(s) in window → ${proposals.length} new proposal(s).`);
+    console.log(
+      `  ${das.length} relevant DA(s) in window → ${proposals.length} new proposal(s)` +
+        `${suppressed ? `, ${suppressed} suppressed (already rejected or same address)` : ''}.`,
+    );
   } catch (err) {
-    console.warn(`  ePlanning strand failed (${String(err)}); continuing with press sweep.`);
+    strandAFailed = String(err);
+    console.warn(`  ePlanning strand failed (${strandAFailed}); continuing with press sweep.`);
   }
 
   // Strand B — GDELT announcement sweep.
+  //
+  // Wrapped exactly like strand A. It used not to be, so a GDELT connect
+  // timeout propagated out of main() and exited 1 *before* the write loop
+  // below — discarding ePlanning proposals that had already been found and
+  // cost a crawl to get. That is what the 2026-09-13 run threw away.
   console.log(`\nStrand B: GDELT announcement sweep (limit ${limit})…`);
   const client = new Anthropic({ apiKey: requireEnv('ANTHROPIC_API_KEY') });
-  const articles = await fetchGdelt({ query: DISCOVERY_QUERY, timespan: '6weeks', maxRecords: 75 });
-  const fresh = articles
-    .filter((a) => /data\s*cent(re|er)/i.test(a.title))
-    .filter((a) => !urls.has(a.sourceUrl))
-    .filter((a) => !resolveSite(a.title, sites).site) // skip known sites
-    .slice(0, limit);
-  console.log(`  ${articles.length} articles → ${fresh.length} candidate headline(s) after dedup.`);
+  let strandBFailed: string | null = null;
+  let fresh: Awaited<ReturnType<typeof fetchGdelt>> = [];
+  try {
+    const articles = await fetchGdelt({ query: DISCOVERY_QUERY, timespan: '6weeks', maxRecords: 75 });
+    fresh = articles
+      .filter((a) => /data\s*cent(re|er)/i.test(a.title))
+      .filter((a) => !urls.has(a.sourceUrl))
+      .filter((a) => !resolveSite(a.title, sites).site) // skip known sites
+      .slice(0, limit);
+    console.log(`  ${articles.length} articles → ${fresh.length} candidate headline(s) after dedup.`);
+  } catch (err) {
+    strandBFailed =
+      err instanceof GdeltUnavailableError ? `${err.name}: ${err.reason}` : String(err);
+    console.warn(`  press strand failed (${strandBFailed}); strand A proposals still stand.`);
+  }
 
   for (const c of fresh) {
     try {
@@ -263,6 +350,9 @@ async function main() {
     }
   }
   console.log(`\nDone. ${write ? `${written} proposal(s) written to the tracker` : 'no writes (add --write)'}.`);
+  if (suppressed) {
+    console.log(`${suppressed} candidate(s) suppressed as already-rejected or same-address repeats.`);
+  }
 
   // Compute transparency — same public log as the classifier (docs/COMPUTE.md).
   if (usage.calls > 0) {
@@ -278,6 +368,36 @@ async function main() {
     const { appendFileSync } = await import('node:fs');
     appendFileSync(new URL('../docs/compute-log.jsonl', import.meta.url), JSON.stringify(entry) + '\n');
     console.log(`Compute: ${usage.calls} calls to ${MODEL}, ${usage.inputTokens} in / ${usage.outputTokens} out tokens (logged).`);
+  }
+
+  // A strand that could not run is reported as a failure — but only here, after
+  // everything the other strand found has been written. A silent zero would let
+  // an outage read as "nothing was announced this fortnight", which is the one
+  // thing a discovery log must never say when it has not looked.
+  const failures = [
+    strandAFailed && `ePlanning (strand A): ${strandAFailed}`,
+    strandBFailed && `press/GDELT (strand B): ${strandBFailed}`,
+  ].filter(Boolean) as string[];
+
+  if (failures.length) {
+    const summary = [
+      `### Discovery: ${failures.length} strand(s) unavailable`,
+      '',
+      ...failures.map((f) => `- ${f}`),
+      '',
+      `${written} proposal(s) were still written from the strand(s) that did run.`,
+      failures.some((f) => f.includes('GDELT'))
+        ? '**Any zero in the press strand this run means "not retrieved", not "nothing found".**'
+        : '',
+    ].filter(Boolean).join('\n');
+
+    const stepSummary = optionalEnv('GITHUB_STEP_SUMMARY');
+    if (stepSummary) {
+      const { appendFileSync } = await import('node:fs');
+      appendFileSync(stepSummary, summary + '\n');
+    }
+    console.error(`\n${summary}`);
+    process.exitCode = 1;
   }
 }
 
