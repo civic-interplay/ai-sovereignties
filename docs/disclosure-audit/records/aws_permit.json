@@ -1,0 +1,137 @@
+{
+  "site": "AWS — Cobblebank (Melton)",
+  "instrument": "PA2403016",
+  "jurisdiction": "VIC",
+  "docType": "Ministerial permit",
+  "sourceUrl": "https://www.planning.vic.gov.au/",
+  "retrieved": "2026-08-10",
+  "localCopy": "docs/disclosure-audit/aws_permit.pdf",
+  "sha256": "a61a72b94e642506b139db93e16f9148c3a1f8babbf49e1d78d59a84313ef883",
+  "pagesSearched": 10,
+  "accessStatus": "Public",
+  "extraction": "pdftotext",
+  "termsSearched": [
+    "MW",
+    "megawatt",
+    "load",
+    "demand",
+    "kWh",
+    "MWh",
+    "PUE",
+    "WUE",
+    "water",
+    "litres",
+    "ML",
+    "kL",
+    "m3",
+    "m³",
+    "cooling",
+    "evaporative",
+    "potable",
+    "recycled"
+  ],
+  "hitCounts": {
+    "MW": 0,
+    "megawatt": 0,
+    "load": 0,
+    "demand": 0,
+    "kWh": 0,
+    "MWh": 0,
+    "PUE": 0,
+    "WUE": 0,
+    "water": 13,
+    "litres": 0,
+    "ML": 0,
+    "kL": 0,
+    "m3": 0,
+    "m³": 0,
+    "cooling": 0,
+    "evaporative": 0,
+    "potable": 0,
+    "recycled": 0
+  },
+  "hits": [
+    {
+      "term": "water",
+      "page": 2,
+      "context": "h. Any changes required as per Melbourne Water Condition 34 and 35.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 5,
+      "context": "dust, waste water, waste products, grit or oil",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 6,
+      "context": "ii. FRV Fire Safety Guideline Gl-12 for contaminated water retention and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "Melbourne Water Conditions",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "approved and endorsed by the responsible authority, in consultation with Melbourne Water.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "submitted and approved by Melbourne Water and Melton City Council. The strategy must",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "Water for our records. These plans must show road and drainage details and any overland flow",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "discharge shall be arranged to the satisfaction of Melbourne Water and the responsible",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "22 July 2024, must be constructed to the satisfaction of Melbourne Water and the responsible",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "outfall is in place. Melbourne Water will not accept responsibility for any interim drainage works.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "any existing or proposed Melbourne Water pipeline and/or the lot to be filled to a minimum of",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "Water wetland, retarding basin or waterway. A certified survey plan prepared by or under the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "Height Datum, may need to be submitted to Melbourne Water for our records.",
+      "classification": "UNCLASSIFIED"
+    }
+  ],
+  "grade": "UNGRADED",
+  "toolVersion": "audit.ts/1.0.0",
+  "scannedAt": "2026-09-19T10:33:32.585Z",
+  "notes": "TOOL-VERIFICATION FIXTURE, not an adjudicated record. Scanned 2026-09-19 to confirm audit.ts reproduces the existing Victorian finding deterministically: zero hits on every energy term (MW, megawatt, kWh, MWh, PUE, WUE, load, demand) and 13 water hits, all of which read as drainage, stormwater, fire-safety retention or the proper noun \"Melbourne Water\". Those readings are UNCLASSIFIED here because no person has signed them. Victoria is exploratory under PRE-REGISTRATION.md and is not part of the confirmatory sweep."
+}
