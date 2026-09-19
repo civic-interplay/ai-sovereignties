@@ -1,4 +1,4 @@
-# Recursive listening
+# Agent recursive listening
 
 *A running, first-person account of how the data in this project is actually
 found: which doors open, which are closed and in what manner, and how the
