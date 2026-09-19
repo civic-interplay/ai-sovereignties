@@ -22,6 +22,27 @@ each.
 | Western Power TSP (WA / SWIS) | 43 | **0** | 145 |
 | TasNetworks APR **summary** (TAS) | 12 | **0** | 88 |
 
+### Read but NOT comparable — recorded so the zero is not misused
+
+| Document | Year | Pages | "data centre" | Why it is excluded |
+| --- | --- | ---: | ---: | --- |
+| Powerlink, Central Queensland Transmission Network Forum | 2026 | 37 | 0 | Wrong geography and wrong genre — see below |
+
+Powerlink's **2026 Central Queensland Transmission Network Forum** presentation
+contains no mention of data centres. **This is not evidence of anything** and
+must not be placed beside the counts above.
+
+It is a regional stakeholder *event showcase* — agenda, ministerial message,
+speaker list — for the **Central Queensland** network, in the Gladstone region.
+Neither Queensland site this project is tracking is in its scope: Western Downs
+is Darling Downs, Supernode is South East Queensland. "MW" appears six times in
+the entire document.
+
+A zero here says only that a regional community forum about a different part of
+the state did not discuss data centres. Counting it would be the same error as
+comparing a 2026 report to a 2025 one — a difference in the document mistaken
+for a difference in the world.
+
 A positive control is run on every document. "network" returns hundreds in each,
 so a zero for "data centre" is a property of the document, not of the
 extraction. This is now standing practice — see
@@ -164,7 +185,7 @@ the full report would be meaningful, and this summary cannot establish it.
 | Operator | Document | Note |
 | --- | --- | --- |
 | ~~Powerlink~~ | ~~2026 TAPR~~ | **Does not appear to exist.** Searched 19 Sep 2026; the 2025 edition is still current. See above. |
-| Powerlink | 2026 community presentation | The only 2026 Powerlink material located. May carry updated figures ahead of the next TAPR. |
+| ~~Powerlink~~ | ~~2026 community presentation~~ | **Obtained and read 19 Sep 2026.** Central Queensland forum showcase; wrong region, wrong genre, carries no forecast. Does not substitute for a 2026 TAPR. |
 | ~~AEMO~~ | ~~Victorian Annual Planning Report~~ | **Obtained 19 Sep 2026.** |
 | ~~ElectraNet~~ | ~~2026 TAPR (SA)~~ | **Obtained 19 Sep 2026.** |
 | TasNetworks | full 2025/2026 APR | Only the summary has been read. |
