@@ -4,6 +4,35 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-09-19 — v0.2.1
+
+- **Rejected candidates leave `sites.csv`.** 15 rows the discovery pipeline
+  proposed and a human rejected now ship as their own `rejected_candidates.csv`
+  with the same columns. `sites.csv` drops from 143 to 128 rows. No published
+  statistic changes — the rejected rows never carried an
+  `infrastructure_type` and were excluded from every count — but a reuser
+  loading `sites.csv` no longer receives 15 rows that are not sites and are
+  nowhere explained. They are published rather than deleted because they are
+  the only direct measure of how precise automated discovery is; a register
+  that published only its successes would report a hit rate with the
+  denominator removed.
+- **The pre-registration now travels with the deposit.** `PRE-REGISTRATION.md`
+  is a companion document from this version. A protocol that lives only in a
+  working repository is not on the record.
+- **Pre-registration scope corrected before deposit.** The confirmatory run is
+  narrowed to Queensland and the Northern Territory. Western Australia, South
+  Australia and Tasmania move to the exploratory half alongside Victoria and
+  New South Wales, because the repository's history cannot demonstrate that the
+  protocol preceded their audit. The amendment is recorded in the document
+  itself rather than applied silently. The five-jurisdiction finding is
+  unchanged and stands on the documents it read; what it can no longer claim is
+  that its terms were fixed before the answers were seen.
+- **Citation corrected across the project.** Four places still pointed at
+  `10.5281/zenodo.21026430`, the v0.1.0 *version* DOI, including
+  `docs/METHODOLOGY.md` — which the export copies into the deposit, so every
+  re-export re-shipped a superseded citation inside the published dataset. All
+  now cite the concept DOI, `10.5281/zenodo.21026429`.
+
 ## 2026-08-18
 
 - **Governance-flag vocabulary reduced 11 → 3.** Flags that restated the

@@ -1,6 +1,6 @@
 # Data dictionary
 
-Snapshot 2026-09-15. Blank means not recorded or not disclosed — never zero.
+Snapshot 2026-09-19. Blank means not recorded or not disclosed — never zero.
 
 ## sites.csv
 
@@ -57,3 +57,19 @@ Snapshot 2026-09-15. Blank means not recorded or not disclosed — never zero.
 | `confidence` | 0-1. Below 0.6 the item is shown as "pending review" and has not been human-checked. |
 | `classified_by` | Human-verified or Agent. |
 | `source_url` | Source URL. |
+
+## rejected_candidates.csv
+
+Same columns as `sites.csv`. These rows were proposed by the discovery
+pipeline and rejected by a human reviewer as not being the thing the pipeline
+thought they were — most often a large industrial warehouse matched on cost
+rather than on a data-centre term.
+
+They are **not sites** and must not be counted as such. They are published so
+that the discovery pipeline's precision is measurable from the deposit itself:
+a reuser can compare this file against the proposals that survived review. A
+register that published only its successes would be reporting a hit rate with
+the denominator removed.
+
+Before v0.2.1 these rows were mixed into `sites.csv`, where they carried no
+`infrastructure_type` and no explanation.

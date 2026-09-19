@@ -152,15 +152,30 @@ async function main() {
   siteRows.sort((a, b) => (a.state + a.name).localeCompare(b.state + b.name));
   itemRows.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
-  writeFileSync(join(outDir, 'sites.csv'), csv(siteRows, SITE_COLUMNS.map(([c]) => c)));
+  // Rejected candidates leave sites.csv and get their own file (v0.2.1).
+  //
+  // They are NOT deleted. They are the discovery pipeline's false-positive log
+  // and the only direct evidence of how precise automated discovery is —
+  // deleting them would make the pipeline's error rate unmeasurable, which is
+  // the same mistake as not publishing a refutation rate. But they are not
+  // sites, they carry no infrastructure_type, and a reuser loading sites.csv
+  // should not receive rows that are not sites and are nowhere explained.
+  const rejectedRows = siteRows.filter((r) => r.name.startsWith('[REJECTED]'));
+  const keptSiteRows = siteRows.filter((r) => !r.name.startsWith('[REJECTED]'));
+
+  writeFileSync(join(outDir, 'sites.csv'), csv(keptSiteRows, SITE_COLUMNS.map(([c]) => c)));
+  writeFileSync(
+    join(outDir, 'rejected_candidates.csv'),
+    csv(rejectedRows, SITE_COLUMNS.map(([c]) => c)),
+  );
   writeFileSync(join(outDir, 'contestation_items.csv'), csv(itemRows, ITEM_COLUMNS.map(([c]) => c)));
 
   // --- Derived counts for the datasheet (never hand-typed) ---
   const stamp = new Date().toISOString().slice(0, 10);
-  const dcs = siteRows.filter((r) => r.infrastructure_type.includes('Data Centre'));
+  const dcs = keptSiteRows.filter((r) => r.infrastructure_type.includes('Data Centre'));
   const withCap = dcs.filter((r) => r.capacity_mw !== '');
-  const withCoords = siteRows.filter((r) => r.latitude !== '' && r.longitude !== '');
-  const proposed = siteRows.filter((r) => r.name.startsWith('[PROPOSED]'));
+  const withCoords = keptSiteRows.filter((r) => r.latitude !== '' && r.longitude !== '');
+  const proposed = keptSiteRows.filter((r) => r.name.startsWith('[PROPOSED]'));
   const byState = new Map<string, number>();
   for (const r of dcs) byState.set(r.state || '(unstated)', (byState.get(r.state || '(unstated)') ?? 0) + 1);
   const stateTable = [...byState.entries()]
@@ -185,15 +200,17 @@ and water arrangements, and the public contestation forming around them.
 
 | File | Rows | Grain |
 |---|---|---|
-| \`sites.csv\` | ${siteRows.length} | One row per tracked site or project. |
+| \`sites.csv\` | ${keptSiteRows.length} | One row per tracked site or project. |
 | \`contestation_items.csv\` | ${itemRows.length} | One row per source event (article, submission, motion, statement). Joins to sites on \`site_id\`. |
+| \`rejected_candidates.csv\` | ${rejectedRows.length} | Candidates the pipeline proposed and a human rejected. NOT sites — kept as the discovery false-positive log. |
 | \`data-dictionary.md\` | — | Every column, defined. |
 
 ## What is in this snapshot
 
-- **${dcs.length}** data-centre rows; **${siteRows.length - dcs.length}** other infrastructure rows.
+- **${dcs.length}** data-centre rows; **${keptSiteRows.length - dcs.length}** other infrastructure rows.
 - **${withCoords.length}** rows carry coordinates and appear on the published map.
 - **${proposed.length}** ${proposed.length === 1 ? 'row is an unreviewed pipeline discovery' : 'rows are unreviewed pipeline discoveries'}, prefixed \`[PROPOSED]\`, excluded from all published statistics.
+- **${rejectedRows.length}** candidates were proposed by the pipeline and rejected by a human. From v0.2.1 they live in \`rejected_candidates.csv\` rather than in \`sites.csv\`, where earlier versions mixed them in. They are published, not deleted: they are the only direct measure of how precise automated discovery is, and removing them would make the pipeline's error rate unmeasurable.
 - **${pending.length}** of ${itemRows.length} contestation items are below the 0.6 confidence threshold and have not been human-checked.
 
 Data-centre rows by jurisdiction:
@@ -282,6 +299,22 @@ ${SITE_COLUMNS.map(([c, , d]) => `| \`${c}\` | ${d} |`).join('\n')}
 | Column | Definition |
 |---|---|
 ${ITEM_COLUMNS.map(([c, , d]) => `| \`${c}\` | ${d} |`).join('\n')}
+
+## rejected_candidates.csv
+
+Same columns as \`sites.csv\`. These rows were proposed by the discovery
+pipeline and rejected by a human reviewer as not being the thing the pipeline
+thought they were — most often a large industrial warehouse matched on cost
+rather than on a data-centre term.
+
+They are **not sites** and must not be counted as such. They are published so
+that the discovery pipeline's precision is measurable from the deposit itself:
+a reuser can compare this file against the proposals that survived review. A
+register that published only its successes would be reporting a hit rate with
+the denominator removed.
+
+Before v0.2.1 these rows were mixed into \`sites.csv\`, where they carried no
+\`infrastructure_type\` and no explanation.
 `;
 
   writeFileSync(join(outDir, 'README.md'), readme);
@@ -298,13 +331,18 @@ ${ITEM_COLUMNS.map(([c, , d]) => `| \`${c}\` | ${d} |`).join('\n')}
     'docs/VERIFICATION-RECORD.md', // adversarial results, including refuted claims
     'docs/DISCLOSURE-AUDIT.md',    // a completed audit, method and findings together
     'docs/CHANGELOG.md',           // what changed between deposited versions
+    // The protocol for the QLD/NT run, deposited ahead of its results. A
+    // pre-registration that lives only in a working repo is not on the record:
+    // it has to be citable, and frozen at a date a reader can check.
+    'docs/PRE-REGISTRATION.md',
   ];
   for (const rel of COMPANION_DOCS) {
     copyFileSync(join(repoRoot, rel), join(outDir, basename(rel)));
   }
 
   console.log(`Wrote to ${outDir}`);
-  console.log(`  sites.csv               ${siteRows.length} rows`);
+  console.log(`  sites.csv               ${keptSiteRows.length} rows`);
+  console.log(`  rejected_candidates.csv ${rejectedRows.length} rows`);
   console.log(`  contestation_items.csv  ${itemRows.length} rows`);
   console.log(`  README.md, data-dictionary.md`);
   console.log(`  + ${COMPANION_DOCS.length} companion docs: ${COMPANION_DOCS.map((d) => basename(d)).join(', ')}`);
