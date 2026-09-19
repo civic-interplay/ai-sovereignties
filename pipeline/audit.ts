@@ -32,15 +32,38 @@ import { basename, join } from 'node:path';
 // of the answers, which is the exact failure pre-registration exists to
 // prevent. If it must change, that is a version 2 of the protocol with its own
 // date and reason, and the sweep restarts under it.
+// VERSION 2, frozen 2026-09-19. See PRE-REGISTRATION.md for why there is a v2.
+//
+// Short version: v1 omitted MVA. The first confirmatory document scanned states
+// an electrical demand of 540 MVA per building, and v1 could not see it — the
+// figure surfaced only because `demand` happened to share the sentence. MW is
+// the unit of press releases; MVA, kVA and kV are the units of the engineering
+// documents that accompany a grid connection. A list built from how a thing is
+// discussed will miss how it is recorded.
+export const PROTOCOL_VERSION = 2;
+
 export const FROZEN_TERMS = [
+  // Electrical: capacity, energy, connection voltage.
+  'MW', 'MVA', 'kVA', 'GW', 'GWh', 'kV', 'megawatt', 'kWh', 'MWh',
+  'PUE', 'WUE', 'load', 'demand',
+  // Water: volume, source, and how it is used.
+  'water', 'litres', 'megalitre', 'kilolitre', 'ML', 'kL', 'm3', 'm³',
+  'cooling', 'evaporative', 'potable', 'recycled',
+] as const;
+
+// v1, superseded. Kept so a v1 record can be re-read on its own terms.
+export const FROZEN_TERMS_V1 = [
   'MW', 'megawatt', 'load', 'demand', 'kWh', 'MWh', 'PUE', 'WUE',
   'water', 'litres', 'ML', 'kL', 'm3', 'm³', 'cooling', 'evaporative',
   'potable', 'recycled',
 ] as const;
 
 // Case-sensitive for the unit abbreviations, because "ML" is a unit and "ml"
-// inside a word is not, and "MW" must not match "mw" in a filename.
-const CASE_SENSITIVE = new Set(['MW', 'MWh', 'ML', 'kL', 'kWh', 'PUE', 'WUE']);
+// inside a word is not, and "MW" must not match "mw" in a filename. kV is
+// case-sensitive too: "kv" appears inside other strings, "kV" does not.
+const CASE_SENSITIVE = new Set([
+  'MW', 'MVA', 'kVA', 'GW', 'GWh', 'kV', 'MWh', 'ML', 'kL', 'kWh', 'PUE', 'WUE',
+]);
 
 export type Classification =
   | 'UNCLASSIFIED'      // deterministic output; awaiting a human
@@ -97,10 +120,11 @@ export interface AuditRecord {
 
   // --- Provenance of this record itself ---
   toolVersion: string;
+  protocolVersion: number;   // which frozen term list this record was made under
   scannedAt: string;
 }
 
-const TOOL_VERSION = 'audit.ts/1.0.0';
+const TOOL_VERSION = 'audit.ts/1.1.0';
 
 function sha256(path: string): string {
   return execFileSync('shasum', ['-a', '256', path], { encoding: 'utf8' }).split(/\s+/)[0];
@@ -265,6 +289,7 @@ function main() {
     hits,
     grade: scanOnly ? 'NOT-ACCESSIBLE' : 'UNGRADED',
     toolVersion: TOOL_VERSION,
+    protocolVersion: PROTOCOL_VERSION,
     scannedAt: new Date().toISOString(),
   };
 

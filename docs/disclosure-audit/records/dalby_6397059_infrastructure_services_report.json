@@ -1,0 +1,1939 @@
+{
+  "site": "Western Downs Digital Park — Dalby (Zerra DC)",
+  "instrument": "MCU Lot 125 DY316 (WDRC, lodged 2026-08-17)",
+  "jurisdiction": "QLD",
+  "docType": "Infrastructure Services Report (applicant material)",
+  "sourceUrl": "https://developmenti.wdrc.qld.gov.au/",
+  "retrieved": "2026-09-19",
+  "localCopy": "docs/disclosure-audit/dalby_6397059_infrastructure_services_report.pdf",
+  "sha256": "9203fb7b519918b1efeae46c1556c9263ad1c8d033b3562461bbc26d74aba3f7",
+  "pagesSearched": 113,
+  "accessStatus": "Public",
+  "extraction": "pdftotext",
+  "termsSearched": [
+    "MW",
+    "MVA",
+    "kVA",
+    "GW",
+    "GWh",
+    "kV",
+    "megawatt",
+    "kWh",
+    "MWh",
+    "PUE",
+    "WUE",
+    "load",
+    "demand",
+    "water",
+    "litres",
+    "megalitre",
+    "kilolitre",
+    "ML",
+    "kL",
+    "m3",
+    "m³",
+    "cooling",
+    "evaporative",
+    "potable",
+    "recycled"
+  ],
+  "hitCounts": {
+    "MW": 3,
+    "MVA": 11,
+    "kVA": 1,
+    "GW": 0,
+    "GWh": 0,
+    "kV": 63,
+    "megawatt": 1,
+    "kWh": 0,
+    "MWh": 0,
+    "PUE": 0,
+    "WUE": 0,
+    "load": 8,
+    "demand": 56,
+    "water": 133,
+    "litres": 1,
+    "megalitre": 0,
+    "kilolitre": 0,
+    "ML": 10,
+    "kL": 16,
+    "m3": 0,
+    "m³": 0,
+    "cooling": 10,
+    "evaporative": 1,
+    "potable": 37,
+    "recycled": 4
+  },
+  "hits": [
+    {
+      "term": "demand",
+      "page": 6,
+      "context": "harvesting and treated wastewater reuse to reduce demand on primary water sources.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 6,
+      "context": "hub and the broader Queensland transmission network. The project also adopts a water strategy that avoids",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 6,
+      "context": "reliance on town water infrastructure and prioritises air-cooled technology, on-site supply options, rainwater",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 6,
+      "context": "harvesting and treated wastewater reuse to reduce demand on primary water sources.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 14,
+      "context": "the project has been consideration of the short- and long-term power and water usage associated with the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "Water demand arises from three sources:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "▪ Domestic potable demand (drinking, showering, hand basins and kitchen facilities);",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "▪ Domestic non-potable demand (toilet and urinal flushing, washdown, general cleaning and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "▪ Mechanical demand associated with the one-time commissioning (flushing and fill) of the cooling",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "Demand is highest during construction, with the workers village accommodating a construction workforce of",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "approximately 1,500 persons, and reduces substantially to a modest permanent demand once construction",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "or in combination, providing viable pathways to meet the required demand:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "the operational demand and to the interim supply during early construction.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 15,
+      "context": "sources to reduce demand on the primary supply and improve overall water efficiency.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "1.3.1 Water usage",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "The project will not be in competition with the community for water sourcing given the project will utilise",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "primarily air-cooled technology. This eliminates the need for water-based evaporative cooling, significantly",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "reducing water consumption compared to traditional data centres.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "There is no reticulated (town) water network in the vicinity of the site, the nearest reticulated water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "independent on-site water supply. This is a well-established servicing arrangement for projects of this nature,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "and a number of practical and proven supply options are available to meet the development’s water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "Water demand arises from three sources:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "▪ Water delivery – potable water delivered to site by road tanker and held in on-site storage tanks. As",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "the water arrives treated to drinking-water standard, no on-site treatment is required. This provides a",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "▪ Onsite and offsite recycle water sourcing.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "▪ Surface water from an existing on-site dam, subject to entitlement, reliability and approval.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "sources to reduce demand on the primary supply and improve overall water efficiency.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "water. The final supply strategy will be confirmed during detailed design, including the mix of primary and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "supplementary sources, treatment where required, storage and any associated water entitlements, all of",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "On-site storage will be provided as an operational buffer against supply interruption. Where water is",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "construction amenities. Where water is drawn from bores or an equivalent continuous source, central",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "treated-water storage provides the main buffer, with a break tank and booster set at each building.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 15,
+      "context": "primarily air-cooled technology. This eliminates the need for water-based evaporative cooling, significantly",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 15,
+      "context": "▪ Mechanical demand associated with the one-time commissioning (flushing and fill) of the cooling",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "evaporative",
+      "page": 15,
+      "context": "primarily air-cooled technology. This eliminates the need for water-based evaporative cooling, significantly",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 15,
+      "context": "▪ Domestic potable demand (drinking, showering, hand basins and kitchen facilities);",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 15,
+      "context": "▪ Domestic non-potable demand (toilet and urinal flushing, washdown, general cleaning and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 15,
+      "context": "▪ Water delivery – potable water delivered to site by road tanker and held in on-site storage tanks. As",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 15,
+      "context": "▪ Rainwater harvesting and treated wastewater reuse – incorporated as supplementary non-potable",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 15,
+      "context": "These options demonstrate that the development can be reliably serviced with potable and non-potable",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 16,
+      "context": "building it supplies, with a stage total facility demand of approximately 540MVA.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 16,
+      "context": "33kV. Each substation comprises three 540MVA transformers. A battery storage system is integrated in series",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "The campus will be supplied at two voltages i.e., 275kV and 330kV, through two customer-owned switching",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "stations. The first is the 275kV switching station, supplied from two feeders from a power station, two from the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "Braemar 274kV substation (Powerlink), and five from the Darling Downs Power Sation. The second station will",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "operate at 330kV, supplied from the Braemar 330kV substation (Powerlink) via two feeders.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "▪ Stage 1A establishes the 275kV switching station with its initial bays, supplied from the power station",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "and Darling Downs Power Station, together with the together with the 275/33kV substation and data",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "▪ Stage 1B completes the remaining bays of the 275kV switching station and connects them to the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "Braemar 275kV substation and establishes data building 1B.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "▪ Stage 2 establishes the 330kV switching station, connected to the Braemar 330kV substation and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "serving the Stage 2 building loads together with the 330/33kV substation and data buildings 2A & 2B .",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "33kV. Each substation comprises three 540MVA transformers. A battery storage system is integrated in series",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 16,
+      "context": "between each 33kV incomer bus and the data building load through a dual power conversion arrangement.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 16,
+      "context": "between each 33kV incomer bus and the data building load through a dual power conversion arrangement.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 16,
+      "context": "campus to present a stable, near-constant load to the Powerlink network.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 16,
+      "context": "building it supplies, with a stage total facility demand of approximately 540MVA.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 18,
+      "context": "Existing irrigation areas associated with water reuse and waste treatment are centrally located on the site.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MW",
+      "page": 20,
+      "context": "(MW). The power station is associated with the Daandine and Kogan North Coal Seam Gas Processing",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "megawatt",
+      "page": 20,
+      "context": "operated by APA Group and has an electricity generation capacity of approximately 27.4 Megawatt",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MW",
+      "page": 21,
+      "context": "504MW and 450MW respectively and are fuelled by natural gas and coal seam gas (CSG). These",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 22,
+      "context": "The site is not currently connected to Council’s reticulated water, sewer or electricity infrastructure networks.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "litres",
+      "page": 24,
+      "context": "draining to a sedimentation pond with a minimum working capacity of 18.6 Million Litres",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 24,
+      "context": "(ML);",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 24,
+      "context": "▪ 60ML effluent pond.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 24,
+      "context": "▪ 60ML effluent pond.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 24,
+      "context": "draining to a sedimentation pond with a minimum working capacity of 18.6ML and the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 24,
+      "context": "other a minimum working capacity of 12.6ML;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 24,
+      "context": "▪ Both sedimentation basins serviced by a 99ML effluent pond.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 27,
+      "context": "▪ Energy and Water Supply:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 29,
+      "context": "Provisions Version ▪ Water Resources:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 29,
+      "context": "3.6 – Water Resource Planning Area Boundaries",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 29,
+      "context": "– Great Artesian Water Resource Plan Area",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 30,
+      "context": "Water resource planning area boundaries",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 30,
+      "context": "Great artesian water resource plan area",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 38,
+      "context": "water conservation, water quality management and Crime Prevention Through Environmental",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 47,
+      "context": "Demand for digital infrastructure continues to increase as government, industry and businesses become",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 47,
+      "context": "The site is not currently connected to reticulated water or sewerage infrastructure. However, its scale provides",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 47,
+      "context": "the capacity to investigate staged and self-contained servicing solutions, including on-site water storage,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 47,
+      "context": "alternative water supply and cooling options, and sustainable wastewater management. These matters are",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 47,
+      "context": "alternative water supply and cooling options, and sustainable wastewater management. These matters are",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 56,
+      "context": "The assessment identifies the construction phase as the period generating the highest traffic demand,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 56,
+      "context": "forecast traffic demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 56,
+      "context": "phase and will primarily comprise diesel generator refuelling, water deliveries, waste collection, general",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 58,
+      "context": "6.2.2 Water Quality and Operational Management",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 58,
+      "context": "In addition to managing stormwater quantity, the proposed development incorporates a range of Water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 58,
+      "context": "60kL of rainwater storage proposed for each development stage, comprising 30kL for the eastern",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 58,
+      "context": "Roof runoff will also be captured for non-potable reuse throughout the development, with approximately",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 59,
+      "context": "540 MVA. Across all four buildings, the campus reaches approximately 2,160 MVA of total facility demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 59,
+      "context": "energy precincts, immediately adjoining the Braemar 330kV Substation and in close proximity to the Braemar",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 59,
+      "context": "1 and 2 Gas Power Stations, Darling Downs Power Station and multiple 275kV and 330kV transmission lines.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 59,
+      "context": "approximately 600 metres from the Braemar Transmission Substation and includes an existing 275kV",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 59,
+      "context": "of autonomy per stage, decoupling the load from the network, and allowing the storage to participate in",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 59,
+      "context": "catchment and 30kL for the western catchment. This will assist in reducing both potable water demand and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 59,
+      "context": "reliability for the maximum demand required of four data buildings, each with a total electrical demand of",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 59,
+      "context": "540 MVA. Across all four buildings, the campus reaches approximately 2,160 MVA of total facility demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 59,
+      "context": "The high voltage system is designed to meet the maximum demand while maintaining N+1 redundancy",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 59,
+      "context": "catchment and 30kL for the western catchment. This will assist in reducing both potable water demand and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 59,
+      "context": "water supply, fire water infrastructure, wastewater servicing and gas infrastructure, having regard to the site's",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 59,
+      "context": "catchment and 30kL for the western catchment. This will assist in reducing both potable water demand and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 59,
+      "context": "catchment and 30kL for the western catchment. This will assist in reducing both potable water demand and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 60,
+      "context": "accommodate both construction and operational demands. Water demand is primarily associated with",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 60,
+      "context": "Peak water demand is anticipated during construction when the temporary workers' village is occupied, with",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 60,
+      "context": "demand estimated at approximately 322kL/day (270kL/day potable and 52kL/day non-potable), together",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 60,
+      "context": "with an additional non-potable demand of approximately 200kL/day for dust suppression and construction",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 60,
+      "context": "activities. By comparison, operational demand for a single completed data building reduces to",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "6.3.3 Water Infrastructure",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "The report confirms there is no reticulated town water supply within approximately 15 kilometres of the site.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "Consequently, the development will be serviced through an independent on-site water supply designed to",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "accommodate both construction and operational demands. Water demand is primarily associated with",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "ongoing process water required for cooling during normal operations.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "Peak water demand is anticipated during construction when the temporary workers' village is occupied, with",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "each building will require approximately 26.9ML of water for one-off commissioning of the closed-loop",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "The preferred servicing hierarchy prioritises processed Coal Seam Gas (CSG) water during construction,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "followed by rainwater harvesting during operation, supported by modular potable water treatment, staged",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "water storage, membrane bioreactor (MBR) wastewater treatment and reuse of recycled water for irrigation",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "sustainable long-term water servicing solution for the development.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "6.3.4 Fire Water Infrastructure",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "Given the absence of reticulated town water infrastructure, the report proposes a dedicated on-site fire water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "centre will be serviced by two 700,000-litre fire water storage tanks, together with two duty/standby fire",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "As with water supply, there is no reticulated sewerage network servicing the site. Accordingly, wastewater",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 60,
+      "context": "QGC gas gathering pipelines, water gathering pipelines and drilled gas wells traverse the landholding, while a",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 60,
+      "context": "each building will require approximately 26.9ML of water for one-off commissioning of the closed-loop",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 60,
+      "context": "demand estimated at approximately 322kL/day (270kL/day potable and 52kL/day non-potable), together",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 60,
+      "context": "with an additional non-potable demand of approximately 200kL/day for dust suppression and construction",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 60,
+      "context": "approximately 16.5kL/day, reflecting the significant reduction in workforce following construction. In addition,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 60,
+      "context": "domestic potable and non-potable uses together with one-off commissioning of the cooling systems, with no",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 60,
+      "context": "ongoing process water required for cooling during normal operations.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 60,
+      "context": "cooling systems.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 60,
+      "context": "domestic potable and non-potable uses together with one-off commissioning of the cooling systems, with no",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 60,
+      "context": "demand estimated at approximately 322kL/day (270kL/day potable and 52kL/day non-potable), together",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 60,
+      "context": "with an additional non-potable demand of approximately 200kL/day for dust suppression and construction",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 60,
+      "context": "followed by rainwater harvesting during operation, supported by modular potable water treatment, staged",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 60,
+      "context": "and other non-potable demands. The report concludes that these measures provide a practical and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "recycled",
+      "page": 60,
+      "context": "water storage, membrane bioreactor (MBR) wastewater treatment and reuse of recycled water for irrigation",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 73,
+      "context": "The engagement strategy recognises key community interests including water efficiency, energy demand,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 73,
+      "context": "The engagement strategy recognises key community interests including water efficiency, energy demand,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 98,
+      "context": "4.3 POTABLE AND NON-POTABLE WATER DEMAND .............................................................. 9",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 98,
+      "context": "4.3 POTABLE AND NON-POTABLE WATER DEMAND .............................................................. 9",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 98,
+      "context": "4.4 FIRE WATER INFRASTRUCTURE ..................................................................................... 11",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 98,
+      "context": "4.3 POTABLE AND NON-POTABLE WATER DEMAND .............................................................. 9",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 99,
+      "context": "• Two customer-owned switching stations (275 kV and 330 kV). Site reticulation will consist",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 99,
+      "context": "of two double-circuit 330 kV overhead lines and a double-circuit 275 kV overhead line",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 99,
+      "context": "connecting the switching stations to the Level 2 substations, with 33 kV underground",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 99,
+      "context": "• Water & Sewer strategy for the site.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 100,
+      "context": "Gas Power Station, the Powerlink’s 330kV Braemar Substation and APA’s Darling Downs Solar",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 100,
+      "context": "Existing irrigation areas associated with water reuse and waste treatment are centrally located",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 101,
+      "context": "data centre will provide approximately 2,160 MVA total capacity, resulting in the data centre",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "275kV and 330kV, providing high-voltage transmission – this would be the preferred",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "There are 275kV transmission lines that run approximately 1000m away from the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "northeast and approximately 400m and 180m away from the south of the site. A 275kV",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "Additionally, there are 330kV transmission lines approximately 600m away from the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "275 kV Lines",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "275 kV Lines",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "275 kV",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 102,
+      "context": "330 kV Lines",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 102,
+      "context": "• Potable Water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 102,
+      "context": "• Fire Water Infrastructure",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 102,
+      "context": "• Potable Water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 103,
+      "context": "each with a total electrical demand of 540 MVA. Across all four buildings, the campus",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 103,
+      "context": "reaches approximately 2,160 MVA of total facility demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kVA",
+      "page": 103,
+      "context": "existing distribution substations typically have capacities up to 200kVA.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "There are medium-voltage (33kV and 12.7kV) electricity supplies and distribution",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "12.7kV 33kV Distribution",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "12.7kV",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "33kV",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "The campus will be supplied at two voltages i.e., 275kV and 330kV, through two customer-",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "owned switching stations. The first is the 275kV switching station, supplied from two",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "feeders from a power station, two from the Braemar 274kV substation (Powerlink), and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "five from the Darling Downs Power Sation. The second station will operate at 330kV,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "supplied from the Braemar 330kV substation (Powerlink) via two feeders. The network",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 103,
+      "context": "feeders, at 275kV and 330kV, with revenue metering at the respective transmission",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 103,
+      "context": "the load from the network, and allowing the storage to participate in network services.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 103,
+      "context": "adequate capacity and reliability for the maximum demand required of four data buildings,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 103,
+      "context": "each with a total electrical demand of 540 MVA. Across all four buildings, the campus",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 103,
+      "context": "reaches approximately 2,160 MVA of total facility demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 103,
+      "context": "The high voltage system is designed to meet the maximum demand while maintaining N+1",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 104,
+      "context": "1,080MVA. Stage 1 is split into Stage 1A and Stage 1B to sequence the construction and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 104,
+      "context": "voltage down to 33 kV. Each substation comprises three 540 MVA three-winding",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MVA",
+      "page": 104,
+      "context": "1,620 MVA per substation against a stage demand of approximately 1,080 MVA provides",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "energization of the 275kV switching station:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "• Stage 1A establishes the 275kV switching station with its initial bays, supplied from",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "the 275/33 kV substation and data building 1",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "• Stage 1B completes the remaining bays of the 275 kV switching station and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "connects them to the Braemar 275 kV substation and establishes data building 2.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "• Stage 2 establishes the 330 kV switching station, connected to the Braemar 330",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "kV substation and serving the Stage 2 and Stage 3 loads, together with the first",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "330/33 kV substation and data buildings 3 and 4",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "voltage down to 33 kV. Each substation comprises three 540 MVA three-winding",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "transmission connections, the 33 kV substations, the power conversion and battery energy",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "A battery energy storage system is integrated in series between each 33 kV incomer bus",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "Site reticulation will consist of two double-circuit 330 kV overhead lines and a double-circuit",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "275 kV overhead line connecting the switching stations to the Level 2 substations, with 33",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "kV underground cabling distributing supply from each substation through its PCS/BESS",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kV",
+      "page": 104,
+      "context": "Workers village – temporary connection 33kV on Grahams Road.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 104,
+      "context": "and the data building load through a dual power conversion arrangement. Each incomer",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 104,
+      "context": "the load-side converters. The outgoing feeders from the battery energy storage system",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 104,
+      "context": "constant load to the Powerlink network.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 104,
+      "context": "not be constructed until Stage 2, and load fluctuation filtering will be provided in its place.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 104,
+      "context": "two data buildings it supplies, with a stage total facility demand of approximately",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 104,
+      "context": "1,620 MVA per substation against a stage demand of approximately 1,080 MVA provides",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "4.3 POTABLE AND NON-POTABLE WATER DEMAND",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "Water demand arises from three sources: domestic potable demand (drinking, showering,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "hand basins and kitchen facilities); domestic non-potable demand (toilet and urinal",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "flushing, washdown, general cleaning and landscape irrigation); and mechanical demand",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "Demand is highest during construction, when the workers’ village accommodates a",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "modest permanent demand once construction is complete and the village is removed.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "Project water demand is primarily associated with personnel onsite. There is no anticipated",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 106,
+      "context": "continuous water demand for equipment cooling; however, water will be required for the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "4.3 POTABLE AND NON-POTABLE WATER DEMAND",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "There is no reticulated (town) water network in the vicinity of the site, the nearest",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "reticulated water infrastructure being approximately 15 km away. The development will",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "therefore be serviced by an independent on-site water supply. This is a well-established",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "practical and proven supply options are available to meet the development’s water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "Water demand arises from three sources: domestic potable demand (drinking, showering,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "Project water demand is primarily associated with personnel onsite. There is no anticipated",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "continuous water demand for equipment cooling; however, water will be required for the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "Other potential demands, including site irrigation, have not been included as potable water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 106,
+      "context": "demands on the basis that treated recycled water is expected to be available from the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 106,
+      "context": "associated with the one-time commissioning (flushing and fill) of the cooling systems.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 106,
+      "context": "continuous water demand for equipment cooling; however, water will be required for the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 106,
+      "context": "initial filling and commissioning of the closed-loop cooling systems as completed data halls",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 106,
+      "context": "4.3 POTABLE AND NON-POTABLE WATER DEMAND",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 106,
+      "context": "Water demand arises from three sources: domestic potable demand (drinking, showering,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 106,
+      "context": "hand basins and kitchen facilities); domestic non-potable demand (toilet and urinal",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 106,
+      "context": "Other potential demands, including site irrigation, have not been included as potable water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "recycled",
+      "page": 106,
+      "context": "demands on the basis that treated recycled water is expected to be available from the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "The adopted personnel water demand assumptions are:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "Personnel Category Adopted Water Demand",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "Typical water demand for personnel residing in an accommodation camp range between",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "required by onsite personnel, resulting in an adopted demand of approximately 54",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "The established Project water demand is expected to vary considerably throughout the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "Project lifecycle. Peak water demand occurs during periods of intensive construction",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "activity and onsite accommodation, while long-term operational demand is significantly",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "• peak water demand during construction is expected to exceed 300 kL/day;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "• long-term operational water demand is significantly lower.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "The significant variation between construction and operational demand is an important",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "The indicative water demand for Stage 1A (single building) is summarised below:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 107,
+      "context": "ML/year. An additional non-potable demand in the order of 200 kL/day may be",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "The adopted personnel water demand assumptions are:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "Personnel Category Adopted Water Demand",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "Typical water demand for personnel residing in an accommodation camp range between",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "Personnel residing offsite are assumed to consume approximately 25% of the water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "The established Project water demand is expected to vary considerably throughout the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "Project lifecycle. Peak water demand occurs during periods of intensive construction",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "• peak water demand during construction is expected to exceed 300 kL/day;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "• long-term operational water demand is significantly lower.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "consideration in the selection, staging and sizing of water supply and treatment",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 107,
+      "context": "The indicative water demand for Stage 1A (single building) is summarised below:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 107,
+      "context": "ML/year. An additional non-potable demand in the order of 200 kL/day may be",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 107,
+      "context": "4.8 ML/year.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 107,
+      "context": "• peak water demand during construction is expected to exceed 300 kL/day;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 107,
+      "context": "kL/day total (270 kL/day potable, 52 kL/day non-potable), or approximately 117",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 107,
+      "context": "ML/year. An additional non-potable demand in the order of 200 kL/day may be",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "kL",
+      "page": 107,
+      "context": "16.5 kL/day total (10.6 kL/day potable, 5.9 kL/day non-potable), or approximately",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 107,
+      "context": "kL/day total (270 kL/day potable, 52 kL/day non-potable), or approximately 117",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 107,
+      "context": "ML/year. An additional non-potable demand in the order of 200 kL/day may be",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 107,
+      "context": "• Operational phase (one building, irrigation included in non-potable): approximately",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 107,
+      "context": "16.5 kL/day total (10.6 kL/day potable, 5.9 kL/day non-potable), or approximately",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 108,
+      "context": "operational demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 108,
+      "context": "sized for 100% of the required system demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "water source hierarchy, prioritising CSG processed water during construction and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• CSG processed water as the primary construction-phase water source;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• rainwater harvesting as the preferred operational water source;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• modular potable water treatment infrastructure;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• staged potable water storage;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• maximum beneficial reuse of recycled water using HydraCool™ technology;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• irrigation and wet-weather storage for excess recycled water; and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "non-potable water. The final supply strategy will be confirmed during detailed design,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "storage and any associated water entitlements, all of which are achievable through",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "4.4 FIRE WATER INFRASTRUCTURE",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• A full-capacity fire water storage system comprising two (2) half-capacity tanks,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "• A water treatment and dosing facility to maintain fire water quality and to keep the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 108,
+      "context": "water suitable for operation of the on-site fire pumps and for use by attending Fire",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "ML",
+      "page": 108,
+      "context": "• Mechanical commissioning (one-time, per building): approximately 26.9 ML for the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 108,
+      "context": "one-time flushing and fill of the cooling systems as each data building is brought",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 108,
+      "context": "• modular potable water treatment infrastructure;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 108,
+      "context": "• staged potable water storage;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 108,
+      "context": "These options demonstrate that the development can be reliably serviced with potable and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 108,
+      "context": "non-potable water. The final supply strategy will be confirmed during detailed design,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "recycled",
+      "page": 108,
+      "context": "• maximum beneficial reuse of recycled water using HydraCool™ technology;",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "recycled",
+      "page": 108,
+      "context": "• irrigation and wet-weather storage for excess recycled water; and",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 109,
+      "context": "the required system demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "valve assembly will need to be located adjacent to the fire water tanks and fire",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "• A full backup water storage system comprising two (2) half-capacity tanks, each",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "fire water storage system following operation. The backup tanks are required as",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "there is no reticulated Town Main water supply available in the vicinity of the site.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "The site is located approximately 15 km from the nearest reticulated water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "infrastructure, and no connection to an existing potable water main is available.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "• The backup water tanks will need to be refilled by a water tanker service provider",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "following any drawdown of stored water.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "• A full-capacity fire water storage system comprising two (2) half-capacity tanks,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "• A water treatment and dosing facility to maintain fire water quality and to keep the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "water suitable for operation of the on-site fire pumps and for use by attending Fire",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "will need to be located adjacent to the fire water tanks and fire pump installation",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "• A full backup water storage system comprising two (2) half-capacity tanks, each",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "fire water storage system following operation. The backup tanks are required as",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "there is no reticulated Town Main water supply available in the vicinity of the site.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "The site is located approximately 15 km from the nearest reticulated water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "infrastructure, and no connection to an existing potable water main is available.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "• The backup water tanks will need to be refilled by a water tanker service provider",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "following any drawdown of stored water.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 109,
+      "context": "There is no reticulated sewerage network in the vicinity of the site. As with water supply,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 109,
+      "context": "infrastructure, and no connection to an existing potable water main is available.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 109,
+      "context": "infrastructure, and no connection to an existing potable water main is available.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 110,
+      "context": "proportion to the potable water consumed. The development can be serviced through the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 110,
+      "context": "water for toilet flushing, washdown and irrigation. This provides a sustainable long-",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 110,
+      "context": "water through effluent reuse.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 110,
+      "context": "Pipelines, Water Gathering Pipelines within the proposed land.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 110,
+      "context": "proportion to the potable water consumed. The development can be serviced through the",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "potable",
+      "page": 110,
+      "context": "dedicated land application area, or evaporation) and/or reused as non-potable",
+      "classification": "UNCLASSIFIED"
+    }
+  ],
+  "grade": "UNGRADED",
+  "toolVersion": "audit.ts/1.1.0",
+  "protocolVersion": 2,
+  "scannedAt": "2026-09-19T11:10:07.971Z"
+}
