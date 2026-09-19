@@ -403,8 +403,8 @@ export default async function Glossary() {
 
       <Footnote>
         Cite this project:{' '}
-        <a href="https://doi.org/10.5281/zenodo.21026430" style={{ color: CI_PERIWINKLE }}>
-          doi.org/10.5281/zenodo.21026430
+        <a href="https://doi.org/10.5281/zenodo.21026429" style={{ color: CI_PERIWINKLE }}>
+          doi.org/10.5281/zenodo.21026429
         </a>
         . These rules are maintained alongside the tracker and revised in the open —{' '}
         <a href="https://github.com/studioesem" style={{ color: CI_PERIWINKLE }}>

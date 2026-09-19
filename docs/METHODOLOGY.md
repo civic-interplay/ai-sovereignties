@@ -102,7 +102,9 @@ Methodology, classification and written analysis: CC BY 4.0. Underlying
 records are compiled from public sources, cited per entry. Cite as:
 Sarah Barns, *A living atlas of contesting and curating AI sovereignties
 (Australian view)*, Civic Interplay, 2026.
-[doi.org/10.5281/zenodo.21026430](https://doi.org/10.5281/zenodo.21026430).
+[doi.org/10.5281/zenodo.21026429](https://doi.org/10.5281/zenodo.21026429).
+This is the concept DOI: it always resolves to the newest version. Cite it in
+preference to any version DOI, which pins to a single snapshot.
 
 ## Resource conditions (added 18 August 2026)
 
