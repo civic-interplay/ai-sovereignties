@@ -172,3 +172,48 @@ against the live tracker, 25 calls to `claude-sonnet-5`, 28,808 in / 5,370 out,
 already appended to `docs/compute-log.jsonl`. It wrote nothing to Notion. The
 assistant's own session tokens are not captured — `/cost` was not run, so they
 are recorded as unmeasured rather than estimated.
+
+### 2026-09-19 (continued) — the sweep, and the grid
+
+The session ran on well past the entry above. What followed, briefly.
+
+- **Protocol v2, cut and applied the same day.** The pre-registered term list
+  could not see `MVA`, the unit the first confirmatory document actually uses.
+  Added, reason recorded, three documents rescanned. The campus total on p.101
+  of the Dalby report contains no v1 term at all — the most important number in
+  a 113-page engineering report was invisible to the instrument built to find
+  it.
+- **Queensland sweep opened and partly closed.** Site list frozen and published
+  before any search. Dalby: three documents obtained and scanned, 311 hits, all
+  unclassified. Supernode: five search routes, not located, recorded as *not
+  located by these indexes* rather than as an absence. Swanbank and the NT
+  untouched.
+- **Seven grid planning reports read across six operators**, plus Transgrid's
+  submission to the NSW inquiry. Source PDFs deliberately not committed —
+  reproducibility now rests on a sha256 manifest, which is the right design and
+  should have been the design from the start.
+- **Seventeen cards** written, each carrying a status and the caveat that has to
+  travel with it. One is `VERIFIED`.
+
+**Four false negatives in one day, all mine, none caught by a control.** Wrong
+DOI number searched; PlanningAlerts slug guessed with a hyphen; `MVA` absent
+from the term list; and a tally that showed Transgrid at zero because the
+extracted text sat under a different filename. Each was caught by accident —
+noticing an inconsistency, or a later search happening to print the right
+answer. Three of the four looked like findings first.
+
+The standing consequence is written into the protocol and the sweep log: a
+recorded negative carries the query that produced it, and a positive control is
+run wherever one exists. Every grid report count in
+`GRID-REPORTS-TALLY.md` carries one.
+
+That discipline earned itself back at the end of the night. A Powerlink
+community presentation returned zero mentions of data centres, and the control
+plus a look at the document showed it was a Central Queensland event showcase —
+wrong region, wrong genre. Banked as a finding it would have been false. It is
+recorded in its own table, marked excluded.
+
+**Compute figures:** the assistant's own session tokens are not captured —
+`/cost` was not run — and are recorded as unmeasured rather than estimated. No
+further pipeline expenditure beyond the single discovery dry run already
+logged; all subsequent work was document retrieval, extraction and search.
