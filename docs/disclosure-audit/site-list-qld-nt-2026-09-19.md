@@ -64,13 +64,40 @@ results — an index that returned nothing is evidence about the index.
 | Date | Site | Index | Result |
 |---|---|---|---|
 | 2026-09-19 | Q1 Dalby | WDRC Development.i portal | Portal reachable (HTTP 200). Application search requires a session token and renders results client-side; **not searched successfully by script**. Instrument number still unknown. |
-| 2026-09-19 | Q1 Dalby | PlanningAlerts | **Authority not covered** — `/authorities/western-downs` returns HTTP 404. Recorded as a gap in the index, not in the record. |
+| 2026-09-19 | Q1 Dalby | PlanningAlerts | ~~Authority not covered — `/authorities/western-downs` returns HTTP 404.~~ **WRONG — CORRECTED SAME DAY.** The slug is `western_downs` with an underscore, which returns HTTP 200. The authority **is** covered. The 404 was a bad guess at the URL, recorded as a fact about the index. See the correction note below. |
+| 2026-09-19 | Q2 Brendale | PlanningAlerts | Covered — `/authorities/moreton_bay` returns HTTP 200. |
+| 2026-09-19 | Q2 Brendale | Council DA Tracker | City of Moreton Bay runs its own tracker, not Development.i. `pdonline.moretonbay.qld.gov.au` does not resolve; the council site returns HTTP 403 to scripted requests. Not yet searched. |
+| 2026-09-19 | Q2 Brendale | Council open data | **City of Moreton Bay publishes development applications as open data** — `datahub.moretonbay.qld.gov.au/datasets/development-applications`, covering everything properly made since 1 Feb 2016. Not yet queried. This is a better index than any portal and should be tried first. |
+| 2026-09-19 | Q2 Brendale | Trade press and ministerial statement | Site confirmed as **Brendale, City of Moreton Bay** — 30 ha beside the South Pine substation, up to four data centre buildings, council planning approval and FIRB approval both granted. **Already approved, so a decision notice with conditions should exist.** |
 | 2026-09-19 | Q1 Dalby | Trade and general press | DA lodged **17 Aug 2026** with Western Downs Regional Council by **WDDP Pty Ltd** (Zerra DC / AGP): Material Change of Use for Research and Technology Industry, workforce accommodation, and a high-impact-industry concrete batching plant. Site 1933 Dalby–Kogan Road, **Lot 125 on DY316**, 725.5 ha. No council reference number published. |
 | 2026-09-19 | Q3 Swanbank | Ipswich Development.i portal | Application-number search for `2285/2026/MCU` returned **"No results"**. Address search returns a page whose results render client-side and could not be read by script. **This index has not been properly searched** — see caveat below. |
 | 2026-09-19 | Q3 Swanbank | PlanningAlerts | Authority covered and current, but the public list surfaces only the most recent applications; an August lodgement is not on it. Needs the API key (requested, pending) to query by date. |
 | 2026-09-19 | Q3 Swanbank | Trade press | Reference **2285/2026/MCU**, 6 Leaf Street (Lot 5), Swanbank, lodged **4 Aug 2026** by Northern Concept Swanb Pty Ltd. Reported as **code assessable** — no public notification required. |
 | 2026-09-19 | Q2 Supernode | — | Not yet searched. |
 | 2026-09-19 | NT | — | Not yet searched. |
+
+### Correction, 19 September 2026 — a null that was an artefact of the query
+
+The PlanningAlerts line for Q1 above originally read "authority not covered",
+on the strength of `/authorities/western-downs` returning 404. The slug is
+`western_downs`. With the underscore it returns 200 and the authority is
+covered, as are `ipswich` and `moreton_bay`.
+
+The error is left visible rather than overwritten because it is an instance of
+the thing this protocol exists to catch: **a null result reported as a property
+of the record when it was a property of the query.** The guide's rule — "not
+locatable" is never "does not exist", and name the index you searched — has to
+extend to naming the query, because an index searched with the wrong key has
+not been searched at all.
+
+Second instance the same day: the concept-DOI check reported "no file emits the
+old DOI" after searching for the wrong DOI number. Both were caught, but only
+because something else prompted a re-check, which is not a control.
+
+**Standing consequence for this sweep:** before any negative result is
+recorded, the query that produced it is recorded alongside it, and a positive
+control is run where one is available — a query that *should* return something,
+to prove the index answers at all.
 
 ### Caveat on the two portal results, recorded per FACT-CHECKING-GUIDE §3
 
