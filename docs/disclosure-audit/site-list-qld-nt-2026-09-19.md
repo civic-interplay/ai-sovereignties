@@ -119,7 +119,16 @@ data.** Searched 19 Sep 2026:
   Kremzow Road: hotels, warehouses, showrooms, advertising devices,
   stormwater. Nothing resembling the campus.
 
+- **By Strathwyn Street.** A fifth address associated with the site. 55
+  applications within ~600 m: warehouses, showrooms, a place of worship, an
+  Aldi distribution centre, earthworks. Nothing resembling the campus.
+
 So the earlier candidates are rejected too: they are at the wrong parcel.
+
+Street View of the site in 2026 shows an empty paddock with transmission towers
+on the horizon in both directions. That is the whole siting logic in one
+accidental image: the land is worth what it is worth because of what is behind
+it, and the planning record describes the paddock.
 
 **This is "not located by these indexes", not "no record exists".** The index
 demonstrably works — the controls return thousands — so the null is about the
