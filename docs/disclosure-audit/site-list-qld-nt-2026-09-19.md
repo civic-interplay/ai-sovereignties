@@ -63,4 +63,43 @@ results — an index that returned nothing is evidence about the index.
 
 | Date | Site | Index | Result |
 |---|---|---|---|
-| | | | |
+| 2026-09-19 | Q1 Dalby | WDRC Development.i portal | Portal reachable (HTTP 200). Application search requires a session token and renders results client-side; **not searched successfully by script**. Instrument number still unknown. |
+| 2026-09-19 | Q1 Dalby | PlanningAlerts | **Authority not covered** — `/authorities/western-downs` returns HTTP 404. Recorded as a gap in the index, not in the record. |
+| 2026-09-19 | Q1 Dalby | Trade and general press | DA lodged **17 Aug 2026** with Western Downs Regional Council by **WDDP Pty Ltd** (Zerra DC / AGP): Material Change of Use for Research and Technology Industry, workforce accommodation, and a high-impact-industry concrete batching plant. Site 1933 Dalby–Kogan Road, **Lot 125 on DY316**, 725.5 ha. No council reference number published. |
+| 2026-09-19 | Q3 Swanbank | Ipswich Development.i portal | Application-number search for `2285/2026/MCU` returned **"No results"**. Address search returns a page whose results render client-side and could not be read by script. **This index has not been properly searched** — see caveat below. |
+| 2026-09-19 | Q3 Swanbank | PlanningAlerts | Authority covered and current, but the public list surfaces only the most recent applications; an August lodgement is not on it. Needs the API key (requested, pending) to query by date. |
+| 2026-09-19 | Q3 Swanbank | Trade press | Reference **2285/2026/MCU**, 6 Leaf Street (Lot 5), Swanbank, lodged **4 Aug 2026** by Northern Concept Swanb Pty Ltd. Reported as **code assessable** — no public notification required. |
+| 2026-09-19 | Q2 Supernode | — | Not yet searched. |
+| 2026-09-19 | NT | — | Not yet searched. |
+
+### Caveat on the two portal results, recorded per FACT-CHECKING-GUIDE §3
+
+Neither portal result above is evidence that a record does not exist. Both
+councils run the **Development.i** platform, whose search returns results to a
+browser and not to a scripted request. A scripted "No results" therefore means
+*this method did not reach the index*, not *the index is empty*.
+
+Under the protocol this must be reported as **"not located by this method"**,
+naming the method. It is recorded now, before the answer is known, so that a
+later null cannot be quietly upgraded into a finding.
+
+Two routes remain for both: the PlanningAlerts API once the key arrives, and
+opening the portals in a browser. Until one of them is done, neither Q1 nor Q3
+has been searched in the sense the protocol means.
+
+### Two things already visible, and why neither is disclosure
+
+The press carries figures for Q1 — roughly 47 GWh/day at full build, about
+16.5 kL/day operational water, air-based cooling, 4 × 360 MW buildings, with
+water from coal-seam-gas water, rainwater, delivery, recycled wastewater and
+on-site surface water. **None of this is disclosure under the protocol.** It is
+the announcement track: proponent and press material, explicitly excluded by
+§Scope. It is noted here only so that it is not mistaken for a record later,
+and so the eventual comparison between what was announced and what the
+instrument states can be made deliberately.
+
+Q1 and Q3 also sit on **opposite assessment pathways** — Q1 impact-assessable
+with a public notification period, Q3 code-assessable with none. The
+pre-registration predicts a pathway effect rather than a state effect, so a
+single jurisdiction now offers a within-state test of it. That prediction is on
+the record before either instrument has been read.
