@@ -11,3 +11,4 @@
 {"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6818,"output_tokens":1920}
 {"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6818,"output_tokens":1875}
 {"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6791,"output_tokens":1019}
+{"date":"2026-09-19","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28808,"output_tokens":5370}

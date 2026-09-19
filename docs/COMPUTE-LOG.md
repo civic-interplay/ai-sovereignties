@@ -111,3 +111,64 @@ Session resumed after a crash killed an eight-agent research run mid-flight.
 **Compute figures:** not captured in-session — `/cost` was not run. Backfill from
 the Anthropic usage dashboard for 2026-08-18 into `docs/compute-log.jsonl` per
 `COMPUTE.md`. Recorded as unmeasured rather than estimated.
+
+## 2026-09-19 — discovery diagnosis, and the reading pages moved to a light field
+
+Session opened on a repo-status question and turned into three pieces of work.
+
+- **Synced this machine.** It had been sitting on `494e3ba` (27 Aug) since the
+  4 Sep history rewrite; the remote had moved six commits ahead. Fast-forwarded
+  with no divergence, which is the evidence that the rewrite held and the other
+  computer was reset before it pushed.
+- **Closed the concept-DOI item — after first checking the wrong number.** The
+  stale value was `…21026430`, the *v0.1.0* version DOI, not `…21994643`. A
+  first pass searched for the latter, found only this log's own 18 Aug entry,
+  and wrongly reported the item closed. Re-checked against the defect as
+  actually recorded: the generator `pipeline/export-zenodo.ts` and the deposit
+  `zenodo/README.md` had been fixed in August, but `docs/METHODOLOGY.md`,
+  `src/app/sheets/page.tsx` and `src/app/glossary/page.tsx` still emitted it.
+  Because the generator *copies* `docs/METHODOLOGY.md` into the deposit, every
+  re-export re-shipped the superseded DOI inside the published dataset — the
+  precise failure mode the August note warned about. All three fixed and the
+  bibliography regenerated (262 → 268 records, conformance OK).
+
+  Worth keeping as method: a negative result is only as good as the string
+  searched for. The claim "no file emits the old DOI" was false while being
+  literally true of the string tested.
+- **Diagnosed three defects in the discovery pipeline**, of which the worst
+  produced *green* runs:
+  1. `retrieve/gdelt.ts` returned `[]` when its retry budget ran out, so a
+     throttled sweep was indistinguishable from a quiet fortnight. The 15 Sep
+     run went green having retrieved nothing.
+  2. `discover.ts` did not wrap the GDELT strand, so a connect timeout exited
+     the process *before* the write loop — discarding ePlanning proposals
+     already found and paid for. This is what the 13 Sep run threw away.
+  3. Dedup keyed only on PAN and source URL, never on the `[REJECTED]` rows, so
+     a new application at an already-rejected address returned as a fresh
+     proposal. Astoria Street, Marsden Park had been rejected three times and
+     was proposed a fourth.
+- **Measured GDELT rather than assuming.** One query in roughly ten got through
+  from a residential IP; six backoff attempts across three minutes did not. The
+  backoff is now 6 attempts over ~2.5 minutes and exhausting it raises
+  `GdeltUnavailableError`, which goes red and says so in the run summary.
+- **Moved the reading pages to a light field.** Requested for policy readers.
+  The map keeps its dark field; the sheets, glossary and news feed do not. Every
+  token was re-derived by measurement and the three-step hierarchy mirrors the
+  ratios the dark theme had (INK 12.36:1, MID 6.54:1, DIM 5.24:1, links 7.09:1).
+
+**Two contrast failures found that pre-date this change and were not caused by
+it**, both now fixed:
+
+1. `opacity: 0.55` on non-subset table rows scaled *every* colour in the row
+   down with it — body text to 3.25:1, links to 2.59:1. No opacity below 1 kept
+   the whole palette passing, and the subset distinction was already carried by
+   the ●/○ column and the sort order, so the fade went.
+2. The "pending review" amber `#8d5108` measured 3.10:1 on the dark field at
+   10.5px. The 15 Sep audit reported every accent between 5.66:1 and 14.02:1;
+   this one was missed. It reads 5.90:1 on the light field.
+
+**Compute figures:** one pipeline expenditure this session — a discovery dry run
+against the live tracker, 25 calls to `claude-sonnet-5`, 28,808 in / 5,370 out,
+already appended to `docs/compute-log.jsonl`. It wrote nothing to Notion. The
+assistant's own session tokens are not captured — `/cost` was not run, so they
+are recorded as unmeasured rather than estimated.
