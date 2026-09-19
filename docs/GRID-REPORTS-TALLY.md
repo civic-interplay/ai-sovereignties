@@ -39,11 +39,48 @@ Reading a 2026 document against a 2025 one and calling the difference a state
 effect would be exactly the error this project spent 19 September catching
 three times over. Compare within a table, never across.
 
-**Powerlink's 2026 TAPR is the single most valuable document still unread.**
-Queensland received the largest data centre proposed in Australia in August
-2026, and its 2025 report had explicitly excluded data centres from the load
-forecast. Whatever that report says is the test of how fast a transmission
-planner can turn.
+## Powerlink has not published a 2026 TAPR, and that is the finding
+
+Searched 19 Sep 2026: no 2026 Transmission Annual Planning Report appears on
+Powerlink's planning-report pages or the AER's. **The 2025 edition is still the
+current published document**, and it states its own cut-off: *"Unless stated
+otherwise, the information published in the 2025 TAPR is current as at
+30 September 2025."*
+
+So Queensland's transmission planner's **current official published position**
+is the one quoted above — limited interest from data centre proponents, and no
+data centre projects in the load forecast.
+
+Set against what has happened in that network area since the cut-off:
+
+| Date | Event |
+| --- | --- |
+| **30 Sep 2025** | Data cut-off for Powerlink's current TAPR |
+| Nov–Dec 2025 | 2025 TAPR published: "limited interest", data centres excluded from the load forecast, AEMO's 90 GWh cited |
+| **17 Aug 2026** | Western Downs Digital Park lodged — 1,440 MW IT load, ~2,160 MVA facility demand |
+| **16 Sep 2026** | The Premier announces Anthropic's first Australian data centre agreement, describing it as the largest data centre proposed in Australia |
+| **19 Sep 2026** | Powerlink's current published transmission forecast for Queensland still contains no data centre projects |
+
+That is roughly twelve months in which the official forecast has been
+superseded by a single application about a hundred times larger than the
+statewide projection it rested on, with no updated public document.
+
+**This is not a criticism of Powerlink's diligence.** Annual reports are annual.
+The point is structural, and it is the same one the planning findings make from
+the other direction: the instruments that are supposed to see this operate on a
+yearly cycle, and the build-out is moving faster than the cycle. A transmission
+planner cannot forecast what has not yet enquired, and a council cannot name
+what its use classes have no word for. Between them sits a $32bn campus.
+
+**Do not overstate it.** Powerlink may hold current connection enquiry data it
+has not yet published, and almost certainly does — the TAPR is a publication
+cycle, not the limit of what an operator knows. The claim is about the public
+record, not about the operator's awareness. Whether a mid-cycle update or
+enquiry register exists is worth asking them directly.
+
+**Still worth getting:** the 2026 community presentation, which may carry
+updated figures ahead of the next TAPR, and is the only 2026 Powerlink material
+located so far.
 
 ## The 2026 comparison, now that three exist
 
@@ -126,7 +163,8 @@ the full report would be meaningful, and this summary cannot establish it.
 
 | Operator | Document | Note |
 | --- | --- | --- |
-| **Powerlink** | 2026 TAPR | The priority. See above. |
+| ~~Powerlink~~ | ~~2026 TAPR~~ | **Does not appear to exist.** Searched 19 Sep 2026; the 2025 edition is still current. See above. |
+| Powerlink | 2026 community presentation | The only 2026 Powerlink material located. May carry updated figures ahead of the next TAPR. |
 | ~~AEMO~~ | ~~Victorian Annual Planning Report~~ | **Obtained 19 Sep 2026.** |
 | ~~ElectraNet~~ | ~~2026 TAPR (SA)~~ | **Obtained 19 Sep 2026.** |
 | TasNetworks | full 2025/2026 APR | Only the summary has been read. |
