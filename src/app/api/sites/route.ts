@@ -106,12 +106,18 @@ function energyKey(value: string | null): string {
 
 // Reduce the multi-value "Sovereignty register" to one key for colouring, by
 // precedence: the most sovereign register present wins (a site that reaches
-// Productive shows as Productive even if it is also Locational).
+// Productive shows as Productive even if it is also Rented).
+//
+// "Locational" was removed from the vocabulary on 2026-09-22. It had been
+// folded in here as a synonym for Rented, which was a workaround for the field
+// carrying two different frameworks at once — a per-site ownership lens and a
+// typology of national strategy. The field is now the ownership lens only; the
+// national typology lives in the writing. See docs/SOVEREIGNTY-REGISTERS.md.
 function registerKey(regs: string[]): string {
   if (regs.includes('Productive')) return 'productive';
   if (regs.includes('Operational')) return 'operational';
   if (regs.includes('Financial')) return 'financial';
-  if (regs.includes('Rented') || regs.includes('Locational')) return 'rented';
+  if (regs.includes('Rented')) return 'rented';
   return 'none';
 }
 

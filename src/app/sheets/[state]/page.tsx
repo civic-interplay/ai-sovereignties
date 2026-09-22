@@ -58,7 +58,7 @@ function registerBucket(r: TrackerRow): string {
   if (r.registers.includes('Productive')) return 'Productive';
   if (r.registers.includes('Operational')) return 'Operational';
   if (r.registers.includes('Financial')) return 'Financial';
-  if (r.registers.includes('Rented') || r.registers.includes('Locational')) return 'Rented';
+  if (r.registers.includes('Rented')) return 'Rented';
   return 'Not coded';
 }
 

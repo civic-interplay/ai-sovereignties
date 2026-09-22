@@ -151,9 +151,6 @@ export default async function Glossary() {
           ≥30% of ultimate ownership held by Australian public capital — sovereign wealth, government, or
           superannuation (pooled Australian retirement savings, counted as public capital here).
         </Term>
-        <Term name="Locational">
-          the site sits on Australian land under Australian planning law, with no other register held onshore.
-        </Term>
         <Term name="Rented" color={ACCENT.red}>
           compute capacity rented to companies with headquarters located offshore (unknown local usage
           benefits).
