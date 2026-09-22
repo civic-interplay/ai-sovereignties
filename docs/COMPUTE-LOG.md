@@ -217,3 +217,42 @@ recorded in its own table, marked excluded.
 `/cost` was not run — and are recorded as unmeasured rather than estimated. No
 further pipeline expenditure beyond the single discovery dry run already
 logged; all subsequent work was document retrieval, extraction and search.
+
+### 2026-09-22 — the session's own cost, measured
+
+The 19 September entry above recorded the assistant's session tokens as
+**unmeasured**, on the grounds that `/cost` had not been run. That was
+avoidable: Claude Code writes the API's `usage` block into the session
+transcript on every call, so the figure was recoverable without `/cost` at all.
+Harvested and appended to `docs/compute-log.jsonl` per the `kind: session`
+convention in `COMPUTE.md`:
+
+| Date | Calls | Input (incl. cache write) | Output | Cache read |
+| --- | ---: | ---: | ---: | ---: |
+| 2026-09-19 | 945 | 1,590,432 | 973,871 | 339,783,972 |
+| 2026-09-20 | 16 | 2,155,526 | 13,537 | 9,510,533 |
+| 2026-09-22 | 159 | 7,647,341 | 148,938 | 117,225,710 |
+
+All `claude-opus-5`. 1,120 calls across three days.
+
+**Read the cache-read column carefully, and do not add it to the others.** At
+466 million tokens it dwarfs everything else and it is not 466 million tokens of
+work. It is the same conversation re-read from cache on every turn — a long
+session re-presents its own context more than a thousand times. `COMPUTE.md`
+already keeps it in a separate field for exactly this reason. The figures that
+represent fresh computation are the input and output columns: **11.4 million in,
+1.14 million out.**
+
+Even stated correctly, this is the largest single session in the log by an order
+of magnitude. The next largest is 580 calls, on 26 July.
+
+**What it bought, for proportion:** the QLD/NT sweep opened and partly closed;
+protocol v2; eight grid planning documents read across six operators; four
+findings written; 23 cards; a light-theme accessibility pass; the statutory-cost
+field and backfill; v0.2.1 exported; and four of this project's own false
+negatives caught. Whether that is a good ratio is a judgement for someone other
+than the thing that spent it.
+
+The prior entry's "unmeasured rather than estimated" was the right instinct
+applied to the wrong constraint. It is measured now, and the method is written
+down so the next session does not need asking.

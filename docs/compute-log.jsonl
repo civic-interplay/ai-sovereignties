@@ -12,3 +12,6 @@
 {"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6818,"output_tokens":1875}
 {"date":"2026-08-17","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":1,"input_tokens":6791,"output_tokens":1019}
 {"date":"2026-09-19","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28808,"output_tokens":5370}
+{"date":"2026-09-19","kind":"session","source":"claude-code","model":"claude-opus-5","calls":945,"input_tokens":1590432,"output_tokens":973871,"cache_read_tokens":339783972}
+{"date":"2026-09-20","kind":"session","source":"claude-code","model":"claude-opus-5","calls":16,"input_tokens":2155526,"output_tokens":13537,"cache_read_tokens":9510533}
+{"date":"2026-09-22","kind":"session","source":"claude-code","model":"claude-opus-5","calls":159,"input_tokens":7647341,"output_tokens":148938,"cache_read_tokens":117225710}
