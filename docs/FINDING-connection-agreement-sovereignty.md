@@ -208,6 +208,38 @@ progressing through the connections pipeline is, in Transgrid's own words,
 "comparable in scale to establishing a Renewable Energy Zone similar to the
 Central-West Orana REZ.
 
+## Update, 22 September 2026 — two states now price it; neither makes it visible
+
+Victoria released its data centre plan. On energy, verbatim:
+
+> "Data centres will bring their own renewable energy supply and storage.
+> They'll be required to match new demand with new generation, plus **meet
+> connection costs and network upgrades**."
+
+Set beside NSW, three weeks earlier: Transgrid pursuing a take-or-pay
+"use it or pay for it" rule change, and the 17 August consultation proposing a
+**Major Network Upgrade Fee** defaulting to $200,000/MW in the
+Sydney–Newcastle–Wollongong area.
+
+**Two states, within weeks, both moving to price the grid connection.** That is
+strong confirmation of this finding's premise — the capacity is scarce, it is
+valuable, and it is public enough that the state can charge for it.
+
+**And neither reform touches the allocation.** Who gets the capacity, in what
+order, on what terms, is still settled in a connection agreement that appears
+in no planning record. Pricing an asset and publishing who received it are
+different acts. Both governments have done the first.
+
+That is the sharper version of the argument as at today: it is no longer that
+the public asset is given away unpriced. It is that **the price is now public
+and the allocation still is not.**
+
+Victoria's rules are also **not retrospective** — "the new rules won't be
+retrospective for applications under assessment". So the cohort already through
+the door keeps the connection on the old terms. ABC reports eight applications
+currently before the Minister; the government's own release gives no number,
+and the distinction matters when quoting it.
+
 ## What would make this measurable
 
 1. **Record the connection** as a tracked attribute: connecting network
