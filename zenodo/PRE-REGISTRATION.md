@@ -113,7 +113,52 @@ Per [FACT-CHECKING-GUIDE.md](FACT-CHECKING-GUIDE.md) §3, unchanged:
 2. Extract full text deterministically (`pdftotext`, or equivalent for other
    formats). Page-scan-only documents are recorded as **NOT-ACCESSIBLE** — a
    result, not a gap.
-3. Search the full text for this term list, frozen here:
+3. Search the full text for this term list, frozen here — **version 2, frozen
+   19 September 2026**:
+
+   `MW` · `MVA` · `kVA` · `GW` · `GWh` · `kV` · `megawatt` · `load` ·
+   `demand` · `kWh` · `MWh` · `PUE` · `WUE` ·
+   `water` · `litres` · `megalitre` · `kilolitre` · `ML` · `kL` ·
+   `m3` / `m³` · `cooling` · `evaporative` · `potable` · `recycled`
+
+   > **Why there is a version 2, and what it cost.**
+   >
+   > Version 1 of this list omitted **MVA**. It was found on the first
+   > confirmatory document scanned — the Western Downs Digital Park
+   > Infrastructure Services Report, 113 pages — which states an electrical
+   > demand of 540 MVA per building and 1,080 MVA per stage. That is the
+   > facility's connection capacity, disclosed plainly, and version 1 could not
+   > see it.
+   >
+   > It surfaced only because `demand` happened to be on the list and happened
+   > to sit in the same sentence. A document phrased "540 MVA per building",
+   > without that word, would have been recorded as disclosing no energy figure
+   > at all. The protocol would have produced a **false negative on a document
+   > that discloses**, and the error would have been invisible, because a null
+   > looks identical whether the record is silent or the instrument is deaf.
+   >
+   > The omission has a cause worth naming. MW is the unit of press releases and
+   > policy debate; MVA, kVA and kV are the units of the engineering documents
+   > that actually accompany a grid connection. A term list assembled from how
+   > the issue is *discussed* will systematically miss how it is *recorded*.
+   >
+   > Version 2 therefore adds the electrical units used in engineering
+   > documents — `MVA`, `kVA`, `GW`, `GWh`, `kV` — and, for symmetry with
+   > `megawatt`, the spelled-out water units `megalitre` and `kilolitre`.
+   > Nothing is removed.
+   >
+   > **The sweep restarts under version 2.** Three documents had been scanned
+   > under version 1, all from one site, none classified or graded. Rescanning
+   > costs almost nothing today and would have cost the credibility of every
+   > negative result later. Version 1 remains below, unedited, so the change is
+   > auditable.
+   >
+   > The general lesson is recorded in the results rather than smoothed away: a
+   > negative finding is a claim about an instrument as much as about a record,
+   > and an instrument that has never returned a positive has not been shown to
+   > work. Where a positive control is available, it is run.
+
+   **Version 1, superseded 19 September 2026, retained for audit:**
 
    `MW` · `megawatt` · `load` · `demand` · `kWh` · `MWh` · `PUE` · `WUE` ·
    `water` · `litres` · `ML` · `kL` · `m3` / `m³` · `cooling` · `evaporative` ·
