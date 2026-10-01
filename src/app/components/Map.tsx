@@ -632,15 +632,31 @@ export default function Map() {
       // drew every one of them at the size of a real 30MW site. Undisclosed now
       // gets its own fixed, deliberately small radius, and the scale runs on to
       // 1200MW so the gigawatt campuses stop clamping to the same dot as 400MW.
+      //
+      // The radii below are full (street-level) sizes. Fixed pixel radii meant
+      // the national view drew Sydney's and Melbourne's clusters as one fused
+      // blob — the density of the build-out hid the sites themselves. So every
+      // layer scales with zoom: about a third at the national view, two-thirds
+      // at the metro views, full size only at street level. All layers share
+      // the factor, so ring order (core < contested < fast-tracked) holds.
       const capValue = ['coalesce', ['get', 'capacity'], -1] as unknown as mapboxgl.ExpressionSpecification;
       const capKnown = ['>', capValue, -1] as unknown as mapboxgl.ExpressionSpecification;
-      const radius = (unknown: number, r30: number, r400: number, r1200: number) =>
-        [
+      const radius = (unknown: number, r30: number, r400: number, r1200: number) => {
+        const base = [
           'case',
           capKnown,
           ['interpolate', ['linear'], capValue, 30, r30, 400, r400, 1200, r1200],
           unknown,
+        ];
+        return [
+          'interpolate', ['linear'], ['zoom'],
+          3, ['*', 0.35, base],
+          6, ['*', 0.55, base],
+          9, ['*', 0.65, base],
+          11, ['*', 0.85, base],
+          13, base,
         ] as unknown as mapboxgl.ExpressionSpecification;
+      };
 
       // Outer pulse ring
       m.addLayer({
@@ -648,12 +664,12 @@ export default function Map() {
         type: 'circle',
         source: 'sites',
         paint: {
-          'circle-radius': radius(13, 20, 50, 68),
+          'circle-radius': radius(9, 13, 30, 41),
           'circle-color': color,
-          'circle-opacity': 0.15,
+          'circle-opacity': 0.08,
           'circle-stroke-width': 1.5,
           'circle-stroke-color': color,
-          'circle-stroke-opacity': 0.6,
+          'circle-stroke-opacity': 0.45,
         },
       });
 
@@ -692,7 +708,7 @@ export default function Map() {
         filter: ['==', ['get', 'contested'], true] as unknown as mapboxgl.FilterSpecification,
         layout: { visibility: 'none' },
         paint: {
-          'circle-radius': radius(10, 16, 44, 60),
+          'circle-radius': radius(8, 12, 28, 38),
           'circle-opacity': 0,
           'circle-stroke-width': 2.5,
           'circle-stroke-color': STATUS_CONTESTED,
@@ -708,8 +724,8 @@ export default function Map() {
       // contested's radius so a site carrying both reads as one bright inner
       // ring plus two softer outer ones.
       for (const [id, rU, r0, r1, r2] of [
-        ['sites-fasttracked', 15, 23, 53, 72],
-        ['sites-fasttracked-outer', 19, 28, 60, 81],
+        ['sites-fasttracked', 11, 15, 32, 43],
+        ['sites-fasttracked-outer', 14, 19, 37, 49],
       ] as const) {
         m.addLayer({
           id,
