@@ -1201,6 +1201,23 @@ export default function Map() {
             Source data ↗
           </a>
           <a
+            href="https://github.com/civic-interplay/ai-sovereignties"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: 'inline-block',
+              marginTop: 8,
+              marginLeft: 14,
+              fontSize: 10,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: CI_PERIWINKLE,
+              textDecoration: 'none',
+            }}
+          >
+            Code ↗
+          </a>
+          <a
             href="/glossary"
             style={{
               display: 'inline-block',
@@ -1231,7 +1248,7 @@ export default function Map() {
             Data sheets
           </a>
           <a
-            href="https://civicinterplay.io/data-centres-map/"
+            href="https://civicinterplay.io/sovereignties/"
             target="_top"
             rel="noreferrer"
             style={{
