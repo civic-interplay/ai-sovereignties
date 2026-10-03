@@ -4,6 +4,22 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-10-03 — human verification recorded
+
+- **35 rows marked Human-verified (Verified by SB, 3 Oct).** SB confirmed the
+  rows in a Claude Code session, and the agent recorded the sign-off.
+  - Western Downs Digital Park (Dalby). Its notes now open with the
+    verification, so no agent demotes it again under the `discover.ts`
+    contract.
+  - 34 rows from the City of Melbourne consolidated list (June 2026). AWS
+    Cobblebank keeps its earlier `audit-2026-08-10` credit alongside SB's.
+- **11 City of Melbourne rows held back.** Their own notes still say
+  "operational status unverified", or "Is this it?" for NEXTDC Craigieburn.
+  Marking them verified would contradict the row. They wait for SB to confirm
+  each site exists and operates.
+- **Swanbank duplicate merged.** A 30 Sep `[PROPOSED]` row repeated the 26 Aug
+  one. Its notes moved into the older row and it left the tracker.
+
 ## 2026-09-30 — news sweep, 22–30 September
 
 Every entry in this batch rests on search-result snippets. The session's
