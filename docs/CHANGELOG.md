@@ -48,8 +48,13 @@ verify it.
     Senate AI and data centres inquiry (reports 16 Nov), the Tasmanian draft
     Expectations (closes 12 Oct), the SA Data Centre Strategy, and the ACT
     framework.
-- **Vocabulary gap:** `State / Region` has no ACT option, so ACT items are
-  logged under National / Federal.
+- **ACT option added to `State / Region` (3 Oct).** The code already expected
+  it: `STATE_SLUGS` in `src/lib/tracker.ts` routes `/sheets/act`, the news page
+  maps `ACT`, and `discover.ts` lists it as a state. But the Notion select never
+  had the option, so the ACT sheet was always empty, and any ACT proposal from
+  discovery would have failed to write. Microsoft Azure — Canberra Region
+  moves from National / Federal to ACT, along with the two ACT `[PROPOSED]`
+  rows from this sweep.
 
 ## 2026-09-19 — v0.2.1
 
