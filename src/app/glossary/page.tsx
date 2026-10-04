@@ -247,12 +247,12 @@ export default async function Glossary() {
           Aboriginal Party for that Country. Whether engagement was adequate is for Traditional Owner
           organisations to say, and would be recorded here only by citing them.
         </Term>
-        <Term name="Stopped: Withdrawn · Refused · Approval revoked">
+        <Term name="Not proceeding: Withdrawn · Refused · Approval revoked">
           development statuses for projects that ended before they were built, recorded as what happened and
           who did it: the developer withdrew the application, the consent authority refused it, or an approval
-          already granted was revoked. Drawn on the map as a faint outline, so the record of what was stopped
-          stays visible. The status does not record <em>why</em>: where a project was stopped while under
-          community opposition, that shows as the Stopped filter with the Contested overlay on, and the
+          already granted was revoked. Drawn on the map as a faint outline, so the record of what did not
+          proceed stays visible. The status does not record <em>why</em>: where a project ended while under
+          community opposition, that shows as the Not proceeding filter with the Contested overlay on, and the
           stated reasons are cited in the row&rsquo;s notes. Before October 2026 a withdrawn project had its
           status cleared and its title marked [withdrawn].
         </Term>
