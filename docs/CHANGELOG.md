@@ -4,6 +4,20 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-10-04 — Stopped: Withdrawn, Refused, Approval revoked
+
+- **Three new `Status` options** for projects that ended before they were
+  built: Withdrawn (the developer pulled the application), Refused (the
+  consent authority said no), and Approval revoked. The map draws them as a
+  faint outline under a new Stopped filter, and the glossary defines them.
+- **The status records what happened, not why.** Opposition stays in
+  Community Concern, so "stopped while contested" is the Stopped filter with
+  the Contested overlay on. Stated reasons are cited in each row's notes.
+- **Two rows moved off the old convention.** Goodman Project Mars (Lane Cove
+  West) and GreenSquareDC Hazelmere had a blank status and `[withdrawn]` in
+  the title, which drew them as "Stage not recorded". Both are now Withdrawn,
+  with the title marker removed and a dated line in their notes.
+
 ## 2026-10-03 — human verification recorded
 
 - **35 rows marked Human-verified (Verified by SB, 3 Oct).** SB confirmed the

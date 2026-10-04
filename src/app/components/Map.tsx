@@ -346,6 +346,11 @@ const STAGE_COLORS: Record<string, string> = {
   'Approved / permitted': '#55a769',
   'Under Construction': '#70c082',
   Producing: '#8bda9c',
+  // Stopped: off the ramp, because the ramp runs toward operating and these
+  // will not get there. A muted warm grey so they read as an ending, not a stage.
+  Withdrawn: '#8a7f78',
+  Refused: '#8a7f78',
+  'Approval revoked': '#8a7f78',
   unknown: C_NEUTRAL,
 };
 const STAGE_LABELS: Record<string, string> = {
@@ -355,6 +360,9 @@ const STAGE_LABELS: Record<string, string> = {
   'Approved / permitted': 'Approved / permitted',
   'Under Construction': 'Under construction',
   Producing: 'Operating',
+  Withdrawn: 'Withdrawn',
+  Refused: 'Refused',
+  'Approval revoked': 'Approval revoked',
   unknown: 'Stage not recorded',
 };
 // The headline cut: what is operating versus what is still in the planning and
@@ -368,10 +376,20 @@ const COMING_STAGES = [
   'Under Construction', 'Approved / permitted', 'Application lodged',
   'Feasibility', 'Exploration',
 ];
+// Projects that stopped before they were built. Recorded as what happened, by
+// whom: the developer withdrew, the consent authority refused, or a granted
+// approval was revoked. Why it stopped (community opposition, policy change,
+// finance) is not a status: opposition is read from Community Concern, so
+// "stopped while contested" is the Stopped filter with the Contested overlay
+// on, and the map never asserts a cause the record cannot show. These replace
+// the old convention of clearing the status and marking the title [withdrawn],
+// which drew a withdrawn site as "Stage not recorded".
+const STOPPED_STAGES = ['Withdrawn', 'Refused', 'Approval revoked'];
 
 const STAGE_ORDER = [
   'Exploration', 'Feasibility', 'Application lodged',
-  'Approved / permitted', 'Under Construction', 'Producing', 'unknown',
+  'Approved / permitted', 'Under Construction', 'Producing',
+  'Withdrawn', 'Refused', 'Approval revoked', 'unknown',
 ];
 
 // --- Sovereign/super exposure lens: how much of a site is funded by Australian
@@ -658,6 +676,11 @@ export default function Map() {
         ] as unknown as mapboxgl.ExpressionSpecification;
       };
 
+      // Stopped sites are a faint outline: empty middle, thin dim ring, no
+      // pulse. Still on the map, so the record of what was stopped stays
+      // visible, but they no longer read as something coming.
+      const isStopped = ['in', ['get', 'stageKey'], ['literal', STOPPED_STAGES]];
+
       // Outer pulse ring
       m.addLayer({
         id: 'sites-pulse',
@@ -666,10 +689,10 @@ export default function Map() {
         paint: {
           'circle-radius': radius(9, 13, 30, 41),
           'circle-color': color,
-          'circle-opacity': 0.08,
+          'circle-opacity': ['case', isStopped, 0, 0.08] as unknown as mapboxgl.ExpressionSpecification,
           'circle-stroke-width': 1.5,
           'circle-stroke-color': color,
-          'circle-stroke-opacity': 0.45,
+          'circle-stroke-opacity': ['case', isStopped, 0, 0.45] as unknown as mapboxgl.ExpressionSpecification,
         },
       });
 
@@ -688,12 +711,12 @@ export default function Map() {
         paint: {
           'circle-radius': radius(5, 8, 20, 27),
           'circle-color': color,
-          'circle-opacity': ['case', isOperating, 0.9, isPipeline, 0.12, 0.4] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-opacity': ['case', isOperating, 0.9, isPipeline, 0.12, isStopped, 0, 0.4] as unknown as mapboxgl.ExpressionSpecification,
           // A sharp edge reads as "outline"; the glow is what makes a dot look solid.
-          'circle-blur': ['case', isPipeline, 0, 0.3] as unknown as mapboxgl.ExpressionSpecification,
-          'circle-stroke-width': ['case', isPipeline, 2, 0] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-blur': ['case', isPipeline, 0, isStopped, 0, 0.3] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-stroke-width': ['case', isPipeline, 2, isStopped, 1.5, 0] as unknown as mapboxgl.ExpressionSpecification,
           'circle-stroke-color': color,
-          'circle-stroke-opacity': 0.95,
+          'circle-stroke-opacity': ['case', isStopped, 0.7, 0.95] as unknown as mapboxgl.ExpressionSpecification,
         },
       });
 
@@ -1115,8 +1138,17 @@ export default function Map() {
           transform: 'translateY(-1px)',
         }}
       />
-      <span style={{ color: '#c8cfc4' }}>Hollow</span> — in the planning or build pipeline. Both are
-      drawn at once; the buttons above narrow to one.
+      <span style={{ color: '#c8cfc4' }}>Hollow</span> — in the planning or build pipeline.{' '}
+      <span
+        aria-hidden
+        style={{
+          display: 'inline-block', width: 8, height: 8, marginLeft: 4, marginRight: 5,
+          borderRadius: '50%', border: '1.5px solid rgba(200,207,196,0.7)', verticalAlign: 'middle',
+          transform: 'translateY(-1px)',
+        }}
+      />
+      <span style={{ color: '#c8cfc4' }}>Faint</span> — stopped: withdrawn, refused, or approval revoked.
+      All are drawn at once; the buttons above narrow to one.
     </>,
   );
 
@@ -1424,6 +1456,7 @@ export default function Map() {
           {([
             ['Operating', HERE_STAGES],
             ['In pipeline', COMING_STAGES],
+            ['Stopped', STOPPED_STAGES],
             ['Not recorded', ['unknown']],
           ] as const).map(([label, keys]) => {
             const present = keys.filter((k) => stages.includes(k));
@@ -1587,6 +1620,7 @@ export default function Map() {
                     sel.length === set.length && set.every((k) => stageFilter.has(k));
                   if (same(HERE_STAGES)) return 'Operating';
                   if (same(COMING_STAGES)) return 'In pipeline';
+                  if (same(STOPPED_STAGES)) return 'Stopped';
                   return sel.map((k) => STAGE_LABELS[k] ?? k).join(', ');
                 })()}
               </span>

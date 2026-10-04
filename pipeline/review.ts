@@ -21,7 +21,7 @@ import { getInfraRows, type InfraRow } from './lib/notion.ts';
 const STALE_DAYS = 60;
 const VERIFY_RE = /source to verify|to confirm|verify on|to be confirmed|pathway to confirm/i;
 const MINISTERIAL_RE = /ministerial|fast-track/i;
-const TERMINAL = new Set(['Producing', 'Withdrawn', 'Refused']);
+const TERMINAL = new Set(['Producing', 'Withdrawn', 'Refused', 'Approval revoked']);
 
 function daysSince(iso: string | null): number | null {
   if (!iso) return null;
