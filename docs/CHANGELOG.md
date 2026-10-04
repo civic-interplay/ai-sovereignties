@@ -4,6 +4,74 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-10-03 — human verification recorded
+
+- **35 rows marked Human-verified (Verified by SB, 3 Oct).** SB confirmed the
+  rows in a Claude Code session, and the agent recorded the sign-off.
+  - Western Downs Digital Park (Dalby). Its notes now open with the
+    verification, so no agent demotes it again under the `discover.ts`
+    contract.
+  - 34 rows from the City of Melbourne consolidated list (June 2026). AWS
+    Cobblebank keeps its earlier `audit-2026-08-10` credit alongside SB's.
+- **11 City of Melbourne rows held back.** Their own notes still say
+  "operational status unverified", or "Is this it?" for NEXTDC Craigieburn.
+  Marking them verified would contradict the row. They wait for SB to confirm
+  each site exists and operates.
+- **Swanbank duplicate merged.** A 30 Sep `[PROPOSED]` row repeated the 26 Aug
+  one. Its notes moved into the older row and it left the tracker.
+
+## 2026-09-30 — news sweep, 22–30 September
+
+Every entry in this batch rests on search-result snippets. The session's
+network policy blocked page fetches, so no source document was opened. Each
+change is tagged `NOT VERIFIED` in the row's Notes, with the URL that would
+verify it.
+
+- **Two status changes on the map.**
+  - Goodman Project Mars (Lane Cove West) is withdrawn. Goodman asked DPHI on
+    28 Sep to stop assessing SSD-82052708, six days after telling the Senate
+    inquiry it would decide by year end. Status is cleared and the title marked
+    `[withdrawn]`, following the Hazelmere convention.
+  - Glendenning Road (SSD-73761707, $2.17bn) is now approved, dated 14 Sep.
+    Capacity stays blank: three power figures are reported (202.4 / 235 / 193.6
+    MW) under three different definitions.
+- **Notes appended, status held.**
+  - Firmus Wesley Vale: work stopped by Latrobe Council, and a state call-in
+    was requested.
+  - Firmus Long Reach: six TASCAT appeals lodged.
+  - Firmus Launceston: its own source may call it under construction.
+  - Hydro Tasmania: no decision yet.
+  - Campbellfield: the EPA objected.
+  - NEXTDC M3 expansion: 66 kV poles went up in residential streets.
+  - NEXTDC M4: the construction start is unconfirmed, and the permit gives
+    150 MW against the 162 MW in the row.
+  - Western Downs: the Anthropic lease is subject to FIRB. `2285/2026/MCU` is
+    Swanbank's reference, not this project's.
+  - The Anthropic MOU row is linked to Western Downs.
+  - ASM Dubbo: operator changed to Energy Fuels, acquisition completed 28 Aug.
+  - ANSTO: open and running a pilot. Arafura: Strategic Reserve offtake.
+    Northern Minerals: the FID deadline is today.
+  - The VIC plan may be an election commitment.
+  - The NSW LC inquiry report was due today; tabling is unconfirmed.
+  - Westech Pilbara has no traceable source and needs a human decision.
+- **14 `[PROPOSED]` rows**, with no type and no coordinates, per the
+  `discover.ts` contract.
+  - Sites: CDC Wagga Wagga (1.4 GW), CDC Beard 2 (ACT), Southern Highlands
+    Moss Vale (gas-paired), Northern Concept Swanbank, IREN Bundey (the first
+    SA row), Beetaloo Digital Weddell, Energy North Project Ares, Gingerah
+    Project Meridien, and Goodman 433 Mount Atkinson Rd.
+  - Policy: the federal "Getting it right" consultation (closes 9 Oct), the
+    Senate AI and data centres inquiry (reports 16 Nov), the Tasmanian draft
+    Expectations (closes 12 Oct), the SA Data Centre Strategy, and the ACT
+    framework.
+- **ACT option added to `State / Region` (3 Oct).** The code already expected
+  it: `STATE_SLUGS` in `src/lib/tracker.ts` routes `/sheets/act`, the news page
+  maps `ACT`, and `discover.ts` lists it as a state. But the Notion select never
+  had the option, so the ACT sheet was always empty, and any ACT proposal from
+  discovery would have failed to write. Microsoft Azure — Canberra Region
+  moves from National / Federal to ACT, along with the two ACT `[PROPOSED]`
+  rows from this sweep.
+
 ## 2026-09-19 — v0.2.1
 
 - **Rejected candidates leave `sites.csv`.** 15 rows the discovery pipeline
