@@ -65,6 +65,11 @@ export interface TrackerRow {
   communityConcern: string | null;
   announcementDate: string | null;
   approvalDate: string | null;
+  // When the row entered the tracker: the page's creation time. Not the Date
+  // Logged field, which some rows use for the event date (an approval or an
+  // announcement), placing them before the tracker existed. Drives the
+  // tracker's own timeline on /trends.
+  dateLogged: string | null;
   approvalBody: string;
   campusGroup: string;
   mineralFocus: string[];
@@ -129,7 +134,7 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
     });
     if (!res.ok) throw new Error(`Notion query failed (${res.status}): ${await res.text()}`);
     const data = (await res.json()) as {
-      results: Array<{ id: string; last_edited_time?: string; properties: Record<string, NotionProp> }>;
+      results: Array<{ id: string; created_time?: string; last_edited_time?: string; properties: Record<string, NotionProp> }>;
       has_more: boolean;
       next_cursor: string | null;
     };
@@ -160,6 +165,7 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
         communityConcern: label(selectName(p['Community Concern'])),
         announcementDate: dateVal(p['Announcement date']),
         approvalDate: dateVal(p['Approval date']),
+        dateLogged: page.created_time?.slice(0, 10) ?? null,
         approvalBody: plain(p['State approval body']),
         campusGroup: plain(p['Campus group']),
         mineralFocus: multiNames(p['Mineral Focus']),

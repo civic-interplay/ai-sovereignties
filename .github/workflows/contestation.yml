@@ -86,10 +86,14 @@ jobs:
       - name: Commit snapshot and compute log
         if: always()
         run: |
-          if ! git diff --quiet docs/compute-log.jsonl zenodo/ 2>/dev/null; then
+          # A new snapshot gets a point on the /trends timeline.
+          if ! git diff --quiet zenodo/sites.csv 2>/dev/null; then
+            node -e "const f='src/data/snapshots.json',fs=require('fs'),s=JSON.parse(fs.readFileSync(f)),d=new Date().toISOString().slice(0,10);if(!s.some(x=>x.date===d)){s.push({date:d,label:'Pipeline run'});fs.writeFileSync(f,JSON.stringify(s,null,2)+'\\n')}"
+          fi
+          if ! git diff --quiet docs/compute-log.jsonl zenodo/ src/data/snapshots.json 2>/dev/null; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add docs/compute-log.jsonl zenodo/
+            git add docs/compute-log.jsonl zenodo/ src/data/snapshots.json
             git commit -m "Snapshot and compute log: pipeline run $(date -u +%Y-%m-%d)"
             git pull --rebase origin main && git push
           fi
