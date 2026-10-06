@@ -417,11 +417,11 @@ export default async function Glossary() {
           doi.org/10.5281/zenodo.21026429
         </a>
         . These rules are maintained alongside the tracker and revised in the open —{' '}
-        <a href="https://github.com/studioesem" style={{ color: CI_PERIWINKLE }}>
+        <a href="https://github.com/civic-interplay/ai-sovereignties" style={{ color: CI_PERIWINKLE }}>
           changes are versioned
         </a>
         . For the project framing, see the{' '}
-        <a href="https://civicinterplay.io/data-centres-map/" style={{ color: CI_PERIWINKLE }}>
+        <a href="https://civicinterplay.io/sovereignties/" style={{ color: CI_PERIWINKLE }}>
           About page ↗
         </a>
         .

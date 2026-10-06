@@ -130,7 +130,7 @@ export function SheetNav({ current }: { current: string }) {
       {link('/sheets', 'Data sheets', current === 'sheets')}
       {link('/glossary', 'Glossary & methods', current === 'glossary')}
       {link('/news', 'News feed', current === 'news')}
-      {link('https://civicinterplay.io/data-centres-map/', 'About ↗')}
+      {link('https://civicinterplay.io/sovereignties/', 'About ↗')}
       {link(CONTACT_URL, 'Contribute ↗')}
     </nav>
   );
