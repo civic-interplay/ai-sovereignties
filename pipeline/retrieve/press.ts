@@ -103,7 +103,8 @@ async function fetchFeed(key: string): Promise<Candidate[]> {
 async function fetchGuardian(apiKey: string): Promise<Candidate[]> {
   const from = new Date(Date.now() - 31 * 86400000).toISOString().slice(0, 10);
   const params = new URLSearchParams({
-    q: '("data centre" OR "data centres" OR "data center" OR hyperscale OR "rare earths") AND (Australia OR NSW OR Victoria OR Queensland OR Tasmania)',
+    // The Guardian's house style is "datacentre", one word.
+    q: '(datacentre OR datacentres OR "data centre" OR "data centres" OR "data center" OR hyperscale OR "rare earths") AND (Australia OR NSW OR Victoria OR Queensland OR Tasmania)',
     'from-date': from,
     'order-by': 'newest',
     'page-size': '50',
