@@ -19,3 +19,10 @@
 {"date":"2026-10-07","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":4,"input_tokens":32320,"output_tokens":6040}
 {"date":"2026-10-07","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28835,"output_tokens":5332}
 {"date":"2026-10-07","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":19,"input_tokens":148878,"output_tokens":8340}
+{"date":"2026-10-01","kind":"session","source":"claude-code","model":"claude-opus-5-5","calls":29,"input_tokens":53396,"output_tokens":10149,"cache_read_tokens":1480385}
+{"date":"2026-10-02","kind":"session","source":"claude-code","model":"claude-opus-5-5","calls":22,"input_tokens":95581,"output_tokens":13650,"cache_read_tokens":1785988}
+{"date":"2026-10-04","kind":"session","source":"claude-code","model":"claude-opus-5-5","calls":68,"input_tokens":342636,"output_tokens":44933,"cache_read_tokens":10054219}
+{"date":"2026-10-06","kind":"session","source":"claude-code","model":"claude-opus-5-5","calls":61,"input_tokens":323696,"output_tokens":68120,"cache_read_tokens":16392546}
+{"date":"2026-10-06","kind":"session","source":"claude-code-agents","model":"claude-opus-5-5","calls":139,"input_tokens":1008905,"output_tokens":13629,"cache_read_tokens":15097964}
+{"date":"2026-10-07","kind":"session","source":"claude-code","model":"claude-opus-5-5","calls":242,"input_tokens":2397481,"output_tokens":233157,"cache_read_tokens":124991212}
+{"date":"2026-10-07","kind":"session","source":"claude-code-agents","model":"claude-opus-5-5","calls":83,"input_tokens":346023,"output_tokens":7937,"cache_read_tokens":8101727}

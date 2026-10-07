@@ -256,3 +256,41 @@ than the thing that spent it.
 The prior entry's "unmeasured rather than estimated" was the right instinct
 applied to the wrong constraint. It is measured now, and the method is written
 down so the next session does not need asking.
+
+
+## 2026-10-01 to 2026-10-07 — Claude Opus 5.5 (1M context), via Claude Code
+
+Measured from the session transcript and the six research-agent transcripts on
+disk (the `usage` block on each assistant turn, de-duplicated by message id), and
+appended to `docs/compute-log.jsonl` per `COMPUTE.md`.
+
+| Date | Who | Calls | Input (incl. cache write) | Output | Cache read |
+| --- | --- | ---: | ---: | ---: | ---: |
+| 2026-10-01 | session | 29 | 53,396 | 10,149 | 1,480,385 |
+| 2026-10-02 | session | 22 | 95,581 | 13,650 | 1,785,988 |
+| 2026-10-04 | session | 68 | 342,636 | 44,933 | 10,054,219 |
+| 2026-10-06 | session | 61 | 323,696 | 68,120 | 16,392,546 |
+| 2026-10-06 | research agents | 139 | 1,008,905 | 13,629 | 15,097,964 |
+| 2026-10-07 | session | 242 | 2,397,481 | 233,157 | 124,991,212 |
+| 2026-10-07 | research agents | 83 | 346,023 | 7,937 | 8,101,727 |
+
+Fresh computation, the figure that counts: **about 4.6 million tokens in and
+0.39 million out** across 644 calls. The cache-read column (178 million) is the
+same long conversation re-read on each turn and is not added to the others.
+The pipeline's own runs this week (inbox, discovery, daily press scan; Claude
+Sonnet 5) are logged separately in `compute-log.jsonl` by the pipeline.
+
+**What it bought:** smaller map circles and a Code link on the map; the
+Not proceeding statuses; the Trends page and its governance figures; NSW and
+Victorian approvals passes (76 records, all but a handful read from the planning
+record); every Victorian fast-track permit checked on the live register, which
+overturned the published claim that all were granted without notice (three of
+nine were notified); a fact-check of the City of Melbourne submission; a second
+press strand checked daily; the Review dropdown for approving agent proposals;
+the method diagram; and the restructured tracker home on civicinterplay.io.
+
+**What it cost in errors, for the record:** a settings file was loaded in a way
+that printed two credentials into the session, and both were rotated; the live
+site's own Notion token was missed in that rotation, and the map's data, sheets,
+Trends and news pages were down for roughly 15 to 20 minutes until it was
+updated. Both are now written into the project's working notes.
