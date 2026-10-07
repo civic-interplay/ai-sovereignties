@@ -233,8 +233,8 @@ export default async function TrendsPage() {
           This Trends page captures information summarised by the Data Centre Tracker itself, and may not be a
           comprehensive summary of all data centre approvals during the period covered. Interested in the
           methodology for data gathering?{' '}
-          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>
-            See the method and definitions
+          <a href="https://civicinterplay.io/sovereignties/#methodology" style={{ color: CI_PERIWINKLE }}>
+            See how the Data Tracker works
           </a>
           .
         </p>
