@@ -7,7 +7,7 @@
 // includes our own additions. The history of the BUILD-OUT needs approval
 // dates, which most rows do not yet carry; that chart waits for the approvals
 // pass rather than charting the gaps.
-import { fetchTrackerRows, lastUpdated } from '@/lib/tracker';
+import { fetchTrackerRows, lastUpdated, isStateAssessed } from '@/lib/tracker';
 import snapshots from '@/data/snapshots.json';
 import { SheetShell, SheetNav, SheetTitle, Panel, Stat, SectionHead, Footnote, ScopeNote, Updated, CI_PERIWINKLE } from '../sheets/sheet-ui';
 import { SERIES, Legend, StackedBars, PercentBars, PairedBars, CumulativeLine, Dumbbell, TableView, ChartNote, type Key } from './charts';
@@ -40,6 +40,16 @@ const STAGE_KEYS: Key[] = [
   { key: 'unrecorded', label: 'Stage not recorded', color: SERIES.muted },
 ];
 
+// Four equal columns, so tiles line up whatever the length of their notes.
+const STAT_GRID = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 24 } as const;
+
+// Held back until the October tracker review lands. The VIC approvals pass
+// (docs/internal/approvals-2025-06) found most "Exempted" public-notice values
+// unchecked or wrong, and two approval dates (Perri, South Morang) are
+// amendment dates. Flip to true once those rows are corrected.
+const SHOW_NOTICE_FIGURE = false;
+const SHOW_APPROVAL_GAPS = false;
+
 const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
 
 export default async function TrendsPage() {
@@ -47,16 +57,12 @@ export default async function TrendsPage() {
   const dc = rows.filter((r) => r.isDataCentre);
   const subset = dc.filter((r) => r.inSubset);
 
-  // 1. What the tracker holds.
+  // 1. AI infrastructure tracked, by type.
   const typed = rows.filter((r) => r.infraType);
-  const untyped = rows.length - typed.length;
   const extraction = typed.filter((r) => /Mine|Refinery|Processing/i.test(r.infraType ?? '')).length;
-  const otherTyped = typed.length - dc.length - extraction;
   const compositionKeys: Key[] = [
     { key: 'dc', label: 'Data centres', color: SERIES.operating },
-    { key: 'extraction', label: 'Mines and refineries', color: '#7d8781' },
-    { key: 'other', label: 'Policy and other signals', color: '#a9b1ab' },
-    { key: 'untyped', label: 'Not yet typed (proposed by the discovery agent)', color: '#dde1dc' },
+    { key: 'extraction', label: 'Mines and refineries', color: SERIES.forest },
   ];
 
   // 2–4. By state, on the analysis subset.
@@ -97,9 +103,45 @@ export default async function TrendsPage() {
     }),
     { total: 0, operating: 0, pipeline: 0, notProceeding: 0, unrecorded: 0, withMW: 0, opMW: 0, opN: 0, pipeMW: 0, pipeN: 0 },
   );
-  // A ratio of two sums is only worth printing when both sides rest on enough sites.
-  const ratioOK = all.opN >= 5 && all.pipeN >= 5;
-  const ratio = ratioOK && all.opMW ? all.pipeMW / all.opMW : null;
+  // Sites with no published MW figure, approved (incl. under construction)
+  // against proposed (not yet approved).
+  const APPROVED = new Set(['Approved / permitted', 'Under Construction']);
+  const PROPOSED = new Set(['Application lodged', 'Before the Minister', 'Feasibility', 'Exploration']);
+  const noMW = (set: Set<string>) => {
+    const inSet = subset.filter((r) => r.status && set.has(r.status));
+    return { count: inSet.filter((r) => !((r.capacity ?? 0) > 0)).length, total: inSet.length };
+  };
+  const noMWApproved = noMW(APPROVED);
+  const noMWProposed = noMW(PROPOSED);
+  const noMWByState = [...states, 'All states'].map((st) => {
+    const sel = (set: Set<string>) => {
+      const inSet = subset.filter((r) => r.status && set.has(r.status) && (st === 'All states' || r.state === st));
+      const count = inSet.filter((r) => !((r.capacity ?? 0) > 0)).length;
+      return { pct: pct(count, inSet.length), count, total: inSet.length };
+    };
+    const a = sel(APPROVED);
+    const b = sel(PROPOSED);
+    return { label: st, a: a.pct, an: a.count, aOf: a.total, b: b.pct, bn: b.count, bOf: b.total };
+  }).filter((r) => r.aOf + r.bOf > 0);
+  // Where each published MW figure comes from.
+  const sourceOf = (r: (typeof subset)[number]) =>
+    r.mwSource === 'Planning document' ? 'planning' : r.mwSource === 'Company or news' ? 'press' : 'unrecorded';
+  const mwSourceRows = [...states, 'All states'].map((st) => {
+    const withFig = subset.filter((r) => (r.capacity ?? 0) > 0 && (st === 'All states' || r.state === st));
+    return {
+      label: st,
+      values: {
+        planning: withFig.filter((r) => sourceOf(r) === 'planning').length,
+        press: withFig.filter((r) => sourceOf(r) === 'press').length,
+        unrecorded: withFig.filter((r) => sourceOf(r) === 'unrecorded').length,
+      },
+    };
+  }).filter((r) => r.values.planning + r.values.press + r.values.unrecorded > 0);
+  const MW_SOURCE_KEYS: Key[] = [
+    { key: 'planning', label: 'Planning document', color: SERIES.operating },
+    { key: 'press', label: 'Company release or news report', color: SERIES.pipeline },
+    { key: 'unrecorded', label: 'MW figure published, source not yet recorded', color: SERIES.muted },
+  ];
 
   // 5. The record over time: entries logged per month, cumulative.
   const logged = rows.map((r) => r.dateLogged).filter(Boolean).sort() as string[];
@@ -123,52 +165,120 @@ export default async function TrendsPage() {
     .filter((r) => r.announcementDate && r.approvalDate)
     .map((r) => ({ label: r.name.length > 42 ? r.name.slice(0, 40) + '…' : r.name, a: r.announcementDate!, b: r.approvalDate! }))
     .sort((x, y) => x.b.localeCompare(y.b));
-  const withAnnounce = dc.filter((r) => r.announcementDate).length;
-  const withApproval = dc.filter((r) => r.approvalDate).length;
+
+  // Headline governance figures, all on the analysis subset so they share a
+  // denominator with the charts below.
+  const isContested = (r: (typeof subset)[number]) =>
+    r.communityConcern === 'Active Opposition' || r.communityConcern === 'Emerging Concern';
+  const withWater = subset.filter((r) => r.waterRisk && r.waterRisk !== 'Not applicable').length;
+  const contested = subset.filter(isContested);
+  // Not "withdrawn due to contestation": the record shows that a contested
+  // site stopped, not why it stopped (see the Not proceeding glossary entry).
+  const contestedStopped = contested.filter((r) => stageOf(r.status) === 'notProceeding').length;
+  const fastTracked = subset.filter((r) => isStateAssessed(r.pathway));
+  // Only rows whose notice status is recorded either way; "Unknown" and blank
+  // stay out of the denominator rather than counting as either.
+  const noticeKnown = fastTracked.filter((r) => r.publicNotice === 'Exhibited' || r.publicNotice === 'Exempted');
+  const fastNoNotice = noticeKnown.filter((r) => r.publicNotice === 'Exempted').length;
+  const fastContested = fastTracked.filter(isContested).length;
+
+  // Is the site's planning record retrievable through a public API? Read from
+  // the per-state data-access table (DATA_ACCESS in lib/tracker): NSW council
+  // DAs come through the keyless ePlanning API; NSW State-assessed projects and
+  // Victorian ministerial permits have no public API. Anything the table does
+  // not cover is "not yet assessed", never counted as "no".
+  const apiStatus = (r: (typeof subset)[number]): 'api' | 'none' | 'unassessed' => {
+    if (r.state === 'New South Wales') {
+      if (r.pathway === 'Local council') return 'api';
+      if (r.pathway === 'State assessed' || r.pathway === 'Ministerial fast-track') return 'none';
+    }
+    if (r.state === 'Victoria' && r.pathway === 'Ministerial fast-track') return 'none';
+    return 'unassessed';
+  };
+  const apiAssessed = subset.filter((r) => apiStatus(r) !== 'unassessed');
+  const viaAPI = apiAssessed.filter((r) => apiStatus(r) === 'api').length;
+  const apiByState = states
+    .map((st) => {
+      const inSt = subset.filter((r) => r.state === st);
+      const assessed = inSt.filter((r) => apiStatus(r) !== 'unassessed');
+      return { label: st, count: assessed.filter((r) => apiStatus(r) === 'api').length, total: assessed.length, unassessed: inSt.length - assessed.length };
+    })
+    .filter((r) => r.total > 0);
 
   return (
     <SheetShell>
       <SheetNav current="trends" />
       <SheetTitle
         kicker="Trends"
-        title="What is operating, what is proposed, and what gets disclosed"
+        title="Key Trends in Data Centre Approvals"
         sub={
           <>
-            Counts and capacity by state, how many sites publish a power figure, and how the public record has changed
-            since the tracker began.
+            This Trends sheet covers information captured in the Data Centre Tracker, developed to assess the changing
+            governance landscape of infrastructural AI as it reshapes urban planning frameworks and concepts of digital
+            public value and digital sovereignty.
           </>
         }
       />
-      <Updated date={lastUpdated(rows)} style={{ margin: '-8px 0 18px' }} />
+      <div style={{ color: '#525b56', fontSize: 13, lineHeight: 1.6, maxWidth: 640, margin: '-16px 0 24px' }}>
+        <p style={{ margin: '0 0 10px', fontWeight: 600, color: '#0a0c0b' }}>
+          Specifically, the framework examines the different ways infrastructural AI is being governed and reported
+          across the Australian policy landscape, with a focus on data transparency and democratic accountability.
+        </p>
+        <p style={{ margin: 0, fontSize: 12.5 }}>
+          <em>Please note:</em> to date, infrastructural AI is tracked through data centres, mines and refineries, and
+          reporting against resource demands. Future editions will be expanded to include broader public inputs into AI
+          infrastructure.
+        </p>
+        <p style={{ margin: '10px 0 0', fontSize: 12.5 }}>
+          This Trends page captures information summarised by the Data Centre Tracker itself, and may not be a
+          comprehensive summary of all data centre approvals during the period covered. Interested in the
+          methodology for data gathering?{' '}
+          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>
+            See the method and definitions
+          </a>
+          .
+        </p>
+      </div>
+      <Updated date={lastUpdated(rows)} style={{ margin: '-8px 0 8px' }} />
+      <p style={{ fontSize: 12.5, margin: '0 0 18px' }}>
+        <a href="https://doi.org/10.5281/zenodo.21026429" style={{ color: CI_PERIWINKLE }}>
+          Download the full tracker dataset (CSV, Zenodo)
+        </a>
+        <span style={{ color: '#5f6a64' }}> · every table below can also be downloaded as CSV</span>
+      </p>
 
-      <Panel style={{ display: 'flex', flexWrap: 'wrap', gap: 28 }}>
-        <Stat value={String(rows.length)} label="Tracker entries" note={`${dc.length} are data centres`} />
-        <Stat value={`${pct(dc.length, typed.length)}%`} label="Data centres" note={`of the ${typed.length} entries with a type`} />
-        <Stat value={`${pct(all.withMW, all.total)}%`} label="Report MW" note={`${all.withMW} of ${all.total} data centres publish any power figure`} />
-        <Stat value={String(snapshots.length)} label="Snapshots" note={`frozen since ${snapshots[0]?.date ?? '—'}`} />
+      <Panel style={STAT_GRID}>
+        <Stat value={String(rows.length)} label="Total entries" note={`${dc.length} are data centres`} />
+        <Stat value={`${pct(dc.length, typed.length)}%`} label="Are data centres" note={`of the ${typed.length} tracker entries with a type`} />
+        <Stat value={`${pct(all.withMW, all.total)}%`} label="Report on energy" note={`${all.withMW} of ${all.total} data centres publish any power (MW) figure`} />
+        <Stat value={`${pct(withWater, all.total)}%`} label="Water risk assessed" note={`${withWater} of ${all.total} have a water-risk rating, mostly from company cooling claims`} />
+        <Stat value={`${pct(viaAPI, apiAssessed.length)}%`} label="Planning data via public API" note={`${viaAPI} of the ${apiAssessed.length} sites whose planning source has been assessed; ${all.total - apiAssessed.length} not yet assessed`} />
+      </Panel>
+      <Panel style={{ ...STAT_GRID, marginTop: 12 }}>
+        <Stat value={`${pct(contested.length, all.total)}%`} label="Community contestation" note={`${contested.length} of ${all.total} data centres face active or emerging opposition`} />
+        <Stat value={`${pct(contestedStopped, contested.length)}%`} label="Contested, not proceeding" note={`${contestedStopped} of ${contested.length} contested sites were withdrawn or refused. The record shows they stopped, not why.`} />
+        {SHOW_NOTICE_FIGURE && <Stat value={noticeKnown.length ? `${pct(fastNoNotice, noticeKnown.length)}%` : '—'} label="Fast-tracked, no exhibition" note={`${fastNoNotice} of the ${noticeKnown.length} State fast-tracked sites whose notice status is known were exempted from public exhibition`} />}
+        <Stat value={`${pct(fastContested, fastTracked.length)}%`} label="Fast-tracked and contested" note={`${fastContested} of ${fastTracked.length} State fast-tracked sites face community opposition`} />
       </Panel>
 
-      <SectionHead>What the tracker holds</SectionHead>
+      <SectionHead>AI infrastructure tracked by type</SectionHead>
       <Panel>
         <Legend keys={compositionKeys} />
         <StackedBars
-          rows={[{ label: 'All entries', values: { dc: dc.length, extraction, other: otherTyped, untyped } }]}
+          rows={[{ label: 'Infrastructure', values: { dc: dc.length, extraction } }]}
           keys={compositionKeys}
           labelWidth={110}
         />
         <ChartNote>
-          {pct(dc.length, typed.length)}% of typed entries are data centres. The rest trace the supply chain behind them
-          (mines and refineries) and the policy around them. Entries the discovery agent proposes stay untyped until a
-          person reviews them, so they are counted here but kept out of every chart below.
+          {dc.length} data centres and {extraction} mines and refineries, the supply chain behind them.
         </ChartNote>
         <TableView
-          head={['Category', 'Entries', 'Share of all']}
+          head={['Type', 'Sites', 'Share']}
           rows={[
-            ['Data centres', dc.length, `${pct(dc.length, rows.length)}%`],
-            ['Mines and refineries', extraction, `${pct(extraction, rows.length)}%`],
-            ['Policy and other signals', otherTyped, `${pct(otherTyped, rows.length)}%`],
-            ['Not yet typed', untyped, `${pct(untyped, rows.length)}%`],
+            ['Data centres', dc.length, `${pct(dc.length, dc.length + extraction)}%`],
+            ['Mines and refineries', extraction, `${pct(extraction, dc.length + extraction)}%`],
           ]}
+          csv="infrastructure-by-type"
         />
       </Panel>
 
@@ -183,40 +293,74 @@ export default async function TrendsPage() {
           keys={STAGE_KEYS}
         />
         <ChartNote>
-          Read this as what the tracker has found, not a census. Victoria&rsquo;s operating count is high because the City
-          of Melbourne shared its full list of existing sites; elsewhere, coverage was built mostly from planning
-          applications, so existing sites are under-counted. Pipeline counts were gathered the same way in every state and
-          compare more fairly. Counts use the analysis subset (see{' '}
-          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>
-            glossary
-          </a>
-          ): {dc.length - subset.length} small legacy sites with no planning trail are left out.
+          These counts report what the tracker has found, and should be checked against the planning documents for
+          each site.
         </ChartNote>
         <TableView
           head={['State', 'Operating', 'In pipeline', 'Not proceeding', 'Not recorded', 'Total']}
           rows={[...byState, { state: 'All states', ...all }].map((r) => [r.state, r.operating, r.pipeline, r.notProceeding, r.unrecorded, r.total])}
+          csv="sites-by-state-and-stage"
         />
       </Panel>
 
-      <SectionHead>How many sites publish a power figure</SectionHead>
+      <SectionHead>% reporting power capacity in the public domain</SectionHead>
       <Panel>
         <PercentBars
           rows={[...byState.map((r) => ({ label: r.state, count: r.withMW, total: r.total })), { label: 'All states', count: all.withMW, total: all.total }]}
           color={SERIES.operating}
         />
         <ChartNote>
-          Share of data centre sites with any public megawatt figure, from a planning document, a company release or
-          credible reporting. Where there is no figure the tracker records a blank, not a zero. Many of these figures come from
-          company announcements, not the planning record. In the planning record the gap is wider: in Victoria, none of
-          the 12 approvals whose documents could be checked disclosed a megawatt or water figure.
+          This chart shows the share of data centres tracked with a published megawatt (MW) figure.
         </ChartNote>
         <TableView
           head={['State', 'Sites with a MW figure', 'Sites', 'Share']}
           rows={[...byState, { state: 'All states', ...all }].map((r) => [r.state, r.withMW, r.total, `${pct(r.withMW, r.total)}%`])}
+          csv="mw-reporting-by-state"
         />
       </Panel>
 
-      <SectionHead>Disclosed capacity: operating and proposed</SectionHead>
+      <Panel style={{ marginTop: 12 }}>
+        <div style={{ fontSize: 13, fontWeight: 600, color: '#0a0c0b', marginBottom: 6 }}>Data source reported</div>
+        <Legend keys={MW_SOURCE_KEYS} />
+        <StackedBars rows={mwSourceRows} keys={MW_SOURCE_KEYS} />
+        <ChartNote>
+          Total number of data centres with published MW figures, by publication source.
+        </ChartNote>
+        <TableView
+          head={['State', 'Planning document', 'Company or news', 'Source not yet recorded']}
+          rows={mwSourceRows.map((r) => [r.label, r.values.planning, r.values.press, r.values.unrecorded])}
+          csv="mw-figure-source-by-state"
+        />
+      </Panel>
+
+      <Panel style={{ marginTop: 12 }}>
+        <div style={{ fontSize: 13, fontWeight: 600, color: '#0a0c0b', marginBottom: 6 }}>No MW figure: approved and proposed sites</div>
+        <Legend
+          keys={[
+            { key: 'a', label: 'Approved (incl. under construction)', color: SERIES.operating },
+            { key: 'b', label: 'Proposed (not yet approved)', color: SERIES.pipeline },
+          ]}
+        />
+        <PairedBars
+          rows={noMWByState}
+          keys={[
+            { key: 'a', label: 'Approved', color: SERIES.operating },
+            { key: 'b', label: 'Proposed', color: SERIES.pipeline },
+          ]}
+          unit="%"
+          fixedMax={100}
+        />
+        <ChartNote>
+          Share of sites with no published MW figure.
+        </ChartNote>
+        <TableView
+          head={['State', 'Approved: no MW figure', 'Approved sites', 'Proposed: no MW figure', 'Proposed sites']}
+          rows={noMWByState.map((r) => [r.label, `${r.an} (${r.a}%)`, r.aOf, `${r.bn} (${r.b}%)`, r.bOf])}
+          csv="no-mw-figure-by-state"
+        />
+      </Panel>
+
+      <SectionHead>Total published power capacity (MW): operating and proposed</SectionHead>
       <Panel>
         <Legend keys={[STAGE_KEYS[0], STAGE_KEYS[1]]} />
         <PairedBars
@@ -228,15 +372,33 @@ export default async function TrendsPage() {
           unit=" MW"
         />
         <ChartNote>
-          Totals add only the sites that publish a figure, and every bar says how many that is. They are a floor, not
-          an estimate of the real total.{' '}
-          {ratio
-            ? `On published figures, proposed capacity is about ${ratio.toFixed(1)} times operating capacity (${all.pipeMW.toLocaleString('en-AU')} MW from ${all.pipeN} sites, against ${all.opMW.toLocaleString('en-AU')} MW from ${all.opN}). Treat that as an indication: it rests on the sites that chose to publish.`
-            : 'Too few sites publish a figure to compare proposed with operating capacity.'}
+          Total power capacity, according to published MW figures.
         </ChartNote>
         <TableView
           head={['State', 'Operating MW', 'from sites', 'Pipeline MW', 'from sites']}
           rows={[...byState, { state: 'All states', ...all }].map((r) => [r.state, r.opMW, `${r.opN} of ${r.operating}`, r.pipeMW, `${r.pipeN} of ${r.pipeline}`])}
+          csv="published-capacity-by-state"
+        />
+      </Panel>
+
+      <SectionHead>Planning data available via a public API</SectionHead>
+      <Panel>
+        <PercentBars
+          rows={[...apiByState, { label: 'All assessed', count: viaAPI, total: apiAssessed.length, unassessed: 0 }]}
+          color={SERIES.operating}
+        />
+        <ChartNote>
+          A measure of how much governance data is machine-readable for civic AI evaluation: the share of data centres
+          whose planning record can be retrieved through a publicly accessible API, among sites whose planning source
+          has been assessed. Records that exist only as web pages and PDFs can still be read, but only by hand or by
+          scraping, which is slower, more fragile and harder to audit. NSW council applications come through the keyless NSW ePlanning API;
+          NSW State-assessed projects and Victorian ministerial permits are published only as web pages and documents.
+          {' '}{all.total - apiAssessed.length} sites, including every site outside NSW and Victoria, are not yet assessed.
+        </ChartNote>
+        <TableView
+          head={['State', 'Via public API', 'Sites assessed', 'Share', 'Not yet assessed']}
+          rows={apiByState.map((r) => [r.label, r.count, r.total, `${pct(r.count, r.total)}%`, r.unassessed])}
+          csv="planning-data-via-public-api"
         />
       </Panel>
 
@@ -245,13 +407,14 @@ export default async function TrendsPage() {
         <CumulativeLine points={timeline} events={snapshots} color={SERIES.operating} unit="entries" />
         <ChartNote>
           Entries in the tracker by the month they were logged, with the dates the full dataset was frozen as a
-          snapshot. This is the history of the record, not of the build-out: the August jump is the City of
-          Melbourne&rsquo;s list arriving, not 70 new data centres. Each snapshot is kept in the public repository, so
-          any figure on this site can be checked against what the record said on that date.
+          snapshot. Each snapshot is kept in the public
+          repository, so any figure on this site can be checked against what the record said on that date.
         </ChartNote>
-        <TableView head={['Month', 'Logged', 'Total']} rows={timeline.map((p) => [p.month, p.added, p.total])} />
+        <TableView head={['Month', 'Logged', 'Total']} rows={timeline.map((p) => [p.month, p.added, p.total])} csv="tracker-entries-by-month" />
       </Panel>
 
+      {SHOW_APPROVAL_GAPS && (
+        <>
       <SectionHead>From announcement to approval</SectionHead>
       <Panel>
         {dated.length >= 2 ? (
@@ -266,14 +429,12 @@ export default async function TrendsPage() {
           </>
         ) : null}
         <ChartNote>
-          Only {dated.length} data centres carry both dates ({withAnnounce} have an announcement date, {withApproval} an
-          approval date), so this shows the few cases the record can document, not a pattern. Where a project was
-          marketed long before it was assessed, the gap shows it. A fuller approvals record from June 2025, with each
-          approval&rsquo;s pathway and whether it went on public exhibition, is being compiled from the state planning
-          registers and will be added here.
+          Summary of time from announcement to approval, based on information captured in the tracker.
         </ChartNote>
-        <TableView head={['Site', 'Announced', 'Approved']} rows={dated.map((r) => [r.label, r.a, r.b])} />
+        <TableView head={['Site', 'Announced', 'Approved']} rows={dated.map((r) => [r.label, r.a, r.b])} csv="announcement-to-approval" />
       </Panel>
+        </>
+      )}
 
       <Footnote>
         Live from the tracker on each visit. Snapshot history:{' '}

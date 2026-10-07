@@ -6,19 +6,30 @@
 //   - bars at most 18px thick, 4px rounded data-end, square at the baseline
 //   - a 2px surface gap between stacked segments, never a stroke around them
 //   - text in ink tokens, never the series colour; identity sits in swatches
-//   - every mark carries a <title> so hover and screen readers get the value,
-//     and every chart has a table view beneath it, so nothing is hover-only
-//   - palette validated (light, on #ffffff): #2a78d6 / #eb6834 / #4a3aa7 pass
-//     every adjacent check, worst CVD ΔE 24.7
+//   - every mark carries a data-tip (value|label), shown by ChartFrame on hover,
+//     tap or keyboard focus, and an aria-label; every chart also has a table
+//     view beneath it, so nothing is hover-only
+//   - palette from the Civic Interplay brand, validated all-pairs on #ffffff:
+//     purple #7D50BD / terracotta #D16D54 / teal-blue #1f8aa8 pass every
+//     check (worst CVD ΔE 9.4, normal-vision 18.3, all >= 3:1). The brand's
+//     periwinkle and forest failed (too light / too grey), so the third slot
+//     is a deeper teal-blue that sits between them
 
 import type { ReactNode } from 'react';
+import ChartFrame from './ChartFrame';
+
+// Props that make an SVG mark interactive: tooltip, focusable, labelled.
+function tip(value: string, label: string) {
+  return { 'data-tip': `${value}|${label}`, tabIndex: 0, 'aria-label': `${label}: ${value}` } as const;
+}
 
 export const SERIES = {
-  operating: '#2a78d6',
-  pipeline: '#eb6834',
-  notProceeding: '#4a3aa7',
-  muted: '#c9cfca', // de-emphasis grey: "not recorded", context categories
-  track: '#eef0ed',
+  operating: '#7D50BD', // brand purple
+  pipeline: '#D16D54', // brand terracotta
+  notProceeding: '#1f8aa8', // deep teal-blue (validated third slot)
+  muted: '#d8d0c4', // sand-tinted neutral: "not recorded"
+  forest: '#454E41', // brand forest: context categories
+  track: '#efebe4',
 };
 
 const INK = '#2b312e';
@@ -68,7 +79,8 @@ export function StackedBars({
   const H = rows.length * rowH + 4;
   const max = Math.max(1, ...rows.map((r) => keys.reduce((s, k) => s + (r.values[k.key] ?? 0), 0)));
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" style={{ display: 'block', overflow: 'visible' }}>
+    <ChartFrame>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="group" style={{ display: 'block', overflow: 'visible' }}>
       {rows.map((r, i) => {
         const y = i * rowH + (rowH - BAR) / 2;
         const total = keys.reduce((s, k) => s + (r.values[k.key] ?? 0), 0);
@@ -87,9 +99,7 @@ export function StackedBars({
               const d = barPath(x, y, w, BAR, last);
               x += full;
               return (
-                <path key={k.key} d={d} fill={k.color}>
-                  <title>{`${r.label} · ${k.label}: ${v.toLocaleString('en-AU')}${unit}`}</title>
-                </path>
+                <path key={k.key} d={d} fill={k.color} {...tip(`${v.toLocaleString('en-AU')}${unit}`, `${r.label} · ${k.label}`)} />
               );
             })}
             <text x={labelWidth + (total / max) * plotW + 8} y={y + BAR / 2 + 4} fontSize={12} fill={MID}>
@@ -101,6 +111,7 @@ export function StackedBars({
         );
       })}
     </svg>
+    </ChartFrame>
   );
 }
 
@@ -119,7 +130,8 @@ export function PercentBars({
   const rowH = 32;
   const H = rows.length * rowH + 22;
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" style={{ display: 'block', overflow: 'visible' }}>
+    <ChartFrame>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="group" style={{ display: 'block', overflow: 'visible' }}>
       {[0, 25, 50, 75, 100].map((t) => {
         const x = labelWidth + (t / 100) * plotW;
         return (
@@ -140,9 +152,11 @@ export function PercentBars({
             <text x={labelWidth - 10} y={y + BAR / 2 + 4} textAnchor="end" fontSize={12.5} fill={INK}>
               {r.label}
             </text>
-            <path d={barPath(labelWidth, y, Math.max(w, r.count ? 2 : 0), BAR, true)} fill={color}>
-              <title>{`${r.label}: ${r.count} of ${r.total} sites (${pct.toFixed(0)}%)`}</title>
-            </path>
+            <path
+              d={barPath(labelWidth, y, Math.max(w, r.count ? 2 : 0), BAR, true)}
+              fill={color}
+              {...tip(`${pct.toFixed(0)}%`, `${r.label} · ${r.count} of ${r.total} sites`)}
+            />
             <text x={labelWidth + w + 8} y={y + BAR / 2 + 4} fontSize={12} fill={MID}>
               {pct.toFixed(0)}%<tspan fill={DIM}>{`  ${r.count} of ${r.total}`}</tspan>
             </text>
@@ -150,6 +164,7 @@ export function PercentBars({
         );
       })}
     </svg>
+    </ChartFrame>
   );
 }
 
@@ -160,18 +175,20 @@ export function PairedBars({
   keys,
   labelWidth = 150,
   unit = '',
+  fixedMax,
 }: {
   rows: { label: string; a: number; an: number; aOf: number; b: number; bn: number; bOf: number }[];
   keys: [Key, Key];
   labelWidth?: number;
   unit?: string;
+  fixedMax?: number; // e.g. 100 for percentages
 }) {
   const W = 900;
   const plotW = W - labelWidth - 170;
   const pair = BAR * 2 + 4;
   const rowH = pair + 16;
   const H = rows.length * rowH;
-  const max = Math.max(1, ...rows.flatMap((r) => [r.a, r.b]));
+  const max = fixedMax ?? Math.max(1, ...rows.flatMap((r) => [r.a, r.b]));
   const bar = (r: (typeof rows)[number], which: 'a' | 'b', y: number) => {
     const v = which === 'a' ? r.a : r.b;
     const n = which === 'a' ? r.an : r.bn;
@@ -181,19 +198,22 @@ export function PairedBars({
     return (
       <g>
         {v > 0 && (
-          <path d={barPath(labelWidth, y, Math.max(w, 2), BAR, true)} fill={k.color}>
-            <title>{`${r.label} · ${k.label}: ${v.toLocaleString('en-AU')}${unit}, from ${n} of ${of} sites`}</title>
-          </path>
+          <path
+            d={barPath(labelWidth, y, Math.max(w, 2), BAR, true)}
+            fill={k.color}
+            {...tip(`${v.toLocaleString('en-AU')}${unit}`, `${r.label} · ${k.label} · from ${n} of ${of} sites`)}
+          />
         )}
         <text x={labelWidth + (v > 0 ? w : 0) + 8} y={y + BAR / 2 + 4} fontSize={11.5} fill={MID}>
-          {of === 0 ? 'no sites at this stage' : v > 0 ? `${v.toLocaleString('en-AU')}${unit}` : 'no figure published'}
+          {of === 0 ? 'no sites at this stage' : v > 0 || fixedMax ? `${v.toLocaleString('en-AU')}${unit}` : 'no figure published'}
           {of > 0 && <tspan fill={DIM}>{`  ${n} of ${of} sites`}</tspan>}
         </text>
       </g>
     );
   };
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" style={{ display: 'block', overflow: 'visible' }}>
+    <ChartFrame>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="group" style={{ display: 'block', overflow: 'visible' }}>
       {rows.map((r, i) => {
         const y = i * rowH + 6;
         return (
@@ -207,6 +227,7 @@ export function PairedBars({
         );
       })}
     </svg>
+    </ChartFrame>
   );
 }
 
@@ -253,7 +274,8 @@ export function CumulativeLine({
   const ticks: number[] = [];
   for (let v = 0; v <= top; v += step) ticks.push(v);
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" style={{ display: 'block', overflow: 'visible' }}>
+    <ChartFrame>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="group" style={{ display: 'block', overflow: 'visible' }}>
       {ticks.map((v) => (
         <g key={v}>
           <line x1={L} x2={W - R} y1={yOf(v)} y2={yOf(v)} stroke={GRID} strokeWidth={1} />
@@ -266,9 +288,7 @@ export function CumulativeLine({
       <path d={d} fill="none" stroke={color} strokeWidth={2} strokeLinejoin="round" strokeLinecap="round" />
       {points.map((p, i) => (
         <g key={p.month}>
-          <circle cx={xOf(i)} cy={yOf(p.total)} r={12} fill="transparent">
-            <title>{`${mon(p.month)}: ${p.added} ${unit} logged, ${p.total} in total`}</title>
-          </circle>
+          <circle cx={xOf(i)} cy={yOf(p.total)} r={12} fill="transparent" {...tip(`${p.total} ${unit}`, `${mon(p.month, true)} · ${p.added} logged that month`)} />
           <circle cx={xOf(i)} cy={yOf(p.total)} r={4} fill={color} stroke={SURFACE} strokeWidth={2} pointerEvents="none" />
           <text x={xOf(i)} y={T + plotH + 16} textAnchor="middle" fontSize={10.5} fill={DIM}>
             {mon(p.month, i === 0)}
@@ -284,9 +304,7 @@ export function CumulativeLine({
         return (
           <g key={e.date}>
             <line x1={x} x2={x} y1={T + plotH + 22} y2={T + plotH + 30} stroke={INK} strokeWidth={1.5} />
-            <circle cx={x} cy={T + plotH + 26} r={10} fill="transparent">
-              <title>{`${e.date}: ${e.label}`}</title>
-            </circle>
+            <circle cx={x} cy={T + plotH + 26} r={10} fill="transparent" {...tip(e.date, `Snapshot · ${e.label}`)} />
             {i === 0 && (
               <text x={x - 4} y={T + plotH + 44} textAnchor="end" fontSize={10.5} fill={MID}>
                 snapshots ▸
@@ -296,6 +314,7 @@ export function CumulativeLine({
         );
       })}
     </svg>
+    </ChartFrame>
   );
 }
 
@@ -327,7 +346,8 @@ export function Dumbbell({
   for (let y = y0; y <= y1; y++) years.push(y);
   const months = (a: string, b: string) => Math.round((Date.parse(b) - Date.parse(a)) / (30.44 * 86400000));
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" style={{ display: 'block', overflow: 'visible' }}>
+    <ChartFrame>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="group" style={{ display: 'block', overflow: 'visible' }}>
       {years.map((y) => {
         const x = labelWidth + ((Date.UTC(y, 0, 1) - t0) / (t1 - t0)) * plotW;
         return (
@@ -350,12 +370,10 @@ export function Dumbbell({
               {r.label}
             </text>
             <line x1={xa} x2={xb} y1={y} y2={y} stroke={MID} strokeWidth={2} />
-            <circle cx={xa} cy={y} r={5} fill={colorA} stroke={SURFACE} strokeWidth={2}>
-              <title>{`${r.label}: announced ${r.a}`}</title>
-            </circle>
-            <circle cx={xb} cy={y} r={5} fill={colorB} stroke={SURFACE} strokeWidth={2}>
-              <title>{`${r.label}: approved ${r.b}`}</title>
-            </circle>
+            <circle cx={xa} cy={y} r={5} fill={colorA} stroke={SURFACE} strokeWidth={2} pointerEvents="none" />
+            <circle cx={xb} cy={y} r={5} fill={colorB} stroke={SURFACE} strokeWidth={2} pointerEvents="none" />
+            <circle cx={xa} cy={y} r={12} fill="transparent" {...tip(`Announced ${r.a}`, r.label)} />
+            <circle cx={xb} cy={y} r={12} fill="transparent" {...tip(`Approved ${r.b}`, `${r.label} · ${m} months after announcement`)} />
             <text x={Math.max(xa, xb) + 10} y={y + 4} fontSize={11.5} fill={MID}>
               {m === 0 ? 'same month' : m > 0 ? `${m} mo` : `approved ${-m} mo before announced`}
             </text>
@@ -363,14 +381,35 @@ export function Dumbbell({
         );
       })}
     </svg>
+    </ChartFrame>
   );
 }
 
 // A collapsed table under each chart: the values without hovering.
-export function TableView({ head, rows }: { head: string[]; rows: (string | number)[][] }) {
+// CSV for a table, quoted so commas and quotes in names survive.
+function toCSV(head: string[], rows: (string | number)[][]): string {
+  const q = (v: string | number) => {
+    const t = String(v);
+    return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t;
+  };
+  return [head, ...rows].map((r) => r.map(q).join(',')).join('\n') + '\n';
+}
+
+export function TableView({ head, rows, csv }: { head: string[]; rows: (string | number)[][]; csv?: string }) {
   return (
     <details style={{ marginTop: 8, fontSize: 12, color: MID }}>
-      <summary style={{ cursor: 'pointer', color: DIM }}>Show as table</summary>
+      <summary style={{ cursor: 'pointer', color: DIM }}>
+        Show as table
+        {csv && (
+          <a
+            href={`data:text/csv;charset=utf-8,${encodeURIComponent(toCSV(head, rows))}`}
+            download={`${csv}.csv`}
+            style={{ marginLeft: 14, color: '#3f4aa8', textDecoration: 'none' }}
+          >
+            Download CSV ↓
+          </a>
+        )}
+      </summary>
       <table style={{ borderCollapse: 'collapse', marginTop: 8, fontVariantNumeric: 'tabular-nums' }}>
         <thead>
           <tr>

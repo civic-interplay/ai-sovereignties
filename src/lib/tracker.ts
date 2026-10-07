@@ -74,6 +74,14 @@ export interface TrackerRow {
   campusGroup: string;
   mineralFocus: string[];
   energySource: string | null;
+  waterRisk: string | null;
+  // Where the Capacity (MW) figure comes from: a planning document, or a
+  // company release / news report. Blank = not yet recorded.
+  mwSource: string | null;
+  // Stated AI purpose: ticked only with a cited source in aiPurposeEvidence.
+  // Unticked means none found, which includes rows not yet checked.
+  statedAIPurpose: boolean;
+  aiPurposeEvidence: string;
   announcedInvestment: number | null;
   source: string | null;
   notionPublicUrl: string;
@@ -170,6 +178,10 @@ export async function fetchTrackerRows(): Promise<TrackerRow[]> {
         campusGroup: plain(p['Campus group']),
         mineralFocus: multiNames(p['Mineral Focus']),
         energySource: label(selectName(p['Energy Source'])),
+        waterRisk: label(selectName(p['Water Risk'])),
+        mwSource: label(selectName(p['MW source'])),
+        statedAIPurpose: p['Stated AI purpose']?.checkbox === true,
+        aiPurposeEvidence: plain(p['AI purpose evidence']),
         announcedInvestment: num(p['Announced investment (AUD)']),
         source: urlVal(p['Source']),
         notionPublicUrl: 'https://studio-esem.notion.site/' + page.id.replace(/-/g, ''),

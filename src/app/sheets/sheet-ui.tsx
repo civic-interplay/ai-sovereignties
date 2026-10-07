@@ -162,7 +162,12 @@ export function ScopeNote() {
       <a href={AUTHOR_URL} style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
         Dr Sarah Barns
       </a>
-      , RMIT Centre for Urban Research.
+      , RMIT Centre for Urban Research, as a test case of the utility of civic AI methodologies for urban data
+      governance.{' '}
+      <a href="https://civicinterplay.io/sovereignties/" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
+        Learn more
+      </a>
+      .
     </div>
   );
 }

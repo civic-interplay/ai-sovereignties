@@ -36,6 +36,9 @@ export interface NewsItem {
   classifiedBy: string | null;
   source: string | null;
   siteId: string | null;
+  // When the item was added to the feed (page creation), as opposed to
+  // `date`, when the article or submission itself was published.
+  addedAt: string | null;
 }
 
 export async function fetchNews(): Promise<NewsItem[]> {
@@ -60,7 +63,7 @@ export async function fetchNews(): Promise<NewsItem[]> {
     });
     if (!res.ok) throw new Error(`Notion query failed (${res.status})`);
     const data = (await res.json()) as {
-      results: Array<{ id: string; properties: Record<string, NotionProp> }>;
+      results: Array<{ id: string; created_time?: string; properties: Record<string, NotionProp> }>;
       has_more: boolean;
       next_cursor: string | null;
     };
@@ -83,6 +86,7 @@ export async function fetchNews(): Promise<NewsItem[]> {
         source: (p['Source'] as { url?: string } | undefined)?.url ?? null,
         siteId:
           ((p['Site'] as { relation?: Array<{ id?: string }> } | undefined)?.relation ?? [])[0]?.id ?? null,
+        addedAt: r.created_time ?? null,
       });
     }
     cursor = data.has_more ? data.next_cursor ?? undefined : undefined;

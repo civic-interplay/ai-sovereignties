@@ -72,7 +72,8 @@ export default async function News() {
   const dated = kept.slice(0, 80);
   // Newest item actually in the feed — not when the scan last ran, which can
   // succeed and find nothing.
-  const newest = dated.reduce<string | null>((a, i) => (i.date && (!a || i.date > a) ? i.date : a), null);
+  // Last time anything was added to the feed, by hand or by the scan.
+  const lastAdded = items.reduce<string | null>((a, i) => (i.addedAt && (!a || i.addedAt > a) ? i.addedAt : a), null);
 
   return (
     <SheetShell>
@@ -80,7 +81,7 @@ export default async function News() {
       <SheetTitle
         kicker="Australian Data Centres"
         title="News Feed"
-        sub="Press coverage, planning submissions, council motions and public statements around tracked sites, coded by stance and grounds. Collected by a fortnightly scan and added by hand between runs; the date below is the most recent item held, not the last time the scan ran."
+        sub="Press coverage, planning submissions, council motions and public statements around tracked sites, coded by stance and grounds. Collected by a fortnightly scan and added by hand between runs."
       />
 
       {/* Subscribe affordance. The <link rel="alternate"> tag lets readers
@@ -109,8 +110,8 @@ export default async function News() {
           /news/feed.xml
         </a>
         <span style={{ color: DIM }}>· RSS 2.0</span>
-        {newest && (
-          <span style={{ color: DIM }}>· most recent item {newest}</span>
+        {lastAdded && (
+          <span style={{ color: DIM }}>· last updated {lastAdded.slice(0, 10)}</span>
         )}
       </div>
 
