@@ -271,11 +271,11 @@ appended to `docs/compute-log.jsonl` per `COMPUTE.md`.
 | 2026-10-04 | session | 68 | 342,636 | 44,933 | 10,054,219 |
 | 2026-10-06 | session | 61 | 323,696 | 68,120 | 16,392,546 |
 | 2026-10-06 | research agents | 139 | 1,008,905 | 13,629 | 15,097,964 |
-| 2026-10-07 | session | 242 | 2,397,481 | 233,157 | 124,991,212 |
+| 2026-10-07 | session | 273 | 2,442,363 | 264,376 | 148,155,457 |
 | 2026-10-07 | research agents | 83 | 346,023 | 7,937 | 8,101,727 |
 
 Fresh computation, the figure that counts: **about 4.6 million tokens in and
-0.39 million out** across 644 calls. The cache-read column (178 million) is the
+0.42 million out** across 675 calls. The cache-read column (201 million) is the
 same long conversation re-read on each turn and is not added to the others.
 The pipeline's own runs this week (inbox, discovery, daily press scan; Claude
 Sonnet 5) are logged separately in `compute-log.jsonl` by the pipeline.
@@ -287,7 +287,8 @@ record); every Victorian fast-track permit checked on the live register, which
 overturned the published claim that all were granted without notice (three of
 nine were notified); a fact-check of the City of Melbourne submission; a second
 press strand checked daily; the Review dropdown for approving agent proposals;
-the method diagram; and the restructured tracker home on civicinterplay.io.
+the method diagram; the restructured tracker home on civicinterplay.io; and
+SB's approved corrections written to 50 tracker rows, with 13 new proposals.
 
 **What it cost in errors, for the record:** a settings file was loaded in a way
 that printed two credentials into the session, and both were rotated; the live
