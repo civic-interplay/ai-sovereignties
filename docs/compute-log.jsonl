@@ -18,3 +18,4 @@
 {"date":"2026-10-01","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28832,"output_tokens":5332}
 {"date":"2026-10-07","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":4,"input_tokens":32320,"output_tokens":6040}
 {"date":"2026-10-07","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28835,"output_tokens":5332}
+{"date":"2026-10-07","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":19,"input_tokens":148878,"output_tokens":8340}
