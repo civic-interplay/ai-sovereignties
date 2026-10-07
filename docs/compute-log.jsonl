@@ -16,3 +16,4 @@
 {"date":"2026-09-20","kind":"session","source":"claude-code","model":"claude-opus-5","calls":16,"input_tokens":2155526,"output_tokens":13537,"cache_read_tokens":9510533}
 {"date":"2026-09-22","kind":"session","source":"claude-code","model":"claude-opus-5","calls":159,"input_tokens":7647341,"output_tokens":148938,"cache_read_tokens":117225710}
 {"date":"2026-10-01","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28832,"output_tokens":5332}
+{"date":"2026-10-07","kind":"pipeline","source":"inbox","model":"claude-sonnet-5","calls":4,"input_tokens":32320,"output_tokens":6040}
