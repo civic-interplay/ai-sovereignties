@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+#
+# THIS REPO IS PUBLIC: a commit here is a publication.
+#
+# Blocks staged files that look like unpublished drafts, third-party
+# literature, working material, or oversized binaries. The .gitignore covers
+# the three folders we already know about (lit review/, content updates/,
+# docs/internal/); this catches the same material saved anywhere else, which
+# is how it got published the first time.
+#
+# Deliberate override, per commit:   ALLOW=1 git commit ...
+# (git commit --no-verify also works, but ALLOW=1 is the one to reach for —
+#  it skips only this check, not any other hook.)
+#
+# Enable in each clone (once):  git config core.hooksPath .githooks
+
+set -uo pipefail
+[ "${ALLOW:-}" = "1" ] && exit 0
+
+MAX_MB=25
+blocked=""
+
+add() { blocked="${blocked}  $1\n      ↳ $2\n"; }
+
+while IFS= read -r f; do
+  [ -z "$f" ] && continue
+  base="${f##*/}"
+  low=$(printf '%s' "$f" | tr '[:upper:]' '[:lower:]')
+
+  case "$low" in
+    "lit review/"*|"content updates/"*|docs/internal/*)
+      add "$f" "private folder — keep it local"; continue ;;
+  esac
+
+  case "$low" in
+    *draft*)      add "$f" "looks like an unlodged draft"; continue ;;
+    *submission*) add "$f" "looks like a submission"; continue ;;
+    *lit-review*|*"lit review"*)
+                  add "$f" "looks like literature-review material"; continue ;;
+    *outreach*|*contacts*)
+                  add "$f" "may contain individuals' contact details"; continue ;;
+  esac
+
+  case "$low" in
+    *.docx|*.xlsx|*.pptx|*.key|*.pages|*.numbers)
+      add "$f" "working document — commit an exported CSV/MD instead"; continue ;;
+    *.mov|*.mp4|*.m4v)
+      add "$f" "video — too big for git, keep it local"; continue ;;
+  esac
+
+  # PDFs are allowed under docs/ (primary-source register evidence is the
+  # audit record and is committed on purpose) but nowhere else.
+  case "$low" in
+    *.pdf)
+      case "$low" in
+        docs/*) : ;;
+        *) add "$f" "PDF outside docs/ — third-party lit is not ours to republish"; continue ;;
+      esac ;;
+  esac
+
+  # Size backstop: catches anything the patterns miss.
+  if [ -f "$f" ]; then
+    bytes=$(wc -c < "$f" 2>/dev/null | tr -d ' ')
+    if [ -n "$bytes" ] && [ "$bytes" -gt $((MAX_MB * 1024 * 1024)) ]; then
+      add "$f" "$((bytes / 1024 / 1024))MB — over the ${MAX_MB}MB limit"
+    fi
+  fi
+done < <(git diff --cached --name-only --diff-filter=AM)
+
+if [ -n "$blocked" ]; then
+  printf '\n\033[1;31mBLOCKED — this repo is public, and these look unpublishable:\033[0m\n\n'
+  printf "$blocked"
+  printf '\033[1mIf that is wrong and you mean to publish them:\033[0m  ALLOW=1 git commit ...\n\n'
+  exit 1
+fi
+exit 0
