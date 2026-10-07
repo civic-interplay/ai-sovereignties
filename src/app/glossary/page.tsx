@@ -210,8 +210,10 @@ export default async function Glossary() {
           Pathway and their equivalents, with the precise local instrument named in the row&rsquo;s notes.
         </Term>
         <Term name="Public notice">
-          whether the application was publicly exhibited: Exhibited (open to submissions) or Exempted (approved
-          without public exhibition). Blank = not yet checked against the register.
+          whether the application was publicly exhibited: Exhibited (open to submissions), Exempted (a documented
+          exemption from notice, stated in the officer report or permit), or Not notified (the register records no
+          public notice and states no exemption basis). Blank = not yet checked against the register. Victorian
+          values were checked against the live Ministerial Permits Register on 7 October 2026.
         </Term>
         <Term name="State fast-tracked" color={ACCENT.yellow}>
           map overlay: the State, not the local council, is the consent authority — the pathway is State

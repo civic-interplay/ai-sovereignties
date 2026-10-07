@@ -80,7 +80,8 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   const totalMW = knownMW.reduce((s, r) => s + (r.capacity ?? 0), 0);
 
   const exhibited = subset.filter((r) => r.publicNotice?.toLowerCase().includes('exhibit')).length;
-  const exempted = subset.filter((r) => r.publicNotice?.toLowerCase().includes('exempt')).length;
+  // No public notice: a documented exemption, or the register records none.
+  const exempted = subset.filter((r) => /exempt|not notified/i.test(r.publicNotice ?? '')).length;
   const noticeUnknown = subset.length - exhibited - exempted;
   const mwDisclosed = subset.filter((r) => r.capacity !== null && r.capacity > 0).length;
   const mwDisclosedPct = subset.length > 0 ? Math.round((mwDisclosed / subset.length) * 100) : 0;
@@ -143,7 +144,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
         <Stat value={`${contested}`} label="Contested" note="active or emerging opposition" />
         <Stat
           value={`${exempted}`}
-          label="Notice-exempted"
+          label="No public notice"
           note={`${exhibited} exhibited · ${noticeUnknown} not recorded`}
         />
       </Panel>

@@ -47,8 +47,8 @@ const STAT_GRID = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minm
 // (docs/internal/approvals-2025-06) found most "Exempted" public-notice values
 // unchecked or wrong, and two approval dates (Perri, South Morang) are
 // amendment dates. Flip to true once those rows are corrected.
-const SHOW_NOTICE_FIGURE = false;
-const SHOW_APPROVAL_GAPS = false;
+const SHOW_NOTICE_FIGURE = true; // re-enabled 7 Oct 2026: notice values corrected from the live register
+const SHOW_APPROVAL_GAPS = true; // re-enabled 7 Oct 2026: Perri and South Morang permit dates corrected
 
 const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
 
@@ -178,8 +178,10 @@ export default async function TrendsPage() {
   const fastTracked = subset.filter((r) => isStateAssessed(r.pathway));
   // Only rows whose notice status is recorded either way; "Unknown" and blank
   // stay out of the denominator rather than counting as either.
-  const noticeKnown = fastTracked.filter((r) => r.publicNotice === 'Exhibited' || r.publicNotice === 'Exempted');
-  const fastNoNotice = noticeKnown.filter((r) => r.publicNotice === 'Exempted').length;
+  // "Not notified": the register records no public notice and no exemption
+  // basis. Counted, with documented exemptions, as approved without exhibition.
+  const noticeKnown = fastTracked.filter((r) => ['Exhibited', 'Exempted', 'Not notified'].includes(r.publicNotice ?? ''));
+  const fastNoNotice = noticeKnown.filter((r) => r.publicNotice === 'Exempted' || r.publicNotice === 'Not notified').length;
   const fastContested = fastTracked.filter(isContested).length;
 
   // Is the site's planning record retrievable through a public API? Read from
@@ -257,7 +259,7 @@ export default async function TrendsPage() {
       <Panel style={{ ...STAT_GRID, marginTop: 12 }}>
         <Stat value={`${pct(contested.length, all.total)}%`} label="Community contestation" note={`${contested.length} of ${all.total} data centres face active or emerging opposition`} />
         <Stat value={`${pct(contestedStopped, contested.length)}%`} label="Contested, not proceeding" note={`${contestedStopped} of ${contested.length} contested sites were withdrawn or refused. The record shows they stopped, not why.`} />
-        {SHOW_NOTICE_FIGURE && <Stat value={noticeKnown.length ? `${pct(fastNoNotice, noticeKnown.length)}%` : '—'} label="Fast-tracked, no exhibition" note={`${fastNoNotice} of the ${noticeKnown.length} State fast-tracked sites whose notice status is known were exempted from public exhibition`} />}
+        {SHOW_NOTICE_FIGURE && <Stat value={noticeKnown.length ? `${pct(fastNoNotice, noticeKnown.length)}%` : '—'} label="Fast-tracked, no exhibition" note={`${fastNoNotice} of the ${noticeKnown.length} State fast-tracked sites whose notice status is known had no public exhibition (exempted, or no notice on the register)`} />}
         <Stat value={`${pct(fastContested, fastTracked.length)}%`} label="Fast-tracked and contested" note={`${fastContested} of ${fastTracked.length} State fast-tracked sites face community opposition`} />
       </Panel>
 

@@ -130,7 +130,8 @@ export default async function SheetsIndex() {
           const sub = inState.filter((r) => r.inSubset);
           const mw = sub.reduce((s, r) => s + (r.capacity ?? 0), 0);
           const slug = slugForState(state);
-          const noticeExempt = sub.filter((r) => r.publicNotice?.toLowerCase().includes('exempt')).length;
+          // No public notice: a documented exemption, or the register records none.
+          const noticeExempt = sub.filter((r) => /exempt|not notified/i.test(r.publicNotice ?? '')).length;
           return (
             <Panel key={state}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>

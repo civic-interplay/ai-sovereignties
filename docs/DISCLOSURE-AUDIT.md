@@ -52,6 +52,26 @@ exempted. Register screenshots held with the working files capture this for
 recent approvals. This is now recorded on the tracker as
 `Public notice: Exempted` per site, which the map can render directly.
 
+*Correction (2026-10-07, live register check):* the claim that public notice
+was empty across the ministerial cohort was **wrong for three permits**. Every
+Victorian data-centre permit under clause 53.22 was re-read on the live
+Ministerial Permits Register on 7 October 2026 (screenshots held with the
+working files). Of the nine data-centre permits granted, **six show no public
+notice** (South Morang PA2402997, 80 Kinloch Court PA2403014, AWS Cobblebank
+PA2403016, 171 Leakes Road PA2403416, NEXTDC M4 PA2504019, PGIM Truganina
+PA2504032) and **three were publicly notified**: AirTrunk MEL2 PA2403452
+(notice 4 Feb 2025), Perri West Footscray PA2403320 (19 Dec 2024) and NEXTDC
+Corio PA2503895 (15 Sep 2025). An exemption is documented only for Kinloch
+(UGZ8) and 171 Leakes Road (officer report). The tracker now records
+`Exhibited`, `Exempted` (documented) or `Not notified` (register shows no
+notice and states no exemption basis) per site; the earlier blanket
+`Exempted` values were not checked against the register and have been
+replaced. Westmeadows was exhibited, as combined amendment C269hume. Two
+approval dates in the tracker were amendment dates and are corrected (South
+Morang: permit 12 Sep 2024; Perri: permit 4 Apr 2025). The disclosure finding
+(no MW or water figure in the checkable records) is a separate check and is
+not affected.
+
 *Correction (2026-08-17, adversarial verification):* the exemption should not
 be attributed to the DFP pathway itself. The DFP (clause 53.22) removes
 third-party VCAT review rights but does **not** of itself exempt an
