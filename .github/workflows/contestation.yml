@@ -32,6 +32,17 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # Second press strand (pipeline/retrieve/press.ts): publisher feeds whose
+      # terms allow reuse, plus the Guardian API when its key is set. Runs
+      # whether or not GDELT got through, so one outage cannot empty the feed.
+      - name: Press feeds scan (second press strand)
+        if: ${{ !cancelled() }}
+        run: npm run pipeline -- --source press --limit ${{ github.event.inputs.limit || '40' }} --write
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+
       # Planning portals: the richest source for *new* projects and submissions.
       # Runs whether or not GDELT succeeded (independent source, own outages), and
       # no-ops quietly until the PORTAL_FEED_URL(S) secrets point at confirmed feeds.

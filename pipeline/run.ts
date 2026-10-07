@@ -6,7 +6,7 @@
 //   tsx pipeline/run.ts --source inbox --limit 5 --write    # classify + write to Notion
 //
 // Flags:
-//   --source gdelt|inbox   where candidates come from (default gdelt)
+//   --source gdelt|press|inbox|portals   where candidates come from (default gdelt)
 //   --limit N              cap items processed (default 10)
 //   --dry-run             retrieve + resolve only; never calls the model or writes
 //   --write               actually create rows in Notion (otherwise prints)
@@ -18,6 +18,7 @@ import { fetchGdelt, GdeltUnavailableError } from './retrieve/gdelt.ts';
 import { optionalEnv } from './lib/env.ts';
 import { fetchInbox } from './retrieve/inbox.ts';
 import { fetchPortals } from './retrieve/portals.ts';
+import { fetchPress } from './retrieve/press.ts';
 import type { Candidate } from './retrieve/types.ts';
 
 function arg(name: string): string | undefined {
@@ -32,7 +33,8 @@ async function getCandidates(source: string): Promise<Candidate[]> {
   if (source === 'inbox') return fetchInbox();
   if (source === 'gdelt') return fetchGdelt();
   if (source === 'portals') return fetchPortals();
-  throw new Error(`Unknown source "${source}" (use gdelt, inbox or portals)`);
+  if (source === 'press') return fetchPress();
+  throw new Error(`Unknown source "${source}" (use gdelt, press, inbox or portals)`);
 }
 
 async function main() {
