@@ -154,7 +154,9 @@ export default async function News() {
               {i.syndicated > 1 && (
                 <span style={{ fontSize: 10.5, color: DIM }}>syndicated ×{i.syndicated}</span>
               )}
-              {(i.confidence ?? 1) < 0.6 && (
+              {/* Reviewed items (Classified by Human / Human-verified, set via the Review
+                  dropdown) drop the marker whatever the model's confidence was. */}
+              {(i.confidence ?? 1) < 0.6 && !/^Human/.test(i.classifiedBy ?? '') && (
                 <span
                   title={
                     'Classified by a language model and not yet checked by a human. ' +

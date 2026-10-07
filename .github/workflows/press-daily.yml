@@ -21,6 +21,14 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
+      # Act on the Review dropdown first: approved proposals get their prefix
+      # removed, a type and a map pin; rejected ones become [REJECTED]; news
+      # items marked Remove are archived (pipeline/apply-reviews.ts).
+      - name: Apply review decisions
+        run: npx tsx pipeline/apply-reviews.ts --write
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
       - name: Press feeds scan
         run: npm run pipeline -- --source press --limit 25 --write
         env:
