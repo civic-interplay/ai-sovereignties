@@ -439,3 +439,99 @@ export function TableView({ head, rows, csv }: { head: string[]; rows: (string |
 export function ChartNote({ children }: { children: ReactNode }) {
   return <p style={{ fontSize: 12, color: DIM, lineHeight: 1.6, margin: '8px 0 0', maxWidth: 760 }}>{children}</p>;
 }
+
+// Several series over dated snapshots. The x axis is time, not index, so an
+// uneven gap between snapshots shows as an uneven gap. Each line is labelled
+// at its right end with its latest value; a legend above names the series.
+export function SeriesLines({
+  points,
+  keys,
+  unit,
+}: {
+  points: { date: string; values: Record<string, number> }[];
+  keys: Key[];
+  unit: string;
+}) {
+  const W = 900;
+  const H = 240;
+  const L = 52;
+  const R = 64;
+  const T = 16;
+  const B = 36;
+  const plotW = W - L - R;
+  const plotH = H - T - B;
+  const n = points.length;
+  if (n === 0) return null;
+  const t = (d: string) => Date.parse(d + 'T00:00:00Z');
+  const t0 = t(points[0].date);
+  const t1 = t(points[n - 1].date);
+  const xOf = (d: string) => L + (t1 > t0 ? ((t(d) - t0) / (t1 - t0)) * plotW : plotW / 2);
+  const max = Math.max(1, ...points.flatMap((p) => keys.map((k) => p.values[k.key] ?? 0)));
+  const mag = 10 ** Math.floor(Math.log10(max));
+  const step = [1, 2, 5, 10].map((m) => m * mag).find((s) => max / s <= 5) ?? mag * 10;
+  const top = Math.ceil(max / step) * step;
+  const yOf = (v: number) => T + plotH - (v / top) * plotH;
+  const ticks: number[] = [];
+  for (let v = 0; v <= top; v += step) ticks.push(v);
+  const fmt = (v: number) => v.toLocaleString('en-AU');
+  const day = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-AU', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+  // Right-end labels: nudge apart so lines that end at similar values stay legible.
+  const ends = keys
+    .map((k) => ({ k, v: points[n - 1].values[k.key] ?? 0 }))
+    .map((e) => ({ ...e, y: yOf(e.v) }))
+    .sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 13) ends[i].y = ends[i - 1].y + 13;
+  return (
+    <ChartFrame>
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="group" style={{ display: 'block', overflow: 'visible' }}>
+        {ticks.map((v) => (
+          <g key={v}>
+            <line x1={L} x2={W - R} y1={yOf(v)} y2={yOf(v)} stroke={GRID} strokeWidth={1} />
+            <text x={L - 8} y={yOf(v) + 4} textAnchor="end" fontSize={10.5} fill={DIM}>
+              {fmt(v)}
+            </text>
+          </g>
+        ))}
+        {(() => {
+          // Skip a date label that would collide with the one before it; the
+          // point keeps its tooltip and its row in the table.
+          let last = -Infinity;
+          return points.map((p, i) => {
+            const x = xOf(p.date);
+            const label = day(p.date) + (i === 0 || p.date.slice(0, 4) !== points[i - 1].date.slice(0, 4) ? ` ${p.date.slice(0, 4)}` : '');
+            if (x - last < label.length * 6 + 8 && i !== n - 1) return null;
+            last = x;
+            return (
+              <text key={p.date} x={x} y={T + plotH + 16} textAnchor="middle" fontSize={10.5} fill={DIM}>
+                {label}
+              </text>
+            );
+          });
+        })()}
+        {keys.map((k) => (
+          <g key={k.key}>
+            <path
+              d={points.map((p, i) => `${i ? 'L' : 'M'}${xOf(p.date)},${yOf(p.values[k.key] ?? 0)}`).join(' ')}
+              fill="none"
+              stroke={k.color}
+              strokeWidth={2}
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+            {points.map((p) => (
+              <g key={p.date}>
+                <circle cx={xOf(p.date)} cy={yOf(p.values[k.key] ?? 0)} r={10} fill="transparent" {...tip(`${fmt(p.values[k.key] ?? 0)} ${unit}`, `${k.label} · ${day(p.date)} ${p.date.slice(0, 4)}`)} />
+                <circle cx={xOf(p.date)} cy={yOf(p.values[k.key] ?? 0)} r={3.5} fill={k.color} stroke={SURFACE} strokeWidth={1.5} pointerEvents="none" />
+              </g>
+            ))}
+          </g>
+        ))}
+        {ends.map((e) => (
+          <text key={e.k.key} x={W - R + 8} y={e.y + 4} fontSize={11.5} fill={INK}>
+            {fmt(e.v)}
+          </text>
+        ))}
+      </svg>
+    </ChartFrame>
+  );
+}

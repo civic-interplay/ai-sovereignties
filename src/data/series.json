@@ -1,0 +1,93 @@
+[
+  {
+    "date": "2026-09-14",
+    "commit": "fbc31b8",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 43,
+    "withMw": 36,
+    "mwOperating": 2274,
+    "mwPipeline": 8604,
+    "proposedSites": 2,
+    "newsItems": 37,
+    "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-09-15",
+    "commit": "ece3940",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 43,
+    "withMw": 36,
+    "mwOperating": 2274,
+    "mwPipeline": 8604,
+    "proposedSites": 9,
+    "newsItems": 37,
+    "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-09-19",
+    "commit": "63b32e5",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 43,
+    "withMw": 36,
+    "mwOperating": 2274,
+    "mwPipeline": 8604,
+    "proposedSites": 9,
+    "newsItems": 37,
+    "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-10-01",
+    "commit": "153e029",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 43,
+    "withMw": 36,
+    "mwOperating": 2274,
+    "mwPipeline": 8524,
+    "proposedSites": 26,
+    "newsItems": 37,
+    "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-10-07",
+    "commit": "6624c55",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 43,
+    "withMw": 36,
+    "mwOperating": 2274,
+    "mwPipeline": 8524,
+    "proposedSites": 26,
+    "newsItems": 41,
+    "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-10-15",
+    "commit": "e763228",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 46,
+    "withMw": 36,
+    "mwOperating": 1765,
+    "mwPipeline": 8366,
+    "proposedSites": 39,
+    "newsItems": 87,
+    "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-11-01",
+    "commit": "bff85bc",
+    "dataCentres": 94,
+    "operating": 39,
+    "pipeline": 46,
+    "withMw": 36,
+    "mwOperating": 1765,
+    "mwPipeline": 8366,
+    "proposedSites": 41,
+    "newsItems": 96,
+    "newsHumanChecked": 0
+  }
+]

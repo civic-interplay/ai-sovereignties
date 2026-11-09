@@ -9,8 +9,9 @@
 // pass rather than charting the gaps.
 import { fetchTrackerRows, lastUpdated, isStateAssessed } from '@/lib/tracker';
 import snapshots from '@/data/snapshots.json';
+import bundledSeries from '@/data/series.json';
 import { SheetShell, SheetNav, SheetTitle, Panel, Stat, SectionHead, Footnote, ScopeNote, Updated, CI_PERIWINKLE } from '../sheets/sheet-ui';
-import { SERIES, Legend, StackedBars, PercentBars, PairedBars, CumulativeLine, Dumbbell, TableView, ChartNote, type Key } from './charts';
+import { SERIES, Legend, StackedBars, PercentBars, PairedBars, CumulativeLine, Dumbbell, TableView, ChartNote, SeriesLines, type Key } from './charts';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,6 +41,23 @@ const STAGE_KEYS: Key[] = [
   { key: 'unrecorded', label: 'Stage not recorded', color: SERIES.muted },
 ];
 
+// Series on the snapshot charts (data from src/data/series.json, built by
+// pipeline/build-series.ts from the committed zenodo/ snapshots).
+const SNAP_SITE_KEYS: Key[] = [
+  { key: 'operating', label: 'Operating', color: SERIES.operating },
+  { key: 'pipeline', label: 'In pipeline', color: SERIES.pipeline },
+  { key: 'withMw', label: 'With a published capacity figure', color: SERIES.notProceeding },
+];
+const SNAP_MW_KEYS: Key[] = [
+  { key: 'mwOperating', label: 'Operating, MW', color: SERIES.operating },
+  { key: 'mwPipeline', label: 'In pipeline, MW', color: SERIES.pipeline },
+];
+const SNAP_REVIEW_KEYS: Key[] = [
+  { key: 'newsItems', label: 'News items found', color: SERIES.operating },
+  { key: 'proposedSites', label: 'Proposed sites awaiting review', color: SERIES.pipeline },
+  { key: 'newsHumanChecked', label: 'News items checked by a person', color: SERIES.notProceeding },
+];
+
 // Four equal columns, so tiles line up whatever the length of their notes.
 const STAT_GRID = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 24 } as const;
 
@@ -52,7 +70,28 @@ const SHOW_APPROVAL_GAPS = true; // re-enabled 7 Oct 2026: Perri and South Moran
 
 const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
 
+// The pipeline commits a new snapshot fortnightly, but the site is only rebuilt
+// when someone deploys. Read the series from the public repository so the
+// charts move with the record; fall back to the copy bundled at build time.
+type SeriesPoint = (typeof bundledSeries)[number];
+async function loadSeries(): Promise<SeriesPoint[]> {
+  try {
+    const res = await fetch('https://raw.githubusercontent.com/civic-interplay/ai-sovereignties/main/src/data/series.json', {
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(4000),
+    });
+    if (res.ok) {
+      const data = (await res.json()) as SeriesPoint[];
+      if (Array.isArray(data) && data.length) return data;
+    }
+  } catch {
+    // network or parse failure: use the bundled copy
+  }
+  return bundledSeries;
+}
+
 export default async function TrendsPage() {
+  const series = await loadSeries();
   const rows = await fetchTrackerRows();
   const dc = rows.filter((r) => r.isDataCentre);
   const subset = dc.filter((r) => r.inSubset);
@@ -413,6 +452,49 @@ export default async function TrendsPage() {
           repository, so any figure on this site can be checked against what the record said on that date.
         </ChartNote>
         <TableView head={['Month', 'Logged', 'Total']} rows={timeline.map((p) => [p.month, p.added, p.total])} csv="tracker-entries-by-month" />
+      </Panel>
+
+      <SectionHead>Change between snapshots</SectionHead>
+      <Panel>
+        <p style={{ margin: '0 0 12px', fontSize: 12.5, color: '#525b56', maxWidth: 640 }}>
+          The three charts below are counted from each frozen snapshot of the dataset in the public repository,
+          from {series[0]?.date} to {series[series.length - 1]?.date}. Each point shows what the record said on
+          that date. Earlier points are not revised when a row is later corrected. Data centres are counted only
+          once a person has reviewed them.
+        </p>
+        <Legend keys={SNAP_SITE_KEYS} />
+        <SeriesLines points={series.map((p) => ({ date: p.date, values: p as unknown as Record<string, number> }))} keys={SNAP_SITE_KEYS} unit="data centres" />
+        <ChartNote>Reviewed data centres in the tracker, by stage, and how many of them have a published capacity figure.</ChartNote>
+        <TableView
+          head={['Snapshot', 'Data centres', 'Operating', 'In pipeline', 'With a capacity figure', 'Commit']}
+          rows={series.map((p) => [p.date, p.dataCentres, p.operating, p.pipeline, p.withMw, p.commit])}
+          csv="data-centres-by-snapshot"
+        />
+        <div style={{ height: 32 }} />
+        <Legend keys={SNAP_MW_KEYS} />
+        <SeriesLines points={series.map((p) => ({ date: p.date, values: p as unknown as Record<string, number> }))} keys={SNAP_MW_KEYS} unit="MW" />
+        <ChartNote>
+          Total published capacity, in megawatts, of the data centres that have a figure. A fall can mean a figure
+          was corrected or removed after review, not that capacity closed. The commit for each snapshot is in the
+          table, so any change can be traced to the rows behind it.
+        </ChartNote>
+        <TableView
+          head={['Snapshot', 'Operating MW', 'Pipeline MW', 'Commit']}
+          rows={series.map((p) => [p.date, p.mwOperating, p.mwPipeline, p.commit])}
+          csv="published-mw-by-snapshot"
+        />
+        <div style={{ height: 32 }} />
+        <Legend keys={SNAP_REVIEW_KEYS} />
+        <SeriesLines points={series.map((p) => ({ date: p.date, values: p as unknown as Record<string, number> }))} keys={SNAP_REVIEW_KEYS} unit="items" />
+        <ChartNote>
+          What the automated pipeline has found and how much of it a person has checked. Proposed sites are not
+          shown on the map or counted in any figure on this site until they are reviewed.
+        </ChartNote>
+        <TableView
+          head={['Snapshot', 'Proposed sites awaiting review', 'News items', 'News items checked by a person', 'Commit']}
+          rows={series.map((p) => [p.date, p.proposedSites, p.newsItems, p.newsHumanChecked, p.commit])}
+          csv="review-queue-by-snapshot"
+        />
       </Panel>
 
       {SHOW_APPROVAL_GAPS && (
