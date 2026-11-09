@@ -183,6 +183,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                 'On-grid — renewable contracted': CATEGORY.renewable,
                 'On-grid — mixed': ACCENT.yellow,
                 'On-grid — coal/gas heavy': CATEGORY.coalGas,
+                'Dedicated gas generation': CATEGORY.coalGas,
                 'Nuclear (proposed)': CATEGORY.japan,
                 'Not tracked': CATEGORY.unknown,
               }[k] ?? CATEGORY.other

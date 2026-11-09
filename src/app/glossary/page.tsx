@@ -304,6 +304,12 @@ export default async function Glossary() {
           drawing from the general grid; &ldquo;coal/gas heavy&rdquo; where the regional grid mix or the
           project&rsquo;s own filings indicate predominantly fossil supply.
         </Term>
+        <Term name="Gas — dedicated or on-site">
+          energy coding: a gas-fired plant is built, contracted or financed to supply this site, on the campus or
+          off it, as stated in a planning record or the operator&rsquo;s or utility&rsquo;s own filing. A gas
+          plant that is merely nearby, or a site that connects to a transmission node with gas generation on it,
+          is not coded this way.
+        </Term>
       </Panel>
 
       <SectionHead>Confidence & verification</SectionHead>

@@ -284,6 +284,8 @@ const ENERGY_COLORS: Record<string, string> = {
   renewable_contracted: '#b08e00',
   grid_mixed: '#6a5339',
   grid_fossil: '#ce6234',
+  // The far end of the fossil pole: generation built for the site.
+  gas_dedicated: '#e03a2a',
   nuclear: C_PURPLE,
   unknown: C_NEUTRAL,
 };
@@ -292,10 +294,11 @@ const ENERGY_LABELS: Record<string, string> = {
   renewable_contracted: 'Renewable — contracted',
   grid_mixed: 'Grid — mixed',
   grid_fossil: 'Grid — coal/gas heavy',
+  gas_dedicated: 'Gas — dedicated or on-site',
   nuclear: 'Nuclear (proposed)',
   unknown: 'Unknown',
 };
-const ENERGY_ORDER = ['renewable_onsite', 'renewable_contracted', 'grid_mixed', 'grid_fossil', 'nuclear', 'unknown'];
+const ENERGY_ORDER = ['renewable_onsite', 'renewable_contracted', 'grid_mixed', 'grid_fossil', 'gas_dedicated', 'nuclear', 'unknown'];
 
 // --- Register lens: colour per sovereignty register (the `register` key from /api/sites) ---
 // Green = capability owned/built here, red = rented to offshore tenants. The thesis in colour.

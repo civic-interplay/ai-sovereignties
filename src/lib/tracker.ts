@@ -254,6 +254,8 @@ export function isStateAssessed(pathway: string | null): boolean {
 
 export function energyBucket(v: string | null): string {
   if (!v) return 'Not tracked';
+  // Checked first: "Gas — dedicated or on-site" also contains "on-site".
+  if (v.startsWith('Gas')) return 'Dedicated gas generation';
   if (v.includes('on-site')) return 'Off-grid — on-site renewable';
   if (v.includes('Renewable')) return 'On-grid — renewable contracted';
   if (v.includes('coal') || v.includes('gas')) return 'On-grid — coal/gas heavy';
@@ -266,6 +268,7 @@ export const ENERGY_BUCKET_ORDER = [
   'On-grid — renewable contracted',
   'On-grid — mixed',
   'On-grid — coal/gas heavy',
+  'Dedicated gas generation',
   'Nuclear (proposed)',
   'Not tracked',
 ];

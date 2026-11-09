@@ -96,6 +96,8 @@ function waterRiskKey(value: string | null): string {
 // emissions — so it gets its own lens.
 function energyKey(value: string | null): string {
   if (!value) return 'unknown';
+  // Checked first: "Gas — dedicated or on-site" also contains "on-site".
+  if (value.startsWith('Gas')) return 'gas_dedicated';
   if (value.includes('on-site')) return 'renewable_onsite';
   if (value.includes('Renewable')) return 'renewable_contracted';
   if (value.includes('coal') || value.includes('gas')) return 'grid_fossil';
