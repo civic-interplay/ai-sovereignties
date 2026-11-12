@@ -534,10 +534,10 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
   // Supply-chain mode: illustrative rare-earth flows to offshore separation.
   const [showSupplyChain, setShowSupplyChain] = useState(false);
   const [siteCount, setSiteCount] = useState<number | null>(null);
-  // Timeline: a month-by-month slider over the dates on the record. A site
-  // appears at its first dated event (announcement, approval or first public
-  // contest); it turns solid at its approval date; the contested ring appears
-  // at its first dated contest. Sites with no date stay visible in grey.
+  // Timeline: a month-by-month slider. A site appears when it first entered
+  // the public record (or, until that is filled, its earliest other date); it
+  // turns solid at its approval date; the contested ring appears at its first
+  // dated contest. Sites with no date stay visible in grey.
   const [timelineOn, setTimelineOn] = useState(false);
   const [tlMonths, setTlMonths] = useState<string[]>([]);
   const [tlIdx, setTlIdx] = useState(0);
@@ -670,8 +670,10 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         // Timeline dates as UTC milliseconds, -1 when the record has none.
         const P = feat.properties as Record<string, unknown>;
         const ms = (v: unknown) => (typeof v === 'string' && /^\d{4}-\d\d-\d\d/.test(v) ? Date.parse(v.slice(0, 10) + 'T00:00:00Z') : -1);
-        const dated = [ms(P.announcementDate), ms(P.approvalDate), ms(P.firstContest)].filter((t) => t >= 0);
-        P.t0 = dated.length ? Math.min(...dated) : -1;
+        // The clock is when the site first entered the public record. Where that
+        // is not yet filled, fall back to the earliest other date on the row.
+        const dated = [ms(P.firstPublic), ms(P.announcementDate), ms(P.approvalDate), ms(P.firstContest)].filter((t) => t >= 0);
+        P.t0 = ms(P.firstPublic) >= 0 ? ms(P.firstPublic) : dated.length ? Math.min(...dated) : -1;
         P.tA = ms(P.approvalDate);
         P.tC = ms(P.firstContest);
       }
@@ -1466,11 +1468,11 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
               </div>
               {tlCounts && (
                 <div style={{ fontSize: 11.5, color: 'var(--ci-ink)' }}>
-                  By the end of {tlLabel}: {tlCounts.shown} sites with a date on the record · {tlCounts.approved} approved · {tlCounts.contested} publicly contested
+                  By the end of {tlLabel}: {tlCounts.shown} sites on the public record · {tlCounts.approved} approved · {tlCounts.contested} publicly contested
                 </div>
               )}
               <div style={{ fontSize: 10.5, color: INK_MUTED, lineHeight: 1.5 }}>
-                A site appears at its first recorded date (announcement, approval or first public contest); sites dated before 2025 are on the map from the start. Solid: approved by this date. Hollow: announced or lodged. Red ring: first public contest on record.
+                A site appears when it first entered the public record: a planning lodgement, a government list, a company announcement or a press report. Sites on the record before 2025 are on the map from the start. Solid: approved by this date. Hollow: announced or lodged. Red ring: first public contest on record.
                 {tlCounts ? ` Grey: No date captured in the map (${tlCounts.undated}).` : ''}
               </div>
             </>

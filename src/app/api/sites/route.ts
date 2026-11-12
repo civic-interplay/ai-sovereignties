@@ -263,6 +263,12 @@ async function queryNotion(token: string, databaseId: string) {
           announcementDate: dateVal(props['Announcement date']),
           approvalDate: dateVal(props['Approval date']),
           firstContest: rollupDate(props['Earliest contestation']),
+          // When the site first entered the public record, and what that record
+          // was (planning lodgement, government list, company announcement,
+          // press). The timeline's clock. Blank until filled; the map falls
+          // back to the earliest of the other dates.
+          firstPublic: dateVal(props['First on public record']),
+          firstPublicType: selectName(props['First public record type']),
           // Australian sovereign-wealth / super-fund exposure (0..1 fraction).
           superExposure: num(props['Sovereign/super exposure (%)']),
           superExposureKey: exposureKey(num(props['Sovereign/super exposure (%)'])),

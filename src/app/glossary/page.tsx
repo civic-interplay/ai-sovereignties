@@ -260,6 +260,14 @@ export default async function Glossary() {
           stated reasons are cited in the row&rsquo;s notes. Before October 2026 a withdrawn project had its
           status cleared and its title marked [withdrawn].
         </Term>
+        <Term name="First on public record">
+          the date a site first entered the public record, and what that record was: a planning lodgement, a
+          government list (such as the NSW fast-track pipeline), a company announcement or a press report. This is
+          the clock the map&rsquo;s timeline runs on. It asks when the public could first see a project, which
+          the record can answer, where an announcement date often cannot be found. Where it has not yet been
+          filled, the timeline uses the earliest other date on the row. Sites with no date at all are shown in grey
+          as &ldquo;No date captured in the map&rdquo;.
+        </Term>
         <Term name="Announcement vs approval date">
           the two clocks of a project: when the company announced it, and when the planning system approved it.
           Where announcement precedes approval by years, the project was marketed before it was assessed.
