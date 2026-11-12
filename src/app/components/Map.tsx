@@ -46,6 +46,7 @@ const monthEnd = (ym: string) => Date.UTC(Number(ym.slice(0, 4)), Number(ym.slic
 const SITE_LAYER_FILTERS: Record<string, unknown[] | null> = {
   'sites-pulse': null,
   'sites-core': null,
+  'sites-edge': null,
   'sites-contested': ['==', ['get', 'contested'], true],
   'sites-fasttracked': ['==', ['get', 'fastTracked'], true],
   'sites-fasttracked-outer': ['==', ['get', 'fastTracked'], true],
@@ -381,14 +382,14 @@ const STAGE_COLORS: Record<string, string> = {
   'Under Construction': '#70c082',
   Producing: '#8bda9c',
   // Not proceeding: off the ramp, because the ramp runs toward operating and these
-  // will not get there. Withdrawn and Cancelled (the developer stopped) carry
-  // their own violet, off the green ramp's hue and clear of it under
-  // deuteranopia simulation; 5.6:1 on the dark field, 3.5:1 on white. Refused
-  // and revoked (the authority stopped it) stay a muted warm grey.
-  Withdrawn: '#9d6bff',
-  Cancelled: '#9d6bff',
-  Refused: '#8a7f78',
-  'Approval revoked': '#8a7f78',
+  // will not get there. One yellow for the whole not-proceeding group (Sarah's
+  // choice, 12 Nov 2026): dark goldenrod, 6.0:1 on the dark field and 3.25:1 on
+  // white, and at least ΔE 39 from every green on the ramp under deuteranopia
+  // simulation. Shape carries it too: not-proceeding sites are a thin empty ring.
+  Withdrawn: '#b8860b',
+  Cancelled: '#b8860b',
+  Refused: '#b8860b',
+  'Approval revoked': '#b8860b',
   unknown: C_NEUTRAL,
 };
 const STAGE_LABELS: Record<string, string> = {
@@ -680,7 +681,10 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       });
       const firsts = tlData.current.map((d) => d.t0).filter((t) => t >= 0);
       if (firsts.length) {
-        const start = new Date(Math.min(...firsts));
+        // The slider opens in January 2025, Sarah's chosen start for the AI
+        // sovereignty build-out. Sites dated earlier are already on the map at
+        // the first frame, so nothing is dropped.
+        const start = new Date(Math.max(Date.UTC(2025, 0, 1), Math.min(...firsts)));
         const now = new Date();
         const months: string[] = [];
         let y = start.getUTCFullYear();
@@ -805,6 +809,24 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       // two, dimmed, so an absence never passes as either.
       const isOperating = ['==', ['get', 'stageKey'], 'Producing'];
       const isPipeline = ['in', ['get', 'stageKey'], ['literal', COMING_STAGES]];
+      // Light view only: a faint dark ring under each hollow ring. Eight lens
+      // colours (the pale greens, yellow, light blues) are under 3:1 on white;
+      // solid dots get their edge from the core layer's stroke, and this gives
+      // hollow rings the same.
+      if (LIGHT) {
+        m.addLayer({
+          id: 'sites-edge',
+          type: 'circle',
+          source: 'sites',
+          paint: {
+            'circle-radius': radius(5, 8, 20, 27),
+            'circle-opacity': 0,
+            'circle-stroke-width': 3.5,
+            'circle-stroke-color': '#2b312e',
+            'circle-stroke-opacity': ['case', isPipeline, 0.5, isNotProceeding, 0.5, 0] as unknown as mapboxgl.ExpressionSpecification,
+          },
+        });
+      }
       m.addLayer({
         id: 'sites-core',
         type: 'circle',
@@ -1138,8 +1160,11 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
     if (!Object.keys(corePaint.current).length) for (const k of keys) corePaint.current[k] = get('sites-core', k);
     m.setLayoutProperty('sites-undated', 'visibility', timelineOn ? 'visible' : 'none');
     m.setLayoutProperty('sites-contested', 'visibility', timelineOn || showContested ? 'visible' : 'none');
+    const hasEdge = !!m.getLayer('sites-edge');
+    if (hasEdge && corePaint.current.edge === undefined) corePaint.current.edge = get('sites-edge', 'circle-stroke-opacity');
     if (!timelineOn || !tlMonths.length) {
       for (const k of keys) set('sites-core', k, corePaint.current[k]);
+      if (hasEdge) set('sites-edge', 'circle-stroke-opacity', corePaint.current.edge);
       return;
     }
     const T = monthEnd(tlMonths[tlIdx] ?? tlMonths[tlMonths.length - 1]);
@@ -1149,6 +1174,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
     set('sites-core', 'circle-stroke-width', ['case', approved, LIGHT ? 0.75 : 0, 2]);
     set('sites-core', 'circle-blur', ['case', approved, LIGHT ? 0 : 0.3, 0]);
     set('sites-core', 'circle-stroke-color', LIGHT ? ['case', approved, '#2b312e', color] : color);
+    if (hasEdge) set('sites-edge', 'circle-stroke-opacity', ['case', approved, 0, 0.5]);
   }, [timelineOn, tlIdx, tlMonths, showContested, lens, LIGHT]);
 
   // Play: advance one month at a time and stop at the present.
@@ -1444,7 +1470,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
                 </div>
               )}
               <div style={{ fontSize: 10.5, color: INK_MUTED, lineHeight: 1.5 }}>
-                A site appears at its first recorded date (announcement, approval or first public contest). Solid: approved by this date. Hollow: announced or lodged. Red ring: first public contest on record.
+                A site appears at its first recorded date (announcement, approval or first public contest); sites dated before 2025 are on the map from the start. Solid: approved by this date. Hollow: announced or lodged. Red ring: first public contest on record.
                 {tlCounts ? ` Grey: No date captured in the map (${tlCounts.undated}).` : ''}
               </div>
             </>

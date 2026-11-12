@@ -6,19 +6,19 @@ import type { Theme } from './components/Map';
 
 const Map = dynamic(() => import('./components/Map'), { ssr: false });
 
-// Dark is the default view. A reader's choice is remembered on their device,
+// Light is the default view (Sarah, 12 Nov 2026). A reader's choice is remembered on their device,
 // and ?theme=light or ?theme=dark in the URL overrides it, so a link can open
 // in a given view (useful for slides and screenshots).
 const KEY = 'ci-map-theme';
 
 function initialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
+  if (typeof window === 'undefined') return 'light';
   const fromUrl = new URLSearchParams(window.location.search).get('theme');
   if (fromUrl === 'light' || fromUrl === 'dark') return fromUrl;
   try {
-    return window.localStorage.getItem(KEY) === 'light' ? 'light' : 'dark';
+    return window.localStorage.getItem(KEY) === 'dark' ? 'dark' : 'light';
   } catch {
-    return 'dark';
+    return 'light';
   }
 }
 
