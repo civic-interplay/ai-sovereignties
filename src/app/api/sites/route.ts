@@ -51,6 +51,13 @@ function dateVal(p: NotionProp | undefined): string | null {
   return d?.start ?? null;
 }
 
+// "Earliest contestation" is a rollup (earliest date among the site's linked
+// contestation items), so its date sits one level down.
+function rollupDate(p: NotionProp | undefined): string | null {
+  const r = p?.rollup as { date?: { start?: string } | null } | undefined;
+  return r?.date?.start ?? null;
+}
+
 // Strip the leading emoji/symbol from a Notion option label, e.g.
 // "🖥️ Data Centre" -> "Data Centre".
 function label(value: string | null): string | null {
@@ -255,6 +262,7 @@ async function queryNotion(token: string, databaseId: string) {
           landowner: plain(props['Landowner']),
           announcementDate: dateVal(props['Announcement date']),
           approvalDate: dateVal(props['Approval date']),
+          firstContest: rollupDate(props['Earliest contestation']),
           // Australian sovereign-wealth / super-fund exposure (0..1 fraction).
           superExposure: num(props['Sovereign/super exposure (%)']),
           superExposureKey: exposureKey(num(props['Sovereign/super exposure (%)'])),

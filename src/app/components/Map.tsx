@@ -39,6 +39,10 @@ const DEFAULT_VIEW = 'au';
 // Every layer drawn from the `sites` source, with the filter that defines what
 // it draws. The stage filter is ANDed onto these rather than replacing them, so
 // an overlay never survives a filter that hid the site underneath it.
+// Last millisecond of a 'YYYY-MM' month, in UTC. The timeline compares this
+// against each site's dates (stored as UTC milliseconds, -1 when absent).
+const monthEnd = (ym: string) => Date.UTC(Number(ym.slice(0, 4)), Number(ym.slice(5, 7)), 0, 23, 59, 59, 999);
+
 const SITE_LAYER_FILTERS: Record<string, unknown[] | null> = {
   'sites-pulse': null,
   'sites-core': null,
@@ -529,6 +533,16 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
   // Supply-chain mode: illustrative rare-earth flows to offshore separation.
   const [showSupplyChain, setShowSupplyChain] = useState(false);
   const [siteCount, setSiteCount] = useState<number | null>(null);
+  // Timeline: a month-by-month slider over the dates on the record. A site
+  // appears at its first dated event (announcement, approval or first public
+  // contest); it turns solid at its approval date; the contested ring appears
+  // at its first dated contest. Sites with no date stay visible in grey.
+  const [timelineOn, setTimelineOn] = useState(false);
+  const [tlMonths, setTlMonths] = useState<string[]>([]);
+  const [tlIdx, setTlIdx] = useState(0);
+  const [tlPlaying, setTlPlaying] = useState(false);
+  const tlData = useRef<{ t0: number; tA: number; tC: number }[]>([]);
+  const corePaint = useRef<Record<string, unknown>>({});
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   // Sites where a platform company is actually named as a tenant.
   const [showNamedPlatform, setShowNamedPlatform] = useState(false);
@@ -651,6 +665,33 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         // taking the match fallback.
         const st = String((feat.properties as Record<string, unknown>)?.status ?? '').trim();
         (feat.properties as Record<string, unknown>).stageKey = st in STAGE_COLORS ? st : 'unknown';
+
+        // Timeline dates as UTC milliseconds, -1 when the record has none.
+        const P = feat.properties as Record<string, unknown>;
+        const ms = (v: unknown) => (typeof v === 'string' && /^\d{4}-\d\d-\d\d/.test(v) ? Date.parse(v.slice(0, 10) + 'T00:00:00Z') : -1);
+        const dated = [ms(P.announcementDate), ms(P.approvalDate), ms(P.firstContest)].filter((t) => t >= 0);
+        P.t0 = dated.length ? Math.min(...dated) : -1;
+        P.tA = ms(P.approvalDate);
+        P.tC = ms(P.firstContest);
+      }
+      tlData.current = (data.features ?? []).map((f) => {
+        const P = f.properties as Record<string, number>;
+        return { t0: P.t0, tA: P.tA, tC: P.tC };
+      });
+      const firsts = tlData.current.map((d) => d.t0).filter((t) => t >= 0);
+      if (firsts.length) {
+        const start = new Date(Math.min(...firsts));
+        const now = new Date();
+        const months: string[] = [];
+        let y = start.getUTCFullYear();
+        let mo = 0;
+        while (y < now.getUTCFullYear() || (y === now.getUTCFullYear() && mo <= now.getUTCMonth())) {
+          months.push(`${y}-${String(mo + 1).padStart(2, '0')}`);
+          mo += 1;
+          if (mo === 12) { mo = 0; y += 1; }
+        }
+        setTlMonths(months);
+        setTlIdx(months.length - 1);
       }
 
       // Drive each legend from the keys present in the data, in canonical order.
@@ -725,6 +766,21 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       // pulse. Still on the map, so the record of what did not proceed stays
       // visible, but they no longer read as something coming.
       const isNotProceeding = ['in', ['get', 'stageKey'], ['literal', NOT_PROCEEDING_STAGES]];
+
+      // Timeline only: sites with no date on the record stay on the map in grey,
+      // so the slider never makes the build-out look smaller than it is.
+      m.addLayer({
+        id: 'sites-undated',
+        type: 'circle',
+        source: 'sites',
+        filter: ['==', ['get', 't0'], -1] as unknown as mapboxgl.FilterSpecification,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': radius(4, 6, 12, 16),
+          'circle-color': LIGHT ? '#9aa39b' : '#5f6a64',
+          'circle-opacity': 0.5,
+        },
+      });
 
       // Outer pulse ring
       m.addLayer({
@@ -1057,11 +1113,74 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       const flagExpr = chosen.length
         ? ['any', ...chosen.map((f) => ['in', f, ['coalesce', ['get', 'governanceFlags'], '']])]
         : null;
-      const parts = [base, stageExpr, flagExpr].filter(Boolean);
+      // Timeline: only sites whose first date has passed. The contested ring
+      // follows the site's first dated contest rather than its current concern.
+      const T = timelineOn && tlMonths.length ? monthEnd(tlMonths[tlIdx] ?? tlMonths[tlMonths.length - 1]) : null;
+      const timeExpr = T === null ? null : ['all', ['>=', ['get', 't0'], 0], ['<=', ['get', 't0'], T]];
+      const contestExpr = T !== null && id === 'sites-contested'
+        ? ['all', ['>=', ['get', 'tC'], 0], ['<=', ['get', 'tC'], T]]
+        : null;
+      const parts = [contestExpr ? null : base, stageExpr, flagExpr, timeExpr, contestExpr].filter(Boolean);
       const combined = parts.length > 1 ? ['all', ...parts] : (parts[0] ?? null);
       m.setFilter(id, (combined ?? null) as unknown as mapboxgl.FilterSpecification);
     }
-  }, [stageFilter, flagFilter]);
+  }, [stageFilter, flagFilter, timelineOn, tlIdx, tlMonths]);
+
+  // Timeline drawing: solid once approved by the slider's date, hollow before.
+  // The normal map's stage-based styling is saved on first use and restored
+  // when the timeline closes.
+  useEffect(() => {
+    const m = map.current;
+    if (!m || !m.getLayer('sites-core') || !m.getLayer('sites-undated')) return;
+    const keys = ['circle-opacity', 'circle-stroke-width', 'circle-blur', 'circle-stroke-color'];
+    const get = m.getPaintProperty.bind(m) as (id: string, k: string) => unknown;
+    const set = m.setPaintProperty.bind(m) as (id: string, k: string, v: unknown) => void;
+    if (!Object.keys(corePaint.current).length) for (const k of keys) corePaint.current[k] = get('sites-core', k);
+    m.setLayoutProperty('sites-undated', 'visibility', timelineOn ? 'visible' : 'none');
+    m.setLayoutProperty('sites-contested', 'visibility', timelineOn || showContested ? 'visible' : 'none');
+    if (!timelineOn || !tlMonths.length) {
+      for (const k of keys) set('sites-core', k, corePaint.current[k]);
+      return;
+    }
+    const T = monthEnd(tlMonths[tlIdx] ?? tlMonths[tlMonths.length - 1]);
+    const approved = ['all', ['>=', ['get', 'tA'], 0], ['<=', ['get', 'tA'], T]];
+    const color = COLOR_EXPR[lens];
+    set('sites-core', 'circle-opacity', ['case', approved, 0.9, 0.12]);
+    set('sites-core', 'circle-stroke-width', ['case', approved, LIGHT ? 0.75 : 0, 2]);
+    set('sites-core', 'circle-blur', ['case', approved, LIGHT ? 0 : 0.3, 0]);
+    set('sites-core', 'circle-stroke-color', LIGHT ? ['case', approved, '#2b312e', color] : color);
+  }, [timelineOn, tlIdx, tlMonths, showContested, lens, LIGHT]);
+
+  // Play: advance one month at a time and stop at the present.
+  useEffect(() => {
+    if (!tlPlaying) return;
+    const id = window.setInterval(() => {
+      setTlIdx((i) => {
+        if (i >= tlMonths.length - 1) {
+          setTlPlaying(false);
+          return i;
+        }
+        return i + 1;
+      });
+    }, 220);
+    return () => window.clearInterval(id);
+  }, [tlPlaying, tlMonths.length]);
+
+  const tlMonth = tlMonths[tlIdx] ?? tlMonths[tlMonths.length - 1];
+  const tlLabel = tlMonth
+    ? new Date(tlMonth + '-01T00:00:00Z').toLocaleDateString('en-AU', { month: 'short', year: 'numeric', timeZone: 'UTC' })
+    : '';
+  const tlCounts = (() => {
+    if (!timelineOn || !tlMonth) return null;
+    const T = monthEnd(tlMonth);
+    const d = tlData.current;
+    return {
+      shown: d.filter((x) => x.t0 >= 0 && x.t0 <= T).length,
+      approved: d.filter((x) => x.tA >= 0 && x.tA <= T).length,
+      contested: d.filter((x) => x.tC >= 0 && x.tC <= T).length,
+      undated: d.filter((x) => x.t0 < 0).length,
+    };
+  })();
 
   // Adopt the view named in the URL on mount, and keep the two in step when the
   // reader uses the browser's back/forward buttons.
@@ -1255,6 +1374,82 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           <span aria-hidden style={{ fontSize: 12, lineHeight: 1 }}>{LIGHT ? '\u263E' : '\u2600'}</span>
           {LIGHT ? 'Dark' : 'Light'}
         </button>
+      )}
+
+      {tlMonths.length > 0 && (
+        <div
+          role="group"
+          aria-label="Timeline"
+          style={{
+            ...panel,
+            position: 'absolute',
+            left: '50%',
+            bottom: 30,
+            transform: 'translateX(-50%)',
+            zIndex: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 6,
+            width: timelineOn ? 'min(600px, calc(100vw - 32px))' : 'auto',
+            padding: timelineOn ? '10px 14px' : '6px 12px',
+          }}
+        >
+          {!timelineOn ? (
+            <button
+              type="button"
+              onClick={() => { setTimelineOn(true); setTlIdx(0); setTlPlaying(true); }}
+              style={{ all: 'unset', cursor: 'pointer', fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ci-ink-strong)' }}
+            >
+              {'\u25B6'} Timeline
+            </button>
+          ) : (
+            <>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <button
+                  type="button"
+                  aria-label={tlPlaying ? 'Pause' : 'Play'}
+                  onClick={() => {
+                    if (!tlPlaying && tlIdx >= tlMonths.length - 1) setTlIdx(0);
+                    setTlPlaying((v) => !v);
+                  }}
+                  style={{ all: 'unset', cursor: 'pointer', width: 18, textAlign: 'center', fontSize: 13, color: 'var(--ci-ink-strong)' }}
+                >
+                  {tlPlaying ? '\u275A\u275A' : '\u25B6'}
+                </button>
+                <input
+                  type="range"
+                  min={0}
+                  max={tlMonths.length - 1}
+                  value={tlIdx}
+                  aria-label="Month"
+                  aria-valuetext={tlLabel}
+                  onChange={(e) => { setTlPlaying(false); setTlIdx(Number(e.target.value)); }}
+                  style={{ flex: 1, accentColor: CI_PURPLE, cursor: 'pointer' }}
+                />
+                <span style={{ minWidth: 72, textAlign: 'right', fontSize: 12.5, color: 'var(--ci-ink-strong)', fontVariantNumeric: 'tabular-nums' }}>
+                  {tlLabel}
+                </span>
+                <button
+                  type="button"
+                  aria-label="Close timeline"
+                  onClick={() => { setTlPlaying(false); setTimelineOn(false); }}
+                  style={{ all: 'unset', cursor: 'pointer', fontSize: 12, color: INK_MUTED, padding: '0 2px' }}
+                >
+                  {'\u2715'}
+                </button>
+              </div>
+              {tlCounts && (
+                <div style={{ fontSize: 11.5, color: 'var(--ci-ink)' }}>
+                  By the end of {tlLabel}: {tlCounts.shown} sites with a date on the record · {tlCounts.approved} approved · {tlCounts.contested} publicly contested
+                </div>
+              )}
+              <div style={{ fontSize: 10.5, color: INK_MUTED, lineHeight: 1.5 }}>
+                A site appears at its first recorded date (announcement, approval or first public contest). Solid: approved by this date. Hollow: announced or lodged. Red ring: first public contest on record.
+                {tlCounts ? ` Grey: No date captured in the map (${tlCounts.undated}).` : ''}
+              </div>
+            </>
+          )}
+        </div>
       )}
 
       <div
