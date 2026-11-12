@@ -379,6 +379,7 @@ const STAGE_COLORS: Record<string, string> = {
   // Not proceeding: off the ramp, because the ramp runs toward operating and these
   // will not get there. A muted warm grey so they read as an ending, not a stage.
   Withdrawn: '#8a7f78',
+  Cancelled: '#8a7f78',
   Refused: '#8a7f78',
   'Approval revoked': '#8a7f78',
   unknown: C_NEUTRAL,
@@ -391,6 +392,7 @@ const STAGE_LABELS: Record<string, string> = {
   'Under Construction': 'Under construction',
   Producing: 'Operating',
   Withdrawn: 'Withdrawn',
+  Cancelled: 'Cancelled',
   Refused: 'Refused',
   'Approval revoked': 'Approval revoked',
   unknown: 'Stage not recorded',
@@ -407,19 +409,21 @@ const COMING_STAGES = [
   'Feasibility', 'Exploration',
 ];
 // Projects that are not proceeding: they ended before they were built. Recorded as what happened, by
-// whom: the developer withdrew, the consent authority refused, or a granted
+// whom: the developer withdrew an application, the developer dropped the
+// project before any application was decided or withdrawn (Cancelled), the
+// consent authority refused, or a granted
 // approval was revoked. Why it ended (community opposition, policy change,
 // finance) is not a status: opposition is read from Community Concern, so
 // "not proceeding while contested" is the Not proceeding filter with the Contested overlay
 // on, and the map never asserts a cause the record cannot show. These replace
 // the old convention of clearing the status and marking the title [withdrawn],
 // which drew a withdrawn site as "Stage not recorded".
-const NOT_PROCEEDING_STAGES = ['Withdrawn', 'Refused', 'Approval revoked'];
+const NOT_PROCEEDING_STAGES = ['Withdrawn', 'Cancelled', 'Refused', 'Approval revoked'];
 
 const STAGE_ORDER = [
   'Exploration', 'Feasibility', 'Application lodged',
   'Approved / permitted', 'Under Construction', 'Producing',
-  'Withdrawn', 'Refused', 'Approval revoked', 'unknown',
+  'Withdrawn', 'Cancelled', 'Refused', 'Approval revoked', 'unknown',
 ];
 
 // --- Sovereign/super exposure lens: how much of a site is funded by Australian

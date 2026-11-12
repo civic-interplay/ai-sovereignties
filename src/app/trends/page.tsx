@@ -23,7 +23,7 @@ export const metadata = {
 
 const OPERATING = new Set(['Producing']);
 const PIPELINE = new Set(['Under Construction', 'Approved / permitted', 'Application lodged', 'Before the Minister', 'Feasibility', 'Exploration']);
-const NOT_PROCEEDING = new Set(['Withdrawn', 'Refused', 'Approval revoked']);
+const NOT_PROCEEDING = new Set(['Withdrawn', 'Cancelled', 'Refused', 'Approval revoked']);
 
 type Stage = 'operating' | 'pipeline' | 'notProceeding' | 'unrecorded';
 function stageOf(status: string | null): Stage {
