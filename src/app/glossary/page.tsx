@@ -268,6 +268,14 @@ export default async function Glossary() {
           filled, the timeline uses the earliest other date on the row. Sites with no date at all are shown in grey
           as &ldquo;No date captured in the map&rdquo;.
         </Term>
+        <Term name="Timeline">
+          the slider at the foot of the map, from January 2025 to today. Each site appears in the month it first
+          entered the public record. A site is drawn solid once it has been approved, and hollow while it is
+          announced or lodged. A red ring appears at the first public contest on record. Sites with no date are
+          shown in grey throughout, labelled &ldquo;No date captured in the map&rdquo;, so the slider never shows
+          fewer sites than the record holds. The counts under the slider include mines and refineries as well as
+          data centres.
+        </Term>
         <Term name="Announcement vs approval date">
           the two clocks of a project: when the company announced it, and when the planning system approved it.
           Where announcement precedes approval by years, the project was marketed before it was assessed.
