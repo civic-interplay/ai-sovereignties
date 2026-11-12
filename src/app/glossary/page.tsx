@@ -135,31 +135,36 @@ export default async function Glossary() {
         </Term>
       </Panel>
 
-      <SectionHead>Sovereignty registers</SectionHead>
+      <SectionHead>Sovereignty model</SectionHead>
       <Panel>
         <Footnote>
-          Four registers of sovereign capability, coded per site (a site can hold several). Map colour uses
-          precedence: the most sovereign register present wins.
+          Whether Australia owns, runs or funds each site, or only hosts it. A site can fit more than one row. Coded
+          per site from ownership and tenant records; most sites are not yet coded. The research name for each row
+          is in brackets. For the wider idea of digital sovereignty, see Di Marco, Thabit Gonzalez, Kotsev,
+          Friis-Christensen, Minghini and King,{' '}
+          <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC144908" style={{ color: CI_PERIWINKLE }}>
+            &ldquo;Open but Not Powerless: Towards a Common Understanding of EU Digital Sovereignty&rdquo;
+          </a>
+          , European Commission Joint Research Centre policy brief JRC144908, December 2025.
         </Footnote>
-        <Term name="Productive" color={ACCENT.green}>
-          the facility is owned and built by Australian interests — the capability itself accrues onshore.
+        <Term name="Australian-owned (Productive)" color={ACCENT.green}>
+          built and owned by Australian companies.
         </Term>
-        <Term name="Operational" color={ACCENT.blue}>
-          run by an Australian public body.
+        <Term name="Publicly run (Operational)" color={ACCENT.blue}>
+          run by an Australian government body.
         </Term>
-        <Term name="Financial" color={ACCENT.yellow}>
-          ≥30% of ultimate ownership held by Australian public capital — sovereign wealth, government, or
-          superannuation (pooled Australian retirement savings, counted as public capital here).
+        <Term name="Part-owned by Australian public money (Financial)" color={ACCENT.yellow}>
+          at least 30% owned by Australian public capital: the Future Fund, government, or superannuation funds
+          (pooled Australian retirement savings, counted as public capital here).
         </Term>
-        <Term name="Rented" color={ACCENT.red}>
-          compute capacity rented to companies with headquarters located offshore (unknown local usage
-          benefits).
+        <Term name="Leased to overseas tech companies (Rented)" color={ACCENT.red}>
+          the computing capacity is rented by companies based overseas. Whether the site brings local benefit is
+          not recorded.
         </Term>
         <Term name="Not coded">
-          the register coding pass has not reached this row. Excluded from published register statistics. The
-          map&rsquo;s register lens is currently withheld for this reason: register coding is not yet consistent
-          against the tenant field, so the map shows the evidenced version of the claim — the Named hyperscaler
-          overlay — until the coding pass lands.
+          the coding has not reached this site yet, and it is not counted in any figure. The map&rsquo;s sovereignty
+          view is withheld for now, because the coding is not yet consistent with the tenant records; the map
+          shows the Named hyperscaler overlay instead, which is read directly from those records.
         </Term>
       </Panel>
 

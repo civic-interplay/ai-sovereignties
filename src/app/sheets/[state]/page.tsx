@@ -36,6 +36,16 @@ import {
 
 export const dynamic = 'force-dynamic';
 
+// Plain labels for the sovereignty model, as on the map and in the glossary.
+// The research names (Productive, Operational, Financial, Rented) stay in the
+// data and are given in brackets in the glossary.
+const PLAIN_MODEL: Record<string, string> = {
+  Productive: 'Australian-owned',
+  Operational: 'Publicly run',
+  Financial: 'Part-owned by Australian public money',
+  Rented: 'Leased to overseas tech companies',
+};
+
 const REGISTER_COLORS: Record<string, string> = {
   Productive: ACCENT.green,
   Operational: ACCENT.blue,
@@ -196,17 +206,18 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
         </Footnote>
       </Panel>
 
-      <SectionHead>Sovereignty registers (analysis subset)</SectionHead>
+      <SectionHead>Sovereignty model (analysis subset)</SectionHead>
       <Panel>
         {['Productive', 'Operational', 'Financial', 'Rented', 'Not coded']
           .filter((k) => (regCounts.get(k) ?? 0) > 0)
           .map((k) => (
-            <BarRow key={k} label={k} count={regCounts.get(k) ?? 0} total={subset.length} color={REGISTER_COLORS[k]} />
+            <BarRow key={k} label={PLAIN_MODEL[k] ?? k} count={regCounts.get(k) ?? 0} total={subset.length} color={REGISTER_COLORS[k]} />
           ))}
         <Footnote>
-          Register definitions and the precedence rule are in the{' '}
-          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>glossary</a>. &ldquo;Not coded&rdquo; rows are
-          pending the register coding pass and are excluded from any published register statistic.
+          What each row means is in the{' '}
+          <a href="/glossary" style={{ color: CI_PERIWINKLE }}>glossary</a>. A site that fits more than one row is
+          counted once, in the first row it fits. &ldquo;Not coded&rdquo; sites have not been coded yet and are not
+          counted in any figure.
         </Footnote>
       </Panel>
 
@@ -219,7 +230,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
               <th style={th}>Operator → ultimate owner</th>
               <th style={th}>MW</th>
               <th style={th}>Pathway / notice / flags</th>
-              <th style={th}>Registers</th>
+              <th style={th}>Sovereignty model</th>
               <th style={th}>Subset</th>
               <th style={th}>Links</th>
             </tr>
@@ -269,7 +280,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
                     </div>
                   )}
                 </td>
-                <td style={td}>{r.registers.length ? r.registers.join(', ') : '—'}</td>
+                <td style={td}>{r.registers.length ? r.registers.map((x) => PLAIN_MODEL[x] ?? x).join(', ') : '—'}</td>
                 {/* DIM, not the swatch grey: this glyph is read, so it needs the
                     4.5:1 that a bar fill does not. */}
                 <td style={{ ...td, color: r.inSubset ? ACCENT.green : DIM }}>{r.inSubset ? '●' : '○'}</td>

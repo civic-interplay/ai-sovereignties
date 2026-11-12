@@ -355,10 +355,10 @@ const REGISTER_COLORS: Record<string, string> = {
   none: C_NEUTRAL,
 };
 const REGISTER_LABELS: Record<string, string> = {
-  productive: 'Productive (Aus-owned)',
-  operational: 'Operational (public-run)',
-  financial: 'Financial (≥30% public)',
-  rented: 'Rented (offshore tenants)',
+  productive: 'Australian-owned',
+  operational: 'Publicly run',
+  financial: 'Part-owned by Australian public money (≥30%)',
+  rented: 'Leased to overseas tech companies',
   none: 'Not coded',
 };
 const REGISTER_ORDER = ['productive', 'operational', 'financial', 'rented', 'none'];
@@ -1261,7 +1261,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
     capital: { items: capitals, colors: CAPITAL_COLORS, labels: CAPITAL_LABELS, title: 'Capital type' },
     water: { items: waters, colors: WATER_COLORS, labels: WATER_LABELS, title: 'Water risk' },
     energy: { items: energies, colors: ENERGY_COLORS, labels: ENERGY_LABELS, title: 'Energy source' },
-    register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty type' },
+    register: { items: regs, colors: REGISTER_COLORS, labels: REGISTER_LABELS, title: 'Sovereignty model' },
     super: { items: supers, colors: SUPER_COLORS, labels: SUPER_LABELS, title: 'Super / sovereign link' },
   }[lens];
   const { items, colors, labels, title: legendTitle } = legend;
