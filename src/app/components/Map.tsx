@@ -133,6 +133,33 @@ const FLAG_INK = '#ffd23f';
 // fill. Kept as a named token so it is not mistaken for a spare category hue.
 const STAT_HOT = '#ff8095';
 
+// --- Light and dark views ----------------------------------------------------
+// The map was designed on a near-black field, and every lens colour was
+// validated against #0a0c0b. The light view is offered for printing, slides and
+// daylight screens. It keeps the lens colours as they are and changes three
+// things: the basemap, the interface chrome (through the CSS variables below),
+// and a thin dark outline on solid dots so the paler lens colours still have an
+// edge against white. Chrome text colours in the light set are all at least
+// 4.5:1 on white.
+export type Theme = 'dark' | 'light';
+const THEME_VARS: Record<Theme, Record<string, string>> = {
+  dark: {
+    '--ci-field': '#0a0c0b', '--ci-panel': '#121618', '--ci-line': '#2a302e', '--ci-border': '#3f4744',
+    '--ci-ink': '#c8cfc4', '--ci-ink-strong': '#e6ebe6', '--ci-ink-muted': '#8a938c', '--ci-ink-dim': '#7f8a7c',
+    '--ci-ink-soft': '#9aa39b', '--ci-link': CI_PERIWINKLE, '--ci-flag': FLAG_INK, '--ci-hot': STAT_HOT,
+    '--ci-verified': '#8fae7c', '--ci-status-ink': STATUS_INK_SOFT,
+  },
+  light: {
+    '--ci-field': '#ffffff', '--ci-panel': '#ffffff', '--ci-line': '#e3e6e1', '--ci-border': '#c9cec8',
+    '--ci-ink': '#2b312e', '--ci-ink-strong': '#0a0c0b', '--ci-ink-muted': '#525b56', '--ci-ink-dim': '#5f6a64',
+    '--ci-ink-soft': '#525b56', '--ci-link': '#3f4aa8', '--ci-flag': '#8d5108', '--ci-hot': '#b3261e',
+    '--ci-verified': '#3d6b2f', '--ci-status-ink': '#2b312e',
+  },
+};
+// The camera survives a theme switch: switching remounts the map, and the new
+// map opens where the old one was.
+let savedCamera: { center: [number, number]; zoom: number; bearing: number; pitch: number } | null = null;
+
 // --- Layer lens: colour per infrastructure kind (the `kind` key from /api/sites) ---
 // Categorical — slots chosen for semantic fit (water reads blue, mine earth).
 const KIND_COLORS: Record<string, string> = {
@@ -444,7 +471,8 @@ const COLOR_EXPR: Record<Lens, mapboxgl.ExpressionSpecification> = {
 
 const EMPTY: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
-export default function Map() {
+export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; onToggleTheme?: () => void } = {}) {
+  const LIGHT = theme === 'light';
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   // Which lens is active, and a ref so the (once-registered) popup handler can read it.
@@ -525,9 +553,15 @@ export default function Map() {
 
     const m = new mapboxgl.Map({
       container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/dark-v11',
-      center: initial.center,
-      zoom: initial.zoom,
+      style: LIGHT ? 'mapbox://styles/mapbox/light-v11' : 'mapbox://styles/mapbox/dark-v11',
+      center: savedCamera?.center ?? initial.center,
+      zoom: savedCamera?.zoom ?? initial.zoom,
+      bearing: savedCamera?.bearing ?? 0,
+      pitch: savedCamera?.pitch ?? 0,
+    });
+    m.on('moveend', () => {
+      const c = m.getCenter();
+      savedCamera = { center: [c.lng, c.lat], zoom: m.getZoom(), bearing: m.getBearing(), pitch: m.getPitch() };
     });
 
     // Zoom in/out and a compass. The map previously had no zoom affordance at
@@ -576,7 +610,8 @@ export default function Map() {
     };
 
     m.on('load', async () => {
-      liftBasemap();
+      // The lift exists for the dark basemap's muted labels; light-v11 needs none.
+      if (!LIGHT) liftBasemap();
       // Pull the live GeoJSON from the Notion-backed API route.
       let data: GeoJSON.FeatureCollection = EMPTY;
       try {
@@ -716,9 +751,10 @@ export default function Map() {
           'circle-color': color,
           'circle-opacity': ['case', isOperating, 0.9, isPipeline, 0.12, isNotProceeding, 0, 0.4] as unknown as mapboxgl.ExpressionSpecification,
           // A sharp edge reads as "outline"; the glow is what makes a dot look solid.
-          'circle-blur': ['case', isPipeline, 0, isNotProceeding, 0, 0.3] as unknown as mapboxgl.ExpressionSpecification,
-          'circle-stroke-width': ['case', isPipeline, 2, isNotProceeding, 1.5, 0] as unknown as mapboxgl.ExpressionSpecification,
-          'circle-stroke-color': color,
+          'circle-blur': ['case', isPipeline, 0, isNotProceeding, 0, LIGHT ? 0 : 0.3] as unknown as mapboxgl.ExpressionSpecification,
+          'circle-stroke-width': ['case', isPipeline, 2, isNotProceeding, 1.5, LIGHT ? 0.75 : 0] as unknown as mapboxgl.ExpressionSpecification,
+          // Light view: solid dots get a thin dark edge; rings keep the lens colour.
+          'circle-stroke-color': (LIGHT ? ['case', isPipeline, color, isNotProceeding, color, '#2b312e'] : color) as unknown as mapboxgl.ExpressionSpecification,
           'circle-stroke-opacity': ['case', isNotProceeding, 0.7, 0.95] as unknown as mapboxgl.ExpressionSpecification,
         },
       });
@@ -763,7 +799,7 @@ export default function Map() {
             'circle-radius': radius(rU, r0, r1, r2),
             'circle-opacity': 0,
             'circle-stroke-width': 1.5,
-            'circle-stroke-color': STATUS_INK_SOFT,
+            'circle-stroke-color': LIGHT ? '#2b312e' : STATUS_INK_SOFT,
             'circle-stroke-opacity': 0.9,
           },
         });
@@ -803,7 +839,7 @@ export default function Map() {
           'circle-color': OVERLAY_PIP,
           'circle-opacity': 0.95,
           'circle-stroke-width': 1.75,
-          'circle-stroke-color': '#0a0c0b',
+          'circle-stroke-color': LIGHT ? '#ffffff' : '#0a0c0b',
           'circle-stroke-opacity': 0.8,
         },
       });
@@ -884,7 +920,7 @@ export default function Map() {
           'text-size': 10, 'text-offset': [0, 1.4], 'text-anchor': 'top',
           'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Regular'],
         },
-        paint: { 'text-color': '#e6ebe6', 'text-halo-color': '#0a0c0b', 'text-halo-width': 1.2 },
+        paint: { 'text-color': LIGHT ? '#0a0c0b' : '#e6ebe6', 'text-halo-color': LIGHT ? '#ffffff' : '#0a0c0b', 'text-halo-width': 1.2 },
       });
 
       // Popup on click
@@ -938,16 +974,16 @@ export default function Map() {
         // Link to the full Notion entry (its Source field carries the report link),
         // rather than jumping straight to a raw external URL.
         const link = p.notionPublicUrl
-          ? '<a href="' + p.notionPublicUrl + '" target="_blank" rel="noreferrer" style="color:' + color + ';font-size:10px;text-decoration:none;">details ↗</a>'
+          ? '<a href="' + p.notionPublicUrl + '" target="_blank" rel="noreferrer" style="color:' + (LIGHT ? 'var(--ci-link)' : color) + ';font-size:10px;text-decoration:none;">details ↗</a>'
           : '';
 
         new mapboxgl.Popup({ closeButton: false, className: 'sovereignty-popup' })
           .setLngLat(coords)
           .setHTML(
-            '<div style="background:#0a0c0b;border:1px solid ' + color + ';border-radius:12px;padding:10px 14px;font-family:var(--font-fira),system-ui,sans-serif;font-size:11px;color:#c8cfc4;min-width:200px;">' +
-            '<div style="color:' + color + ';font-size:10px;letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;">' + (p.infraType || '') + '</div>' +
+            '<div style="background:var(--ci-field);border:1px solid ' + color + ';border-radius:12px;padding:10px 14px;font-family:var(--font-fira),system-ui,sans-serif;font-size:11px;color:var(--ci-ink);min-width:200px;">' +
+            '<div style="color:' + (LIGHT ? 'var(--ci-ink-strong)' : color) + ';font-size:10px;letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;">' + (p.infraType || '') + '</div>' +
             '<div style="font-size:13px;margin-bottom:4px;">' + (p.name || '') + '</div>' +
-            (sovereignty ? '<div style="color:#7f8a7c;font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
+            (sovereignty ? '<div style="color:var(--ci-ink-dim);font-size:10px;margin-bottom:6px;">' + sovereignty + '</div>' : '') +
             rows +
             lifecycleHtml(p) +
             provenanceHtml(p) +
@@ -1087,7 +1123,7 @@ export default function Map() {
   // a definition floating under a collapsed section reads as loose commentary,
   // and it was rendering whenever the toggle was on regardless of the section.
   const defBlock = (children: React.ReactNode) => (
-    <div style={{ width: '100%', borderTop: '1px solid #2a302e', marginTop: 4, paddingTop: 6,
+    <div style={{ width: '100%', borderTop: '1px solid var(--ci-line)', marginTop: 4, paddingTop: 6,
                   padding: '7px 6px 3px', fontSize: 11, lineHeight: 1.65, color: INK_MUTED }}>
       {children}
     </div>
@@ -1102,8 +1138,8 @@ export default function Map() {
   ) : null;
   const fastTrackedDef = showFastTracked ? defBlock(
     <>
-      <RingGlyph rings={2} color={STATUS_INK_SOFT} />
-      <span style={{ color: STATUS_INK_SOFT }}>State fast-tracked</span> — the State, not the local council,
+      <RingGlyph rings={2} color="var(--ci-status-ink)" />
+      <span style={{ color: 'var(--ci-status-ink)' }}>State fast-tracked</span> — the State, not the local council,
       is the consent authority: the planning pathway is State assessed, or ministerial fast-track / call-in.
       It does not mean the application skipped public exhibition — whether it was exhibited is tracked
       separately, under Public notice.
@@ -1129,19 +1165,19 @@ export default function Map() {
         aria-hidden
         style={{
           display: 'inline-block', width: 8, height: 8, marginRight: 5, borderRadius: '50%',
-          background: '#c8cfc4', verticalAlign: 'middle', transform: 'translateY(-1px)',
+          background: 'var(--ci-ink)', verticalAlign: 'middle', transform: 'translateY(-1px)',
         }}
       />
-      <span style={{ color: '#c8cfc4' }}>Solid</span> — operating.{' '}
+      <span style={{ color: 'var(--ci-ink)' }}>Solid</span> — operating.{' '}
       <span
         aria-hidden
         style={{
           display: 'inline-block', width: 8, height: 8, marginLeft: 4, marginRight: 5,
-          borderRadius: '50%', border: '2px solid #c8cfc4', verticalAlign: 'middle',
+          borderRadius: '50%', border: '2px solid var(--ci-ink)', verticalAlign: 'middle',
           transform: 'translateY(-1px)',
         }}
       />
-      <span style={{ color: '#c8cfc4' }}>Hollow</span> — in the planning or build pipeline.{' '}
+      <span style={{ color: 'var(--ci-ink)' }}>Hollow</span> — in the planning or build pipeline.{' '}
       <span
         aria-hidden
         style={{
@@ -1150,13 +1186,13 @@ export default function Map() {
           transform: 'translateY(-1px)',
         }}
       />
-      <span style={{ color: '#c8cfc4' }}>Faint</span> — not proceeding: withdrawn, refused, or approval revoked.
+      <span style={{ color: 'var(--ci-ink)' }}>Faint</span> — not proceeding: withdrawn, refused, or approval revoked.
       All are drawn at once; the buttons above narrow to one.
     </>,
   );
 
   const legendNode = items.length ? (
-    <div style={{ width: '100%', borderTop: '1px solid #2a302e', marginTop: 4, paddingTop: 6 }}>
+    <div style={{ width: '100%', borderTop: '1px solid var(--ci-line)', marginTop: 4, paddingTop: 6 }}>
       <div
         style={{
           fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase',
@@ -1180,8 +1216,39 @@ export default function Map() {
   ) : null;
 
   return (
-    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+    <div
+      data-theme={theme}
+      style={{ position: 'relative', width: '100vw', height: '100vh', background: 'var(--ci-field)', ...(THEME_VARS[theme] as React.CSSProperties) }}
+    >
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
+
+      {onToggleTheme && (
+        <button
+          type="button"
+          onClick={onToggleTheme}
+          aria-label={LIGHT ? 'Switch to dark view' : 'Switch to light view'}
+          title={LIGHT ? 'Switch to dark view' : 'Switch to light view'}
+          style={{
+            ...panel,
+            position: 'absolute',
+            top: 10,
+            right: 52,
+            zIndex: 2,
+            padding: '6px 11px',
+            cursor: 'pointer',
+            fontSize: 10.5,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: 'var(--ci-ink-strong)',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
+          }}
+        >
+          <span aria-hidden style={{ fontSize: 12, lineHeight: 1 }}>{LIGHT ? '\u263E' : '\u2600'}</span>
+          {LIGHT ? 'Dark' : 'Light'}
+        </button>
+      )}
 
       <div
         className="ci-column"
@@ -1204,7 +1271,7 @@ export default function Map() {
           overflowX: 'hidden',
           paddingRight: 6,
           scrollbarWidth: 'thin',
-          scrollbarColor: '#3f4744 transparent',
+          scrollbarColor: 'var(--ci-border) transparent',
         }}
       >
         {/* Masthead. Names what the map covers and links out to the source data. */}
@@ -1229,7 +1296,7 @@ export default function Map() {
               fontSize: 10,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: CI_PERIWINKLE,
+              color: 'var(--ci-link)',
               textDecoration: 'none',
             }}
           >
@@ -1246,7 +1313,7 @@ export default function Map() {
               fontSize: 10,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: CI_PERIWINKLE,
+              color: 'var(--ci-link)',
               textDecoration: 'none',
             }}
           >
@@ -1261,7 +1328,7 @@ export default function Map() {
               fontSize: 10,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: CI_PERIWINKLE,
+              color: 'var(--ci-link)',
               textDecoration: 'none',
             }}
           >
@@ -1276,7 +1343,7 @@ export default function Map() {
               fontSize: 10,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: CI_PERIWINKLE,
+              color: 'var(--ci-link)',
               textDecoration: 'none',
             }}
           >
@@ -1293,7 +1360,7 @@ export default function Map() {
               fontSize: 10,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: CI_PERIWINKLE,
+              color: 'var(--ci-link)',
               textDecoration: 'none',
             }}
           >
@@ -1316,8 +1383,8 @@ export default function Map() {
             fontSize: 12,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            color: '#e6ebe6',
-            borderColor: chromeOpen ? CI_PURPLE : '#3f4744',
+            color: 'var(--ci-ink-strong)',
+            borderColor: chromeOpen ? CI_PURPLE : 'var(--ci-border)',
           }}
         >
           <span aria-hidden style={{ fontSize: 13, lineHeight: 1 }}>{chromeOpen ? '\u2715' : '\u2261'}</span>
@@ -1403,7 +1470,7 @@ export default function Map() {
               type="button"
               aria-expanded={flagsOpen}
               onClick={() => setFlagsOpen((v) => !v)}
-              style={{ ...tab(flagFilter.size > 0), color: flagFilter.size > 0 ? undefined : CI_PERIWINKLE, letterSpacing: '0.06em' }}
+              style={{ ...tab(flagFilter.size > 0), color: flagFilter.size > 0 ? undefined : 'var(--ci-link)', letterSpacing: '0.06em' }}
             >
               Governance flags{flagFilter.size > 0 ? ` (${flagFilter.size})` : ''} {flagsOpen ? '▴' : '▾'}
             </button>
@@ -1431,7 +1498,7 @@ export default function Map() {
                       aria-hidden
                       style={{
                         display: 'inline-block', width: 5, height: 5, borderRadius: '50%',
-                        background: FLAG_INK, marginRight: 5, verticalAlign: 'middle',
+                        background: 'var(--ci-flag)', marginRight: 5, verticalAlign: 'middle',
                         opacity: on ? 1 : 0.5,
                       }}
                     />
@@ -1443,7 +1510,7 @@ export default function Map() {
                 <button
                   type="button"
                   onClick={() => setFlagFilter(new Set())}
-                  style={{ ...tab(false), fontSize: 10, color: CI_PERIWINKLE, letterSpacing: '0.04em' }}
+                  style={{ ...tab(false), fontSize: 10, color: 'var(--ci-link)', letterSpacing: '0.04em' }}
                 >
                   Clear
                 </button>
@@ -1482,7 +1549,7 @@ export default function Map() {
             type="button"
             aria-expanded={stageOpen}
             onClick={() => setStageOpen((v) => !v)}
-            style={{ ...tab(false), color: CI_PERIWINKLE, letterSpacing: '0.06em' }}
+            style={{ ...tab(false), color: 'var(--ci-link)', letterSpacing: '0.06em' }}
           >
             {stageOpen ? 'Less' : 'By stage'}
           </button>
@@ -1636,7 +1703,7 @@ export default function Map() {
                 aria-hidden
                 style={{
                   width: 9, textAlign: 'center', flex: '0 0 auto',
-                  color: FLAG_INK, fontSize: 9,
+                  color: 'var(--ci-flag)', fontSize: 9,
                 }}
               >
                 ●
@@ -1653,7 +1720,7 @@ export default function Map() {
           )}
           {showFastTracked && (
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
-              <RingGlyph rings={2} color={STATUS_INK_SOFT} />
+              <RingGlyph rings={2} color="var(--ci-status-ink)" />
               <span>State fast-tracked</span>
             </div>
           )}
@@ -1718,20 +1785,20 @@ export default function Map() {
 // Shared panel chrome for the overlay blocks.
 // Muted ink for secondary copy inside the chrome. Lifted with the panel so it
 // keeps roughly the same relationship to the background.
-const INK_MUTED = '#8a938c';
+const INK_MUTED = 'var(--ci-ink-muted)';
 
 const panel: React.CSSProperties = {
   // A step lighter than the map field so the column reads as chrome sitting
   // over the map rather than a hole cut in it. Held at #121618: the next step
   // up drops the dimmest ordinal swatch (renewable on-site) below the 2:1
   // floor it needs against its own background.
-  background: '#121618',
-  border: '1px solid #3f4744',
+  background: 'var(--ci-panel)',
+  border: '1px solid var(--ci-border)',
   borderRadius: 12,
   padding: '10px 14px',
   fontFamily: CI_FONT,
   fontSize: 11,
-  color: '#c8cfc4',
+  color: 'var(--ci-ink)',
 };
 
 // A single segmented-control button, highlighted in CI purple when active.
@@ -1790,8 +1857,8 @@ function Section({
           fontSize: 12,
           letterSpacing: '0.08em',
           textTransform: 'uppercase',
-          color: open ? '#e6ebe6' : INK_MUTED,
-          borderColor: open ? CI_PURPLE : '#3f4744',
+          color: open ? 'var(--ci-ink-strong)' : INK_MUTED,
+          borderColor: open ? CI_PURPLE : 'var(--ci-border)',
         }}
       >
         <span
@@ -1799,7 +1866,7 @@ function Section({
           style={{
             width: 5, height: 5, borderRadius: '50%', flex: '0 0 auto',
             background: active ? CI_PURPLE : 'transparent',
-            border: active ? 'none' : '1px solid #3f4744',
+            border: active ? 'none' : '1px solid var(--ci-border)',
           }}
         />
         <span style={{ flex: 1 }}>{title}</span>
@@ -1826,7 +1893,7 @@ function tab(active: boolean): React.CSSProperties {
     // #7f8a7c measured 3.79:1 on the panel — below the 4.5:1 AA floor for normal
     // text, and it was the most common text in the chrome. #9aa39b is 7.01:1 and
     // still reads as unselected next to the white-on-purple active state.
-    color: active ? '#fff' : '#9aa39b',
+    color: active ? '#fff' : 'var(--ci-ink-soft)',
     fontFamily: CI_FONT,
     fontSize: 12,
     letterSpacing: '0.08em',
@@ -1861,8 +1928,8 @@ function flagsHtml(flags: string | undefined): string {
 function row(key: string, value: string): string {
   return (
     '<div style="display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;">' +
-    '<span style="color:#7f8a7c;">' + key + '</span>' +
-    '<span style="color:#c8cfc4;text-align:right;">' + value + '</span>' +
+    '<span style="color:var(--ci-ink-dim);">' + key + '</span>' +
+    '<span style="color:var(--ci-ink);text-align:right;">' + value + '</span>' +
     '</div>'
   );
 }
@@ -1895,7 +1962,7 @@ function provenanceHtml(p: Record<string, string>): string {
   if (Number.isFinite(conf) && conf > 0) bits.push('confidence ' + conf.toFixed(2));
   if (p.approxLocation === 'true' || p.approxLocation === true as unknown as string) bits.push('location approximate');
 
-  const tint = verified ? '#8fae7c' : '#7f8a7c';
+  const tint = verified ? 'var(--ci-verified)' : 'var(--ci-ink-dim)';
   return (
     '<div title="How far this claim has been walked. See the glossary." ' +
     'style="margin-top:8px;padding-top:6px;border-top:1px solid #1e231d;color:' + tint +
@@ -1926,8 +1993,8 @@ function lifecycleHtml(p: Record<string, string>): string {
       '<div style="display:flex;align-items:flex-start;gap:7px;">' +
       '<span style="font-size:12px;line-height:1.25;">' + s.flag + '</span>' +
       '<div style="flex:1;min-width:0;">' +
-      '<span style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#7f8a7c;">' + s.label + '</span>' +
-      '<div style="font-size:10px;color:' + (s.hot ? STAT_HOT : '#c8cfc4') + ';line-height:1.3;">' + s.val + '</div>' +
+      '<span style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ci-ink-dim);">' + s.label + '</span>' +
+      '<div style="font-size:10px;color:' + (s.hot ? 'var(--ci-hot)' : 'var(--ci-ink)') + ';line-height:1.3;">' + s.val + '</div>' +
       '</div></div>' +
       (i < stages.length - 1 ? '<div style="height:9px;border-left:1px solid #333;margin-left:6px;"></div>' : ''),
     )
@@ -1938,12 +2005,12 @@ function lifecycleHtml(p: Record<string, string>): string {
     p.approvalDate && 'approved ' + p.approvalDate,
   ].filter(Boolean).join('  ·  ');
   const dateLine = dates
-    ? '<div style="font-size:9px;color:#7f8a7c;margin-top:6px;">' + dates + '</div>'
+    ? '<div style="font-size:9px;color:var(--ci-ink-dim);margin-top:6px;">' + dates + '</div>'
     : '';
 
   return (
     '<div style="margin-top:8px;padding-top:8px;border-top:1px solid #333;">' +
-    '<div style="font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:#7f8a7c;margin-bottom:6px;">Ownership lifecycle</div>' +
+    '<div style="font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ci-ink-dim);margin-bottom:6px;">Ownership lifecycle</div>' +
     steps + dateLine +
     '</div>'
   );
