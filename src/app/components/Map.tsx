@@ -377,9 +377,12 @@ const STAGE_COLORS: Record<string, string> = {
   'Under Construction': '#70c082',
   Producing: '#8bda9c',
   // Not proceeding: off the ramp, because the ramp runs toward operating and these
-  // will not get there. A muted warm grey so they read as an ending, not a stage.
-  Withdrawn: '#8a7f78',
-  Cancelled: '#8a7f78',
+  // will not get there. Withdrawn and Cancelled (the developer stopped) carry
+  // their own violet, off the green ramp's hue and clear of it under
+  // deuteranopia simulation; 5.6:1 on the dark field, 3.5:1 on white. Refused
+  // and revoked (the authority stopped it) stay a muted warm grey.
+  Withdrawn: '#9d6bff',
+  Cancelled: '#9d6bff',
   Refused: '#8a7f78',
   'Approval revoked': '#8a7f78',
   unknown: C_NEUTRAL,
