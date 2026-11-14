@@ -1,0 +1,193 @@
+{
+  "site": "Northern Concept Swanb — Swanbank Data Centre (Ipswich)",
+  "instrument": "12285/2026/MCU (Ipswich City Council, lodged 2026-08-04)",
+  "jurisdiction": "QLD",
+  "docType": "",
+  "sourceUrl": "https://developmenti.ipswich.qld.gov.au/ (12285/2026/MCU, Application Documents)",
+  "retrieved": "2026-11-14",
+  "localCopy": "docs/disclosure-audit/swanbank_12285_town_planning_report.pdf",
+  "sha256": "28d1575a41fe2cc6bfaa889218375a1ea82e9e33ae383dc970b7d9ebeabb100c",
+  "pagesSearched": 32,
+  "accessStatus": "Public",
+  "extraction": "pdftotext",
+  "termsSearched": [
+    "MW",
+    "MVA",
+    "kVA",
+    "GW",
+    "GWh",
+    "kV",
+    "megawatt",
+    "kWh",
+    "MWh",
+    "PUE",
+    "WUE",
+    "load",
+    "demand",
+    "water",
+    "litres",
+    "megalitre",
+    "kilolitre",
+    "ML",
+    "kL",
+    "m3",
+    "m³",
+    "cooling",
+    "evaporative",
+    "potable",
+    "recycled"
+  ],
+  "hitCounts": {
+    "MW": 1,
+    "MVA": 0,
+    "kVA": 0,
+    "GW": 0,
+    "GWh": 0,
+    "kV": 0,
+    "megawatt": 0,
+    "kWh": 0,
+    "MWh": 1,
+    "PUE": 0,
+    "WUE": 0,
+    "load": 0,
+    "demand": 6,
+    "water": 11,
+    "litres": 0,
+    "megalitre": 0,
+    "kilolitre": 0,
+    "ML": 0,
+    "kL": 0,
+    "m3": 2,
+    "m³": 0,
+    "cooling": 0,
+    "evaporative": 0,
+    "potable": 0,
+    "recycled": 0
+  },
+  "hits": [
+    {
+      "term": "water",
+      "page": 10,
+      "context": "The subject site can be adequately serviced by all necessary infrastructure, including sewerage, water,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MW",
+      "page": 11,
+      "context": "to 200MW and has a usable storage capacity up to 400MWh. The approved plans and lease area are",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "MWh",
+      "page": 11,
+      "context": "to 200MW and has a usable storage capacity up to 400MWh. The approved plans and lease area are",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "m3",
+      "page": 13,
+      "context": "Stormwater Management 1696.50m3 detention tank with treatment provided via 2x EnviroAustralis",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 15,
+      "context": "Water Resources • Water resource planning area boundaries",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 18,
+      "context": "proposed water quality treatment measures that will be implemented to",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 18,
+      "context": "Water quality",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 19,
+      "context": "high-demand periods.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 19,
+      "context": "energy demand, the site’s location is considered an important component",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 19,
+      "context": "water demand. As discussed within Section 5.6 of this report, there is an",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 19,
+      "context": "Energy and water supply",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 19,
+      "context": "Water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 19,
+      "context": "water demand. As discussed within Section 5.6 of this report, there is an",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 19,
+      "context": "primary and uninterrupted source of water supply.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 22,
+      "context": "demand for 413 spaces. The site is proposed to accommodate a peak of",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 22,
+      "context": "Scheme and the expected peak parking demand of the proposal.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 23,
+      "context": "change of use having a higher parking demand.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 24,
+      "context": "Water There is an existing DN355 PE and newly constructed DN450 PE watermain",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 24,
+      "context": "uninterrupted source of water supply.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "m3",
+      "page": 24,
+      "context": "1696.50m3. The Stormwater Quality Improvement Devices (SQID) will treat the",
+      "classification": "UNCLASSIFIED"
+    }
+  ],
+  "grade": "UNGRADED",
+  "toolVersion": "audit.ts/1.1.0",
+  "protocolVersion": 2,
+  "scannedAt": "2026-11-14T07:39:22.115Z"
+}

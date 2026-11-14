@@ -1,0 +1,343 @@
+{
+  "site": "Northern Concept Swanb — Swanbank Data Centre (Ipswich)",
+  "instrument": "12285/2026/MCU (Ipswich City Council, lodged 2026-08-04)",
+  "jurisdiction": "QLD",
+  "docType": "",
+  "sourceUrl": "https://developmenti.ipswich.qld.gov.au/ (12285/2026/MCU, Application Documents)",
+  "retrieved": "2026-11-14",
+  "localCopy": "docs/disclosure-audit/swanbank_12285_engineering_infrastructure_report.pdf",
+  "sha256": "ce3ecc8a1f8f4fa81ee6e2f716515432436331809ca95151c250e5e68e5c5fab",
+  "pagesSearched": 22,
+  "accessStatus": "Public",
+  "extraction": "pdftotext",
+  "termsSearched": [
+    "MW",
+    "MVA",
+    "kVA",
+    "GW",
+    "GWh",
+    "kV",
+    "megawatt",
+    "kWh",
+    "MWh",
+    "PUE",
+    "WUE",
+    "load",
+    "demand",
+    "water",
+    "litres",
+    "megalitre",
+    "kilolitre",
+    "ML",
+    "kL",
+    "m3",
+    "m³",
+    "cooling",
+    "evaporative",
+    "potable",
+    "recycled"
+  ],
+  "hitCounts": {
+    "MW": 0,
+    "MVA": 0,
+    "kVA": 0,
+    "GW": 0,
+    "GWh": 0,
+    "kV": 0,
+    "megawatt": 0,
+    "kWh": 0,
+    "MWh": 0,
+    "PUE": 0,
+    "WUE": 0,
+    "load": 1,
+    "demand": 7,
+    "water": 30,
+    "litres": 0,
+    "megalitre": 0,
+    "kilolitre": 0,
+    "ML": 0,
+    "kL": 0,
+    "m3": 1,
+    "m³": 0,
+    "cooling": 7,
+    "evaporative": 0,
+    "potable": 0,
+    "recycled": 1
+  },
+  "hits": [
+    {
+      "term": "demand",
+      "page": 2,
+      "context": "the development site and determines the demand on these systems from",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 2,
+      "context": "availability of services and the provision of water and sewerage servicing",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 3,
+      "context": "7.0 WATER .............................................................................................................................................5",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 3,
+      "context": "Appendix D: OSKA Engineers; Preliminary Sewer and Water Connection Plan (Ref: OSK6906/SK024/0)",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 4,
+      "context": "to Council’s existing stormwater drainage, sewerage, water systems and other utility services.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 6,
+      "context": "to minimise disturbance and ensure water quality is maintained.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 7,
+      "context": "within the SEQ Code. The demand on the network would need to be determined with the future",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 8,
+      "context": "systems and expected demand of similar type facilities (240L/s for 122,546m2 GFA",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 8,
+      "context": "development – refer AirTrunk Sydney NSW Approval Ref: SSD-41589232) the demand is",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 8,
+      "context": "Given the expected large demand on the network, water supply alternatives would need to be",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 8,
+      "context": "investigated and final demand on the network discussed with the future occupier and Urban",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "7.0 WATER",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "of water supply.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "systems, the data centre may require large amounts of water. Based on traditional cooling",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "expected to be larger than what can be provided by the existing adjacent water network,",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Given the expected large demand on the network, water supply alternatives would need to be",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Utilities. Water supply alternatives may include but are not limited to:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "• Supplementing water supply with rainwater capture and re-use for cooling. Largescale",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "• Supplementing water supply by utilising the existing dia. 800mm recycled SEQ Water Main",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "(currently unused) to supply cooling water from the adjacent waterbody (additional",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "and/or other contaminants). Approval from State and CleanCo as the operator of the water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "• Low, or zero use water cooling systems (i.e. direct to chip, immersion cooling or otherwise).",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "are expected to pursue the latest technology to reduce water and power consumption",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "alleviate excessive water usage typically encountered in traditional Data Centre developments.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "The water servicing strategy will ultimately be subject to future Urban Utilities Service Advice",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "m3",
+      "page": 8,
+      "context": "Proposed rainwater tank capacity of Stage 1 of the development is approximately 2500m3.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 8,
+      "context": "available within the SEQ Code. Subject to occupier requirements and proposed cooling",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 8,
+      "context": "systems, the data centre may require large amounts of water. Based on traditional cooling",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 8,
+      "context": "• Supplementing water supply with rainwater capture and re-use for cooling. Largescale",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 8,
+      "context": "A closed loop system for cooling should be investigated to determine whether the primary",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 8,
+      "context": "(currently unused) to supply cooling water from the adjacent waterbody (additional",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "cooling",
+      "page": 8,
+      "context": "• Low, or zero use water cooling systems (i.e. direct to chip, immersion cooling or otherwise).",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "recycled",
+      "page": 8,
+      "context": "• Supplementing water supply by utilising the existing dia. 800mm recycled SEQ Water Main",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "load",
+      "page": 9,
+      "context": "Telecommunications and electrical services are available within Six Leaf Street. Load",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "demand",
+      "page": 9,
+      "context": "determine the proposed demand on the existing water and sewerage infrastructure. The",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 9,
+      "context": "determine the proposed demand on the existing water and sewerage infrastructure. The",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 9,
+      "context": "location of the existing water and sewerage reticulation infrastructure as well as the proposed",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 13,
+      "context": "WATER SIT",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 13,
+      "context": "WATER",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 13,
+      "context": "WATER",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 13,
+      "context": "WATER",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 13,
+      "context": "WATER",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 13,
+      "context": "WATER",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 20,
+      "context": "Preliminary Sewer and Water Connection Plan",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 21,
+      "context": "WITHOUT THE WRITTEN PERMISSION OF OSKA CONSULTING GROUP PROPOSED INDUSTRIAL DEVELOPMENT DATA CENTRE SEWER AND WATER",
+      "classification": "UNCLASSIFIED"
+    }
+  ],
+  "grade": "UNGRADED",
+  "toolVersion": "audit.ts/1.1.0",
+  "protocolVersion": 2,
+  "scannedAt": "2026-11-14T07:39:19.765Z"
+}

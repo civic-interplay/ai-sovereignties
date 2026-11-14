@@ -1,0 +1,223 @@
+{
+  "site": "Northern Concept Swanb — Swanbank Data Centre (Ipswich)",
+  "instrument": "12285/2026/MCU (Ipswich City Council, lodged 2026-08-04)",
+  "jurisdiction": "QLD",
+  "docType": "",
+  "sourceUrl": "https://developmenti.ipswich.qld.gov.au/ (12285/2026/MCU, Application Documents)",
+  "retrieved": "2026-11-14",
+  "localCopy": "docs/disclosure-audit/swanbank_12285_application_forms.pdf",
+  "sha256": "a611bd6fee8db2064522c3dce5c09768f2da0ce43d0120875ffe0a3003901a59",
+  "pagesSearched": 17,
+  "accessStatus": "Public",
+  "extraction": "pdftotext",
+  "termsSearched": [
+    "MW",
+    "MVA",
+    "kVA",
+    "GW",
+    "GWh",
+    "kV",
+    "megawatt",
+    "kWh",
+    "MWh",
+    "PUE",
+    "WUE",
+    "load",
+    "demand",
+    "water",
+    "litres",
+    "megalitre",
+    "kilolitre",
+    "ML",
+    "kL",
+    "m3",
+    "m³",
+    "cooling",
+    "evaporative",
+    "potable",
+    "recycled"
+  ],
+  "hitCounts": {
+    "MW": 0,
+    "MVA": 0,
+    "kVA": 0,
+    "GW": 0,
+    "GWh": 0,
+    "kV": 0,
+    "megawatt": 0,
+    "kWh": 0,
+    "MWh": 0,
+    "PUE": 0,
+    "WUE": 0,
+    "load": 0,
+    "demand": 0,
+    "water": 28,
+    "litres": 0,
+    "megalitre": 0,
+    "kilolitre": 0,
+    "ML": 0,
+    "kL": 0,
+    "m3": 0,
+    "m³": 0,
+    "cooling": 0,
+    "evaporative": 0,
+    "potable": 0,
+    "recycled": 0
+  },
+  "hits": [
+    {
+      "term": "water",
+      "page": 2,
+      "context": "water but adjoining or adjacent to land e.g. jetty, pontoon. All lots must be listed).",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 2,
+      "context": "3.2) Coordinates of premises (appropriate for development in remote areas, over part of a lot or in water not adjoining or adjacent to land",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 2,
+      "context": "In or adjacent to a water body or watercourse or in or above an aquifer",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 2,
+      "context": "Name of water body, watercourse or aquifer:",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 6,
+      "context": "Road work Stormwater Water infrastructure",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "Ports – Brisbane core port land – taking or interfering with water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 7,
+      "context": "Ports – Land within Port of Brisbane’s port limits (below high-water mark)",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Water-related development – taking or interfering with water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Water-related development – removing quarry material (from a watercourse or lake)",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Water-related development – referable dams",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Water-related development –levees (category 3 levees only)",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Ports – Land within Port of Brisbane’s port limits (below high-water mark)",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 8,
+      "context": "Ports – Land within limits of another port (below high-water mark)",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "Water resources",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "23.6) Does this development application involve taking or interfering with underground water through an",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "artesian or subartesian bore, taking or interfering with water in a watercourse, lake or spring, or taking",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "overland flow water under the Water Act 2000?",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "relevant authorisation or licence under the Water Act 2000 may be required prior to commencing development",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "• Taking or interfering with underground water through an artesian or subartesian bore: complete DA Form 1 Template 1",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "• Taking or interfering with water in a watercourse, lake or spring: complete DA Form1 Template 2",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "• Taking overland flow water: complete DA Form 1 Template 3.",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "under the Water Act 2000?",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "23.10) Does this development application involve the removal of quarry materials from land under tidal water",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "section 343 of the Water Supply (Safety and Reliability) Act 2008 (the Water Supply Act)?",
+      "classification": "UNCLASSIFIED"
+    },
+    {
+      "term": "water",
+      "page": 11,
+      "context": "Yes – the ‘Notice Accepting a Failure Impact Assessment’ from the chief executive administering the Water",
+      "classification": "UNCLASSIFIED"
+    }
+  ],
+  "grade": "UNGRADED",
+  "toolVersion": "audit.ts/1.1.0",
+  "protocolVersion": 2,
+  "scannedAt": "2026-11-14T07:39:22.395Z"
+}

@@ -254,3 +254,29 @@ Two things are now on the record for Q3 before any document is read:
 - It is **code assessable with no public notification**, against Q1 Dalby,
   which is impact assessable. The within-state pathway test noted above now
   has both arms located.
+
+### Q3 Swanbank: documents obtained and scanned, 14 November 2026
+
+SB downloaded 11 documents from the Ipswich Development.i "Application
+Documents" list (32 files in total). Copies stored locally with sha256 in
+`SOURCES.md`; records in `records/swanbank_*.json`, scanned with
+`pipeline/audit.ts` under term list v2. Every hit is UNCLASSIFIED until a
+person classifies it. Documents scanned: Engineering Infrastructure Report;
+Powerlink referral agency response; Noise Impact Assessment; Town Planning
+Report; DA Form 1; Assessment Manager Information Request; IR response
+letter; Owner's consent; Current title searches; Department of Defence
+response; Superseded Planning Scheme Request decision notice (9000/2026/SPSR).
+Not yet obtained: the other 21 files (ecology, bushfire, traffic, stormwater,
+landscape, plans, referral confirmations, SARA documents).
+
+Recorded facts (not disclosure findings):
+- Title: Lot 5 on SP221204 (the data centre site) is registered to Northern
+  Concept Swanb Pty Ltd as trustee (dealing 719838006, 9/1/2020). Lot 6 on
+  SP221722 is registered to Ipswich City Council as trustee; the council's
+  owner's consent covers a reconfiguration of Lot 5.
+- The application is assessed under the **superseded** Ipswich Planning Scheme
+  2006 (Version 03/2017), at the applicant's request of 8 June 2026, agreed by
+  Council on 17 June 2026 (9000/2026/SPSR).
+- The Powerlink referral was triggered because the premises are within 100 m
+  of the Blackstone Substation.
+
