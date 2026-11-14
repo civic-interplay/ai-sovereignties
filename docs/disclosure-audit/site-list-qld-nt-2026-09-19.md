@@ -236,3 +236,21 @@ is not a data centre proposal, it leaves the sweep as a recorded exclusion.
 |---|---|---|---|
 | 2026-11-14 | Q1 Dalby | Planning-notice aggregator site (outside the protocol indexes) | A research agent found reference **030.2026.00000513.001**, lodged 17 Aug 2026, 1933 Dalby–Kogan Road, with a link to the WDRC Development.i portal. The portal link loaded with no results by script. **Lead only:** to be confirmed by opening WDRC Development.i (index 1) in a browser. |
 | 2026-11-14 | Q1 Dalby | WDRC Development.i portal (index 1), searched by SB in a browser | **Located.** Application Number 030.2026.00000513.001; Date Submitted 17/8/2026; status filter "In Progress"; Description: "Material Change of Use: Workforce Accomm, Research&Technology Industry & High Impact Industry - 1933 Dalby-Kogan Road KOGAN". Confirms the 14 Nov lead. The description does not contain "data centre"; the locality is given as Kogan. Document list not yet read. |
+| 2026-11-14 | Q3 Swanbank | Ipswich Development.i portal (index 1), searched by SB in a browser | **Located.** Application Number **12285/2026/MCU** (not 2285/2026/MCU as reported in the trade press). Full Description: "Material Change of Use - Warehouse (Data Centre)". Progress: In Progress; Stage/Decision: Decision. Assessment Level: Code. Use: "Centres and Industry Uses; Warehouse". Date Submitted 4/8/2026. **Public Notification Required: No.** Associated properties: Lot 6 Unnamed Road, 99999 Blackheath Road and Lot 5 Unnamed Road, Swanbank 4306. Assessment stages: Confirmation Period completed 4/8-18/8/2026; Confirmation Notice 18/8/2026; Action Notice not started. Document list not yet read. |
+
+### Correction, 14 November 2026: the Swanbank null of 19 September was the query, again
+
+The 19 September entry recorded that an application-number search for
+`2285/2026/MCU` returned "No results". The number came from trade press. The
+council's own record is **12285/2026/MCU**. The search was run with the wrong
+key, so the index was not searched in the sense the protocol means. This is the
+same failure recorded above for the PlanningAlerts slug: a null that was a
+property of the query, not of the record. The press figure is kept in the log
+above, unedited, so the error stays visible.
+
+Two things are now on the record for Q3 before any document is read:
+- The facility is assessed under the use class **Warehouse**, with "(Data
+  Centre)" only in the free-text description.
+- It is **code assessable with no public notification**, against Q1 Dalby,
+  which is impact assessable. The within-state pathway test noted above now
+  has both arms located.
