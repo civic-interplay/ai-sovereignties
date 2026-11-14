@@ -295,3 +295,35 @@ that printed two credentials into the session, and both were rotated; the live
 site's own Notion token was missed in that rotation, and the map's data, sheets,
 Trends and news pages were down for roughly 15 to 20 minutes until it was
 updated. Both are now written into the project's working notes.
+
+
+## 2026-11-09 to 2026-11-14 — Claude Opus 5.5, via Claude Code
+
+Measured from the session transcript and four research-agent transcripts on
+disk, de-duplicated by message id. The session was compacted part-way, so the
+session figure covers only the transcript that remains on disk and undercounts
+the full run.
+
+| Who | Calls | Input (incl. cache write) | Output | Cache read |
+| --- | ---: | ---: | ---: | ---: |
+| session | 300 | 1,017,808 | 255,930 | 66,900,641 |
+| research agents | 127 | 489,622 | 65,639 | 10,967,168 |
+
+**What it bought:** light and dark map views (light by default); a timeline
+slider based on when each site first entered the public record, with dates
+researched for 14 sites; a Cancelled status and a yellow colour for projects
+not proceeding; a dedicated-gas energy category; snapshot charts on /trends;
+plain "Sovereignty model" labels linked to the JRC policy brief; glossary
+entries for these. Tracker: review fixes after the first human reviewer's
+pass; new rows for Kogarah Golf Club (Cancelled) and Tungkillo (paused);
+AirTrunk Mars Road and the Lane Cove DC Alliance set to Cancelled; Kurri Kurri
+updated from the portal; one duplicate merged (GreenSquare SYD1 Stage 2 /
+Brookhollow); an unsourced 120 MW Pilbara row taken off the map; statuses set
+on five data centres; source links on 28 rows; dated verification lines on the
+17 rows marked NOT VERIFIED.
+
+**Errors, for the record:** two rows renamed [REJECTED]/[PROPOSED] stayed on
+the public map for about an hour, because the map shows any row with
+coordinates whatever its name. Coordinates were cleared once this was noticed.
+A Notes line on Plumpton twice stated checks that had not been made; both were
+corrected within minutes.

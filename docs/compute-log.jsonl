@@ -43,3 +43,5 @@
 {"date":"2026-11-02","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":1,"input_tokens":8818,"output_tokens":1005}
 {"date":"2026-11-06","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":1,"input_tokens":8914,"output_tokens":438}
 {"date":"2026-11-07","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":2,"input_tokens":17211,"output_tokens":1289}
+{"date":"2026-11-14","kind":"session","source":"claude-code","model":"claude-opus-5-5","calls":300,"input_tokens":1017808,"output_tokens":255930,"cache_read_tokens":66900641,"note":"9 to 14 Nov 2026 session; transcript after context compaction only"}
+{"date":"2026-11-14","kind":"agents","source":"claude-code","model":"claude-opus-5-5","calls":127,"input_tokens":489622,"output_tokens":65639,"cache_read_tokens":10967168,"note":"4 research agents"}
