@@ -206,3 +206,32 @@ with a public notification period, Q3 code-assessable with none. The
 pre-registration predicts a pathway effect rather than a state effect, so a
 single jurisdiction now offers a within-state test of it. That prediction is on
 the record before either instrument has been read.
+
+## Additions after the freeze
+
+Appended 14 November 2026. Per §Scope, sites found after the freeze are added
+here with their own date and the route that found them, not folded into the
+list above.
+
+| # | Site | Found | Route that found it | Tracker state at addition |
+|---|---|---|---|---|
+| N1 | Energy North — Project Ares, Murranji Station (Barkly, NT) | 30 Sep 2026 | Tracker discovery agent, web search (press: ABC, 1 Jul 2026). **Not one of the four protocol indexes.** | `[PROPOSED]`, unreviewed; agent note "NOT VERIFIED — from search-result snippets only" |
+| N2 | Beetaloo Digital — Weddell data centre (NT) | 30 Sep 2026 | Tracker discovery agent, web search (NT Territory Coordinator news page). **Not one of the four protocol indexes.** | `[PROPOSED]`, unreviewed; same agent note |
+
+**Departure, recorded rather than smoothed over.** The protocol's search frame
+names four indexes. N1 and N2 were found by a route outside that frame (press
+and a government news page, via the tracker's general discovery agent). They
+are in scope as Northern Territory data centres, and they change the NT arm:
+it no longer begins with no known site. The NT search through the four indexes
+still has to be run in full, and its results reported separately from these
+two press-found sites, so that what the indexes find can be told apart from
+what the press found.
+
+Both rows stay `[PROPOSED]` until a person reviews them. If review finds either
+is not a data centre proposal, it leaves the sweep as a recorded exclusion.
+
+### Search log addition
+
+| Date | Site | Index | Result |
+|---|---|---|---|
+| 2026-11-14 | Q1 Dalby | Planning-notice aggregator site (outside the protocol indexes) | A research agent found reference **030.2026.00000513.001**, lodged 17 Aug 2026, 1933 Dalby–Kogan Road, with a link to the WDRC Development.i portal. The portal link loaded with no results by script. **Lead only:** to be confirmed by opening WDRC Development.i (index 1) in a browser. |
