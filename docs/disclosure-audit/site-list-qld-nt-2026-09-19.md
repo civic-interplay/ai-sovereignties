@@ -280,3 +280,16 @@ Recorded facts (not disclosure findings):
 - The Powerlink referral was triggered because the premises are within 100 m
   of the Blackstone Substation.
 
+
+**Classification, 14 November 2026 (SB).** All hits in the 11 Swanbank records
+classified. Operational hits: Engineering Infrastructure Report 30, Town
+Planning Report 8; all other records 0. Per coding rule 1, item by item:
+connection capacity **not found**; energy consumption **not found**; PUE **not
+found**; operational water **no site figure** (one figure borrowed from an
+AirTrunk Sydney approval, with final demand deferred to "the future
+occupier"); cooling method **not stated** (options listed). The council's
+information request asks about parking, stormwater and visual impact, not
+load or water. The Powerlink referral is about proximity to Blackstone
+Substation and states no figure. **Grade deferred:** the ladder grades the
+instrument of approval, and no decision has issued (status: In Progress, at
+Decision). The record is graded when the decision notice is published.

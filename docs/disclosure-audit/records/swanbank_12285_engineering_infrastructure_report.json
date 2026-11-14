@@ -69,275 +69,366 @@
       "term": "demand",
       "page": 2,
       "context": "the development site and determines the demand on these systems from",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 2,
       "context": "availability of services and the provision of water and sewerage servicing",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 3,
       "context": "7.0 WATER .............................................................................................................................................5",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 3,
       "context": "Appendix D: OSKA Engineers; Preliminary Sewer and Water Connection Plan (Ref: OSK6906/SK024/0)",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 4,
       "context": "to Council’s existing stormwater drainage, sewerage, water systems and other utility services.",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 6,
       "context": "to minimise disturbance and ensure water quality is maintained.",
-      "classification": "UNCLASSIFIED"
+      "classification": "CONSTRUCTION",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 7,
       "context": "within the SEQ Code. The demand on the network would need to be determined with the future",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 8,
       "context": "systems and expected demand of similar type facilities (240L/s for 122,546m2 GFA",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 8,
       "context": "development – refer AirTrunk Sydney NSW Approval Ref: SSD-41589232) the demand is",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 8,
       "context": "Given the expected large demand on the network, water supply alternatives would need to be",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 8,
       "context": "investigated and final demand on the network discussed with the future occupier and Urban",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "7.0 WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "of water supply.",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "systems, the data centre may require large amounts of water. Based on traditional cooling",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "expected to be larger than what can be provided by the existing adjacent water network,",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "Given the expected large demand on the network, water supply alternatives would need to be",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "Utilities. Water supply alternatives may include but are not limited to:",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "• Supplementing water supply with rainwater capture and re-use for cooling. Largescale",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "• Supplementing water supply by utilising the existing dia. 800mm recycled SEQ Water Main",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "(currently unused) to supply cooling water from the adjacent waterbody (additional",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "and/or other contaminants). Approval from State and CleanCo as the operator of the water",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "• Low, or zero use water cooling systems (i.e. direct to chip, immersion cooling or otherwise).",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "are expected to pursue the latest technology to reduce water and power consumption",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "alleviate excessive water usage typically encountered in traditional Data Centre developments.",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 8,
       "context": "The water servicing strategy will ultimately be subject to future Urban Utilities Service Advice",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "m3",
       "page": 8,
       "context": "Proposed rainwater tank capacity of Stage 1 of the development is approximately 2500m3.",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "cooling",
       "page": 8,
       "context": "available within the SEQ Code. Subject to occupier requirements and proposed cooling",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "cooling",
       "page": 8,
       "context": "systems, the data centre may require large amounts of water. Based on traditional cooling",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "cooling",
       "page": 8,
       "context": "• Supplementing water supply with rainwater capture and re-use for cooling. Largescale",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "cooling",
       "page": 8,
       "context": "A closed loop system for cooling should be investigated to determine whether the primary",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "cooling",
       "page": 8,
       "context": "(currently unused) to supply cooling water from the adjacent waterbody (additional",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "cooling",
       "page": 8,
       "context": "• Low, or zero use water cooling systems (i.e. direct to chip, immersion cooling or otherwise).",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "recycled",
       "page": 8,
       "context": "• Supplementing water supply by utilising the existing dia. 800mm recycled SEQ Water Main",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "load",
       "page": 9,
       "context": "Telecommunications and electrical services are available within Six Leaf Street. Load",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 9,
       "context": "determine the proposed demand on the existing water and sewerage infrastructure. The",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 9,
       "context": "determine the proposed demand on the existing water and sewerage infrastructure. The",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 9,
       "context": "location of the existing water and sewerage reticulation infrastructure as well as the proposed",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 13,
       "context": "WATER SIT",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 13,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 13,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 13,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 13,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 13,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 20,
       "context": "Preliminary Sewer and Water Connection Plan",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 21,
       "context": "WITHOUT THE WRITTEN PERMISSION OF OSKA CONSULTING GROUP PROPOSED INDUSTRIAL DEVELOPMENT DATA CENTRE SEWER AND WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     }
   ],
   "grade": "UNGRADED",
   "toolVersion": "audit.ts/1.1.0",
   "protocolVersion": 2,
-  "scannedAt": "2026-11-14T07:39:19.765Z"
+  "scannedAt": "2026-11-14T07:39:19.765Z",
+  "notes": "Disclosure items (SB, 14 Nov 2026, coding rules 2026-09-19): Connection capacity: not found. Energy consumption: not found. PUE: not found. s8: \"Load requirements and any necessary upgrades will need to be investigated by an electrical consultant as part of the detailed design\". Operational water: no site figure; p8 estimates by analogy to AirTrunk SSD-41589232 (\"240L/s for 122,546m2 GFA\") and defers final demand to \"the future occupier\". Cooling method: not stated; options listed (rainwater re-use, recycled SEQ Water main, closed loop, direct to chip or immersion)."
 }

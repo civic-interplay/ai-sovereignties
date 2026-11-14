@@ -69,13 +69,17 @@
       "term": "demand",
       "page": 1,
       "context": "or in the event of an unknown future change of use which may require a higher parking demand.",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 1,
       "context": "82,576m² gross floor area of the building yields demand for 463 spaces. This required provision would increase",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     }
   ],
   "grade": "UNGRADED",

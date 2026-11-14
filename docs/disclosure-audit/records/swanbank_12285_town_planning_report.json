@@ -69,125 +69,166 @@
       "term": "water",
       "page": 10,
       "context": "The subject site can be adequately serviced by all necessary infrastructure, including sewerage, water,",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "MW",
       "page": 11,
       "context": "to 200MW and has a usable storage capacity up to 400MWh. The approved plans and lease area are",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "MWh",
       "page": 11,
       "context": "to 200MW and has a usable storage capacity up to 400MWh. The approved plans and lease area are",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "m3",
       "page": 13,
       "context": "Stormwater Management 1696.50m3 detention tank with treatment provided via 2x EnviroAustralis",
-      "classification": "UNCLASSIFIED"
+      "classification": "CONSTRUCTION",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 15,
       "context": "Water Resources • Water resource planning area boundaries",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 18,
       "context": "proposed water quality treatment measures that will be implemented to",
-      "classification": "UNCLASSIFIED"
+      "classification": "CONSTRUCTION",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 18,
       "context": "Water quality",
-      "classification": "UNCLASSIFIED"
+      "classification": "CONSTRUCTION",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 19,
       "context": "high-demand periods.",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 19,
       "context": "energy demand, the site’s location is considered an important component",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 19,
       "context": "water demand. As discussed within Section 5.6 of this report, there is an",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 19,
       "context": "Energy and water supply",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 19,
       "context": "Water",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 19,
       "context": "water demand. As discussed within Section 5.6 of this report, there is an",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 19,
       "context": "primary and uninterrupted source of water supply.",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 22,
       "context": "demand for 413 spaces. The site is proposed to accommodate a peak of",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 22,
       "context": "Scheme and the expected peak parking demand of the proposal.",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "demand",
       "page": 23,
       "context": "change of use having a higher parking demand.",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 24,
       "context": "Water There is an existing DN355 PE and newly constructed DN450 PE watermain",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 24,
       "context": "uninterrupted source of water supply.",
-      "classification": "UNCLASSIFIED"
+      "classification": "OPERATIONAL",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "m3",
       "page": 24,
       "context": "1696.50m3. The Stormwater Quality Improvement Devices (SQID) will treat the",
-      "classification": "UNCLASSIFIED"
+      "classification": "CONSTRUCTION",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     }
   ],
   "grade": "UNGRADED",
   "toolVersion": "audit.ts/1.1.0",
   "protocolVersion": 2,
-  "scannedAt": "2026-11-14T07:39:22.115Z"
+  "scannedAt": "2026-11-14T07:39:22.115Z",
+  "notes": "The only MW/MWh figures (p11) are for the adjoining approved battery (11711/2023/CA): \"up to 200MW ... 400MWh\". p19: the battery will provide \"behind the meter\" power; site chosen for \"higher than usual energy demand\"; no figure for the data centre."
 }

@@ -69,41 +69,54 @@
       "term": "water",
       "page": 7,
       "context": "WATER SIT",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 7,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 7,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 7,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 7,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 7,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     }
   ],
   "grade": "UNGRADED",
   "toolVersion": "audit.ts/1.1.0",
   "protocolVersion": 2,
-  "scannedAt": "2026-11-14T07:39:20.730Z"
+  "scannedAt": "2026-11-14T07:39:20.730Z",
+  "notes": "Powerlink referral (advice) triggered because premises are within 100 m of Blackstone Substation. No electrical figure for the facility in the response."
 }

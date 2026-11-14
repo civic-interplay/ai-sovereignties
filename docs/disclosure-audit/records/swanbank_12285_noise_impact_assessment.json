@@ -69,37 +69,49 @@
       "term": "water",
       "page": 35,
       "context": "WATER SIT",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 35,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 35,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 35,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 35,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     },
     {
       "term": "water",
       "page": 35,
       "context": "WATER",
-      "classification": "UNCLASSIFIED"
+      "classification": "NOT-APPLICABLE",
+      "classifiedBy": "SB",
+      "classifiedDate": "2026-11-14"
     }
   ],
   "grade": "UNGRADED",
