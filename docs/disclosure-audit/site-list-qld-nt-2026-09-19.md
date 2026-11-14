@@ -293,3 +293,63 @@ load or water. The Powerlink referral is about proximity to Blackstone
 Substation and states no figure. **Grade deferred:** the ladder grades the
 instrument of approval, and no decision has issued (status: In Progress, at
 Decision). The record is graded when the decision notice is published.
+
+### NT arm: search frame run, 14 November 2026
+
+Run by a research agent, read-only, logged here after spot checks (the three
+NTLIS records and the EPBC referral PDF were re-checked). One row per
+(site × index), with the query and a positive control.
+
+| Date | Site | Index | Query / URL | Positive control | Result |
+|---|---|---|---|---|---|
+| 2026-11-14 | NT general | 1. NTLIS Planning Notices Online (current) | `ntlis.nt.gov.au/planning-notices-online/notices/json` | 21 current notices returned | No data centre among them. |
+| 2026-11-14 | NT general | 1. NTLIS archived notices (exhibited applications) | `…/notices/archived/json`, byMonth Jan 2020–Nov 2026 and byDate 2008–2026 (11,129 records); regex on purpose/parcel/applicant: data cent, data center, data storage, data hall, server, digital, hyperscale, computing | PA2025/0044 returned | **Three data centre applications located** (N3–N5 below). None before 2020. |
+| 2026-11-14 | N1 Project Ares | 1. NTLIS archive | applicant `Energy North`, `Raggiana`; text `Murranji`, `NT Portion 851`, `Ares` | applicant control `Cunnington Rosse` (312); locality control Elliott/Newcastle Waters (17) | Not located by this index/query. |
+| 2026-11-14 | N1 Project Ares | 1. NTLIS pastoral notices (non-pastoral use, clearing) | current and archived byMonth Apr 2024–Nov 2026 | 36 records incl. PL2026/0002 | Not located. Months before Apr 2024 returned empty; earlier years not searched. |
+| 2026-11-14 | N2 Beetaloo Digital | 1. NTLIS | applicant `Beetaloo`, `Territory Coordinator`, `Tamboran`; suburb WEDDELL; `Middle Arm` | as above; Weddell returned 7 records | No data centre. The 185 ha site's land description is not published, so no parcel search was possible. Not located. |
+| 2026-11-14 | NT general | 1. NT Land Information Search | address/planning API | not run | **Not searched**: reCAPTCHA-gated; needs a browser. |
+| 2026-11-14 | NT general | 1. DA Online "Lodge and Track" | n/a | n/a | Login required; not a public search. |
+| 2026-11-14 | N1, N2, general | 1. DCA, NT Planning Commission, DLPE pages | direct GET | n/a | **Not searched**: HTTP 403 (Cloudflare challenge); needs a browser. |
+| 2026-11-14 | N1, N2 | 1. Territory Coordinator | direct GET | n/a | **Not searched**: HTTP 403 (Cloudflare). No Significant Project declaration for N1 or N2 found by search engine (only Nolans, 1 Jun 2026). |
+| 2026-11-14 | NT general | 2. PlanningAlerts | `/authorities/northern_territory` (the only NT authority; council slugs 404 because councils are not planning authorities in the NT) | browse works; Ryko Court address search found PA2025/0044 | Browse shows only the 62 most recent; full-text search not available; API key expired. **PA2023/0228 is missing from PlanningAlerts.** Its scraper skips records without a street address, so remote sites (Murranji, Weddell) cannot appear: those nulls are a property of the scraper. |
+| 2026-11-14 | N1, N2, general | 3. Council indexes (Darwin, Palmerston, Litchfield, Barkly) | site searches and planning pages | none available | No council DA registers: Darwin and Litchfield state that the DCA decides applications. Searches inconclusive or empty. |
+| 2026-11-14 | N1, N2, general | 4. NT Government Gazette | direct GET | n/a | **Not searched**: HTTP 403 (Cloudflare). Search engine found Gazette S41 (1 Jun 2026) assigning "Data Centre Services" to the Minister for Corporate and Digital Development; no data centre notice. |
+| 2026-11-14 | N1 Project Ares | Outside frame: NT EPA | archive copies of the EIA register pages (live site 403) | n/a | **Located**: EP2026/052, Energy North Pty Ltd; notice 8 Jul 2026; decision 7 Oct 2026, assessment by EIS required. |
+| 2026-11-14 | N1 Project Ares | Outside frame: EPBC portal | search engine plus direct GET of the referral PDF | other data centre referrals found | **Located**: EPBC 2026/10560 "Project Ares - Integrated Hyperscale Data Centre Campus" (PDF re-checked, HTTP 200). |
+| 2026-11-14 | N2 Beetaloo Digital | Outside frame: NT EPA, EPBC | search engine | same query type found Ares | Not located. |
+
+**Additions found by index 1 (in scope, appended per §Scope):**
+
+| # | Site | Instrument | Land | Zone | Applicant | Category | Exhibited |
+|---|---|---|---|---|---|---|---|
+| N3 | Data centre, CDU Casuarina campus, Brinkin | PA2021/0065 (variation: car parking) | Lot 9198 Town of Nightcliff, 7 Ellengowan Dr | CP | MasterPlan NT | Impact Assessment | 23 Apr–7 May 2021 |
+| N4 | Data centre, Darwin City | PA2023/0228 | Lot 9702 Town of Darwin, 8 Ryko Court | CB | Cunnington Rosse Town Planning | Impact Assessment | 14–28 Jul 2023 |
+| N5 | Data centre with ancillary office, 7 storeys, Darwin City | PA2025/0044 | Lots 9703 and 9704 Town of Darwin, 6 and 2 Ryko Court | CB | Cunnington Rosse | Impact Assessment | 21 Feb–7 Mar 2025 |
+
+None names an operator; press links Ryko Court to NEXTDC (rung 4). Decisions
+not located (DCA minutes 408 and 440 are reported to record consents; not read).
+Document lists in the NTLIS JSON look incomplete; full lists need a browser.
+
+**Use class, recorded before any NT document is read.** The NT Planning Scheme
+2020 defines no "data centre" use (Schedule 2, 61 defined uses; Schedule 1 to
+amendment 160, 6 Feb 2026, adds none). An undefined use is **impact
+assessable** in 27 of 31 zones, including CB, and prohibited in four
+residential zones. All three applications were impact assessed and publicly
+exhibited, and their descriptions name the use as "Data centre". Under the
+pre-registered expectation (a pathway effect), this predicts disclosure on the
+NT DCA pathway. That prediction is recorded here before the documents are
+read. Whether the Territory Coordinator Act 2025 offers a pathway that bypasses
+this was not checked.
+
+**Departures, recorded.** (1) Some Cloudflare-blocked pages were read from
+Internet Archive snapshots (NT EPA Ares pages, the Territory Coordinator
+Beetaloo item, NT Planning Scheme Schedule 2, Part 1 and Part 4). These are
+dated copies, not live pages, and must be re-obtained live before citation.
+(2) Indexes not searched by script (Cloudflare, reCAPTCHA, login) are listed
+above as not searched, not as nulls.
+
+**NT arm status:** N1 located in referral indexes only (no planning
+application found); N2 not located by any index; N3–N5 located in index 1.
+Next: obtain N3–N5 documents (browser), and open the four blocked indexes in a
+browser.
+
