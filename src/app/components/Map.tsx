@@ -1706,7 +1706,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           </a>
           <a
             className="ci-mast-link"
-            href="https://civicinterplay.io/data-centres"
+            href="https://civicinterplay.io/sovereignties/"
             target="_top"
             rel="noreferrer"
             style={{
@@ -2071,7 +2071,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             ['https://github.com/civic-interplay/ai-sovereignties', 'Code ↗'],
             ['/glossary', 'Glossary'],
             ['/sheets', 'Data sheets'],
-            ['https://civicinterplay.io/data-centres', 'About ↗'],
+            ['https://civicinterplay.io/sovereignties/', 'About ↗'],
           ] as const).map(([href, text]) => (
             <a key={href} href={href} {...(href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
               style={{ fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ci-link)', textDecoration: 'none', padding: '6px 0' }}>

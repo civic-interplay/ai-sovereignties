@@ -336,8 +336,8 @@ Token counts for this session were not measured.
 nearest three sites, a summary of what is selected, timeline under the title
 bar); a "Submission stories" layer from Dalby public submissions, placed by
 town or district; darker text and purple labels across the site; a light
-preview card; governance flags readable on white; About links moved to
-civicinterplay.io/data-centres. Tracker: 26 ACT, WA, SA and Tasmanian sites and
+preview card; governance flags readable on white; About links kept on
+civicinterplay.io/sovereignties/ (moved to /data-centres for a day, then reverted). Tracker: 26 ACT, WA, SA and Tasmanian sites and
 Swanbank approved onto the map (136 sites), five with approximate town- or
 suburb-level pins. Local only: a coding page for hand-checking the Dalby issue
 coding and underlining quotes (36 quotes from 7 submissions so far).
