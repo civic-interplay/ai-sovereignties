@@ -342,7 +342,7 @@ Swanbank approved onto the map (136 sites), five with approximate town- or
 suburb-level pins. Local only: a coding page for hand-checking the Dalby issue
 coding and underlining quotes (36 quotes from 7 submissions so far).
 
-**Errors, for the record:** 22 approved rows sat off the map because "Approved"
+**Errors, for the record:** 20 approved rows sat off the map because "Approved"
 had been chosen in place of "Approve". The automatic geocoder would have
 placed Swanbank at Emerald, about 600 km from Ipswich; it was pinned by hand
 at locality level before approval. The phone timeline button was hidden behind
