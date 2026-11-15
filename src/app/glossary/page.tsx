@@ -452,7 +452,7 @@ export default async function Glossary() {
           changes are versioned
         </a>
         . For the project framing, see the{' '}
-        <a href="https://civicinterplay.io/sovereignties/" style={{ color: CI_PERIWINKLE }}>
+        <a href="https://civicinterplay.io/data-centres" style={{ color: CI_PERIWINKLE }}>
           About page ↗
         </a>
         .

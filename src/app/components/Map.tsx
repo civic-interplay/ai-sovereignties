@@ -37,6 +37,14 @@ const CITY_VIEWS: Record<string, CityView> = {
 };
 const DEFAULT_VIEW = 'au';
 
+// Phone layout (see globals.css): a title bar on top, a sheet along the bottom.
+const isPhone = () => typeof window !== 'undefined' && window.matchMedia('(max-width: 700px)').matches;
+function fitAustralia(m: mapboxgl.Map, duration: number) {
+  // fitBounds is loose on the globe projection, so set the camera directly:
+  // at zoom 2.55 the continent (~42 degrees of longitude) spans ~360px.
+  m.flyTo({ center: [134.6, -27.4], zoom: 2.45, duration });
+}
+
 // Every layer drawn from the `sites` source, with the filter that defines what
 // it draws. The stage filter is ANDed onto these rather than replacing them, so
 // an overlay never survives a filter that hid the site underneath it.
@@ -543,6 +551,12 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
   // Story layer: personal stories from public submissions, placed by locality (never an address).
   const [storiesOn, setStoriesOn] = useState(() => typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('stories') === '1');
   const storiesRef = useRef(storiesOn);
+  const meMarker = useRef<mapboxgl.Marker | null>(null);
+  // Near me: the loaded sites, a way to open a site's card from outside a map
+  // click, and the nearest few to the reader (computed on the device).
+  const sitesData = useRef<GeoJSON.Feature[]>([]);
+  const showSiteRef = useRef<((f: GeoJSON.Feature) => void) | null>(null);
+  const [nearby, setNearby] = useState<{ name: string; status: string; km: number; f: GeoJSON.Feature }[] | null>(null);
   const [tlMonths, setTlMonths] = useState<string[]>([]);
   const [tlIdx, setTlIdx] = useState(0);
   const [tlPlaying, setTlPlaying] = useState(false);
@@ -585,6 +599,9 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       bearing: savedCamera?.bearing ?? 0,
       pitch: savedCamera?.pitch ?? 0,
     });
+    // On a phone the national view at zoom 3.5 cuts off both coasts; fit the
+    // continent between the title bar and the bottom sheet instead.
+    if (!savedCamera && initial === CITY_VIEWS.au && isPhone()) fitAustralia(m, 0);
     m.on('moveend', () => {
       const c = m.getCenter();
       savedCamera = { center: [c.lng, c.lat], zoom: m.getZoom(), bearing: m.getBearing(), pitch: m.getPitch() };
@@ -647,6 +664,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         // Leave the map empty on failure rather than crashing.
       }
       setSiteCount((data.features ?? []).length);
+      sitesData.current = (data.features ?? []).filter((f) => f.geometry?.type === 'Point');
       const stamp = (data as unknown as { updatedAt?: string }).updatedAt;
       if (stamp) setUpdatedAt(stamp.slice(0, 10));
 
@@ -1094,9 +1112,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       m.on('mouseleave', 'stories', () => { m.getCanvas().style.cursor = ''; });
 
       // Popup on click
-      m.on('click', 'sites-core', (e) => {
-        const feature = e.features?.[0];
-        if (!feature) return;
+      const showSite = (feature: GeoJSON.Feature) => {
         const p = feature.properties as Record<string, string>;
         // Accent the popup with the active lens colour.
         const lensNow = lensRef.current;
@@ -1161,6 +1177,11 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             '</div>',
           )
           .addTo(m);
+      };
+      showSiteRef.current = showSite;
+      m.on('click', 'sites-core', (e) => {
+        const feature = e.features?.[0];
+        if (feature) showSite(feature);
       });
 
       m.on('mouseenter', 'sites-core', () => { m.getCanvas().style.cursor = 'pointer'; });
@@ -1310,7 +1331,8 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
     const onPop = () => {
       const key = viewFromUrl();
       setView(key);
-      map.current?.flyTo({ ...CITY_VIEWS[key], duration: 900 });
+      if (key === 'au' && isPhone() && map.current) fitAustralia(map.current, 900);
+      else map.current?.flyTo({ ...CITY_VIEWS[key], duration: 900 });
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -1342,7 +1364,8 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
     if (showSupplyChain) {
       m.fitBounds([[100, -44], [155, 40]], { padding: 60, duration: 900 });
     } else {
-      m.flyTo({ center: [134.0, -25.0], zoom: 3.5, duration: 900 });
+      if (isPhone()) fitAustralia(m, 900);
+      else m.flyTo({ center: [134.0, -25.0], zoom: 3.5, duration: 900 });
     }
   }, [showSupplyChain]);
 
@@ -1464,6 +1487,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
 
   return (
     <div
+      className="ci-root"
       data-theme={theme}
       style={{ position: 'relative', width: '100vw', height: '100vh', background: 'var(--ci-field)', ...(THEME_VARS[theme] as React.CSSProperties) }}
     >
@@ -1474,6 +1498,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         <button
           type="button"
           onClick={onToggleTheme}
+          className="ci-theme-btn"
           aria-label={LIGHT ? 'Switch to dark view' : 'Switch to light view'}
           title={LIGHT ? 'Switch to dark view' : 'Switch to light view'}
           style={{
@@ -1498,47 +1523,12 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         </button>
       )}
 
-      <button
-        type="button"
-        onClick={() => {
-          // Turning stories on flies to them: at national zoom the dots sit
-          // under the Brisbane cluster and are easy to miss.
-          if (!storiesOn && storiesData.stories.length) {
-            const st = storiesData.stories;
-            const lng = st.reduce((a, x) => a + x.lng, 0) / st.length;
-            const lat = st.reduce((a, x) => a + x.lat, 0) / st.length;
-            map.current?.flyTo({ center: [lng, lat], zoom: 8.6, duration: 1200 });
-          }
-          setStoriesOn((v) => !v);
-        }}
-        aria-pressed={storiesOn}
-        title="Personal stories from public submissions, placed by town or district"
-        style={{
-          ...panel,
-          position: 'absolute',
-          top: 46,
-          right: 52,
-          zIndex: 2,
-          padding: '6px 11px',
-          cursor: 'pointer',
-          fontSize: 10.5,
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          color: 'var(--ci-ink-strong)',
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: 6,
-          outline: storiesOn ? '1.5px solid ' + (LIGHT ? '#b0436e' : '#f28db2') : undefined,
-        }}
-      >
-        <span aria-hidden style={{ width: 13, height: 13, borderRadius: 7, background: LIGHT ? '#b0436e' : '#f28db2', color: LIGHT ? '#fff' : '#0a0c0b', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, lineHeight: 1, paddingTop: 3 }}>{'\u201C'}</span>
-        Personal stories ({storiesData.stories.length})
-      </button>
 
       {tlMonths.length > 0 && (
         <div
           role="group"
           aria-label="Timeline"
+          className="ci-timeline"
           style={{
             ...panel,
             position: 'absolute',
@@ -1636,18 +1626,19 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         }}
       >
         {/* Masthead. Names what the map covers and links out to the source data. */}
-        <div style={panel}>
-          <div style={{ fontSize: 15, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+        <div style={panel} className="ci-masthead">
+          <div className="ci-mast-title" style={{ fontSize: 15.5, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--ci-ink-strong)' }}>
             Australian Data Centres
           </div>
-          <div style={{ fontSize: 11.5, color: INK_MUTED, marginTop: 5, maxWidth: 210, lineHeight: 1.55 }}>
+          <div className="ci-mast-desc" style={{ fontSize: 11.5, color: INK_MUTED, marginTop: 5, maxWidth: 210, lineHeight: 1.55 }}>
             Monitoring data centre investments as a super cycle urban transition.
           </div>
-          <div style={{ fontSize: 10, color: INK_MUTED, marginTop: 6, maxWidth: 210, lineHeight: 1.5 }}>
+          <div className="ci-mast-meta" style={{ fontSize: 10, color: INK_MUTED, marginTop: 6, maxWidth: 210, lineHeight: 1.5 }}>
             {siteCount !== null ? siteCount + ' sites' : 'Loading'}
             {updatedAt ? ' · updated ' + updatedAt : ''}
           </div>
           <a
+            className="ci-mast-link"
             href={NOTION_DATA_URL}
             target="_blank"
             rel="noreferrer"
@@ -1664,6 +1655,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             Source data ↗
           </a>
           <a
+            className="ci-mast-link"
             href="https://github.com/civic-interplay/ai-sovereignties"
             target="_blank"
             rel="noreferrer"
@@ -1681,6 +1673,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             Code ↗
           </a>
           <a
+            className="ci-mast-link"
             href="/glossary"
             style={{
               display: 'inline-block',
@@ -1696,6 +1689,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             Glossary
           </a>
           <a
+            className="ci-mast-link"
             href="/sheets"
             style={{
               display: 'inline-block',
@@ -1711,7 +1705,8 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             Data sheets
           </a>
           <a
-            href="https://civicinterplay.io/sovereignties/"
+            className="ci-mast-link"
+            href="https://civicinterplay.io/data-centres"
             target="_top"
             rel="noreferrer"
             style={{
@@ -1729,6 +1724,99 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           </a>
         </div>
 
+        {nearby && (
+          <div className="ci-nearby" role="region" aria-label="Nearest data centres" style={{ fontFamily: CI_FONT }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 4 }}>
+              <span style={{ flex: 1, fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: LABEL, fontWeight: 600 }}>
+                Nearest data centres
+              </span>
+              <button type="button" aria-label="Close nearest list" onClick={() => setNearby(null)}
+                style={{ all: 'unset', cursor: 'pointer', padding: '4px 6px', fontSize: 13, color: INK_MUTED }}>{'\u2715'}</button>
+            </div>
+            {nearby.length === 0 && <div style={{ fontSize: 12.5, color: INK_MUTED }}>No sites loaded yet.</div>}
+            {nearby.map((n) => (
+              <button
+                key={n.name + n.km}
+                type="button"
+                onClick={() => {
+                  const m = map.current;
+                  if (!m) return;
+                  const c = (n.f.geometry as GeoJSON.Point).coordinates as [number, number];
+                  // Use the map's own copy of the feature so the card reads its
+                  // properties exactly as a tap on the dot would.
+                  const live = m.querySourceFeatures('sites', { filter: ['==', ['get', 'name'], n.name] })[0];
+                  m.flyTo({ center: c, zoom: Math.max(m.getZoom(), 10), duration: 900 });
+                  // Close the list so the card is not hidden behind it; Near me
+                  // brings the list back.
+                  setNearby(null);
+                  m.once('moveend', () => showSiteRef.current?.(live ?? n.f));
+                }}
+                style={{ all: 'unset', boxSizing: 'border-box', width: '100%', cursor: 'pointer', display: 'flex', alignItems: 'baseline', gap: 10, padding: '9px 0', borderTop: '1px solid var(--ci-line)', minHeight: 44 }}
+              >
+                <span style={{ flex: 1, fontSize: 13.5, color: 'var(--ci-ink-strong)', lineHeight: 1.35 }}>
+                  {n.name}
+                  {n.status && <span style={{ display: 'block', fontSize: 11.5, color: INK_MUTED }}>{n.status}</span>}
+                </span>
+                <span style={{ fontSize: 12.5, color: 'var(--ci-ink)', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>
+                  {n.km < 10 ? n.km.toFixed(1) : Math.round(n.km).toLocaleString('en-AU')} km
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Phone only, sheet closed: everything that is switched on, in short
+            wrapping lines: the colour lens with its key, then each filter and
+            overlay with the mark it wears on the map. The full legend is in the
+            open sheet. */}
+        {(() => {
+          const chip = (key: string, mark: React.ReactNode, text: string) => (
+            <span key={key} style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 11.5, color: 'var(--ci-ink)', whiteSpace: 'nowrap' }}>
+              {mark}
+              {text}
+            </span>
+          );
+          const dot = (bg: string, extra: React.CSSProperties = {}) => (
+            <span aria-hidden style={{ width: 8, height: 8, borderRadius: '50%', background: bg, flex: '0 0 auto', ...extra }} />
+          );
+          const glyph = (g: string, color = INK_MUTED) => <span aria-hidden style={{ fontSize: 10, color, width: 9, textAlign: 'center' }}>{g}</span>;
+          const stageText = () => {
+            const sel = [...stageFilter];
+            const same = (set: readonly string[]) => sel.length === set.length && set.every((k) => stageFilter.has(k));
+            if (same(HERE_STAGES)) return 'Operating';
+            if (same(COMING_STAGES)) return 'In pipeline';
+            if (same(NOT_PROCEEDING_STAGES)) return 'Not proceeding';
+            return sel.map((k) => STAGE_LABELS[k] ?? k).join(', ');
+          };
+          const on = [
+            view !== DEFAULT_VIEW && chip('view', glyph('◎'), CITY_VIEWS[view].label),
+            stageFilter.size > 0 && chip('stage', glyph('▣'), stageText()),
+            flagFilter.size > 0 && chip('flags', dot('var(--ci-flag)'), 'Flagged: ' + [...flagFilter].join(', ')),
+            showContested && chip('contested', <RingGlyph rings={1} color={STATUS_CONTESTED} />, 'Contested'),
+            showFastTracked && chip('fast', <RingGlyph rings={2} color="var(--ci-status-ink)" />, 'State fast-tracked'),
+            showNamedPlatform && chip('named', dot(OVERLAY_PIP, { border: '1px solid rgba(10,12,11,0.55)' }), 'Named hyperscaler'),
+            showSupplyChain && chip('supply', glyph('↗'), 'Supply chain'),
+            storiesOn && chip('stories', dot(LIGHT ? '#b0436e' : '#f28db2'), 'Submission stories'),
+          ].filter(Boolean);
+          if (!items.length && !on.length) return null;
+          return (
+            <div className="ci-active-summary" style={{ fontFamily: CI_FONT }}>
+              {items.length > 0 && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4px 12px' }}>
+                  <span style={{ fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: LABEL, fontWeight: 700 }}>{legendTitle}</span>
+                  {items.map((k) => chip(k, dot(colors[k]), labels[k]))}
+                </div>
+              )}
+              {on.length > 0 && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4px 12px' }}>
+                  <span style={{ fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: LABEL, fontWeight: 700 }}>Also on</span>
+                  {on}
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
         <button
           type="button"
           className="ci-menu-btn"
@@ -1742,6 +1830,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             alignItems: 'center',
             gap: 8,
             fontSize: 12,
+            fontWeight: 600,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             color: 'var(--ci-ink-strong)',
@@ -1971,7 +2060,128 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           )}
         </Section>
 
+        {/* Phone only: the masthead shrinks to a title bar, so its links live
+            at the foot of the open sheet. */}
+        <nav className="ci-sheet-links" aria-label="About the tracker" style={{ fontFamily: CI_FONT }}>
+          <div style={{ fontSize: 11.5, color: INK_MUTED, lineHeight: 1.5, marginBottom: 6 }}>
+            Monitoring data centre investments as a super cycle urban transition.
+          </div>
+          {([
+            [NOTION_DATA_URL, 'Source data ↗'],
+            ['https://github.com/civic-interplay/ai-sovereignties', 'Code ↗'],
+            ['/glossary', 'Glossary'],
+            ['/sheets', 'Data sheets'],
+            ['https://civicinterplay.io/data-centres', 'About ↗'],
+          ] as const).map(([href, text]) => (
+            <a key={href} href={href} {...(href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
+              style={{ fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ci-link)', textDecoration: 'none', padding: '6px 0' }}>
+              {text}
+            </a>
+          ))}
+        </nav>
+
         </div>
+
+        {/* Personal stories sit under the index items, styled as one of them.
+            Outside the collapsible controls so phones see it without opening
+            the menu. Turning it on flies to the stories: at national zoom they
+            sit under the Brisbane cluster. */}
+        <button
+          type="button"
+          className="ci-rail-btn ci-stories-btn"
+          aria-pressed={storiesOn}
+          title="Stories from public submissions, placed by town or district"
+          onClick={() => {
+            if (!storiesOn && storiesData.stories.length) {
+              const st = storiesData.stories;
+              const lng = st.reduce((a, x) => a + x.lng, 0) / st.length;
+              const lat = st.reduce((a, x) => a + x.lat, 0) / st.length;
+              map.current?.flyTo({ center: [lng, lat], zoom: 8.6, duration: 1200 });
+            }
+            setStoriesOn((v) => !v);
+          }}
+          style={{
+            ...panel,
+            padding: '8px 10px',
+            textAlign: 'left',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 7,
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            fontWeight: 600,
+            color: 'var(--ci-ink-strong)',
+            borderColor: storiesOn ? (LIGHT ? '#b0436e' : '#f28db2') : 'var(--ci-border)',
+          }}
+        >
+          <span aria-hidden style={{ width: 14, height: 14, borderRadius: 7, flex: '0 0 auto', background: LIGHT ? '#b0436e' : '#f28db2', color: LIGHT ? '#fff' : '#0a0c0b', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, lineHeight: 1, paddingTop: 3 }}>{'\u201C'}</span>
+          <span style={{ flex: 1 }}>Submission stories ({storiesData.stories.length})</span>
+        </button>
+
+        {/* Phone only: fly to the reader's own location. Read once in the
+            browser, never sent anywhere. */}
+        <button
+          type="button"
+          className="ci-rail-btn ci-nearme-btn"
+          onClick={() => {
+            if (!navigator.geolocation) return;
+            navigator.geolocation.getCurrentPosition(
+              (pos) => {
+                const ll: [number, number] = [pos.coords.longitude, pos.coords.latitude];
+                const m = map.current;
+                if (!m) return;
+                if (!meMarker.current) {
+                  const el = document.createElement('div');
+                  el.style.cssText = 'width:12px;height:12px;border-radius:50%;background:#3f4aa8;border:2px solid #fff;box-shadow:0 0 0 1px #3f4aa8';
+                  el.setAttribute('aria-label', 'Your location');
+                  meMarker.current = new mapboxgl.Marker({ element: el });
+                }
+                meMarker.current.setLngLat(ll).addTo(m);
+                setChromeOpen(false);
+                // Nearest three sites by great-circle distance, worked out here
+                // on the device from the list the map already loaded.
+                const R = 6371, rad = Math.PI / 180;
+                const dist = (a: number[], b: number[]) => {
+                  const dLat = (b[1] - a[1]) * rad, dLon = (b[0] - a[0]) * rad;
+                  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * rad) * Math.cos(b[1] * rad) * Math.sin(dLon / 2) ** 2;
+                  return 2 * R * Math.asin(Math.sqrt(h));
+                };
+                const near = sitesData.current
+                  .map((f) => {
+                    const c = (f.geometry as GeoJSON.Point).coordinates;
+                    const pr = (f.properties ?? {}) as Record<string, unknown>;
+                    return { name: String(pr.name ?? ''), status: String(pr.status ?? ''), km: dist(ll, c), f };
+                  })
+                  .sort((a, b) => a.km - b.km)
+                  .slice(0, 3);
+                setNearby(near);
+                if (!near.length) { m.flyTo({ center: ll, zoom: 9.5, duration: 1200 }); return; }
+                const b = new mapboxgl.LngLatBounds(ll, ll);
+                near.forEach((n) => b.extend((n.f.geometry as GeoJSON.Point).coordinates as [number, number]));
+                m.fitBounds(b, { padding: { top: 90, bottom: 300, left: 40, right: 40 }, maxZoom: 11, duration: 1200 });
+              },
+              () => undefined,
+              { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
+            );
+          }}
+          style={{
+            ...panel,
+            padding: '8px 10px',
+            cursor: 'pointer',
+            alignItems: 'center',
+            gap: 7,
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            fontWeight: 600,
+            color: 'var(--ci-ink-strong)',
+          }}
+        >
+          <span aria-hidden style={{ width: 9, height: 9, borderRadius: '50%', background: '#3f4aa8', boxShadow: '0 0 0 2px var(--ci-panel), 0 0 0 3px #3f4aa8', flex: '0 0 auto' }} />
+          <span style={{ flex: 1 }}>Near me</span>
+        </button>
 
         {/* What is currently on. The rail collapses to stay short, which means
               the controls no longer show their own state — so this says it
@@ -1979,6 +2189,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
               the foot of the column rather than pinned bottom-left, where Mapbox's
               own logo and compass sat on top of it and a tall list ran off screen. */}
         <div
+          className="ci-legend"
           style={{
             ...panel,
             padding: '8px 12px',
@@ -2219,9 +2430,10 @@ function Section({
           alignItems: 'center',
           gap: 7,
           fontSize: 12,
+          fontWeight: 600,
           letterSpacing: '0.08em',
           textTransform: 'uppercase',
-          color: open ? 'var(--ci-ink-strong)' : INK_MUTED,
+          color: 'var(--ci-ink-strong)',
           borderColor: open ? CI_PURPLE : 'var(--ci-border)',
         }}
       >
@@ -2279,8 +2491,8 @@ function flagsHtml(flags: string | undefined): string {
     list
       .map(
         (f) =>
-          '<span style="display:inline-flex;align-items:center;gap:4px;font-size:9.5px;color:#ffd23f;">' +
-          '<span style="width:5px;height:5px;border-radius:50%;background:#ffd23f;display:inline-block;"></span>' +
+          '<span style="display:inline-flex;align-items:center;gap:4px;font-size:9.5px;font-weight:600;color:var(--ci-flag);">' +
+          '<span style="width:5px;height:5px;border-radius:50%;background:var(--ci-flag);display:inline-block;"></span>' +
           f +
           '</span>',
       )

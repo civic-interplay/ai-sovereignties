@@ -96,3 +96,152 @@ body {
 		width: 100%;
 	}
 }
+
+/* --- Phone layout: map first, bottom sheet (15 Nov 2026) -----------------
+   The masthead becomes a slim title bar; the control column becomes a sheet
+   along the bottom edge. Collapsed, the sheet is one row of three actions
+   (lenses, stories, near me). Open, it holds the lenses, the legend and the
+   links. Inline styles on the component set the desktop look, so the
+   overrides here need !important. Desktop is unchanged. */
+.ci-sheet-links,
+.ci-nearme-btn,
+.ci-nearby,
+.ci-active-summary {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	.ci-masthead {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+		border-radius: 0 !important;
+		border-width: 0 0 1px 0 !important;
+		padding: 10px 92px 9px 14px !important;
+		padding-top: calc(10px + env(safe-area-inset-top)) !important;
+	}
+	.ci-mast-title {
+		font-size: 13px !important;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.ci-mast-meta {
+		margin-top: 2px !important;
+		max-width: none !important;
+	}
+	.ci-mast-desc,
+	.ci-mast-link {
+		display: none !important;
+	}
+
+	.ci-theme-btn {
+		position: fixed !important;
+		top: calc(12px + env(safe-area-inset-top)) !important;
+		right: 12px !important;
+		z-index: 4 !important;
+	}
+
+	/* Pinch zooms on a phone; the +/- buttons only covered the map. */
+	.mapboxgl-ctrl-top-right {
+		display: none;
+	}
+	/* Keep the Mapbox logo and attribution clear of the collapsed sheet. */
+	.mapboxgl-ctrl-bottom-left,
+	.mapboxgl-ctrl-bottom-right {
+		bottom: calc(64px + env(safe-area-inset-bottom));
+	}
+
+	.ci-column {
+		position: fixed !important;
+		top: auto !important;
+		left: 0 !important;
+		right: 0;
+		bottom: 0;
+		max-width: none;
+		max-height: 72dvh !important;
+		display: grid !important;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 8px !important;
+		padding: 10px 12px calc(10px + env(safe-area-inset-bottom)) !important;
+		background: var(--ci-panel);
+		border-top: 1px solid var(--ci-border);
+		border-radius: 16px 16px 0 0;
+		box-shadow: 0 -6px 24px rgba(10, 12, 11, 0.1);
+		z-index: 3 !important;
+	}
+
+	/* The three actions share one row. */
+	.ci-column > .ci-menu-btn,
+	.ci-column > .ci-stories-btn,
+	.ci-column > .ci-nearme-btn {
+		width: auto !important;
+		min-height: 44px;
+		padding: 6px 8px !important;
+		font-size: 10.5px !important;
+		letter-spacing: 0.06em !important;
+		justify-content: center;
+		text-align: center !important;
+		border-radius: 10px !important;
+	}
+	.ci-column > .ci-nearby {
+		display: block;
+		order: 0;
+		grid-column: 1 / -1;
+		padding-bottom: 4px;
+	}
+	.ci-column > .ci-active-summary {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		order: 0;
+		grid-column: 1 / -1;
+		padding: 0 2px 2px;
+	}
+	.ci-controls[data-open='true'] ~ .ci-active-summary,
+	.ci-column:has(.ci-controls[data-open='true']) > .ci-active-summary {
+		display: none;
+	}
+	.ci-column > .ci-menu-btn { order: 1; }
+	.ci-column > .ci-stories-btn { order: 2; }
+	.ci-column > .ci-nearme-btn { order: 3; display: flex; }
+	.ci-column > .ci-controls { order: 4; grid-column: 1 / -1; }
+	.ci-column > .ci-legend { order: 5; grid-column: 1 / -1; max-width: none !important; }
+	.ci-stories-btn > span:last-child,
+	.ci-nearme-btn > span:last-child {
+		flex: 0 1 auto !important;
+	}
+
+	/* The legend shows with the open sheet, not over the map. */
+	.ci-controls[data-open='false'] ~ .ci-legend {
+		display: none !important;
+	}
+
+	/* Inside the sheet the lens rows are list rows, not floating cards. */
+	.ci-controls .ci-rail-btn {
+		border-width: 0 0 1px 0 !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		min-height: 44px;
+	}
+
+	.ci-sheet-links {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 16px;
+		padding-top: 6px;
+	}
+	.ci-sheet-links > div {
+		flex-basis: 100%;
+	}
+
+	/* Timeline sits above the collapsed sheet, and steps aside when it opens. */
+	.ci-timeline {
+		bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+	}
+	.ci-root:has(.ci-controls[data-open='true']) .ci-timeline {
+		display: none !important;
+	}
+}

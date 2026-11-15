@@ -136,7 +136,7 @@ export function SheetNav({ current }: { current: string }) {
       {link('/glossary', 'Glossary & methods', current === 'glossary')}
       {link('/news', 'News feed', current === 'news')}
       {link('/trends', 'Trends', current === 'trends')}
-      {link('https://civicinterplay.io/sovereignties/', 'About ↗')}
+      {link('https://civicinterplay.io/data-centres', 'About ↗')}
       {link(CONTACT_URL, 'Contribute ↗')}
     </nav>
   );
@@ -169,7 +169,7 @@ export function ScopeNote() {
       </a>
       , RMIT Centre for Urban Research, as a test case of the utility of civic AI methodologies for urban data
       governance.{' '}
-      <a href="https://civicinterplay.io/sovereignties/" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
+      <a href="https://civicinterplay.io/data-centres" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
         Learn more
       </a>
       .
