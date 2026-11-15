@@ -260,7 +260,7 @@ export default async function TrendsPage() {
           </>
         }
       />
-      <div style={{ color: '#525b56', fontSize: 13, lineHeight: 1.6, maxWidth: 640, margin: '-16px 0 24px' }}>
+      <div style={{ color: '#343a37', fontSize: 13, lineHeight: 1.6, maxWidth: 640, margin: '-16px 0 24px' }}>
         <p style={{ margin: '0 0 10px', fontWeight: 600, color: '#0a0c0b' }}>
           Specifically, the framework examines the different ways infrastructural AI is being governed and reported
           across the Australian policy landscape, with a focus on data transparency and democratic accountability.
@@ -285,7 +285,7 @@ export default async function TrendsPage() {
         <a href="https://doi.org/10.5281/zenodo.21026429" style={{ color: CI_PERIWINKLE }}>
           Download the full tracker dataset (CSV, Zenodo)
         </a>
-        <span style={{ color: '#5f6a64' }}> · every table below can also be downloaded as CSV</span>
+        <span style={{ color: '#444b47' }}> · every table below can also be downloaded as CSV</span>
       </p>
 
       <Panel style={STAT_GRID}>
@@ -456,7 +456,7 @@ export default async function TrendsPage() {
 
       <SectionHead>Change between snapshots</SectionHead>
       <Panel>
-        <p style={{ margin: '0 0 12px', fontSize: 12.5, color: '#525b56', maxWidth: 640 }}>
+        <p style={{ margin: '0 0 12px', fontSize: 12.5, color: '#343a37', maxWidth: 640 }}>
           The three charts below are counted from each frozen snapshot of the dataset in the public repository,
           from {series[0]?.date} to {series[series.length - 1]?.date}. Each point shows what the record said on
           that date. Earlier points are not revised when a row is later corrected. Data centres are counted only

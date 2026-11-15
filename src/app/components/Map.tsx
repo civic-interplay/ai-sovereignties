@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import storiesData from '@/data/stories.json';
 
 // Public Mapbox token. If Next inlines NEXT_PUBLIC_MAPBOX_TOKEN at build time we
 // use it; otherwise the token is fetched at runtime from /api/config (build-time
@@ -151,14 +152,14 @@ const THEME_VARS: Record<Theme, Record<string, string>> = {
   dark: {
     '--ci-field': '#0a0c0b', '--ci-panel': '#121618', '--ci-line': '#2a302e', '--ci-border': '#3f4744',
     '--ci-ink': '#c8cfc4', '--ci-ink-strong': '#e6ebe6', '--ci-ink-muted': '#8a938c', '--ci-ink-dim': '#7f8a7c',
-    '--ci-ink-soft': '#9aa39b', '--ci-link': CI_PERIWINKLE, '--ci-flag': FLAG_INK, '--ci-hot': STAT_HOT,
+    '--ci-ink-soft': '#9aa39b', '--ci-link': CI_PERIWINKLE, '--ci-label': '#b9a0e8', '--ci-flag': FLAG_INK, '--ci-hot': STAT_HOT,
     '--ci-verified': '#8fae7c', '--ci-status-ink': STATUS_INK_SOFT,
   },
   light: {
     '--ci-field': '#ffffff', '--ci-panel': '#ffffff', '--ci-line': '#e3e6e1', '--ci-border': '#c9cec8',
-    '--ci-ink': '#2b312e', '--ci-ink-strong': '#0a0c0b', '--ci-ink-muted': '#525b56', '--ci-ink-dim': '#5f6a64',
-    '--ci-ink-soft': '#525b56', '--ci-link': '#3f4aa8', '--ci-flag': '#8d5108', '--ci-hot': '#b3261e',
-    '--ci-verified': '#3d6b2f', '--ci-status-ink': '#2b312e',
+    '--ci-ink': '#1a1d1b', '--ci-ink-strong': '#0a0c0b', '--ci-ink-muted': '#343a37', '--ci-ink-dim': '#444b47',
+    '--ci-ink-soft': '#343a37', '--ci-link': '#3f4aa8', '--ci-label': '#5b2a9e', '--ci-flag': '#8d5108', '--ci-hot': '#b3261e',
+    '--ci-verified': '#3d6b2f', '--ci-status-ink': '#1a1d1b',
   },
 };
 // The camera survives a theme switch: switching remounts the map, and the new
@@ -539,6 +540,9 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
   // turns solid at its approval date; the contested ring appears at its first
   // dated contest. Sites with no date stay visible in grey.
   const [timelineOn, setTimelineOn] = useState(false);
+  // Story layer: personal stories from public submissions, placed by locality (never an address).
+  const [storiesOn, setStoriesOn] = useState(() => typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('stories') === '1');
+  const storiesRef = useRef(storiesOn);
   const [tlMonths, setTlMonths] = useState<string[]>([]);
   const [tlIdx, setTlIdx] = useState(0);
   const [tlPlaying, setTlPlaying] = useState(false);
@@ -1010,6 +1014,85 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         paint: { 'text-color': LIGHT ? '#0a0c0b' : '#e6ebe6', 'text-halo-color': LIGHT ? '#ffffff' : '#0a0c0b', 'text-halo-width': 1.2 },
       });
 
+      // Story layer. Each dot is one person's account from a public submission,
+      // placed at the town or district they describe, spread slightly so dots at
+      // one locality do not overlap. Hidden until the Stories button is pressed.
+      m.addSource('stories', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: storiesData.stories.map((st) => ({
+            type: 'Feature' as const,
+            geometry: { type: 'Point' as const, coordinates: [st.lng, st.lat] },
+            properties: st,
+          })),
+        },
+      });
+      m.addLayer({
+        id: 'stories-glow',
+        type: 'circle',
+        source: 'stories',
+        layout: { visibility: storiesRef.current ? 'visible' : 'none' },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 7, 8, 12, 11, 16],
+          'circle-color': LIGHT ? '#d4618f' : '#f28db2',
+          'circle-opacity': LIGHT ? 0.28 : 0.35,
+          'circle-blur': 1,
+        },
+      });
+      m.addLayer({
+        id: 'stories',
+        type: 'circle',
+        source: 'stories',
+        layout: { visibility: storiesRef.current ? 'visible' : 'none' },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 3, 6, 3.5, 8, 6, 11, 8],
+          'circle-color': LIGHT ? '#b0436e' : '#f28db2',
+          'circle-opacity': 0.95,
+          'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 3, 0.75, 8, 1.25],
+          'circle-stroke-color': LIGHT ? '#ffffff' : '#0a0c0b',
+        },
+      });
+      // A quotation mark on each story dot, so stories read as people's words
+      // and cannot be mistaken for a site.
+      m.addLayer({
+        id: 'stories-mark',
+        type: 'symbol',
+        source: 'stories',
+        minzoom: 6.5,
+        layout: {
+          visibility: storiesRef.current ? 'visible' : 'none',
+          'text-field': '\u201C',
+          'text-font': ['DIN Offc Pro Bold', 'Arial Unicode MS Bold'],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 6.5, 0, 7, 11, 11, 15],
+          'text-offset': [0, 0.28],
+          'text-allow-overlap': true,
+          'text-ignore-placement': true,
+        },
+        paint: { 'text-color': LIGHT ? '#ffffff' : '#0a0c0b' },
+      });
+      m.on('click', 'stories', (e) => {
+        const f = e.features?.[0];
+        if (!f) return;
+        const p = f.properties as Record<string, string>;
+        const esc = (x: string) => String(x ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
+        const accent = LIGHT ? '#b0436e' : '#f28db2';
+        new mapboxgl.Popup({ closeButton: false, className: 'sovereignty-popup', maxWidth: '280px' })
+          .setLngLat((f.geometry as GeoJSON.Point).coordinates as [number, number])
+          .setHTML(
+            '<div style="background:var(--ci-field);border:1px solid ' + accent + ';border-radius:12px;padding:10px 13px;font-family:var(--font-fira),system-ui,sans-serif;color:var(--ci-ink);">' +
+            '<div style="font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ci-ink-dim);margin-bottom:5px;">Story · ' + esc(p.locality) + '</div>' +
+            '<div style="font-size:12px;line-height:1.42;margin-bottom:7px;">\u201C' + esc(p.quote) + '\u201D</div>' +
+            '<div style="font-size:11px;color:var(--ci-ink-strong);margin-bottom:3px;">' + esc(p.name) + '</div>' +
+            '<div style="font-size:10px;line-height:1.35;color:var(--ci-ink-dim);">' + esc(p.siteShort) + ' · ' + esc(p.band) +
+            ' · <a href="' + esc(p.link) + '" target="_blank" rel="noreferrer" style="color:' + (LIGHT ? 'var(--ci-link)' : accent) + ';text-decoration:none;">submission \u2197</a></div>' +
+            '</div>',
+          )
+          .addTo(m);
+      });
+      m.on('mouseenter', 'stories', () => { m.getCanvas().style.cursor = 'pointer'; });
+      m.on('mouseleave', 'stories', () => { m.getCanvas().style.cursor = ''; });
+
       // Popup on click
       m.on('click', 'sites-core', (e) => {
         const feature = e.features?.[0];
@@ -1086,6 +1169,16 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
 
     map.current = m;
   }, [tokenReady]);
+
+  // Show or hide the story layer.
+  useEffect(() => {
+    const m = map.current;
+    storiesRef.current = storiesOn;
+    if (!m || !m.getLayer('stories')) return;
+    m.setLayoutProperty('stories', 'visibility', storiesOn ? 'visible' : 'none');
+    m.setLayoutProperty('stories-glow', 'visibility', storiesOn ? 'visible' : 'none');
+    m.setLayoutProperty('stories-mark', 'visibility', storiesOn ? 'visible' : 'none');
+  }, [storiesOn]);
 
   // Recolour the nodes when the lens changes (layers exist only after load).
   useEffect(() => {
@@ -1350,7 +1443,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       <div
         style={{
           fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase',
-          color: INK_MUTED, marginBottom: 6, padding: '0 6px',
+          color: LABEL, fontWeight: 600, marginBottom: 6, padding: '0 6px',
         }}
       >
         {legendTitle}
@@ -1374,6 +1467,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
       data-theme={theme}
       style={{ position: 'relative', width: '100vw', height: '100vh', background: 'var(--ci-field)', ...(THEME_VARS[theme] as React.CSSProperties) }}
     >
+      <style>{'.sovereignty-popup .mapboxgl-popup-content{background:transparent;box-shadow:none;padding:0}.sovereignty-popup .mapboxgl-popup-tip{display:none}'}</style>
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
 
       {onToggleTheme && (
@@ -1403,6 +1497,33 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           {LIGHT ? 'Dark' : 'Light'}
         </button>
       )}
+
+      <button
+        type="button"
+        onClick={() => setStoriesOn((v) => !v)}
+        aria-pressed={storiesOn}
+        title="Personal stories from public submissions, placed by town or district"
+        style={{
+          ...panel,
+          position: 'absolute',
+          top: 46,
+          right: 52,
+          zIndex: 2,
+          padding: '6px 11px',
+          cursor: 'pointer',
+          fontSize: 10.5,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: 'var(--ci-ink-strong)',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
+          outline: storiesOn ? '1.5px solid ' + (LIGHT ? '#b0436e' : '#f28db2') : undefined,
+        }}
+      >
+        <span aria-hidden style={{ width: 13, height: 13, borderRadius: 7, background: LIGHT ? '#b0436e' : '#f28db2', color: LIGHT ? '#fff' : '#0a0c0b', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, lineHeight: 1, paddingTop: 3 }}>{'\u201C'}</span>
+        Stories{storiesOn ? ' (' + storiesData.stories.length + ')' : ''}
+      </button>
 
       {tlMonths.length > 0 && (
         <div
@@ -1860,7 +1981,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           <div
             style={{
               fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase',
-              color: INK_MUTED, marginBottom: 1,
+              color: LABEL, fontWeight: 600, marginBottom: 1,
             }}
           >
             Selected
@@ -1982,7 +2103,8 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
                 fontSize: 10,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: INK_MUTED,
+                color: LABEL,
+                fontWeight: 600,
                 marginBottom: 8,
               }}
             >
@@ -2016,6 +2138,8 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
 // Muted ink for secondary copy inside the chrome. Lifted with the panel so it
 // keeps roughly the same relationship to the background.
 const INK_MUTED = 'var(--ci-ink-muted)';
+// Section labels in the chrome (legend title, Selected, panel headings).
+const LABEL = 'var(--ci-label)';
 
 const panel: React.CSSProperties = {
   // A step lighter than the map field so the column reads as chrome sitting

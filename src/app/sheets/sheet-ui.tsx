@@ -33,9 +33,14 @@ const PANEL = '#ffffff';
 const PANEL_BORDER = '1px solid #aab3ac';
 // Headings and emphasised words. Replaces the hardcoded #fff of the dark theme.
 const STRONG = '#0a0c0b';
-const INK = '#2b312e';
-const DIM = '#5f6a64';
-const MID = '#525b56';
+// Darkened 15 Nov 2026 at Sarah's request (text read too grey). Contrast on the
+// field: INK 15.82:1, MID 10.82:1, DIM 8.34:1.
+const INK = '#1a1d1b';
+const DIM = '#444b47';
+const MID = '#343a37';
+// Section and column labels carry the Civic Interplay purple so they stand out
+// from body text. 8.61:1 on the field.
+const LABEL = '#5b2a9e';
 // Non-text furniture: table rules and the bar-chart track. Grouping only — no
 // value is identified by these, so 1.4.11's 3:1 does not apply (the same
 // reasoning the dark theme recorded for its own rules).
@@ -43,7 +48,7 @@ const RULE = '#e3e6e1';
 const TRACK = '#e3e6e1';
 const SWATCH_UNKNOWN = '#aab3ac';
 
-export { STRONG, MID, DIM, INK, RULE, TRACK, SWATCH_UNKNOWN, FIELD };
+export { STRONG, MID, DIM, INK, LABEL, RULE, TRACK, SWATCH_UNKNOWN, FIELD };
 
 // Where a reader goes to add or correct something. Named "Contribute" rather
 // than "Contact": the tracker asks to be corrected, and that is participation
@@ -175,7 +180,7 @@ export function ScopeNote() {
 export function SheetTitle({ kicker, title, sub }: { kicker: string; title: string; sub?: React.ReactNode }) {
   return (
     <header style={{ marginBottom: 28 }}>
-      <div style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: DIM }}>{kicker}</div>
+      <div style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: LABEL, fontWeight: 600 }}>{kicker}</div>
       <h1 style={{ fontSize: 30, fontWeight: 600, margin: '6px 0 4px', color: STRONG }}>{title}</h1>
       {sub && <p style={{ color: MID, fontSize: 13, lineHeight: 1.6, maxWidth: 640, margin: 0 }}>{sub}</p>}
     </header>
@@ -194,7 +199,7 @@ export function Stat({ value, label: text, note }: { value: string; label: strin
   return (
     <div style={{ minWidth: 120 }}>
       <div style={{ fontSize: 26, fontWeight: 600, color: STRONG }}>{value}</div>
-      <div style={{ fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: MID, marginTop: 2 }}>
+      <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: LABEL, marginTop: 2 }}>
         {text}
       </div>
       {note && <div style={{ fontSize: 10.5, color: DIM, marginTop: 2, lineHeight: 1.5 }}>{note}</div>}
@@ -206,11 +211,14 @@ export function SectionHead({ children }: { children: React.ReactNode }) {
   return (
     <h2
       style={{
-        fontSize: 12,
-        letterSpacing: '0.15em',
+        fontSize: 12.5,
+        fontWeight: 700,
+        letterSpacing: '0.14em',
         textTransform: 'uppercase',
-        color: DIM,
+        color: LABEL,
         margin: '34px 0 10px',
+        paddingLeft: 10,
+        borderLeft: `3px solid ${LABEL}`,
       }}
     >
       {children}
@@ -257,7 +265,8 @@ export const td: React.CSSProperties = {
 };
 export const th: React.CSSProperties = {
   ...td,
-  color: DIM,
+  color: LABEL,
+  fontWeight: 600,
   fontSize: 10,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',

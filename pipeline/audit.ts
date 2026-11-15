@@ -134,7 +134,7 @@ function sha256(path: string): string {
 function extractPages(pdf: string): string[] {
   const txt = execFileSync('pdftotext', ['-layout', pdf, '-'], {
     encoding: 'utf8',
-    maxBuffer: 256 * 1024 * 1024,
+    maxBuffer: 1024 * 1024 * 1024, // raised from 256 MB on 2026-11-14: the Dalby DA (870 pp.) extracts to 317 MB with -layout
   });
   return txt.split('\f');
 }

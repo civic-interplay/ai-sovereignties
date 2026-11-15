@@ -32,9 +32,9 @@ export const SERIES = {
   track: '#efebe4',
 };
 
-const INK = '#2b312e';
-const MID = '#525b56';
-const DIM = '#5f6a64';
+const INK = '#1a1d1b';
+const MID = '#343a37';
+const DIM = '#444b47';
 const GRID = '#e3e6e1';
 const SURFACE = '#ffffff';
 const BAR = 18;
