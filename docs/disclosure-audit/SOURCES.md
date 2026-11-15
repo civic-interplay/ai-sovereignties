@@ -39,4 +39,4 @@ are reading the same bytes.
 
 | Files | Source |
 | --- | --- |
-| `swanbank_12285_*.pdf` | Ipswich City Council, application 12285/2026/MCU, document list: https://edoc.ipswich.qld.gov.au/objective/?id=1878888&plat=pwy&env=iccecm (32 files listed at 16 Nov 2026; downloaded by SB, 14 Nov 2026) |
+| `swanbank_12285_*.pdf` | Ipswich City Council, application 12285/2026/MCU, document list: https://edoc.ipswich.qld.gov.au/objective/?id=1878888&plat=pwy&env=iccecm (retrieved 14 Nov 2026; 32 files listed at 16 Nov 2026) |
