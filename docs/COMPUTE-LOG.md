@@ -327,3 +327,23 @@ the public map for about an hour, because the map shows any row with
 coordinates whatever its name. Coordinates were cleared once this was noticed.
 A Notes line on Plumpton twice stated checks that had not been made; both were
 corrected within minutes.
+
+## 2026-11-15 to 16: phone layout, stories, other-state approvals (interactive session)
+
+Token counts for this session were not measured.
+
+**What it bought:** a phone layout for the map (bottom sheet, Near me with the
+nearest three sites, a summary of what is selected, timeline under the title
+bar); a "Submission stories" layer from Dalby public submissions, placed by
+town or district; darker text and purple labels across the site; a light
+preview card; governance flags readable on white; About links moved to
+civicinterplay.io/data-centres. Tracker: 26 ACT, WA, SA and Tasmanian sites and
+Swanbank approved onto the map (136 sites), five with approximate town- or
+suburb-level pins. Local only: a coding page for hand-checking the Dalby issue
+coding and underlining quotes (36 quotes from 7 submissions so far).
+
+**Errors, for the record:** 22 approved rows sat off the map because "Approved"
+had been chosen in place of "Approve". The automatic geocoder would have
+placed Swanbank at Emerald, about 600 km from Ipswich; it was pinned by hand
+at locality level before approval. The phone timeline button was hidden behind
+the bottom sheet for about a day after the layout shipped.
