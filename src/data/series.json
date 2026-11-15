@@ -89,5 +89,18 @@
     "proposedSites": 41,
     "newsItems": 96,
     "newsHumanChecked": 0
+  },
+  {
+    "date": "2026-11-15",
+    "commit": "working",
+    "dataCentres": 133,
+    "operating": 57,
+    "pipeline": 68,
+    "withMw": 50,
+    "mwOperating": 1922,
+    "mwPipeline": 15179,
+    "proposedSites": 28,
+    "newsItems": 102,
+    "newsHumanChecked": 0
   }
 ]
