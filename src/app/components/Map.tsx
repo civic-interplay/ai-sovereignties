@@ -1500,7 +1500,17 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
 
       <button
         type="button"
-        onClick={() => setStoriesOn((v) => !v)}
+        onClick={() => {
+          // Turning stories on flies to them: at national zoom the dots sit
+          // under the Brisbane cluster and are easy to miss.
+          if (!storiesOn && storiesData.stories.length) {
+            const st = storiesData.stories;
+            const lng = st.reduce((a, x) => a + x.lng, 0) / st.length;
+            const lat = st.reduce((a, x) => a + x.lat, 0) / st.length;
+            map.current?.flyTo({ center: [lng, lat], zoom: 8.6, duration: 1200 });
+          }
+          setStoriesOn((v) => !v);
+        }}
         aria-pressed={storiesOn}
         title="Personal stories from public submissions, placed by town or district"
         style={{
@@ -1522,7 +1532,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
         }}
       >
         <span aria-hidden style={{ width: 13, height: 13, borderRadius: 7, background: LIGHT ? '#b0436e' : '#f28db2', color: LIGHT ? '#fff' : '#0a0c0b', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, lineHeight: 1, paddingTop: 3 }}>{'\u201C'}</span>
-        Stories{storiesOn ? ' (' + storiesData.stories.length + ')' : ''}
+        Personal stories ({storiesData.stories.length})
       </button>
 
       {tlMonths.length > 0 && (

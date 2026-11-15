@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 		type: "website",
 		images: [
 			{
-				url: "/og.png",
+				url: "/og.png?v=20261115",
 				width: 1200,
 				height: 630,
 				alt: "Australian Data Centres: monitoring data centre investments as a super cycle urban transition",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 		title: "Australian Data Centres",
 		description:
 			"Monitoring data centre investments as a super cycle urban transition.",
-		images: ["/og.png"],
+		images: ["/og.png?v=20261115"],
 	},
 };
 
