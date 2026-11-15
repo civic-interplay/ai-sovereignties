@@ -34,3 +34,9 @@ are reading the same bytes.
 | `swanbank_12285_title_search.pdf` | 0.1 MB | `dd6dab113e9c903b0cc18435227df3d07dd335832b739d5ad915a8d5d20ee124` | 2026-11-14 |
 | `swanbank_12285_town_planning_report.pdf` | 2.7 MB | `28d1575a41fe2cc6bfaa889218375a1ea82e9e33ae383dc970b7d9ebeabb100c` | 2026-11-14 |
 | `swanbank_9000_spsr_decision_notice.pdf` | 0.2 MB | `65737d2cbf67f123df3484f1fe5ed32dedca2a2258f5d926fc3b5d6264f50e6b` | 2026-11-14 |
+
+## Where the files came from
+
+| Files | Source |
+| --- | --- |
+| `swanbank_12285_*.pdf` | Ipswich City Council, application 12285/2026/MCU, document list: https://edoc.ipswich.qld.gov.au/objective/?id=1878888&plat=pwy&env=iccecm (32 files listed at 16 Nov 2026; downloaded by SB, 14 Nov 2026) |
