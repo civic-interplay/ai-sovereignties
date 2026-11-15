@@ -237,9 +237,12 @@ body {
 		flex-basis: 100%;
 	}
 
-	/* Timeline sits above the collapsed sheet, and steps aside when it opens. */
+	/* Timeline sits under the title bar: the collapsed sheet's height changes
+	   with what is selected, so a bottom position ends up hidden behind it.
+	   It steps aside when the sheet opens. */
 	.ci-timeline {
-		bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+		top: calc(62px + env(safe-area-inset-top)) !important;
+		bottom: auto !important;
 	}
 	.ci-root:has(.ci-controls[data-open='true']) .ci-timeline {
 		display: none !important;
