@@ -49,3 +49,4 @@
 {"date":"2026-11-15","kind":"pipeline","source":"discovery","model":"claude-sonnet-5","calls":25,"input_tokens":28600,"output_tokens":5250}
 {"date":"2026-11-16","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":1,"input_tokens":10100,"output_tokens":496}
 {"date":"2026-11-18","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":2,"input_tokens":20180,"output_tokens":1861}
+{"date":"2026-11-20","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":2,"input_tokens":20321,"output_tokens":2434}
