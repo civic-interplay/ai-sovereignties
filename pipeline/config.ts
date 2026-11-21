@@ -53,6 +53,7 @@ export const GROUNDS = [
   'Energy load or grid',
   'Land use / amenity / visual',
   'Noise',
+  'Urban heat',
   'Foreign ownership or sovereignty',
   'Jobs / investment / economic',
   'Process / consultation / transparency',
