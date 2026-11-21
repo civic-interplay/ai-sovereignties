@@ -4,6 +4,33 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-11-21 — Urban heat ground; copper; Victorian corrections
+
+- **New contestation ground: Urban heat** (Contestation Tracker, Policy &
+  Industry Reviews, and the pipeline classifier in `pipeline/config.ts`).
+  Added because heat (waste heat from air-cooled chillers, diesel generators,
+  canopy loss) is argued in Mamre Road and NSW inquiry submissions but had no
+  code of its own. **Items coded before 21 Nov 2026 were not re-assessed**, so
+  a low or zero heat count before that date reflects the codebook, not the
+  evidence. A recoding pass over all existing items (keyword search, then
+  human confirmation) is to follow, logged as its own dated entry.
+- **New Mineral Focus option: Copper,** with the tracker's first copper row
+  (BHP Olympic Dam). Copper is about four-fifths of projected mineral demand
+  from AI data centres, mostly in grid infrastructure.
+- **Former coal sites added:** EnergyAustralia Yallourn (Vic, up to 2 GW,
+  post-2028) and the Mayfield Energy Precinct near Denman (NSW, up to 1 GW).
+  Both are Feasibility, agent-coded from press, pending verification.
+- **Victorian corrections (18 Nov):** Keppel Hazelwood merged into Keppel
+  Morwell as one project (duplicate row kept, off the map); Telstra InfraCo
+  Clayton moved from Producing to Feasibility (its 40 MW is planned, not
+  built); NEXTDC M3 expansion moved from Feasibility to Application lodged
+  (PA2604231). Three West Footscray contestation items, previously unlinked,
+  now linked to the NEXTDC M3 rows.
+- **Election positions logged (28 Nov Victorian election):** Labor,
+  Coalition, Greens and One Nation data-centre positions as four agent-coded
+  items on the Victorian plan row, so post-election action can be compared
+  with the promise.
+
 ## 2026-10-04 — Not proceeding: Withdrawn, Refused, Approval revoked
 
 - **Three new `Status` options** for projects that ended before they were
