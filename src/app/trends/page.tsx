@@ -7,7 +7,7 @@
 // includes our own additions. The history of the BUILD-OUT needs approval
 // dates, which most rows do not yet carry; that chart waits for the approvals
 // pass rather than charting the gaps.
-import { fetchTrackerRows, lastUpdated, isStateAssessed } from '@/lib/tracker';
+import { fetchTrackerRows, isMappedDataCentre, lastUpdated, isStateAssessed } from '@/lib/tracker';
 import snapshots from '@/data/snapshots.json';
 import bundledSeries from '@/data/series.json';
 import { SheetShell, SheetNav, SheetTitle, Panel, Stat, SectionHead, Footnote, ScopeNote, Updated, CI_PERIWINKLE } from '../sheets/sheet-ui';
@@ -93,7 +93,7 @@ async function loadSeries(): Promise<SeriesPoint[]> {
 export default async function TrendsPage() {
   const series = await loadSeries();
   const rows = await fetchTrackerRows();
-  const dc = rows.filter((r) => r.isDataCentre);
+  const dc = rows.filter(isMappedDataCentre);
   const subset = dc.filter((r) => r.inSubset);
 
   // 1. AI infrastructure tracked, by type.

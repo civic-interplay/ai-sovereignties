@@ -3,6 +3,7 @@
 import { notFound } from 'next/navigation';
 import {
   fetchTrackerRows,
+  isMappedDataCentre,
   STATE_SLUGS,
   countryBucket,
   energyBucket,
@@ -25,6 +26,7 @@ import {
   Updated,
   ACCENT,
   CI_PERIWINKLE,
+  CONTACT_URL,
   td,
   th,
   fmtMW,
@@ -78,7 +80,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   if (!stateName) notFound();
 
   const rows = await fetchTrackerRows();
-  const dc = rows.filter((r) => r.isDataCentre && r.state === stateName);
+  const dc = rows.filter((r) => isMappedDataCentre(r) && r.state === stateName);
   if (dc.length === 0) notFound();
   const subset = dc.filter((r) => r.inSubset);
   // Review-queue rows ([PROPOSED]/[REJECTED]) are internal — never shown publicly.
@@ -100,6 +102,11 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
   const contested = subset.filter(
     (r) => r.communityConcern?.includes('Active Opposition') || r.communityConcern?.includes('Emerging Concern'),
   ).length;
+  // Sites that will not go ahead in their current form: the proponent cancelled
+  // or withdrew, or the consent authority refused or revoked approval.
+  const cancelledOrRejected = subset.filter((r) =>
+    /^(Cancelled|Withdrawn|Refused|Approval revoked)/.test(r.status ?? ''),
+  ).length;
 
   const energyCounts = new Map<string, number>();
   for (const r of subset) {
@@ -112,12 +119,6 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
 
   const regCounts = new Map<string, number>();
   for (const r of subset) regCounts.set(registerBucket(r), (regCounts.get(registerBucket(r)) ?? 0) + 1);
-
-  const countryCounts = new Map<string, number>();
-  for (const r of subset) {
-    const b = r.ownershipCountry ? countryBucket(r.ownershipCountry) : 'Unknown';
-    countryCounts.set(b, (countryCounts.get(b) ?? 0) + 1);
-  }
 
   const sorted = [...dc].sort((a, b) => {
     if (a.inSubset !== b.inSubset) return a.inSubset ? -1 : 1;
@@ -151,33 +152,23 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           note="sites with any public MW figure"
         />
         <Stat value={`${fastTracked}`} label="Fast-tracked" note="SSD / ministerial fast-track" />
-        <Stat value={`${contested}`} label="Contested" note="active or emerging opposition" />
+        <Stat value={`${contested}`} label="Community contested" note="active or emerging opposition" />
+        <Stat
+          value={`${cancelledOrRejected}`}
+          label="Cancelled or Rejected"
+          note="cancelled, withdrawn, refused or approval revoked"
+        />
         <Stat
           value={`${exempted}`}
           label="No public notice"
           note={`${exhibited} exhibited · ${noticeUnknown} not recorded`}
         />
       </Panel>
-
-      <SectionHead>Ultimate-owner country, by site count (analysis subset)</SectionHead>
-      <Panel>
-        {[...countryCounts.entries()]
-          .sort((a, b) => b[1] - a[1])
-          .map(([country, n]) => (
-            <BarRow key={country} label={country} count={n} total={subset.length} color={
-              {
-                Australia: ACCENT.green,
-                'United States': ACCENT.blue,
-                China: ACCENT.red,
-                Singapore: ACCENT.yellow,
-                Japan: CATEGORY.japan,
-                Switzerland: CATEGORY.switzerland,
-                Other: CATEGORY.other,
-                Unknown: CATEGORY.unknown,
-              }[country] ?? CATEGORY.other
-            } />
-          ))}
-      </Panel>
+      <div style={{ margin: '-8px 0 20px', textAlign: 'right', fontSize: 13 }}>
+        <a href={CONTACT_URL} target="_blank" rel="noreferrer" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
+          Correct these records ↗
+        </a>
+      </div>
 
       <SectionHead>Energy sourcing — on-grid / off-grid / not tracked (analysis subset)</SectionHead>
       <Panel>

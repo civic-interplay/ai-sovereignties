@@ -122,6 +122,14 @@ function subsetReasons(r: Omit<TrackerRow, 'inSubset' | 'subsetReasons'>): strin
   return reasons;
 }
 
+// A data centre that is on the map: it has coordinates and is not in the review
+// queue. The sheets and the trends page count the same sites the map shows, so a
+// row taken off the map (no coordinates) or still [PROPOSED]/[REJECTED] does not
+// appear in any public figure.
+export function isMappedDataCentre(r: TrackerRow): boolean {
+  return r.isDataCentre && r.hasCoords && !/^\[(PROPOSED|REJECTED)\]/.test(r.name);
+}
+
 export async function fetchTrackerRows(): Promise<TrackerRow[]> {
   const token = process.env.NOTION_TOKEN;
   if (!token) return [];

@@ -1,6 +1,6 @@
 // National summary sheet: the tracker's headline numbers, by state, with the
 // analysis-subset rule applied and stated. Data is fetched live from Notion.
-import { fetchTrackerRows, slugForState, countryBucket, lastUpdated, isStateAssessed } from '@/lib/tracker';
+import { fetchTrackerRows, isMappedDataCentre, slugForState, countryBucket, lastUpdated, isStateAssessed } from '@/lib/tracker';
 import {
   SheetShell,
   SheetNav,
@@ -14,6 +14,7 @@ import {
   Updated,
   ACCENT,
   CI_PERIWINKLE,
+  CONTACT_URL,
 	STRONG,
 	MID,
 	DIM,
@@ -40,7 +41,7 @@ const COUNTRY_COLORS: Record<string, string> = {
 
 export default async function SheetsIndex() {
   const rows = await fetchTrackerRows();
-  const dc = rows.filter((r) => r.isDataCentre);
+  const dc = rows.filter(isMappedDataCentre);
   const subset = dc.filter((r) => r.inSubset);
 
   const knownMW = subset.filter((r) => r.capacity !== null && r.capacity > 0);
@@ -101,6 +102,11 @@ export default async function SheetsIndex() {
         <Stat value={`${fastTracked}`} label="Fast-tracked / SSD" note="subset sites approved outside normal exhibition" />
         <Stat value={`${contested}`} label="Contested" note="active or emerging community opposition" />
       </Panel>
+      <div style={{ margin: '-8px 0 20px', textAlign: 'right', fontSize: 13 }}>
+        <a href={CONTACT_URL} target="_blank" rel="noreferrer" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
+          Correct these records ↗
+        </a>
+      </div>
 
       <SectionHead>Known capacity by ultimate-owner country (analysis subset)</SectionHead>
       <Panel>

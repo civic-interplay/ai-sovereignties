@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import storiesData from '@/data/stories.json';
+import { CONTACT_URL } from '@/app/sheets/sheet-ui';
 
 // Public Mapbox token. If Next inlines NEXT_PUBLIC_MAPBOX_TOKEN at build time we
 // use it; otherwise the token is fetched at runtime from /api/config (build-time
@@ -1163,6 +1164,12 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           ? '<a href="' + p.notionPublicUrl + '" target="_blank" rel="noreferrer" style="color:' + (LIGHT ? 'var(--ci-link)' : color) + ';font-size:10px;text-decoration:none;">details ↗</a>'
           : '';
 
+        // Corrections go to the public "Suggest a location or issue" form (no
+        // login needed). Notion forms cannot be pre-filled from a URL, so the
+        // reader names the site themselves.
+        const report =
+          '<a href="' + CONTACT_URL + '" target="_blank" rel="noreferrer" style="color:' + (LIGHT ? 'var(--ci-link)' : color) + ';font-size:10px;text-decoration:none;">Report an error in this record ↗</a>';
+
         new mapboxgl.Popup({ closeButton: false, className: 'sovereignty-popup' })
           .setLngLat(coords)
           .setHTML(
@@ -1173,7 +1180,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             rows +
             lifecycleHtml(p) +
             provenanceHtml(p) +
-            (link ? '<div style="margin-top:6px;">' + link + '</div>' : '') +
+            '<div style="margin-top:6px;display:flex;justify-content:space-between;gap:12px;">' + link + report + '</div>' +
             '</div>',
           )
           .addTo(m);
