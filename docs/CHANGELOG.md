@@ -4,6 +4,31 @@
 Per-site provenance lives in each Notion row's Notes; this log records the
 batch-level changes a reader of the map or docs should know about.*
 
+## 2026-11-27 — v0.3.0
+
+- **Deposit renamed and versioned.** Title now matches the Zenodo record: *Data
+  Centres Transparency Project: Mapping AI Sovereignties through Civic AI
+  (Australian view)*. `CITATION.cff` and the export carry the same title.
+- **NSW checked against the Major Projects portal (27 Nov).** Five NSW sites
+  added to the map (Project Duke, 43-61 Turner Road, ISPT Julius Avenue, CDC
+  Ashfords Road Gregadoo, Southern Highlands Data Campus Moss Vale). New rows
+  for Stockland Khartoum Road and Road 1 (Macquarie Park) and Redbank
+  (Gregadoo). 90 Aldington Road corrected to on exhibition, 444 MW. Honeman
+  Close 140 -> 96 MW. AirTrunk Mars Road Cancelled -> Withdrawn. 14 pins moved
+  to the portal's location. Rows compiled by the agent that day are
+  classified Agent.
+- **Three rows taken off the map:** Amazon $20B, Google Cloud and AWS Sydney
+  Region describe cloud regions or announcements, not sites. They remain in
+  `sites.csv` without coordinates.
+- **Sheets and trends count only mapped data centres** (coordinates, not
+  [PROPOSED] or [REJECTED]). Before this a rejected duplicate, a PPA row and
+  the three region rows were counted in the NSW sheet.
+- **Report links.** Map popups and sheet summaries link to the public
+  correction form.
+- **Not in this log:** batch changes between 4 Oct and 26 Nov (the October
+  approvals pass; ACT, WA, SA and Tasmanian sites added 15-16 Nov) are
+  recorded in `docs/COMPUTE-LOG.md` and in each row's notes, not here.
+
 ## 2026-10-04 — Not proceeding: Withdrawn, Refused, Approval revoked
 
 - **Three new `Status` options** for projects that ended before they were

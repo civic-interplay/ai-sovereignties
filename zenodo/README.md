@@ -1,6 +1,6 @@
 # AI Sovereignties — Australian data centre tracker (summary data)
 
-**Snapshot: 2026-11-15** · Sarah Barns (RMIT University), Civic Interplay
+**Snapshot: 2026-11-27** · Sarah Barns (RMIT University), Civic Interplay
 · Concept DOI [10.5281/zenodo.21026429](https://doi.org/10.5281/zenodo.21026429) (always resolves to the latest version)
 · Live version: <https://datacentres.civicinterplay.io> · Code: <https://github.com/civic-interplay/ai-sovereignties>
 · Licence: CC-BY-4.0
@@ -14,25 +14,25 @@ and water arrangements, and the public contestation forming around them.
 
 | File | Rows | Grain |
 |---|---|---|
-| `sites.csv` | 187 | One row per tracked site or project. |
-| `contestation_items.csv` | 102 | One row per source event (article, submission, motion, statement). Joins to sites on `site_id`. |
+| `sites.csv` | 193 | One row per tracked site or project. |
+| `contestation_items.csv` | 120 | One row per source event (article, submission, motion, statement). Joins to sites on `site_id`. |
 | `rejected_candidates.csv` | 19 | Candidates the pipeline proposed and a human rejected. NOT sites — kept as the discovery false-positive log. |
 | `data-dictionary.md` | — | Every column, defined. |
 
 ## What is in this snapshot
 
-- **134** data-centre rows; **53** other infrastructure rows.
-- **136** rows carry coordinates and appear on the published map.
-- **28** rows are unreviewed pipeline discoveries, prefixed `[PROPOSED]`, excluded from all published statistics.
+- **143** data-centre rows; **50** other infrastructure rows.
+- **144** rows carry coordinates and appear on the published map.
+- **23** rows are unreviewed pipeline discoveries, prefixed `[PROPOSED]`, excluded from all published statistics.
 - **19** candidates were proposed by the pipeline and rejected by a human. From v0.2.1 they live in `rejected_candidates.csv` rather than in `sites.csv`, where earlier versions mixed them in. They are published, not deleted: they are the only direct measure of how precise automated discovery is, and removing them would make the pipeline's error rate unmeasurable.
-- **66** of 102 contestation items are below the 0.6 confidence threshold and have not been human-checked.
+- **81** of 120 contestation items are below the 0.6 confidence threshold and have not been human-checked.
 
 Data-centre rows by jurisdiction:
 
 | Jurisdiction | Data-centre rows |
 |---|---|
-| Victoria | 64 |
-| New South Wales | 33 |
+| Victoria | 65 |
+| New South Wales | 41 |
 | Western Australia | 12 |
 | ACT | 8 |
 | South Australia | 8 |
@@ -41,7 +41,7 @@ Data-centre rows by jurisdiction:
 
 ## Caveats a reuser must carry
 
-**1. A blank is an absence of disclosure, not a zero.** Only **51 of 134**
+**1. A blank is an absence of disclosure, not a zero.** Only **60 of 143**
 data-centre rows carry a capacity figure, and where one exists it frequently
 comes from operator marketing rather than the planning record. Our August 2026
 audit of Victorian approvals found that of the twelve records that remain
@@ -96,8 +96,8 @@ by the automated sweep and enter only through manual ingestion.
 
 ## Citation
 
-> Barns, S. (2026). *A living atlas of contesting and curating AI
-> sovereignties (Australian view)* [Data set]. Zenodo.
+> Barns, S. (2026). *Data Centres Transparency Project: Mapping AI
+> Sovereignties through Civic AI (Australian view)* [Data set]. Zenodo.
 > https://doi.org/10.5281/zenodo.21026429
 
 Corrections are part of the method. If you find an error, please open an issue

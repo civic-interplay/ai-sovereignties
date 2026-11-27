@@ -276,8 +276,8 @@ by the automated sweep and enter only through manual ingestion.
 
 ## Citation
 
-> Barns, S. (${stamp.slice(0, 4)}). *A living atlas of contesting and curating AI
-> sovereignties (Australian view)* [Data set]. Zenodo.
+> Barns, S. (${stamp.slice(0, 4)}). *Data Centres Transparency Project: Mapping AI
+> Sovereignties through Civic AI (Australian view)* [Data set]. Zenodo.
 > https://doi.org/10.5281/zenodo.21026429
 
 Corrections are part of the method. If you find an error, please open an issue
