@@ -220,7 +220,7 @@ export default async function Glossary() {
           public notice and states no exemption basis). Blank = not yet checked against the register. Victorian
           values were checked against the live Ministerial Permits Register on 7 October 2026.
         </Term>
-        <Term name="State fast-tracked" color={ACCENT.yellow}>
+        <Term name="State assessed (map overlay)" color={ACCENT.yellow}>
           map overlay: the State, not the local council, is the consent authority — the pathway is State
           assessed or ministerial fast-track / call-in. It does <em>not</em> mean the
           application escaped public exhibition: NSW State Significant Development is exhibited, and its

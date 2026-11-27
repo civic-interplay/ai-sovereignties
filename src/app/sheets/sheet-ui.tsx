@@ -243,11 +243,11 @@ export function BarRow({
   const pct = total > 0 ? (count / total) * 100 : 0;
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '5px 0', fontSize: 12 }}>
-      <div style={{ width: 190, color: INK, flexShrink: 0 }}>{text}</div>
+      <div style={{ flex: '0 0 min(190px, 38%)', color: INK }}>{text}</div>
       <div style={{ flex: 1, background: TRACK, borderRadius: 3, height: 12, overflow: 'hidden' }}>
         <div style={{ width: `${pct}%`, height: '100%', background: color, opacity: 0.85 }} />
       </div>
-      <div style={{ width: 90, textAlign: 'right', color: MID, flexShrink: 0 }}>
+      <div style={{ minWidth: 56, textAlign: 'right', color: MID, flexShrink: 0, whiteSpace: 'nowrap' }}>
         {count}
         {suffix ?? ''} · {pct.toFixed(0)}%
       </div>

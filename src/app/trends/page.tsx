@@ -298,8 +298,8 @@ export default async function TrendsPage() {
       <Panel style={{ ...STAT_GRID, marginTop: 12 }}>
         <Stat value={`${pct(contested.length, all.total)}%`} label="Community contestation" note={`${contested.length} of ${all.total} data centres face active or emerging opposition`} />
         <Stat value={`${pct(contestedStopped, contested.length)}%`} label="Contested, not proceeding" note={`${contestedStopped} of ${contested.length} contested sites were withdrawn or refused. The record shows they stopped, not why.`} />
-        {SHOW_NOTICE_FIGURE && <Stat value={noticeKnown.length ? `${pct(fastNoNotice, noticeKnown.length)}%` : '—'} label="Fast-tracked, no exhibition" note={`${fastNoNotice} of the ${noticeKnown.length} State fast-tracked sites whose notice status is known had no public exhibition (exempted, or no notice on the register)`} />}
-        <Stat value={`${pct(fastContested, fastTracked.length)}%`} label="Fast-tracked and contested" note={`${fastContested} of ${fastTracked.length} State fast-tracked sites face community opposition`} />
+        {SHOW_NOTICE_FIGURE && <Stat value={noticeKnown.length ? `${pct(fastNoNotice, noticeKnown.length)}%` : '—'} label="State assessed, no exhibition" note={`${fastNoNotice} of the ${noticeKnown.length} State-assessed sites whose notice status is known had no public exhibition (exempted, or no notice on the register)`} />}
+        <Stat value={`${pct(fastContested, fastTracked.length)}%`} label="State assessed and contested" note={`${fastContested} of ${fastTracked.length} State-assessed sites face community opposition`} />
       </Panel>
 
       <SectionHead>AI infrastructure tracked by type</SectionHead>

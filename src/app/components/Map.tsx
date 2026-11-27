@@ -1416,8 +1416,8 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
   const fastTrackedDef = showFastTracked ? defBlock(
     <>
       <RingGlyph rings={2} color="var(--ci-status-ink)" />
-      <span style={{ color: 'var(--ci-status-ink)' }}>State fast-tracked</span> — the State, not the local council,
-      is the consent authority: the planning pathway is State assessed, or ministerial fast-track / call-in.
+      <span style={{ color: 'var(--ci-status-ink)' }}>State assessed</span> — the State, not the local council,
+      is the consent authority: the planning pathway is State assessed, including ministerial fast-track or call-in.
       It does not mean the application skipped public exhibition — whether it was exhibited is tracked
       separately, under Public notice.
     </>,
@@ -1800,7 +1800,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             stageFilter.size > 0 && chip('stage', glyph('▣'), stageText()),
             flagFilter.size > 0 && chip('flags', dot('var(--ci-flag)'), 'Flagged: ' + [...flagFilter].join(', ')),
             showContested && chip('contested', <RingGlyph rings={1} color={STATUS_CONTESTED} />, 'Contested'),
-            showFastTracked && chip('fast', <RingGlyph rings={2} color="var(--ci-status-ink)" />, 'State fast-tracked'),
+            showFastTracked && chip('fast', <RingGlyph rings={2} color="var(--ci-status-ink)" />, 'State assessed'),
             showNamedPlatform && chip('named', dot(OVERLAY_PIP, { border: '1px solid rgba(10,12,11,0.55)' }), 'Named hyperscaler'),
             showSupplyChain && chip('supply', glyph('↗'), 'Supply chain'),
             storiesOn && chip('stories', dot(LIGHT ? '#b0436e' : '#f28db2'), 'Submission stories'),
@@ -1916,7 +1916,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
             aria-pressed={showFastTracked}
             onClick={() => setShowFastTracked((v) => !v)}
           >
-            State fast-tracked
+            State assessed
           </button>
           {/* Governance flags filter. Contested and fast-tracked above are
               overlays (they mark sites without hiding any); this one filters,
@@ -2300,7 +2300,7 @@ export default function Map({ theme = 'dark', onToggleTheme }: { theme?: Theme; 
           {showFastTracked && (
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 11.5 }}>
               <RingGlyph rings={2} color="var(--ci-status-ink)" />
-              <span>State fast-tracked</span>
+              <span>State assessed</span>
             </div>
           )}
           {showNamedPlatform && (
