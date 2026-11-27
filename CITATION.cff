@@ -12,10 +12,14 @@ abstract: >-
   (data centres, rare-earth mines, refineries, and the energy and water they
   draw), with ownership, approval pathways, and the public contestation forming
   around each site. Part of the Civic Interplay project.
-url: "https://sovereignties.civicinterplay.io"
+url: "https://datacentres.civicinterplay.io"
 repository-code: "https://github.com/civic-interplay/ai-sovereignties"
 license: CC-BY-4.0
 version: "v0.3.0"
 date-released: "2026-11-27"
 # Concept DOI — always resolves to the latest version.
 doi: "10.5281/zenodo.21026429"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24575072"
+    description: "Version DOI for v0.3.0 (27 Nov 2026)"

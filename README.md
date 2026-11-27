@@ -2,6 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21026429.svg)](https://doi.org/10.5281/zenodo.21026429)
 
+The DOI above always resolves to the newest deposit. The current version,
+v0.3.0 (27 Nov 2026), is [10.5281/zenodo.24575072](https://doi.org/10.5281/zenodo.24575072).
+
 A map of Australia's critical AI infrastructure (rare-earth mines, refineries,
 data centres, energy & policy signals), rendered with Mapbox.
 
