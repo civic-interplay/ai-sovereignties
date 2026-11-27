@@ -347,3 +347,66 @@ had been chosen in place of "Approve". The automatic geocoder would have
 placed Swanbank at Emerald, about 600 km from Ipswich; it was pinned by hand
 at locality level before approval. The phone timeline button was hidden behind
 the bottom sheet for about a day after the layout shipped.
+
+## 2026-11-27: NSW map check before the ABC feature (interactive session)
+
+Token counts for this session were not measured.
+
+**What it bought:** a check of all 34 NSW rows on the live map against the
+NSW Major Projects portal (28 project pages read). With SB's authorisation,
+12 Notion rows corrected and 5 added to the map (NSW 34 → 39): Project Duke
+(approved, had no coordinates), 43-61 Turner Road (approved Nov 2025), ISPT
+Julius Avenue (at Recommendation), CDC Ashfords Road Gregadoo (1.4 GW,
+Prepare EIS) and the Southern Highlands Data Campus at Moss Vale (gas power
+station SSD, Prepare EIS). 90 Aldington Road corrected from Feasibility/245 MW
+to on exhibition 19 Nov - 17 Dec 2026 at 444 MW. Owner fields filled on
+AirTrunk Kurri Kurri, Goodman Duke/Pluto, DigiCo SYD1 and DCI Poplars. Each
+change carries a dated Notes line.
+
+**Errors, for the record:** 90 Aldington Road's exhibition had been open for
+8 days with the map showing it as Feasibility. Project Duke was approved and
+human-verified but absent from the map for lack of coordinates.
+
+Second pass, same day: 14 NSW pins moved to the portal's map pin (largest
+moves: NEXTDC S4 13 km, Goodman Atlas 8 km, Mamre Road 4 km, NEXTDC S7 3 km).
+Honeman Close capacity 140 -> 96 MW (portal and council; 140 was an MVA
+figure). AirTrunk Mars Road Cancelled -> Withdrawn (portal now records it).
+Stockland aggregate row split: Wetherill Park kept (238 MW, Prepare SEARs);
+new rows for Khartoum Road (approved 11 Mar 2026) and Road 1 (approved 1 Oct
+2026); new row for IREN-reported Redbank, Gregadoo (900 MW, Prepare SEARs).
+Amazon $20B, Google Cloud and AWS Sydney Region rows taken off the map: they
+are regions or announcements, not sites. 12 council-DA [PROPOSED] rows left
+off: their records do not list a data centre development type.
+
+**Errors, for the record:** in the first pass I flagged Glendenning's 235 MW
+as unsupported; its notes cite the signed consent (condition A6), so it was
+right. Five promoted rows were first set to Classified by = Human, which the
+map shows as "compiled by hand"; corrected to Agent.
+
+Third pass, same day (afternoon): Zenodo v0.3.0 and sheet fixes.
+
+**What it bought:** v0.3.0 deposited on Zenodo (DOI 10.5281/zenodo.24575072,
+11 files). Each file's MD5 checksum on Zenodo matches the export. The concept
+DOI 10.5281/zenodo.21026429 lists v0.1.0, v0.2.0 and v0.3.0. The description
+now gives the file counts and the `classified_by` split for v0.2.0 and
+v0.3.0. `CITATION.cff` keeps the concept DOI and lists the v0.3.0 version DOI
+under `identifiers`; the README gives it under the badge; `LICENSE` carries
+the new title.
+
+On the site (deployed 27 Nov, commit 07bee71): the "Fast-tracked" tile on the
+sheets, the "State fast-tracked" overlay on the map, two trends figures and
+the glossary term now read "State assessed". All 33 NSW rows the tile counted
+have pathway "State assessed"; none is "Ministerial fast-track". The
+"Correct these records" link no longer sits on the card border, and the
+sheet bar rows are readable on a 390 px phone screen. Checked with phone
+emulation before and after the deploy.
+
+**Errors, for the record:** the national sheet's note on that tile read
+"subset sites approved outside normal exhibition". The glossary says the
+opposite: State significant development is exhibited. The first Zenodo
+publication had an empty Version field and dropped one paragraph of the
+description; both were fixed by a metadata edit the same day. My instruction
+to delete the v0.2.0 files carried into the new-version draft may not apply
+to the current Zenodo, where a new draft can start empty. A first headless
+screenshot at 390 px suggested the sheet overflowed the screen; that came from
+headless Chrome's minimum window width, and phone emulation showed no overflow.
