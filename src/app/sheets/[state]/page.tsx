@@ -151,7 +151,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           label="Disclose capacity"
           note="sites with any public MW figure"
         />
-        <Stat value={`${fastTracked}`} label="Fast-tracked" note="SSD / ministerial fast-track" />
+        <Stat value={`${fastTracked}`} label="State assessed" note="decided by the State" />
         <Stat value={`${contested}`} label="Community contested" note="active or emerging opposition" />
         <Stat
           value={`${cancelledOrRejected}`}
@@ -164,7 +164,7 @@ export default async function StateSheet({ params }: { params: Promise<{ state: 
           note={`${exhibited} exhibited · ${noticeUnknown} not recorded`}
         />
       </Panel>
-      <div style={{ margin: '-8px 0 20px', textAlign: 'right', fontSize: 13 }}>
+      <div style={{ margin: '8px 0 20px', textAlign: 'right', fontSize: 13 }}>
         <a href={CONTACT_URL} target="_blank" rel="noreferrer" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
           Correct these records ↗
         </a>

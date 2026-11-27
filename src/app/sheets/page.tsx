@@ -99,10 +99,10 @@ export default async function SheetsIndex() {
             and measure total spend incl. IT fit-out, not planning-record CIV.
             Restore once the Planning CIV harvest lands (see memory:
             investment-figures-two-tracks). Data stays in Notion. */}
-        <Stat value={`${fastTracked}`} label="Fast-tracked / SSD" note="subset sites approved outside normal exhibition" />
+        <Stat value={`${fastTracked}`} label="State assessed" note="decided by the State" />
         <Stat value={`${contested}`} label="Contested" note="active or emerging community opposition" />
       </Panel>
-      <div style={{ margin: '-8px 0 20px', textAlign: 'right', fontSize: 13 }}>
+      <div style={{ margin: '8px 0 20px', textAlign: 'right', fontSize: 13 }}>
         <a href={CONTACT_URL} target="_blank" rel="noreferrer" style={{ color: CI_PERIWINKLE, textDecoration: 'none' }}>
           Correct these records ↗
         </a>
