@@ -54,3 +54,5 @@
 {"date":"2026-11-22","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":1,"input_tokens":10289,"output_tokens":1019}
 {"date":"2026-11-23","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":4,"input_tokens":40605,"output_tokens":4153}
 {"date":"2026-11-25","kind":"pipeline","source":"press","model":"claude-sonnet-5","calls":2,"input_tokens":20537,"output_tokens":2645}
+{"date": "2026-11-27", "kind": "session", "source": "claude-code", "model": "claude-opus-5-5", "calls": 185, "input_tokens": 364946, "output_tokens": 129783, "cache_read_tokens": 42877724, "note": "NSW Major Projects portal check, two passes, Zenodo v0.3.0 export"}
+{"date": "2026-11-27", "kind": "session", "source": "claude-code", "model": "claude-opus-5-5", "calls": 69, "input_tokens": 139116, "output_tokens": 38971, "cache_read_tokens": 8007372, "note": "Zenodo v0.3.0 publication, citation files, State assessed relabel, sheet fixes; counted to the measuring call"}

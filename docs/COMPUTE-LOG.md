@@ -350,7 +350,18 @@ the bottom sheet for about a day after the layout shipped.
 
 ## 2026-11-27: NSW map check before the ABC feature (interactive session)
 
-Token counts for this session were not measured.
+Token counts, from the `usage` block in the two session transcripts (all
+`claude-opus-5-5`, no subagents):
+
+| Session | Calls | Input (incl. cache write) | Output | Cache read |
+| --- | ---: | ---: | ---: | ---: |
+| Morning and second pass (11:02-13:26 AEDT) | 185 | 364,946 | 129,783 | 42,877,724 |
+| Afternoon (13:30-14:42 AEDT, to this entry) | 69 | 139,116 | 38,971 | 8,007,372 |
+| Total | 254 | 504,062 | 168,754 | 50,885,096 |
+
+As in earlier entries, the cache-read column is the conversation re-read on
+each call and is not added to the other columns. The afternoon figure stops at
+the call that measured it; the few calls after it are not counted.
 
 **What it bought:** a check of all 34 NSW rows on the live map against the
 NSW Major Projects portal (28 project pages read). With SB's authorisation,
